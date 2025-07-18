@@ -1,0 +1,25 @@
+{
+    "name": "Vakit - Namaz Vakitleri Uygulaması",
+    "short_name": "Vakit",
+    "description": "Konumunuza göre doğru namaz vakitlerini gösteren, kıble yönünü bulan modern iOS uygulaması",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#407579",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["lifestyle", "utilities"],
+    "lang": "tr",
+    "dir": "ltr"
+} 

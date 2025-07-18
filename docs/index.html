@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Vakit - Namaz Vakitleri Uygulaması | Kolay Kullanım</title>
+    <meta name="title" content="Vakit - Namaz Vakitleri Uygulaması | Kolay Kullanım">
+    <meta name="description" content="Vakit uygulaması ile namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. İnternet olmadan da çalışır.">
+    <meta name="keywords" content="namaz vakitleri, vakit, kıble yönü, namaz vakti, islamic app, prayer times, qibla direction, hicri takvim, internetsiz çalışma, offline mod, ios app, namaz uygulaması">
+    <meta name="author" content="Hakan Çelik">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Turkish">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/">
+    <meta property="og:title" content="Vakit - Namaz Vakitleri Uygulaması">
+    <meta property="og:description" content="Namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. Bildirim alın.">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="Vakit - Namaz Vakitleri">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vakit.hakancelik.dev/">
+    <meta property="twitter:title" content="Vakit - Namaz Vakitleri Uygulaması">
+    <meta property="twitter:description" content="Namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. Bildirim alın.">
+    <meta property="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="twitter:creator" content="@hakancelikdev">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#407579">
+    <meta name="msapplication-TileColor" content="#407579">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Vakit">
+    <meta name="application-name" content="Vakit">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vakit.hakancelik.dev/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="assets/app-icon-32.png" as="image">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Vakit - Namaz Vakitleri",
+        "description": "Namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. İnternet olmadan da çalışır.",
+        "url": "https://vakit.hakancelik.dev",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS",
+        "operatingSystemVersion": "15.0",
+        "author": {
+            "@type": "Person",
+            "name": "Hakan Çelik",
+            "url": "https://github.com/hakancelik"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+        },
+        "screenshot": [
+            "https://vakit.hakancelik.dev/assets/screenshots/home.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/kaaba.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/settings.png"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Vakit - Namaz Vakitleri",
+        "url": "https://vakit.hakancelik.dev",
+        "description": "Namaz vakitleri uygulaması",
+        "publisher": {
+            "@type": "Person",
+            "name": "Hakan Çelik"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://vakit.hakancelik.dev/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
+                <span>Vakit</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Özellikler</a>
+                <a href="#screenshots">Hızlı Göz Atma</a>
+                <a href="#vision">Hakkımızda</a>
+                <a href="#developer">Geliştirici</a>
+                <a href="#download">İndir</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Namaz Vakitleri<br>
+                    <span class="gradient-text">Kolay Kullanım</span>
+                </h1>
+                <p class="hero-description">
+                    <strong>Vakit</strong> uygulaması ile namaz vakitlerini kolayca öğrenin. 
+                    Kıble yönünü bulun. Bildirim alın. 
+                    <strong>Basit ve kolay</strong> kullanım. 
+                    <strong>Namaz vakti</strong>, <strong>kıble yönü</strong>, 
+                    <strong>hicri takvim</strong> ve <strong>internet olmadan çalışma</strong> özellikleri.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fab fa-apple"></i>
+                        App Store'dan İndir
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Özellikleri Gör
+                    </a>
+                </div>
+                <div class="hero-highlights">
+                    <span class="highlight-item">📱 Kolay Kullanım</span>
+                    <span class="highlight-item">📍 Konum Bulma</span>
+                    <span class="highlight-item">🕌 Kıble Yönü</span>
+                    <span class="highlight-item">📅 Hicri Takvim</span>
+                    <span class="highlight-item">📶 İnternet Olmadan</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="iphone-frame">
+                    <div class="iphone-screen">
+                        <div class="screenshot-carousel">
+                            <img src="assets/screenshots/home.png" alt="Vakit Ana Ekran" class="app-screenshot active">
+                            <img src="assets/screenshots/kaaba.png" alt="Vakit Kıble Yönü" class="app-screenshot">
+                            <img src="assets/screenshots/settings.png" alt="Vakit Ayarlar" class="app-screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Uygulama Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Namaz Vakitleri</h3>
+                    <p>Konumunuza göre <strong>namaz vakitlerini</strong> öğrenin. Sabah, öğle, ikindi, akşam ve yatsı vakitleri.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Kıble Yönü</h3>
+                    <p>Telefonu yatay tutarak <strong>Kâbe yönünü</strong> bulun. Kıble pusulası ile doğru yönü öğrenin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Bildirimler</h3>
+                    <p>Namaz vakitlerinde <strong>bildirim alın</strong>. Hangi namazlar için bildirim istediğinizi seçin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Hicri Takvim</h3>
+                    <p>Güncel <strong>Hicri tarihi</strong> görün. Miladi ve Hicri tarihleri birlikte takip edin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Konum Bulma</h3>
+                    <p>GPS ile <strong>konumunuzu</strong> bulun. Farklı şehirler için namaz vakitlerini görün.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Karanlık Mod</h3>
+                    <p>Gece kullanımı için <strong>karanlık mod</strong>. Göz yormayan arayüz.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>İnternet Olmadan</h3>
+                    <p>İnternet bağlantısı olmadan da <strong>namaz vakitlerini</strong> görün. Her yerde kullanabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Hızlı Göz Atma</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen">
+                            <img src="assets/screenshots/home.png" alt="Vakit Ana Ekran" loading="lazy">
+                        </div>
+                    </div>
+                    <h3>Ana Ekran</h3>
+                    <p>Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Basit ve temiz arayüz ile kolay kullanım.</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen">
+                            <img src="assets/screenshots/kaaba.png" alt="Vakit Kıble Yönü" loading="lazy">
+                        </div>
+                    </div>
+                    <h3>Kıble Pusulası</h3>
+                    <p>GPS teknolojisi ile Kâbe yönünü hassas şekilde bulun. Telefonu yatay tutarak kıble yönünü kolayca öğrenin.</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen">
+                            <img src="assets/screenshots/settings.png" alt="Vakit Ayarlar" loading="lazy">
+                        </div>
+                    </div>
+                    <h3>Akıllı Ayarlar</h3>
+                    <p>Kişiselleştirilmiş bildirim ayarları ve farklı hesaplama yöntemleri. İhtiyaçlarınıza göre uygulamayı özelleştirin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Amacımız</h3>
+                    <p>Teknoloji ile İslami ibadetleri kolaylaştırmak. Müslüman toplumun günlük yaşamını iyileştirmek. Basit ve kullanışlı uygulamalar geliştirmek.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Hedefimiz</h3>
+                    <p>Müslüman kullanıcıların namaz vakitlerini kolayca takip edebilmelerini sağlamak. Modern teknikler kullanarak güvenilir çözümler sunmak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer" class="developer">
+        <div class="container">
+            <h2 class="section-title">Geliştirici</h2>
+            <div class="developer-content">
+                <div class="developer-card">
+                    <div class="developer-avatar">
+                        <img src="https://pbs.twimg.com/profile_images/1856415817933410304/JohC0bSE_400x400.jpg" alt="Hakan Çelik" class="avatar-image">
+                    </div>
+                    <div class="developer-info">
+                        <h3>Hakan Çelik</h3>
+                        <p class="developer-title">Software developer @ Trendyol</p>
+                        <p class="developer-bio">Solving my problems — and yours too.</p>
+                        <div class="developer-social">
+                            <a href="https://x.com/hakancelikdev" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/hakancelik" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/hakancelik" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h4>Proje Hakkında</h4>
+                    <p>Vakit uygulaması, modern teknikler kullanılarak geliştirilmiş açık kaynak bir namaz vakitleri uygulamasıdır. Basit ve kolay kullanım için tasarlanmıştır.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hakancelikdev/vakit" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub'da Görüntüle
+                        </a>
+                        <a href="https://github.com/hakancelikdev/vakit/issues" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-bug"></i>
+                            Katkıda Bulun
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>Hemen İndirin</h2>
+                <p>Vakit uygulamasını App Store'dan indirin ve namaz vakitlerinizi kolayca takip edin.</p>
+                <a href="#" class="btn btn-primary btn-large">
+                    <i class="fab fa-apple"></i>
+                    App Store'dan İndir
+                </a>
+                <p class="download-note">iOS 15 ve üzeri gereklidir</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/app-icon-24.png" alt="Vakit - Namaz Vakitleri Uygulaması" class="footer-logo-icon">
+                    <span>Vakit - Namaz Vakitleri</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/hakancelikdev/vakit" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://x.com/hakancelikdev" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="https://linkedin.com/in/hakancelik" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Vakit</strong> - Modern namaz vakitleri uygulaması. Namaz vakitleri, kıble yönü, hicri takvim ve internet olmadan çalışma özellikleri ile iOS cihazlarınızda.</p>
+                    <p>&copy; 2025 Vakit - Namaz Vakitleri Uygulaması. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

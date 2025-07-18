@@ -1,0 +1,42 @@
+{
+  "name": "vakit-landing-page",
+  "version": "1.0.0",
+  "description": "Modern namaz vakitleri uygulaması landing page",
+  "main": "docs/index.html",
+  "scripts": {
+    "start": "cd docs && python3 -m http.server 8000",
+    "dev": "cd docs && python3 -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "vakit",
+    "namaz-vakitleri",
+    "ios",
+    "swift",
+    "swiftui",
+    "prayer-times",
+    "islamic-app",
+    "landing-page"
+  ],
+  "author": {
+    "name": "Hakan Çelik",
+    "email": "hakancelikdev@gmail.com",
+    "url": "https://github.com/hakancelik"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hakancelikdev/vakit.git"
+  },
+  "homepage": "https://vakit.hakancelik.dev",
+  "bugs": {
+    "url": "https://github.com/hakancelikdev/vakit/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+} 

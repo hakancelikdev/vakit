@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow crawling of unnecessary files
+Disallow: /assets/screenshots/
+Disallow: /assets/favicon*
+
+# Sitemap location
+Sitemap: https://vakit.hakancelik.dev/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1 
