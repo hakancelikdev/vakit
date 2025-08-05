@@ -60,7 +60,7 @@ Eğer custom domain kullanmak istiyorsanız:
    ```
    Type: CNAME
    Name: www
-   Value: hakancelik.github.io
+   Value: hakancelikdev.github.io
    ```
 
 2. Repository'de `CNAME` dosyası oluşturun:

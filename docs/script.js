@@ -1,5 +1,14 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Language switcher functionality
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            switchLanguage(lang);
+        });
+    });
+
     // Smooth scrolling for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -326,40 +335,86 @@ function debounce(func, wait) {
     };
 }
 
-// Add some interactive features
-document.addEventListener('DOMContentLoaded', function() {
-    // Add click sound effect for buttons (optional)
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Add ripple effect
-            const ripple = document.createElement('span');
-            ripple.style.cssText = `
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.3);
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-            `;
-            
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = event.clientX - rect.left - size / 2;
-            const y = event.clientY - rect.top - size / 2;
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
+    // Add some interactive features
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click sound effect for buttons (optional)
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.3);
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = event.clientX - rect.left - size / 2;
+                const y = event.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
         });
+        
+        // Newsletter form functionality
+        const newsletterForm = document.querySelector('.newsletter-form');
+        const newsletterInput = document.querySelector('.newsletter-input');
+        const newsletterBtn = document.querySelector('.newsletter-btn');
+        
+        if (newsletterForm && newsletterInput && newsletterBtn) {
+            newsletterBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = newsletterInput.value.trim();
+                
+                if (email && isValidEmail(email)) {
+                    // Show success message
+                    newsletterBtn.innerHTML = '<i class="fas fa-check"></i>';
+                    newsletterBtn.style.background = 'linear-gradient(135deg, #33B333, #28a745)';
+                    newsletterInput.value = '';
+                    
+                    setTimeout(() => {
+                        newsletterBtn.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                        newsletterBtn.style.background = 'linear-gradient(135deg, var(--primary), var(--secondary))';
+                    }, 2000);
+                } else {
+                    // Show error animation
+                    newsletterInput.style.borderColor = '#CC3333';
+                    newsletterInput.style.boxShadow = '0 0 0 3px rgba(204, 51, 51, 0.2)';
+                    
+                    setTimeout(() => {
+                        newsletterInput.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                        newsletterInput.style.boxShadow = 'none';
+                    }, 2000);
+                }
+            });
+            
+            // Enter key support
+            newsletterInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    newsletterBtn.click();
+                }
+            });
+        }
+        
+        // Email validation function
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
     });
-});
 
 // Add CSS for ripple effect
 const style = document.createElement('style');

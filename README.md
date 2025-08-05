@@ -22,8 +22,8 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 **Hakan Çelik**
 - [X](https://x.com/hakancelikdev)
-- [LinkedIn](https://linkedin.com/in/hakancelik)
-- [GitHub](https://github.com/hakancelik)
+- [LinkedIn](https://linkedin.com/in/hakancelikdev)
+- [GitHub](https://github.com/hakancelikdev)
 
 ---
 
