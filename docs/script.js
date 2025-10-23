@@ -426,4 +426,76 @@ style.textContent = `
         }
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);
+
+// Carousel functionality
+let currentSlideIndex = 0;
+const totalSlides = 8;
+
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.screenshot-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Remove active class from current slide and dot
+    slides[currentSlideIndex].classList.remove('active');
+    dots[currentSlideIndex].classList.remove('active');
+    
+    // Calculate new slide index
+    currentSlideIndex += direction;
+    
+    // Handle wrap-around
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = totalSlides - 1;
+    }
+    
+    // Add active class to new slide and dot
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+function currentSlide(slideNumber) {
+    const slides = document.querySelectorAll('.screenshot-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Remove active class from current slide and dot
+    slides[currentSlideIndex].classList.remove('active');
+    dots[currentSlideIndex].classList.remove('active');
+    
+    // Set new slide index
+    currentSlideIndex = slideNumber - 1;
+    
+    // Add active class to new slide and dot
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+// Auto-rotate carousel
+function startAutoCarousel() {
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000); // Change slide every 5 seconds
+}
+
+// Start auto carousel when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Start auto carousel after a delay
+    setTimeout(startAutoCarousel, 3000);
+    
+    // Pause auto carousel on hover
+    const carouselContainer = document.querySelector('.screenshot-carousel-container');
+    if (carouselContainer) {
+        let autoCarouselInterval;
+        
+        carouselContainer.addEventListener('mouseenter', function() {
+            clearInterval(autoCarouselInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', function() {
+            autoCarouselInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        });
+    }
+}); 

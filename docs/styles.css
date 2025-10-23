@@ -18,11 +18,6 @@
     --warning: #E7BC69;
     --error: #CC3333;
     
-    /* Dark mode colors */
-    --background-dark: #1C1C1E;
-    --card-background-dark: #2C2C2E;
-    --text-primary-dark: #ffffff;
-    
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
@@ -45,15 +40,6 @@
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: var(--background-dark);
-        --card-background: var(--card-background-dark);
-        --text-primary: var(--text-primary-dark);
-    }
 }
 
 body {
@@ -868,4 +854,474 @@ html {
     .footer-links {
         justify-content: center;
     }
+}
+
+/* Section Subtitle */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Screenshot Carousel Styles */
+.screenshot-carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.screenshot-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--card-background);
+    box-shadow: var(--shadow-lg);
+}
+
+.screenshot-slide {
+    display: none;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.screenshot-slide.active {
+    display: block;
+}
+
+.screenshot-slide .iphone-frame {
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.screenshot-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.screenshot-info p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.carousel-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+    background: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(64, 117, 121, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: var(--secondary);
+}
+
+/* Carousel Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+    .screenshot-slide {
+        padding: 20px;
+    }
+    
+    .screenshot-slide .iphone-frame {
+        max-width: 250px;
+    }
+    
+    .carousel-controls {
+        gap: 20px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Hero Title Improvements */
+.hero-title-main {
+    display: inline-block;
+    animation: slideInLeft 1s ease-out;
+}
+
+.gradient-text {
+    display: inline-block;
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Enhanced Hero Highlights */
+.hero-highlights {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.highlight-item {
+    animation: bounceIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.highlight-item:nth-child(1) { animation-delay: 0.8s; }
+.highlight-item:nth-child(2) { animation-delay: 0.9s; }
+.highlight-item:nth-child(3) { animation-delay: 1.0s; }
+.highlight-item:nth-child(4) { animation-delay: 1.1s; }
+.highlight-item:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Enhanced Feature Cards */
+.feature-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced iPhone Frame */
+.iphone-frame {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.iphone-frame:hover {
+    transform: scale(1.05) rotateY(5deg);
+}
+
+.iphone-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.iphone-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.iphone-frame:hover .iphone-screen::after {
+    transform: translateX(100%);
+}
+
+/* Enhanced Buttons */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Developer Card */
+.developer-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.developer-avatar {
+    transition: all 0.3s ease;
+}
+
+.developer-card:hover .developer-avatar {
+    transform: scale(1.1);
+}
+
+/* Enhanced Vision Cards */
+.vision-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.vision-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vision-icon {
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover .vision-icon {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--primary);
+}
+
+/* Enhanced Download Section */
+.download {
+    position: relative;
+    overflow: hidden;
+}
+
+.download::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(64, 117, 121, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced Footer */
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+/* Enhanced Navigation */
+.navbar {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Language Switcher */
+.lang-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.lang-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.lang-btn:hover::before {
+    left: 100%;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced Social Links */
+.social-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-link:hover {
+    color: white;
+    transform: scale(1.2);
 } 

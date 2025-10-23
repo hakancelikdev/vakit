@@ -37,7 +37,7 @@
     <meta name="theme-color" content="#407579">
     <meta name="msapplication-TileColor" content="#407579">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
     <meta name="apple-mobile-web-app-title" content="Vakit">
     <meta name="application-name" content="Vakit">
     <meta name="mobile-web-app-capable" content="yes">
@@ -59,6 +59,8 @@
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="preload" href="assets/app-icon-32.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/screenshots/tr/1.png" as="image">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -94,9 +96,9 @@
             "ratingCount": "150"
         },
         "screenshot": [
-            "https://vakit.hakancelik.dev/assets/screenshots/home.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/kaaba.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/settings.png"
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/1.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/2.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/3.png"
         ]
     }
     </script>
@@ -133,7 +135,6 @@
                 <a href="#features">Özellikler</a>
                 <a href="#screenshots">Hızlı Göz Atma</a>
                 <a href="#vision">Hakkımızda</a>
-                <a href="#developer">Geliştirici</a>
                 <a href="#download">İndir</a>
                 <a href="privacy.html">Gizlilik</a>
             </div>
@@ -149,8 +150,8 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Namaz Vakitleri<br>
-                    <span>&nbsp;</span><span class="gradient-text">Kolay Kullanım</span>
+                    <span class="hero-title-main">Namaz Vakitleri</span><br>
+                    <span class="gradient-text">Kolay Kullanım</span>
                 </h1>
                 <p class="hero-description">
                     <strong>Vakit</strong> uygulaması ile namaz vakitlerini kolayca öğrenin. 
@@ -181,9 +182,11 @@
                 <div class="iphone-frame">
                     <div class="iphone-screen">
                         <div class="screenshot-carousel">
-                            <img src="assets/screenshots/tr/ana-ekran.png" alt="Vakit Ana Ekran" class="app-screenshot active">
-                            <img src="assets/screenshots/tr/kible-yonu.png" alt="Vakit Kıble Yönü" class="app-screenshot">
-                            <img src="assets/screenshots/tr/ayarlar.png" alt="Vakit Ayarlar" class="app-screenshot">
+                            <img src="assets/screenshots/tr/1.png" alt="Vakit Ana Ekran" class="app-screenshot active">
+                            <img src="assets/screenshots/tr/2.png" alt="Vakit Kıble Yönü" class="app-screenshot">
+                            <img src="assets/screenshots/tr/3.png" alt="Vakit Ayarlar" class="app-screenshot">
+                            <img src="assets/screenshots/tr/4.png" alt="Vakit Bildirimler" class="app-screenshot">
+                            <img src="assets/screenshots/tr/5.png" alt="Vakit Widget" class="app-screenshot">
                         </div>
                     </div>
                 </div>
@@ -252,34 +255,120 @@
     <!-- Screenshots Section -->
     <section id="screenshots" class="screenshots">
         <div class="container">
-            <h2 class="section-title">Hızlı Göz Atma</h2>
-            <div class="screenshots-grid">
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/tr/ana-ekran.png" alt="Vakit Ana Ekran" loading="lazy">
+            <h2 class="section-title">Uygulama Ekranları</h2>
+            <p class="section-subtitle">Vakit uygulamasının tüm özelliklerini keşfedin</p>
+            
+            <!-- Screenshot Carousel -->
+            <div class="screenshot-carousel-container">
+                <div class="screenshot-carousel">
+                    <div class="screenshot-slide active">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/1.png" alt="Vakit Ana Ekran" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Ana Ekran</h3>
+                            <p>Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün</p>
                         </div>
                     </div>
-                    <h3>Ana Ekran</h3>
-                    <p>Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Basit ve temiz arayüz ile kolay kullanım.</p>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/2.png" alt="Vakit Kıble Yönü" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Kıble Pusulası</h3>
+                            <p>GPS teknolojisi ile Kâbe yönünü hassas şekilde bulun</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/3.png" alt="Vakit Ayarlar" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Akıllı Ayarlar</h3>
+                            <p>Kişiselleştirilmiş bildirim ayarları ve hesaplama yöntemleri</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/4.png" alt="Vakit Bildirimler" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Bildirim Ayarları</h3>
+                            <p>Namaz vakitleri için özelleştirilebilir bildirimler</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/5.png" alt="Vakit Widget" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Widget Desteği</h3>
+                            <p>Ana ekranda namaz vakitlerini hızlıca görün</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/6.png" alt="Vakit Konum" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Konum Ayarları</h3>
+                            <p>GPS veya manuel konum seçimi ile doğru vakitler</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/7.png" alt="Vakit Premium" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Premium Özellikler</h3>
+                            <p>Gelişmiş özellikler ve reklamsız deneyim</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/tr/8.png" alt="Vakit Tema" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Karanlık Mod</h3>
+                            <p>Gece kullanımı için karanlık tema desteği</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/tr/kible-yonu.png" alt="Vakit Kıble Yönü" loading="lazy">
-                        </div>
+                
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
                     </div>
-                    <h3>Kıble Pusulası</h3>
-                    <p>GPS teknolojisi ile Kâbe yönünü hassas şekilde bulun. Telefonu yatay tutarak kıble yönünü kolayca öğrenin.</p>
-                </div>
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/tr/ayarlar.png" alt="Vakit Ayarlar" loading="lazy">
-                        </div>
-                    </div>
-                    <h3>Akıllı Ayarlar</h3>
-                    <p>Kişiselleştirilmiş bildirim ayarları ve farklı hesaplama yöntemleri. İhtiyaçlarınıza göre uygulamayı özelleştirin.</p>
+                    <button class="carousel-btn next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -307,49 +396,6 @@
         </div>
     </section>
 
-    <!-- Developer Section -->
-    <section id="developer" class="developer">
-        <div class="container">
-            <h2 class="section-title">Geliştirici</h2>
-            <div class="developer-content">
-                <div class="developer-card">
-                    <div class="developer-avatar">
-                        <img src="https://pbs.twimg.com/profile_images/1961105761280327681/Ki-AhLK9_400x400.jpg" alt="Hakan Çelik" class="avatar-image">
-                    </div>
-                    <div class="developer-info">
-                        <h3>Hakan Çelik</h3>
-                        <p class="developer-title">Software developer @ Trendyol</p>
-                        <p class="developer-bio">Solving my problems — and yours too.</p>
-                        <div class="developer-social">
-                            <a href="https://x.com/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h4>Proje Hakkında</h4>
-                    <p>Vakit uygulaması, modern teknikler kullanılarak geliştirilmiş açık kaynak bir namaz vakitleri uygulamasıdır. Basit ve kolay kullanım için tasarlanmıştır.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/hakancelikdev/vakit" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i>
-                            GitHub'da Görüntüle
-                        </a>
-                        <a href="https://github.com/hakancelikdev/vakit/issues" target="_blank" class="btn btn-outline">
-                            <i class="fas fa-bug"></i>
-                            Katkıda Bulun
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Download Section -->
     <section id="download" class="download">

@@ -120,9 +120,9 @@ const translations = {
         
         // Screenshot paths
         screenshots: {
-            home: "assets/screenshots/tr/ana-ekran.png",
-            qibla: "assets/screenshots/tr/kible-yonu.png",
-            settings: "assets/screenshots/tr/ayarlar.png"
+            home: "assets/screenshots/tr/1.png",
+            qibla: "assets/screenshots/tr/2.png",
+            settings: "assets/screenshots/tr/3.png"
         }
     },
     
@@ -247,9 +247,9 @@ const translations = {
         
         // Screenshot paths
         screenshots: {
-            home: "assets/screenshots/en/home-screen.png",
-            qibla: "assets/screenshots/en/qibla-direction.png",
-            settings: "assets/screenshots/en/settings.png"
+            home: "assets/screenshots/en/1.png",
+            qibla: "assets/screenshots/en/2.png",
+            settings: "assets/screenshots/en/3.png"
         }
     }
 };

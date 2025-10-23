@@ -37,7 +37,7 @@
     <meta name="theme-color" content="#407579">
     <meta name="msapplication-TileColor" content="#407579">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
     <meta name="apple-mobile-web-app-title" content="Vakit">
     <meta name="application-name" content="Vakit">
     <meta name="mobile-web-app-capable" content="yes">
@@ -59,6 +59,8 @@
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="preload" href="assets/app-icon-32.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/screenshots/en/1.png" as="image">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -94,9 +96,9 @@
             "ratingCount": "150"
         },
         "screenshot": [
-            "https://vakit.hakancelik.dev/assets/screenshots/home.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/kaaba.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/settings.png"
+            "https://vakit.hakancelik.dev/assets/screenshots/en/1.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/en/2.png",
+            "https://vakit.hakancelik.dev/assets/screenshots/en/3.png"
         ]
     }
     </script>
@@ -133,7 +135,6 @@
                 <a href="#features">Features</a>
                 <a href="#screenshots">Screenshots</a>
                 <a href="#vision">About</a>
-                <a href="#developer">Developer</a>
                 <a href="#download">Download</a>
                 <a href="privacy-en.html">Privacy</a>
             </div>
@@ -149,7 +150,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Prayer Times<br>
+                    <span class="hero-title-main">Prayer Times</span><br>
                     <span class="gradient-text">Easy to Use</span>
                 </h1>
                 <p class="hero-description">
@@ -181,9 +182,11 @@
                 <div class="iphone-frame">
                     <div class="iphone-screen">
                         <div class="screenshot-carousel">
-                            <img src="assets/screenshots/en/home-screen.png" alt="Vakit Home Screen" class="app-screenshot active">
-                            <img src="assets/screenshots/en/qibla-direction.png" alt="Vakit Qibla Direction" class="app-screenshot">
-                            <img src="assets/screenshots/en/settings.png" alt="Vakit Settings" class="app-screenshot">
+                            <img src="assets/screenshots/en/1.png" alt="Vakit Home Screen" class="app-screenshot active">
+                            <img src="assets/screenshots/en/2.png" alt="Vakit Qibla Direction" class="app-screenshot">
+                            <img src="assets/screenshots/en/3.png" alt="Vakit Settings" class="app-screenshot">
+                            <img src="assets/screenshots/en/4.png" alt="Vakit Notifications" class="app-screenshot">
+                            <img src="assets/screenshots/en/5.png" alt="Vakit Widget" class="app-screenshot">
                         </div>
                     </div>
                 </div>
@@ -252,34 +255,120 @@
     <!-- Screenshots Section -->
     <section id="screenshots" class="screenshots">
         <div class="container">
-            <h2 class="section-title">Screenshots</h2>
-            <div class="screenshots-grid">
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/en/home-screen.png" alt="Vakit Home Screen" loading="lazy">
+            <h2 class="section-title">App Screenshots</h2>
+            <p class="section-subtitle">Discover all features of the Vakit app</p>
+            
+            <!-- Screenshot Carousel -->
+            <div class="screenshot-carousel-container">
+                <div class="screenshot-carousel">
+                    <div class="screenshot-slide active">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/1.png" alt="Vakit Home Screen" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Home Screen</h3>
+                            <p>View current prayer times, remaining time and Hijri date at a glance</p>
                         </div>
                     </div>
-                    <h3>Home Screen</h3>
-                    <p>View current prayer times, remaining time and Hijri date at a glance. Simple and clean interface for easy use.</p>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/2.png" alt="Vakit Qibla Direction" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Qibla Compass</h3>
+                            <p>Find the Kaaba direction precisely with GPS technology</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/3.png" alt="Vakit Settings" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Smart Settings</h3>
+                            <p>Personalized notification settings and calculation methods</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/4.png" alt="Vakit Notifications" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Notification Settings</h3>
+                            <p>Customizable notifications for prayer times</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/5.png" alt="Vakit Widget" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Widget Support</h3>
+                            <p>Quickly view prayer times on your home screen</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/6.png" alt="Vakit Location" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Location Settings</h3>
+                            <p>Accurate times with GPS or manual location selection</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/7.png" alt="Vakit Premium" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Premium Features</h3>
+                            <p>Advanced features and ad-free experience</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-slide">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <img src="assets/screenshots/en/8.png" alt="Vakit Theme" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Dark Mode</h3>
+                            <p>Dark theme support for night usage</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/en/qibla-direction.png" alt="Vakit Qibla Direction" loading="lazy">
-                        </div>
+                
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
                     </div>
-                    <h3>Qibla Compass</h3>
-                    <p>Find the Kaaba direction precisely with GPS technology. Easily learn the qibla direction by holding your phone horizontally.</p>
-                </div>
-                <div class="screenshot-card">
-                    <div class="iphone-frame">
-                        <div class="iphone-screen">
-                            <img src="assets/screenshots/en/settings.png" alt="Vakit Settings" loading="lazy">
-                        </div>
-                    </div>
-                    <h3>Smart Settings</h3>
-                    <p>Personalized notification settings and different calculation methods. Customize the app according to your needs.</p>
+                    <button class="carousel-btn next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -307,49 +396,6 @@
         </div>
     </section>
 
-    <!-- Developer Section -->
-    <section id="developer" class="developer">
-        <div class="container">
-            <h2 class="section-title">Developer</h2>
-            <div class="developer-content">
-                <div class="developer-card">
-                    <div class="developer-avatar">
-                        <img src="https://pbs.twimg.com/profile_images/1961105761280327681/Ki-AhLK9_400x400.jpg" alt="Hakan Çelik" class="avatar-image">
-                    </div>
-                    <div class="developer-info">
-                        <h3>Hakan Çelik</h3>
-                        <p class="developer-title">Software developer @ Trendyol</p>
-                        <p class="developer-bio">Solving my problems — and yours too.</p>
-                        <div class="developer-social">
-                            <a href="https://x.com/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/hakancelikdev" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h4>About the Project</h4>
-                    <p>Vakit app is an open-source prayer times application developed using modern techniques. Designed for simple and easy use.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/hakancelikdev/vakit" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i>
-                            View on GitHub
-                        </a>
-                        <a href="https://github.com/hakancelikdev/vakit/issues" target="_blank" class="btn btn-outline">
-                            <i class="fas fa-bug"></i>
-                            Contribute
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Download Section -->
     <section id="download" class="download">
