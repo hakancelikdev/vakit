@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             switchLanguage(lang);
+            
+            // Analytics event for language switch
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'language_switch', {
+                    'event_category': 'engagement',
+                    'event_label': lang,
+                    'value': 1
+                });
+            }
         });
     });
 
@@ -185,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Button hover effects
+    // Button hover effects and analytics tracking
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
         button.addEventListener('mouseenter', function() {
@@ -194,6 +203,37 @@ document.addEventListener('DOMContentLoaded', function() {
         
         button.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
+        });
+        
+        // Analytics tracking for button clicks
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent.trim();
+            const buttonHref = this.getAttribute('href');
+            
+            if (typeof gtag !== 'undefined') {
+                if (buttonHref && buttonHref.includes('apps.apple.com')) {
+                    // App Store download tracking
+                    gtag('event', 'app_download_click', {
+                        'event_category': 'conversion',
+                        'event_label': 'app_store',
+                        'value': 1
+                    });
+                } else if (buttonText.includes('Özellikleri Gör') || buttonText.includes('View Features')) {
+                    // Features button tracking
+                    gtag('event', 'features_view_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'features_button',
+                        'value': 1
+                    });
+                } else {
+                    // General button click tracking
+                    gtag('event', 'button_click', {
+                        'event_category': 'engagement',
+                        'event_label': buttonText,
+                        'value': 1
+                    });
+                }
+            }
         });
     });
 
@@ -290,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add loading animation
+    // Add loading animation and page load tracking
     window.addEventListener('load', function() {
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.5s ease';
@@ -298,6 +338,15 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             document.body.style.opacity = '1';
         }, 100);
+        
+        // Analytics tracking for page load
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_load', {
+                'event_category': 'engagement',
+                'event_label': 'landing_page',
+                'value': 1
+            });
+        }
     });
 
     // Add scroll progress indicator
@@ -314,11 +363,29 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.body.appendChild(progressBar);
 
+    // Track scroll depth for analytics
+    let scrollMilestones = [25, 50, 75, 100];
+    let scrollMilestonesReached = [];
+    
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset;
         const docHeight = document.body.offsetHeight - window.innerHeight;
         const scrollPercent = (scrollTop / docHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
+        
+        // Analytics tracking for scroll depth
+        if (typeof gtag !== 'undefined') {
+            scrollMilestones.forEach(milestone => {
+                if (scrollPercent >= milestone && !scrollMilestonesReached.includes(milestone)) {
+                    scrollMilestonesReached.push(milestone);
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': milestone + '%',
+                        'value': milestone
+                    });
+                }
+            });
+        }
     });
 });
 
@@ -453,6 +520,15 @@ function changeSlide(direction) {
     // Add active class to new slide and dot
     slides[currentSlideIndex].classList.add('active');
     dots[currentSlideIndex].classList.add('active');
+    
+    // Analytics tracking for carousel navigation
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'carousel_navigation', {
+            'event_category': 'engagement',
+            'event_label': direction > 0 ? 'next' : 'previous',
+            'value': currentSlideIndex + 1
+        });
+    }
 }
 
 function currentSlide(slideNumber) {
@@ -469,6 +545,15 @@ function currentSlide(slideNumber) {
     // Add active class to new slide and dot
     slides[currentSlideIndex].classList.add('active');
     dots[currentSlideIndex].classList.add('active');
+    
+    // Analytics tracking for dot navigation
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'carousel_dot_click', {
+            'event_category': 'engagement',
+            'event_label': 'slide_' + slideNumber,
+            'value': slideNumber
+        });
+    }
 }
 
 // Auto-rotate carousel
@@ -498,4 +583,85 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
-}); 
+
+    // Scroll-based screenshot functionality
+    initScrollScreenshots();
+    
+    // Set active navigation link based on current page
+    setActiveNavigationLink();
+});
+
+// Set active navigation link based on current page
+function setActiveNavigationLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Set active class based on current page
+    if (currentPath.includes('privacy')) {
+        const privacyLink = document.querySelector('a[href*="privacy"]');
+        if (privacyLink) privacyLink.classList.add('active');
+    } else if (currentPath.includes('terms')) {
+        const termsLink = document.querySelector('a[href*="terms"]');
+        if (termsLink) termsLink.classList.add('active');
+    } else if (currentPath.includes('en.html')) {
+        // For English main page, no specific active link
+    } else {
+        // For Turkish main page, no specific active link
+    }
+}
+
+// Scroll-based Screenshot Functionality
+function initScrollScreenshots() {
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    const scrollScreenshots = document.querySelectorAll('.scroll-screenshot');
+    
+    if (screenshotItems.length === 0 || scrollScreenshots.length === 0) {
+        return; // Exit if elements don't exist
+    }
+    
+    // Create intersection observer for screenshot items
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const slideNumber = entry.target.getAttribute('data-slide');
+                updateActiveScreenshot(slideNumber);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '-20% 0px -20% 0px'
+    });
+    
+    // Observe all screenshot items
+    screenshotItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Set initial active state
+    screenshotItems[0].classList.add('active');
+}
+
+function updateActiveScreenshot(slideNumber) {
+    // Update screenshot images
+    const scrollScreenshots = document.querySelectorAll('.scroll-screenshot');
+    scrollScreenshots.forEach(img => {
+        img.classList.remove('active');
+        if (img.getAttribute('data-slide') === slideNumber) {
+            img.classList.add('active');
+        }
+    });
+    
+    // Update screenshot items
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    screenshotItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-slide') === slideNumber) {
+            item.classList.add('active');
+        }
+    });
+} 

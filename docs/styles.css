@@ -123,8 +123,12 @@ body {
     position: relative;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active,
+.nav-links a.active {
     color: var(--primary);
+    text-decoration: none;
 }
 
 .nav-links a::after {
@@ -138,7 +142,10 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a:focus::after,
+.nav-links a:active::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
@@ -204,6 +211,14 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: center;
+}
+
+.hero-image {
+    order: 1;
+}
+
+.hero-content {
+    order: 2;
 }
 
 .hero-title {
@@ -1454,4 +1469,300 @@ html {
 .social-link:hover {
     color: white;
     transform: scale(1.2);
+}
+
+/* Scroll-based Screenshot Styles */
+.scroll-screenshots-container {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    margin: 4rem 0;
+    min-height: 100vh;
+}
+
+.sticky-phone-container {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    flex: 0 0 300px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-phone {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 600px;
+}
+
+.sticky-phone .iphone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.scroll-screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-screenshot.active {
+    opacity: 1;
+}
+
+.screenshot-content {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.screenshot-item {
+    margin-bottom: 6rem;
+    padding: 2rem 0;
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.screenshot-item.active {
+    opacity: 1;
+}
+
+.screenshot-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.screenshot-item p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Hero screenshot styles */
+.hero-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-screenshots-container {
+        flex-direction: column;
+        gap: 2rem;
+        min-height: auto;
+    }
+    
+    .sticky-phone-container {
+        position: static;
+        transform: none;
+        flex: none;
+        height: 400px;
+        order: 2;
+    }
+    
+    .screenshot-content {
+        padding-left: 0;
+        order: 1;
+    }
+    
+    .screenshot-item {
+        margin-bottom: 3rem;
+        padding: 1rem 0;
+    }
+    
+    .screenshot-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .screenshot-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Apple-style Design */
+.hero-apple {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content-apple {
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.hero-title-apple {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.hero-subtitle-apple {
+    font-size: 1.5rem;
+    color: #86868b;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-buttons-apple {
+    margin-top: 2rem;
+}
+
+.btn-apple-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #0071e3;
+    color: white;
+    text-decoration: none;
+    border-radius: 980px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(0, 113, 227, 0.39);
+}
+
+.btn-apple-primary:hover {
+    background: #0077ed;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 113, 227, 0.5);
+}
+
+.hero-image-apple {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.iphone-frame-apple {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: #1d1d1f;
+    border-radius: 40px;
+    padding: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.iphone-screen-apple {
+    width: 100%;
+    aspect-ratio: 9/19.5;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-screenshot-apple,
+.feature-screenshot-apple {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Feature Sections */
+.feature-section-apple {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    background: #ffffff;
+}
+
+.feature-section-apple:nth-child(even) {
+    background: #f5f5f7;
+}
+
+.feature-container-apple {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.feature-reverse .feature-container-apple {
+    direction: rtl;
+}
+
+.feature-reverse .feature-content-apple {
+    direction: ltr;
+}
+
+.feature-content-apple {
+    max-width: 500px;
+}
+
+.feature-title-apple {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.feature-description-apple {
+    font-size: 1.3rem;
+    color: #86868b;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.feature-image-apple {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Responsive Apple Design */
+@media (max-width: 768px) {
+    .hero-title-apple {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle-apple {
+        font-size: 1.2rem;
+    }
+    
+    .feature-container-apple {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .feature-title-apple {
+        font-size: 2.5rem;
+    }
+    
+    .feature-description-apple {
+        font-size: 1.1rem;
+    }
+    
+    .feature-reverse .feature-container-apple {
+        direction: ltr;
+    }
 } 
