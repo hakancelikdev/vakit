@@ -13,7 +13,7 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "",
+            subtitle: "İbadetinize yardımcı bir uygulama",
             description: "<strong>Vakit</strong> uygulaması ile namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. Bildirim alın. <strong>Basit ve kolay</strong> kullanım. <strong>Namaz vakti</strong>, <strong>kıble yönü</strong>, <strong>gelişmiş takvim</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve <strong>premium özellikler</strong>.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
@@ -68,12 +68,40 @@ const translations = {
             },
         },
         
+        // Apple-style Feature Sections (for index.html)
+        appleFeatures: {
+            prayerTimes: {
+                title: "Namaz Vakitleri",
+                description: "Konumunuza göre namaz vakitlerini öğrenin. Sabah, öğle, ikindi, akşam ve yatsı vakitleri otomatik hesaplanır."
+            },
+            qiblaDirection: {
+                title: "Kıble Yönü",
+                description: "Telefonu yatay tutarak Kâbe yönünü hassas şekilde bulun. GPS teknolojisi ile doğru yönü öğrenin."
+            },
+            notifications: {
+                title: "Bildirimler & Ses Seçenekleri",
+                description: "Namaz vakitlerinde bildirim alın. 11 farklı bildirim sesi arasından seçin: Geleneksel Ezan (Muhammad Al Damradash), sistem sesleri ve özel tonlar."
+            },
+            hijriCalendar: {
+                title: "Gelişmiş Takvim",
+                description: "Güncel Hicri tarihi ve İslami bayramları görün. Tarihe dokunarak o günün namaz vakitlerini popup'ta görün. Regaib, Miraç, Berat ve diğer önemli günler dahil."
+            },
+            widgets: {
+                title: "Widget Desteği",
+                description: "Ana ekranda küçük, orta ve büyük boyutlarda widget'lar. Dinamik arka planlar ve gerçek zamanlı geri sayım ile namaz vakitlerini hızlıca görün."
+            },
+            premium: {
+                title: "Premium Özellikler",
+                description: "Live Activities (Dynamic Island), gelişmiş widget'lar, reklamsız deneyim ve gelişmiş bildirim özelleştirmeleri ile gelişmiş özellikler."
+            }
+        },
+        
         // Screenshots Section
         screenshots: {
             title: "Uygulama Ekranları",
             subtitle: "Vakit uygulamasının tüm özelliklerini keşfedin ve modern tasarımı deneyimleyin",
             home: {
-                title: "Ana Ekran",
+                title: "Ana Ekran - Namaz Vakitleri",
                 description: "Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Basit ve temiz arayüz ile kolay kullanım."
             },
             qibla: {
@@ -81,7 +109,7 @@ const translations = {
                 description: "GPS teknolojisi ile Kâbe yönünü hassas şekilde bulun. Telefonu yatay tutarak kıble yönünü kolayca öğrenin."
             },
             settings: {
-                title: "Akıllı Ayarlar",
+                title: "Bildirim Ayarları",
                 description: "Kişiselleştirilmiş bildirim ayarları ve farklı hesaplama yöntemleri. İhtiyaçlarınıza göre uygulamayı özelleştirin."
             },
             notifications: {
@@ -154,6 +182,11 @@ const translations = {
             note: "iOS 17 ve üzeri gereklidir"
         },
         
+        // Footer Section
+        footer: {
+            copyright: "© 2025 Vakit Team. Tüm hakları saklıdır."
+        },
+        
 
         
         // Meta tags
@@ -190,7 +223,7 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "",
+            subtitle: "A helpful app for your worship",
             description: "Learn <strong>prayer times</strong> easily with the <strong>Vakit</strong> app. Find the <strong>qibla direction</strong>. Get notifications. <strong>Simple and easy</strong> to use. <strong>Prayer times</strong>, <strong>qibla direction</strong>, <strong>advanced calendar</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and <strong>premium features</strong>.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
@@ -245,12 +278,40 @@ const translations = {
             },
         },
         
+        // Apple-style Feature Sections (for index.html)
+        appleFeatures: {
+            prayerTimes: {
+                title: "Prayer Times",
+                description: "Learn prayer times based on your location. Fajr, Dhuhr, Asr, Maghrib and Isha times automatically calculated."
+            },
+            qiblaDirection: {
+                title: "Qibla Direction",
+                description: "Find the Kaaba direction precisely by holding your phone horizontally. Learn the correct direction with GPS technology."
+            },
+            notifications: {
+                title: "Notifications & Sound Options",
+                description: "Get notifications at prayer times. Choose from 11 different notification sounds: Traditional Adhan (Muhammad Al Damradash), system sounds and custom tones."
+            },
+            hijriCalendar: {
+                title: "Advanced Calendar",
+                description: "View current Hijri date and Islamic holidays. Tap any date to see prayer times in a popup. Includes Regaib, Miraj, Berat and other important days."
+            },
+            widgets: {
+                title: "Widget Support",
+                description: "Home screen small, medium and large widgets. Dynamic backgrounds and real-time countdown to quickly view prayer times."
+            },
+            premium: {
+                title: "Premium Features",
+                description: "Live Activities (Dynamic Island), advanced widgets, ad-free experience and enhanced notification customization for advanced features."
+            }
+        },
+        
         // Screenshots Section
         screenshots: {
             title: "App Screenshots",
             subtitle: "Discover all features of the Vakit app and experience the modern design",
             home: {
-                title: "Home Screen",
+                title: "Home Screen - Prayer Times",
                 description: "View current prayer times, remaining time and Hijri date at a glance. Simple and clean interface for easy use."
             },
             qibla: {
@@ -258,7 +319,7 @@ const translations = {
                 description: "Find the Kaaba direction precisely with GPS technology. Easily learn the qibla direction by holding your phone horizontally."
             },
             settings: {
-                title: "Smart Settings",
+                title: "Notification Settings",
                 description: "Personalized notification settings and different calculation methods. Customize the app according to your needs."
             },
             notifications: {
@@ -331,6 +392,11 @@ const translations = {
             note: "Requires iOS 17 or later"
         },
         
+        // Footer Section
+        footer: {
+            copyright: "© 2025 Vakit Team. All rights reserved."
+        },
+        
 
         
         // Meta tags
@@ -400,6 +466,13 @@ function switchLanguage(lang) {
         }
     }
     
+    // Update Apple-style hero section
+    const heroTitleApple = document.querySelector('.hero-title-apple');
+    if (heroTitleApple) heroTitleApple.textContent = t.hero.title;
+    
+    const heroSubtitleApple = document.querySelector('.hero-subtitle-apple');
+    if (heroSubtitleApple) heroSubtitleApple.textContent = t.hero.subtitle;
+    
     const heroDescription = document.querySelector('.hero-description');
     if (heroDescription) heroDescription.innerHTML = t.hero.description;
     
@@ -408,6 +481,9 @@ function switchLanguage(lang) {
     
     const secondaryBtn = document.querySelector('.btn-secondary');
     if (secondaryBtn) secondaryBtn.innerHTML = `<i class="fas fa-info-circle"></i>${t.hero.featuresButton}`;
+    
+    const applePrimaryBtn = document.querySelector('.btn-apple-primary');
+    if (applePrimaryBtn) applePrimaryBtn.innerHTML = `<i class="fab fa-apple"></i>${t.hero.downloadButton}`;
     
     // Update hero highlights
     const highlights = document.querySelectorAll('.highlight-item');
@@ -447,6 +523,30 @@ function switchLanguage(lang) {
         featureCards[6].querySelector('p').innerHTML = t.features.offline.description;
     }
     
+    // Update Apple-style feature sections
+    const appleFeatureTitles = document.querySelectorAll('.feature-title-apple');
+    const appleFeatureDescriptions = document.querySelectorAll('.feature-description-apple');
+    
+    if (appleFeatureTitles.length >= 6 && appleFeatureDescriptions.length >= 6) {
+        appleFeatureTitles[0].textContent = t.appleFeatures.prayerTimes.title;
+        appleFeatureDescriptions[0].textContent = t.appleFeatures.prayerTimes.description;
+        
+        appleFeatureTitles[1].textContent = t.appleFeatures.qiblaDirection.title;
+        appleFeatureDescriptions[1].textContent = t.appleFeatures.qiblaDirection.description;
+        
+        appleFeatureTitles[2].textContent = t.appleFeatures.notifications.title;
+        appleFeatureDescriptions[2].textContent = t.appleFeatures.notifications.description;
+        
+        appleFeatureTitles[3].textContent = t.appleFeatures.hijriCalendar.title;
+        appleFeatureDescriptions[3].textContent = t.appleFeatures.hijriCalendar.description;
+        
+        appleFeatureTitles[4].textContent = t.appleFeatures.widgets.title;
+        appleFeatureDescriptions[4].textContent = t.appleFeatures.widgets.description;
+        
+        appleFeatureTitles[5].textContent = t.appleFeatures.premium.title;
+        appleFeatureDescriptions[5].textContent = t.appleFeatures.premium.description;
+    }
+    
     // Update screenshots section
     const screenshotsTitle = document.querySelector('#screenshots .section-title');
     if (screenshotsTitle) screenshotsTitle.textContent = t.screenshots.title;
@@ -480,6 +580,34 @@ function switchLanguage(lang) {
         
         screenshotSlides[7].querySelector('h3').textContent = t.screenshots.theme.title;
         screenshotSlides[7].querySelector('p').textContent = t.screenshots.theme.description;
+    }
+    
+    // Update screenshot item titles (for en.html)
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    if (screenshotItems.length >= 8) {
+        screenshotItems[0].querySelector('h3').textContent = t.screenshots.home.title;
+        screenshotItems[0].querySelector('p').textContent = t.screenshots.home.description;
+        
+        screenshotItems[1].querySelector('h3').textContent = t.screenshots.qibla.title;
+        screenshotItems[1].querySelector('p').textContent = t.screenshots.qibla.description;
+        
+        screenshotItems[2].querySelector('h3').textContent = t.screenshots.settings.title;
+        screenshotItems[2].querySelector('p').textContent = t.screenshots.settings.description;
+        
+        screenshotItems[3].querySelector('h3').textContent = t.screenshots.notifications.title;
+        screenshotItems[3].querySelector('p').textContent = t.screenshots.notifications.description;
+        
+        screenshotItems[4].querySelector('h3').textContent = t.screenshots.widget.title;
+        screenshotItems[4].querySelector('p').textContent = t.screenshots.widget.description;
+        
+        screenshotItems[5].querySelector('h3').textContent = t.screenshots.location.title;
+        screenshotItems[5].querySelector('p').textContent = t.screenshots.location.description;
+        
+        screenshotItems[6].querySelector('h3').textContent = t.screenshots.premium.title;
+        screenshotItems[6].querySelector('p').textContent = t.screenshots.premium.description;
+        
+        screenshotItems[7].querySelector('h3').textContent = t.screenshots.theme.title;
+        screenshotItems[7].querySelector('p').textContent = t.screenshots.theme.description;
     }
     
     // Update feature highlights
@@ -522,6 +650,10 @@ function switchLanguage(lang) {
         const downloadNote = downloadSection.querySelector('.download-note');
         if (downloadNote) downloadNote.textContent = t.download.note;
     }
+    
+    // Update footer
+    const footerCopyright = document.querySelector('.footer-copyright p');
+    if (footerCopyright) footerCopyright.textContent = t.footer.copyright;
     
     
         
