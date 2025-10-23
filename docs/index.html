@@ -128,8 +128,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
-                <span>Vakit</span>
+                <a href="#" onclick="window.location.reload(); return false;" class="nav-logo-link">
+                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
+                    <span>Vakit</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="#features">Özellikler</a>
@@ -137,6 +139,7 @@
                 <a href="#vision">Hakkımızda</a>
                 <a href="#download">İndir</a>
                 <a href="privacy.html">Gizlilik</a>
+                <a href="terms.html">Kullanım Şartları</a>
             </div>
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="tr">TR</button>
@@ -369,6 +372,33 @@
                     <button class="carousel-btn next" onclick="changeSlide(1)">
                         <i class="fas fa-chevron-right"></i>
                     </button>
+                </div>
+            </div>
+            
+            <!-- Feature Highlights -->
+            <div class="feature-highlights">
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Modern Tasarım</h4>
+                        <p>iOS 15+ uyumlu, temiz ve kullanıcı dostu arayüz</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Otomatik Güncelleme</h4>
+                        <p>Namaz vakitleri otomatik olarak güncellenir</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Güvenli & Gizli</h4>
+                        <p>Kişisel verileriniz güvende, reklam yok</p>
+                    </div>
                 </div>
             </div>
         </div>

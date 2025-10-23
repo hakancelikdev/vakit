@@ -5,8 +5,9 @@ const translations = {
             features: "Özellikler",
             screenshots: "Hızlı Göz Atma",
             vision: "Hakkımızda",
-            developer: "Geliştirici",
-            download: "İndir"
+            download: "İndir",
+            privacy: "Gizlilik",
+            terms: "Kullanım Şartları"
         },
         
         // Hero Section
@@ -60,7 +61,8 @@ const translations = {
         
         // Screenshots Section
         screenshots: {
-            title: "Hızlı Göz Atma",
+            title: "Uygulama Ekranları",
+            subtitle: "Vakit uygulamasının tüm özelliklerini keşfedin ve modern tasarımı deneyimleyin",
             home: {
                 title: "Ana Ekran",
                 description: "Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Basit ve temiz arayüz ile kolay kullanım."
@@ -72,6 +74,40 @@ const translations = {
             settings: {
                 title: "Akıllı Ayarlar",
                 description: "Kişiselleştirilmiş bildirim ayarları ve farklı hesaplama yöntemleri. İhtiyaçlarınıza göre uygulamayı özelleştirin."
+            },
+            notifications: {
+                title: "Bildirim Ayarları",
+                description: "Namaz vakitleri için özelleştirilebilir bildirimler ve ezan sesi seçenekleri"
+            },
+            widget: {
+                title: "Widget Desteği",
+                description: "Ana ekranda namaz vakitlerini hızlıca görün ve takip edin"
+            },
+            location: {
+                title: "Konum Ayarları",
+                description: "GPS veya manuel konum seçimi ile doğru vakitler"
+            },
+            premium: {
+                title: "Premium Özellikler",
+                description: "Gelişmiş özellikler ve reklamsız deneyim"
+            },
+            theme: {
+                title: "Karanlık Mod",
+                description: "Gece kullanımı için karanlık tema desteği"
+            },
+            highlights: {
+                modern: {
+                    title: "Modern Tasarım",
+                    description: "iOS 15+ uyumlu, temiz ve kullanıcı dostu arayüz"
+                },
+                autoUpdate: {
+                    title: "Otomatik Güncelleme",
+                    description: "Namaz vakitleri otomatik olarak güncellenir"
+                },
+                secure: {
+                    title: "Güvenli & Gizli",
+                    description: "Kişisel verileriniz güvende, reklam yok"
+                }
             }
         },
         
@@ -132,8 +168,9 @@ const translations = {
             features: "Features",
             screenshots: "Screenshots",
             vision: "About",
-            developer: "Developer",
-            download: "Download"
+            download: "Download",
+            privacy: "Privacy",
+            terms: "Terms of Use"
         },
         
         // Hero Section
@@ -187,7 +224,8 @@ const translations = {
         
         // Screenshots Section
         screenshots: {
-            title: "Screenshots",
+            title: "App Screenshots",
+            subtitle: "Discover all features of the Vakit app and experience the modern design",
             home: {
                 title: "Home Screen",
                 description: "View current prayer times, remaining time and Hijri date at a glance. Simple and clean interface for easy use."
@@ -199,6 +237,40 @@ const translations = {
             settings: {
                 title: "Smart Settings",
                 description: "Personalized notification settings and different calculation methods. Customize the app according to your needs."
+            },
+            notifications: {
+                title: "Notification Settings",
+                description: "Customizable notifications for prayer times and adhan sound options"
+            },
+            widget: {
+                title: "Widget Support",
+                description: "Quickly view prayer times on your home screen"
+            },
+            location: {
+                title: "Location Settings",
+                description: "Accurate times with GPS or manual location selection"
+            },
+            premium: {
+                title: "Premium Features",
+                description: "Advanced features and ad-free experience"
+            },
+            theme: {
+                title: "Dark Mode",
+                description: "Dark theme support for night usage"
+            },
+            highlights: {
+                modern: {
+                    title: "Modern Design",
+                    description: "iOS 15+ compatible, clean and user-friendly interface"
+                },
+                autoUpdate: {
+                    title: "Auto Update",
+                    description: "Prayer times are automatically updated"
+                },
+                secure: {
+                    title: "Secure & Private",
+                    description: "Your personal data is safe, no ads"
+                }
             }
         },
         
@@ -281,11 +353,14 @@ function switchLanguage(lang) {
     const visionLink = document.querySelector('a[href="#vision"]');
     if (visionLink) visionLink.textContent = t.nav.vision;
     
-    const developerLink = document.querySelector('a[href="#developer"]');
-    if (developerLink) developerLink.textContent = t.nav.developer;
-    
     const downloadLink = document.querySelector('a[href="#download"]');
     if (downloadLink) downloadLink.textContent = t.nav.download;
+    
+    const privacyLink = document.querySelector('a[href="privacy.html"]');
+    if (privacyLink) privacyLink.textContent = t.nav.privacy;
+    
+    const termsLink = document.querySelector('a[href="terms.html"]');
+    if (termsLink) termsLink.textContent = t.nav.terms;
     
     // Update hero section
     const heroTitle = document.querySelector('.hero-title');
@@ -344,16 +419,48 @@ function switchLanguage(lang) {
     const screenshotsTitle = document.querySelector('#screenshots .section-title');
     if (screenshotsTitle) screenshotsTitle.textContent = t.screenshots.title;
     
-    const screenshotCards = document.querySelectorAll('.screenshot-card');
-    if (screenshotCards.length >= 3) {
-        screenshotCards[0].querySelector('h3').textContent = t.screenshots.home.title;
-        screenshotCards[0].querySelector('p').textContent = t.screenshots.home.description;
+    const screenshotsSubtitle = document.querySelector('#screenshots .section-subtitle');
+    if (screenshotsSubtitle) screenshotsSubtitle.textContent = t.screenshots.subtitle;
+    
+    // Update screenshot slide descriptions
+    const screenshotSlides = document.querySelectorAll('.screenshot-slide');
+    if (screenshotSlides.length >= 8) {
+        screenshotSlides[0].querySelector('h3').textContent = t.screenshots.home.title;
+        screenshotSlides[0].querySelector('p').textContent = t.screenshots.home.description;
         
-        screenshotCards[1].querySelector('h3').textContent = t.screenshots.qibla.title;
-        screenshotCards[1].querySelector('p').textContent = t.screenshots.qibla.description;
+        screenshotSlides[1].querySelector('h3').textContent = t.screenshots.qibla.title;
+        screenshotSlides[1].querySelector('p').textContent = t.screenshots.qibla.description;
         
-        screenshotCards[2].querySelector('h3').textContent = t.screenshots.settings.title;
-        screenshotCards[2].querySelector('p').textContent = t.screenshots.settings.description;
+        screenshotSlides[2].querySelector('h3').textContent = t.screenshots.settings.title;
+        screenshotSlides[2].querySelector('p').textContent = t.screenshots.settings.description;
+        
+        screenshotSlides[3].querySelector('h3').textContent = t.screenshots.notifications.title;
+        screenshotSlides[3].querySelector('p').textContent = t.screenshots.notifications.description;
+        
+        screenshotSlides[4].querySelector('h3').textContent = t.screenshots.widget.title;
+        screenshotSlides[4].querySelector('p').textContent = t.screenshots.widget.description;
+        
+        screenshotSlides[5].querySelector('h3').textContent = t.screenshots.location.title;
+        screenshotSlides[5].querySelector('p').textContent = t.screenshots.location.description;
+        
+        screenshotSlides[6].querySelector('h3').textContent = t.screenshots.premium.title;
+        screenshotSlides[6].querySelector('p').textContent = t.screenshots.premium.description;
+        
+        screenshotSlides[7].querySelector('h3').textContent = t.screenshots.theme.title;
+        screenshotSlides[7].querySelector('p').textContent = t.screenshots.theme.description;
+    }
+    
+    // Update feature highlights
+    const highlightItems = document.querySelectorAll('.highlight-item');
+    if (highlightItems.length >= 3) {
+        highlightItems[0].querySelector('h4').textContent = t.screenshots.highlights.modern.title;
+        highlightItems[0].querySelector('p').textContent = t.screenshots.highlights.modern.description;
+        
+        highlightItems[1].querySelector('h4').textContent = t.screenshots.highlights.autoUpdate.title;
+        highlightItems[1].querySelector('p').textContent = t.screenshots.highlights.autoUpdate.description;
+        
+        highlightItems[2].querySelector('h4').textContent = t.screenshots.highlights.secure.title;
+        highlightItems[2].querySelector('p').textContent = t.screenshots.highlights.secure.description;
     }
     
     // Update vision section
@@ -366,24 +473,7 @@ function switchLanguage(lang) {
         visionCards[1].querySelector('p').textContent = t.vision.goal.description;
     }
     
-    // Update developer section
-    const developerTitle = document.querySelector('#developer .section-title');
-    if (developerTitle) developerTitle.textContent = t.developer.title;
-    
-    const projectInfo = document.querySelector('.project-info');
-    if (projectInfo) {
-        const projectTitle = projectInfo.querySelector('h4');
-        if (projectTitle) projectTitle.textContent = t.developer.project.title;
-        
-        const projectDesc = projectInfo.querySelector('p');
-        if (projectDesc) projectDesc.textContent = t.developer.project.description;
-        
-        const projectLinks = projectInfo.querySelectorAll('.btn');
-        if (projectLinks.length >= 2) {
-            projectLinks[0].innerHTML = `<i class="fab fa-github"></i>${t.developer.project.githubButton}`;
-            projectLinks[1].innerHTML = `<i class="fas fa-bug"></i>${t.developer.project.contributeButton}`;
-        }
-    }
+    // Developer section removed - not present in current HTML structure
     
     // Update download section
     const downloadSection = document.querySelector('#download .download-content');
@@ -459,11 +549,14 @@ function updatePrivacyPageLanguage(t, currentLang) {
     const visionLink = document.querySelector('a[href="#vision"]');
     if (visionLink) visionLink.textContent = t.nav.vision;
     
-    const developerLink = document.querySelector('a[href="#developer"]');
-    if (developerLink) developerLink.textContent = t.nav.developer;
-    
     const downloadLink = document.querySelector('a[href="#download"]');
     if (downloadLink) downloadLink.textContent = t.nav.download;
+    
+    const privacyLink = document.querySelector('a[href="privacy.html"], a[href="privacy-en.html"]');
+    if (privacyLink) privacyLink.textContent = t.nav.privacy;
+    
+    const termsLink = document.querySelector('a[href="terms.html"], a[href="terms-en.html"]');
+    if (termsLink) termsLink.textContent = t.nav.terms;
     
     // Update meta tags
     document.title = t.meta.title;

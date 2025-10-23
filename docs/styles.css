@@ -96,6 +96,20 @@ body {
     object-fit: cover;
 }
 
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.nav-logo-link:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .nav-links {
     display: flex;
     gap: var(--spacing-lg);
@@ -730,6 +744,15 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .highlight-item {
+        padding: 25px 15px;
+    }
+    
     .vision-content {
         grid-template-columns: 1fr;
     }
@@ -859,12 +882,27 @@ html {
 /* Section Subtitle */
 .section-subtitle {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 50px;
-    max-width: 600px;
+    margin-bottom: 60px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
+    font-weight: 400;
+    position: relative;
+}
+
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
 }
 
 /* Screenshot Carousel Styles */
@@ -898,19 +936,48 @@ html {
     margin: 0 auto 30px;
 }
 
+.screenshot-info {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--card-background);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.screenshot-info:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
 .screenshot-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 15px;
+    position: relative;
+}
+
+.screenshot-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 1px;
 }
 
 .screenshot-info p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    line-height: 1.6;
-    max-width: 400px;
+    line-height: 1.7;
+    max-width: 450px;
     margin: 0 auto;
+    font-weight: 400;
 }
 
 /* Carousel Controls */
@@ -920,6 +987,69 @@ html {
     align-items: center;
     gap: 30px;
     margin-top: 30px;
+}
+
+/* Feature Highlights */
+.feature-highlights {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--card-background);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover .highlight-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(64, 117, 121, 0.3);
+}
+
+.highlight-item h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.highlight-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .carousel-btn {
