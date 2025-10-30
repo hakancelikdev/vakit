@@ -255,7 +255,7 @@
         
         <div class="privacy-header">
             <h1 class="privacy-title">Vakit – Privacy Policy</h1>
-            <p class="privacy-subtitle">Vakit respects your privacy. We collect only the data needed to calculate prayer times, determine Qibla direction, and send local reminders. For premium users, no personal data ever leaves your device. For free users, limited data may be collected to improve the advertising experience.</p>
+            <p class="privacy-subtitle">Vakit respects your privacy. We collect only the data needed to calculate prayer times, determine Qibla direction, show Live Activities, and send local reminders. All data stays on your device and no personal data ever leaves your device. Limited data may be collected to improve the advertising experience.</p>
             <p class="privacy-last-updated">Last updated: 2025</p>
         </div>
 
@@ -299,13 +299,25 @@
                     </tr>
                     <tr>
                         <td><strong>App settings</strong></td>
-                        <td>Remember your preferences</td>
+                        <td>Remember your preferences (language, theme, calculation method)</td>
                         <td>UserDefaults</td>
                         <td>Until reset or app deleted</td>
                     </tr>
                     <tr>
+                        <td><strong>Live Activities data</strong></td>
+                        <td>Live prayer time tracking with Dynamic Island</td>
+                        <td>ActivityKit (Apple)</td>
+                        <td>Until activity ends</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Widget data</strong></td>
+                        <td>Show prayer times on home screen widgets</td>
+                        <td>App Groups / UserDefaults</td>
+                        <td>Until widget updates</td>
+                    </tr>
+                    <tr>
                         <td><strong>Advertising Data</strong></td>
-                        <td>Show personalized ads for free users</td>
+                        <td>Show personalized ads</td>
                         <td>Google AdMob (third-party)</td>
                         <td>Limited time for ad optimization</td>
                     </tr>
@@ -324,22 +336,46 @@
                 <li><strong>Prayer Times Calculation</strong> – Location is processed locally on device.</li>
                 <li><strong>Qibla Direction</strong> – Location + direction combined on device to show Kaaba direction.</li>
                 <li><strong>Prayer Notifications</strong> – If enabled, we schedule local notifications for upcoming prayers.</li>
-                <li><strong>User Preferences</strong> – Stored locally so you don't have to reset every time.</li>
+                <li><strong>Live Activities</strong> – Live prayer time tracking with Dynamic Island.</li>
+                <li><strong>iOS Widgets</strong> – Show prayer times on home screen widgets.</li>
+                <li><strong>User Preferences</strong> – Remember your settings like language, theme, and calculation method.</li>
             </ul>
             
             <div class="privacy-highlight">
-                <p><strong>Assurance:</strong> For premium users, no analytics, advertising frameworks, or remote servers are contacted.</p>
+                <p><strong>Assurance:</strong> All data is processed on your device and never sent to any server.</p>
             </div>
         </div>
 
         <div class="privacy-section">
             <h2>3. Data Sharing & Third Parties</h2>
-            <p>For premium users, we do not share, sell, or transmit your data to anyone. For free users, limited data sharing with Google AdMob may occur to improve the advertising experience.</p>
+            <p>We do not share, sell, or transmit your data to anyone. All data stays on your device and limited data sharing may occur only in the following cases:</p>
+            
+            <ul>
+                <li><strong>Google AdMob:</strong> Limited data sharing to improve advertising experience</li>
+                <li><strong>Apple Services:</strong> Apple's system services for Live Activities and Widgets</li>
+                <li><strong>Location Services:</strong> Apple's location services for prayer time calculations</li>
+            </ul>
+            
+            <div class="privacy-highlight">
+                <p><strong>Important:</strong> No personal data ever leaves your device. All processing is done locally.</p>
+            </div>
         </div>
 
         <div class="privacy-section">
             <h2>4. Security</h2>
-            <p>All data stays on your iPhone and is protected by iOS sandbox and encryption.</p>
+            <p>Your data security is very important to us:</p>
+            
+            <ul>
+                <li><strong>Local Storage:</strong> All data stays on your iPhone and is never sent to any server</li>
+                <li><strong>iOS Sandbox:</strong> The app is isolated with iOS sandbox</li>
+                <li><strong>Encryption:</strong> Sensitive data is protected by iOS's built-in encryption system</li>
+                <li><strong>Permission Control:</strong> Only necessary permissions are requested and used</li>
+                <li><strong>Secure Communication:</strong> Apple's secure services are used</li>
+            </ul>
+            
+            <div class="privacy-highlight">
+                <p><strong>Assurance:</strong> The app never connects to any server and all processing is done on your device.</p>
+            </div>
         </div>
 
         <div class="privacy-section">
@@ -347,7 +383,9 @@
             <ul>
                 <li><strong>Revoke Location, Motion, or Notifications</strong> at any time in iOS Settings → Vakit.</li>
                 <li><strong>Disable ad tracking</strong> in iOS Settings → Privacy & Security → App Tracking Transparency.</li>
-                <li><strong>Purchase Premium</strong> to completely disable ads and data collection.</li>
+                <li><strong>Live Activities:</strong> Turn off Live Activities from Dynamic Island.</li>
+                <li><strong>Widgets:</strong> Remove home screen widgets at any time.</li>
+                <li><strong>App Settings:</strong> Change language, theme, and calculation method from within the app.</li>
                 <li><strong>Delete the app</strong> to remove all stored data.</li>
             </ul>
         </div>

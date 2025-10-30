@@ -255,7 +255,7 @@
         
         <div class="privacy-header">
             <h1 class="privacy-title">Vakit – Gizlilik Politikası</h1>
-            <p class="privacy-subtitle">Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız. Premium kullanıcılar için hiçbir kişisel veri cihazınızdan ayrılmaz. Ücretsiz kullanıcılar için reklam deneyimini iyileştirmek amacıyla sınırlı veri toplanabilir.</p>
+            <p class="privacy-subtitle">Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek, Live Activities göstermek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız. Tüm veriler cihazınızda kalır ve hiçbir kişisel veri cihazınızdan ayrılmaz. Reklam deneyimini iyileştirmek amacıyla sınırlı veri toplanabilir.</p>
             <p class="privacy-last-updated">Son güncelleme: 2025</p>
         </div>
 
@@ -299,13 +299,25 @@
                     </tr>
                     <tr>
                         <td><strong>Uygulama ayarları</strong></td>
-                        <td>Tercihlerinizi hatırlamak</td>
+                        <td>Tercihlerinizi hatırlamak (dil, tema, hesaplama yöntemi)</td>
                         <td>UserDefaults</td>
                         <td>Sıfırlanana veya uygulama silinene kadar</td>
                     </tr>
                     <tr>
+                        <td><strong>Live Activities verisi</strong></td>
+                        <td>Dinamik Adalar ile canlı namaz vakti takibi</td>
+                        <td>ActivityKit (Apple)</td>
+                        <td>Etkinlik sona erene kadar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Widget verisi</strong></td>
+                        <td>Ana ekran widget'larında namaz vakitlerini göstermek</td>
+                        <td>App Groups / UserDefaults</td>
+                        <td>Widget güncellenene kadar</td>
+                    </tr>
+                    <tr>
                         <td><strong>Reklam verisi</strong></td>
-                        <td>Ücretsiz kullanıcılar için kişiselleştirilmiş reklamlar göstermek</td>
+                        <td>Kişiselleştirilmiş reklamlar göstermek</td>
                         <td>Google AdMob (üçüncü taraf)</td>
                         <td>Reklam optimizasyonu için sınırlı süre</td>
                     </tr>
@@ -324,22 +336,46 @@
                 <li><strong>Namaz Vakitleri Hesaplama</strong> – Konum cihaz üzerinde yerel olarak işlenir.</li>
                 <li><strong>Kıble Yönü</strong> – Kâbe yönünü göstermek için konum + yön cihaz üzerinde birleştirilir.</li>
                 <li><strong>Namaz Bildirimleri</strong> – Etkinse, yaklaşan namazlar için yerel bildirimler planlarız.</li>
-                <li><strong>Kullanıcı Tercihleri</strong> – Her seferinde yeniden ayarlamak zorunda kalmayın diye yerel olarak saklanır.</li>
+                <li><strong>Live Activities</strong> – Dinamik Adalar ile canlı namaz vakti takibi.</li>
+                <li><strong>iOS Widget'ları</strong> – Ana ekran widget'larında namaz vakitlerini gösterir.</li>
+                <li><strong>Kullanıcı Tercihleri</strong> – Dil, tema, hesaplama yöntemi gibi ayarlarınızı hatırlar.</li>
             </ul>
             
             <div class="privacy-highlight">
-                <p><strong>Güvence:</strong> Premium kullanıcılar için analitik, reklam çerçeveleri veya uzak sunucular kullanılmaz.</p>
+                <p><strong>Güvence:</strong> Tüm veriler cihazınızda işlenir ve hiçbir sunucuya gönderilmez.</p>
             </div>
         </div>
 
         <div class="privacy-section">
             <h2>3. Veri Paylaşımı & Üçüncü Taraflar</h2>
-            <p>Premium kullanıcılar için verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Ücretsiz kullanıcılar için reklam deneyimini iyileştirmek amacıyla Google AdMob ile sınırlı veri paylaşımı yapılabilir.</p>
+            <p>Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Tüm veriler cihazınızda kalır ve sadece aşağıdaki durumlarda sınırlı veri paylaşımı yapılabilir:</p>
+            
+            <ul>
+                <li><strong>Google AdMob:</strong> Reklam deneyimini iyileştirmek amacıyla sınırlı veri paylaşımı</li>
+                <li><strong>Apple Servisleri:</strong> Live Activities ve Widget'lar için Apple'ın sistem servisleri</li>
+                <li><strong>Konum Servisleri:</strong> Namaz vakti hesaplamaları için Apple'ın konum servisleri</li>
+            </ul>
+            
+            <div class="privacy-highlight">
+                <p><strong>Önemli:</strong> Hiçbir kişisel veri cihazınızdan ayrılmaz. Tüm işlemler yerel olarak gerçekleştirilir.</p>
+            </div>
         </div>
 
         <div class="privacy-section">
             <h2>4. Güvenlik</h2>
-            <p>Tüm veriler iPhone'unuzda kalır ve iOS sandbox'ı ile şifreleme tarafından korunur.</p>
+            <p>Verilerinizin güvenliği bizim için çok önemlidir:</p>
+            
+            <ul>
+                <li><strong>Yerel Depolama:</strong> Tüm veriler iPhone'unuzda kalır ve hiçbir sunucuya gönderilmez</li>
+                <li><strong>iOS Sandbox:</strong> Uygulama iOS sandbox'ı ile izole edilmiştir</li>
+                <li><strong>Şifreleme:</strong> Hassas veriler iOS'un yerleşik şifreleme sistemi ile korunur</li>
+                <li><strong>İzin Kontrolü:</strong> Sadece gerekli izinler istenir ve kullanılır</li>
+                <li><strong>Güvenli İletişim:</strong> Apple'ın güvenli servisleri kullanılır</li>
+            </ul>
+            
+            <div class="privacy-highlight">
+                <p><strong>Güvence:</strong> Uygulama hiçbir sunucuya bağlanmaz ve tüm işlemler cihazınızda gerçekleştirilir.</p>
+            </div>
         </div>
 
         <div class="privacy-section">
@@ -347,7 +383,9 @@
             <ul>
                 <li><strong>iOS Ayarları</strong> → Vakit bölümünden Konum, Hareket veya Bildirim izinlerini istediğiniz zaman iptal edin.</li>
                 <li><strong>iOS Ayarları</strong> → Gizlilik ve Güvenlik → App Tracking Transparency'den reklam takibini kapatabilirsiniz.</li>
-                <li><strong>Premium satın alarak</strong> reklamları ve veri toplamayı tamamen devre dışı bırakabilirsiniz.</li>
+                <li><strong>Live Activities:</strong> Dinamik Adalar'dan Live Activities'i kapatabilirsiniz.</li>
+                <li><strong>Widget'lar:</strong> Ana ekran widget'larını istediğiniz zaman kaldırabilirsiniz.</li>
+                <li><strong>Uygulama Ayarları:</strong> Uygulama içinden dil, tema ve hesaplama yöntemi ayarlarını değiştirebilirsiniz.</li>
                 <li><strong>Tüm verileri kaldırmak</strong> için uygulamayı silin.</li>
             </ul>
         </div>
