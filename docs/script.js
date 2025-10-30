@@ -320,13 +320,48 @@ document.addEventListener('DOMContentLoaded', function() {
         counterObserver.observe(counter);
     });
 
-    // Mobile menu toggle (for future mobile menu implementation)
+    // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
     if (mobileMenuToggle && navLinks) {
         mobileMenuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            
+            // Update aria-expanded for accessibility
+            this.setAttribute('aria-expanded', isActive);
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (isActive) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking on nav links
+        navLinks.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                document.body.style.overflow = '';
+            }
         });
     }
 
@@ -347,6 +382,58 @@ document.addEventListener('DOMContentLoaded', function() {
                 'value': 1
             });
         }
+    });
+
+    // Mobile-specific improvements
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // Improve touch interactions
+    if (isMobile()) {
+        // Add touch feedback for buttons
+        const touchElements = document.querySelectorAll('.btn, .lang-btn, .mobile-menu-toggle, .carousel-btn, .dot');
+        touchElements.forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Prevent zoom on double tap for buttons
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Improve scroll performance on mobile
+        let ticking = false;
+        function updateScrollPosition() {
+            // Add any scroll-based animations here
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollPosition);
+                ticking = true;
+            }
+        });
+    }
+
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+        setTimeout(() => {
+            // Recalculate layout after orientation change
+            window.dispatchEvent(new Event('resize'));
+        }, 100);
     });
 
     // Add scroll progress indicator

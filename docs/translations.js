@@ -200,12 +200,9 @@ const translations = {
         screenshotPaths: {
             home: "assets/screenshots/tr/1.png",
             qibla: "assets/screenshots/tr/2.png",
-            notifications: "assets/screenshots/tr/3.png",
-            calendar: "assets/screenshots/tr/4.png",
-            widget: "assets/screenshots/tr/5.png",
-            location: "assets/screenshots/tr/6.png",
-            premium: "assets/screenshots/tr/7.png",
-            theme: "assets/screenshots/tr/8.png"
+            calendar: "assets/screenshots/tr/3.png",
+            widget: "assets/screenshots/tr/4.png",
+            liveActivities: "assets/screenshots/tr/5.png"
         }
     },
     
@@ -410,12 +407,9 @@ const translations = {
         screenshotPaths: {
             home: "assets/screenshots/en/1.png",
             qibla: "assets/screenshots/en/2.png",
-            notifications: "assets/screenshots/en/3.png",
-            calendar: "assets/screenshots/en/4.png",
-            widget: "assets/screenshots/en/5.png",
-            location: "assets/screenshots/en/6.png",
-            premium: "assets/screenshots/en/7.png",
-            theme: "assets/screenshots/en/8.png"
+            calendar: "assets/screenshots/en/3.png",
+            widget: "assets/screenshots/en/4.png",
+            liveActivities: "assets/screenshots/en/5.png"
         }
     }
 };
