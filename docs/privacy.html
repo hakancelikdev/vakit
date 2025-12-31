@@ -1,410 +1,110 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1PNWJYF69"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <title>Vakit - Gizlilik Politikası</title>
 
-      gtag('config', 'G-T1PNWJYF69');
-    </script>
-    
-    <!-- Primary Meta Tags -->
-    <title>Vakit – Gizlilik Politikası</title>
-    <meta name="title" content="Vakit – Gizlilik Politikası">
-    <meta name="description" content="Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız.">
-    <meta name="keywords" content="gizlilik politikası, vakit, namaz vakitleri, kıble yönü, veri koruma, kişisel veriler">
-    <meta name="author" content="Hakan Çelik">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Turkish">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vakit.hakancelik.dev/privacy.html">
-    <meta property="og:title" content="Vakit – Gizlilik Politikası">
-    <meta property="og:description" content="Vakit gizliliğinize saygı duyar. Kişisel verileriniz güvende.">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    <meta property="og:site_name" content="Vakit - Namaz Vakitleri">
-    <meta property="og:locale" content="tr_TR">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vakit.hakancelik.dev/privacy.html">
-    <meta property="twitter:title" content="Vakit – Gizlilik Politikası">
-    <meta property="twitter:description" content="Vakit gizliliğinize saygı duyar. Kişisel verileriniz güvende.">
-    <meta property="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#407579">
-    <meta name="msapplication-TileColor" content="#407579">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://vakit.hakancelik.dev/privacy.html">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Privacy Policy Specific Styles -->
-    <style>
-        .privacy-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 120px 20px 60px;
-        }
-        
-        .privacy-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .privacy-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-        }
-        
-        .privacy-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        
-        .privacy-last-updated {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            opacity: 0.8;
-        }
-        
-        .privacy-section {
-            margin-bottom: 50px;
-        }
-        
-        .privacy-section h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 10px;
-        }
-        
-        .privacy-section h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 30px 0 15px;
-        }
-        
-        .privacy-section p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-        }
-        
-        .privacy-section ul {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        
-        .privacy-section li {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-        
-        .privacy-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background: var(--card-background);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .privacy-table th {
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .privacy-table td {
-            padding: 15px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        .privacy-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .privacy-highlight {
-            background: linear-gradient(135deg, rgba(64, 117, 121, 0.1), rgba(120, 189, 189, 0.1));
-            border-left: 4px solid var(--primary);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: var(--radius-md);
-        }
-        
-        .privacy-highlight p {
-            margin: 0;
-            font-weight: 500;
-        }
-        
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: var(--radius-md);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            margin-bottom: 40px;
-        }
-        
-        .back-button:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        @media (max-width: 768px) {
-            .privacy-container {
-                padding: 100px 15px 40px;
-            }
-            
-            .privacy-title {
-                font-size: 2rem;
-            }
-            
-            .privacy-section h2 {
-                font-size: 1.5rem;
-            }
-            
-            .privacy-table {
-                font-size: 0.8rem;
-            }
-            
-            .privacy-table th,
-            .privacy-table td {
-                padding: 10px;
-            }
-        }
-    </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
-                <span>Vakit</span>
+                <a href="index.html" class="nav-logo-link">
+                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
+                    <span>Vakit</span>
+                </a>
             </div>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="index.html#features">Özellikler</a>
-                <a href="index.html#screenshots">Hızlı Göz Atma</a>
-                <a href="index.html#vision">Hakkımızda</a>
-                <a href="index.html#developer">Geliştirici</a>
-                <a href="index.html#download">İndir</a>
-                <a href="privacy.html">Gizlilik</a>
+                <a href="index.html#features" data-i18n="nav.features">Özellikler</a>
+                <a href="index.html#screenshots" data-i18n="nav.screenshots">Hızlı Göz Atma</a>
+                <a href="index.html#vision" data-i18n="nav.vision">Hakkımızda</a>
+                <a href="index.html#download" data-i18n="nav.download">İndir</a>
+                <a href="privacy.html" class="active" data-i18n="nav.privacy">Gizlilik</a>
+                <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
             </div>
             <div class="language-switcher">
-                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
                 <button class="lang-btn" data-lang="en">EN</button>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Privacy Policy Content -->
-    <div class="privacy-container">
-        <a href="index.html" class="back-button">
-            <i class="fas fa-arrow-left"></i>
-            Ana Sayfaya Dön
-        </a>
-        
-        <div class="privacy-header">
-            <h1 class="privacy-title">Vakit – Gizlilik Politikası</h1>
-            <p class="privacy-subtitle">Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek, Live Activities göstermek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız. Tüm veriler cihazınızda kalır ve hiçbir kişisel veri cihazınızdan ayrılmaz. Reklam deneyimini iyileştirmek amacıyla sınırlı veri toplanabilir.</p>
-            <p class="privacy-last-updated">Son güncelleme: 2025</p>
-        </div>
+    <div class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
+        <h1 data-i18n="privacyPolicy.title" style="margin-bottom: 20px; font-size: 2.5rem; font-weight: 700;">Gizlilik
+            Politikası</h1>
+        <p data-i18n="privacyPolicy.description"
+            style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;"></p>
 
-        <div class="privacy-section">
-            <h2>1. Topladığımız Bilgiler</h2>
-            <p>Vakit uygulaması, yalnızca temel işlevselliği sağlamak için gerekli minimum veriyi toplar. Hiçbir kişisel veri cihazınızdan ayrılmaz.</p>
-            
-            <table class="privacy-table">
-                <thead>
-                    <tr>
-                        <th>Veri Türü</th>
-                        <th>Amaç</th>
-                        <th>İşlenme</th>
-                        <th>Saklama</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Yaklaşık ve hassas konum</strong></td>
-                        <td>Günlük namaz vakitlerini ve kıble yönünü hesaplamak</td>
-                        <td>Yalnızca cihazda</td>
-                        <td>Kullanımdan sonra silinir</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cihaz yönü (pusula)</strong></td>
-                        <td>Gerçek zamanlı kıble pusulası</td>
-                        <td>Yalnızca cihazda</td>
-                        <td>Depolanmaz</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cihaz hareketi (ivmeölçer / jiroskop)</strong></td>
-                        <td>Pusula yumuşatma ve stabilitesi</td>
-                        <td>Yalnızca cihazda</td>
-                        <td>Depolanmaz</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Bildirim ayarları ve hatırlatıcılar</strong></td>
-                        <td>Yerel namaz bildirimleri göndermek</td>
-                        <td>UserDefaults / Bildirim Merkezi</td>
-                        <td>Devre dışı bırakılana veya uygulama silinene kadar</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Uygulama ayarları</strong></td>
-                        <td>Tercihlerinizi hatırlamak (dil, tema, hesaplama yöntemi)</td>
-                        <td>UserDefaults</td>
-                        <td>Sıfırlanana veya uygulama silinene kadar</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Live Activities verisi</strong></td>
-                        <td>Dinamik Adalar ile canlı namaz vakti takibi</td>
-                        <td>ActivityKit (Apple)</td>
-                        <td>Etkinlik sona erene kadar</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Widget verisi</strong></td>
-                        <td>Ana ekran widget'larında namaz vakitlerini göstermek</td>
-                        <td>App Groups / UserDefaults</td>
-                        <td>Widget güncellenene kadar</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Reklam verisi</strong></td>
-                        <td>Kişiselleştirilmiş reklamlar göstermek</td>
-                        <td>Google AdMob (üçüncü taraf)</td>
-                        <td>Reklam optimizasyonu için sınırlı süre</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="privacy-highlight">
-                <p><strong>Önemli:</strong> Adınız, e-postanız, fotoğraflarınız, mikrofon, kamera, kişiler veya diğer kişisel verilerinizi <strong>toplamıyoruz</strong>.</p>
+        <div id="legal-sections">
+            <!-- Sections will be injected by JavaScript or handled via data-i18n if structure is fixed -->
+            <div class="legal-card"
+                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                <h3 data-i18n="privacyPolicy.sections.0.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
+                <p data-i18n="privacyPolicy.sections.0.body"
+                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+            </div>
+            <div class="legal-card"
+                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                <h3 data-i18n="privacyPolicy.sections.1.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
+                <p data-i18n="privacyPolicy.sections.1.body"
+                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+            </div>
+            <div class="legal-card"
+                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                <h3 data-i18n="privacyPolicy.sections.2.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
+                <p data-i18n="privacyPolicy.sections.2.body"
+                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+            </div>
+            <div class="legal-card"
+                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                <h3 data-i18n="privacyPolicy.sections.3.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
+                <p data-i18n="privacyPolicy.sections.3.body"
+                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
             </div>
         </div>
 
-        <div class="privacy-section">
-            <h2>2. Verilerinizi Nasıl Kullanıyoruz</h2>
-            <p>Topladığımız veriler yalnızca aşağıdaki amaçlar için kullanılır:</p>
-            <ul>
-                <li><strong>Namaz Vakitleri Hesaplama</strong> – Konum cihaz üzerinde yerel olarak işlenir.</li>
-                <li><strong>Kıble Yönü</strong> – Kâbe yönünü göstermek için konum + yön cihaz üzerinde birleştirilir.</li>
-                <li><strong>Namaz Bildirimleri</strong> – Etkinse, yaklaşan namazlar için yerel bildirimler planlarız.</li>
-                <li><strong>Live Activities</strong> – Dinamik Adalar ile canlı namaz vakti takibi.</li>
-                <li><strong>iOS Widget'ları</strong> – Ana ekran widget'larında namaz vakitlerini gösterir.</li>
-                <li><strong>Kullanıcı Tercihleri</strong> – Dil, tema, hesaplama yöntemi gibi ayarlarınızı hatırlar.</li>
-            </ul>
-            
-            <div class="privacy-highlight">
-                <p><strong>Güvence:</strong> Tüm veriler cihazınızda işlenir ve hiçbir sunucuya gönderilmez.</p>
-            </div>
-        </div>
-
-        <div class="privacy-section">
-            <h2>3. Veri Paylaşımı & Üçüncü Taraflar</h2>
-            <p>Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Tüm veriler cihazınızda kalır ve sadece aşağıdaki durumlarda sınırlı veri paylaşımı yapılabilir:</p>
-            
-            <ul>
-                <li><strong>Google AdMob:</strong> Reklam deneyimini iyileştirmek amacıyla sınırlı veri paylaşımı</li>
-                <li><strong>Apple Servisleri:</strong> Live Activities ve Widget'lar için Apple'ın sistem servisleri</li>
-                <li><strong>Konum Servisleri:</strong> Namaz vakti hesaplamaları için Apple'ın konum servisleri</li>
-            </ul>
-            
-            <div class="privacy-highlight">
-                <p><strong>Önemli:</strong> Hiçbir kişisel veri cihazınızdan ayrılmaz. Tüm işlemler yerel olarak gerçekleştirilir.</p>
-            </div>
-        </div>
-
-        <div class="privacy-section">
-            <h2>4. Güvenlik</h2>
-            <p>Verilerinizin güvenliği bizim için çok önemlidir:</p>
-            
-            <ul>
-                <li><strong>Yerel Depolama:</strong> Tüm veriler iPhone'unuzda kalır ve hiçbir sunucuya gönderilmez</li>
-                <li><strong>iOS Sandbox:</strong> Uygulama iOS sandbox'ı ile izole edilmiştir</li>
-                <li><strong>Şifreleme:</strong> Hassas veriler iOS'un yerleşik şifreleme sistemi ile korunur</li>
-                <li><strong>İzin Kontrolü:</strong> Sadece gerekli izinler istenir ve kullanılır</li>
-                <li><strong>Güvenli İletişim:</strong> Apple'ın güvenli servisleri kullanılır</li>
-            </ul>
-            
-            <div class="privacy-highlight">
-                <p><strong>Güvence:</strong> Uygulama hiçbir sunucuya bağlanmaz ve tüm işlemler cihazınızda gerçekleştirilir.</p>
-            </div>
-        </div>
-
-        <div class="privacy-section">
-            <h2>5. Seçimleriniz & Kontrolleriniz</h2>
-            <ul>
-                <li><strong>iOS Ayarları</strong> → Vakit bölümünden Konum, Hareket veya Bildirim izinlerini istediğiniz zaman iptal edin.</li>
-                <li><strong>iOS Ayarları</strong> → Gizlilik ve Güvenlik → App Tracking Transparency'den reklam takibini kapatabilirsiniz.</li>
-                <li><strong>Live Activities:</strong> Dinamik Adalar'dan Live Activities'i kapatabilirsiniz.</li>
-                <li><strong>Widget'lar:</strong> Ana ekran widget'larını istediğiniz zaman kaldırabilirsiniz.</li>
-                <li><strong>Uygulama Ayarları:</strong> Uygulama içinden dil, tema ve hesaplama yöntemi ayarlarını değiştirebilirsiniz.</li>
-                <li><strong>Tüm verileri kaldırmak</strong> için uygulamayı silin.</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>6. Bu Politikadaki Değişiklikler</h2>
-            <p>Bu politikayı yeni özellikler veya yasal değişiklikleri yansıtacak şekilde güncelleyebiliriz. Önemli güncellemeler için uygulama içinde bilgilendirilirsiniz.</p>
-        </div>
-
-        <div class="privacy-section" style="text-align: center; margin-top: 60px;">
-            <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn btn-primary">
-                <i class="fab fa-apple"></i>
-                App Store'dan İndir
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="mailto:hakancelikdev@gmail.com" style="color: var(--primary); font-weight: 500;">
+                <i class="fas fa-envelope" style="margin-right: 8px;"></i>hakancelikdev@gmail.com
             </a>
         </div>
     </div>
 
-    <script src="language-detection.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
+                    <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
+                </div>
+                <div class="footer-copyright">
+                    <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="translations.js"></script>
+    <script src="localization.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

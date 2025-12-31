@@ -187,8 +187,6 @@ const translations = {
             copyright: "© 2025 Vakit Team. Tüm hakları saklıdır."
         },
 
-
-
         // Meta tags
         meta: {
             title: "Vakit - İbadetinize yardımcı bir uygulama",
@@ -196,15 +194,63 @@ const translations = {
             keywords: "namaz vakitleri, vakit, kıble yönü, namaz vakti, islamic app, prayer times, qibla direction, hicri takvim, live activities, widget, premium, dynamic island, ios app, namaz uygulaması"
         },
 
+        // Privacy Policy
+        privacyPolicy: {
+            title: "Gizlilik Politikası",
+            description: "Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız. Hiçbir kişisel veri cihazınızdan ayrılmaz. Reklam deneyimini iyileştirmek amacıyla sınırlı veri toplanabilir.",
+            sections: [
+                {
+                    title: "1. Topladığımız Veriler",
+                    body: "İsminizi, e-posta adresinizi, fotoğraflarınızı, mikrofonunuzu, kameranızı, rehberinizi veya herhangi bir kişisel tanımlayıcı bilgiyi toplamayız. Analitik veriler tamamen anonimdir ve yalnızca uygulama geliştirme ve iyileştirme amacıyla kullanılır."
+                },
+                {
+                    title: "2. Verilerinizi Nasıl Kullanıyoruz",
+                    body: "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak işlenir.\n• Kıble Yönü – Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler planlanır.\n• Kullanıcı Tercihleri – Yerel olarak saklanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri performans izleme ve hata tespiti için kullanılır."
+                },
+                {
+                    title: "3. Veri Paylaşımı & Üçüncü Taraflar",
+                    body: "Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Reklam deneyimini iyileştirmek amacıyla Google AdMob ile sınırlı veri paylaşımı yapılabilir. Anonim analitik veriler Türkiye'deki güvenli veritabanı cluster'ında saklanır."
+                },
+                {
+                    title: "4. Güvenlik",
+                    body: "Tüm yerel veriler iPhone'unuzda kalır ve iOS sandbox'ı tarafından korunur. Analitik veriler Türkiye'deki güvenli veritabanı cluster'ında şifrelenmiş olarak saklanır. Kişisel tanımlayıcı bilgiler toplanmaz."
+                }
+            ]
+        },
+
+        // Terms of Use
+        termsOfUse: {
+            title: "Kullanım Şartları",
+            description: "Uygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartlara dikkatle okuyun.",
+            sections: [
+                {
+                    title: "1. Şartların Kabulü",
+                    body: "Vakit'e erişerek ve kullanarak, bu anlaşmanın şart ve hükümlerine bağlı kalmayı kabul edersiniz. Kabul etmiyorsanız, lütfen bu hizmeti kullanmayın."
+                },
+                {
+                    title: "2. Ücretsiz Kullanım",
+                    body: "Vakit tamamen ücretsizdir. Tüm özellikler herkes için ücretsiz olarak sunulmaktadır. Gelecekte ücretli özellikler eklenirse, bunlar açıkça belirtilecektir."
+                },
+                {
+                    title: "3. Kullanıcı Sorumlulukları",
+                    body: "Sorumlu olduğunuz konular: Doğru konum bilgisi sağlamak, yasalar uygun şekilde kullanmak ve uygulamaya zarar vermemektir."
+                },
+                {
+                    title: "4. Sorumluluk Sınırlaması",
+                    body: "Uygulama \"olduğu gibi\" sunulmaktadır. Namaz vakitleri ve kıble yönü hesaplamaları doğru olmaya çalışılır ancak kesin doğruluk garanti edilmez."
+                }
+            ]
+        },
+
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/tr/1.png",
-            qibla: "assets/screenshots/tr/2.png",
-            calendar: "assets/screenshots/tr/3.png",
-            worship: "assets/screenshots/tr/4.png",
-            widget: "assets/screenshots/tr/5.png",
-            liveActivities: "assets/screenshots/tr/6.png",
-            settings: "assets/screenshots/tr/7.png"
+            home: "assets/screenshots/tr/1.webp",
+            qibla: "assets/screenshots/tr/2.webp",
+            calendar: "assets/screenshots/tr/3.webp",
+            worship: "assets/screenshots/tr/4.webp",
+            widget: "assets/screenshots/tr/5.webp",
+            liveActivities: "assets/screenshots/tr/6.webp",
+            settings: "assets/screenshots/tr/7.webp"
         }
     },
 
@@ -396,8 +442,6 @@ const translations = {
             copyright: "© 2025 Vakit Team. All rights reserved."
         },
 
-
-
         // Meta tags
         meta: {
             title: "Vakit - A helpful app for your worship | Easy to Use",
@@ -405,445 +449,66 @@ const translations = {
             keywords: "prayer times, vakit, qibla direction, prayer time, islamic app, namaz vakitleri, qibla yönü, hijri calendar, live activities, widget, premium, dynamic island, ios app, prayer app"
         },
 
+        // Privacy Policy
+        privacyPolicy: {
+            title: "Privacy Policy",
+            description: "Vakit respects your privacy. We only collect the necessary data to calculate prayer times, determine qibla direction, and send local reminders. No personal data leaves your device. Limited data may be collected to improve the advertising experience.",
+            sections: [
+                {
+                    title: "1. Data We Collect",
+                    body: "We do not collect your name, email, photos, microphone, camera, contacts, or any other personally identifiable information. Analytics data is completely anonymous and used solely for app development and improvement."
+                },
+                {
+                    title: "2. How We Use Your Data",
+                    body: "• Prayer Time Calculation – Location is processed locally on your device.\n• Qibla Direction – Location + heading are combined on-device.\n• Prayer Reminders – Local notifications are scheduled.\n• User Preferences – Stored locally.\n• Analytics and Improvement – Anonymous usage data is used for monitoring performance."
+                },
+                {
+                    title: "3. Data Sharing & Third Parties",
+                    body: "We do not share, sell, or transfer your data to anyone. Limited data may be shared with Google AdMob to improve the advertising experience. Anonymous analytics data is stored on secure servers."
+                },
+                {
+                    title: "4. Security",
+                    body: "All local data remains on your iPhone and is protected by iOS sandboxing. Analytics data is stored in encrypted form on secure servers. No personally identifiable information is collected."
+                }
+            ]
+        },
+
+        // Terms of Use
+        termsOfUse: {
+            title: "Terms of Use",
+            description: "By downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
+            sections: [
+                {
+                    title: "1. Acceptance of Terms",
+                    body: "By accessing and using Vakit, you agree to be bound by the terms and provisions of this agreement. If you do not agree, please do not use this services."
+                },
+                {
+                    title: "2. Free to Use",
+                    body: "Vakit is completely free. All features are provided free of charge for everyone. If paid features are added in the future, they will be clearly stated."
+                },
+                {
+                    title: "3. User Responsibilities",
+                    body: "You are responsible for: Providing accurate location information, using the app in accordance with laws, and not harming the app."
+                },
+                {
+                    title: "4. Limitation of Liability",
+                    body: "The app is provided \"as is\". Prayer times and Qibla direction calculations are attempted to be accurate but exact accuracy is not guaranteed."
+                }
+            ]
+        },
+
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/en/1.png",
-            qibla: "assets/screenshots/en/2.png",
-            calendar: "assets/screenshots/en/3.png",
-            worship: "assets/screenshots/en/4.png",
-            widget: "assets/screenshots/en/5.png",
-            liveActivities: "assets/screenshots/en/6.png",
-            settings: "assets/screenshots/en/7.png"
+            home: "assets/screenshots/en/1.webp",
+            qibla: "assets/screenshots/en/2.webp",
+            calendar: "assets/screenshots/en/3.webp",
+            worship: "assets/screenshots/en/4.webp",
+            widget: "assets/screenshots/en/5.webp",
+            liveActivities: "assets/screenshots/en/6.webp",
+            settings: "assets/screenshots/en/7.webp"
         }
     }
 };
 
-// Language switcher functionality
-function switchLanguage(lang) {
-    const currentLang = lang || 'tr';
-    const t = translations[currentLang];
-
-    // Update HTML lang attribute
-    document.documentElement.lang = currentLang;
-
-    // Check if we're on a privacy page
-    const isPrivacyPage = window.location.pathname.includes('privacy');
-
-    if (isPrivacyPage) {
-        // For privacy pages, only update navigation and meta tags
-        updatePrivacyPageLanguage(t, currentLang);
-        return;
-    }
-
-    // Update navigation
-    const featuresLink = document.querySelector('a[href="#features"]');
-    if (featuresLink) featuresLink.textContent = t.nav.features;
-
-    const screenshotsLink = document.querySelector('a[href="#screenshots"]');
-    if (screenshotsLink) screenshotsLink.textContent = t.nav.screenshots;
-
-    const visionLink = document.querySelector('a[href="#vision"]');
-    if (visionLink) visionLink.textContent = t.nav.vision;
-
-    const downloadLink = document.querySelector('a[href="#download"]');
-    if (downloadLink) downloadLink.textContent = t.nav.download;
-
-    const privacyLink = document.querySelector('a[href="privacy.html"]');
-    if (privacyLink) privacyLink.textContent = t.nav.privacy;
-
-    const termsLink = document.querySelector('a[href="terms.html"]');
-    if (termsLink) termsLink.textContent = t.nav.terms;
-
-    // Update hero section
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        if (t.hero.subtitle) {
-            heroTitle.innerHTML = `${t.hero.title}<br><span class="gradient-text">${t.hero.subtitle}</span>`;
-        } else {
-            heroTitle.innerHTML = `<span class="hero-title-main">${t.hero.title}</span>`;
-        }
-    }
-
-    // Update Apple-style hero section
-    const heroTitleApple = document.querySelector('.hero-title-apple');
-    if (heroTitleApple) heroTitleApple.textContent = t.hero.title;
-
-    const heroSubtitleApple = document.querySelector('.hero-subtitle-apple');
-    if (heroSubtitleApple) heroSubtitleApple.textContent = t.hero.subtitle;
-
-    const heroDescription = document.querySelector('.hero-description');
-    if (heroDescription) heroDescription.innerHTML = t.hero.description;
-
-    const primaryBtn = document.querySelector('.btn-primary');
-    if (primaryBtn) primaryBtn.innerHTML = `<i class="fab fa-apple"></i>${t.hero.downloadButton}`;
-
-    const secondaryBtn = document.querySelector('.btn-secondary');
-    if (secondaryBtn) secondaryBtn.innerHTML = `<i class="fas fa-info-circle"></i>${t.hero.featuresButton}`;
-
-    const applePrimaryBtn = document.querySelector('.btn-apple-primary');
-    if (applePrimaryBtn) applePrimaryBtn.innerHTML = `<i class="fab fa-apple"></i>${t.hero.downloadButton}`;
-
-    // Update hero highlights
-    const highlights = document.querySelectorAll('.highlight-item');
-    if (highlights.length >= 5) {
-        highlights[0].textContent = t.hero.highlights.easy;
-        highlights[1].textContent = t.hero.highlights.location;
-        highlights[2].textContent = t.hero.highlights.qibla;
-        highlights[3].textContent = t.hero.highlights.hijri;
-        highlights[4].textContent = t.hero.highlights.offline;
-    }
-
-    // Update features section
-    const featuresTitle = document.querySelector('#features .section-title');
-    if (featuresTitle) featuresTitle.textContent = t.features.title;
-
-    const featureCards = document.querySelectorAll('.feature-card');
-    if (featureCards.length >= 7) {
-        featureCards[0].querySelector('h3').textContent = t.features.prayerTimes.title;
-        featureCards[0].querySelector('p').innerHTML = t.features.prayerTimes.description;
-
-        featureCards[1].querySelector('h3').textContent = t.features.qiblaDirection.title;
-        featureCards[1].querySelector('p').innerHTML = t.features.qiblaDirection.description;
-
-        featureCards[2].querySelector('h3').textContent = t.features.notifications.title;
-        featureCards[2].querySelector('p').innerHTML = t.features.notifications.description;
-
-        featureCards[3].querySelector('h3').textContent = t.features.hijriCalendar.title;
-        featureCards[3].querySelector('p').innerHTML = t.features.hijriCalendar.description;
-
-        featureCards[4].querySelector('h3').textContent = t.features.location.title;
-        featureCards[4].querySelector('p').innerHTML = t.features.location.description;
-
-        featureCards[5].querySelector('h3').textContent = t.features.darkMode.title;
-        featureCards[5].querySelector('p').innerHTML = t.features.darkMode.description;
-
-        featureCards[6].querySelector('h3').textContent = t.features.offline.title;
-        featureCards[6].querySelector('p').innerHTML = t.features.offline.description;
-    }
-
-    // Update Apple-style feature sections
-    const appleFeatureTitles = document.querySelectorAll('.feature-title-apple');
-    const appleFeatureDescriptions = document.querySelectorAll('.feature-description-apple');
-
-    if (appleFeatureTitles.length >= 7 && appleFeatureDescriptions.length >= 7) {
-        appleFeatureTitles[0].textContent = t.appleFeatures.prayerTimes.title;
-        appleFeatureDescriptions[0].textContent = t.appleFeatures.prayerTimes.description;
-
-        appleFeatureTitles[1].textContent = t.appleFeatures.qiblaDirection.title;
-        appleFeatureDescriptions[1].textContent = t.appleFeatures.qiblaDirection.description;
-
-        appleFeatureTitles[2].textContent = t.appleFeatures.hijriCalendar.title;
-        appleFeatureDescriptions[2].textContent = t.appleFeatures.hijriCalendar.description;
-
-        appleFeatureTitles[3].textContent = t.appleFeatures.worship.title;
-        appleFeatureDescriptions[3].textContent = t.appleFeatures.worship.description;
-
-        appleFeatureTitles[4].textContent = t.appleFeatures.widgets.title;
-        appleFeatureDescriptions[4].textContent = t.appleFeatures.widgets.description;
-
-        appleFeatureTitles[5].textContent = t.appleFeatures.liveActivities.title;
-        appleFeatureDescriptions[5].textContent = t.appleFeatures.liveActivities.description;
-
-        appleFeatureTitles[6].textContent = t.appleFeatures.settings.title;
-        appleFeatureDescriptions[6].textContent = t.appleFeatures.settings.description;
-    }
-
-    // Update screenshots section
-    const screenshotsTitle = document.querySelector('#screenshots .section-title');
-    if (screenshotsTitle) screenshotsTitle.textContent = t.screenshots.title;
-
-    const screenshotsSubtitle = document.querySelector('#screenshots .section-subtitle');
-    if (screenshotsSubtitle) screenshotsSubtitle.textContent = t.screenshots.subtitle;
-
-    // Update screenshot slide descriptions (not used in current design but kept for compatibility)
-    const screenshotSlides = document.querySelectorAll('.screenshot-slide');
-    if (screenshotSlides.length >= 7) {
-        screenshotSlides[0].querySelector('h3').textContent = t.screenshots.home.title;
-        screenshotSlides[0].querySelector('p').textContent = t.screenshots.home.description;
-
-        screenshotSlides[1].querySelector('h3').textContent = t.screenshots.qibla.title;
-        screenshotSlides[1].querySelector('p').textContent = t.screenshots.qibla.description;
-
-        screenshotSlides[2].querySelector('h3').textContent = t.screenshots.calendar.title;
-        screenshotSlides[2].querySelector('p').textContent = t.screenshots.calendar.description;
-
-        screenshotSlides[3].querySelector('h3').textContent = t.screenshots.worship.title;
-        screenshotSlides[3].querySelector('p').textContent = t.screenshots.worship.description;
-
-        screenshotSlides[4].querySelector('h3').textContent = t.screenshots.widget.title;
-        screenshotSlides[4].querySelector('p').textContent = t.screenshots.widget.description;
-
-        screenshotSlides[5].querySelector('h3').textContent = t.screenshots.liveActivities.title;
-        screenshotSlides[5].querySelector('p').textContent = t.screenshots.liveActivities.description;
-
-        screenshotSlides[6].querySelector('h3').textContent = t.screenshots.settings.title;
-        screenshotSlides[6].querySelector('p').textContent = t.screenshots.settings.description;
-    }
-
-    // Update screenshot item titles (for en.html)
-    const screenshotItems = document.querySelectorAll('.screenshot-item');
-    if (screenshotItems.length >= 7) {
-        screenshotItems[0].querySelector('h3').textContent = t.screenshots.home.title;
-        screenshotItems[0].querySelector('p').textContent = t.screenshots.home.description;
-
-        screenshotItems[1].querySelector('h3').textContent = t.screenshots.qibla.title;
-        screenshotItems[1].querySelector('p').textContent = t.screenshots.qibla.description;
-
-        screenshotItems[2].querySelector('h3').textContent = t.screenshots.calendar.title;
-        screenshotItems[2].querySelector('p').textContent = t.screenshots.calendar.description;
-
-        screenshotItems[3].querySelector('h3').textContent = t.screenshots.worship.title;
-        screenshotItems[3].querySelector('p').textContent = t.screenshots.worship.description;
-
-        screenshotItems[4].querySelector('h3').textContent = t.screenshots.widget.title;
-        screenshotItems[4].querySelector('p').textContent = t.screenshots.widget.description;
-
-        screenshotItems[5].querySelector('h3').textContent = t.screenshots.liveActivities.title;
-        screenshotItems[5].querySelector('p').textContent = t.screenshots.liveActivities.description;
-
-        screenshotItems[6].querySelector('h3').textContent = t.screenshots.settings.title;
-        screenshotItems[6].querySelector('p').textContent = t.screenshots.settings.description;
-    }
-
-    // Update feature highlights
-    const highlightItems = document.querySelectorAll('.highlight-item');
-    if (highlightItems.length >= 3) {
-        highlightItems[0].querySelector('h4').textContent = t.screenshots.highlights.modern.title;
-        highlightItems[0].querySelector('p').textContent = t.screenshots.highlights.modern.description;
-
-        highlightItems[1].querySelector('h4').textContent = t.screenshots.highlights.autoUpdate.title;
-        highlightItems[1].querySelector('p').textContent = t.screenshots.highlights.autoUpdate.description;
-
-        highlightItems[2].querySelector('h4').textContent = t.screenshots.highlights.secure.title;
-        highlightItems[2].querySelector('p').textContent = t.screenshots.highlights.secure.description;
-    }
-
-    // Update vision section
-    const visionCards = document.querySelectorAll('.vision-card');
-    if (visionCards.length >= 2) {
-        visionCards[0].querySelector('h3').textContent = t.vision.mission.title;
-        visionCards[0].querySelector('p').textContent = t.vision.mission.description;
-
-        visionCards[1].querySelector('h3').textContent = t.vision.goal.title;
-        visionCards[1].querySelector('p').textContent = t.vision.goal.description;
-    }
-
-    // Developer section removed - not present in current HTML structure
-
-    // Update download section
-    const downloadSection = document.querySelector('#download .download-content');
-    if (downloadSection) {
-        const downloadTitle = downloadSection.querySelector('h2');
-        if (downloadTitle) downloadTitle.textContent = t.download.title;
-
-        const downloadDesc = downloadSection.querySelector('p');
-        if (downloadDesc) downloadDesc.textContent = t.download.description;
-
-        const downloadBtn = downloadSection.querySelector('.btn-primary');
-        if (downloadBtn) downloadBtn.innerHTML = `<i class="fab fa-apple"></i>${t.download.button}`;
-
-        const downloadNote = downloadSection.querySelector('.download-note');
-        if (downloadNote) downloadNote.textContent = t.download.note;
-    }
-
-    // Update footer
-    const footerCopyright = document.querySelector('.footer-copyright p');
-    if (footerCopyright) footerCopyright.textContent = t.footer.copyright;
-
-
-
-
-
-    // Update meta tags
-    document.title = t.meta.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', t.meta.description);
-
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) metaKeywords.setAttribute('content', t.meta.keywords);
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', t.meta.title);
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute('content', t.meta.description);
-
-    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-    if (twitterTitle) twitterTitle.setAttribute('content', t.meta.title);
-
-    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-    if (twitterDescription) twitterDescription.setAttribute('content', t.meta.description);
-
-    // Update all screenshot images
-    updateScreenshots(t.screenshotPaths);
-
-    // Store language preference
-    localStorage.setItem('preferredLanguage', currentLang);
-
-    // Update language switcher buttons
-    updateLanguageSwitcher(currentLang);
-}
-
-function updatePrivacyPageLanguage(t, currentLang) {
-    // Update navigation links
-    const featuresLink = document.querySelector('a[href="#features"]');
-    if (featuresLink) featuresLink.textContent = t.nav.features;
-
-    const screenshotsLink = document.querySelector('a[href="#screenshots"]');
-    if (screenshotsLink) screenshotsLink.textContent = t.nav.screenshots;
-
-    const visionLink = document.querySelector('a[href="#vision"]');
-    if (visionLink) visionLink.textContent = t.nav.vision;
-
-    const downloadLink = document.querySelector('a[href="#download"]');
-    if (downloadLink) downloadLink.textContent = t.nav.download;
-
-    const privacyLink = document.querySelector('a[href="privacy.html"], a[href="privacy-en.html"]');
-    if (privacyLink) privacyLink.textContent = t.nav.privacy;
-
-    const termsLink = document.querySelector('a[href="terms.html"], a[href="terms-en.html"]');
-    if (termsLink) termsLink.textContent = t.nav.terms;
-
-    // Update meta tags
-    document.title = t.meta.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute('content', t.meta.description);
-
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) metaKeywords.setAttribute('content', t.meta.keywords);
-
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', t.meta.title);
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute('content', t.meta.description);
-
-    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-    if (twitterTitle) twitterTitle.setAttribute('content', t.meta.title);
-
-    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-    if (twitterDescription) twitterDescription.setAttribute('content', t.meta.description);
-
-    // Store language preference
-    localStorage.setItem('preferredLanguage', currentLang);
-
-    // Update language switcher buttons
-    updateLanguageSwitcher(currentLang);
-}
-
-function updateLanguageSwitcher(currentLang) {
-    const trBtn = document.querySelector('.lang-btn[data-lang="tr"]');
-    const enBtn = document.querySelector('.lang-btn[data-lang="en"]');
-
-    if (currentLang === 'tr') {
-        trBtn.classList.add('active');
-        enBtn.classList.remove('active');
-    } else {
-        enBtn.classList.add('active');
-        trBtn.classList.remove('active');
-    }
-}
-
-// Function to update all screenshot images
-function updateScreenshots(screenshotPaths) {
-    // Update scroll-based screenshots (for en.html)
-    const scrollScreenshots = document.querySelectorAll('.scroll-screenshot');
-    if (scrollScreenshots.length >= 7) {
-        scrollScreenshots[0].src = screenshotPaths.home;
-        scrollScreenshots[1].src = screenshotPaths.qibla;
-        scrollScreenshots[2].src = screenshotPaths.calendar;
-        scrollScreenshots[3].src = screenshotPaths.worship;
-        scrollScreenshots[4].src = screenshotPaths.widget;
-        scrollScreenshots[5].src = screenshotPaths.liveActivities;
-        scrollScreenshots[6].src = screenshotPaths.settings;
-    }
-
-    // Update hero screenshot (for both tr and en)
-    const heroScreenshot = document.querySelector('.hero-screenshot-apple');
-    if (heroScreenshot) {
-        heroScreenshot.src = screenshotPaths.home;
-    }
-
-    // Update feature screenshots (for tr.html) - Apple style
-    const featureScreenshots = document.querySelectorAll('.feature-screenshot-apple');
-    if (featureScreenshots.length >= 7) {
-        featureScreenshots[0].src = screenshotPaths.home;
-        featureScreenshots[1].src = screenshotPaths.qibla;
-        featureScreenshots[2].src = screenshotPaths.calendar;
-        featureScreenshots[3].src = screenshotPaths.worship;
-        featureScreenshots[4].src = screenshotPaths.widget;
-        featureScreenshots[5].src = screenshotPaths.liveActivities;
-        featureScreenshots[6].src = screenshotPaths.settings;
-    }
-
-    // Update carousel screenshots
-    const carouselScreenshots = document.querySelectorAll('.app-screenshot');
-    if (carouselScreenshots.length >= 7) {
-        carouselScreenshots[0].src = screenshotPaths.home;
-        carouselScreenshots[1].src = screenshotPaths.qibla;
-        carouselScreenshots[2].src = screenshotPaths.calendar;
-        carouselScreenshots[3].src = screenshotPaths.worship;
-        carouselScreenshots[4].src = screenshotPaths.widget;
-        carouselScreenshots[5].src = screenshotPaths.liveActivities;
-        carouselScreenshots[6].src = screenshotPaths.settings;
-    }
-
-    // Update screenshot card images
-    const screenshotCardImages = document.querySelectorAll('.screenshot-card img');
-    if (screenshotCardImages.length >= 7) {
-        screenshotCardImages[0].src = screenshotPaths.home;
-        screenshotCardImages[1].src = screenshotPaths.qibla;
-        screenshotCardImages[2].src = screenshotPaths.calendar;
-        screenshotCardImages[3].src = screenshotPaths.worship;
-        screenshotCardImages[4].src = screenshotPaths.widget;
-        screenshotCardImages[5].src = screenshotPaths.liveActivities;
-        screenshotCardImages[6].src = screenshotPaths.settings;
-    }
-
-    // Update phone mockup screenshots
-    const phoneScreenshots = document.querySelectorAll('.phone-mockup img');
-    phoneScreenshots.forEach((img, index) => {
-        const screenshotKeys = ['home', 'qibla', 'notifications', 'calendar', 'widget', 'location', 'premium', 'theme'];
-        if (screenshotKeys[index]) {
-            img.src = screenshotPaths[screenshotKeys[index]];
-        }
-    });
-
-    // Update any other screenshot images that might exist
-    const allScreenshots = document.querySelectorAll('img[src*="screenshots"]');
-    allScreenshots.forEach(img => {
-        const currentSrc = img.src;
-        if (currentSrc.includes('/tr/') || currentSrc.includes('/en/')) {
-            // Extract the screenshot number from the current path
-            const match = currentSrc.match(/\/(\d+)\.png$/);
-            if (match) {
-                const screenshotNumber = match[1];
-                const screenshotKey = getScreenshotKeyByNumber(screenshotNumber);
-                if (screenshotKey && screenshotPaths[screenshotKey]) {
-                    img.src = screenshotPaths[screenshotKey];
-                }
-            }
-        }
-    });
-}
-
-// Helper function to get screenshot key by number
-function getScreenshotKeyByNumber(number) {
-    const keyMap = {
-        '1': 'home',
-        '2': 'qibla',
-        '3': 'calendar',
-        '4': 'worship',
-        '5': 'widget',
-        '6': 'liveActivities',
-        '7': 'settings'
-    };
-    return keyMap[number];
-}
-
-// Initialize language on page load
-document.addEventListener('DOMContentLoaded', function () {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
-    switchLanguage(savedLang);
-}); 
+// Language data is now purely data
+// Logic is handled in localization.js
