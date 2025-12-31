@@ -206,11 +206,14 @@ const translations = {
             ]
         },
 
-        // Newsletter
-        newsletter: {
-            title: "Gelişmelerden Haberdar Olun",
-            placeholder: "E-posta adresiniz",
-            button: "Abone Ol"
+        // Contact & Feedback
+        contact: {
+            title: "Geri Bildirim ve İletişim",
+            description: "Vakit'i daha iyi hale getirmek için fikirleriniz bizim için çok değerli.",
+            feedbackButton: "Geri Bildirim Gönder",
+            feedbackUrl: "https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU",
+            emailLabel: "Bize ulaşın:",
+            email: "hakancelikdev@gmail.com"
         },
 
         // Footer Section
@@ -492,11 +495,14 @@ const translations = {
             ]
         },
 
-        // Newsletter
-        newsletter: {
-            title: "Stay Updated",
-            placeholder: "Your email address",
-            button: "Subscribe"
+        // Contact & Feedback
+        contact: {
+            title: "Feedback & Contact",
+            description: "Your ideas are valuable to make Vakit even better.",
+            feedbackButton: "Send Feedback",
+            feedbackUrl: "https://docs.google.com/forms/d/16ozSBeDPPwNhG2ViJaHLaHYski-oS8HLvHO52_g3Joc",
+            emailLabel: "Contact us:",
+            email: "hakancelikdev@gmail.com"
         },
 
         // Footer Section
