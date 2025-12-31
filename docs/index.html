@@ -76,7 +76,7 @@
     <link rel="preload" href="assets/app-icon-32.png" as="image">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         as="style">
-    <link rel="preload" href="assets/screenshots/tr/1.png" as="image">
+    <link rel="preload" href="assets/screenshots/tr/1.webp" as="image">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -112,9 +112,9 @@
             "ratingCount": "150"
         },
         "screenshot": [
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/1.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/2.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/3.png"
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/1.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/2.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/3.webp"
         ]
     }
     </script>
@@ -146,7 +146,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#" onclick="window.location.reload(); return false;" class="nav-logo-link">
-                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
+                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon" width="32" height="32">
                     <span>Vakit</span>
                 </a>
             </div>
@@ -155,6 +155,7 @@
                 <a href="#screenshots" data-i18n="nav.screenshots">Hızlı Göz Atma</a>
                 <a href="#vision" data-i18n="nav.vision">Hakkımızda</a>
                 <a href="#download" data-i18n="nav.download">İndir</a>
+                <a href="#faq" data-i18n="nav.faq">SSS</a>
                 <a href="privacy.html" data-i18n="nav.privacy">Gizlilik</a>
                 <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
             </div>
@@ -174,7 +175,8 @@
             <h1 class="hero-title-apple" data-i18n="hero.title">Vakit</h1>
             <p class="hero-subtitle-apple" data-i18n="hero.subtitle">İbadetinize yardımcı bir uygulama</p>
             <div class="hero-buttons-apple">
-                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn-apple-primary" data-i18n="hero.downloadButton">
+                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn-apple-primary"
+                    data-i18n="hero.downloadButton">
                     <i class="fab fa-apple"></i>
                     Ücretsiz İndir
                 </a>
@@ -183,7 +185,8 @@
         <div class="hero-image-apple">
             <div class="iphone-frame-apple">
                 <div class="iphone-screen-apple">
-                    <img src="assets/screenshots/tr/1.png" alt="Vakit Ana Ekran" class="hero-screenshot-apple" data-i18n-img="home">
+                    <img src="assets/screenshots/tr/1.webp" alt="Vakit Ana Ekran" class="hero-screenshot-apple"
+                        data-i18n-img="home" loading="eager">
                 </div>
             </div>
         </div>
@@ -194,14 +197,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.prayerTimes.title">Namaz Vakitleri</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.prayerTimes.description">Konumunuza göre namaz vakitlerini öğrenin. Sabah, öğle, ikindi,
+                <p class="feature-description-apple" data-i18n="appleFeatures.prayerTimes.description">Konumunuza göre
+                    namaz vakitlerini öğrenin. Sabah, öğle, ikindi,
                     akşam ve yatsı vakitleri otomatik hesaplanır.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/1.png" alt="Vakit Ana Ekran - Namaz Vakitleri"
-                            class="feature-screenshot-apple" data-i18n-img="home">
+                        <img src="assets/screenshots/tr/1.webp" alt="Vakit Ana Ekran - Namaz Vakitleri"
+                            class="feature-screenshot-apple" data-i18n-img="home" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -213,14 +217,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.qiblaDirection.title">Kıble Yönü</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.qiblaDirection.description">Telefonu yatay tutarak Kâbe yönünü hassas şekilde bulun. GPS
+                <p class="feature-description-apple" data-i18n="appleFeatures.qiblaDirection.description">Telefonu yatay
+                    tutarak Kâbe yönünü hassas şekilde bulun. GPS
                     teknolojisi ile doğru yönü öğrenin.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/2.png" alt="Vakit Kıble Yönü Kompası"
-                            class="feature-screenshot-apple" data-i18n-img="qibla">
+                        <img src="assets/screenshots/tr/2.webp" alt="Vakit Kıble Yönü Kompası"
+                            class="feature-screenshot-apple" data-i18n-img="qibla" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -232,14 +237,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.hijriCalendar.title">Gelişmiş Takvim</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.hijriCalendar.description">Güncel Hicri tarihi ve İslami bayramları görün. Tarihe dokunarak o
+                <p class="feature-description-apple" data-i18n="appleFeatures.hijriCalendar.description">Güncel Hicri
+                    tarihi ve İslami bayramları görün. Tarihe dokunarak o
                     günün namaz vakitlerini popup'ta görün. Regaib, Miraç, Berat ve diğer önemli günler dahil.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/3.png" alt="Vakit Hicri Takvim"
-                            class="feature-screenshot-apple" data-i18n-img="calendar">
+                        <img src="assets/screenshots/tr/3.webp" alt="Vakit Hicri Takvim"
+                            class="feature-screenshot-apple" data-i18n-img="calendar" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -251,14 +257,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.worship.title">İbadet Yardımcıları</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.worship.description">Abdest rehberi ile adım adım öğrenin, Zikirmatik ile günlük
+                <p class="feature-description-apple" data-i18n="appleFeatures.worship.description">Abdest rehberi ile
+                    adım adım öğrenin, Zikirmatik ile günlük
                     zikirlerinizi takip edin. Sesli anlatım ve titreşim desteği ile ibadetlerinizi kolaylaştırın.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/4.png" alt="Vakit Abdest ve Zikirmatik"
-                            class="feature-screenshot-apple" data-i18n-img="worship">
+                        <img src="assets/screenshots/tr/4.webp" alt="Vakit Abdest ve Zikirmatik"
+                            class="feature-screenshot-apple" data-i18n-img="worship" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -270,14 +277,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.widgets.title">Widget Desteği</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.widgets.description">Ana ekranda küçük, orta ve büyük boyutlarda widget'lar. Dinamik
+                <p class="feature-description-apple" data-i18n="appleFeatures.widgets.description">Ana ekranda küçük,
+                    orta ve büyük boyutlarda widget'lar. Dinamik
                     arka planlar ve gerçek zamanlı geri sayım ile namaz vakitlerini hızlıca görün.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/5.png" alt="Vakit Widget Desteği"
-                            class="feature-screenshot-apple" data-i18n-img="widget">
+                        <img src="assets/screenshots/tr/5.webp" alt="Vakit Widget Desteği"
+                            class="feature-screenshot-apple" data-i18n-img="widget" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -289,14 +297,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.liveActivities.title">Live Activities</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.liveActivities.description">Dynamic Island'da canlı namaz vakitleri ve kilit ekranı
+                <p class="feature-description-apple" data-i18n="appleFeatures.liveActivities.description">Dynamic
+                    Island'da canlı namaz vakitleri ve kilit ekranı
                     widget'ları. Namaz vaktine kalan süreyi anlık olarak takip edin.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/6.png" alt="Vakit Live Activities"
-                            class="feature-screenshot-apple" data-i18n-img="liveActivities">
+                        <img src="assets/screenshots/tr/6.webp" alt="Vakit Live Activities"
+                            class="feature-screenshot-apple" data-i18n-img="liveActivities" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -308,13 +317,15 @@
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.settings.title">Gelişmiş Ayarlar</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.settings.description">Kişiselleştirilmiş bildirim ayarları, farklı hesaplama yöntemleri
+                <p class="feature-description-apple" data-i18n="appleFeatures.settings.description">Kişiselleştirilmiş
+                    bildirim ayarları, farklı hesaplama yöntemleri
                     ve tema seçenekleri. Uygulamayı ihtiyaçlarınıza göre tamamen özelleştirin.</p>
             </div>
             <div class="feature-image-apple">
                 <div class="iphone-frame-apple">
                     <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/7.png" alt="Vakit Ayarlar" class="feature-screenshot-apple" data-i18n-img="settings">
+                        <img src="assets/screenshots/tr/7.webp" alt="Vakit Ayarlar" class="feature-screenshot-apple"
+                            data-i18n-img="settings" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -330,7 +341,8 @@
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3 data-i18n="vision.mission.title">Amacımız</h3>
-                    <p data-i18n="vision.mission.description">Teknoloji ile İslami ibadetleri kolaylaştırmak. Müslüman toplumun günlük yaşamını iyileştirmek.
+                    <p data-i18n="vision.mission.description">Teknoloji ile İslami ibadetleri kolaylaştırmak. Müslüman
+                        toplumun günlük yaşamını iyileştirmek.
                         Basit ve kullanışlı uygulamalar geliştirmek.</p>
                 </div>
                 <div class="vision-card">
@@ -338,9 +350,20 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3 data-i18n="vision.goal.title">Hedefimiz</h3>
-                    <p data-i18n="vision.goal.description">Müslüman kullanıcıların namaz vakitlerini kolayca takip edebilmelerini sağlamak. Modern teknikler
+                    <p data-i18n="vision.goal.description">Müslüman kullanıcıların namaz vakitlerini kolayca takip
+                        edebilmelerini sağlamak. Modern teknikler
                         kullanarak güvenilir çözümler sunmak.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title">Sıkça Sorulan Sorular</h2>
+            <div class="faq-container" data-i18n-list="faq.items">
+                <!-- Generated by JS -->
             </div>
         </div>
     </section>
@@ -351,12 +374,25 @@
         <div class="container">
             <div class="download-content">
                 <h2 data-i18n="download.title">Hemen İndirin</h2>
-                <p data-i18n="download.description">Vakit uygulamasını App Store'dan ücretsiz indirin ve tüm özelliklerden faydalanın!</p>
-                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn btn-primary btn-large" data-i18n="download.button">
+                <p data-i18n="download.description">Vakit uygulamasını App Store'dan ücretsiz indirin ve tüm
+                    özelliklerden faydalanın!</p>
+                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn btn-primary btn-large"
+                    data-i18n="download.button">
                     <i class="fab fa-apple"></i>
                     Ücretsiz İndir
                 </a>
-                <p class="download-note" data-i18n="download.note">iOS 17 ve üzeri gereklidir • Tamamen ücretsiz</p>
+                <p class="download-note" data-i18n="download.note">Yakında Android sürümü ile birlikte • Tamamen
+                    ücretsiz</p>
+
+                <!-- Newsletter Form -->
+                <div class="newsletter-section">
+                    <h3 data-i18n="newsletter.title">Gelişmelerden Haberdar Olun</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta" data-i18n="newsletter.placeholder"
+                            data-i18n-attr="placeholder" required>
+                        <button type="submit" class="btn btn-primary" data-i18n="newsletter.button">Abone Ol</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

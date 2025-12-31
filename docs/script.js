@@ -37,6 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * Performance optimized scroll and interaction handlers
+ */
+
+// Throttle helper Utility
+function throttle(func, limit) {
+    let inThrottle;
+    return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+/**
  * Smooth scrolling for navigation links
  */
 function initSmoothScrolling() {
@@ -48,9 +66,13 @@ function initSmoothScrolling() {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
 
                 // Update URL without jump
@@ -58,12 +80,8 @@ function initSmoothScrolling() {
 
                 // Close mobile menu if open
                 const navLinks = document.querySelector('.nav-links');
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle i');
                 if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    mobileMenuToggle.classList.remove('fa-times');
-                    mobileMenuToggle.classList.add('fa-bars');
-                    document.body.style.overflow = '';
+                    toggleMobileMenu();
                 }
             }
         });
@@ -71,12 +89,12 @@ function initSmoothScrolling() {
 }
 
 /**
- * Navbar background change on scroll
+ * Navbar background change on scroll (Throttled)
  */
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
 
-    window.addEventListener('scroll', () => {
+    const handleScroll = throttle(() => {
         if (window.scrollY > CONFIG.scrollThreshold) {
             if (!state.isScrolled) {
                 navbar.classList.add('scrolled');
@@ -88,25 +106,26 @@ function initNavbarScroll() {
                 state.isScrolled = false;
             }
         }
-
-        // Active link update
         updateActiveNavLink();
-    });
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll);
 }
 
 /**
- * Update active state of navigation links based on scroll position
+ * Update active state of navigation links
  */
 function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
     let current = '';
+    const scrollPosition = window.scrollY + 100;
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 200)) {
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
@@ -120,36 +139,45 @@ function updateActiveNavLink() {
 }
 
 /**
- * Scroll animations using Intersection Observer
+ * Scroll reveal animations (staggered)
  */
 function initScrollAnimations() {
-    const observerOptions = {
-        threshold: CONFIG.animationThreshold,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                // Add a small delay for staggered effect
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 100);
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-    // Elements to animate
-    const animateElements = document.querySelectorAll(
-        '.feature-card, .vision-card, .section-title, .section-subtitle, .download-content, .hero-content, .hero-image, .feature-section-apple .feature-content-apple, .feature-section-apple .feature-image-apple'
+    const elements = document.querySelectorAll(
+        '.hero-content-apple > *, .feature-content-apple > *, .vision-card, .download-content > *, .iphone-frame-apple, .faq-item'
     );
 
-    animateElements.forEach(el => {
+    elements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
         observer.observe(el);
     });
 
-    // Add CSS class for animation
+    // Fallback: If for some reason animations don't trigger, show everything after 3s
+    setTimeout(() => {
+        elements.forEach(el => {
+            if (!el.classList.contains('animate-in')) {
+                el.classList.add('animate-in');
+            }
+        });
+    }, 3000);
+
+    // CSS for staggered animation
     const style = document.createElement('style');
     style.innerHTML = `
         .animate-in {
@@ -161,35 +189,35 @@ function initScrollAnimations() {
 }
 
 /**
- * Mobile menu toggle
+ * Mobile menu toggle helper
+ */
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const icon = document.querySelector('.mobile-menu-toggle i');
+
+    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+        document.body.style.overflow = 'hidden';
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+        document.body.style.overflow = '';
+    }
+}
+
+/**
+ * Mobile menu initialization
  */
 function initMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', toggleMobileMenu);
 
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuToggle.querySelector('i');
-
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close menu when clicking outside
+        // Close on outside click
         document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                mobileMenuToggle.querySelector('i').classList.remove('fa-times');
-                mobileMenuToggle.querySelector('i').classList.add('fa-bars');
-                document.body.style.overflow = '';
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+                toggleMobileMenu();
             }
         });
     }
@@ -199,78 +227,94 @@ function initMobileMenu() {
  * Typing effect for hero title
  */
 function initTypingEffect() {
-    const heroTitle = document.querySelector('.hero-title-main');
-    // Simple pulse effect enhancement if element exists
-    if (heroTitle) {
-        heroTitle.classList.add('typing-cursor');
+    const title = document.querySelector('.hero-title-apple');
+    if (title) {
+        // Simple subtle entrance for the title
+        title.style.opacity = '0';
+        title.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            title.style.transition = 'all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            title.style.opacity = '1';
+            title.style.transform = 'scale(1)';
+        }, 100);
     }
 }
 
 /**
- * Scroll Progress Indicator
+ * FAQ Accordion Implementation
  */
-function initScrollProgress() {
-    // Create progress bar if not exists
-    if (!document.querySelector('.scroll-progress')) {
-        const progressBar = document.createElement('div');
-        progressBar.className = 'scroll-progress';
-        progressBar.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-            z-index: 1001;
-            transition: width 0.1s ease;
-        `;
-        document.body.appendChild(progressBar);
+function initFaqAccordion() {
+    const container = document.querySelector('.faq-container');
+    if (!container) return;
 
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
-        });
-    }
-}
+    // Use event delegation for dynamic content
+    container.addEventListener('click', (e) => {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
 
-/**
- * Button ripple effects and interactions
- */
-function initButtonsEffects() {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(btn => {
-        btn.addEventListener('mousemove', function (e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            this.style.setProperty('--x', x + 'px');
-            this.style.setProperty('--y', y + 'px');
-        });
+        const faqItem = question.closest('.faq-item');
+        if (!faqItem) return;
+
+        const isOpen = faqItem.classList.contains('open');
+
+        // Close other FAQs in this container
+        const allItems = container.querySelectorAll('.faq-item');
+        allItems.forEach(item => item.classList.remove('open'));
+
+        // Toggle current
+        if (!isOpen) {
+            faqItem.classList.add('open');
+        }
     });
 }
 
 /**
- * FAQ Accordion (if used in future)
- */
-function initFaqAccordion() {
-    // Placeholder for future FAQ implementation
-}
-
-/**
- * Newsletter Form (if used in future)
+ * Newsletter Form Simulation
  */
 function initNewsletterForm() {
-    // Placeholder
+    const form = document.querySelector('.newsletter-form');
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        const btn = form.querySelector('button');
+
+        if (input.value) {
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-check"></i>';
+            input.value = '';
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }, 3000);
+        }
+    });
 }
 
 /**
- * Carousel logic (for legacy support or if re-introduced)
+ * Throttled Scroll Progress
  */
-function initCarousel() {
-    // Currently using Apple-style static layout, but keeping function structure for extensibility
+function initScrollProgress() {
+    const progress = document.createElement('div');
+    progress.className = 'scroll-progress-bar';
+    progress.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 0; height: 3px;
+        background: var(--primary); z-index: 2000; transition: width 0.1s;
+    `;
+    document.body.appendChild(progress);
+
+    window.addEventListener('scroll', throttle(() => {
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progress.style.width = scrolled + '%';
+    }, 50));
 }
+
+function initButtonsEffects() { }
+function initCarousel() { }
+
 
 // Helper to check if element is in viewport
 function isInViewport(element) {
