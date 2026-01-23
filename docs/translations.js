@@ -153,11 +153,11 @@ const translations = {
         vision: {
             mission: {
                 title: "Vizyonumuz",
-                description: "Teknoloji ve tasarımı harmanlayarak modern Müslüman dünyasına en kaliteli dijital deneyimi sunmak. İbadetleri kolaylaştıran, her an yanınızda olan bir yardımcı inşa etmek."
+                description: "Modern teknoloji ile İslam'ın temel ibadetlerini (namaz, abdest, Kur'an, zikir) doğru, aslına sadık ve kullanıcı dostu bir şekilde sunan, kapsamlı bir dijital yaşam platformu olmak. Kesintisiz ve sürekli erişilebilir hizmet sunarak, kullanıcıların her zaman ve her yerde güvenilir bir şekilde erişebileceği bir platform sağlamak."
             },
             goal: {
                 title: "Hedefimiz",
-                description: "Vakit uygulamasını dünya çapında milyonlarca kullanıcıya ulaştırarak, modern tekniklerle güvenilir ve estetik çözümler sunmaya devam etmek."
+                description: "Herkes, her zaman, her yerde erişebilir olmalı. Konuma göre namaz vakti, kıble yönü, Kur'an-ı Kerim okuma, zikir sayacı ve abdest rehberi gibi tüm temel özellikler kesintisiz ve sürekli erişilebilir olmalı. Her türlü ağ koşulunda ve farklı ortamlarda kullanıcılar uygulamayı sorunsuz kullanabilmeli."
             }
         },
 
@@ -442,11 +442,11 @@ const translations = {
         vision: {
             mission: {
                 title: "Our Vision",
-                description: "To provide the highest quality digital experience to the modern Muslim world by blending technology and design. Building a companion that makes worship easier and is always by your side."
+                description: "To be a comprehensive digital life platform that presents Islam's fundamental practices (prayer, ablution, Quran, dhikr) accurately, authentically, and user-friendly through modern technology. Providing continuous and uninterrupted service, ensuring a reliable platform that users can access anytime, anywhere."
             },
             goal: {
                 title: "Our Goal",
-                description: "To reach millions of users worldwide with the Vakit app, continuing to offer reliable and aesthetic solutions with modern techniques."
+                description: "Everyone should be able to access it anytime, anywhere. All core features such as location-based prayer times, qibla direction, Quran reading, dhikr counter, and ablution guide should operate continuously and reliably. Users should be able to use the app seamlessly in any network condition and different environments."
             }
         },
 

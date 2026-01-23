@@ -158,7 +158,7 @@ function initScrollAnimations() {
     });
 
     const elements = document.querySelectorAll(
-        '.hero-content-apple > *, .feature-content-apple > *, .vision-card, .download-content > *, .iphone-frame-apple, .faq-item'
+        '.hero-content-apple > *, .feature-section-apple, .feature-content-apple > *, .feature-image-apple, .vision-card, .download-content > *, .iphone-frame-apple, .faq-item'
     );
 
     elements.forEach(el => {
