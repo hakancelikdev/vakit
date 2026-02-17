@@ -13,10 +13,10 @@ img {
 
 :root {
     /* App Colors - Rich, Atmospheric Palette */
-    --primary: #2D5F5F;
-    --primary-rgb: 45, 95, 95;
+    --primary: #2A9D8F;
+    --primary-rgb: 42, 157, 143;
     --primary-light: rgba(var(--primary-rgb), 0.12);
-    --primary-dark: #1a3a3a;
+    --primary-dark: #1E7268;
     --secondary: #6BA8A8;
     --secondary-rgb: 107, 168, 168;
     --accent: #D4A574;

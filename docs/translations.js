@@ -14,8 +14,8 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "İbadetinize yardımcı bir uygulama",
-            description: "<strong>Vakit</strong> uygulaması ile namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. Bildirim alın. <strong>Basit ve kolay</strong> kullanım. <strong>Namaz vakti</strong>, <strong>kıble yönü</strong>, <strong>gelişmiş takvim</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve <strong>premium özellikler</strong>.",
+            subtitle: "Namaz, Kıble, Kuran & İbadet Takibi",
+            description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun ve ibadetlerinizi kayıt altına alın. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
             highlights: {
@@ -23,7 +23,7 @@ const translations = {
                 location: "📍 Akıllı Konum",
                 qibla: "🕌 Kıble Yönü",
                 hijri: "📅 Gelişmiş Takvim",
-                premium: "⭐ Premium Özellikler",
+                quran: "📖 Kur'an-ı Kerim",
                 liveActivity: "📱 Live Activities"
             }
         },
@@ -33,11 +33,11 @@ const translations = {
             title: "Uygulama Özellikleri",
             prayerTimes: {
                 title: "Namaz Vakitleri",
-                description: "Konumunuza göre <strong>namaz vakitlerini</strong> öğrenin. Sabah, öğle, ikindi, akşam ve yatsı vakitleri."
+                description: "Konumunuza göre <strong>namaz vakitlerini</strong> öğrenin. İmsak, güneş, öğle, ikindi, akşam ve yatsı vakitleri. <strong>22 farklı hesaplama yöntemi</strong> desteği."
             },
             qiblaDirection: {
                 title: "Kıble Yönü",
-                description: "Telefonu yatay tutarak <strong>Kâbe yönünü</strong> bulun. Kıble pusulası ile doğru yönü öğrenin."
+                description: "<strong>Kâbe yönünü</strong> hassas pusula ile bulun. Haptik geri bildirim, Kâbe'ye mesafe bilgisi ve sonraki namaz geri sayımı."
             },
             notifications: {
                 title: "Bildirimler & Ses Seçenekleri",
@@ -45,11 +45,11 @@ const translations = {
             },
             hijriCalendar: {
                 title: "Gelişmiş Takvim",
-                description: "Güncel <strong>Hicri tarihi</strong> ve İslami bayramları görün. Tarihe dokunarak o günün namaz vakitlerini popup'ta görün. Regaib, Miraç, Berat ve diğer önemli günler dahil."
+                description: "<strong>Hicri tarihi</strong>, dini günleri ve kandil gecelerini takip edin. Namaz takibi ve günlük ibadet özeti ile gün detay sheet'i."
             },
             location: {
                 title: "Akıllı Konum Sistemi",
-                description: "GPS ile <strong>konumunuzu</strong> otomatik bulun veya manuel arayın. 13 farklı hesaplama yöntemi (Türkiye, Umm al-Qura, Dubai, vb.) ve zaman dilimi desteği."
+                description: "GPS ile <strong>konumunuzu</strong> otomatik bulun veya manuel arayın. <strong>22 farklı hesaplama yöntemi</strong> (Türkiye, Umm al-Qura, Dubai, vb.) ve akıllı seyahat algılama."
             },
             darkMode: {
                 title: "Karanlık Mod",
@@ -57,15 +57,15 @@ const translations = {
             },
             offline: {
                 title: "İnternet Olmadan",
-                description: "İnternet bağlantısı olmadan da <strong>namaz vakitlerini</strong> görün. Her yerde kullanabilirsiniz."
+                description: "İnternet bağlantısı olmadan da <strong>namaz vakitlerini</strong> görün. Kur'an, kıble ve tüm temel özellikler çevrimdışı çalışır."
             },
-            premium: {
-                title: "Premium Özellikler",
-                description: "<strong>Live Activities</strong> (Dynamic Island), gelişmiş widget'lar, reklamsız deneyim ve gelişmiş bildirim özelleştirmeleri."
+            quran: {
+                title: "Kur'an-ı Kerim",
+                description: "<strong>114 sure</strong> tam metin, kelime kelime analiz, Diyanet tefsiri, Mushaf görünümü ve hatim takibi."
             },
             widgets: {
                 title: "Widget Desteği",
-                description: "Ana ekranda <strong>küçük, orta ve büyük</strong> boyutlarda widget'lar. Dinamik arka planlar ve gerçek zamanlı geri sayım."
+                description: "Ana ekranda <strong>6 farklı widget ailesi</strong>. Günün Ayeti, Günün Esması, namaz vakitleri ve geri sayım widget'ları."
             },
         },
 
@@ -73,31 +73,27 @@ const translations = {
         appleFeatures: {
             prayerTimes: {
                 title: "Namaz Vakitleri",
-                description: "Konumunuza göre namaz vakitlerini anlık takip edin. Türkiye (Diyanet) dahil 13 farklı hesaplama yöntemi desteği."
+                description: "Konumunuza göre namaz vakitlerini anlık takip edin. İmsak ve sabah ayrı gösterilir. Türkiye (Diyanet) dahil 22 farklı hesaplama yöntemi, akıllı seyahat algılama ve urgency renk sistemi. Her yerde, internetsiz, huzurla."
             },
-            qiblaDirection: {
-                title: "Hassas Kıble Yönü",
-                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. GPS teknolojisi ile en doğru sonucu alın."
+            qiblaAndWorship: {
+                title: "Kıble, Zikir, Kur'an",
+                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim ve Kâbe'ye mesafe bilgisi. Kur'an-ı Kerim, Zikirmatik, Fitre & Zekat hesaplayıcı — hepsi tek uygulamada."
             },
-            hijriCalendar: {
-                title: "Gelişmiş Takvim",
-                description: "Hicri tarih, dini günler ve bayramlar. Takvim üzerinden geçmiş ve gelecek vakitlere hızlı erişim."
+            quran: {
+                title: "Kur'an-ı Kerim",
+                description: "114 sure tam metin okuma, kelime kelime analiz ve Diyanet tefsiri. Ayetleri oku veya dinle, ilerlemeni takip et, kaydet, öğren."
             },
-            worship: {
-                title: "Yaşam Rehberi",
-                description: "Zikirmatik, Adım Adım Abdest Rehberi, Esma-ül Hüsna ve Zekat/Fitre hesaplayıcı ile ibadetinizi zenginleştirin."
+            quranReading: {
+                title: "İstediğin Görünümle",
+                description: "Modern arayüz veya geleneksel Mushaf (kitap) görünümü; sana kalmış. Sesli tilavet desteği, hatim takibi ve secde ayeti uyarıları."
             },
             widgets: {
-                title: "Modern Widget'lar",
-                description: "Ana ekranda farklı boyutlarda widget desteği. Namaz vakitlerini uygulamayı açmadan anında görün."
+                title: "Vakit Hep Yanında",
+                description: "Ana ekran ve kilit ekranında namaz vakitleri. Dynamic Island'da 4 bölgeli canlı takip, urgency renk sistemi ve StandBy desteği. 6 farklı widget ailesi ile Günün Ayeti ve Günün Esması."
             },
-            liveActivities: {
-                title: "Live Activities",
-                description: "Kilit ekranı ve Dynamic Island desteği. Bir sonraki vakte kalan süreyi saniyelik olarak takip edin."
-            },
-            settings: {
-                title: "Tam Özelleştirme",
-                description: "11 farklı bildirim sesi, kişiselleştirilmiş hatırlatıcılar ve karanlık mod desteği ile uygulamayı kendinize göre tasarlayın."
+            more: {
+                title: "Ve Çok Daha Fazlası",
+                description: "Gelişmiş takvim ile dini günler ve kandil geceleri, ibadet özeti paylaşım kartları, zikirmatik, Activity Rings ile ibadet takibi, streak sistemi ve kişiselleştirilmiş ayarlar. İndir, ibadetini kolaylaştır."
             }
         },
 
@@ -107,36 +103,32 @@ const translations = {
             subtitle: "Vakit uygulamasının tüm özelliklerini keşfedin ve modern tasarımı deneyimleyin",
             home: {
                 title: "Ana Ekran - Namaz Vakitleri",
-                description: "Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Basit ve temiz arayüz ile kolay kullanım."
+                description: "Güncel namaz vakitlerini, kalan süreyi ve hicri tarihi tek bakışta görün. Her yerde, internetsiz, huzurla."
             },
             qibla: {
-                title: "Kıble Pusulası",
-                description: "GPS teknolojisi ile Kâbe yönünü hassas şekilde bulun. Telefonu yatay tutarak kıble yönünü kolayca öğrenin."
+                title: "Kıble, Zikir, Kur'an",
+                description: "Kıble yönünü bul, zikir çek, Kur'an oku; hepsi tek uygulamada."
             },
-            calendar: {
-                title: "Gelişmiş Takvim",
-                description: "Güncel Hicri tarihi ve İslami bayramları görün. Tarihe dokunarak o günün namaz vakitlerini popup'ta görün."
+            quran: {
+                title: "Kur'an-ı Kerim",
+                description: "Ayetleri oku veya dinle, ilerlemeni takip et, kaydet, öğren."
             },
-            worship: {
-                title: "Yaşam Rehberi",
-                description: "Sesli abdest rehberi, gelişmiş zikirmatik, Esma-ül Hüsna listesi ve Zekat/Fitre hesaplayıcı ile hayatınızı kolaylaştırın."
+            quranReading: {
+                title: "İstediğin Görünümle",
+                description: "Modern arayüz veya mushaf (kitap) görünümü; sana kalmış."
             },
-            widget: {
-                title: "Widget Desteği",
-                description: "Ana ekranda namaz vakitlerini hızlıca görün ve takip edin. Küçük, orta ve büyük widget seçenekleri."
+            widgets: {
+                title: "Vakit Hep Yanında",
+                description: "Ana ekran ve kilit ekranında namaz vakitleri, widget'lar ve Live Activities."
             },
-            liveActivities: {
-                title: "Live Activities",
-                description: "Dynamic Island ve kilit ekranı widget'ları ile namaz vaktini anlık takip edin."
-            },
-            settings: {
-                title: "Gelişmiş Ayarlar",
-                description: "Kişiselleştirilmiş bildirimler, hesaplama yöntemleri ve tema seçenekleri."
+            more: {
+                title: "Ve Çok Daha Fazlası",
+                description: "Takvim, paylaşım kartları, zikirmatik, ibadet takibi ve ayarlar."
             },
             highlights: {
                 modern: {
                     title: "Modern Tasarım",
-                    description: "iOS 15+ uyumlu, temiz ve kullanıcı dostu arayüz"
+                    description: "iOS 18+ uyumlu, temiz ve kullanıcı dostu arayüz"
                 },
                 autoUpdate: {
                     title: "Otomatik Güncelleme",
@@ -153,11 +145,11 @@ const translations = {
         vision: {
             mission: {
                 title: "Vizyonumuz",
-                description: "Modern teknoloji ile İslam'ın temel ibadetlerini (namaz, abdest, Kur'an, zikir) doğru, aslına sadık ve kullanıcı dostu bir şekilde sunan, kapsamlı bir dijital yaşam platformu olmak. Kesintisiz ve sürekli erişilebilir hizmet sunarak, kullanıcıların her zaman ve her yerde güvenilir bir şekilde erişebileceği bir platform sağlamak."
+                description: "Modern teknoloji ile İslam'ın temel ibadetlerini (namaz, abdest, Kur'an, zikir, ibadet takibi) doğru, aslına sadık ve kullanıcı dostu bir şekilde sunan, kapsamlı bir dijital yaşam platformu olmak. iOS 26 Liquid Glass tasarım dili ile en güncel Apple deneyimini sunarak, kesintisiz ve sürekli erişilebilir hizmet sağlamak."
             },
             goal: {
                 title: "Hedefimiz",
-                description: "Herkes, her zaman, her yerde erişebilir olmalı. Konuma göre namaz vakti, kıble yönü, Kur'an-ı Kerim okuma, zikir sayacı ve abdest rehberi gibi tüm temel özellikler kesintisiz ve sürekli erişilebilir olmalı. Her türlü ağ koşulunda ve farklı ortamlarda kullanıcılar uygulamayı sorunsuz kullanabilmeli."
+                description: "Herkes, her zaman, her yerde erişebilir olmalı. Namaz vakti, kıble yönü, Kur'an-ı Kerim okuma, hatim takibi, zikir sayacı, ibadet takibi ve abdest rehberi gibi tüm temel özellikler kesintisiz ve çevrimdışı çalışmalı. Uçak, kırsal alan veya yurtdışı seyahat gibi durumlarda da kullanıcılar uygulamayı sorunsuz kullanabilmeli."
             }
         },
 
@@ -180,7 +172,7 @@ const translations = {
             title: "Hemen İndirin",
             description: "Vakit uygulamasını App Store'dan indirin ve namaz vakitlerinizi kolayca takip edin.",
             button: "App Store'dan İndir",
-            note: "Yakında Android sürümü ile birlikte • Tamamen ücretsiz"
+            note: "iOS 18 veya üzeri gerektirir • Tamamen ücretsiz"
         },
 
         // FAQ Section
@@ -189,7 +181,7 @@ const translations = {
             items: [
                 {
                     q: "İnternet bağlantısı olmadan çalışır mı?",
-                    a: "Evet, Vakit uygulaması namaz vakitlerini cihazınızda anlık olarak hesaplar. Herhangi bir veri indirme işlemine gerek duymaz, bu nedenle tamamen internetsiz çalışabilir."
+                    a: "Evet, Vakit uygulaması namaz vakitlerini cihazınızda anlık olarak hesaplar. Kur'an okuma, kıble yönü, zikirmatik ve tüm temel özellikler internet bağlantısı olmadan çalışır."
                 },
                 {
                     q: "Uygulamayı açmasam bile bildirimler gelmeye devam eder mi?",
@@ -197,11 +189,23 @@ const translations = {
                 },
                 {
                     q: "Uygulamadaki tüm özellikler gerçekten ücretsiz mi?",
-                    a: "Evet, Vakit tamamen ücretsiz bir projedir. Widget'lar, Live Activities ve Yaşam Rehberi dahil tüm özelliklere hiçbir ücret ödemeden erişebilirsiniz."
+                    a: "Evet, Vakit tamamen ücretsiz bir projedir. Kur'an okuyucu, ibadet takibi, widget'lar, Live Activities ve tüm diğer özelliklere hiçbir ücret ödemeden erişebilirsiniz."
                 },
                 {
                     q: "Namaz vakitlerini nereden çekiyorsunuz?",
-                    a: "Vakit, verileri bir sunucudan çekmek yerine, seçtiğiniz hesaplama yöntemine ve konumunuza göre matematiksel formüllerle cihazınızda anlık olarak hesaplar. Bu sayede en doğru ve hızlı sonuçları verir."
+                    a: "Vakit, verileri bir sunucudan çekmek yerine, seçtiğiniz hesaplama yöntemine ve konumunuza göre matematiksel formüllerle cihazınızda anlık olarak hesaplar. 22 farklı hesaplama yöntemi arasından bölgenize en uygun olanı seçebilirsiniz."
+                },
+                {
+                    q: "Kur'an okuma özellikleri neler?",
+                    a: "114 surenin tam metni, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet desteği ve hatim takibi bulunmaktadır. Tüm içerikler çevrimdışı olarak erişilebilir."
+                },
+                {
+                    q: "İbadet takibi nasıl çalışır?",
+                    a: "Activity Rings benzeri görsel takip sistemi ile günlük namazlarınızı, Kur'an okumanızı ve zikirlerinizi kayıt altına alabilirsiniz. Streak sistemi ile sürekliliğinizi takip edin ve detaylı istatistiklerle ilerlemenizi görün."
+                },
+                {
+                    q: "Hangi widget çeşitleri var?",
+                    a: "6 farklı widget ailesi mevcuttur: Namaz vakitleri, geri sayım, Günün Ayeti, Günün Esması, kilit ekranı widget'ları ve StandBy modu desteği. Küçük, orta ve büyük boyutlarda kullanabilirsiniz."
                 }
             ]
         },
@@ -223,9 +227,9 @@ const translations = {
 
         // Meta tags
         meta: {
-            title: "Vakit - İbadetinize yardımcı bir uygulama",
-            description: "Vakit uygulaması ile namaz vakitlerini kolayca öğrenin. Kıble yönünü bulun. Live Activities, widget desteği, premium özellikler ve gelişmiş takvim.",
-            keywords: "namaz vakitleri, vakit, kıble yönü, namaz vakti, islamic app, prayer times, qibla direction, hicri takvim, live activities, widget, premium, dynamic island, ios app, namaz uygulaması"
+            title: "Vakit: Namaz, Kıble, Kuran",
+            description: "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. Zikir, takvim ve İslami araçlar. 22 hesaplama yöntemi, Live Activities, widget desteği. Tamamen ücretsiz.",
+            keywords: "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, ios app, namaz uygulaması"
         },
 
         // Privacy Policy
@@ -278,13 +282,12 @@ const translations = {
 
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/tr/1.webp",
-            qibla: "assets/screenshots/tr/2.webp",
-            calendar: "assets/screenshots/tr/3.webp",
-            worship: "assets/screenshots/tr/4.webp",
-            widget: "assets/screenshots/tr/5.webp",
-            liveActivities: "assets/screenshots/tr/6.webp",
-            settings: "assets/screenshots/tr/7.webp"
+            home: "assets/screenshots/tr/1.png",
+            qibla: "assets/screenshots/tr/2.png",
+            quran: "assets/screenshots/tr/3.png",
+            quranReading: "assets/screenshots/tr/4.png",
+            widgets: "assets/screenshots/tr/5.png",
+            more: "assets/screenshots/tr/6.png"
         }
     },
 
@@ -303,8 +306,8 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "A helpful app for your worship",
-            description: "Learn <strong>prayer times</strong> easily with the <strong>Vakit</strong> app. Find the <strong>qibla direction</strong>. Get notifications. <strong>Simple and easy</strong> to use. <strong>Prayer times</strong>, <strong>qibla direction</strong>, <strong>advanced calendar</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and <strong>premium features</strong>.",
+            subtitle: "Prayer, Qibla, Quran & Worship Tracker",
+            description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, and log your worship with <strong>Vakit</strong>. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
             highlights: {
@@ -312,7 +315,7 @@ const translations = {
                 location: "📍 Smart Location",
                 qibla: "🕌 Qibla Direction",
                 hijri: "📅 Advanced Calendar",
-                premium: "⭐ Premium Features",
+                quran: "📖 Holy Quran",
                 liveActivity: "📱 Live Activities"
             }
         },
@@ -322,11 +325,11 @@ const translations = {
             title: "App Features",
             prayerTimes: {
                 title: "Prayer Times",
-                description: "Learn <strong>prayer times</strong> based on your location. Fajr, Dhuhr, Asr, Maghrib and Isha times."
+                description: "Learn <strong>prayer times</strong> based on your location. Imsak, sunrise, Dhuhr, Asr, Maghrib and Isha times. <strong>22 different calculation methods</strong> supported."
             },
             qiblaDirection: {
                 title: "Qibla Direction",
-                description: "Find the <strong>Kaaba direction</strong> by holding your phone horizontally. Learn the correct direction with the qibla compass."
+                description: "Find the <strong>Kaaba direction</strong> with a precise compass. Haptic feedback, distance to Kaaba, and next prayer countdown."
             },
             notifications: {
                 title: "Notifications & Sound Options",
@@ -334,11 +337,11 @@ const translations = {
             },
             hijriCalendar: {
                 title: "Advanced Calendar",
-                description: "View current <strong>Hijri date</strong> and Islamic holidays. Tap any date to see prayer times in a popup. Includes Regaib, Miraj, Berat and other important days."
+                description: "Track <strong>Hijri dates</strong>, religious days, and holy nights. Prayer tracking and daily worship summary with day detail sheet."
             },
             location: {
                 title: "Smart Location System",
-                description: "Find your <strong>location</strong> with GPS or search manually. 13 different calculation methods (Turkey, Umm al-Qura, Dubai, etc.) and timezone support."
+                description: "Find your <strong>location</strong> with GPS or search manually. <strong>22 different calculation methods</strong> (Turkey, Umm al-Qura, Dubai, etc.) and smart travel detection."
             },
             darkMode: {
                 title: "Dark Mode",
@@ -346,15 +349,15 @@ const translations = {
             },
             offline: {
                 title: "Works Offline",
-                description: "View <strong>prayer times</strong> even without internet connection. Use anywhere."
+                description: "View <strong>prayer times</strong> even without internet connection. Quran, qibla, and all core features work offline."
             },
-            premium: {
-                title: "Premium Features",
-                description: "<strong>Live Activities</strong> (Dynamic Island), advanced widgets, ad-free experience and enhanced notification customization."
+            quran: {
+                title: "Holy Quran",
+                description: "<strong>114 surahs</strong> full text, word-by-word analysis, Diyanet tafsir, Mushaf view, and khatm tracking."
             },
             widgets: {
                 title: "Widget Support",
-                description: "Home screen <strong>small, medium and large</strong> widgets. Dynamic backgrounds and real-time countdown."
+                description: "Home screen <strong>6 different widget families</strong>. Verse of the Day, Name of the Day, prayer times and countdown widgets."
             },
         },
 
@@ -362,31 +365,27 @@ const translations = {
         appleFeatures: {
             prayerTimes: {
                 title: "Prayer Times",
-                description: "Track prayer times in real-time based on your location. Supports 13 calculation methods, including Turkey (Diyanet)."
+                description: "Track prayer times in real-time based on your location. Imsak and Fajr shown separately. Supports 22 calculation methods including Turkey (Diyanet), smart travel detection, and urgency color system. Anywhere, offline, in peace."
             },
-            qiblaDirection: {
-                title: "Precise Qibla",
-                description: "Find the Kaaba direction anywhere with a visual compass. Get the most accurate results using GPS technology."
+            qiblaAndWorship: {
+                title: "Qibla, Dhikr, Quran",
+                description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback and distance to Kaaba. Holy Quran, Dhikr Counter, Fitrah & Zakat calculator — all in one app."
             },
-            hijriCalendar: {
-                title: "Advanced Calendar",
-                description: "Hijri dates, religious days, and holidays. Quick access to past and future prayer times via the calendar."
+            quran: {
+                title: "The Holy Quran",
+                description: "Full text of 114 surahs, word-by-word analysis, and Diyanet tafsir. Read or listen to verses, track your progress, save, and learn."
             },
-            worship: {
-                title: "Life Guide",
-                description: "Enrich your worship with Zikirmatik, Step-by-Step Ablution Guide, Al Asma Ul Husna and Zakat/Fitrah calculators."
+            quranReading: {
+                title: "Your Preferred View",
+                description: "Modern interface or traditional book (Mushaf) layout; your choice. Audio recitation support, khatm tracking, and prostration verse alerts."
             },
             widgets: {
-                title: "Modern Widgets",
-                description: "Widget support in various sizes on the home screen. See prayer times instantly without opening the app."
+                title: "Vakit Always With You",
+                description: "Prayer times on your home screen and lock screen. 4-region live tracking on Dynamic Island, urgency color system, and StandBy support. 6 different widget families with Verse of the Day and Name of the Day."
             },
-            liveActivities: {
-                title: "Live Activities",
-                description: "Lock screen and Dynamic Island support. Track the remaining time to the next prayer second by second."
-            },
-            settings: {
-                title: "Full Customization",
-                description: "11 different notification sounds, personalized reminders and dark mode support to design the app as you like."
+            more: {
+                title: "And Much More",
+                description: "Advanced calendar with religious days and holy nights, worship summary sharing cards, dhikr counter, worship tracking with Activity Rings, streak system, and personalized settings. Download and make your worship easier."
             }
         },
 
@@ -396,36 +395,32 @@ const translations = {
             subtitle: "Discover all features of the Vakit app and experience the modern design",
             home: {
                 title: "Home Screen - Prayer Times",
-                description: "View current prayer times, remaining time and Hijri date at a glance. Simple and clean interface for easy use."
+                description: "View current prayer times, remaining time and Hijri date at a glance. Anywhere, offline, in peace."
             },
             qibla: {
-                title: "Qibla Compass",
-                description: "Find the Kaaba direction precisely with GPS technology. Easily learn the qibla direction by holding your phone horizontally."
+                title: "Qibla, Dhikr, Quran",
+                description: "Find the Qibla, count your dhikr, read the Quran; all in one app."
             },
-            calendar: {
-                title: "Advanced Calendar",
-                description: "View current Hijri date and Islamic holidays. Tap any date to see prayer times in a popup."
+            quran: {
+                title: "The Holy Quran",
+                description: "Read or listen to verses, track your progress, save, and learn."
             },
-            worship: {
-                title: "Life Guide",
-                description: "Ease your life with audio-supported ablution guide, advanced dhikr counter, Al Asma Ul Husna list and Zakat/Fitrah calculators."
+            quranReading: {
+                title: "Your Preferred View",
+                description: "Modern interface or traditional book (mushaf) layout; your choice."
             },
-            widget: {
-                title: "Widget Support",
-                description: "Quickly view prayer times on your home screen. Small, medium and large widget options."
+            widgets: {
+                title: "Vakit Always With You",
+                description: "Prayer times on your home screen and lock screen, widgets and Live Activities."
             },
-            liveActivities: {
-                title: "Live Activities",
-                description: "Live Activities (Dynamic Island) and lock screen widgets. Track remaining time to prayer instantly."
-            },
-            settings: {
-                title: "Advanced Settings",
-                description: "Personalized notification settings, different calculation methods and theme options."
+            more: {
+                title: "And Much More",
+                description: "Calendar, sharing cards, dhikr counter, worship tracking and settings."
             },
             highlights: {
                 modern: {
                     title: "Modern Design",
-                    description: "iOS 15+ compatible, clean and user-friendly interface"
+                    description: "iOS 18+ compatible, clean and user-friendly interface"
                 },
                 autoUpdate: {
                     title: "Auto Update",
@@ -442,11 +437,11 @@ const translations = {
         vision: {
             mission: {
                 title: "Our Vision",
-                description: "To be a comprehensive digital life platform that presents Islam's fundamental practices (prayer, ablution, Quran, dhikr) accurately, authentically, and user-friendly through modern technology. Providing continuous and uninterrupted service, ensuring a reliable platform that users can access anytime, anywhere."
+                description: "To be a comprehensive digital life platform that presents Islam's fundamental practices (prayer, ablution, Quran, dhikr, worship tracking) accurately, authentically, and user-friendly through modern technology. Delivering the most up-to-date Apple experience with iOS 26 Liquid Glass design language, providing continuous and uninterrupted service."
             },
             goal: {
                 title: "Our Goal",
-                description: "Everyone should be able to access it anytime, anywhere. All core features such as location-based prayer times, qibla direction, Quran reading, dhikr counter, and ablution guide should operate continuously and reliably. Users should be able to use the app seamlessly in any network condition and different environments."
+                description: "Everyone should be able to access it anytime, anywhere. All core features such as prayer times, qibla direction, Quran reading, khatm tracking, dhikr counter, worship tracking, and ablution guide should work continuously and offline. Users should be able to use the app seamlessly on flights, in rural areas, or while traveling abroad."
             }
         },
 
@@ -469,7 +464,7 @@ const translations = {
             title: "Download Now",
             description: "Download the Vakit app from the App Store and easily track your prayer times.",
             button: "Download from App Store",
-            note: "Requires iOS 17 or later"
+            note: "Requires iOS 18 or later • Completely free"
         },
 
         // FAQ Section
@@ -478,7 +473,7 @@ const translations = {
             items: [
                 {
                     q: "Does it work without an internet connection?",
-                    a: "Yes, Vakit calculates prayer times instantly on your device. It does not require any data download, so it can work completely offline."
+                    a: "Yes, Vakit calculates prayer times instantly on your device. Quran reading, qibla direction, dhikr counter, and all core features work without an internet connection."
                 },
                 {
                     q: "Will I continue to receive notifications even if I don't open the app?",
@@ -486,11 +481,23 @@ const translations = {
                 },
                 {
                     q: "Are all features in the app really free?",
-                    a: "Yes, Vakit is a completely free project. You can access all features, including Widgets, Live Activities, and the Life Guide, without any charge."
+                    a: "Yes, Vakit is a completely free project. You can access all features, including the Quran reader, worship tracking, widgets, Live Activities, and all other features without any charge."
                 },
                 {
                     q: "Where do the prayer times come from?",
-                    a: "Instead of fetching data from a server, Vakit calculates times instantly on your device using mathematical formulas based on your chosen method and location. This ensures the most accurate and fast results."
+                    a: "Instead of fetching data from a server, Vakit calculates times instantly on your device using mathematical formulas based on your chosen method and location. You can choose from 22 different calculation methods for the most accurate results in your region."
+                },
+                {
+                    q: "What Quran reading features are available?",
+                    a: "Full text of 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation support, and khatm tracking. All content is accessible offline."
+                },
+                {
+                    q: "How does worship tracking work?",
+                    a: "Track your daily prayers, Quran reading, and dhikr with an Activity Rings-style visual tracking system. Monitor your consistency with the streak system and view your progress through detailed statistics."
+                },
+                {
+                    q: "What widget options are available?",
+                    a: "6 different widget families are available: Prayer times, countdown, Verse of the Day, Name of the Day, lock screen widgets, and StandBy mode support. Available in small, medium, and large sizes."
                 }
             ]
         },
@@ -512,9 +519,9 @@ const translations = {
 
         // Meta tags
         meta: {
-            title: "Vakit - A helpful app for your worship | Easy to Use",
-            description: "Learn prayer times easily with the Vakit app. Find the qibla direction. Live Activities, widget support, premium features and advanced calendar.",
-            keywords: "prayer times, vakit, qibla direction, prayer time, islamic app, namaz vakitleri, qibla yönü, hijri calendar, live activities, widget, premium, dynamic island, ios app, prayer app"
+            title: "Vakit: Prayer, Qibla, Quran",
+            description: "Track prayer times, find the Qibla direction, read the Holy Quran. Dhikr, calendar and Islamic tools. 22 calculation methods, Live Activities, widget support. Completely free.",
+            keywords: "prayer times, vakit, qibla direction, prayer time, quran, holy quran, khatm, tafsir, dhikr, dhikr counter, worship tracker, islamic app, namaz vakitleri, qibla yönü, hijri calendar, live activities, widget, dynamic island, ios app, prayer app"
         },
 
         // Privacy Policy
@@ -567,13 +574,12 @@ const translations = {
 
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/en/1.webp",
-            qibla: "assets/screenshots/en/2.webp",
-            calendar: "assets/screenshots/en/3.webp",
-            worship: "assets/screenshots/en/4.webp",
-            widget: "assets/screenshots/en/5.webp",
-            liveActivities: "assets/screenshots/en/6.webp",
-            settings: "assets/screenshots/en/7.webp"
+            home: "assets/screenshots/en/1.png",
+            qibla: "assets/screenshots/en/2.png",
+            quran: "assets/screenshots/en/3.png",
+            quranReading: "assets/screenshots/en/4.png",
+            widgets: "assets/screenshots/en/5.png",
+            more: "assets/screenshots/en/6.png"
         }
     }
 };
