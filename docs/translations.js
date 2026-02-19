@@ -14,10 +14,22 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "Namaz, Kıble, Kuran & İbadet Takibi",
+            subtitle: "Zikir, Takvim & İslami Araçlar",
             description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun ve ibadetlerinizi kayıt altına alın. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
+            badge: {
+                downloadOn: "Şuradan indirin:"
+            },
+            proof: {
+                rating: "App Store",
+                freeValue: "Ücretsiz",
+                freeLabel: "Fiyat",
+                offlineValue: "Çevrimdışı",
+                offlineLabel: "Çalışır",
+                adFreeValue: "Reklamsız",
+                adFreeLabel: "Deneyim"
+            },
             highlights: {
                 easy: "📱 Kolay Kullanım",
                 location: "📍 Akıllı Konum",
@@ -69,6 +81,21 @@ const translations = {
             },
         },
 
+        // Testimonials
+        testimonials: {
+            title: "Kullanıcı Yorumları",
+            items: [
+                {
+                    title: "Harika",
+                    text: "Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim."
+                },
+                {
+                    title: "Tertemiz uygulama",
+                    text: "Sade amacına uygun, saçma sapan özellik ve reklam yok, tertemiz uygulama olmuş. Eline sağlık yapan arkadaşın."
+                }
+            ]
+        },
+
         // Apple-style Feature Sections (for index.html)
         appleFeatures: {
             prayerTimes: {
@@ -76,8 +103,8 @@ const translations = {
                 description: "Konumunuza göre namaz vakitlerini anlık takip edin. İmsak ve sabah ayrı gösterilir. Türkiye (Diyanet) dahil 22 farklı hesaplama yöntemi, akıllı seyahat algılama ve urgency renk sistemi. Her yerde, internetsiz, huzurla."
             },
             qiblaAndWorship: {
-                title: "Kıble, Zikir, Kur'an",
-                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim ve Kâbe'ye mesafe bilgisi. Kur'an-ı Kerim, Zikirmatik, Fitre & Zekat hesaplayıcı — hepsi tek uygulamada."
+                title: "Kıble & İbadet",
+                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim ve Kâbe'ye mesafe bilgisi. Zikirmatik, Fitre & Zekat hesaplayıcı — hepsi tek uygulamada."
             },
             quran: {
                 title: "Kur'an-ı Kerim",
@@ -143,13 +170,17 @@ const translations = {
 
         // Vision Section
         vision: {
-            mission: {
-                title: "Vizyonumuz",
-                description: "Modern teknoloji ile İslam'ın temel ibadetlerini (namaz, abdest, Kur'an, zikir, ibadet takibi) doğru, aslına sadık ve kullanıcı dostu bir şekilde sunan, kapsamlı bir dijital yaşam platformu olmak. iOS 26 Liquid Glass tasarım dili ile en güncel Apple deneyimini sunarak, kesintisiz ve sürekli erişilebilir hizmet sağlamak."
+            offline: {
+                title: "Çevrimdışı Öncelikli",
+                description: "Tüm temel özellikler internet bağlantısı olmadan çalışır. İbadet, internete bağlı olmamalıdır."
             },
-            goal: {
-                title: "Hedefimiz",
-                description: "Herkes, her zaman, her yerde erişebilir olmalı. Namaz vakti, kıble yönü, Kur'an-ı Kerim okuma, hatim takibi, zikir sayacı, ibadet takibi ve abdest rehberi gibi tüm temel özellikler kesintisiz ve çevrimdışı çalışmalı. Uçak, kırsal alan veya yurtdışı seyahat gibi durumlarda da kullanıcılar uygulamayı sorunsuz kullanabilmeli."
+            privacy: {
+                title: "Gizlilik Öncelikli",
+                description: "Kişisel verileriniz cihazınızdan ayrılmaz. Hesap gerektirmez, takip etmez."
+            },
+            simple: {
+                title: "Sade & Hızlı",
+                description: "Gereksiz karmaşıklık yok. Aradığınıza saniyeler içinde ulaşın, temiz ve akıcı bir deneyim yaşayın."
             }
         },
 
@@ -222,6 +253,9 @@ const translations = {
 
         // Footer Section
         footer: {
+            tagline: "Zikir, Takvim & İslami Araçlar",
+            linksTitle: "Bağlantılar",
+            contactTitle: "İletişim",
             copyright: "© 2025 Vakit Team. Tüm hakları saklıdır."
         },
 
@@ -306,10 +340,22 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "Prayer, Qibla, Quran & Worship Tracker",
+            subtitle: "Dhikr, Calendar & Islamic Tools",
             description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, and log your worship with <strong>Vakit</strong>. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
+            badge: {
+                downloadOn: "Download on the"
+            },
+            proof: {
+                rating: "App Store",
+                freeValue: "Free",
+                freeLabel: "Price",
+                offlineValue: "Offline",
+                offlineLabel: "Works",
+                adFreeValue: "Ad-Free",
+                adFreeLabel: "Experience"
+            },
             highlights: {
                 easy: "📱 Easy to Use",
                 location: "📍 Smart Location",
@@ -361,6 +407,21 @@ const translations = {
             },
         },
 
+        // Testimonials
+        testimonials: {
+            title: "User Reviews",
+            items: [
+                {
+                    title: "Amazing",
+                    text: "Apps like this are usually disappointing, but this one is amazing. May God bless the developer. The Quran feature alone is wonderful. Qibla direction is accurate. Highly recommended."
+                },
+                {
+                    title: "Spotless app",
+                    text: "Simple, purpose-built, no unnecessary features and no ads — a spotless app. Great job to the developer."
+                }
+            ]
+        },
+
         // Apple-style Feature Sections (for index.html)
         appleFeatures: {
             prayerTimes: {
@@ -368,8 +429,8 @@ const translations = {
                 description: "Track prayer times in real-time based on your location. Imsak and Fajr shown separately. Supports 22 calculation methods including Turkey (Diyanet), smart travel detection, and urgency color system. Anywhere, offline, in peace."
             },
             qiblaAndWorship: {
-                title: "Qibla, Dhikr, Quran",
-                description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback and distance to Kaaba. Holy Quran, Dhikr Counter, Fitrah & Zakat calculator — all in one app."
+                title: "Qibla & Worship",
+                description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback and distance to Kaaba. Dhikr Counter, Fitrah & Zakat calculator — all in one app."
             },
             quran: {
                 title: "The Holy Quran",
@@ -435,13 +496,17 @@ const translations = {
 
         // Vision Section
         vision: {
-            mission: {
-                title: "Our Vision",
-                description: "To be a comprehensive digital life platform that presents Islam's fundamental practices (prayer, ablution, Quran, dhikr, worship tracking) accurately, authentically, and user-friendly through modern technology. Delivering the most up-to-date Apple experience with iOS 26 Liquid Glass design language, providing continuous and uninterrupted service."
+            offline: {
+                title: "Offline First",
+                description: "All core features work without an internet connection. Worship should never depend on connectivity."
             },
-            goal: {
-                title: "Our Goal",
-                description: "Everyone should be able to access it anytime, anywhere. All core features such as prayer times, qibla direction, Quran reading, khatm tracking, dhikr counter, worship tracking, and ablution guide should work continuously and offline. Users should be able to use the app seamlessly on flights, in rural areas, or while traveling abroad."
+            privacy: {
+                title: "Privacy First",
+                description: "Your personal data never leaves your device. No account required, no tracking."
+            },
+            simple: {
+                title: "Simple & Fast",
+                description: "No unnecessary complexity. Find what you need in seconds with a clean, fluid experience."
             }
         },
 
@@ -514,6 +579,9 @@ const translations = {
 
         // Footer Section
         footer: {
+            tagline: "Dhikr, Calendar & Islamic Tools",
+            linksTitle: "Links",
+            contactTitle: "Contact",
             copyright: "© 2025 Vakit Team. All rights reserved."
         },
 

@@ -74,15 +74,13 @@
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="preload" href="assets/app-icon-32.png" as="image">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap"
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
         as="style">
-    <link rel="preload" href="assets/screenshots/tr/1.png" as="image">
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data -->
@@ -142,7 +140,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="banner">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#" onclick="window.location.reload(); return false;" class="nav-logo-link">
@@ -152,12 +150,9 @@
             </div>
             <div class="nav-links">
                 <a href="#features" data-i18n="nav.features">Özellikler</a>
-                <a href="#screenshots" data-i18n="nav.screenshots">Hızlı Göz Atma</a>
                 <a href="#vision" data-i18n="nav.vision">Hakkımızda</a>
                 <a href="#download" data-i18n="nav.download">İndir</a>
                 <a href="#faq" data-i18n="nav.faq">SSS</a>
-                <a href="privacy.html" data-i18n="nav.privacy">Gizlilik</a>
-                <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
             </div>
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="tr">TR</button>
@@ -169,33 +164,47 @@
         </div>
     </nav>
 
+    <main role="main">
     <!-- Apple-style Hero Section -->
     <section class="hero-apple">
         <div class="hero-content-apple">
             <h1 class="hero-title-apple" data-i18n="hero.title">Vakit</h1>
-            <p class="hero-subtitle-apple" data-i18n="hero.subtitle">Namaz, Kıble, Kuran & İbadet Takibi</p>
+            <p class="hero-subtitle-apple" data-i18n="hero.subtitle">Zikir, Takvim & İslami Araçlar</p>
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <span class="proof-value">4.9 <i class="fas fa-star"></i></span>
+                    <span class="proof-label" data-i18n="hero.proof.rating">App Store</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="proof-value" data-i18n="hero.proof.freeValue">Ücretsiz</span>
+                    <span class="proof-label" data-i18n="hero.proof.freeLabel">Fiyat</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="proof-value" data-i18n="hero.proof.offlineValue">Çevrimdışı</span>
+                    <span class="proof-label" data-i18n="hero.proof.offlineLabel">Çalışır</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="proof-value" data-i18n="hero.proof.adFreeValue">Reklamsız</span>
+                    <span class="proof-label" data-i18n="hero.proof.adFreeLabel">Deneyim</span>
+                </div>
+            </div>
             <div class="hero-buttons-apple">
-                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn-apple-primary"
+                <a href="https://apps.apple.com/tr/app/vakit/id6748356813?l=tr" class="btn-apple-primary btn-download"
                     data-i18n="hero.downloadButton">
                     <i class="fab fa-apple"></i>
-                    Ücretsiz İndir
+                    App Store'dan İndir
                 </a>
-            </div>
-        </div>
-        <div class="hero-image-apple">
-            <div class="iphone-frame-apple">
-                <div class="iphone-screen-apple">
-                    <img src="assets/screenshots/tr/1.png" alt="Vakit Ana Ekran" class="hero-screenshot-apple"
-                        data-i18n-img="home" loading="eager">
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Apple-style Feature Sections -->
+    <!-- Feature Sections -->
 
-    <!-- 1. Prayer Times Section -->
-    <section class="feature-section-apple" id="screenshots">
+    <!-- 1. Prayer Times -->
+    <section class="feature-section-apple" id="features">
         <div class="feature-container-apple">
             <div class="feature-content-apple">
                 <h2 class="feature-title-apple" data-i18n="appleFeatures.prayerTimes.title">Namaz Vakitleri</h2>
@@ -213,12 +222,11 @@
         </div>
     </section>
 
-    <!-- 2. Qibla & Worship Section -->
+    <!-- 2. Qibla & Worship -->
     <section class="feature-section-apple feature-reverse">
         <div class="feature-container-apple">
             <div class="feature-content-apple">
-                <h2 class="feature-title-apple" data-i18n="appleFeatures.qiblaAndWorship.title">Kıble, Zikir,
-                    Kur'an</h2>
+                <h2 class="feature-title-apple" data-i18n="appleFeatures.qiblaAndWorship.title">Kıble & İbadet</h2>
                 <p class="feature-description-apple" data-i18n="appleFeatures.qiblaAndWorship.description">Kıble yönünü
                     bul, zikir çek, Kur'an oku; hepsi tek uygulamada.</p>
             </div>
@@ -233,7 +241,7 @@
         </div>
     </section>
 
-    <!-- 3. Quran Surahs Section -->
+    <!-- 3. Quran -->
     <section class="feature-section-apple">
         <div class="feature-container-apple">
             <div class="feature-content-apple">
@@ -253,7 +261,7 @@
         </div>
     </section>
 
-    <!-- 4. Quran Reading Section -->
+    <!-- 4. Quran Reading -->
     <section class="feature-section-apple feature-reverse">
         <div class="feature-container-apple">
             <div class="feature-content-apple">
@@ -273,7 +281,7 @@
         </div>
     </section>
 
-    <!-- 5. Widgets & Live Activities Section -->
+    <!-- 5. Widgets & Live Activities -->
     <section class="feature-section-apple">
         <div class="feature-container-apple">
             <div class="feature-content-apple">
@@ -292,42 +300,61 @@
         </div>
     </section>
 
-    <!-- 6. More Features Section -->
-    <section class="feature-section-apple feature-reverse">
-        <div class="feature-container-apple">
-            <div class="feature-content-apple">
-                <h2 class="feature-title-apple" data-i18n="appleFeatures.more.title">Ve Çok Daha Fazlası</h2>
-                <p class="feature-description-apple" data-i18n="appleFeatures.more.description">Takvim, paylaşım
-                    kartları, zikirmatik, ibadet takibi ve ayarlar. İndir, ibadetini kolaylaştır.</p>
-            </div>
-            <div class="feature-image-apple">
-                <div class="iphone-frame-apple">
-                    <div class="iphone-screen-apple">
-                        <img src="assets/screenshots/tr/6.png" alt="Vakit Daha Fazla Özellik"
-                            class="feature-screenshot-apple" data-i18n-img="more" loading="lazy">
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-i18n="testimonials.title">Kullanıcı Yorumları</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="testimonial-title" data-i18n="testimonials.items.0.title">Harika</h4>
+                    <p class="testimonial-text" data-i18n="testimonials.items.0.text">Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim.</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">Boromir_58</span>
+                        <span class="testimonial-source"><i class="fab fa-apple"></i> App Store</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="testimonial-title" data-i18n="testimonials.items.1.title">Tertemiz uygulama</h4>
+                    <p class="testimonial-text" data-i18n="testimonials.items.1.text">Sade amacına uygun, saçma sapan özellik ve reklam yok, tertemiz uygulama olmuş. Eline sağlık yapan arkadaşın.</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">furkan-s</span>
+                        <span class="testimonial-source"><i class="fab fa-apple"></i> App Store</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision & Mission Section -->
+    <!-- Vision & Values -->
     <section id="vision" class="vision">
         <div class="container">
             <div class="vision-content">
                 <div class="vision-card">
                     <div class="vision-icon">
-                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-signal"></i>
                     </div>
-                    <h3 data-i18n="vision.mission.title">Vizyonumuz</h3>
-                    <p data-i18n="vision.mission.description">Modern teknoloji ile İslam'ın temel ibadetlerini (namaz, abdest, Kur'an, zikir) doğru, aslına sadık ve kullanıcı dostu bir şekilde sunan, kapsamlı bir dijital yaşam platformu olmak. En önemlisi: İnternet bağlantısı olmasa bile, uygulamanın tüm temel özellikleri her zaman çalışmalıdır. İbadet, internet bağlantısına bağlı olmamalıdır.</p>
+                    <h3 data-i18n="vision.offline.title">Çevrimdışı Öncelikli</h3>
+                    <p data-i18n="vision.offline.description">Tüm temel özellikler internet bağlantısı olmadan çalışır. İbadet, internete bağlı olmamalıdır.</p>
                 </div>
                 <div class="vision-card">
                     <div class="vision-icon">
-                        <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3 data-i18n="vision.goal.title">Hedefimiz</h3>
-                    <p data-i18n="vision.goal.description">Herkes, her zaman, her yerde erişebilir olmalı. Konuma göre namaz vakti, kıble yönü, Kur'an-ı Kerim okuma, zikir sayacı ve abdest rehberi gibi tüm temel özellikler offline çalışmalı. Uçak, kırsal alan veya yurtdışı seyahat gibi durumlarda da kullanıcılar uygulamayı sorunsuz kullanabilmeli.</p>
+                    <h3 data-i18n="vision.privacy.title">Gizlilik Öncelikli</h3>
+                    <p data-i18n="vision.privacy.description">Kişisel verileriniz cihazınızdan ayrılmaz. Hesap gerektirmez, takip etmez.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3 data-i18n="vision.simple.title">Sade & Hızlı</h3>
+                    <p data-i18n="vision.simple.description">Gereksiz karmaşıklık yok. Aradığınıza saniyeler içinde ulaşın, temiz ve akıcı bir deneyim yaşayın.</p>
                 </div>
             </div>
         </div>
@@ -358,39 +385,38 @@
                 </a>
                 <p class="download-note" data-i18n="download.note">Yakında Android sürümü ile birlikte • Tamamen
                     ücretsiz</p>
-
-                <!-- Contact & Feedback Section -->
-                <div class="newsletter-section">
-                    <h3 data-i18n="contact.title">Geri Bildirim ve İletişim</h3>
-                    <p class="contact-description" data-i18n="contact.description">Vakit'i daha iyi hale getirmek için
-                        fikirleriniz bizim için çok değerli.</p>
-                    <div class="contact-links">
-                        <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU"
-                            target="_blank" class="btn btn-apple-primary feedback-button"
-                            data-i18n="contact.feedbackUrl" data-i18n-attr="href">
-                            <span data-i18n="contact.feedbackButton">Geri Bildirim Gönder</span>
-                        </a>
-                        <p class="email-contact">
-                            <span data-i18n="contact.emailLabel">Bize ulaşın:</span>
-                            <a href="mailto:hakancelikdev@gmail.com" class="email-link">hakancelikdev@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/app-icon-32.png" alt="Vakit" width="32" height="32">
+                        <span>Vakit</span>
+                    </div>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Zikir, Takvim & İslami Araçlar</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.linksTitle">Bağlantılar</h4>
                     <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
                     <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
+                    <a href="#faq" data-i18n="nav.faq">SSS</a>
                 </div>
-                <div class="footer-copyright">
-                    <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contactTitle">İletişim</h4>
+                    <a href="mailto:hakancelikdev@gmail.com" class="email-link">hakancelikdev@gmail.com</a>
+                    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU"
+                        target="_blank" data-i18n="contact.feedbackButton">Geri Bildirim Gönder</a>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>

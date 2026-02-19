@@ -15,89 +15,109 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="banner">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="nav-logo-link">
-                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon">
+                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon" width="32" height="32">
                     <span>Vakit</span>
                 </a>
             </div>
             <div class="nav-links">
                 <a href="index.html#features" data-i18n="nav.features">Özellikler</a>
-                <a href="index.html#screenshots" data-i18n="nav.screenshots">Hızlı Göz Atma</a>
                 <a href="index.html#vision" data-i18n="nav.vision">Hakkımızda</a>
                 <a href="index.html#download" data-i18n="nav.download">İndir</a>
-                <a href="privacy.html" data-i18n="nav.privacy">Gizlilik</a>
-                <a href="terms.html" class="active" data-i18n="nav.terms">Kullanım Şartları</a>
+                <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
             </div>
             <div class="language-switcher">
                 <button class="lang-btn" data-lang="tr">TR</button>
                 <button class="lang-btn" data-lang="en">EN</button>
             </div>
-            <button class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
-    <div class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
-        <h1 data-i18n="termsOfUse.title"
-            style="margin-bottom: 20px; font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">Kullanım
-            Şartları</h1>
-        <p data-i18n="termsOfUse.description"
-            style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;"></p>
+    <main role="main">
+        <div class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
+            <h1 data-i18n="termsOfUse.title"
+                style="margin-bottom: 20px; font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">
+                Kullanım Şartları</h1>
+            <p data-i18n="termsOfUse.description"
+                style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;"></p>
 
-        <div id="legal-sections">
-            <div class="legal-card"
-                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                <h3 data-i18n="termsOfUse.sections.0.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
-                <p data-i18n="termsOfUse.sections.0.body"
-                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+            <div id="legal-sections">
+                <div class="legal-card"
+                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                    <h3 data-i18n="termsOfUse.sections.0.title"
+                        style="margin-bottom: 15px; color: var(--primary);"></h3>
+                    <p data-i18n="termsOfUse.sections.0.body"
+                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+                </div>
+                <div class="legal-card"
+                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                    <h3 data-i18n="termsOfUse.sections.1.title"
+                        style="margin-bottom: 15px; color: var(--primary);"></h3>
+                    <p data-i18n="termsOfUse.sections.1.body"
+                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+                </div>
+                <div class="legal-card"
+                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                    <h3 data-i18n="termsOfUse.sections.2.title"
+                        style="margin-bottom: 15px; color: var(--primary);"></h3>
+                    <p data-i18n="termsOfUse.sections.2.body"
+                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+                </div>
+                <div class="legal-card"
+                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+                    <h3 data-i18n="termsOfUse.sections.3.title"
+                        style="margin-bottom: 15px; color: var(--primary);"></h3>
+                    <p data-i18n="termsOfUse.sections.3.body"
+                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+                </div>
             </div>
-            <div class="legal-card"
-                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                <h3 data-i18n="termsOfUse.sections.1.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
-                <p data-i18n="termsOfUse.sections.1.body"
-                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-            </div>
-            <div class="legal-card"
-                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                <h3 data-i18n="termsOfUse.sections.2.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
-                <p data-i18n="termsOfUse.sections.2.body"
-                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-            </div>
-            <div class="legal-card"
-                style="background: var(--card-background); padding: 30px; border-radius: 16px; border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                <h3 data-i18n="termsOfUse.sections.3.title" style="margin-bottom: 15px; color: var(--primary);"></h3>
-                <p data-i18n="termsOfUse.sections.3.body"
-                    style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="mailto:hakancelikdev@gmail.com" class="email-link">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>hakancelikdev@gmail.com
+                </a>
             </div>
         </div>
+    </main>
 
-        <div style="margin-top: 40px; text-align: center;">
-            <a href="mailto:hakancelikdev@gmail.com" style="color: var(--primary); font-weight: 500;">
-                <i class="fas fa-envelope" style="margin-right: 8px;"></i>hakancelikdev@gmail.com
-            </a>
-        </div>
-    </div>
-
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/app-icon-32.png" alt="Vakit" width="32" height="32">
+                        <span>Vakit</span>
+                    </div>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Zikir, Takvim & İslami Araçlar</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer.linksTitle">Bağlantılar</h4>
                     <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
                     <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
+                    <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
                 </div>
-                <div class="footer-copyright">
-                    <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contactTitle">İletişim</h4>
+                    <a href="mailto:hakancelikdev@gmail.com" class="email-link">hakancelikdev@gmail.com</a>
+                    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU"
+                        target="_blank" data-i18n="contact.feedbackButton">Geri Bildirim Gönder</a>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
