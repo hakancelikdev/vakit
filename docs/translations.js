@@ -176,7 +176,7 @@ const translations = {
             },
             privacy: {
                 title: "Gizlilik Öncelikli",
-                description: "Kişisel verileriniz cihazınızdan ayrılmaz. Hesap gerektirmez, takip etmez."
+                description: "Kişisel verileriniz toplanmaz. Hesap gerektirmez. Yalnızca anonim analitik veriler uygulama iyileştirme amacıyla güvenli sunuculara gönderilir."
             },
             simple: {
                 title: "Sade & Hızlı",
@@ -269,7 +269,7 @@ const translations = {
         // Privacy Policy
         privacyPolicy: {
             title: "Gizlilik Politikası",
-            description: "Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek ve yerel hatırlatıcılar göndermek için gerekli verileri toplarız. Hiçbir kişisel veri cihazınızdan ayrılmaz. Reklam deneyimini iyileştirmek amacıyla sınırlı veri toplanabilir.",
+            description: "Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek, yerel hatırlatıcılar göndermek ve uygulama performansını iyileştirmek için gerekli verileri toplarız. Toplanan verilerin çoğu cihazınızda kalır; yalnızca anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla güvenli sunuculara gönderilir.",
             sections: [
                 {
                     title: "1. Topladığımız Veriler",
@@ -277,15 +277,15 @@ const translations = {
                 },
                 {
                     title: "2. Verilerinizi Nasıl Kullanıyoruz",
-                    body: "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak işlenir.\n• Kıble Yönü – Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler planlanır.\n• Kullanıcı Tercihleri – Yerel olarak saklanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri performans izleme ve hata tespiti için kullanılır."
+                    body: "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak işlenir.\n• Kıble Yönü – Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler planlanır.\n• Kullanıcı Tercihleri – Yerel olarak saklanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri uygulama performansını izlemek, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla güvenli sunuculara gönderilir."
                 },
                 {
                     title: "3. Veri Paylaşımı & Üçüncü Taraflar",
-                    body: "Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Reklam deneyimini iyileştirmek amacıyla Google AdMob ile sınırlı veri paylaşımı yapılabilir. Anonim analitik veriler Türkiye'deki güvenli veritabanı cluster'ında saklanır."
+                    body: "Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla Türkiye'deki güvenli veritabanı cluster'ında saklanır. Bu veriler kişisel olarak tanımlanamaz, hiç kimseyle paylaşılmaz ve yalnızca toplu istatistiksel analizler için kullanılır."
                 },
                 {
                     title: "4. Güvenlik",
-                    body: "Tüm yerel veriler iPhone'unuzda kalır ve iOS sandbox'ı tarafından korunur. Analitik veriler Türkiye'deki güvenli veritabanı cluster'ında şifrelenmiş olarak saklanır. Kişisel tanımlayıcı bilgiler toplanmaz."
+                    body: "Tüm yerel veriler iPhone'unuzda kalır ve iOS sandbox'ı ile şifreleme tarafından korunur. Analitik veriler Türkiye'deki güvenli veritabanı cluster'ında şifrelenmiş olarak saklanır ve yalnızca anonim istatistiksel analizler için kullanılır. Veriler hiç kimseyle paylaşılmaz. Kişisel tanımlayıcı bilgiler toplanmaz veya saklanmaz."
                 }
             ]
         },
@@ -502,7 +502,7 @@ const translations = {
             },
             privacy: {
                 title: "Privacy First",
-                description: "Your personal data never leaves your device. No account required, no tracking."
+                description: "No personal data is collected. No account required. Only anonymous analytics data is sent to secure servers for app improvement."
             },
             simple: {
                 title: "Simple & Fast",
@@ -595,7 +595,7 @@ const translations = {
         // Privacy Policy
         privacyPolicy: {
             title: "Privacy Policy",
-            description: "Vakit respects your privacy. We only collect the necessary data to calculate prayer times, determine qibla direction, and send local reminders. No personal data leaves your device. Limited data may be collected to improve the advertising experience.",
+            description: "Vakit respects your privacy. We only collect the data necessary to calculate prayer times, determine qibla direction, send local notifications, and improve app performance. Most collected data remains on your device; only anonymous analytics data is sent to secure servers for app development and improvement purposes.",
             sections: [
                 {
                     title: "1. Data We Collect",
@@ -603,15 +603,15 @@ const translations = {
                 },
                 {
                     title: "2. How We Use Your Data",
-                    body: "• Prayer Time Calculation – Location is processed locally on your device.\n• Qibla Direction – Location + heading are combined on-device.\n• Prayer Reminders – Local notifications are scheduled.\n• User Preferences – Stored locally.\n• Analytics and Improvement – Anonymous usage data is used for monitoring performance."
+                    body: "• Prayer Time Calculation – Location is processed locally on your device.\n• Qibla Direction – Location + heading are combined on-device.\n• Prayer Reminders – Local notifications are scheduled.\n• User Preferences – Stored locally.\n• Analytics and Improvement – Anonymous usage data is sent to secure servers to monitor app performance, detect errors, and improve user experience."
                 },
                 {
                     title: "3. Data Sharing & Third Parties",
-                    body: "We do not share, sell, or transfer your data to anyone. Limited data may be shared with Google AdMob to improve the advertising experience. Anonymous analytics data is stored on secure servers."
+                    body: "We do not share, sell, or transfer your data with anyone. Anonymous analytics data is stored on secure database cluster located in Turkey for app development and improvement purposes. This data cannot be used to personally identify you, is never shared with anyone, and is only used for aggregate statistical analysis."
                 },
                 {
                     title: "4. Security",
-                    body: "All local data remains on your iPhone and is protected by iOS sandboxing. Analytics data is stored in encrypted form on secure servers. No personally identifiable information is collected."
+                    body: "All local data remains on your iPhone and is protected by iOS sandboxing and encryption. Analytics data is stored on secure database cluster located in Turkey in encrypted form and is only used for anonymous statistical analysis. Data is never shared with anyone. No personally identifiable information is collected or stored."
                 }
             ]
         },
