@@ -273,15 +273,15 @@ const translations = {
             sections: [
                 {
                     title: "1. Topladığımız Veriler",
-                    body: "İsminizi, e-posta adresinizi, fotoğraflarınızı, mikrofonunuzu, kameranızı, rehberinizi veya herhangi bir kişisel tanımlayıcı bilgiyi toplamayız. Analitik veriler tamamen anonimdir ve yalnızca uygulama geliştirme ve iyileştirme amacıyla kullanılır."
+                    body: "İsminizi, e-posta adresinizi, fotoğraflarınızı, mikrofonunuzu, kameranızı, rehberinizi veya herhangi bir kişisel tanımlayıcı bilgiyi toplamayız.\n\nAnonim analitik veriler yalnızca uygulama geliştirme amacıyla toplanır ve şunları içerir:\n• Bölgesel konum bilgisi (ülke, şehir, ilçe) – GPS koordinatları (enlem/boylam) toplanmaz\n• Cihaz bilgisi (model, işletim sistemi sürümü, uygulama sürümü)\n• Uygulama tercihleri (dil, hesaplama yöntemi, tema)\n• Özellik kullanım istatistikleri (zikir sayısı, ekran görüntülenme süreleri)\n\nToplanmayan veriler:\n• GPS koordinatları (enlem/boylam)\n• Zikir içerikleri veya özel zikir isimleri\n• Arama sorgusu metinleri\n• Kişisel ibadet detayları"
                 },
                 {
                     title: "2. Verilerinizi Nasıl Kullanıyoruz",
-                    body: "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak işlenir.\n• Kıble Yönü – Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler planlanır.\n• Kullanıcı Tercihleri – Yerel olarak saklanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri uygulama performansını izlemek, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla güvenli sunuculara gönderilir."
+                    body: "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak işlenir.\n• Kıble Yönü – Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler planlanır.\n• Kullanıcı Tercihleri – Yerel olarak saklanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri uygulama performansını izlemek, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla güvenli sunuculara gönderilir. Konum veriniz yalnızca bölgesel düzeyde (ülke, şehir) kaydedilir; hassas GPS koordinatları sunuculara gönderilmez."
                 },
                 {
                     title: "3. Veri Paylaşımı & Üçüncü Taraflar",
-                    body: "Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla Türkiye'deki güvenli veritabanı cluster'ında saklanır. Bu veriler kişisel olarak tanımlanamaz, hiç kimseyle paylaşılmaz ve yalnızca toplu istatistiksel analizler için kullanılır."
+                    body: "Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla Türkiye'deki güvenli veritabanı cluster'ında saklanır. Bu veriler kişisel olarak tanımlanamaz, hiç kimseyle paylaşılmaz ve yalnızca toplu istatistiksel analizler için kullanılır. Kullanıcı tarafından oluşturulan içerikler (özel zikir isimleri, arama sorguları vb.) sunuculara gönderilmez."
                 },
                 {
                     title: "4. Güvenlik",
@@ -599,19 +599,19 @@ const translations = {
             sections: [
                 {
                     title: "1. Data We Collect",
-                    body: "We do not collect your name, email, photos, microphone, camera, contacts, or any other personally identifiable information. Analytics data is completely anonymous and used solely for app development and improvement."
+                    body: "We do not collect your name, email, photos, microphone, camera, contacts, or any other personally identifiable information.\n\nAnonymous analytics data is collected solely for app development and includes:\n• Regional location (country, city, district) – GPS coordinates (latitude/longitude) are NOT collected\n• Device information (model, OS version, app version)\n• App preferences (language, calculation method, theme)\n• Feature usage statistics (dhikr count, screen view durations)\n\nData we do NOT collect:\n• GPS coordinates (latitude/longitude)\n• Dhikr content or custom dhikr names\n• Search query text\n• Personal worship details"
                 },
                 {
                     title: "2. How We Use Your Data",
-                    body: "• Prayer Time Calculation – Location is processed locally on your device.\n• Qibla Direction – Location + heading are combined on-device.\n• Prayer Reminders – Local notifications are scheduled.\n• User Preferences – Stored locally.\n• Analytics and Improvement – Anonymous usage data is sent to secure servers to monitor app performance, detect errors, and improve user experience."
+                    body: "• Prayer Time Calculation – Location is processed locally on your device.\n• Qibla Direction – Location + heading are combined on-device.\n• Prayer Reminders – Local notifications are scheduled.\n• User Preferences – Stored locally.\n• Analytics and Improvement – Anonymous usage data is sent to secure servers to monitor app performance, detect errors, and improve user experience. Your location is only recorded at a regional level (country, city); precise GPS coordinates are never sent to our servers."
                 },
                 {
                     title: "3. Data Sharing & Third Parties",
-                    body: "We do not share, sell, or transfer your data with anyone. Anonymous analytics data is stored on secure database cluster located in Turkey for app development and improvement purposes. This data cannot be used to personally identify you, is never shared with anyone, and is only used for aggregate statistical analysis."
+                    body: "We do not share, sell, or transfer your data with anyone. Anonymous analytics data is stored on a secure database cluster located in Turkey for app development and improvement purposes. This data cannot be used to personally identify you, is never shared with anyone, and is only used for aggregate statistical analysis. User-generated content (custom dhikr names, search queries, etc.) is never sent to our servers."
                 },
                 {
                     title: "4. Security",
-                    body: "All local data remains on your iPhone and is protected by iOS sandboxing and encryption. Analytics data is stored on secure database cluster located in Turkey in encrypted form and is only used for anonymous statistical analysis. Data is never shared with anyone. No personally identifiable information is collected or stored."
+                    body: "All local data remains on your iPhone and is protected by iOS sandboxing and encryption. Analytics data is stored on a secure database cluster located in Turkey in encrypted form and is only used for anonymous statistical analysis. Data is never shared with anyone. No personally identifiable information is collected or stored."
                 }
             ]
         },
