@@ -4,6 +4,7 @@ const translations = {
         nav: {
             features: "Özellikler",
             screenshots: "Hızlı Göz Atma",
+            comparison: "Neden Vakit?",
             vision: "Hakkımızda",
             download: "İndir",
             privacy: "Gizlilik",
@@ -94,6 +95,45 @@ const translations = {
                     text: "Sade amacına uygun, saçma sapan özellik ve reklam yok, tertemiz uygulama olmuş. Eline sağlık yapan arkadaşın."
                 }
             ]
+        },
+
+        // Comparison Section
+        comparison: {
+            title: "Neden Vakit?",
+            subtitle: "Diğer uygulamalarda sizi rahatsız eden sorunları biliyoruz. Vakit, farklı olmak için tasarlandı.",
+            cta: "Farkı Kendin Gör",
+            items: {
+                adFree: {
+                    title: "Sıfır Reklam",
+                    others: "Casino ve uygunsuz içerikli reklamlar dini içerikle aynı ekranda",
+                    vakit: "Hiçbir reklam yok. Temiz, huzurlu bir ibadet deneyimi"
+                },
+                privacy: {
+                    title: "Emanet: Gizlilik",
+                    others: "Konum verileri üçüncü taraflara satılma skandalları",
+                    vakit: "Verileriniz cihazınızdan asla çıkmaz. Takip yok, satış yok"
+                },
+                offline: {
+                    title: "Tam Çevrimdışı",
+                    others: "Bazı özellikler internet bağlantısı gerektiriyor",
+                    vakit: "Namaz, Kıble, Kur'an, Zikir — her şey internetsiz çalışır"
+                },
+                liveActivity: {
+                    title: "Live Activity & Widget",
+                    others: "Widget'lar iOS güncellemelerinde bozuluyor veya hiç yok",
+                    vakit: "Dynamic Island, kilit ekranı ve StandBy'da kesintisiz takip"
+                },
+                accuracy: {
+                    title: "Doğru Hesaplama",
+                    others: "Yaz/kış saati geçişlerinde hatalar, sınırlı hesaplama yöntemi",
+                    vakit: "22 hesaplama yöntemi, timezone-aware, seyahat algılama"
+                },
+                design: {
+                    title: "Modern Tasarım",
+                    others: "Eski, karmaşık arayüzler; güncelleme sonrası bozulmalar",
+                    vakit: "iOS 18+ Liquid Glass tasarım, sade ve akıcı deneyim"
+                }
+            }
         },
 
         // Apple-style Feature Sections (for index.html)
@@ -330,6 +370,7 @@ const translations = {
         nav: {
             features: "Features",
             screenshots: "Screenshots",
+            comparison: "Why Vakit?",
             vision: "About",
             download: "Download",
             privacy: "Privacy",
@@ -420,6 +461,45 @@ const translations = {
                     text: "Simple, purpose-built, no unnecessary features and no ads — a spotless app. Great job to the developer."
                 }
             ]
+        },
+
+        // Comparison Section
+        comparison: {
+            title: "Why Vakit?",
+            subtitle: "We know what frustrates you about other apps. Vakit was designed to be different.",
+            cta: "See the Difference",
+            items: {
+                adFree: {
+                    title: "Zero Ads",
+                    others: "Casino and inappropriate ads displayed alongside religious content",
+                    vakit: "No ads whatsoever. A clean, peaceful worship experience"
+                },
+                privacy: {
+                    title: "Trust: Privacy",
+                    others: "Location data sold to third parties in privacy scandals",
+                    vakit: "Your data never leaves your device. No tracking, no selling"
+                },
+                offline: {
+                    title: "Fully Offline",
+                    others: "Some features require an internet connection",
+                    vakit: "Prayer, Qibla, Quran, Dhikr — everything works without internet"
+                },
+                liveActivity: {
+                    title: "Live Activity & Widget",
+                    others: "Widgets break after iOS updates or don't exist at all",
+                    vakit: "Seamless tracking on Dynamic Island, lock screen, and StandBy"
+                },
+                accuracy: {
+                    title: "Accurate Calculation",
+                    others: "Errors during daylight saving time changes, limited methods",
+                    vakit: "22 calculation methods, timezone-aware, travel detection"
+                },
+                design: {
+                    title: "Modern Design",
+                    others: "Outdated, cluttered interfaces; regressions after updates",
+                    vakit: "iOS 18+ Liquid Glass design, clean and fluid experience"
+                }
+            }
         },
 
         // Apple-style Feature Sections (for index.html)
