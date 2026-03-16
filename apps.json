@@ -1,45 +1,65 @@
 {
-    "id": "Vakit",
-    "name": "Vakit",
-    "developer": "Hakan Çelik",
-    "subtitle": "Quran, Dhikr & Worship Tracker",
-    "description": "Manage prayer times, Qibla, Quran, dhikr, and all your worship in one app.",
-    "longDescription": "Vakit is a comprehensive Islamic life app that helps you track prayer times, find qibla direction, read the Quran and Hadith, and manage all your worship from one place. With Lock Screen widgets,
-  Dynamic Island support, and full offline capability, it delivers a modern worship experience.",
-    "icon": "https://vakit.hakancelik.dev/assets/app-icon-32.png",
-    "iconEmoji": "🕌",
-    "iconStyle": {
-      "scale": 1.0,
-      "objectFit": "cover",
-      "borderRadius": "22%",
-      "bgColor": "#2A9D8F",
-      "padding": "0%"
-    },
-    "category": ["islamic", "prayer-times", "lifestyle"],
-    "platform": "iOS",
-    "price": "Free",
-    "github": "https://github.com/hakancelikdev/vakit",
-    "homepage": "https://vakit.hakancelik.dev",
-    "language": "Swift",
-    "stars": 0,
-    "forks": 0,
-    "installCommand": null,
-    "downloadUrl": "https://apps.apple.com/app/id6748356813",
-    "requirements": "iOS 18+",
-    "features": [
-      "Prayer times with 22 calculation methods",
-      "Qibla compass",
-      "Holy Quran (translation, tafsir, word-by-word analysis)",
-      "36,390 hadith (7 major collections)",
-      "Dhikr counter & Asma al-Husna",
-      "Hijri & Gregorian calendar",
-      "Ablution guide",
-      "Fitr & Zakat calculator",
-      "Worship tracking & profile",
-      "Live Activities & Dynamic Island",
-      "Lock Screen widgets",
-      "Fully offline functionality",
-      "Turkish & English language support"
-    ],
-    "screenshots": []
-  }
+   "$schema":"https://wvw.dev/apps.schema.json",
+   "store":{
+      "name":"Hakan Çelik Apps",
+      "developer":"Hakan Çelik",
+      "tagline":"Islamic apps for everyday worship.",
+      "github":"https://github.com/hakancelikdev"
+   },
+   "categories":[
+      {
+         "id":"ios",
+         "name":"iOS Apps"
+      },
+      {
+         "id":"lifestyle",
+         "name":"Lifestyle"
+      }
+   ],
+   "apps":[
+      {
+         "id":"vakit",
+         "name":"Vakit",
+         "subtitle":"Quran, Dhikr & Worship Tracker",
+         "description":"Manage prayer times, Qibla, Quran, dhikr, and all your worship in one app.",
+         "longDescription":"Vakit is a comprehensive Islamic life app that helps you track prayer times, find qibla direction, read the Quran and Hadith, and manage all your worship from one place. With Lock Screen widgets, Dynamic Island support, and full offline capability, it delivers a modern worship experience.",
+         "icon":"https://vakit.hakancelik.dev/assets/app-icon-32.png",
+         "iconEmoji":"🕌",
+         "iconStyle":{
+            "scale":1.0,
+            "objectFit":"cover",
+            "borderRadius":"22%",
+            "bgColor":"#2A9D8F"
+         },
+         "category":[
+            "ios",
+            "lifestyle"
+         ],
+         "platform":"iOS",
+         "price":"Free",
+         "github":"https://github.com/hakancelikdev/vakit",
+         "homepage":"https://vakit.hakancelik.dev",
+         "language":"Swift",
+         "downloadUrl":"https://apps.apple.com/app/id6748356813",
+         "requirements":"iOS 18+",
+         "features":[
+            "Prayer times with 22 calculation methods",
+            "Qibla compass",
+            "Holy Quran (translation, tafsir, word-by-word analysis)",
+            "36,390 hadith from 7 major collections",
+            "Dhikr counter & Asma al-Husna",
+            "Hijri & Gregorian calendar",
+            "Ablution guide",
+            "Fitr & Zakat calculator",
+            "Worship tracking & profile",
+            "Live Activities & Dynamic Island",
+            "Lock Screen widgets",
+            "Fully offline functionality",
+            "Turkish & English language support"
+         ],
+         "screenshots":[
+            
+         ]
+      }
+   ]
+}
