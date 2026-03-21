@@ -87,8 +87,16 @@ const translations = {
             title: "Kullanıcı Yorumları",
             items: [
                 {
+                    title: "Mükemmel",
+                    text: "Vallaha benim işi gördü ben normalde sahur ve iftar için aldım kıble yönü namaz saatleri falan bi de daha çok şey var çok memnun kaldım"
+                },
+                {
                     title: "Harika",
                     text: "Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim."
+                },
+                {
+                    title: "Vakit",
+                    text: "Harika bir uygulama olmuş teşekkürler Hakan Çelik."
                 },
                 {
                     title: "Tertemiz uygulama",
@@ -453,8 +461,16 @@ const translations = {
             title: "User Reviews",
             items: [
                 {
+                    title: "Excellent",
+                    text: "It really served my needs. I originally got it for suhoor and iftar times, but it also has qibla direction, prayer times and so much more. Very satisfied."
+                },
+                {
                     title: "Amazing",
                     text: "Apps like this are usually disappointing, but this one is amazing. May God bless the developer. The Quran feature alone is wonderful. Qibla direction is accurate. Highly recommended."
+                },
+                {
+                    title: "Vakit",
+                    text: "What a great app, thank you Hakan Çelik."
                 },
                 {
                     title: "Spotless app",
