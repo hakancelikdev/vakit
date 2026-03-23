@@ -148,28 +148,40 @@ const translations = {
         // Apple-style Feature Sections (for index.html)
         appleFeatures: {
             prayerTimes: {
-                title: "Namaz Vakitleri",
-                description: "Konumunuza göre namaz vakitlerini anlık takip edin. İmsak ve sabah ayrı gösterilir. Türkiye (Diyanet) dahil 22 farklı hesaplama yöntemi, akıllı seyahat algılama ve urgency renk sistemi. Her yerde, internetsiz, huzurla."
+                title: "Reklamsız",
+                description: "Siz sadece ibadetinize odaklanın. Konumunuza göre namaz vakitlerini anlık takip edin. Türkiye (Diyanet) dahil 22 farklı hesaplama yöntemi, akıllı seyahat algılama ve urgency renk sistemi. Her yerde, internetsiz, huzurla."
             },
-            qiblaAndWorship: {
-                title: "Kıble & İbadet",
-                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim ve Kâbe'ye mesafe bilgisi. Zikirmatik, Fitre & Zekat hesaplayıcı — hepsi tek uygulamada."
+            liveActivities: {
+                title: "Ücretsiz, Premium Tadında",
+                description: "Live Activities, Dynamic Island, kilit ekranı widget'ları ve StandBy desteği. Tüm premium özellikler tamamen ücretsiz."
             },
             quran: {
-                title: "Kur'an-ı Kerim",
-                description: "114 sure tam metin okuma, kelime kelime analiz ve Diyanet tefsiri. Ayetleri oku veya dinle, ilerlemeni takip et, kaydet, öğren."
+                title: "İnternetsiz",
+                description: "Her yerde, her zaman. 114 sure tam metin okuma, kelime kelime analiz ve Diyanet tefsiri. Ayetleri oku veya dinle, ilerlemeni takip et, kaydet, öğren."
             },
             quranReading: {
-                title: "İstediğin Görünümle",
+                title: "Oku, Dinle, Takip Et",
                 description: "Modern arayüz veya geleneksel Mushaf (kitap) görünümü; sana kalmış. Sesli tilavet desteği, hatim takibi ve secde ayeti uyarıları."
             },
             widgets: {
                 title: "Vakit Hep Yanında",
                 description: "Ana ekran ve kilit ekranında namaz vakitleri. Dynamic Island'da 4 bölgeli canlı takip, urgency renk sistemi ve StandBy desteği. 6 farklı widget ailesi ile Günün Ayeti ve Günün Esması."
             },
-            more: {
-                title: "Ve Çok Daha Fazlası",
-                description: "Gelişmiş takvim ile dini günler ve kandil geceleri, ibadet özeti paylaşım kartları, zikirmatik, Activity Rings ile ibadet takibi, streak sistemi ve kişiselleştirilmiş ayarlar. İndir, ibadetini kolaylaştır."
+            lockScreen: {
+                title: "Kilit Ekranında Bile",
+                description: "Kilit ekranında namaz vakitleri, geri sayım ve günün ayeti. Telefonunuzu açmadan her şeyi görün."
+            },
+            qibla: {
+                title: "Kıbleyi Anında Bul",
+                description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim, Kâbe'ye mesafe bilgisi ve hassas yön hesaplama."
+            },
+            dhikr: {
+                title: "Gelişmiş Zikirmatik",
+                description: "Görsel ilerleme halkası ile zikir çekin. Özel zikirler ekleyin, toplam sayılarınızı takip edin ve ibadetinizi kayıt altına alın."
+            },
+            calendar: {
+                title: "Hiçbir Anı Kaçırma",
+                description: "Gelişmiş takvim ile Ramazan, Kadir Gecesi ve tüm özel günleri takip edin. İbadet özeti, namaz takibi ve günlük istatistikler."
             }
         },
 
@@ -366,11 +378,14 @@ const translations = {
         // Screenshot paths
         screenshotPaths: {
             home: "assets/screenshots/tr/1.png",
-            qibla: "assets/screenshots/tr/2.png",
+            liveActivities: "assets/screenshots/tr/2.png",
             quran: "assets/screenshots/tr/3.png",
             quranReading: "assets/screenshots/tr/4.png",
             widgets: "assets/screenshots/tr/5.png",
-            more: "assets/screenshots/tr/6.png"
+            lockScreen: "assets/screenshots/tr/6.png",
+            qibla: "assets/screenshots/tr/7.png",
+            dhikr: "assets/screenshots/tr/8.png",
+            calendar: "assets/screenshots/tr/9.png"
         }
     },
 
@@ -523,28 +538,40 @@ const translations = {
         // Apple-style Feature Sections (for index.html)
         appleFeatures: {
             prayerTimes: {
-                title: "Prayer Times",
-                description: "Track prayer times in real-time based on your location. Imsak and Fajr shown separately. Supports 22 calculation methods including Turkey (Diyanet), smart travel detection, and urgency color system. Anywhere, offline, in peace."
+                title: "Ad-Free",
+                description: "Just focus on your worship. Track prayer times in real-time based on your location. Supports 22 calculation methods including Turkey (Diyanet), smart travel detection, and urgency color system. Anywhere, offline, in peace."
             },
-            qiblaAndWorship: {
-                title: "Qibla & Worship",
-                description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback and distance to Kaaba. Dhikr Counter, Fitrah & Zakat calculator — all in one app."
+            liveActivities: {
+                title: "Free, Premium Taste",
+                description: "Live Activities, Dynamic Island, lock screen widgets, and StandBy support. All premium features completely free."
             },
             quran: {
-                title: "The Holy Quran",
-                description: "Full text of 114 surahs, word-by-word analysis, and Diyanet tafsir. Read or listen to verses, track your progress, save, and learn."
+                title: "No Internet Needed",
+                description: "Everywhere, all the time. Full text of 114 surahs, word-by-word analysis, and Diyanet tafsir. Read or listen to verses, track your progress, save, and learn."
             },
             quranReading: {
-                title: "Your Preferred View",
+                title: "Read, Listen, Follow",
                 description: "Modern interface or traditional book (Mushaf) layout; your choice. Audio recitation support, khatm tracking, and prostration verse alerts."
             },
             widgets: {
-                title: "Vakit Always With You",
+                title: "Vakit Is Always With You",
                 description: "Prayer times on your home screen and lock screen. 4-region live tracking on Dynamic Island, urgency color system, and StandBy support. 6 different widget families with Verse of the Day and Name of the Day."
             },
-            more: {
-                title: "And Much More",
-                description: "Advanced calendar with religious days and holy nights, worship summary sharing cards, dhikr counter, worship tracking with Activity Rings, streak system, and personalized settings. Download and make your worship easier."
+            lockScreen: {
+                title: "Even on the Lock Screen",
+                description: "Prayer times, countdown, and verse of the day on your lock screen. See everything without unlocking your phone."
+            },
+            qibla: {
+                title: "Find the Qibla Instantly",
+                description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback, distance to Kaaba, and precise direction calculation."
+            },
+            dhikr: {
+                title: "Advanced Dhikr Counter",
+                description: "Count your dhikr with a visual progress ring. Add custom dhikrs, track your totals, and record your worship."
+            },
+            calendar: {
+                title: "Don't Miss a Single Moment",
+                description: "Track Ramadan, Night of Power, and all special days with the advanced calendar. Worship summary, prayer tracking, and daily statistics."
             }
         },
 
@@ -741,11 +768,14 @@ const translations = {
         // Screenshot paths
         screenshotPaths: {
             home: "assets/screenshots/en/1.png",
-            qibla: "assets/screenshots/en/2.png",
+            liveActivities: "assets/screenshots/en/2.png",
             quran: "assets/screenshots/en/3.png",
             quranReading: "assets/screenshots/en/4.png",
             widgets: "assets/screenshots/en/5.png",
-            more: "assets/screenshots/en/6.png"
+            lockScreen: "assets/screenshots/en/6.png",
+            qibla: "assets/screenshots/en/7.png",
+            dhikr: "assets/screenshots/en/8.png",
+            calendar: "assets/screenshots/en/9.png"
         }
     }
 };
