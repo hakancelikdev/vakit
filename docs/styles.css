@@ -563,50 +563,41 @@ body {
 }
 
 /* ==========================================================================
-   Feature Sections — Alternating Layout
+   Features Showcase — Scroll-driven Sticky Phone
    ========================================================================== */
 
-.feature-section-apple {
-    padding: var(--spacing-xxl) var(--spacing-md);
+.features-showcase {
     background: var(--background);
-    position: relative;
 }
 
-.feature-section-apple:nth-child(even) {
-    background: var(--background-alt);
-}
-
-/* Subtle divider between sections */
-.feature-section-apple::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-}
-
-.feature-container-apple {
+.features-showcase-container {
     max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--spacing-md);
+    display: flex;
     gap: var(--spacing-xxl);
-    align-items: center;
 }
 
-/* Reverse layout (image left, text right) */
-.feature-reverse .feature-container-apple {
-    direction: rtl;
+/* Left: text panels that scroll */
+.features-text-track {
+    flex: 1;
+    padding: var(--spacing-xxl) 0;
 }
 
-.feature-reverse .feature-content-apple {
-    direction: ltr;
+.feature-panel {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
 }
 
-.feature-title-apple {
+.feature-panel.active {
+    opacity: 1;
+}
+
+.feature-panel-title {
     font-family: var(--font-display);
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 700;
@@ -616,15 +607,21 @@ body {
     color: var(--text-primary);
 }
 
-.feature-description-apple {
+.feature-panel-desc {
     font-size: 1.15rem;
     line-height: 1.7;
     color: var(--text-secondary);
+    max-width: 460px;
 }
 
-.feature-image-apple {
-    max-width: 380px;
-    margin: 0 auto;
+/* Right: sticky phone */
+.features-phone-sticky {
+    flex: 0 0 340px;
+    position: sticky;
+    top: 15vh;
+    height: fit-content;
+    align-self: flex-start;
+    padding-top: var(--spacing-xxl);
 }
 
 /* ==========================================================================
@@ -632,12 +629,10 @@ body {
    ========================================================================== */
 
 .iphone-frame-apple {
-    position: relative;
     padding: 10px;
     background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
     border-radius: 54px;
     box-shadow: var(--shadow-apple);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -646,18 +641,23 @@ body {
     overflow: hidden;
     aspect-ratio: 9 / 19.5;
     background: #000;
+    position: relative;
 }
 
-.iphone-screen-apple img {
+/* Showcase screenshots: stacked + crossfade */
+.showcase-screenshot {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.iphone-frame-apple:hover {
-    transform: scale(1.02) translateY(-8px);
-    box-shadow: var(--shadow-apple), 0 0 40px rgba(var(--primary-rgb), 0.15);
+.showcase-screenshot.active {
+    opacity: 1;
 }
 
 /* ==========================================================================
@@ -1408,18 +1408,31 @@ body {
    ========================================================================== */
 
 @media (max-width: 991px) {
-    .feature-container-apple {
-        grid-template-columns: 1fr;
+    .features-showcase-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-phone-sticky {
+        position: sticky;
+        top: 70px;
+        flex: none;
+        width: 260px;
+        padding-top: var(--spacing-lg);
+        z-index: 2;
+    }
+
+    .features-text-track {
+        padding-top: var(--spacing-lg);
+    }
+
+    .feature-panel {
+        min-height: 50vh;
         text-align: center;
-        gap: var(--spacing-xl);
     }
 
-    .feature-reverse .feature-container-apple {
-        direction: ltr;
-    }
-
-    .feature-image-apple {
-        max-width: 300px;
+    .feature-panel-desc {
+        max-width: 100%;
         margin: 0 auto;
     }
 }
@@ -1608,8 +1621,13 @@ body {
         font-size: 2.5rem;
     }
 
-    .feature-section-apple {
-        padding: 3rem 1rem;
+    .features-showcase {
+        padding: 2rem 0;
+    }
+
+    .feature-panel {
+        min-height: auto;
+        padding: var(--spacing-md) 0;
     }
 }
 

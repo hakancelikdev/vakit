@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScrolling();
     initNavbarScroll();
     initScrollReveal();
+    initFeaturesShowcase();
     initMobileMenu();
     initFaqAccordion();
     initScrollProgress();
@@ -98,13 +99,11 @@ function updateActiveNavLink() {
 function initScrollReveal() {
     const elements = document.querySelectorAll(
         '.hero-content-apple > *,' +
-        '.feature-section-apple,' +
-        '.feature-content-apple > *,' +
-        '.feature-image-apple,' +
         '.tool-item,' +
         '.emanet-content > *,' +
         '.emanet-feature,' +
         '.testimonial-card,' +
+        '.comparison-card,' +
         '.unique-card,' +
         '.vision-card,' +
         '.download-content > *,' +
@@ -132,6 +131,38 @@ function initScrollReveal() {
     setTimeout(() => {
         elements.forEach(el => el.classList.add('reveal-visible'));
     }, 4000);
+}
+
+/* ==========================================================================
+   Features Showcase — scroll-driven screenshot switching
+   ========================================================================== */
+
+function initFeaturesShowcase() {
+    const panels = document.querySelectorAll('.feature-panel');
+    const screenshots = document.querySelectorAll('.showcase-screenshot');
+    if (!panels.length || !screenshots.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const key = entry.target.getAttribute('data-screenshot');
+
+                    // Activate text panel
+                    panels.forEach(p => p.classList.remove('active'));
+                    entry.target.classList.add('active');
+
+                    // Activate matching screenshot
+                    screenshots.forEach(img => img.classList.remove('active'));
+                    const target = document.querySelector(`.showcase-screenshot[data-feature="${key}"]`);
+                    if (target) target.classList.add('active');
+                }
+            });
+        },
+        { threshold: 0.4, rootMargin: '-20% 0px -20% 0px' }
+    );
+
+    panels.forEach(panel => observer.observe(panel));
 }
 
 /* ==========================================================================
