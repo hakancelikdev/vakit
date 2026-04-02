@@ -625,23 +625,15 @@ body {
 }
 
 /* ==========================================================================
-   iPhone Frame
+   Showcase Screen (no phone frame)
    ========================================================================== */
 
-.iphone-frame-apple {
-    padding: 10px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-    border-radius: 54px;
-    box-shadow: var(--shadow-apple);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.iphone-screen-apple {
-    border-radius: 46px;
+.showcase-screen {
+    border-radius: 32px;
     overflow: hidden;
     aspect-ratio: 9 / 19.5;
-    background: #000;
     position: relative;
+    box-shadow: var(--shadow-apple);
 }
 
 /* Showcase screenshots: stacked + crossfade */
