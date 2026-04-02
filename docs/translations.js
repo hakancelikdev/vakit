@@ -16,7 +16,7 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "Zikir, Takvim & İslami Araçlar",
+            subtitle: "İbadet Uygulaması Nasıl Olmalıysa, Öyle.",
             description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun ve ibadetlerinizi kayıt altına alın. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
@@ -185,6 +185,57 @@ const translations = {
             }
         },
 
+        // All Tools Section
+        allTools: {
+            title: "14+ İbadet Aracı, Tek Uygulama",
+            subtitle: "İhtiyacınız olan her şey Vakit'te.",
+            prayerTimes: "Namaz Vakitleri",
+            qibla: "Kıble Pusulası",
+            quran: "Kur'an-ı Kerim",
+            hadith: "Hadis Koleksiyonu",
+            dhikr: "Zikirmatik",
+            esma: "Esmaül Hüsna",
+            calendar: "Hicri Takvim",
+            ablution: "Abdest Rehberi",
+            prayerGuide: "Namaz Rehberi",
+            charity: "Fitre & Zekat",
+            widgets: "Widget'lar",
+            liveActivity: "Live Activity",
+            worship: "İbadet Takibi",
+            notifications: "Bildirimler"
+        },
+
+        // Emanet Section
+        emanet: {
+            title: "Emanet",
+            quote: "Verileriniz sizin emanetidir.",
+            description: "Diğer ibadet uygulamaları konum verilerinizi üçüncü taraflara satarken, Vakit farklı bir yol seçti. Verileriniz cihazınızdan asla çıkmaz. Hesap açmanız gerekmez. Takip edilmezsiniz.",
+            noAccount: "Hesap Gerektirmez",
+            noAccountDesc: "Kayıt yok, giriş yok. İndir ve kullan.",
+            noTracking: "Takip Yok",
+            noTrackingDesc: "GPS koordinatlarınız hiçbir sunucuya gönderilmez.",
+            localFirst: "Her Şey Cihazınızda",
+            localFirstDesc: "Namaz hesaplamaları, Kur'an, zikirler — tümü yerel.",
+            openTrust: "Şeffaf Gizlilik",
+            openTrustDesc: "Yalnızca anonim kullanım verisi, açık gizlilik politikası."
+        },
+
+        // Unique Features Section
+        unique: {
+            title: "Sadece Vakit'te",
+            subtitle: "Başka hiçbir uygulamada bulamayacağınız özellikler.",
+            prayerEnd: "Namaz Bitiş Uyarısı",
+            prayerEndDesc: "Vakit çıkmadan önce uyarı alın — hiçbir namazı kaçırmayın.",
+            kerahat: "Kerahat Vakitleri",
+            kerahatDesc: "Diyanet verilerine dayalı kerahat vakitlerini görün.",
+            sunMoonArc: "Güneş & Ay Yay Görseli",
+            sunMoonArcDesc: "Gün döngüsünü astronomik yay ile görselleştirin.",
+            prayerSurah: "Namaz Sureleri",
+            prayerSurahDesc: "Namazda okunan sureler — Arapça metin ve Türkçe okunuş.",
+            activityRings: "Activity Rings",
+            activityRingsDesc: "Apple tarzı halka sistemi ile günlük ibadet takibi."
+        },
+
         // Screenshots Section
         screenshots: {
             title: "Uygulama Ekranları",
@@ -314,7 +365,7 @@ const translations = {
 
         // Footer Section
         footer: {
-            tagline: "Zikir, Takvim & İslami Araçlar",
+            tagline: "İbadet Uygulaması Nasıl Olmalıysa, Öyle.",
             linksTitle: "Bağlantılar",
             contactTitle: "İletişim",
             copyright: "© 2025 Vakit Team. Tüm hakları saklıdır."
@@ -406,7 +457,7 @@ const translations = {
         // Hero Section
         hero: {
             title: "Vakit",
-            subtitle: "Dhikr, Calendar & Islamic Tools",
+            subtitle: "The Worship App, As It Should Be.",
             description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, and log your worship with <strong>Vakit</strong>. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
@@ -575,6 +626,57 @@ const translations = {
             }
         },
 
+        // All Tools Section
+        allTools: {
+            title: "14+ Worship Tools, One App",
+            subtitle: "Everything you need is in Vakit.",
+            prayerTimes: "Prayer Times",
+            qibla: "Qibla Compass",
+            quran: "Holy Quran",
+            hadith: "Hadith Collection",
+            dhikr: "Dhikr Counter",
+            esma: "99 Names of Allah",
+            calendar: "Hijri Calendar",
+            ablution: "Ablution Guide",
+            prayerGuide: "Prayer Guide",
+            charity: "Fitrah & Zakat",
+            widgets: "Widgets",
+            liveActivity: "Live Activity",
+            worship: "Worship Tracking",
+            notifications: "Notifications"
+        },
+
+        // Emanet Section
+        emanet: {
+            title: "Amanah",
+            quote: "Your data is your trust, not ours to keep.",
+            description: "While other worship apps sell your location data to third parties, Vakit chose a different path. Your data never leaves your device. No account required. No tracking.",
+            noAccount: "No Account Required",
+            noAccountDesc: "No signup, no login. Download and start.",
+            noTracking: "No Tracking",
+            noTrackingDesc: "Your GPS coordinates are never sent to any server.",
+            localFirst: "Everything On-Device",
+            localFirstDesc: "Prayer calculations, Quran, dhikr — all local.",
+            openTrust: "Transparent Privacy",
+            openTrustDesc: "Only anonymous usage data, with a clear privacy policy."
+        },
+
+        // Unique Features Section
+        unique: {
+            title: "Only in Vakit",
+            subtitle: "Features you won't find in any other app.",
+            prayerEnd: "Prayer Ending Alert",
+            prayerEndDesc: "Get warned before prayer time ends — never miss a prayer.",
+            kerahat: "Kerahat Times",
+            kerahatDesc: "Track makruh prayer times based on Diyanet data.",
+            sunMoonArc: "Sun & Moon Arc",
+            sunMoonArcDesc: "Visualize the daily cycle with an astronomical arc.",
+            prayerSurah: "Prayer Surahs",
+            prayerSurahDesc: "Surahs recited in prayer — Arabic text with transliteration.",
+            activityRings: "Activity Rings",
+            activityRingsDesc: "Apple-style ring system for daily worship tracking."
+        },
+
         // Screenshots Section
         screenshots: {
             title: "App Screenshots",
@@ -704,7 +806,7 @@ const translations = {
 
         // Footer Section
         footer: {
-            tagline: "Dhikr, Calendar & Islamic Tools",
+            tagline: "The Worship App, As It Should Be.",
             linksTitle: "Links",
             contactTitle: "Contact",
             copyright: "© 2025 Vakit Team. All rights reserved."

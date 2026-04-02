@@ -101,7 +101,11 @@ function initScrollReveal() {
         '.feature-section-apple,' +
         '.feature-content-apple > *,' +
         '.feature-image-apple,' +
+        '.tool-item,' +
+        '.emanet-content > *,' +
+        '.emanet-feature,' +
         '.testimonial-card,' +
+        '.unique-card,' +
         '.vision-card,' +
         '.download-content > *,' +
         '.faq-item'
