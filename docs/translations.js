@@ -4,7 +4,7 @@ const translations = {
         nav: {
             features: "Özellikler",
             screenshots: "Hızlı Göz Atma",
-            comparison: "Neden Vakit?",
+            comparison: "Neden Vakit",
             emanet: "Emanet",
             testimonials: "Yorumlar",
             download: "İndir",
@@ -88,27 +88,35 @@ const translations = {
             title: "Kullanıcı Yorumları",
             items: [
                 {
-                    title: "Mükemmel",
-                    text: "Vallaha benim işi gördü ben normalde sahur ve iftar için aldım kıble yönü namaz saatleri falan bi de daha çok şey var çok memnun kaldım"
+                    title: "Allah razı olsun",
+                    text: "Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım, vakit gerçekten harika her yerde çalışması, internetsiz olması, reklamsız olması sunduğu özellikler harika kuran hadis zikirmatik namaz takibi vs app e hiç girmeme gerek bile yok harika"
+                },
+                {
+                    title: "En iyisi",
+                    text: "Bundan daha iyisini görmedim her telefonda olması gereken bir uygulama, geliştiren arkadaştan Allah razı olsun"
+                },
+                {
+                    title: "Allah razı olsun.",
+                    text: "Uygulama çok faydalı ve pratik, her müslüman bireyin telefonunda olması gereken bir uygulama. Geliştiren ve yayımlayan arkadaştan allah razı olsun."
                 },
                 {
                     title: "Harika",
                     text: "Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim."
                 },
                 {
-                    title: "Vakit",
-                    text: "Harika bir uygulama olmuş teşekkürler Hakan Çelik."
+                    title: "Mükemmel",
+                    text: "Vallaha benim işi gördü ben normalde sahur ve iftar için aldım kıble yönü namaz saatleri falan bi de daha çok şey var çok memnun kaldım"
                 },
                 {
-                    title: "Tertemiz uygulama",
-                    text: "Sade amacına uygun, saçma sapan özellik ve reklam yok, tertemiz uygulama olmuş. Eline sağlık yapan arkadaşın."
+                    title: "Vakit",
+                    text: "Harika bir uygulama olmuş hem internetsiz ve ücretsiz herkese öneririm."
                 }
             ]
         },
 
         // Comparison Section
         comparison: {
-            title: "Neden Vakit?",
+            title: "Neden Vakit",
             subtitle: "Diğer uygulamalarda sizi rahatsız eden sorunları biliyoruz. Vakit, farklı olmak için tasarlandı.",
             cta: "Farkı Kendin Gör",
             items: {
@@ -445,7 +453,7 @@ const translations = {
         nav: {
             features: "Features",
             screenshots: "Screenshots",
-            comparison: "Why Vakit?",
+            comparison: "Why Vakit",
             emanet: "Amanah",
             testimonials: "Reviews",
             download: "Download",
@@ -529,20 +537,28 @@ const translations = {
             title: "User Reviews",
             items: [
                 {
-                    title: "Excellent",
-                    text: "It really served my needs. I originally got it for suhoor and iftar times, but it also has qibla direction, prayer times and so much more. Very satisfied."
+                    title: "God bless you",
+                    text: "I was tired of ad-filled, money-grabbing apps with unusable interfaces. Vakit is truly amazing — works everywhere, offline, ad-free, with great features like Quran, hadith, dhikr counter, prayer tracking. I don't even need to open the app!"
+                },
+                {
+                    title: "The best",
+                    text: "Haven't seen anything better than this. An app that should be on every phone. God bless the developer."
+                },
+                {
+                    title: "God bless you.",
+                    text: "The app is very useful and practical, an app that every Muslim should have on their phone. God bless the developer."
                 },
                 {
                     title: "Amazing",
                     text: "Apps like this are usually disappointing, but this one is amazing. May God bless the developer. The Quran feature alone is wonderful. Qibla direction is accurate. Highly recommended."
                 },
                 {
-                    title: "Vakit",
-                    text: "What a great app, thank you Hakan Çelik."
+                    title: "Excellent",
+                    text: "It really served my needs. I originally got it for suhoor and iftar times, but it also has qibla direction, prayer times and so much more. Very satisfied."
                 },
                 {
-                    title: "Spotless app",
-                    text: "Simple, purpose-built, no unnecessary features and no ads — a spotless app. Great job to the developer."
+                    title: "Vakit",
+                    text: "What a great app — offline and free. I recommend it to everyone."
                 }
             ]
         },
