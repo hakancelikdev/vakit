@@ -195,7 +195,7 @@ const translations = {
 
         // All Tools Section
         allTools: {
-            title: "14+ İbadet Aracı, Tek Uygulama",
+            title: "20+ İbadet Aracı, Tek Uygulama",
             subtitle: "İhtiyacınız olan her şey Vakit'te.",
             prayerTimes: "Namaz Vakitleri",
             qibla: "Kıble Pusulası",
@@ -210,7 +210,13 @@ const translations = {
             widgets: "Widget'lar",
             liveActivity: "Live Activity",
             worship: "İbadet Takibi",
-            notifications: "Bildirimler"
+            notifications: "Bildirimler",
+            siri: "Siri & Kısayollar",
+            search: "Birleşik Arama",
+            bookmarks: "Yer İmleri",
+            icloud: "iCloud Sync",
+            tafsir: "Tefsir",
+            shareCards: "Paylaşım Kartları"
         },
 
         // Emanet Section
@@ -241,7 +247,9 @@ const translations = {
             prayerSurah: "Namaz Sureleri",
             prayerSurahDesc: "Namazda okunan sureler — Arapça metin ve Türkçe okunuş.",
             activityRings: "Activity Rings",
-            activityRingsDesc: "Apple tarzı halka sistemi ile günlük ibadet takibi."
+            activityRingsDesc: "Apple tarzı halka sistemi ile günlük ibadet takibi.",
+            siri: "Siri Entegrasyonu",
+            siriDesc: "Sesli komutla namaz vaktini öğrenin — Apple Kısayollar desteği."
         },
 
         // Screenshots Section
@@ -644,7 +652,7 @@ const translations = {
 
         // All Tools Section
         allTools: {
-            title: "14+ Worship Tools, One App",
+            title: "20+ Worship Tools, One App",
             subtitle: "Everything you need is in Vakit.",
             prayerTimes: "Prayer Times",
             qibla: "Qibla Compass",
@@ -659,7 +667,13 @@ const translations = {
             widgets: "Widgets",
             liveActivity: "Live Activity",
             worship: "Worship Tracking",
-            notifications: "Notifications"
+            notifications: "Notifications",
+            siri: "Siri & Shortcuts",
+            search: "Unified Search",
+            bookmarks: "Bookmarks",
+            icloud: "iCloud Sync",
+            tafsir: "Tafsir",
+            shareCards: "Share Cards"
         },
 
         // Emanet Section
@@ -690,7 +704,9 @@ const translations = {
             prayerSurah: "Prayer Surahs",
             prayerSurahDesc: "Surahs recited in prayer — Arabic text with transliteration.",
             activityRings: "Activity Rings",
-            activityRingsDesc: "Apple-style ring system for daily worship tracking."
+            activityRingsDesc: "Apple-style ring system for daily worship tracking.",
+            siri: "Siri Integration",
+            siriDesc: "Ask Siri for prayer times — with Apple Shortcuts support."
         },
 
         // Screenshots Section

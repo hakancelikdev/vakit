@@ -142,6 +142,13 @@ function initFeaturesShowcase() {
     const screenshots = document.querySelectorAll('.showcase-screenshot');
     if (!panels.length || !screenshots.length) return;
 
+    // Mobile/tablet: no observer needed, carousel handles it via CSS
+    if (window.matchMedia('(max-width: 991px)').matches) {
+        panels.forEach(p => p.classList.add('active'));
+        return;
+    }
+
+    // Desktop: scroll-driven sticky phone
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
