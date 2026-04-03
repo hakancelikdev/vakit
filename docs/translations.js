@@ -10,6 +10,7 @@ const translations = {
             download: "İndir",
             privacy: "Gizlilik",
             faq: "SSS",
+            presentation: "Sunum",
             terms: "Kullanım Şartları"
         },
 
@@ -468,6 +469,7 @@ const translations = {
             download: "Download",
             privacy: "Privacy",
             faq: "FAQ",
+            presentation: "Presentation",
             terms: "Terms of Use"
         },
 

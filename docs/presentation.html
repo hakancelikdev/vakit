@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VakitApp — Liquid Glass Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #0B1426;
+            --bg-mid: #1A0B2E;
+            --bg-dark: #0D1B2A;
+            --celestial-blue: #5BB3E8;
+            --spiritual-gold: #D4A853;
+            --prayer-teal: #4ECDC4;
+            --rose: #E8788B;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-hover-bg: rgba(255, 255, 255, 0.12);
+            --glass-hover-border: rgba(255, 255, 255, 0.22);
+            --glass-blur: 20px;
+            --radius: 20px;
+            --text-primary: rgba(255, 255, 255, 0.95);
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 50%, var(--bg-dark) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        /* ── Progress Bar ── */
+        .presentation-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--celestial-blue), var(--prayer-teal));
+            transition: width 0.4s ease;
+            z-index: 1000;
+        }
+
+        /* ── Navigation Hint ── */
+        .nav-hint {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.35);
+            z-index: 1000;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-hint kbd {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.06);
+            font-family: inherit;
+            font-size: 11px;
+        }
+
+        /* ── Slide Container ── */
+        .slide {
+            min-height: 100vh;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-inner {
+            max-width: 1100px;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* ── Animated Background Orbs ── */
+        .slide::before,
+        .slide::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .slide::before {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(91, 179, 232, 0.12) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+            top: -100px;
+            right: -100px;
+        }
+
+        .slide::after {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.08) 0%, transparent 70%);
+            animation: float2 25s ease-in-out infinite;
+            bottom: -80px;
+            left: -80px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, -20px) scale(1.08); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -40px); }
+        }
+
+        /* ── Glass Card ── */
+        .glass {
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+
+        .glass:hover {
+            background: var(--glass-hover-bg);
+            border-color: var(--glass-hover-border);
+            -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+        }
+
+        /* ── Typography ── */
+        .slide-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            font-weight: 400;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--spiritual-gold), var(--prayer-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, var(--celestial-blue), var(--prayer-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Grid Layouts ── */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .grid-2x3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 24px;
+        }
+
+        .grid-5x4 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        /* ── Card Styles ── */
+        .card {
+            padding: 28px;
+        }
+
+        .card-emoji {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ── Glass Button ── */
+        .glass-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover {
+            background: var(--glass-hover-bg);
+            border-color: var(--glass-hover-border);
+            transform: translateY(-2px);
+        }
+
+        .glass-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ── Glass Pills ── */
+        .pill-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .glass-pill {
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        /* ── Feature List ── */
+        .feature-item {
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+
+        .feature-text strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .feature-text span {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Screenshot Placeholder ── */
+        .screenshot-placeholder {
+            width: 280px;
+            height: 560px;
+            border-radius: 36px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+        }
+
+        /* ── Stat Cards ── */
+        .stat-card {
+            padding: 36px 24px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-value.gold {
+            color: var(--spiritual-gold);
+            text-shadow: 0 0 30px rgba(212, 168, 83, 0.4);
+        }
+
+        .stat-value.teal {
+            color: var(--prayer-teal);
+            text-shadow: 0 0 30px rgba(78, 205, 196, 0.4);
+        }
+
+        .stat-value.blue {
+            color: var(--celestial-blue);
+            text-shadow: 0 0 30px rgba(91, 179, 232, 0.4);
+        }
+
+        .stat-value.rose {
+            color: var(--rose);
+            text-shadow: 0 0 30px rgba(232, 120, 139, 0.4);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stat-small .stat-value {
+            font-size: 2rem;
+        }
+
+        /* ── Review Cards ── */
+        .review-card {
+            padding: 32px;
+            position: relative;
+        }
+
+        .review-quote {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            color: rgba(212, 168, 83, 0.3);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .review-stars {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .review-author {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* ── Mini Cards (All Features) ── */
+        .mini-card {
+            padding: 16px 12px;
+            text-align: center;
+        }
+
+        .mini-card .card-emoji {
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+        }
+
+        .mini-card .card-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        /* ── Tag Pills ── */
+        .tag-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .tag-pill {
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* ── Colored Top Border Cards ── */
+        .card-border-teal { border-top: 2px solid var(--prayer-teal); }
+        .card-border-blue { border-top: 2px solid var(--celestial-blue); }
+        .card-border-gold { border-top: 2px solid var(--spiritual-gold); }
+
+        /* ── Inner Glow Card ── */
+        .card-glow {
+            box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.03);
+        }
+
+        /* ── Trust / Shield Cards ── */
+        .trust-card {
+            padding: 28px 20px;
+            text-align: center;
+        }
+
+        .trust-card .card-emoji {
+            font-size: 2.2rem;
+        }
+
+        /* ── Highlight Box ── */
+        .highlight-box {
+            padding: 20px 28px;
+            margin-top: 32px;
+            text-align: center;
+            border: 1px solid rgba(212, 168, 83, 0.25);
+            box-shadow: 0 4px 30px rgba(212, 168, 83, 0.08);
+        }
+
+        .highlight-box p {
+            color: var(--spiritual-gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ── QR Placeholder ── */
+        .qr-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 24px auto;
+            position: relative;
+        }
+
+        .qr-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+        }
+
+        .qr-placeholder span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Two Column Layout ── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        /* ── Mission Card ── */
+        .mission-card {
+            padding: 40px;
+            box-shadow: inset 0 0 60px rgba(91, 179, 232, 0.05);
+            margin-bottom: 32px;
+        }
+
+        .mission-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* ── Note ── */
+        .note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 24px;
+            font-style: italic;
+        }
+
+        /* ── Links ── */
+        a {
+            color: var(--celestial-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Specific Slide Orb Overrides ── */
+        .slide-cover::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(91, 179, 232, 0.15) 0%, transparent 70%);
+            top: -150px;
+            right: -150px;
+        }
+
+        .slide-cover::after {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+            bottom: -120px;
+            left: -120px;
+        }
+
+        .slide-download::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(78, 205, 196, 0.12) 0%, transparent 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float3 18s ease-in-out infinite;
+        }
+
+        .slide-download::after {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+            bottom: -100px;
+            right: -100px;
+        }
+
+        /* ── Print Styles ── */
+        @media print {
+            html, body {
+                overflow: visible;
+            }
+
+            body {
+                background: #0B1426 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .slide {
+                display: flex !important;
+                min-height: auto;
+                page-break-after: always;
+                page-break-inside: avoid;
+                padding: 40px 30px;
+            }
+
+            .presentation-progress, .nav-hint {
+                display: none !important;
+            }
+
+            .slide::before,
+            .slide::after {
+                display: none;
+            }
+
+            .glass {
+                -webkit-backdrop-filter: none;
+                backdrop-filter: none;
+                background: rgba(255, 255, 255, 0.06);
+            }
+
+            .glass:hover {
+                background: rgba(255, 255, 255, 0.06);
+                transform: none;
+            }
+
+            .glass-btn:hover {
+                transform: none;
+            }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .slide {
+                padding: 40px 20px;
+            }
+
+            .slide-title {
+                font-size: 2rem;
+            }
+
+            .grid-2, .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3, .grid-2x3 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid-5x4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .stat-value {
+                font-size: 2.4rem;
+            }
+
+            .screenshot-placeholder {
+                width: 220px;
+                height: 440px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-3, .grid-2x3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-5x4 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pill-row {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 1 — KAPAK
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide slide-cover">
+    <div class="slide-inner" style="text-align: center;">
+        <img src="assets/screenshots/vakit-logo.png" alt="VakitApp Logo" style="width: 120px; height: 120px; border-radius: 28px; margin-bottom: 24px; box-shadow: 0 8px 40px rgba(91,179,232,0.25);">
+
+        <h1 style="font-size: 4.5rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 16px;">
+            <span style="color: rgba(255,255,255,0.95);">Vakit</span><span style="color: rgba(255,255,255,0.5);">App</span>
+        </h1>
+
+        <p style="font-size: 1.5rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 12px;">
+            İbadet uygulaması nasıl olmalıysa, öyle.
+        </p>
+
+        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 40px; letter-spacing: 0.05em;">
+            Reklamsız &middot; Gizlilik Odaklı &middot; Offline-First
+        </p>
+
+        <div style="margin-bottom: 24px;">
+            <a href="https://apps.apple.com/app/vakit-namaz-vakitleri/id6502692058" class="glass-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store'dan İndir
+            </a>
+        </div>
+
+        <a href="https://vakit.hakancelik.dev" style="font-size: 0.9rem; color: var(--celestial-blue); font-weight: 500;">vakit.hakancelik.dev</a>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 2 — PROBLEM
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Mevcut Uygulamaların Sorunu</h2>
+        <p class="slide-subtitle" style="text-align: center;">Kullanıcılar daha iyisini hak ediyor.</p>
+
+        <div class="grid-3">
+            <div class="glass card">
+                <span class="card-emoji">📢</span>
+                <h3 class="card-title">Reklam Bombardımanı</h3>
+                <p class="card-desc">Kur'an okurken casino ve flört reklamları. İbadet anında saygısızca araya giren tam ekran reklamlar.</p>
+            </div>
+            <div class="glass card">
+                <span class="card-emoji">🔓</span>
+                <h3 class="card-title">Gizlilik İhlalleri</h3>
+                <p class="card-desc">Konum verileri üçüncü taraflara satıldı. Kullanıcılar habersiz izleniyor, profilleniyor.</p>
+            </div>
+            <div class="glass card">
+                <span class="card-emoji">📱</span>
+                <h3 class="card-title">Eski Teknoloji</h3>
+                <p class="card-desc">Widget bozulmaları, DST hataları, yavaş açılış. Modern iOS özelliklerinden yararlanamayan uygulamalar.</p>
+            </div>
+        </div>
+
+        <div class="glass highlight-box" style="margin-top: 40px; border-color: rgba(212, 168, 83, 0.2);">
+            <p style="font-style: italic;">"İbadet ederken reklam izlemek zorunda kalmamalıyız."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 3 — VAKİTAPP NEDİR?
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">
+            <span class="gradient-text-blue">Reklamsız, Modern, Güvenilir</span>
+        </h2>
+        <p class="slide-subtitle" style="text-align: center;">VakitApp — ibadet uygulaması nasıl olmalıysa, öyle.</p>
+
+        <div class="glass mission-card">
+            <p>VakitApp, namaz vakitlerinden Kur'an okumaya, zikirden hadise kadar tüm ibadet ihtiyaçlarınızı tek bir uygulamada, <strong style="color: var(--spiritual-gold);">reklamsız</strong> ve <strong style="color: var(--prayer-teal);">gizlilik odaklı</strong> şekilde karşılar. Modern iOS teknolojileri ile kusursuz bir deneyim sunar.</p>
+        </div>
+
+        <div class="pill-row" style="justify-content: center;">
+            <span class="glass glass-pill" style="color: var(--prayer-teal);">Reklamsız</span>
+            <span class="glass glass-pill" style="color: var(--celestial-blue);">Gizlilik Odaklı</span>
+            <span class="glass glass-pill" style="color: var(--spiritual-gold);">Offline-First</span>
+            <span class="glass glass-pill" style="color: var(--rose);">Tamamen Ücretsiz</span>
+        </div>
+
+        <div style="margin-top: 48px; text-align: center;">
+            <img src="assets/screenshots/screenshot-widgets.png" alt="VakitApp Widget'lar" style="width: 280px; border-radius: 36px; box-shadow: 0 8px 40px rgba(91,179,232,0.2);">
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 4 — İBADET ÖZELLİKLERİ
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Namaz & İbadet</h2>
+        <p class="slide-subtitle" style="text-align: center;">Hassas hesaplama, modern arayüz, zengin özellikler.</p>
+
+        <div class="two-col">
+            <div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🕐</span>
+                    <div class="feature-text">
+                        <strong>Namaz Vakitleri</strong>
+                        <span>13 hesaplama yöntemi, Diyanet dahil, kerahat vakitleri</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🌅</span>
+                    <div class="feature-text">
+                        <strong>Güneş/Ay Arc</strong>
+                        <span>Astronomik yay ile gün döngüsü görseli</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🧭</span>
+                    <div class="feature-text">
+                        <strong>Kıble Pusulası</strong>
+                        <span>Hassas yön, haptik geri bildirim, Mekke mesafesi</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🎯</span>
+                    <div class="feature-text">
+                        <strong>İbadet Takibi</strong>
+                        <span>Günlük hedefler, streak, activity rings</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🕋</span>
+                    <div class="feature-text">
+                        <strong>Namaz Rehberi</strong>
+                        <span>Rek'at bazında adım adım kılavuz</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">💧</span>
+                    <div class="feature-text">
+                        <strong>Abdest Rehberi</strong>
+                        <span>Görsel adım adım rehber</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="assets/screenshots/screenshot-home.png" alt="VakitApp Namaz Vakitleri" style="width: 280px; border-radius: 36px; box-shadow: 0 8px 40px rgba(91,179,232,0.2);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 5 — İÇERİK ÖZELLİKLERİ
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Kur'an, Hadis & Daha Fazlası</h2>
+        <p class="slide-subtitle" style="text-align: center;">Zengin içerik, tamamen çevrimdışı.</p>
+
+        <div class="two-col">
+            <div>
+                <img src="assets/screenshots/screenshot-discover.png" alt="VakitApp Keşfet" style="width: 280px; border-radius: 36px; box-shadow: 0 8px 40px rgba(212,168,83,0.2);">
+            </div>
+            <div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">📖</span>
+                    <div class="feature-text">
+                        <strong>Kur'an-ı Kerim</strong>
+                        <span>Mushaf, meal, tefsir, sesli okuma, kelime vurgulama</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">📕</span>
+                    <div class="feature-text">
+                        <strong>Hatim Takibi</strong>
+                        <span>Sure ve cüz bazlı ilerleme</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">📚</span>
+                    <div class="feature-text">
+                        <strong>Hadis</strong>
+                        <span>7 koleksiyon, sahihlik derecesi</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">📿</span>
+                    <div class="feature-text">
+                        <strong>Zikirmatik</strong>
+                        <span>Sayaç, tesbih dizisi, özel zikir, haptik</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">🤲</span>
+                    <div class="feature-text">
+                        <strong>Esma-ül Hüsna</strong>
+                        <span>99 İsim, anlam, faydalar</span>
+                    </div>
+                </div>
+                <div class="glass feature-item">
+                    <span class="feature-icon">💰</span>
+                    <div class="feature-text">
+                        <strong>Fitre & Zekat</strong>
+                        <span>Kişi sayısı bazlı hesaplayıcı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 6 — PLATFORM ÖZELLİKLERİ
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Her Yerde, Her Zaman</h2>
+        <p class="slide-subtitle" style="text-align: center;">Modern iOS platformunun tüm gücü.</p>
+
+        <div class="grid-2x3">
+            <div class="glass card card-border-teal">
+                <span class="card-emoji">📱</span>
+                <h3 class="card-title">Widget'lar</h3>
+                <p class="card-desc">Ana ekran ve kilit ekranı widget'ları ile bir bakışta namaz vakitleri.</p>
+            </div>
+            <div class="glass card card-border-blue">
+                <span class="card-emoji">🏝️</span>
+                <h3 class="card-title">Live Activity</h3>
+                <p class="card-desc">Dynamic Island ve kilit ekranında canlı namaz geri sayımı.</p>
+            </div>
+            <div class="glass card card-border-gold">
+                <span class="card-emoji">🗣️</span>
+                <h3 class="card-title">Siri & Kısayollar</h3>
+                <p class="card-desc">Sesli komutlarla namaz vakti sorgulama ve hızlı erişim.</p>
+            </div>
+            <div class="glass card card-border-teal">
+                <span class="card-emoji">☁️</span>
+                <h3 class="card-title">iCloud Sync</h3>
+                <p class="card-desc">Zikirler, yer imleri ve ibadet verileri otomatik senkronize.</p>
+            </div>
+            <div class="glass card card-border-blue">
+                <span class="card-emoji">🔍</span>
+                <h3 class="card-title">Birleşik Arama</h3>
+                <p class="card-desc">Sure, hadis, esma ve daha fazlasını tek yerden arayın.</p>
+            </div>
+            <div class="glass card card-border-gold">
+                <span class="card-emoji">🔖</span>
+                <h3 class="card-title">Yer İmleri & Paylaşım</h3>
+                <p class="card-desc">Ayet ve hadisleri kaydedin, özel kartlarla paylaşın.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 7 — NEDEN VAKİT?
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">
+            <span class="gradient-text">Neden Vakit?</span>
+        </h2>
+        <p class="slide-subtitle" style="text-align: center;">Farkımız tek bir özellik değil, bütünün kendisi.</p>
+
+        <div class="grid-2x3">
+            <div class="glass card card-glow">
+                <span class="card-emoji">🎯</span>
+                <h3 class="card-title">Hepsi Bir Arada</h3>
+                <p class="card-desc">Namaz, Kur'an, hadis, zikir, kıble, takvim — 20+ araç tek uygulamada.</p>
+            </div>
+            <div class="glass card card-glow">
+                <span class="card-emoji">⚡</span>
+                <h3 class="card-title">Hızlı & Hafif</h3>
+                <p class="card-desc">70ms açılış süresi. Gereksiz yüklenme yok, anında kullanıma hazır.</p>
+            </div>
+            <div class="glass card card-glow">
+                <span class="card-emoji">🚫</span>
+                <h3 class="card-title">Reklamsız & Ücretsiz</h3>
+                <p class="card-desc">Kur'an okurken reklam yok. Tüm özellikler ücretsiz, paywall yok.</p>
+            </div>
+            <div class="glass card card-glow">
+                <span class="card-emoji">✈️</span>
+                <h3 class="card-title">İnternetsiz Çalışır</h3>
+                <p class="card-desc">Uçak modunda bile tüm temel özellikler sorunsuz çalışır.</p>
+            </div>
+            <div class="glass card card-glow">
+                <span class="card-emoji">✨</span>
+                <h3 class="card-title">Sade & Anlaşılır Tasarım</h3>
+                <p class="card-desc">Karmaşık menüler yok. Her yaştan kullanıcı için kolay arayüz.</p>
+            </div>
+            <div class="glass card card-glow">
+                <span class="card-emoji">♿</span>
+                <h3 class="card-title">Yüksek Erişilebilirlik</h3>
+                <p class="card-desc">VoiceOver desteği, Dynamic Type, yüksek kontrast. Herkes için tasarlandı.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 8 — GİZLİLİK & GÜVEN
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Verileriniz Sizin Emanetiniz</h2>
+        <p class="slide-subtitle" style="text-align: center;">Gizlilik bir özellik değil, temel haktır.</p>
+
+        <div class="grid-4">
+            <div class="glass trust-card">
+                <span class="card-emoji">👤</span>
+                <h3 class="card-title">Hesap Gerektirmez</h3>
+                <p class="card-desc">Kayıt yok, giriş yok. İndirin ve hemen kullanmaya başlayın.</p>
+            </div>
+            <div class="glass trust-card">
+                <span class="card-emoji">📡</span>
+                <h3 class="card-title">Takip Yok</h3>
+                <p class="card-desc">GPS koordinatları sunucuya gönderilmez. Konum veriniz cihazınızda kalır.</p>
+            </div>
+            <div class="glass trust-card">
+                <span class="card-emoji">📱</span>
+                <h3 class="card-title">Her Şey Cihazınızda</h3>
+                <p class="card-desc">Namaz, Kur'an, zikirler tamamen yerel. İnternet olmadan çalışır.</p>
+            </div>
+            <div class="glass trust-card">
+                <span class="card-emoji">🔒</span>
+                <h3 class="card-title">Şeffaf Gizlilik</h3>
+                <p class="card-desc">Yalnızca anonim kullanım verisi. Kişisel bilgi toplanmaz.</p>
+            </div>
+        </div>
+
+        <div class="glass highlight-box">
+            <p>🛡️ Apple Privacy Manifest uyumlu. Tamamen şeffaf veri politikası.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 9 — KULLANICI YORUMLARI
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">Kullanıcılarımız Ne Diyor?</h2>
+        <p class="slide-subtitle" style="text-align: center;">App Store'dan gerçek yorumlar.</p>
+
+        <div class="grid-3">
+            <div class="glass review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım, vakit gerçekten harika her yerde çalışması, internetsiz olması, reklamsız olması sunduğu özellikler harika kuran hadis zikirmatik namaz takibi vs app e hiç girmeme gerek bile yok harika</p>
+                <p class="review-author">— h.ç44 · App Store</p>
+            </div>
+            <div class="glass review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim.</p>
+                <p class="review-author">— Boromir_58 · App Store</p>
+            </div>
+            <div class="glass review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Uygulama çok faydalı ve pratik, her müslüman bireyin telefonunda olması gereken bir uygulama. Geliştiren ve yayımlayan arkadaştan allah razı olsun.</p>
+                <p class="review-author">— tolgalive · App Store</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 10 — TÜM ÖZELLİKLER
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide">
+    <div class="slide-inner">
+        <h2 class="slide-title" style="text-align: center;">20+ İbadet Aracı, Tek Uygulama</h2>
+        <p class="slide-subtitle" style="text-align: center;">Her şey elinizin altında.</p>
+
+        <div class="grid-5x4">
+            <div class="glass mini-card">
+                <span class="card-emoji">🕐</span>
+                <h3 class="card-title">Namaz Vakitleri</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🧭</span>
+                <h3 class="card-title">Kıble Pusulası</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">📖</span>
+                <h3 class="card-title">Kur'an-ı Kerim</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">📚</span>
+                <h3 class="card-title">Hadis Koleksiyonu</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">📿</span>
+                <h3 class="card-title">Zikirmatik</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🤲</span>
+                <h3 class="card-title">Esma-ül Hüsna</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🗓️</span>
+                <h3 class="card-title">Hicri Takvim</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">💧</span>
+                <h3 class="card-title">Abdest Rehberi</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🕋</span>
+                <h3 class="card-title">Namaz Rehberi</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">💰</span>
+                <h3 class="card-title">Fitre & Zekat</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">📱</span>
+                <h3 class="card-title">Widget'lar</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🏝️</span>
+                <h3 class="card-title">Live Activity</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🎯</span>
+                <h3 class="card-title">İbadet Takibi</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🔔</span>
+                <h3 class="card-title">Bildirimler</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🗣️</span>
+                <h3 class="card-title">Siri & Kısayollar</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🔍</span>
+                <h3 class="card-title">Birleşik Arama</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🔖</span>
+                <h3 class="card-title">Yer İmleri</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">☁️</span>
+                <h3 class="card-title">iCloud Sync</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">📝</span>
+                <h3 class="card-title">Tefsir</h3>
+            </div>
+            <div class="glass mini-card">
+                <span class="card-emoji">🎴</span>
+                <h3 class="card-title">Paylaşım Kartları</h3>
+            </div>
+        </div>
+
+        <div class="tag-row">
+            <span class="glass tag-pill">iOS 18+</span>
+            <span class="glass tag-pill">Türkçe & İngilizce</span>
+            <span class="glass tag-pill">13 Hesaplama Yöntemi</span>
+            <span class="glass tag-pill">Dark/Light Tema</span>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 11 — İNDİRİN
+     ══════════════════════════════════════════════════════════ -->
+<section class="slide slide-download">
+    <div class="slide-inner" style="text-align: center;">
+        <h2 style="font-size: 3.2rem; font-weight: 900; margin-bottom: 16px;">
+            <span class="gradient-text">Hemen Başlayın</span>
+        </h2>
+
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px;">
+            İbadet deneyiminizi dönüştürün.
+        </p>
+
+        <div style="margin-bottom: 32px;">
+            <a href="https://apps.apple.com/app/vakit-namaz-vakitleri/id6502692058" class="glass-btn" style="font-size: 1.1rem; padding: 16px 36px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 26px; height: 26px;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store'dan İndir
+            </a>
+        </div>
+
+        <div style="margin: 0 auto 32px;">
+            <img src="assets/screenshots/qr-code.png" alt="VakitApp QR Code" style="width: 180px; height: 180px; border-radius: 20px;">
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <a href="https://vakit.hakancelik.dev" style="font-size: 1rem; font-weight: 500;">vakit.hakancelik.dev</a>
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 40px;">
+            hakancelikdev@gmail.com
+        </p>
+
+        <p style="font-size: 1.3rem; font-weight: 700; color: var(--spiritual-gold); letter-spacing: 0.02em;">
+            Ücretsiz. Reklamsız. Huzurla.
+        </p>
+    </div>
+</section>
+
+<!-- Presentation UI -->
+<div class="presentation-progress" id="progressBar"></div>
+<div class="nav-hint" id="navHint">
+  <kbd>←</kbd> <kbd>→</kbd> ile gezin &nbsp;|&nbsp; <kbd>F</kbd> tam ekran
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  const progress = document.getElementById('progressBar');
+  const navHint = document.getElementById('navHint');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[index].classList.add('active');
+    progress.style.width = ((index + 1) / total * 100) + '%';
+
+    if (index > 0) {
+      navHint.style.opacity = '0';
+      setTimeout(() => { navHint.style.display = 'none'; }, 300);
+    }
+  }
+
+  function next() {
+    if (current < total - 1) { current++; showSlide(current); }
+  }
+
+  function prev() {
+    if (current > 0) { current--; showSlide(current); }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    switch(e.key) {
+      case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown':
+        e.preventDefault(); next(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+        e.preventDefault(); prev(); break;
+      case 'Home':
+        e.preventDefault(); current = 0; showSlide(current); break;
+      case 'End':
+        e.preventDefault(); current = total - 1; showSlide(current); break;
+      case 'f': case 'F':
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+        break;
+      case 'Escape':
+        if (document.fullscreenElement) document.exitFullscreen();
+        break;
+    }
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', function(e) {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { if (diff > 0) next(); else prev(); }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+    const x = e.clientX / window.innerWidth;
+    if (x < 0.25) prev();
+    else if (x > 0.75) next();
+  });
+
+  showSlide(0);
+})();
+</script>
+
+</body>
+</html>

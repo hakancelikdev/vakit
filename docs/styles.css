@@ -19,6 +19,17 @@ img {
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section, .hero-apple {
+    scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
 }
 
 /* ==========================================================================
