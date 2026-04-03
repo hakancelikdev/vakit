@@ -3,7 +3,6 @@ const translations = {
         // Navigation
         nav: {
             features: "Özellikler",
-            screenshots: "Hızlı Göz Atma",
             comparison: "Neden Vakit",
             emanet: "Emanet",
             testimonials: "Yorumlar",
@@ -462,7 +461,6 @@ const translations = {
         // Navigation
         nav: {
             features: "Features",
-            screenshots: "Screenshots",
             comparison: "Why Vakit",
             emanet: "Amanah",
             testimonials: "Reviews",
