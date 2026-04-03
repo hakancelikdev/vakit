@@ -81,7 +81,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -110,12 +112,74 @@
             "ratingCount": "34"
         },
         "screenshot": [
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/1.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/2.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/3.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/7.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/8.png",
-            "https://vakit.hakancelik.dev/assets/screenshots/tr/9.png"
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/1.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/2.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/3.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/7.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/8.webp",
+            "https://vakit.hakancelik.dev/assets/screenshots/tr/9.webp"
+        ],
+        "review": [
+            {
+                "@type": "Review",
+                "name": "Allah razı olsun",
+                "reviewBody": "Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım, vakit gerçekten harika her yerde çalışması, internetsiz olması, reklamsız olması sunduğu özellikler harika kuran hadis zikirmatik namaz takibi vs app e hiç girmeme gerek bile yok harika",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "name": "En iyisi",
+                "reviewBody": "Bundan daha iyisini görmedim her telefonda olması gereken bir uygulama, geliştiren arkadaştan Allah razı olsun",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "name": "Allah razı olsun.",
+                "reviewBody": "Uygulama çok faydalı ve pratik, her müslüman bireyin telefonunda olması gereken bir uygulama. Geliştiren ve yayımlayan arkadaştan allah razı olsun.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "name": "Harika",
+                "reviewBody": "Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "name": "Mükemmel",
+                "reviewBody": "Vallaha benim işi gördü ben normalde sahur ve iftar için aldım kıble yönü namaz saatleri falan bi de daha çok şey var çok memnun kaldım",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "name": "Vakit",
+                "reviewBody": "Harika bir uygulama olmuş hem internetsiz ve ücretsiz herkese öneririm.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            }
         ]
     }
     </script>
@@ -136,6 +200,214 @@
             "target": "https://vakit.hakancelik.dev/?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "İnternet bağlantısı olmadan çalışır mı?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Evet, Vakit uygulaması namaz vakitlerini cihazınızda anlık olarak hesaplar. Kur'an okuma, kıble yönü, zikirmatik ve tüm temel özellikler internet bağlantısı olmadan çalışır."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Uygulamayı açmasam bile bildirimler gelmeye devam eder mi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Evet, bildirimler cihazınızda yerel olarak hesaplanıp planlanır. Uygulama kapalı olsa dahi vakitlerde bildirim alırsınız. Ayrıca konum iznini 'Her Zaman' (Always) yaparsanız, yer değiştirdiğinizde vakitler arka planda otomatik olarak yeniden hesaplanır ve bildirimler güncellenir."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Uygulamadaki tüm özellikler gerçekten ücretsiz mi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Evet, Vakit tamamen ücretsiz bir projedir. Kur'an okuyucu, ibadet takibi, widget'lar, Live Activities ve tüm diğer özelliklere hiçbir ücret ödemeden erişebilirsiniz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Namaz vakitlerini nereden çekiyorsunuz?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vakit, verileri bir sunucudan çekmek yerine, seçtiğiniz hesaplama yöntemine ve konumunuza göre matematiksel formüllerle cihazınızda anlık olarak hesaplar. 22 farklı hesaplama yöntemi arasından bölgenize en uygun olanı seçebilirsiniz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kur'an okuma özellikleri neler?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "114 surenin tam metni, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet desteği ve hatim takibi bulunmaktadır. Tüm içerikler çevrimdışı olarak erişilebilir."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "İbadet takibi nasıl çalışır?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Activity Rings benzeri görsel takip sistemi ile günlük namazlarınızı, Kur'an okumanızı ve zikirlerinizi kayıt altına alabilirsiniz. Streak sistemi ile sürekliliğinizi takip edin ve detaylı istatistiklerle ilerlemenizi görün."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hangi widget çeşitleri var?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "6 farklı widget ailesi mevcuttur: Namaz vakitleri, geri sayım, Günün Ayeti, Günün Esması, kilit ekranı widget'ları ve StandBy modu desteği. Küçük, orta ve büyük boyutlarda kullanabilirsiniz."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Review Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Review",
+                    "name": "Allah razı olsun",
+                    "reviewBody": "Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım, vakit gerçekten harika her yerde çalışması, internetsiz olması, reklamsız olması sunduğu özellikler harika kuran hadis zikirmatik namaz takibi vs app e hiç girmeme gerek bile yok harika",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Review",
+                    "name": "En iyisi",
+                    "reviewBody": "Bundan daha iyisini görmedim her telefonda olması gereken bir uygulama, geliştiren arkadaştan Allah razı olsun",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Review",
+                    "name": "Allah razı olsun.",
+                    "reviewBody": "Uygulama çok faydalı ve pratik, her müslüman bireyin telefonunda olması gereken bir uygulama. Geliştiren ve yayımlayan arkadaştan allah razı olsun.",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Review",
+                    "name": "Harika",
+                    "reviewBody": "Bu tarz uygulamalar hep menfur olmakta lakin bu uygulama bir harika. Geliştiriciden Allah razı olsun. Kur'an özelliği başlı başına çok güzel. Kıble doğru yönde. Şiddetle tavsiye ederim.",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "Review",
+                    "name": "Mükemmel",
+                    "reviewBody": "Vallaha benim işi gördü ben normalde sahur ve iftar için aldım kıble yönü namaz saatleri falan bi de daha çok şey var çok memnun kaldım",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                    "@type": "Review",
+                    "name": "Vakit",
+                    "reviewBody": "Harika bir uygulama olmuş hem internetsiz ve ücretsiz herkese öneririm.",
+                    "itemReviewed": {
+                        "@type": "MobileApplication",
+                        "name": "Vakit: Namaz, Kıble, Kuran"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Apple App Store"
+                    }
+                }
+            }
+        ]
     }
     </script>
 
@@ -176,6 +448,7 @@
             <img src="assets/app-icon.png" alt="Vakit" class="hero-logo" width="120" height="120">
             <h1 class="hero-title-apple" data-i18n="hero.title">Vakit</h1>
             <p class="hero-subtitle-apple" data-i18n="hero.subtitle">İbadet Uygulaması Nasıl Olmalıysa, Öyle.</p>
+            <p class="hero-manifesto" data-i18n="hero.manifesto">Namazınız ile aranıza reklam girmesin. Verileriniz emanettir. Vakit, ibadetinize saygı duyar.</p>
             <div class="hero-proof">
                 <div class="proof-item">
                     <span class="proof-value">4.8 <i class="fas fa-star"></i></span>
@@ -212,62 +485,62 @@
         <div class="features-showcase-container">
             <div class="features-text-track">
                 <div class="feature-panel active" data-screenshot="home">
-                    <img src="assets/screenshots/tr/1.png" class="feature-panel-screenshot" data-i18n-img="home" alt="Vakit">
+                    <img src="assets/screenshots/tr/1.webp" class="feature-panel-screenshot" data-i18n-img="home" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.prayerTimes.title">Reklamsız</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.prayerTimes.description">Siz sadece ibadetinize odaklanın. Konumunuza göre namaz vakitlerini anlık takip edin. Türkiye (Diyanet) dahil 22 farklı hesaplama yöntemi. Her yerde, internetsiz, huzurla.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="liveActivities">
-                    <img src="assets/screenshots/tr/2.png" class="feature-panel-screenshot" data-i18n-img="liveActivities" alt="Vakit">
+                    <img src="assets/screenshots/tr/2.webp" class="feature-panel-screenshot" data-i18n-img="liveActivities" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.liveActivities.title">Ücretsiz, Premium Tadında</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.liveActivities.description">Live Activities, Dynamic Island, kilit ekranı widget'ları ve StandBy desteği. Tüm premium özellikler tamamen ücretsiz.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="quran">
-                    <img src="assets/screenshots/tr/3.png" class="feature-panel-screenshot" data-i18n-img="quran" alt="Vakit">
+                    <img src="assets/screenshots/tr/3.webp" class="feature-panel-screenshot" data-i18n-img="quran" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.quran.title">İnternetsiz</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.quran.description">Her yerde, her zaman. 114 sure tam metin okuma, kelime kelime analiz ve Diyanet tefsiri. Ayetleri oku veya dinle, ilerlemeni takip et, kaydet, öğren.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="quranReading">
-                    <img src="assets/screenshots/tr/4.png" class="feature-panel-screenshot" data-i18n-img="quranReading" alt="Vakit">
+                    <img src="assets/screenshots/tr/4.webp" class="feature-panel-screenshot" data-i18n-img="quranReading" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.quranReading.title">Oku, Dinle, Takip Et</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.quranReading.description">Modern arayüz veya geleneksel Mushaf (kitap) görünümü; sana kalmış. Sesli tilavet desteği, hatim takibi ve secde ayeti uyarıları.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="widgets">
-                    <img src="assets/screenshots/tr/5.png" class="feature-panel-screenshot" data-i18n-img="widgets" alt="Vakit">
+                    <img src="assets/screenshots/tr/5.webp" class="feature-panel-screenshot" data-i18n-img="widgets" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.widgets.title">Vakit Hep Yanında</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.widgets.description">Ana ekran ve kilit ekranında namaz vakitleri. Dynamic Island, widget'lar ve StandBy desteği.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="lockScreen">
-                    <img src="assets/screenshots/tr/6.png" class="feature-panel-screenshot" data-i18n-img="lockScreen" alt="Vakit">
+                    <img src="assets/screenshots/tr/6.webp" class="feature-panel-screenshot" data-i18n-img="lockScreen" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.lockScreen.title">Kilit Ekranında Bile</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.lockScreen.description">Kilit ekranında namaz vakitleri, geri sayım ve günün ayeti. Telefonunuzu açmadan her şeyi görün.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="qibla">
-                    <img src="assets/screenshots/tr/7.png" class="feature-panel-screenshot" data-i18n-img="qibla" alt="Vakit">
+                    <img src="assets/screenshots/tr/7.webp" class="feature-panel-screenshot" data-i18n-img="qibla" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.qibla.title">Kıbleyi Anında Bul</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.qibla.description">Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim, Kâbe'ye mesafe bilgisi ve hassas yön hesaplama.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="dhikr">
-                    <img src="assets/screenshots/tr/8.png" class="feature-panel-screenshot" data-i18n-img="dhikr" alt="Vakit">
+                    <img src="assets/screenshots/tr/8.webp" class="feature-panel-screenshot" data-i18n-img="dhikr" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.dhikr.title">Gelişmiş Zikirmatik</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.dhikr.description">Görsel ilerleme halkası ile zikir çekin. Özel zikirler ekleyin, toplam sayılarınızı takip edin ve ibadetinizi kayıt altına alın.</p>
                 </div>
                 <div class="feature-panel" data-screenshot="calendar">
-                    <img src="assets/screenshots/tr/9.png" class="feature-panel-screenshot" data-i18n-img="calendar" alt="Vakit">
+                    <img src="assets/screenshots/tr/9.webp" class="feature-panel-screenshot" data-i18n-img="calendar" alt="Vakit">
                     <h2 class="feature-panel-title" data-i18n="appleFeatures.calendar.title">Hiçbir Anı Kaçırma</h2>
                     <p class="feature-panel-desc" data-i18n="appleFeatures.calendar.description">Gelişmiş takvim ile Ramazan, Kadir Gecesi ve tüm özel günleri takip edin. İbadet özeti, namaz takibi ve günlük istatistikler.</p>
                 </div>
             </div>
             <div class="features-phone-sticky">
                 <div class="showcase-screen">
-                    <img src="assets/screenshots/tr/1.png" class="showcase-screenshot active" data-feature="home" data-i18n-img="home" alt="Vakit">
-                    <img src="assets/screenshots/tr/2.png" class="showcase-screenshot" data-feature="liveActivities" data-i18n-img="liveActivities" alt="Vakit">
-                    <img src="assets/screenshots/tr/3.png" class="showcase-screenshot" data-feature="quran" data-i18n-img="quran" alt="Vakit">
-                    <img src="assets/screenshots/tr/4.png" class="showcase-screenshot" data-feature="quranReading" data-i18n-img="quranReading" alt="Vakit">
-                    <img src="assets/screenshots/tr/5.png" class="showcase-screenshot" data-feature="widgets" data-i18n-img="widgets" alt="Vakit">
-                    <img src="assets/screenshots/tr/6.png" class="showcase-screenshot" data-feature="lockScreen" data-i18n-img="lockScreen" alt="Vakit">
-                    <img src="assets/screenshots/tr/7.png" class="showcase-screenshot" data-feature="qibla" data-i18n-img="qibla" alt="Vakit">
-                    <img src="assets/screenshots/tr/8.png" class="showcase-screenshot" data-feature="dhikr" data-i18n-img="dhikr" alt="Vakit">
-                    <img src="assets/screenshots/tr/9.png" class="showcase-screenshot" data-feature="calendar" data-i18n-img="calendar" alt="Vakit">
+                    <img src="assets/screenshots/tr/1.webp" class="showcase-screenshot active" data-feature="home" data-i18n-img="home" alt="Vakit">
+                    <img src="assets/screenshots/tr/2.webp" class="showcase-screenshot" data-feature="liveActivities" data-i18n-img="liveActivities" alt="Vakit">
+                    <img src="assets/screenshots/tr/3.webp" class="showcase-screenshot" data-feature="quran" data-i18n-img="quran" alt="Vakit">
+                    <img src="assets/screenshots/tr/4.webp" class="showcase-screenshot" data-feature="quranReading" data-i18n-img="quranReading" alt="Vakit">
+                    <img src="assets/screenshots/tr/5.webp" class="showcase-screenshot" data-feature="widgets" data-i18n-img="widgets" alt="Vakit">
+                    <img src="assets/screenshots/tr/6.webp" class="showcase-screenshot" data-feature="lockScreen" data-i18n-img="lockScreen" alt="Vakit">
+                    <img src="assets/screenshots/tr/7.webp" class="showcase-screenshot" data-feature="qibla" data-i18n-img="qibla" alt="Vakit">
+                    <img src="assets/screenshots/tr/8.webp" class="showcase-screenshot" data-feature="dhikr" data-i18n-img="dhikr" alt="Vakit">
+                    <img src="assets/screenshots/tr/9.webp" class="showcase-screenshot" data-feature="calendar" data-i18n-img="calendar" alt="Vakit">
                 </div>
             </div>
         </div>

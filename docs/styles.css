@@ -340,6 +340,15 @@ body {
     margin: 0 auto var(--spacing-lg);
 }
 
+.hero-manifesto {
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    font-style: italic;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto var(--spacing-md);
+    line-height: 1.6;
+}
+
 /* Social Proof Bar */
 .hero-proof {
     display: inline-flex;

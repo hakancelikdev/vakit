@@ -17,6 +17,7 @@ const translations = {
         hero: {
             title: "Vakit",
             subtitle: "İbadet Uygulaması Nasıl Olmalıysa, Öyle.",
+            manifesto: "Namazınız ile aranıza reklam girmesin. Verileriniz emanettir. Vakit, ibadetinize saygı duyar.",
             description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun ve ibadetlerinizi kayıt altına alın. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
@@ -444,15 +445,15 @@ const translations = {
 
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/tr/1.png",
-            liveActivities: "assets/screenshots/tr/2.png",
-            quran: "assets/screenshots/tr/3.png",
-            quranReading: "assets/screenshots/tr/4.png",
-            widgets: "assets/screenshots/tr/5.png",
-            lockScreen: "assets/screenshots/tr/6.png",
-            qibla: "assets/screenshots/tr/7.png",
-            dhikr: "assets/screenshots/tr/8.png",
-            calendar: "assets/screenshots/tr/9.png"
+            home: "assets/screenshots/tr/1.webp",
+            liveActivities: "assets/screenshots/tr/2.webp",
+            quran: "assets/screenshots/tr/3.webp",
+            quranReading: "assets/screenshots/tr/4.webp",
+            widgets: "assets/screenshots/tr/5.webp",
+            lockScreen: "assets/screenshots/tr/6.webp",
+            qibla: "assets/screenshots/tr/7.webp",
+            dhikr: "assets/screenshots/tr/8.webp",
+            calendar: "assets/screenshots/tr/9.webp"
         }
     },
 
@@ -474,6 +475,7 @@ const translations = {
         hero: {
             title: "Vakit",
             subtitle: "The Worship App, As It Should Be.",
+            manifesto: "No ads between you and your worship. Your data is our amanah. Vakit respects your devotion.",
             description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, and log your worship with <strong>Vakit</strong>. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
@@ -679,7 +681,7 @@ const translations = {
         // Emanet Section
         emanet: {
             title: "Amanah",
-            quote: "Your data is your trust, not ours to keep.",
+            quote: "Your data is our Amanah (أمانة) — a sacred trust.",
             description: "While other worship apps sell your location data to third parties, Vakit chose a different path. Your data never leaves your device. No account required. No tracking.",
             noAccount: "No Account Required",
             noAccountDesc: "No signup, no login. Download and start.",
@@ -901,15 +903,15 @@ const translations = {
 
         // Screenshot paths
         screenshotPaths: {
-            home: "assets/screenshots/en/1.png",
-            liveActivities: "assets/screenshots/en/2.png",
-            quran: "assets/screenshots/en/3.png",
-            quranReading: "assets/screenshots/en/4.png",
-            widgets: "assets/screenshots/en/5.png",
-            lockScreen: "assets/screenshots/en/6.png",
-            qibla: "assets/screenshots/en/7.png",
-            dhikr: "assets/screenshots/en/8.png",
-            calendar: "assets/screenshots/en/9.png"
+            home: "assets/screenshots/en/1.webp",
+            liveActivities: "assets/screenshots/en/2.webp",
+            quran: "assets/screenshots/en/3.webp",
+            quranReading: "assets/screenshots/en/4.webp",
+            widgets: "assets/screenshots/en/5.webp",
+            lockScreen: "assets/screenshots/en/6.webp",
+            qibla: "assets/screenshots/en/7.webp",
+            dhikr: "assets/screenshots/en/8.webp",
+            calendar: "assets/screenshots/en/9.webp"
         }
     }
 };
