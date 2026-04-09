@@ -18,7 +18,7 @@ const translations = {
             title: "Vakit",
             subtitle: "İbadet Uygulaması Nasıl Olmalıysa, Öyle.",
             manifesto: "Namazınız ile aranıza reklam girmesin. Verileriniz emanettir. Vakit, ibadetinize saygı duyar.",
-            description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun ve ibadetlerinizi kayıt altına alın. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
+            description: "<strong>Vakit</strong> ile namaz vakitlerini takip edin, Kıble yönünü bulun, <strong>Kur'an-ı Kerim</strong> okuyun, orucunuzu kaydedin ve <strong>Zikir Halkası</strong> ile toplu zikir çekin. <strong>22 hesaplama yöntemi</strong>, <strong>Zikirmatik</strong>, <strong>Live Activities</strong>, <strong>widget desteği</strong> ve çok daha fazlası — tamamen ücretsiz.",
             downloadButton: "App Store'dan İndir",
             featuresButton: "Özellikleri Gör",
             badge: {
@@ -185,8 +185,8 @@ const translations = {
                 description: "Görsel pusula ile Kâbe yönünü her yerde bulun. Haptik geri bildirim, Kâbe'ye mesafe bilgisi ve hassas yön hesaplama."
             },
             dhikr: {
-                title: "Gelişmiş Zikirmatik",
-                description: "Görsel ilerleme halkası ile zikir çekin. Özel zikirler ekleyin, toplam sayılarınızı takip edin ve ibadetinizi kayıt altına alın."
+                title: "Zikirmatik & Zikir Halkası",
+                description: "Görsel ilerleme halkası ile zikir çekin. Zikir Halkası ile gerçek zamanlı toplu zikir: halka oluşturun, davet edin, herkesin sayısı anlık senkronize olsun."
             },
             calendar: {
                 title: "Hiçbir Anı Kaçırma",
@@ -196,7 +196,7 @@ const translations = {
 
         // All Tools Section
         allTools: {
-            title: "20+ İbadet Aracı, Tek Uygulama",
+            title: "25+ İbadet Aracı, Tek Uygulama",
             subtitle: "İhtiyacınız olan her şey Vakit'te.",
             prayerTimes: "Namaz Vakitleri",
             qibla: "Kıble Pusulası",
@@ -217,7 +217,10 @@ const translations = {
             bookmarks: "Yer İmleri",
             icloud: "iCloud Sync",
             tafsir: "Tefsir",
-            shareCards: "Paylaşım Kartları"
+            shareCards: "Paylaşım Kartları",
+            fasting: "Oruç Takibi",
+            dhikrCircle: "Zikir Halkası",
+            nearbyMosques: "Yakındaki Camiler"
         },
 
         // Emanet Section
@@ -250,7 +253,7 @@ const translations = {
             activityRings: "Activity Rings",
             activityRingsDesc: "Apple tarzı halka sistemi ile günlük ibadet takibi.",
             siri: "Siri Entegrasyonu",
-            siriDesc: "Sesli komutla namaz vaktini öğrenin — Apple Kısayollar desteği."
+            siriDesc: "Sesli komutla namaz vaktini öğrenin veya orucunuzu kaydedin — Apple Kısayollar desteği."
         },
 
         // Screenshots Section
@@ -361,7 +364,7 @@ const translations = {
                 },
                 {
                     q: "İbadet takibi nasıl çalışır?",
-                    a: "Activity Rings benzeri görsel takip sistemi ile günlük namazlarınızı, Kur'an okumanızı ve zikirlerinizi kayıt altına alabilirsiniz. Streak sistemi ile sürekliliğinizi takip edin ve detaylı istatistiklerle ilerlemenizi görün."
+                    a: "Activity Rings benzeri görsel takip sistemi ile günlük namazlarınızı, orucunuzu, Kur'an okumanızı ve zikirlerinizi kayıt altına alabilirsiniz. Ramazan'da oruç kartı ile tek dokunuşla kayıt. Streak sistemi ile sürekliliğinizi takip edin. Zikir Halkası ile arkadaşlarınızla birlikte gerçek zamanlı toplu zikir çekin."
                 },
                 {
                     q: "Hangi widget çeşitleri var?",
@@ -385,14 +388,14 @@ const translations = {
             tagline: "İbadet Uygulaması Nasıl Olmalıysa, Öyle.",
             linksTitle: "Bağlantılar",
             contactTitle: "İletişim",
-            copyright: "© 2025 Vakit Team. Tüm hakları saklıdır."
+            copyright: "© 2025-2026 Vakit Team. Tüm hakları saklıdır."
         },
 
         // Meta tags
         meta: {
             title: "Vakit: Namaz, Kıble, Kuran",
             description: "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. Zikir, takvim ve İslami araçlar. 22 hesaplama yöntemi, Live Activities, widget desteği. Tamamen ücretsiz.",
-            keywords: "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, ios app, namaz uygulaması"
+            keywords: "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, zikir halkası, ibadet takibi, oruç takibi, yakındaki camiler, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, ios app, namaz uygulaması"
         },
 
         // Privacy Policy
@@ -476,7 +479,7 @@ const translations = {
             title: "Vakit",
             subtitle: "The Worship App, As It Should Be.",
             manifesto: "No ads between you and your worship. Your data is our amanah. Vakit respects your devotion.",
-            description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, and log your worship with <strong>Vakit</strong>. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
+            description: "Track <strong>prayer times</strong>, find the <strong>Qibla direction</strong>, read the <strong>Holy Quran</strong>, log your fasts, and join <strong>Dhikr Circles</strong> for real-time group worship. <strong>22 calculation methods</strong>, <strong>Dhikr counter</strong>, <strong>Live Activities</strong>, <strong>widget support</strong> and much more — completely free.",
             downloadButton: "Download from App Store",
             featuresButton: "View Features",
             badge: {
@@ -643,8 +646,8 @@ const translations = {
                 description: "Find the Kaaba direction anywhere with a visual compass. Haptic feedback, distance to Kaaba, and precise direction calculation."
             },
             dhikr: {
-                title: "Advanced Dhikr Counter",
-                description: "Count your dhikr with a visual progress ring. Add custom dhikrs, track your totals, and record your worship."
+                title: "Dhikr Counter & Dhikr Circle",
+                description: "Count your dhikr with a visual progress ring. Dhikr Circle for real-time group worship: create a circle, invite others, everyone's count syncs live."
             },
             calendar: {
                 title: "Don't Miss a Single Moment",
@@ -654,7 +657,7 @@ const translations = {
 
         // All Tools Section
         allTools: {
-            title: "20+ Worship Tools, One App",
+            title: "25+ Worship Tools, One App",
             subtitle: "Everything you need is in Vakit.",
             prayerTimes: "Prayer Times",
             qibla: "Qibla Compass",
@@ -675,7 +678,10 @@ const translations = {
             bookmarks: "Bookmarks",
             icloud: "iCloud Sync",
             tafsir: "Tafsir",
-            shareCards: "Share Cards"
+            shareCards: "Share Cards",
+            fasting: "Fasting Tracker",
+            dhikrCircle: "Dhikr Circle",
+            nearbyMosques: "Nearby Mosques"
         },
 
         // Emanet Section
@@ -708,7 +714,7 @@ const translations = {
             activityRings: "Activity Rings",
             activityRingsDesc: "Apple-style ring system for daily worship tracking.",
             siri: "Siri Integration",
-            siriDesc: "Ask Siri for prayer times — with Apple Shortcuts support."
+            siriDesc: "Ask Siri for prayer times or log your fast — with Apple Shortcuts support."
         },
 
         // Screenshots Section
@@ -819,7 +825,7 @@ const translations = {
                 },
                 {
                     q: "How does worship tracking work?",
-                    a: "Track your daily prayers, Quran reading, and dhikr with an Activity Rings-style visual tracking system. Monitor your consistency with the streak system and view your progress through detailed statistics."
+                    a: "Track your daily prayers, fasting, Quran reading, and dhikr with an Activity Rings-style visual tracking system. During Ramadan, log your fast with one tap after Maghrib. Monitor your consistency with the streak system. Join Dhikr Circles for real-time group worship with friends."
                 },
                 {
                     q: "What widget options are available?",
@@ -843,14 +849,14 @@ const translations = {
             tagline: "The Worship App, As It Should Be.",
             linksTitle: "Links",
             contactTitle: "Contact",
-            copyright: "© 2025 Vakit Team. All rights reserved."
+            copyright: "© 2025-2026 Vakit Team. All rights reserved."
         },
 
         // Meta tags
         meta: {
             title: "Vakit: Prayer, Qibla, Quran",
             description: "Track prayer times, find the Qibla direction, read the Holy Quran. Dhikr, calendar and Islamic tools. 22 calculation methods, Live Activities, widget support. Completely free.",
-            keywords: "prayer times, vakit, qibla direction, prayer time, quran, holy quran, khatm, tafsir, dhikr, dhikr counter, worship tracker, islamic app, namaz vakitleri, qibla yönü, hijri calendar, live activities, widget, dynamic island, ios app, prayer app"
+            keywords: "prayer times, vakit, qibla direction, prayer time, quran, holy quran, khatm, tafsir, dhikr, dhikr counter, dhikr circle, worship tracker, fasting tracker, nearby mosques, islamic app, namaz vakitleri, qibla yönü, hijri calendar, live activities, widget, dynamic island, ios app, prayer app"
         },
 
         // Privacy Policy
