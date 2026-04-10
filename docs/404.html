@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title id="pageTitle">Zikir Halkasina Katil - VakitApp</title>
+    <title id="pageTitle">Zikir Halkasina Katil - Vakit</title>
 
     <style>
         *,
@@ -84,16 +84,21 @@
         }
 
         .icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 20px;
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 24px;
+            border-radius: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.25);
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -151,16 +156,22 @@
         }
 
         .download-link {
-            display: block;
-            margin-top: 20px;
-            color: var(--text-muted);
+            display: none;
+            margin-top: 24px;
+            padding: 14px;
+            background: rgba(var(--primary-rgb), 0.08);
+            border: 1px solid rgba(var(--primary-rgb), 0.15);
+            border-radius: 14px;
+            color: var(--primary-dark);
             font-size: 14px;
+            font-weight: 600;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: all 0.2s;
         }
 
         .download-link:hover {
-            color: var(--primary);
+            background: rgba(var(--primary-rgb), 0.12);
+            transform: translateY(-1px);
         }
 
         .footer-text {
@@ -217,15 +228,10 @@
     <!-- Join Page -->
     <div class="card" id="joinPage">
         <div class="icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 12h8" />
-                <path d="M12 8v8" />
-            </svg>
+            <img src="/assets/apple-touch-icon.png" alt="Vakit Logo">
         </div>
         <h1 id="joinTitle">Zikir Halkasina Katil</h1>
-        <p class="subtitle" id="joinSubtitle">Birlikte zikir cekmek icin VakitApp'i ac.</p>
+        <p class="subtitle" id="joinSubtitle">Birlikte zikir cekmek icin Vakit'i ac.</p>
         <div class="invite-code" id="inviteCode"></div>
         <a class="btn-primary" id="openApp" href="#">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -238,7 +244,7 @@
         </a>
         <a class="download-link" id="downloadLink"
             href="https://apps.apple.com/app/id6748356813">
-            <span id="downloadText">VakitApp'i henuz indirmedin mi? App Store'dan indir</span>
+            <span id="downloadText">Vakit'i henuz indirmedin mi? Buraya tikla ve yukle</span>
         </a>
     </div>
 
@@ -257,7 +263,7 @@
     </div>
 
     <p class="footer-text">
-        <a href="/">VakitApp</a> — <span id="footerSlogan">Namaz, Kible, Kuran</span>
+        <a href="/">Vakit</a> — <span id="footerSlogan">Namaz, Kible, Kuran</span>
     </p>
 
     <script>
@@ -279,21 +285,23 @@
 
             var t = {
                 tr: {
-                    pageTitle: 'Zikir Halkasina Katil - VakitApp',
+                    pageTitle: 'Zikir Halkasina Katil - Vakit',
                     joinTitle: 'Zikir Halkasina Katil',
-                    joinSubtitle: 'Birlikte zikir cekmek icin VakitApp\'i ac.',
+                    joinSubtitle: 'Birlikte zikir cekmek icin Vakit\'i ac.',
+                    redirecting: 'Yonlendiriliyorsunuz...',
                     openApp: 'Uygulamayi Ac',
-                    download: 'VakitApp\'i henuz indirmedin mi? App Store\'dan indir',
+                    download: 'Vakit\'i henuz indirmedin mi? Buraya tikla ve yukle',
                     notFound: 'Aradiginiz sayfa bulunamadi.',
                     home: 'Ana Sayfaya Don',
                     slogan: 'Namaz, Kible, Kuran'
                 },
                 en: {
-                    pageTitle: 'Join Dhikr Circle - VakitApp',
+                    pageTitle: 'Join Dhikr Circle - Vakit',
                     joinTitle: 'Join Dhikr Circle',
-                    joinSubtitle: 'Open VakitApp to join the dhikr circle together.',
+                    joinSubtitle: 'Open Vakit to join the dhikr circle together.',
+                    redirecting: 'Redirecting...',
                     openApp: 'Open App',
-                    download: 'Don\'t have VakitApp yet? Download from App Store',
+                    download: 'Don\'t have Vakit yet? Click here to install',
                     notFound: 'The page you are looking for was not found.',
                     home: 'Go to Homepage',
                     slogan: 'Prayer, Qibla, Quran'
@@ -327,10 +335,19 @@
                     });
                 }
 
-                // Try to open app automatically after a short delay
+                // Wait a moment before automatic redirect attempt (Chrome/Safari protection)
                 setTimeout(function () {
+                    document.getElementById('joinSubtitle').textContent = strings.redirecting;
                     window.location.href = 'vakitapp://join?code=' + code;
-                }, 300);
+                }, 800);
+
+                // Fallback: If user is still here after 2.5s, show prominent download prompt
+                setTimeout(function () {
+                    if (document.visibilityState === 'visible') {
+                        document.getElementById('joinSubtitle').textContent = strings.joinSubtitle;
+                        document.getElementById('downloadLink').style.display = 'block';
+                    }
+                }, 2500);
             } else {
                 document.getElementById('notFoundPage').style.display = 'block';
             }
