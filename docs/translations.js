@@ -111,6 +111,18 @@ const translations = {
                 {
                     title: "Vakit",
                     text: "Harika bir uygulama olmuş hem internetsiz ve ücretsiz herkese öneririm."
+                },
+                {
+                    title: "❤️",
+                    text: "Çok güzel kullanışlı bir uygulama Hatim özelliği çok güzel fakat mushaf görüntüsünün ve özelleştirme seçeneklerinin geliştirilmesi lazım"
+                },
+                {
+                    title: "Emeğinize Sağlık",
+                    text: "Harika bir uygulama"
+                },
+                {
+                    title: "Vakit",
+                    text: "Harika bir uygulama olmuş teşekkürler Hakan Çelik."
                 }
             ]
         },
@@ -572,6 +584,18 @@ const translations = {
                 {
                     title: "Vakit",
                     text: "What a great app — offline and free. I recommend it to everyone."
+                },
+                {
+                    title: "❤️",
+                    text: "A very nice and useful app. The khatm feature is wonderful, though the mushaf view and customization options could be improved."
+                },
+                {
+                    title: "Well Done",
+                    text: "An amazing app."
+                },
+                {
+                    title: "Vakit",
+                    text: "What a great app, thanks Hakan Çelik."
                 }
             ]
         },
