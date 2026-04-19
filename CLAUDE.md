@@ -25,9 +25,7 @@ All served files live in `docs/`:
 |------|---------|
 | `index.html` | Main landing page |
 | `styles.css` | All styles (CSS variables for theming, glassmorphism, responsive) |
-| `script.js` | Interactivity (scroll animations, mobile menu, FAQ accordion, typing effect) |
-| `translations.js` | All UI strings for both languages (tr/en) as a `translations` object |
-| `localization.js` | `LocalizationManager` — reads `translations.js`, applies strings via `data-i18n` attributes |
+| `script.js` | All interactivity, i18n strings (COPY, REVIEWS, FAQ objects), prayer time calculations, and UI rendering |
 | `language-detection.js` | Auto-detects browser language on first visit, redirects legacy URLs (en.html → index.html) |
 | `privacy.html` | Privacy policy page |
 | `terms.html` | Terms of service page |
@@ -39,16 +37,10 @@ Single-page approach — one `index.html` with dynamic content switching (no sep
 
 **How it works:**
 1. `language-detection.js` runs first (inline), detects browser language or reads `localStorage.preferredLanguage`
-2. `translations.js` defines all strings in a `translations` object keyed by locale (`tr`, `en`)
-3. `LocalizationManager` in `localization.js` applies translations to DOM elements using `data-i18n` attributes
+2. `script.js` contains all i18n strings in the `COPY` object (keyed by `en`/`tr`), plus `REVIEWS`, `FAQ`, and other data objects
+3. `script.js` renders content dynamically using `data-i18n` attributes and DOM manipulation
 
-**Key data attributes on HTML elements:**
-- `data-i18n="nav.features"` — sets text content from dot-notation key path
-- `data-i18n-attr="placeholder"` — sets a specific attribute instead of text content
-- `data-i18n-list="faq.items"` — renders array data (used for FAQ accordion)
-- `data-i18n-img="screenshot1"` — swaps image `src` based on `screenshotPaths` in translations
-
-**Adding/editing text:** Update both `tr` and `en` objects in `translations.js`. No regeneration step needed.
+**Adding/editing text:** Update both `tr` and `en` entries in the `COPY` object in `script.js`. For reviews/FAQ, update the `REVIEWS`/`FAQ` objects.
 
 ### CSS Theming
 
