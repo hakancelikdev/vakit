@@ -41,6 +41,7 @@ const COPY = {
     "fin-h1": "Begin when", "fin-h2": "you\u2019re ready.",
     "fin-p": "Free today. No account. Works offline. iOS 18 and up.",
     downloadCta2: "Download on the App Store", explore: "Explore features \u2192",
+    footContact: "Contact", footFeedback: "Feedback",
   },
   tr: {
     features: "\u00D6zellikler", trust: "Emanet", compare: "Neden Vakit", reviews: "Yorumlar", faq: "SSS", download: "\u0130ndir",
@@ -74,6 +75,7 @@ const COPY = {
     "fin-h1": "Haz\u0131r oldu\u011Funda", "fin-h2": "ba\u015Fla.",
     "fin-p": "\u015Eu an \u00FCcretsiz. Hesap yok. \u00C7evrimd\u0131\u015F\u0131 \u00E7al\u0131\u015F\u0131r. iOS 18 ve \u00FCzeri.",
     downloadCta2: "App Store\u2019dan \u0130ndir", explore: "\u00D6zellikleri ke\u015Ffet \u2192",
+    footContact: "\u0130leti\u015Fim", footFeedback: "Geri Bildirim",
   }
 };
 
