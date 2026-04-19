@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,143 +7,139 @@
     <meta name="description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz, tamamen anonim kullanım.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Hakan Çelik">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vakit.hakancelik.dev/privacy.html">
     <meta property="og:title" content="Vakit - Gizlilik Politikası">
     <meta property="og:description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz.">
     <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
     <meta property="og:locale" content="tr_TR">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Vakit - Gizlilik Politikası">
     <meta name="twitter:description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz.">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://vakit.hakancelik.dev/privacy.html">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
+      .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
+      .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px }
+      .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
+      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
+      .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
+      .legal-contact a { color: var(--accent-ink); transition: color .2s }
+      .legal-contact a:hover { color: var(--ink) }
+      @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
+    </style>
+    <script src="language-detection.js"></script>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" role="banner">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon" width="32" height="32">
-                    <span>Vakit</span>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html#features" data-i18n="nav.features">Özellikler</a>
-                <a href="index.html#emanet" data-i18n="nav.emanet">Emanet</a>
-                <a href="index.html#download" data-i18n="nav.download">İndir</a>
-                <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
 
-    <main role="main">
-        <div class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
-            <h1 data-i18n="privacyPolicy.title"
-                style="margin-bottom: 20px; font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">
-                Gizlilik Politikası</h1>
-            <p data-i18n="privacyPolicy.description"
-                style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;"></p>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#showcase">Features</a>
+    <a href="index.html#trust">Trust</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <div class="nav-lang" role="tablist">
+      <button data-lang="en">EN</button>
+      <button data-lang="tr" class="on">TR</button>
+    </div>
+    <a href="https://apps.apple.com/app/id6748356813" class="nav-dl">Download</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+</nav>
 
-            <div id="legal-sections">
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="privacyPolicy.sections.0.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="privacyPolicy.sections.0.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="privacyPolicy.sections.1.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="privacyPolicy.sections.1.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="privacyPolicy.sections.2.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="privacyPolicy.sections.2.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="privacyPolicy.sections.3.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="privacyPolicy.sections.3.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-            </div>
+<main class="legal-page">
+  <h1 id="legalTitle">Gizlilik <em>Politikası</em></h1>
+  <p class="legal-desc" id="legalDesc"></p>
+  <div id="legalSections"></div>
+  <div class="legal-contact">
+    <a href="mailto:hakancelikdev@gmail.com">hakancelikdev@gmail.com</a>
+  </div>
+</main>
 
-            <div style="margin-top: 40px; text-align: center;">
-                <a href="mailto:hakancelikdev@gmail.com" class="email-link">
-                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>hakancelikdev@gmail.com
-                </a>
-            </div>
-        </div>
-    </main>
+<footer>
+  <div class="foot-brand">
+    <img src="assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+  </div>
+  <div class="foot-sig">Made with care &middot; MIT licensed &middot; &copy; 2026 Hakan Çelik</div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="assets/app-icon-32.png" alt="Vakit" width="32" height="32">
-                        <span>Vakit</span>
-                    </div>
-                    <p class="footer-tagline" data-i18n="footer.tagline">Zikir, Takvim & İslami Araçlar</p>
-                </div>
-                <div class="footer-nav">
-                    <h4 data-i18n="footer.linksTitle">Bağlantılar</h4>
-                    <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
-                    <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
-                    <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-i18n="footer.contactTitle">İletişim</h4>
-                    <a href="mailto:hakancelikdev@gmail.com" class="email-link">hakancelikdev@gmail.com</a>
-                    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU"
-                        target="_blank" data-i18n="contact.feedbackButton">Geri Bildirim Gönder</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="translations.js"></script>
-    <script src="localization.js"></script>
-    <script src="script.js"></script>
+<script>
+(function() {
+  var lang = localStorage.getItem('preferredLanguage') || 'tr';
+  var content = {
+    tr: {
+      title: 'Gizlilik <em>Politikası</em>',
+      desc: 'Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek, yerel hatırlatıcılar göndermek ve uygulama performansını iyileştirmek için gerekli verileri toplarız. Toplanan verilerin çoğu cihazınızda kalır; yalnızca anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla güvenli sunuculara gönderilir.',
+      sections: [
+        { t: '1. Topladığımız Veriler', b: 'İsminizi, e-posta adresinizi, fotoğraflarınızı, mikrofonunuzu, kameranızı, rehberinizi veya herhangi bir kişisel tanımlayıcı bilgiyi toplamayız.\n\nAnonim analitik veriler yalnızca uygulama geliştirme amacıyla toplanır ve şunları içerir:\n\u2022 Bölgesel konum bilgisi (ülke, şehir, ilçe) \u2013 GPS koordinatları (enlem/boylam) toplanmaz\n\u2022 Cihaz bilgisi (model, işletim sistemi sürümü, uygulama sürümü)\n\u2022 Uygulama tercihleri (dil, hesaplama yöntemi, tema)\n\u2022 Özellik kullanım istatistikleri (zikir sayısı, ekran görüntülenme süreleri)\n\nToplanmayan veriler:\n\u2022 GPS koordinatları (enlem/boylam)\n\u2022 Zikir içerikleri veya özel zikir isimleri\n\u2022 Arama sorgusu metinleri\n\u2022 Kişisel ibadet detayları' },
+        { t: '2. Verilerinizi Nasıl Kullanıyoruz', b: '\u2022 Namaz Vakti Hesaplama \u2013 Konum cihazınızda yerel olarak işlenir.\n\u2022 Kıble Yönü \u2013 Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n\u2022 İbadet Hatırlatıcıları \u2013 Yerel bildirimler planlanır.\n\u2022 Kullanıcı Tercihleri \u2013 Yerel olarak saklanır.\n\u2022 Analitik ve İyileştirme \u2013 Anonim kullanım verileri uygulama performansını izlemek, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla güvenli sunuculara gönderilir.' },
+        { t: '3. Veri Paylaşımı & Üçüncü Taraflar', b: 'Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla güvenli veritabanında saklanır. Bu veriler kişisel olarak tanımlanamaz, hiç kimseyle paylaşılmaz ve yalnızca toplu istatistiksel analizler için kullanılır.' },
+        { t: '4. Güvenlik', b: 'Tüm yerel veriler iPhone\'unuzda kalır ve iOS sandbox\'ı ile şifreleme tarafından korunur. Analitik veriler güvenli veritabanında şifrelenmiş olarak saklanır ve yalnızca anonim istatistiksel analizler için kullanılır. Veriler hiç kimseyle paylaşılmaz. Kişisel tanımlayıcı bilgiler toplanmaz veya saklanmaz.' }
+      ],
+      nav: { features: 'Özellikler', trust: 'Emanet', faq: 'SSS', download: 'İndir' }
+    },
+    en: {
+      title: 'Privacy <em>Policy</em>',
+      desc: 'Vakit respects your privacy. We only collect the data necessary to calculate prayer times, determine qibla direction, send local notifications, and improve app performance. Most collected data remains on your device; only anonymous analytics data is sent to secure servers for app development and improvement purposes.',
+      sections: [
+        { t: '1. Data We Collect', b: 'We do not collect your name, email, photos, microphone, camera, contacts, or any personally identifiable information.\n\nAnonymous analytics data collected for app development includes:\n\u2022 Regional location (country, city) \u2013 GPS coordinates (lat/lon) are not collected\n\u2022 Device info (model, OS version, app version)\n\u2022 App preferences (language, calculation method, theme)\n\u2022 Feature usage statistics (dhikr count, screen view durations)\n\nData NOT collected:\n\u2022 GPS coordinates (latitude/longitude)\n\u2022 Dhikr contents or custom dhikr names\n\u2022 Search query texts\n\u2022 Personal worship details' },
+        { t: '2. How We Use Your Data', b: '\u2022 Prayer Time Calculation \u2013 Location is processed locally on your device.\n\u2022 Qibla Direction \u2013 Location and heading are combined on-device.\n\u2022 Worship Reminders \u2013 Local notifications are scheduled.\n\u2022 User Preferences \u2013 Stored locally.\n\u2022 Analytics & Improvement \u2013 Anonymous usage data is sent to secure servers to monitor performance, detect bugs, and improve user experience.' },
+        { t: '3. Data Sharing & Third Parties', b: 'We do not share, sell, or transfer your data to anyone. Anonymous analytics data is stored in a secure database for app development. This data cannot be personally identified, is not shared with anyone, and is used only for aggregate statistical analysis.' },
+        { t: '4. Security', b: 'All local data stays on your iPhone, protected by iOS sandbox and encryption. Analytics data is stored encrypted in a secure database and used only for anonymous statistical analysis. Data is not shared with anyone. No personally identifiable information is collected or stored.' }
+      ],
+      nav: { features: 'Features', trust: 'Trust', faq: 'FAQ', download: 'Download' }
+    }
+  };
+  var c = content[lang] || content.tr;
+  document.getElementById('legalTitle').innerHTML = c.title;
+  document.getElementById('legalDesc').textContent = c.desc;
+  var html = c.sections.map(function(s) {
+    return '<div class="legal-card"><h3>' + s.t + '</h3><p>' + s.b + '</p></div>';
+  }).join('');
+  document.getElementById('legalSections').innerHTML = html;
+  document.documentElement.lang = lang;
+  // Nav labels
+  var links = document.querySelectorAll('.nav-links a');
+  links[0].textContent = c.nav.features;
+  links[1].textContent = c.nav.trust;
+  links[2].textContent = c.nav.faq;
+  document.querySelector('.nav-dl').textContent = c.nav.download;
+  // Lang toggle
+  document.querySelectorAll('.nav-lang button').forEach(function(b) {
+    b.classList.toggle('on', b.dataset.lang === lang);
+    b.addEventListener('click', function() {
+      localStorage.setItem('preferredLanguage', b.dataset.lang);
+      location.reload();
+    });
+  });
+  // Mobile menu
+  var toggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (toggle) toggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    toggle.textContent = navLinks.classList.contains('open') ? '\u00D7' : '\u2261';
+  });
+})();
+</script>
 </body>
-
 </html>

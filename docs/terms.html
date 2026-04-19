@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,143 +7,136 @@
     <meta name="description" content="Vakit uygulamasının kullanım şartları ve koşulları. Ücretsiz, reklamsız ibadet uygulaması.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Hakan Çelik">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vakit.hakancelik.dev/terms.html">
     <meta property="og:title" content="Vakit - Kullanım Şartları">
     <meta property="og:description" content="Vakit uygulamasının kullanım şartları ve koşulları.">
     <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
     <meta property="og:locale" content="tr_TR">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Vakit - Kullanım Şartları">
     <meta name="twitter:description" content="Vakit uygulamasının kullanım şartları ve koşulları.">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://vakit.hakancelik.dev/terms.html">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
+      .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
+      .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px }
+      .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
+      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
+      .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
+      .legal-contact a { color: var(--accent-ink); transition: color .2s }
+      .legal-contact a:hover { color: var(--ink) }
+      @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
+    </style>
+    <script src="language-detection.js"></script>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" role="banner">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="nav-logo-link">
-                    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-logo-icon" width="32" height="32">
-                    <span>Vakit</span>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html#features" data-i18n="nav.features">Özellikler</a>
-                <a href="index.html#emanet" data-i18n="nav.emanet">Emanet</a>
-                <a href="index.html#download" data-i18n="nav.download">İndir</a>
-                <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
 
-    <main role="main">
-        <div class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
-            <h1 data-i18n="termsOfUse.title"
-                style="margin-bottom: 20px; font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">
-                Kullanım Şartları</h1>
-            <p data-i18n="termsOfUse.description"
-                style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;"></p>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#showcase">Features</a>
+    <a href="index.html#trust">Trust</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <div class="nav-lang" role="tablist">
+      <button data-lang="en">EN</button>
+      <button data-lang="tr" class="on">TR</button>
+    </div>
+    <a href="https://apps.apple.com/app/id6748356813" class="nav-dl">Download</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+</nav>
 
-            <div id="legal-sections">
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="termsOfUse.sections.0.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="termsOfUse.sections.0.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="termsOfUse.sections.1.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="termsOfUse.sections.1.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="termsOfUse.sections.2.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="termsOfUse.sections.2.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-                <div class="legal-card"
-                    style="background: var(--surface); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--card-border); margin-bottom: 20px; box-shadow: var(--shadow-sm);">
-                    <h3 data-i18n="termsOfUse.sections.3.title"
-                        style="margin-bottom: 15px; color: var(--primary);"></h3>
-                    <p data-i18n="termsOfUse.sections.3.body"
-                        style="color: var(--text-secondary); line-height: 1.7; white-space: pre-line;"></p>
-                </div>
-            </div>
+<main class="legal-page">
+  <h1 id="legalTitle">Kullanım <em>Şartları</em></h1>
+  <p class="legal-desc" id="legalDesc"></p>
+  <div id="legalSections"></div>
+  <div class="legal-contact">
+    <a href="mailto:hakancelikdev@gmail.com">hakancelikdev@gmail.com</a>
+  </div>
+</main>
 
-            <div style="margin-top: 40px; text-align: center;">
-                <a href="mailto:hakancelikdev@gmail.com" class="email-link">
-                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>hakancelikdev@gmail.com
-                </a>
-            </div>
-        </div>
-    </main>
+<footer>
+  <div class="foot-brand">
+    <img src="assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+  </div>
+  <div class="foot-sig">Made with care &middot; MIT licensed &middot; &copy; 2026 Hakan Çelik</div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="assets/app-icon-32.png" alt="Vakit" width="32" height="32">
-                        <span>Vakit</span>
-                    </div>
-                    <p class="footer-tagline" data-i18n="footer.tagline">Zikir, Takvim & İslami Araçlar</p>
-                </div>
-                <div class="footer-nav">
-                    <h4 data-i18n="footer.linksTitle">Bağlantılar</h4>
-                    <a href="privacy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
-                    <a href="terms.html" data-i18n="nav.terms">Kullanım Şartları</a>
-                    <a href="index.html#faq" data-i18n="nav.faq">SSS</a>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-i18n="footer.contactTitle">İletişim</h4>
-                    <a href="mailto:hakancelikdev@gmail.com" class="email-link">hakancelikdev@gmail.com</a>
-                    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU"
-                        target="_blank" data-i18n="contact.feedbackButton">Geri Bildirim Gönder</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2025 Vakit Team. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="translations.js"></script>
-    <script src="localization.js"></script>
-    <script src="script.js"></script>
+<script>
+(function() {
+  var lang = localStorage.getItem('preferredLanguage') || 'tr';
+  var content = {
+    tr: {
+      title: 'Kullanım <em>Şartları</em>',
+      desc: 'Uygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.',
+      sections: [
+        { t: '1. Şartların Kabulü', b: 'Vakit\'e erişerek ve kullanarak, bu anlaşmanın şart ve hükümlerine bağlı kalmayı kabul edersiniz. Kabul etmiyorsanız, lütfen bu hizmeti kullanmayın.' },
+        { t: '2. Ücretsiz Kullanım', b: 'Vakit tamamen ücretsizdir. Tüm özellikler herkes için ücretsiz olarak sunulmaktadır. Gelecekte ücretli özellikler eklenirse, bunlar açıkça belirtilecektir.' },
+        { t: '3. Kullanıcı Sorumlulukları', b: 'Sorumlu olduğunuz konular: Doğru konum bilgisi sağlamak, yasalara uygun şekilde kullanmak ve uygulamaya zarar vermemektir.' },
+        { t: '4. Sorumluluk Sınırlaması', b: 'Uygulama "olduğu gibi" sunulmaktadır. Namaz vakitleri ve kıble yönü hesaplamaları doğru olmaya çalışılır ancak kesin doğruluk garanti edilmez.' }
+      ],
+      nav: { features: 'Özellikler', trust: 'Emanet', faq: 'SSS', download: 'İndir' }
+    },
+    en: {
+      title: 'Terms of <em>Use</em>',
+      desc: 'By downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.',
+      sections: [
+        { t: '1. Acceptance of Terms', b: 'By accessing and using Vakit, you agree to be bound by the terms and conditions of this agreement. If you do not agree, please do not use this service.' },
+        { t: '2. Free Usage', b: 'Vakit is completely free. All features are offered free of charge for everyone. If paid features are added in the future, they will be clearly indicated.' },
+        { t: '3. User Responsibilities', b: 'You are responsible for: providing accurate location information, using the app in compliance with laws, and not causing harm to the application.' },
+        { t: '4. Limitation of Liability', b: 'The application is provided "as is." Prayer times and qibla direction calculations strive to be accurate but absolute accuracy is not guaranteed.' }
+      ],
+      nav: { features: 'Features', trust: 'Trust', faq: 'FAQ', download: 'Download' }
+    }
+  };
+  var c = content[lang] || content.tr;
+  document.getElementById('legalTitle').innerHTML = c.title;
+  document.getElementById('legalDesc').textContent = c.desc;
+  var html = c.sections.map(function(s) {
+    return '<div class="legal-card"><h3>' + s.t + '</h3><p>' + s.b + '</p></div>';
+  }).join('');
+  document.getElementById('legalSections').innerHTML = html;
+  document.documentElement.lang = lang;
+  var links = document.querySelectorAll('.nav-links a');
+  links[0].textContent = c.nav.features;
+  links[1].textContent = c.nav.trust;
+  links[2].textContent = c.nav.faq;
+  document.querySelector('.nav-dl').textContent = c.nav.download;
+  document.querySelectorAll('.nav-lang button').forEach(function(b) {
+    b.classList.toggle('on', b.dataset.lang === lang);
+    b.addEventListener('click', function() {
+      localStorage.setItem('preferredLanguage', b.dataset.lang);
+      location.reload();
+    });
+  });
+  var toggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (toggle) toggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    toggle.textContent = navLinks.classList.contains('open') ? '\u00D7' : '\u2261';
+  });
+})();
+</script>
 </body>
-
 </html>

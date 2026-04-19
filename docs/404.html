@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1PNWJYF69"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,346 +10,173 @@
         gtag('js', new Date());
         gtag('config', 'G-T1PNWJYF69');
     </script>
-
     <meta name="apple-itunes-app" content="app-id=6748356813">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-
-    <!-- Fonts (same as main site) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <title id="pageTitle">Zikir Halkasina Katil - Vakit</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title id="pageTitle">Zikir Halkasına Katıl - Vakit</title>
     <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box }
         :root {
-            --primary: #2A9D8F;
-            --primary-rgb: 42, 157, 143;
-            --primary-dark: #1E7268;
-            --accent-gold: #C9A961;
-            --background: #ffffff;
-            --background-alt: #f5f7fa;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #94a3b8;
-            --font-display: 'DM Serif Display', Georgia, serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --radius-md: 18px;
-            --radius-lg: 28px;
-            --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.06);
-            --glass-bg: rgba(255, 255, 255, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.5);
-            --glass-blur: 24px;
+            --bg: oklch(0.985 0.004 80);
+            --ink: oklch(0.18 0.01 250);
+            --ink-2: oklch(0.35 0.01 250);
+            --ink-3: oklch(0.55 0.008 250);
+            --accent: #2A9D8F;
+            --accent-ink: #1F7368;
+            --rule: oklch(0.88 0.008 80);
+            --paper: oklch(0.99 0.003 80);
+            --serif: 'Instrument Serif', 'Times New Roman', serif;
+            --sans: 'Inter', system-ui, sans-serif;
+            --mono: ui-rounded, 'SF Pro Rounded', -apple-system, 'Inter', system-ui, sans-serif;
         }
-
         body {
-            font-family: var(--font-body);
-            background: var(--background-alt);
-            color: var(--text-primary);
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--ink);
             min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
             padding: 24px 16px;
+            -webkit-font-smoothing: antialiased;
         }
-
         .card {
-            max-width: 420px;
-            width: 100%;
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            -webkit-backdrop-filter: blur(var(--glass-blur));
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
+            max-width: 420px; width: 100%;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: 20px;
             padding: 48px 32px;
             text-align: center;
-            box-shadow: var(--shadow-lg);
         }
-
         .icon {
-            width: 92px;
-            height: 92px;
+            width: 88px; height: 88px;
             margin: 0 auto 24px;
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 22%;
             overflow: hidden;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 32px rgba(42, 157, 143, 0.2);
         }
-
-        .icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 400;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 28px;
-        }
-
+        .icon img { width: 100%; height: 100%; object-fit: cover }
+        h1 { font-family: var(--serif); font-size: 26px; font-weight: 400; margin-bottom: 8px }
+        .subtitle { color: var(--ink-2); font-size: 15px; line-height: 1.6; margin-bottom: 28px }
         .invite-code {
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            font-size: 32px;
-            letter-spacing: 6px;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 32px;
-            padding: 16px;
-            background: rgba(var(--primary-rgb), 0.06);
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(var(--primary-rgb), 0.12);
+            font-family: var(--mono); font-size: 32px; letter-spacing: 6px;
+            color: var(--accent); font-weight: 700; margin-bottom: 32px; padding: 16px;
+            background: color-mix(in oklch, var(--accent) 6%, var(--paper));
+            border-radius: 16px;
+            border: 1px solid color-mix(in oklch, var(--accent) 12%, transparent);
         }
-
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
             width: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #fff;
-            padding: 16px 32px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 17px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 16px rgba(var(--primary-rgb), 0.3);
+            background: var(--ink); color: var(--bg);
+            padding: 16px 32px; border-radius: 999px;
+            text-decoration: none; font-weight: 500; font-size: 15px;
+            transition: transform .2s, background .2s;
         }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.4);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-
+        .btn-primary:hover { transform: translateY(-1px); background: var(--accent-ink) }
         .download-link {
-            display: none;
-            margin-top: 24px;
-            padding: 14px;
-            background: rgba(var(--primary-rgb), 0.08);
-            border: 1px solid rgba(var(--primary-rgb), 0.15);
-            border-radius: 14px;
-            color: var(--primary-dark);
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: none; margin-top: 24px; padding: 14px;
+            background: color-mix(in oklch, var(--accent) 8%, transparent);
+            border: 1px solid color-mix(in oklch, var(--accent) 15%, transparent);
+            border-radius: 999px;
+            color: var(--accent-ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; transition: all .2s;
         }
-
-        .download-link:hover {
-            background: rgba(var(--primary-rgb), 0.12);
-            transform: translateY(-1px);
-        }
-
-        .footer-text {
-            margin-top: 32px;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .footer-text a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        /* 404 page styles */
-        .not-found h1 {
-            font-size: 72px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .not-found .subtitle {
-            margin-bottom: 32px;
-        }
-
+        .download-link:hover { background: color-mix(in oklch, var(--accent) 12%, transparent) }
+        .footer-text { margin-top: 32px; font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.04em }
+        .footer-text a { color: var(--accent-ink); text-decoration: none }
+        .not-found h1 { font-family: var(--serif); font-size: 72px; color: var(--ink-3); margin-bottom: 12px }
+        .not-found .subtitle { margin-bottom: 32px }
         .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--primary);
-            padding: 14px 28px;
-            border-radius: 14px;
-            border: 2px solid rgba(var(--primary-rgb), 0.2);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 999px;
+            border: 1px solid var(--rule);
+            color: var(--ink-2); font-size: 15px; font-weight: 500;
+            text-decoration: none; transition: all .2s;
         }
-
-        .btn-secondary:hover {
-            background: rgba(var(--primary-rgb), 0.06);
-            border-color: rgba(var(--primary-rgb), 0.4);
-        }
-
-        /* Hidden by default */
-        #joinPage,
-        #notFoundPage {
-            display: none;
-        }
+        .btn-secondary:hover { background: var(--paper); border-color: var(--ink); color: var(--ink) }
+        #joinPage, #notFoundPage { display: none }
     </style>
 </head>
-
 <body>
-    <!-- Join Page -->
-    <div class="card" id="joinPage">
-        <div class="icon">
-            <img src="/assets/apple-touch-icon.png" alt="Vakit Logo">
-        </div>
-        <h1 id="joinTitle">Zikir Halkasina Katil</h1>
-        <p class="subtitle" id="joinSubtitle">Birlikte zikir cekmek icin Vakit'i ac.</p>
-        <div class="invite-code" id="inviteCode"></div>
-        <a class="btn-primary" id="openApp" href="#">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            <span id="openAppText">Uygulamayi Ac</span>
-        </a>
-        <a class="download-link" id="downloadLink"
-            href="https://apps.apple.com/app/id6748356813">
-            <span id="downloadText">Vakit'i henuz indirmedin mi? Buraya tikla ve yukle</span>
-        </a>
-    </div>
 
-    <!-- 404 Page -->
-    <div class="card not-found" id="notFoundPage">
-        <h1>404</h1>
-        <p class="subtitle" id="notFoundSubtitle">Aradiginiz sayfa bulunamadi.</p>
-        <a class="btn-secondary" href="/">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            <span id="homeText">Ana Sayfaya Don</span>
-        </a>
-    </div>
+<div class="card" id="joinPage">
+    <div class="icon"><img src="/assets/apple-touch-icon.png" alt="Vakit"></div>
+    <h1 id="joinTitle">Zikir Halkasına Katıl</h1>
+    <p class="subtitle" id="joinSubtitle">Birlikte zikir çekmek için Vakit'i aç.</p>
+    <div class="invite-code" id="inviteCode"></div>
+    <a class="btn-primary" id="openApp" href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <span id="openAppText">Uygulamayı Aç</span>
+    </a>
+    <a class="download-link" id="downloadLink" href="https://apps.apple.com/app/id6748356813">
+        <span id="downloadText">Vakit'i henüz indirmedin mi? Buraya tıkla ve yükle</span>
+    </a>
+</div>
 
-    <p class="footer-text">
-        <a href="/">Vakit</a> — <span id="footerSlogan">Namaz, Kible, Kuran</span>
-    </p>
+<div class="card not-found" id="notFoundPage">
+    <h1>404</h1>
+    <p class="subtitle" id="notFoundSubtitle">Aradığınız sayfa bulunamadı.</p>
+    <a class="btn-secondary" href="/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span id="homeText">Ana Sayfaya Dön</span>
+    </a>
+</div>
 
-    <script>
-        (function () {
-            var path = window.location.pathname;
-            var joinMatch = path.match(/^\/join\/([A-Za-z0-9]{4,8})$/);
+<p class="footer-text">
+    <a href="/">Vakit</a> — <span id="footerSlogan">Namaz, Kıble, Kuran</span>
+</p>
 
-            // Detect language
-            var lang = 'tr';
-            try {
-                var saved = localStorage.getItem('preferredLanguage');
-                if (saved === 'en') {
-                    lang = 'en';
-                } else if (!saved) {
-                    var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-                    if (browserLang.startsWith('en')) lang = 'en';
-                }
-            } catch (e) { }
-
-            var t = {
-                tr: {
-                    pageTitle: 'Zikir Halkasina Katil - Vakit',
-                    joinTitle: 'Zikir Halkasina Katil',
-                    joinSubtitle: 'Birlikte zikir cekmek icin Vakit\'i ac.',
-                    redirecting: 'Yonlendiriliyorsunuz...',
-                    openApp: 'Uygulamayi Ac',
-                    download: 'Vakit\'i henuz indirmedin mi? Buraya tikla ve yukle',
-                    notFound: 'Aradiginiz sayfa bulunamadi.',
-                    home: 'Ana Sayfaya Don',
-                    slogan: 'Namaz, Kible, Kuran'
-                },
-                en: {
-                    pageTitle: 'Join Dhikr Circle - Vakit',
-                    joinTitle: 'Join Dhikr Circle',
-                    joinSubtitle: 'Open Vakit to join the dhikr circle together.',
-                    redirecting: 'Redirecting...',
-                    openApp: 'Open App',
-                    download: 'Don\'t have Vakit yet? Click here to install',
-                    notFound: 'The page you are looking for was not found.',
-                    home: 'Go to Homepage',
-                    slogan: 'Prayer, Qibla, Quran'
-                }
-            };
-
-            var strings = t[lang];
-
-            // Apply translations
-            document.getElementById('pageTitle').textContent = strings.pageTitle;
-            document.getElementById('joinTitle').textContent = strings.joinTitle;
-            document.getElementById('joinSubtitle').textContent = strings.joinSubtitle;
-            document.getElementById('openAppText').textContent = strings.openApp;
-            document.getElementById('downloadText').textContent = strings.download;
-            document.getElementById('notFoundSubtitle').textContent = strings.notFound;
-            document.getElementById('homeText').textContent = strings.home;
-            document.getElementById('footerSlogan').textContent = strings.slogan;
-            document.documentElement.lang = lang;
-
-            if (joinMatch) {
-                var code = joinMatch[1];
-                document.getElementById('inviteCode').textContent = code;
-                document.getElementById('openApp').href = 'vakitapp://join?code=' + code;
-                document.getElementById('joinPage').style.display = 'block';
-
-                // Track join page view
-                if (typeof gtag === 'function') {
-                    gtag('event', 'join_page_view', {
-                        event_category: 'shared_zikir',
-                        invite_code: code
-                    });
-                }
-
-                // Wait a moment before automatic redirect attempt (Chrome/Safari protection)
-                setTimeout(function () {
-                    document.getElementById('joinSubtitle').textContent = strings.redirecting;
-                    window.location.href = 'vakitapp://join?code=' + code;
-                }, 800);
-
-                // Fallback: If user is still here after 2.5s, show prominent download prompt
-                setTimeout(function () {
-                    if (document.visibilityState === 'visible') {
-                        document.getElementById('joinSubtitle').textContent = strings.joinSubtitle;
-                        document.getElementById('downloadLink').style.display = 'block';
-                    }
-                }, 2500);
-            } else {
-                document.getElementById('notFoundPage').style.display = 'block';
+<script>
+(function () {
+    var path = window.location.pathname;
+    var joinMatch = path.match(/^\/join\/([A-Za-z0-9]{4,8})$/);
+    var lang = 'tr';
+    try {
+        var saved = localStorage.getItem('preferredLanguage');
+        if (saved === 'en') lang = 'en';
+        else if (!saved) {
+            var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (bl.startsWith('en')) lang = 'en';
+        }
+    } catch (e) {}
+    var t = {
+        tr: { pageTitle:'Zikir Halkasına Katıl - Vakit', joinTitle:'Zikir Halkasına Katıl', joinSubtitle:'Birlikte zikir çekmek için Vakit\'i aç.', redirecting:'Yönlendiriliyorsunuz...', openApp:'Uygulamayı Aç', download:'Vakit\'i henüz indirmedin mi? Buraya tıkla ve yükle', notFound:'Aradığınız sayfa bulunamadı.', home:'Ana Sayfaya Dön', slogan:'Namaz, Kıble, Kuran' },
+        en: { pageTitle:'Join Dhikr Circle - Vakit', joinTitle:'Join Dhikr Circle', joinSubtitle:'Open Vakit to join the dhikr circle together.', redirecting:'Redirecting...', openApp:'Open App', download:'Don\'t have Vakit yet? Click here to install', notFound:'The page you are looking for was not found.', home:'Go to Homepage', slogan:'Prayer, Qibla, Quran' }
+    };
+    var s = t[lang];
+    document.getElementById('pageTitle').textContent = s.pageTitle;
+    document.getElementById('joinTitle').textContent = s.joinTitle;
+    document.getElementById('joinSubtitle').textContent = s.joinSubtitle;
+    document.getElementById('openAppText').textContent = s.openApp;
+    document.getElementById('downloadText').textContent = s.download;
+    document.getElementById('notFoundSubtitle').textContent = s.notFound;
+    document.getElementById('homeText').textContent = s.home;
+    document.getElementById('footerSlogan').textContent = s.slogan;
+    document.documentElement.lang = lang;
+    if (joinMatch) {
+        var code = joinMatch[1];
+        document.getElementById('inviteCode').textContent = code;
+        document.getElementById('openApp').href = 'vakitapp://join?code=' + code;
+        document.getElementById('joinPage').style.display = 'block';
+        if (typeof gtag === 'function') gtag('event', 'join_page_view', { event_category:'shared_zikir', invite_code:code });
+        setTimeout(function () {
+            document.getElementById('joinSubtitle').textContent = s.redirecting;
+            window.location.href = 'vakitapp://join?code=' + code;
+        }, 800);
+        setTimeout(function () {
+            if (document.visibilityState === 'visible') {
+                document.getElementById('joinSubtitle').textContent = s.joinSubtitle;
+                document.getElementById('downloadLink').style.display = 'block';
             }
-        })();
-    </script>
+        }, 2500);
+    } else {
+        document.getElementById('notFoundPage').style.display = 'block';
+    }
+})();
+</script>
 </body>
-
 </html>
