@@ -39,7 +39,7 @@ const COPY = {
     "r-m1": "Average rating", "r-m2": "from 41 App Store reviews",
     "q-h1": "Honest answers", "q-h2": "to honest questions.",
     "fin-h1": "Don\u2019t let your worship", "fin-h2": "be interrupted.",
-    "fin-p": "Free today. No account. Works offline. iOS 18 and up.",
+    "fin-p": "Free today. No account. Works offline. iOS 26 and up.",
     downloadCta2: "Download on the App Store", explore: "Explore features \u2192",
     footContact: "Contact", footFeedback: "Feedback",
   },
@@ -73,7 +73,7 @@ const COPY = {
     "r-m1": "Ortalama puan", "r-m2": "41 App Store yorumundan",
     "q-h1": "D\u00FCr\u00FCst sorulara", "q-h2": "d\u00FCr\u00FCst cevaplar.",
     "fin-h1": "\u0130badetin yar\u0131da", "fin-h2": "kesilmesin.",
-    "fin-p": "\u015Eu an \u00FCcretsiz. Hesap yok. \u00C7evrimd\u0131\u015F\u0131 \u00E7al\u0131\u015F\u0131r. iOS 18 ve \u00FCzeri.",
+    "fin-p": "\u015Eu an \u00FCcretsiz. Hesap yok. \u00C7evrimd\u0131\u015F\u0131 \u00E7al\u0131\u015F\u0131r. iOS 26 ve \u00FCzeri.",
     downloadCta2: "App Store\u2019dan \u0130ndir", explore: "\u00D6zellikleri ke\u015Ffet \u2192",
     footContact: "\u0130leti\u015Fim", footFeedback: "Geri Bildirim",
   }
@@ -220,7 +220,7 @@ const COMPARE = {
     { f:"Offline", o:"Core features require an internet connection.", v:"Prayer, Qibla, Quran, Dhikr \u2014 all work offline." },
     { f:"Lock Screen", o:"Widgets break between iOS updates.", v:"Live Activity, Dynamic Island, StandBy \u2014 all supported." },
     { f:"Accuracy", o:"DST errors, limited calculation methods.", v:"22 methods, timezone-aware, travel-detecting." },
-    { f:"Design", o:"Dated interfaces; regressions after each update.", v:"iOS 18 Liquid Glass. Quiet, modern, fast." },
+    { f:"Design", o:"Dated interfaces; regressions after each update.", v:"iOS 26 Liquid Glass. Quiet, modern, fast." },
     { f:"Cost", o:"Paywalls, subscriptions, \u2018premium\u2019 tiers.", v:"Free today. No tier, no upsell." },
   ],
   tr: [
@@ -229,7 +229,7 @@ const COMPARE = {
     { f:"\u00C7evrimd\u0131\u015F\u0131", o:"Temel \u00F6zellikler internet gerektirir.", v:"Namaz, K\u0131ble, Kur\u2019an, Zikir \u2014 hepsi \u00E7evrimd\u0131\u015F\u0131." },
     { f:"Kilit Ekran\u0131", o:"Widget\u2019lar iOS g\u00FCncellemelerinde bozulur.", v:"Live Activity, Dynamic Island, StandBy \u2014 tamam\u0131 destekli." },
     { f:"Do\u011Fruluk", o:"Yaz/k\u0131\u015F saati hatalar\u0131, s\u0131n\u0131rl\u0131 hesaplama.", v:"22 y\u00F6ntem, zaman dilimi bilinci, seyahat alg\u0131lama." },
-    { f:"Tasar\u0131m", o:"Eski aray\u00FCzler; her g\u00FCncellemede geriye d\u00F6n\u00FC\u015Fler.", v:"iOS 18 Liquid Glass. Sade, modern, h\u0131zl\u0131." },
+    { f:"Tasar\u0131m", o:"Eski aray\u00FCzler; her g\u00FCncellemede geriye d\u00F6n\u00FC\u015Fler.", v:"iOS 26 Liquid Glass. Sade, modern, h\u0131zl\u0131." },
     { f:"Maliyet", o:"Paywall, abonelik, \u2018premium\u2019 seviyeler.", v:"\u015Eu an \u00FCcretsiz. Seviye yok, upsell yok." },
   ]
 };
