@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vakit - Gizlilik Politikası | Privacy Policy</title>
-    <meta name="description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz, tamamen anonim kullanım.">
+    <meta name="description" content="Vakit uygulamasının gizlilik politikası. Hesap gerektirmez, GPS koordinatı toplanmaz, ibadet kayıtları yalnızca Apple iCloud üzerinden senkronlanır.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Hakan Çelik">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vakit.hakancelik.dev/privacy.html">
     <meta property="og:title" content="Vakit - Gizlilik Politikası">
-    <meta property="og:description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz.">
+    <meta property="og:description" content="Vakit uygulamasının gizlilik politikası. Hesap gerektirmez, GPS koordinatı toplanmaz.">
     <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
     <meta property="og:locale" content="tr_TR">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Vakit - Gizlilik Politikası">
-    <meta name="twitter:description" content="Vakit uygulamasının gizlilik politikası. Kişisel veri toplanmaz, konum bilgisi paylaşılmaz.">
+    <meta name="twitter:description" content="Vakit uygulamasının gizlilik politikası. Hesap gerektirmez, GPS koordinatı toplanmaz.">
     <link rel="canonical" href="https://vakit.hakancelik.dev/privacy.html">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -28,7 +28,7 @@
       .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
       .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
       .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
-      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px }
+      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
       .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
@@ -87,29 +87,135 @@
 (function() {
   var lang = localStorage.getItem('preferredLanguage') || 'tr';
   var content = {
-    tr: {
-      title: 'Gizlilik <em>Politikası</em>',
-      desc: 'Vakit gizliliğinize saygı duyar. Yalnızca namaz vakitlerini hesaplamak, kıble yönünü belirlemek, yerel hatırlatıcılar göndermek ve uygulama performansını iyileştirmek için gerekli verileri toplarız. Toplanan verilerin çoğu cihazınızda kalır; yalnızca anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla güvenli sunuculara gönderilir.',
-      sections: [
-        { t: '1. Topladığımız Veriler', b: 'İsminizi, e-posta adresinizi, fotoğraflarınızı, mikrofonunuzu, kameranızı, rehberinizi veya herhangi bir kişisel tanımlayıcı bilgiyi toplamayız.\n\nAnonim analitik veriler yalnızca uygulama geliştirme amacıyla toplanır ve şunları içerir:\n\u2022 Bölgesel konum bilgisi (ülke, şehir, ilçe) \u2013 GPS koordinatları (enlem/boylam) toplanmaz\n\u2022 Cihaz bilgisi (model, işletim sistemi sürümü, uygulama sürümü)\n\u2022 Uygulama tercihleri (dil, hesaplama yöntemi, tema)\n\u2022 Özellik kullanım istatistikleri (zikir sayısı, ekran görüntülenme süreleri)\n\nToplanmayan veriler:\n\u2022 GPS koordinatları (enlem/boylam)\n\u2022 Zikir içerikleri veya özel zikir isimleri\n\u2022 Arama sorgusu metinleri\n\u2022 Kişisel ibadet detayları' },
-        { t: '2. Verilerinizi Nasıl Kullanıyoruz', b: '\u2022 Namaz Vakti Hesaplama \u2013 Konum cihazınızda yerel olarak işlenir.\n\u2022 Kıble Yönü \u2013 Konum ve yön bilgisi cihaz üzerinde birleştirilir.\n\u2022 İbadet Hatırlatıcıları \u2013 Yerel bildirimler planlanır.\n\u2022 Kullanıcı Tercihleri \u2013 Yerel olarak saklanır.\n\u2022 Analitik ve İyileştirme \u2013 Anonim kullanım verileri uygulama performansını izlemek, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla güvenli sunuculara gönderilir.' },
-        { t: '3. Veri Paylaşımı & Üçüncü Taraflar', b: 'Verilerinizi hiç kimseyle paylaşmıyor, satmıyor veya aktarmıyoruz. Anonim analitik veriler uygulama geliştirme ve iyileştirme amacıyla güvenli veritabanında saklanır. Bu veriler kişisel olarak tanımlanamaz, hiç kimseyle paylaşılmaz ve yalnızca toplu istatistiksel analizler için kullanılır.' },
-        { t: '4. Güvenlik', b: 'Tüm yerel veriler iPhone\'unuzda kalır ve iOS sandbox\'ı ile şifreleme tarafından korunur. Analitik veriler güvenli veritabanında şifrelenmiş olarak saklanır ve yalnızca anonim istatistiksel analizler için kullanılır. Veriler hiç kimseyle paylaşılmaz. Kişisel tanımlayıcı bilgiler toplanmaz veya saklanmaz.' }
-      ],
-      nav: { features: 'Özellikler', trust: 'Emanet', faq: 'SSS', download: 'İndir' }
-    },
-    en: {
-      title: 'Privacy <em>Policy</em>',
-      desc: 'Vakit respects your privacy. We only collect the data necessary to calculate prayer times, determine qibla direction, send local notifications, and improve app performance. Most collected data remains on your device; only anonymous analytics data is sent to secure servers for app development and improvement purposes.',
-      sections: [
-        { t: '1. Data We Collect', b: 'We do not collect your name, email, photos, microphone, camera, contacts, or any personally identifiable information.\n\nAnonymous analytics data collected for app development includes:\n\u2022 Regional location (country, city) \u2013 GPS coordinates (lat/lon) are not collected\n\u2022 Device info (model, OS version, app version)\n\u2022 App preferences (language, calculation method, theme)\n\u2022 Feature usage statistics (dhikr count, screen view durations)\n\nData NOT collected:\n\u2022 GPS coordinates (latitude/longitude)\n\u2022 Dhikr contents or custom dhikr names\n\u2022 Search query texts\n\u2022 Personal worship details' },
-        { t: '2. How We Use Your Data', b: '\u2022 Prayer Time Calculation \u2013 Location is processed locally on your device.\n\u2022 Qibla Direction \u2013 Location and heading are combined on-device.\n\u2022 Worship Reminders \u2013 Local notifications are scheduled.\n\u2022 User Preferences \u2013 Stored locally.\n\u2022 Analytics & Improvement \u2013 Anonymous usage data is sent to secure servers to monitor performance, detect bugs, and improve user experience.' },
-        { t: '3. Data Sharing & Third Parties', b: 'We do not share, sell, or transfer your data to anyone. Anonymous analytics data is stored in a secure database for app development. This data cannot be personally identified, is not shared with anyone, and is used only for aggregate statistical analysis.' },
-        { t: '4. Security', b: 'All local data stays on your iPhone, protected by iOS sandbox and encryption. Analytics data is stored encrypted in a secure database and used only for anonymous statistical analysis. Data is not shared with anyone. No personally identifiable information is collected or stored.' }
-      ],
-      nav: { features: 'Features', trust: 'Trust', faq: 'FAQ', download: 'Download' }
+  "tr": {
+    "title": "Gizlilik <em>Politikası</em>",
+    "desc": "Son güncelleme: 8 Mayıs 2026 — Sürüm 1.5.0\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kişisel kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar tamamen cihazınızda hesaplanır. Yalnızca: (1) ibadet kayıtlarınız (zikir, hatim, yer imleri vb.) sizin Apple iCloud alanınızda senkronlanır, (2) tamamen anonim istatistikler uygulamayı iyileştirmek için sunucularımıza gönderilir.",
+    "sections": [
+      {
+        "t": "1. Topladığımız Veriler",
+        "b": "Toplamadığımız veriler:\n• Ad, e-posta, telefon, fotoğraf, mikrofon, kamera, rehber\n• GPS koordinatları (enlem/boylam) – sunucuya hiç gönderilmez\n• Zikir içerikleri, özel zikir isimleri, arama sorgu metinleri\n• Hesap bilgileri (Vakit'in kendi hesap sistemi yoktur)\n\nCihazınızda saklanan ve sizin özel iCloud alanınızda senkronlanan veriler:\n• Zikir kayıtları, hatim ilerlemesi, ibadet hedefleri\n• Kur'an ve hadis yer imleri, okuma geçmişi\n• Sure tamamlama sayaçları, hadis bölüm durumları\n• Favori camiler\n• Uygulama tercihleri (dil, hesaplama yöntemi, bildirim ayarları, tema)\n\nAnonim olarak güvenli sunucularımıza gönderilen veriler:\n• Bölgesel konum (ülke, şehir, ilçe) – GPS koordinatları DEĞİL\n• Cihaz modeli, iOS sürümü, uygulama sürümü, watchOS sürümü\n• Uygulama tercihleri (dil, hesaplama yöntemi, tema)\n• Özellik kullanım istatistikleri (toplam zikir sayısı, ekran görüntülenme süreleri)\n• Çökme raporları (Firebase Crashlytics aracılığıyla, kişisel veri içermez)"
+      },
+      {
+        "t": "2. Verilerinizi Nasıl Kullanıyoruz",
+        "b": "• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak Adhan kütüphanesi ile çevrim dışı işlenir.\n• Kıble Yönü – Konum ve pusula yönü cihaz üzerinde birleştirilir.\n• İbadet Hatırlatıcıları – Yerel bildirimler iOS tarafından planlanır; sunucu kullanılmaz.\n• Yakındaki Camiler – Konumunuz Apple MapKit'e gönderilir (cami arama, mesafe, yol tarifi); Vakit sunucularına gönderilmez.\n• Kullanıcı Verileri (zikir, hatim, yer imleri) – Cihazınızda SwiftData ile saklanır ve sizin özel Apple iCloud alanınızda senkronlanır.\n• Analitik ve İyileştirme – Anonim kullanım verileri performans izleme, hata tespiti ve deneyim iyileştirme için kullanılır."
+      },
+      {
+        "t": "3. iCloud Senkronizasyonu (CloudKit)",
+        "b": "Vakit, ibadet kayıtlarınızı (zikir, hatim, yer imleri, hedefler, favori camiler) Apple'ın CloudKit altyapısı üzerinden cihazlarınız arasında senkronlar. Bu veriler:\n• Yalnızca sizin Apple ID'nize ait özel iCloud alanında (private database) tutulur.\n• Apple altyapısında şifrelenir; biz, Apple çalışanları ve üçüncü taraflar bu verilere erişemez.\n• iPhone, iPad ve Apple Watch arasında otomatik senkronlanır.\n• iCloud'u devre dışı bıraktığınızda yalnızca cihazınızda kalır.\n• \"Hesabımı Sil\" özelliğini veya iCloud'dan Vakit verilerini sildiğinizde tüm cihazlarınızdan kaldırılır.\n\nDetaylar için: apple.com/legal/privacy"
+      },
+      {
+        "t": "4. Apple Watch Verileri",
+        "b": "Vakit, watchOS 11+ üzerinde companion uygulama içerir. Watch tarafında:\n• Konum izniniz Watch'a ayrı verilir; iPhone'da Vakit yüklüyse konum WatchConnectivity ile iPhone'dan alınır, yoksa Watch GPS'i kullanılır.\n• Pusula sensörü kıble yönü için cihazda işlenir; sunucuya gönderilmez.\n• Sağlık (HealthKit), aktivite veya kalp atışı verisi okumayız.\n• Bildirimler iOS notification mirroring ile iPhone'dan iletilir; Watch yalnız çalışıyorsa kendi yerel bildirimlerini planlar."
+      },
+      {
+        "t": "5. Üçüncü Taraf Hizmetler",
+        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbiri kişisel kimlik bilginize bağlı değildir:\n\n• Apple iCloud / CloudKit – Kullanıcı verisi senkronizasyonu (sizin özel iCloud alanınızda).\n• Apple MapKit – Yakındaki camiler, harita ve yol tarifi (konum Apple'a gönderilir).\n• Firebase Analytics (Google) – Anonim kullanım istatistikleri. Reklam tanımlayıcısı (IDFA) toplanmaz; reklam izleme amacıyla kullanılmaz.\n• Firebase Crashlytics (Google) – Anonim çökme raporları (stack trace, cihaz modeli, iOS sürümü).\n• Firebase Remote Config (Google) – Özellik bayrakları ve kademeli rollout (cihazdan veri okumaz).\n• Google AdMob – Yalnızca isteğe bağlı \"Sadaka Modu\"nda ödüllü video reklam göstermek için. Detay aşağıdaki bölümde.\n• Apple StoreKit 2 – İsteğe bağlı bağışlar (IAP). Ödeme bilgileriniz Apple üzerinden işlenir; Vakit kart bilgisi görmez.\n• Apple Push Notification Service (APNs) – Yalnızca yerel bildirimler kullanılır; uzak push gönderilmez.\n\nGoogle gizlilik politikası: policies.google.com/privacy"
+      },
+      {
+        "t": "6. Reklamlar (Sadaka Modu)",
+        "b": "Vakit reklam göstermez. Yalnızca isteğe bağlı \"Sadaka Modu\"nda, kullanıcı geliştiriciyi desteklemek için kendisi başlatırsa Google AdMob üzerinden ödüllü video reklamı görüntülenir. Bu durumda:\n• Reklam Google AdMob tarafından sunulur ve cihaz/reklam tanımlayıcı (IDFA) bilgisi kullanabilir.\n• iOS App Tracking Transparency (ATT) iznini reddederseniz IDFA paylaşılmaz; kişiselleştirilmemiş reklam gösterilir.\n• Bu özellik kullanıcı isteğine bağlıdır; başlatmadığınız sürece hiçbir reklam SDK'sı veri toplamaz.\n• Sadaka Modu özelliği Firebase Remote Config ile uzaktan kapatılabilir; özelliği hiç kullanmamayı tercih edebilirsiniz.\n\nGoogle AdMob gizlilik: support.google.com/admob/answer/6128543"
+      },
+      {
+        "t": "7. Bağışlar (In-App Purchase)",
+        "b": "Vakit ücretsizdir. Geliştiriciyi desteklemek için \"Vakit'i Yaşat\" ekranından ₺25 / ₺50 / ₺100 / ₺250 kademelerinde isteğe bağlı bağış yapabilirsiniz. Bu işlemler:\n• Apple StoreKit 2 ile işlenir; ödeme bilgileriniz (kart, IBAN, Apple Pay) yalnızca Apple'a iletilir.\n• Vakit, ödeme yöntemi veya finansal bilgilerinizi görmez ve saklamaz.\n• Bağışların geri ödemesi yalnızca Apple üzerinden talep edilebilir (reportaproblem.apple.com)."
+      },
+      {
+        "t": "8. Veri Saklama Süresi",
+        "b": "• Yerel cihaz verileri – Uygulamayı silene kadar saklanır.\n• iCloud verileri – iCloud'dan Vakit kapsamını silene veya Apple ID'nizi devre dışı bırakana kadar saklanır.\n• Anonim analitik verileri – Toplu istatistiksel amaçlarla en fazla 24 ay tutulur, sonra silinir.\n• Çökme raporları (Crashlytics) – 90 gün tutulur, sonra silinir.\n• Sunucu logları – 30 gün içinde rotate edilir."
+      },
+      {
+        "t": "9. Haklarınız (KVKK / GDPR)",
+        "b": "Türkiye KVKK ve AB GDPR kapsamında şu haklara sahipsiniz:\n• Hakkınızda hangi anonim verilerin toplandığını öğrenme hakkı\n• Veri işlenmesine itiraz etme hakkı (Ayarlar > Analitik'i kapatabilirsiniz)\n• Verilerin silinmesini isteme hakkı (Ayarlar > Hesabımı Sil)\n• Veri taşınabilirliği hakkı\n• KVKK Kurumu'na başvurma hakkı\n\nBaşvurularınızı hakancelikdev@gmail.com adresine iletebilirsiniz; en geç 30 gün içinde yanıt veririz."
+      },
+      {
+        "t": "10. Çocukların Gizliliği",
+        "b": "Vakit, App Store'da 4+ yaş kategorisinde sunulur ancak 13 yaş altındaki kullanıcılardan bilerek kişisel veri toplamayız. 13 yaş altı bir çocuğun verisinin toplandığını fark ederseniz lütfen hakancelikdev@gmail.com adresine yazın; ilgili veriler derhal silinir."
+      },
+      {
+        "t": "11. Güvenlik",
+        "b": "Tüm yerel veriler iPhone'unuzda kalır ve iOS sandbox'ı ile cihaz şifrelemesi tarafından korunur. iCloud verileri Apple'ın altyapısında şifrelenir. Sunuculara gönderilen anonim veriler HTTPS/TLS ile iletilir ve şifrelenmiş veritabanında saklanır. Vakit ayrıca jailbreak, debugger ve enjeksiyon tespiti yaparak hassas işlemler için ek koruma sağlar."
+      },
+      {
+        "t": "12. Politika Değişiklikleri",
+        "b": "Bu politika, uygulama özelliklerindeki değişikliklere bağlı olarak güncellenebilir. Önemli değişikliklerde bu sayfanın \"Son güncelleme\" tarihi yenilenir ve uygulama içinde bilgilendirme gösterilir. Politikayı düzenli aralıklarla kontrol etmenizi öneririz."
+      },
+      {
+        "t": "13. İletişim",
+        "b": "Gizlilikle ilgili sorularınız, başvurularınız veya geri bildirimleriniz için: hakancelikdev@gmail.com\n\nVeri Sorumlusu: Hakan Çelik (Türkiye)"
+      }
+    ],
+    "nav": {
+      "features": "Özellikler",
+      "trust": "Emanet",
+      "faq": "SSS",
+      "download": "İndir"
     }
-  };
+  },
+  "en": {
+    "title": "Privacy <em>Policy</em>",
+    "desc": "Last updated: 8 May 2026 — Version 1.5.0\n\nVakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Only: (1) your worship records (dhikr, khatm, bookmarks etc.) sync within your own Apple iCloud account, (2) fully anonymous statistics are sent to our servers to improve the app.",
+    "sections": [
+      {
+        "t": "1. Data We Collect",
+        "b": "Data we DO NOT collect:\n• Name, email, phone, photos, microphone, camera, contacts\n• GPS coordinates (latitude/longitude) – never sent to our servers\n• Dhikr contents, custom dhikr names, search query texts\n• Account credentials (Vakit has no account system)\n\nData stored on your device and synced within your private iCloud space:\n• Dhikr records, khatm progress, worship goals\n• Quran and hadith bookmarks, reading history\n• Surah completion counters, hadith section status\n• Favorite mosques\n• App preferences (language, calculation method, notification settings, theme)\n\nAnonymous data sent to our secure servers:\n• Regional location (country, city, district) – NOT GPS coordinates\n• Device model, iOS version, app version, watchOS version\n• App preferences (language, calculation method, theme)\n• Feature usage statistics (total dhikr count, screen view durations)\n• Crash reports (via Firebase Crashlytics, contains no personal data)"
+      },
+      {
+        "t": "2. How We Use Your Data",
+        "b": "• Prayer Time Calculation – Location is processed locally on your device, calculated offline using the Adhan library.\n• Qibla Direction – Location and compass heading are combined on-device.\n• Worship Reminders – Local notifications are scheduled by iOS; no server is used.\n• Nearby Mosques – Your location is sent to Apple MapKit (mosque search, distance, directions); not to Vakit servers.\n• User Data (dhikr, khatm, bookmarks) – Stored locally with SwiftData and synced within your private Apple iCloud space.\n• Analytics & Improvement – Anonymous usage data is used for performance monitoring, bug detection, and experience improvement."
+      },
+      {
+        "t": "3. iCloud Synchronization (CloudKit)",
+        "b": "Vakit syncs your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) across your devices via Apple's CloudKit. This data:\n• Lives only in the private database of your own Apple ID.\n• Is encrypted on Apple's infrastructure; we, Apple staff and third parties cannot access it.\n• Syncs automatically across iPhone, iPad and Apple Watch.\n• Stays only on your device if you disable iCloud.\n• Is removed from all your devices when you use \"Delete My Account\" or remove Vakit data from iCloud.\n\nDetails: apple.com/legal/privacy"
+      },
+      {
+        "t": "4. Apple Watch Data",
+        "b": "Vakit ships a companion app on watchOS 11+. On the Watch:\n• Location permission is granted separately on the Watch; if Vakit is installed on iPhone, location is received via WatchConnectivity, otherwise Watch GPS is used.\n• Compass sensor is processed on-device for qibla; never sent to a server.\n• We do not read Health (HealthKit), activity or heart-rate data.\n• Notifications are mirrored from iPhone via iOS notification mirroring; if the Watch runs alone, it schedules its own local notifications."
+      },
+      {
+        "t": "5. Third-Party Services",
+        "b": "Vakit uses the following services for limited purposes. None are tied to your personal identity:\n\n• Apple iCloud / CloudKit – User data sync (in your private iCloud space).\n• Apple MapKit – Nearby mosques, map and directions (location is sent to Apple).\n• Firebase Analytics (Google) – Anonymous usage stats. The Advertising Identifier (IDFA) is not collected; not used for ad tracking.\n• Firebase Crashlytics (Google) – Anonymous crash reports (stack trace, device model, iOS version).\n• Firebase Remote Config (Google) – Feature flags and gradual rollout (does not read data from the device).\n• Google AdMob – Only to display rewarded video ads in the optional \"Sadaka Mode\". Details below.\n• Apple StoreKit 2 – Optional donations (IAP). Payment details are processed by Apple; Vakit never sees card data.\n• Apple Push Notification Service (APNs) – We use only local notifications; no remote push is sent.\n\nGoogle's privacy policy: policies.google.com/privacy"
+      },
+      {
+        "t": "6. Advertising (Sadaka Mode)",
+        "b": "Vakit does not show ads. Only in the optional \"Sadaka Mode\", if the user explicitly starts it to support the developer, a rewarded video ad is shown via Google AdMob. In that case:\n• The ad is served by Google AdMob and may use the advertising identifier (IDFA) and device info.\n• If you decline the iOS App Tracking Transparency (ATT) prompt, IDFA is not shared and a non-personalized ad is shown.\n• The feature is opt-in; no ad SDK collects data unless you start it.\n• Sadaka Mode can be disabled remotely via Firebase Remote Config; you may simply choose never to use it.\n\nGoogle AdMob privacy: support.google.com/admob/answer/6128543"
+      },
+      {
+        "t": "7. Donations (In-App Purchase)",
+        "b": "Vakit is free. To support the developer you can make optional donations of ₺25 / ₺50 / ₺100 / ₺250 from the \"Vakit'i Yaşat\" screen. These transactions:\n• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.\n• Vakit never sees or stores your payment method or financial details.\n• Refunds can only be requested through Apple (reportaproblem.apple.com)."
+      },
+      {
+        "t": "8. Data Retention",
+        "b": "• Local device data – Stored until you delete the app.\n• iCloud data – Stored until you remove Vakit's scope from iCloud or disable your Apple ID.\n• Anonymous analytics data – Kept for at most 24 months for aggregate statistical purposes, then deleted.\n• Crash reports (Crashlytics) – Kept for 90 days, then deleted.\n• Server logs – Rotated within 30 days."
+      },
+      {
+        "t": "9. Your Rights (KVKK / GDPR)",
+        "b": "Under Turkey's KVKK and the EU GDPR you have the right to:\n• Know which anonymous data is collected about you\n• Object to data processing (you can disable Settings > Analytics)\n• Request deletion of your data (Settings > Delete My Account)\n• Data portability\n• File a complaint with the KVKK authority\n\nSubmit requests to hakancelikdev@gmail.com; we respond within 30 days at the latest."
+      },
+      {
+        "t": "10. Children's Privacy",
+        "b": "Vakit is offered in the App Store with a 4+ age rating, but we do not knowingly collect personal data from users under 13. If you believe that a child under 13 has provided data, please write to hakancelikdev@gmail.com and we will delete the relevant data immediately."
+      },
+      {
+        "t": "11. Security",
+        "b": "All local data stays on your iPhone, protected by the iOS sandbox and device encryption. iCloud data is encrypted on Apple's infrastructure. Anonymous data sent to servers is transmitted over HTTPS/TLS and stored in an encrypted database. Vakit also performs jailbreak, debugger and injection detection for additional protection during sensitive operations."
+      },
+      {
+        "t": "12. Policy Changes",
+        "b": "This policy may be updated as the app evolves. For material changes the \"Last updated\" date on this page is refreshed and an in-app notice is shown. We recommend reviewing this policy periodically."
+      },
+      {
+        "t": "13. Contact",
+        "b": "For privacy questions, requests or feedback: hakancelikdev@gmail.com\n\nData Controller: Hakan Çelik (Turkey)"
+      }
+    ],
+    "nav": {
+      "features": "Features",
+      "trust": "Trust",
+      "faq": "FAQ",
+      "download": "Download"
+    }
+  }
+};
   var c = content[lang] || content.tr;
   document.getElementById('legalTitle').innerHTML = c.title;
   document.getElementById('legalDesc').textContent = c.desc;
