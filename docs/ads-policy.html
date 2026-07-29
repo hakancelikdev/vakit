@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vakit - Reklam Politikası | Ad Policy</title>
+    <meta name="description" content="Vakit'in helal-uyumlu reklam politikası. Bahis, alkol, müstehcen, faiz veya fal/büyü içerikli reklam göstermeyiz.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Hakan Çelik">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/ads-policy.html">
+    <meta property="og:title" content="Vakit - Reklam Politikası">
+    <meta property="og:description" content="Helal-uyumlu reklam taahhüdü. Bahis, alkol, müstehcen, faiz veya fal reklam göstermeyiz.">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:locale" content="tr_TR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vakit - Reklam Politikası">
+    <meta name="twitter:description" content="Helal-uyumlu reklam taahhüdü.">
+    <link rel="canonical" href="https://vakit.hakancelik.dev/ads-policy.html">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
+      .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
+      .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
+      .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
+      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
+      .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
+      .legal-contact a { color: var(--accent-ink); transition: color .2s }
+      .legal-contact a:hover { color: var(--ink) }
+      @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
+    </style>
+    <script src="language-detection.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#showcase">Features</a>
+    <a href="index.html#trust">Trust</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <div class="nav-lang" role="tablist">
+      <button data-lang="en">EN</button>
+      <button data-lang="tr" class="on">TR</button>
+    </div>
+    <a href="https://apps.apple.com/app/id6748356813" class="nav-dl">Download</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+</nav>
+
+<main class="legal-page">
+  <h1 id="legalTitle"></h1>
+  <p class="legal-desc" id="legalDesc"></p>
+  <div id="legalSections"></div>
+  <div class="legal-contact">
+    <a href="mailto:hakancelikdev@gmail.com">hakancelikdev@gmail.com</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="ads-policy.html">Ads</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+  </div>
+  <div class="foot-sig">Made with care &middot; MIT licensed &middot; &copy; 2026 Hakan Çelik</div>
+</footer>
+
+<script>
+(function() {
+  var lang = localStorage.getItem('preferredLanguage') || 'tr';
+  var content = {
+  "tr": {
+    "titleBefore": "Reklam ",
+    "titleEm": "Politikası",
+    "desc": "Son güncelleme: 10 Mayıs 2026 — Sürüm 1.5.0\n\nİslami bir uygulamada gördüğünüz reklam, ibadet anınızın bir parçası olur. Bu yüzden Vakit, hangi reklamların gösterilebileceğine, hangi kategorilerin asla geçemeyeceğine dair manifest seviyesinde bir taahhüt veriyor. Bu sayfa o taahhüdün tam metnidir.",
+    "sections": [
+      {
+        "t": "1. Niyetimiz",
+        "b": "Vakit, kullanıcısına saygı duyan ve İslami yaşamın kutsiyetini koruyan bir uygulama olmayı amaçlar. Reklam göstermek zorunda kaldığımızda — yani uygulamayı sürdürülebilir kılmak için — bu reklamların hiçbiri ibadet anınızı bozmamalı, dini hassasiyetlerinizle çelişmemelidir.\n\nBu manifesto bir pazarlama vaadi değil; kalıcı bir taahhüttür. Politika değişikliklerinde bu sayfanın \"Son güncelleme\" tarihi yenilenir ve geçmiş versiyonları arşivlenir."
+      },
+      {
+        "t": "2. Asla Göstermediğimiz Reklam Kategorileri",
+        "b": "Aşağıdaki kategorilerdeki reklamların gösterilmesine teknik olarak izin vermeyiz:\n\n• Kumar, bahis, casino, iddaa, poker, spor bahis siteleri\n• Alkollü içecekler ve tütün ürünleri\n• Müstehcen, flört, çıkış (dating) uygulamaları\n• Çıplaklık, cinsel içerik, yetişkin ürünler\n• Faizli kredi, hızlı tüketici kredisi, faizli yatırım enstrümanları\n• Fal, astroloji, medyumluk, büyü, tarot içerikleri\n• Domuz ve domuz ürünleri\n• Garip-zenginleşme şemaları (get-rich-quick), MLM tuzakları\n• Diğer dini görüşlerin propaganda reklamları\n\nBu liste yaşayan bir belgedir. Yeni bir kategori veya tek bir kötü reklam kullanıcı şikayeti ile fark edildiğinde 7 gün içinde teknik olarak bloklanır ve listeye eklenir."
+      },
+      {
+        "t": "3. Teknik Önlemler",
+        "b": "Reklam ağı sağlayıcısı (Google AdMob) tarafında çift katmanlı kontrol uygularız:\n\n• Maksimum içerik derecesi: G (General audience). Yetişkin içeriği bu eşiğin tamamen üstünde, biz onun da altındayız.\n• Brand Safety > Block Content panelinde yukarıdaki tüm kategoriler aktif olarak işaretli.\n• URL ve anahtar kelime denylist: \"casino\", \"bahis\", \"iddaa\", \"flirt\", \"dating\", \"fal\", \"astroloji\", \"medyum\", \"tarot\" gibi terimleri içeren reklamlar geçemez.\n• Reklam kişiselleştirme tercihiniz iOS App Tracking Transparency (ATT) ile sizin elinizde — reddederseniz IDFA paylaşılmaz, jenerik reklam gösterilir.\n\nFiltrelerin tamamı doğrulanabilir: Google AdMob Brand Safety belgeleri ve IAB Tech Tax Content Taxonomy üzerinden takip edilir."
+      },
+      {
+        "t": "4. Mevcut Durum (Mayıs 2026)",
+        "b": "Vakit şu anda hiç banner veya interstitial reklam göstermez. Tek reklam kullanımı isteğe bağlı \"Sadaka Modu\"dur: kullanıcı bizzat \"Vakit'i Yaşat\" ekranından kısa video reklam izlemeyi tercih ederse devreye girer. Bu opsiyon kapatılabilir, kullanılmayabilir.\n\nGelecekte freemium tier kapsamında ücretsiz kullanıcılar için sınırlı banner reklam tanıtımı düşünülmektedir. Bu olduğunda yukarıdaki tüm filtreler ve kullanıcı şikayet süreci aktif olarak yürürlükte olacaktır."
+      },
+      {
+        "t": "5. Reklamı Bildir",
+        "b": "Bir reklam gözünüze çarpıyor ve dini hassasiyetinizle çelişiyor mu? İki yol var:\n\n• Uygulama içi: Reklamın yanındaki ⚠️ ikonuna dokunun → kategori seçin (Kumar, Müstehcen, Faiz, Fal, Diğer) → opsiyonel ekran görüntüsü ekleyin. 24 saat içinde otomatik onay, 7 gün içinde inceleme ve gerekirse filtre güncellemesi.\n• E-posta: hakancelikdev@gmail.com adresine ekran görüntüsü ile birlikte yazın.\n\nGeçerli bulunan her şikayet AdMob Brand Safety filtresine eklenir. Çeyreklik agregat sonuçları (anonim) bu sayfada yayımlanır."
+      },
+      {
+        "t": "6. Premium: Tamamen Reklamsız",
+        "b": "Reklamsız bir deneyim isteyenler için ileride tek seferlik premium satın alma seçeneği gelecektir. Bu satın almayla ilgili taahhütler:\n\n• Tek seferlik ödeme. Aylık veya yıllık abonelik tuzağı yok.\n• Tüm temel ibadet özellikleri ücretsiz tier'da kalır — premium yalnızca \"reklam yok\" satın alır.\n• Sürpriz paywall yok. Bugün ücretsiz olan bir özellik yarın premium arkasına alınmaz; alındığında changelog'da açıkça duyurulur.\n• Geri ödeme Apple üzerinden — şikayet ederseniz tek tık ile.\n\nFiyatlama duyurusu lansmanla birlikte yapılır."
+      },
+      {
+        "t": "7. Şeffaflık ve Audit",
+        "b": "• Bu politika sayfası ve reklam-ile-ilgili App Store metni her sürümde güncel tutulur.\n• Çeyrekte bir defa anonim şikayet özeti yayınlanır: kaç şikayet alındı, kaçı geçerli bulundu, hangi kategoriler eklendi.\n• AdMob ekran görüntüleri (Brand Safety panel) talep üzerine bağımsız denetimcilere açılır.\n• Reklam ağı değişirse (örn. AdMob → başka bir SSP'ye) yeni filtreler aynı kategorileri kapsayacak şekilde önce kurulur, sonra geçilir."
+      },
+      {
+        "t": "8. İletişim",
+        "b": "Sorular, şikayetler veya kategori öneriler için: hakancelikdev@gmail.com\n\nGeliştirici: Hakan Çelik (Türkiye)"
+      }
+    ],
+    "nav": {
+      "features": "Özellikler",
+      "trust": "Emanet",
+      "faq": "SSS",
+      "download": "İndir"
+    }
+  },
+  "en": {
+    "titleBefore": "Ad ",
+    "titleEm": "Policy",
+    "desc": "Last updated: 10 May 2026 — Version 1.5.0\n\nIn an Islamic app, the ads you see become part of your worship moment. That's why Vakit makes a manifesto-level commitment about what ads can be shown and which categories will never be allowed. This page is the full text of that commitment.",
+    "sections": [
+      {
+        "t": "1. Our Intent",
+        "b": "Vakit aims to be an app that respects its users and protects the sanctity of Islamic life. When we have to show ads — to keep the app sustainable — none of those ads should disrupt your worship moment or contradict your religious sensitivities.\n\nThis manifesto is not a marketing promise; it is a permanent commitment. When the policy changes, the \"Last updated\" date on this page is refreshed and previous versions are archived."
+      },
+      {
+        "t": "2. Categories We Never Show",
+        "b": "Ads in the following categories are technically blocked from ever being served:\n\n• Gambling, betting, casino, sports betting, poker\n• Alcohol and tobacco products\n• Adult, dating, sexual content, sex products\n• Nudity in any form\n• Interest-based loans, payday loans, interest-bearing investments\n• Fortune-telling, astrology, psychic readings, magic, tarot\n• Pork and pork products\n• Get-rich-quick schemes, MLM traps\n• Religious propaganda from other faiths\n\nThis list is a living document. When a new category or a single bad ad is identified through user feedback, it is technically blocked within 7 days and added to the list."
+      },
+      {
+        "t": "3. Technical Safeguards",
+        "b": "We apply double-layered controls on the ad network side (Google AdMob):\n\n• Maximum content rating: G (General audience). Adult content is well above this threshold; we are below even that.\n• In Brand Safety > Block Content, all categories above are actively flagged.\n• URL and keyword denylist: ads containing terms like \"casino\", \"betting\", \"gambling\", \"flirt\", \"dating\", \"horoscope\", \"psychic\", \"tarot\" cannot pass.\n• Ad personalization is in your hands via iOS App Tracking Transparency (ATT) — if you decline, IDFA is not shared and a generic ad is shown.\n\nAll filters are auditable: Google AdMob Brand Safety documentation and IAB Tech Tax Content Taxonomy."
+      },
+      {
+        "t": "4. Current State (May 2026)",
+        "b": "Vakit currently shows no banner or interstitial ads at all. The only ad usage is the optional \"Sadaka Mode\": only if the user explicitly chooses to watch a short video ad from the \"Vakit'i Yasat\" screen. This option can be disabled and never used.\n\nIn the future, a limited banner promotion for free users in the freemium tier is being considered. When that happens, all the filters and user-feedback flows above will be active and enforced."
+      },
+      {
+        "t": "5. Report an Ad",
+        "b": "Did you spot an ad that conflicts with your religious sensitivities? Two ways:\n\n• In-app: Tap the ⚠️ icon next to the ad → choose a category (Gambling, Adult, Interest, Fortune-telling, Other) → optionally attach a screenshot. Auto-acknowledgement within 24 hours; review and filter update within 7 days.\n• Email: write to hakancelikdev@gmail.com with a screenshot.\n\nEvery valid report is added to the AdMob Brand Safety filter. Quarterly aggregate results (anonymized) are published on this page."
+      },
+      {
+        "t": "6. Premium: Completely Ad-Free",
+        "b": "For users who want an ad-free experience, a one-time premium purchase will be available later. Commitments around this purchase:\n\n• One-time payment. No monthly or yearly subscription trap.\n• All core worship features stay in the free tier — premium only buys \"no ads\".\n• No surprise paywalls. A feature that is free today will not be moved behind premium tomorrow; if it is, it is explicitly announced in the changelog.\n• Refunds are handled via Apple — one tap if you complain.\n\nPricing will be announced at launch."
+      },
+      {
+        "t": "7. Transparency and Audit",
+        "b": "• This policy page and the related App Store text are kept up to date with every release.\n• Once a quarter an anonymous report summary is published: how many reports we received, how many were valid, which categories were added.\n• AdMob screenshots (Brand Safety panel) are made available to independent auditors on request.\n• If the ad network changes (e.g., from AdMob to another SSP), the new filters covering the same categories are set up first, and then we switch."
+      },
+      {
+        "t": "8. Contact",
+        "b": "For questions, reports or category suggestions: hakancelikdev@gmail.com\n\nDeveloper: Hakan Çelik (Turkey)"
+      }
+    ],
+    "nav": {
+      "features": "Features",
+      "trust": "Trust",
+      "faq": "FAQ",
+      "download": "Download"
+    }
+  }
+};
+  var c = content[lang] || content.tr;
+  // Title with em — built via DOM (no innerHTML on user-provided content)
+  var title = document.getElementById('legalTitle');
+  title.textContent = '';
+  title.appendChild(document.createTextNode(c.titleBefore));
+  var em = document.createElement('em');
+  em.textContent = c.titleEm;
+  title.appendChild(em);
+  // Description as plain text
+  document.getElementById('legalDesc').textContent = c.desc;
+  // Sections built with safe DOM API
+  var container = document.getElementById('legalSections');
+  container.textContent = '';
+  c.sections.forEach(function(s) {
+    var card = document.createElement('div');
+    card.className = 'legal-card';
+    var h3 = document.createElement('h3');
+    h3.textContent = s.t;
+    var p = document.createElement('p');
+    p.textContent = s.b;
+    card.appendChild(h3);
+    card.appendChild(p);
+    container.appendChild(card);
+  });
+  document.documentElement.lang = lang;
+  // Nav labels
+  var links = document.querySelectorAll('.nav-links a');
+  links[0].textContent = c.nav.features;
+  links[1].textContent = c.nav.trust;
+  links[2].textContent = c.nav.faq;
+  document.querySelector('.nav-dl').textContent = c.nav.download;
+  // Lang toggle
+  document.querySelectorAll('.nav-lang button').forEach(function(b) {
+    b.classList.toggle('on', b.dataset.lang === lang);
+    b.addEventListener('click', function() {
+      localStorage.setItem('preferredLanguage', b.dataset.lang);
+      location.reload();
+    });
+  });
+  // Mobile menu
+  var toggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (toggle) toggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    toggle.textContent = navLinks.classList.contains('open') ? '×' : '≡';
+  });
+})();
+</script>
+</body>
+</html>
