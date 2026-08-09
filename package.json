@@ -4,9 +4,9 @@
   "description": "Modern namaz vakitleri uygulaması landing page",
   "main": "docs/index.html",
   "scripts": {
-    "start": "cd docs && python3 -m http.server 8000",
-    "dev": "cd docs && python3 -m http.server 8000",
-    "build": "echo 'Static site - no build required'",
+    "build": "node build.js",
+    "start": "npm run build && cd docs && python3 -m http.server 8000",
+    "dev": "npm run build && cd docs && python3 -m http.server 8000",
     "test": "echo 'No tests specified'",
     "lint": "echo 'No linting configured'"
   },

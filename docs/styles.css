@@ -160,8 +160,9 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .nav-lang {
   display: flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; font-size: 12px; font-family: var(--mono);
 }
-.nav-lang button { padding: 4px 10px; border-radius: 999px; color: var(--ink-3); transition: all .2s }
-.nav-lang button.on { background: var(--ink); color: var(--bg) }
+.nav-lang a { padding: 4px 10px; border-radius: 999px; color: var(--ink-3); transition: all .2s }
+.nav-lang a:hover { color: var(--ink) }
+.nav-lang a.on { background: var(--ink); color: var(--bg) }
 .nav-dl {
   padding: 9px 18px; border: 1px solid var(--ink); border-radius: 999px; font-size: 13px; font-weight: 500;
   transition: all .2s;

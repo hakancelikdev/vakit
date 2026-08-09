@@ -5,11 +5,15 @@ on:
     branches: [ main ]
     paths:
       - 'docs/**'
+      - 'content.js'
+      - 'build.js'
       - '.github/workflows/deploy.yml'
   pull_request:
     branches: [ main ]
     paths:
       - 'docs/**'
+      - 'content.js'
+      - 'build.js'
       - '.github/workflows/deploy.yml'
 
 permissions:
@@ -20,11 +24,29 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    # docs/index.html, docs/en/index.html, sitemap.xml, robots.txt and llms.txt
+    # are generated from content.js. Regenerating them here proves the committed
+    # copies match their source — otherwise a hand-edit to the HTML would be
+    # silently deployed and then overwritten by the next build.
+    - name: Verify generated pages are up to date
+      run: |
+        node build.js
+        if ! git diff --quiet -- docs; then
+          echo "::error::docs/ is out of date. Run 'npm run build' in site/ and commit the result."
+          git diff --stat -- docs
+          exit 1
+        fi
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
 

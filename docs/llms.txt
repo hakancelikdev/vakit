@@ -1,0 +1,118 @@
+# Vakit — Vakit: Prayer Times, Qibla, Quran
+
+> Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.
+
+Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
+Watch and Mac, built by Hakan Çelik. Current release: 1.7.0, requires
+iOS/macOS 26.0 or later. App Store rating 4.8 from
+340 ratings. Download: https://apps.apple.com/app/id6748356813
+
+## What makes it different
+
+- **Free, with no paywall today.** No subscription, no "premium" tier, no locked features.
+- **No ads.** Nothing is sold beside religious content.
+- **Offline-first.** Prayer times are calculated on the device from your coordinates
+  using one of 13 calculation methods — not fetched from a server. Quran, qibla,
+  dhikr and the calendar all work with no connection.
+- **Private by design.** Coordinates never leave the device. Worship tracking, qada
+  and hatim progress, bookmarks and favourite mosques stay on-device and in the
+  user's own private iCloud. Only anonymous, non-identifying usage counts are sent.
+- **No account.** Nothing to sign up for.
+
+## Features
+
+- **Prayer Times** — 13 calculation methods, timezone-aware, travel-detecting.
+- **Apple Watch** — Prayer times, live qibla, 12 watch face complications.
+- **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
+- **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
+- **Holy Quran** — 114 surahs. Word-by-word, tafsir, recitation, classical Mushaf.
+- **Hadith** — 36,390 ahadith across seven major collections.
+- **Friday Sermon** — Read, listen to and store the Diyanet khutbah offline.
+- **Dhikr Counter** — Ring-based progress, presets, and custom dhikr.
+- **Tasbihat** — 33-33-33, or the full post-prayer sequence.
+- **Asma al-Husna** — 99 names of Allah, with meaning and reflection.
+- **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan.
+- **Karahat Times** — Marked on the day arc, with the narration behind them.
+- **Ablution Guide** — Step-by-step wudu, taught and remembered.
+- **Prayer Guide** — 17 prayer types, illustrated, Madhab-aware.
+- **Zakat & Fitr** — Calculators grounded in classical rulings.
+- **Qada Tracking** — Track missed prayers by time slot and clear the debt.
+- **Widgets** — Home Screen, lock screen, StandBy — and on Mac.
+- **Live Activity** — Dynamic Island and lock-screen countdowns.
+- **Control Center** — Six quick actions — Qibla, next prayer, more.
+- **Worship Tracking** — Activity Rings: prayer, nafl, Jumu'ah, Eid, Tarawih.
+- **Fajr Alarm** — Breaks through silent mode, silent once you've prayed.
+- **Suhoor Alarm** — Set from your fasting days, so you never miss suhoor.
+- **Holy Day Reminders** — Notification the night before 11 Islamic days.
+- **Notifications** — On-device, local, dependable.
+- **Siri Shortcuts** — Ask for times, Qibla, ayat by voice.
+- **Unified Search** — One search, across every tool.
+- **Bookmarks** — Save ayat, hadith, and dhikr.
+- **iCloud Sync** — Your records stay in your own iCloud, on every device.
+- **Tafsir** — Diyanet commentary, in-line with the text.
+- **Share Cards** — Beautiful cards for ayat and dhikr.
+- **Fasting** — Ramadan, Shawwal, and day-by-day tracking.
+- **Nearby Mosques** — Find masajid without sharing your location.
+- **Support Vakit** — Opt-in ways to keep the free app alive.
+- **Dark Mode** — Warm, quiet dark for the late hours.
+
+## Frequently asked questions
+
+### Does it work without internet?
+
+Yes. Prayer times are computed on your phone from your location. Quran, qibla, dhikr, and every core tool work fully offline.
+
+### Will notifications arrive if I never open the app?
+
+Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel.
+
+### Is everything really free?
+
+Today, yes — the entire app is free, with no subscriptions, paywalls, or 'premium' tier. I can't promise that forever (nobody honestly can), but I can promise there's no catch today.
+
+### Where do prayer times come from?
+
+They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates.
+
+### Does it run on Mac?
+
+Yes. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.
+
+### Is there an alarm for Fajr?
+
+Yes. You can set an alarm that rings before sunrise and breaks through silent mode if you haven't prayed Fajr yet. Mark the prayer as done and it stays silent. There's also a suhoor alarm that schedules itself around your fasting days.
+
+### Where does the Friday sermon come from?
+
+The khutbah Diyanet publishes each week lands in the app; you can read it, listen to the audio recording, and download it for offline reading. Because it is Diyanet's publication, this section appears for users whose calculation method is Diyanet.
+
+### What's in the Quran feature?
+
+All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, and a hatim tracker. Everything works offline.
+
+### How does worship tracking work?
+
+An Activity Ring-style view logs your prayers, Quran reading, and dhikr. You can also track a lifetime of missed prayers (qada) by time slot and clear the debt as you pray them. Streaks and gentle statistics help you keep going, without guilt.
+
+### Which widgets exist?
+
+20 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen, Lock Screen, StandBy, and the Mac desktop.
+
+### Is there an Apple Watch app?
+
+Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 12 watch face complications across all faces. It works alongside iPhone — no separate setup.
+
+### Where is my data stored?
+
+Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts, live location and search queries are never sent either. The only thing that leaves the device is anonymous usage statistics that carry no identity.
+
+## Pages
+
+- [Turkish home page](https://vakit.hakancelik.dev/) — canonical
+- [English home page](https://vakit.hakancelik.dev/en/)
+- [Privacy policy](https://vakit.hakancelik.dev/en/privacy.html) ([Turkish](https://vakit.hakancelik.dev/privacy.html))
+- [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
+- [Advertising policy](https://vakit.hakancelik.dev/en/ads-policy.html) ([Turkish](https://vakit.hakancelik.dev/ads-policy.html))
+- [Source](https://github.com/hakancelikdev/vakit)
+
+Last updated: 2026-08-09

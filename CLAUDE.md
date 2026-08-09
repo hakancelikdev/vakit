@@ -4,55 +4,77 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Static landing page for VakitApp (iOS prayer times app), deployed to GitHub Pages at https://vakit.hakancelik.dev. Pure HTML/CSS/JS with no build step or framework dependencies.
+Landing page for VakitApp (iOS/macOS prayer times app), deployed to GitHub Pages at https://vakit.hakancelik.dev. Plain HTML/CSS/JS with one small Node generator — no framework, no bundler, no dependencies.
 
 ## Commands
 
 ```bash
-# Local development - serve from docs/
-cd docs && python3 -m http.server 8000
-# or
-npm start
+npm run build     # regenerate the pages from content.js  (required after any copy change)
+npm run dev       # build, then serve docs/ at http://localhost:8000
 ```
 
-No build, test, or lint steps exist — this is a static site.
+CI re-runs the build on a clean checkout and fails the deploy if the committed `docs/` doesn't match, so always commit the regenerated files alongside the `content.js` change.
 
 ## Architecture
 
-All served files live in `docs/`:
+Page copy lives in **`content.js`** (landing page + page metadata) and **`legal/*.js`** (long-form legal prose, both languages). **`build.js`** renders them into static files under `docs/`:
+
+| Generated file | Contents |
+|---|---|
+| `docs/index.html` | Turkish landing page — canonical, served at `/` |
+| `docs/en/index.html` | English landing page — served at `/en/` |
+| `docs/{privacy,terms,ads-policy}.html` | Turkish legal pages |
+| `docs/en/{privacy,terms,ads-policy}.html` | English legal pages |
+| `docs/sitemap.xml` | every page in both languages, cross-linked with hreflang |
+| `docs/robots.txt` | search + AI crawler rules |
+| `docs/llms.txt` | plain-text app summary for AI assistants |
+
+**Never hand-edit those files** — the next build overwrites them, and CI fails the deploy if they don't match their source.
+
+Hand-maintained files in `docs/`:
 
 | File | Purpose |
-|------|---------|
-| `index.html` | Main landing page |
-| `styles.css` | All styles (CSS variables for theming, glassmorphism, responsive) |
-| `script.js` | All interactivity, i18n strings (COPY, REVIEWS, FAQ objects), prayer time calculations, and UI rendering |
-| `language-detection.js` | Auto-detects browser language on first visit, redirects legacy URLs (en.html → index.html) |
-| `privacy.html` | Privacy policy page |
-| `terms.html` | Terms of service page |
-| `assets/` | Favicons, app icons, localized screenshots (`assets/screenshots/en/`, `assets/screenshots/tr/`) |
+|---|---|
+| `styles.css` | All styles (CSS variables for theming, dark mode, responsive) |
+| `script.js` | Interactivity only: live prayer clock, showcase switching, FAQ accordion, theme, mobile menu |
+| `language-detection.js` | Legacy URL redirects; sends first-time English visitors from `/` to `/en/` |
+| `presentation.html`, `404.html` | Standalone pages, not generated |
+| `assets/` | Favicons, app icons, localized screenshots (`assets/screenshots/{en,tr}/1-9.webp`) |
 
-### Localization System
+### Why content is generated, not rendered client-side
 
-Single-page approach — one `index.html` with dynamic content switching (no separate per-language HTML files).
+Crawlers that don't execute JavaScript — Googlebot's first pass, GPTBot, ClaudeBot, PerplexityBot — previously saw empty `<div>`s where the features, comparison table, reviews and FAQ should have been. Everything is baked into the HTML now.
 
-**How it works:**
-1. `language-detection.js` runs first (inline), detects browser language or reads `localStorage.preferredLanguage`
-2. `script.js` contains all i18n strings in the `COPY` object (keyed by `en`/`tr`), plus `REVIEWS`, `FAQ`, and other data objects
-3. `script.js` renders content dynamically using `data-i18n` attributes and DOM manipulation
+Two other things follow from the generator, and both are the point:
 
-**Adding/editing text:** Update both `tr` and `en` entries in the `COPY` object in `script.js`. For reviews/FAQ, update the `REVIEWS`/`FAQ` objects.
+- The on-page FAQ and the `FAQPage` structured data come from the **same array**, so they can't drift apart.
+- Each language is a real URL with its own `canonical`, so English can be indexed on its own. There is no client-side language switching — the EN/TR control is a plain link.
 
-### CSS Theming
+### Editing content
 
-All colors, spacing, typography, and effects are defined as CSS custom properties (variables) at the top of `styles.css`. The design uses an Apple-inspired glassmorphism aesthetic with `backdrop-filter` and gradient overlays.
+1. Landing page → `content.js` (`COPY`, `FEATURES`, `SHOWCASE`, `COMPARE`, `REVIEWS`, `FAQ`, `META`).
+   Legal text → `legal/privacy.js`, `legal/terms.js`, `legal/ads-policy.js`; their `<head>` metadata → `LEGAL` in `content.js`.
+2. Keep `tr` and `en` arrays the same length; `build.js` throws if they diverge.
+3. Bump `SITE.updated` (drives sitemap `lastmod`).
+4. Run `npm run build` and commit the regenerated files.
 
-### JavaScript Patterns
+`{featureCount}` and `{ratingCount}` in copy strings are substituted at build time, so counts stated in prose can't fall out of sync with the lists.
 
-`script.js` uses a `CONFIG` object for tuning thresholds and a `state` object for runtime state. Key patterns:
-- `IntersectionObserver` for scroll-reveal animations with staggered delays
-- `throttle()` utility for scroll event handlers
-- Event delegation on the FAQ container for dynamically rendered items (from localization)
+**The feature list is a factual claim.** Every entry in `FEATURES` must correspond to something that ships in the current app. When a feature is removed from the app, remove it here in the same release — the site once advertised "Zikir Halkası" for months after it had been deleted from the app.
+
+### CSS theming
+
+All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Dark mode is driven by `data-theme` on `<html>`.
 
 ## Deployment
 
-GitHub Pages via GitHub Actions. Push to `main` branch triggers automatic deployment. The served root is `docs/`.
+GitHub Pages via GitHub Actions. Push to `main` triggers the workflow, which first regenerates `docs/` and fails if the committed output is stale, then publishes `docs/` as the site root.
+
+## Keeping the site in step with the app
+
+The site describes `VakitApp-Swift`. After every App Store release, check `VakitApp-Swift/CHANGELOG.md` and update `content.js`:
+
+- new user-facing features → `FEATURES`, and `FAQ` if they raise an obvious question
+- removed features → delete from `FEATURES`
+- `SITE.appVersion`, `SITE.minOS`, `SITE.operatingSystem` → match the release
+- platform changes (e.g. Mac support) → `META` descriptions and the `fin-p` copy
