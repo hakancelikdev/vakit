@@ -15,8 +15,8 @@
 
     <!-- Primary Meta Tags -->
     <title>Vakit: Prayer Times, Qibla, Quran</title>
-    <meta name="description" content="Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
-    <meta name="keywords" content="prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app">
+    <meta name="description" content="Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
+    <meta name="keywords" content="prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, ipad prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app">
     <meta name="author" content="Hakan Çelik">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
@@ -24,7 +24,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vakit.hakancelik.dev/en/">
     <meta property="og:title" content="Vakit: Prayer Times, Qibla, Quran">
-    <meta property="og:description" content="Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
+    <meta property="og:description" content="Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
     <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
@@ -37,7 +37,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://vakit.hakancelik.dev/en/">
     <meta name="twitter:title" content="Vakit: Prayer Times, Qibla, Quran">
-    <meta name="twitter:description" content="Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
+    <meta name="twitter:description" content="Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.">
     <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
     <meta name="twitter:creator" content="@hakancelikdev">
 
@@ -81,12 +81,12 @@
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   "name": "Vakit: Prayer Times, Qibla, Quran",
-  "description": "Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.",
+  "description": "Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.",
   "url": "https://vakit.hakancelik.dev/en/",
   "downloadUrl": "https://apps.apple.com/app/id6748356813",
   "installUrl": "https://apps.apple.com/app/id6748356813",
   "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "iOS, macOS, watchOS",
+  "operatingSystem": "iOS, iPadOS, macOS, watchOS",
   "operatingSystemVersion": "26.0",
   "softwareVersion": "1.7.0",
   "inLanguage": [
@@ -111,10 +111,14 @@
   },
   "featureList": [
     "Prayer Times",
+    "Manual Location",
     "Apple Watch",
     "Mac App",
+    "iPad",
     "Qibla Compass",
     "Holy Quran",
+    "Khatm Tracking",
+    "Offline Recitation",
     "Hadith",
     "Friday Sermon",
     "Dhikr Counter",
@@ -130,10 +134,12 @@
     "Live Activity",
     "Control Center",
     "Worship Tracking",
+    "Prayer Discipline",
     "Fajr Alarm",
     "Suhoor Alarm",
     "Holy Day Reminders",
     "Notifications",
+    "Adhan Sounds",
     "Siri Shortcuts",
     "Unified Search",
     "Bookmarks",
@@ -381,10 +387,18 @@
     },
     {
       "@type": "Question",
-      "name": "Does it run on Mac?",
+      "name": "Which devices does it run on?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware."
+        "text": "iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I choose the adhan sound?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Notifications come with the adhan in five makams: hicaz, rast, saba, segah and ussak. Pick one in Settings → Notifications → Notification Sound, and you can set a different sound per prayer. The recordings ship with the app, so playing them needs no connection."
       }
     },
     {
@@ -604,44 +618,50 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 34 tools</div>
+      <div class="f-eye">§ 03 · 40 tools</div>
       <h2><span>One app,</span><br><em>enough for a life of worship.</em></h2>
     </div>
     <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 34</div><div class="f-name">Prayer Times</div><div class="f-desc">13 calculation methods, timezone-aware, travel-detecting.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 34</div><div class="f-name">Apple Watch</div><div class="f-desc">Prayer times, live qibla, 12 watch face complications.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 34</div><div class="f-name">Mac App</div><div class="f-desc">Menu bar countdown, keyboard shortcuts, iCloud sync.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 34</div><div class="f-name">Qibla Compass</div><div class="f-desc">Haptic bearing with distance to the Ka'bah.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 34</div><div class="f-name">Holy Quran</div><div class="f-desc">114 surahs. Word-by-word, tafsir, recitation, classical Mushaf.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 34</div><div class="f-name">Hadith</div><div class="f-desc">36,390 ahadith across seven major collections.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 34</div><div class="f-name">Friday Sermon</div><div class="f-desc">Read, listen to and store the Diyanet khutbah offline.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 34</div><div class="f-name">Dhikr Counter</div><div class="f-desc">Ring-based progress, presets, and custom dhikr.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 34</div><div class="f-name">Tasbihat</div><div class="f-desc">33-33-33, or the full post-prayer sequence.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 34</div><div class="f-name">Asma al-Husna</div><div class="f-desc">99 names of Allah, with meaning and reflection.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 34</div><div class="f-name">Hijri Calendar</div><div class="f-desc">Gregorian + Hijri, with special days and Ramadan.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 34</div><div class="f-name">Karahat Times</div><div class="f-desc">Marked on the day arc, with the narration behind them.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 34</div><div class="f-name">Ablution Guide</div><div class="f-desc">Step-by-step wudu, taught and remembered.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 34</div><div class="f-name">Prayer Guide</div><div class="f-desc">17 prayer types, illustrated, Madhab-aware.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 34</div><div class="f-name">Zakat &amp; Fitr</div><div class="f-desc">Calculators grounded in classical rulings.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 34</div><div class="f-name">Qada Tracking</div><div class="f-desc">Track missed prayers by time slot and clear the debt.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 34</div><div class="f-name">Widgets</div><div class="f-desc">Home Screen, lock screen, StandBy — and on Mac.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 34</div><div class="f-name">Live Activity</div><div class="f-desc">Dynamic Island and lock-screen countdowns.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 34</div><div class="f-name">Control Center</div><div class="f-desc">Six quick actions — Qibla, next prayer, more.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 34</div><div class="f-name">Worship Tracking</div><div class="f-desc">Activity Rings: prayer, nafl, Jumu'ah, Eid, Tarawih.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 34</div><div class="f-name">Fajr Alarm</div><div class="f-desc">Breaks through silent mode, silent once you've prayed.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 34</div><div class="f-name">Suhoor Alarm</div><div class="f-desc">Set from your fasting days, so you never miss suhoor.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 34</div><div class="f-name">Holy Day Reminders</div><div class="f-desc">Notification the night before 11 Islamic days.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 34</div><div class="f-name">Notifications</div><div class="f-desc">On-device, local, dependable.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 34</div><div class="f-name">Siri Shortcuts</div><div class="f-desc">Ask for times, Qibla, ayat by voice.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 34</div><div class="f-name">Unified Search</div><div class="f-desc">One search, across every tool.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 34</div><div class="f-name">Bookmarks</div><div class="f-desc">Save ayat, hadith, and dhikr.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 34</div><div class="f-name">iCloud Sync</div><div class="f-desc">Your records stay in your own iCloud, on every device.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 34</div><div class="f-name">Tafsir</div><div class="f-desc">Diyanet commentary, in-line with the text.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 34</div><div class="f-name">Share Cards</div><div class="f-desc">Beautiful cards for ayat and dhikr.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 34</div><div class="f-name">Fasting</div><div class="f-desc">Ramadan, Shawwal, and day-by-day tracking.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 34</div><div class="f-name">Nearby Mosques</div><div class="f-desc">Find masajid without sharing your location.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 34</div><div class="f-name">Support Vakit</div><div class="f-desc">Opt-in ways to keep the free app alive.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 34</div><div class="f-name">Dark Mode</div><div class="f-desc">Warm, quiet dark for the late hours.</div></div>
+        <div class="f-cell"><div class="f-num">01 / 40</div><div class="f-name">Prayer Times</div><div class="f-desc">13 calculation methods, timezone-aware, travel-detecting.</div></div>
+        <div class="f-cell"><div class="f-num">02 / 40</div><div class="f-name">Manual Location</div><div class="f-desc">Set your location by hand, or let it follow you as you travel.</div></div>
+        <div class="f-cell"><div class="f-num">03 / 40</div><div class="f-name">Apple Watch</div><div class="f-desc">Prayer times, live qibla, 12 watch face complications.</div></div>
+        <div class="f-cell"><div class="f-num">04 / 40</div><div class="f-name">Mac App</div><div class="f-desc">Menu bar countdown, keyboard shortcuts, iCloud sync.</div></div>
+        <div class="f-cell"><div class="f-num">05 / 40</div><div class="f-name">iPad</div><div class="f-desc">The same app on a bigger screen; your records sync over iCloud.</div></div>
+        <div class="f-cell"><div class="f-num">06 / 40</div><div class="f-name">Qibla Compass</div><div class="f-desc">Haptic bearing with distance to the Ka'bah.</div></div>
+        <div class="f-cell"><div class="f-num">07 / 40</div><div class="f-name">Holy Quran</div><div class="f-desc">114 surahs. Word-by-word, translation, tafsir, classical Mushaf.</div></div>
+        <div class="f-cell"><div class="f-num">08 / 40</div><div class="f-name">Khatm Tracking</div><div class="f-desc">114 surahs, 30 juz; completed khatms and an estimated finish.</div></div>
+        <div class="f-cell"><div class="f-num">09 / 40</div><div class="f-name">Offline Recitation</div><div class="f-desc">Pick a reciter and style; download surahs or juz and listen offline.</div></div>
+        <div class="f-cell"><div class="f-num">10 / 40</div><div class="f-name">Hadith</div><div class="f-desc">36,390 ahadith across seven major collections.</div></div>
+        <div class="f-cell"><div class="f-num">11 / 40</div><div class="f-name">Friday Sermon</div><div class="f-desc">Read, listen to and store the Diyanet khutbah offline.</div></div>
+        <div class="f-cell"><div class="f-num">12 / 40</div><div class="f-name">Dhikr Counter</div><div class="f-desc">Ring-based progress, presets, and custom dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">13 / 40</div><div class="f-name">Tasbihat</div><div class="f-desc">33-33-33, or the full post-prayer sequence.</div></div>
+        <div class="f-cell"><div class="f-num">14 / 40</div><div class="f-name">Asma al-Husna</div><div class="f-desc">99 names of Allah, with meaning and reflection.</div></div>
+        <div class="f-cell"><div class="f-num">15 / 40</div><div class="f-name">Hijri Calendar</div><div class="f-desc">Gregorian + Hijri, with special days and Ramadan.</div></div>
+        <div class="f-cell"><div class="f-num">16 / 40</div><div class="f-name">Karahat Times</div><div class="f-desc">Marked on the day arc, with the narration behind them.</div></div>
+        <div class="f-cell"><div class="f-num">17 / 40</div><div class="f-name">Ablution Guide</div><div class="f-desc">Step-by-step wudu, taught and remembered.</div></div>
+        <div class="f-cell"><div class="f-num">18 / 40</div><div class="f-name">Prayer Guide</div><div class="f-desc">17 prayer types, illustrated, Madhab-aware.</div></div>
+        <div class="f-cell"><div class="f-num">19 / 40</div><div class="f-name">Zakat &amp; Fitr</div><div class="f-desc">Calculators grounded in classical rulings.</div></div>
+        <div class="f-cell"><div class="f-num">20 / 40</div><div class="f-name">Qada Tracking</div><div class="f-desc">Track missed prayers by time slot and clear the debt.</div></div>
+        <div class="f-cell"><div class="f-num">21 / 40</div><div class="f-name">Widgets</div><div class="f-desc">Home Screen, lock screen, StandBy — and on Mac.</div></div>
+        <div class="f-cell"><div class="f-num">22 / 40</div><div class="f-name">Live Activity</div><div class="f-desc">Dynamic Island and lock-screen countdowns.</div></div>
+        <div class="f-cell"><div class="f-num">23 / 40</div><div class="f-name">Control Center</div><div class="f-desc">Six quick actions — Qibla, next prayer, more.</div></div>
+        <div class="f-cell"><div class="f-num">24 / 40</div><div class="f-name">Worship Tracking</div><div class="f-desc">Activity Rings: prayer, nafl, Jumu'ah, Eid, Tarawih.</div></div>
+        <div class="f-cell"><div class="f-num">25 / 40</div><div class="f-name">Prayer Discipline</div><div class="f-desc">Your on-time rate, prayer by prayer — last 30 days and all time.</div></div>
+        <div class="f-cell"><div class="f-num">26 / 40</div><div class="f-name">Fajr Alarm</div><div class="f-desc">Breaks through silent mode, silent once you've prayed.</div></div>
+        <div class="f-cell"><div class="f-num">27 / 40</div><div class="f-name">Suhoor Alarm</div><div class="f-desc">Set from your fasting days, so you never miss suhoor.</div></div>
+        <div class="f-cell"><div class="f-num">28 / 40</div><div class="f-name">Holy Day Reminders</div><div class="f-desc">Notification the night before 11 Islamic days.</div></div>
+        <div class="f-cell"><div class="f-num">29 / 40</div><div class="f-name">Notifications</div><div class="f-desc">On-device, local, dependable.</div></div>
+        <div class="f-cell"><div class="f-num">30 / 40</div><div class="f-name">Adhan Sounds</div><div class="f-desc">The adhan in five makams: hicaz, rast, saba, segah, ussak.</div></div>
+        <div class="f-cell"><div class="f-num">31 / 40</div><div class="f-name">Siri Shortcuts</div><div class="f-desc">Ask for times, Qibla, ayat by voice.</div></div>
+        <div class="f-cell"><div class="f-num">32 / 40</div><div class="f-name">Unified Search</div><div class="f-desc">One search, across every tool.</div></div>
+        <div class="f-cell"><div class="f-num">33 / 40</div><div class="f-name">Bookmarks</div><div class="f-desc">Save ayat, hadith, and dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">34 / 40</div><div class="f-name">iCloud Sync</div><div class="f-desc">Your records stay in your own iCloud, on every device.</div></div>
+        <div class="f-cell"><div class="f-num">35 / 40</div><div class="f-name">Tafsir</div><div class="f-desc">Diyanet commentary, in-line with the text.</div></div>
+        <div class="f-cell"><div class="f-num">36 / 40</div><div class="f-name">Share Cards</div><div class="f-desc">Beautiful cards for ayat and dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">37 / 40</div><div class="f-name">Fasting</div><div class="f-desc">Ramadan, Shawwal, and day-by-day tracking.</div></div>
+        <div class="f-cell"><div class="f-num">38 / 40</div><div class="f-name">Nearby Mosques</div><div class="f-desc">Find masajid without sharing your location.</div></div>
+        <div class="f-cell"><div class="f-num">39 / 40</div><div class="f-name">Support Vakit</div><div class="f-desc">Opt-in ways to keep the free app alive.</div></div>
+        <div class="f-cell"><div class="f-num">40 / 40</div><div class="f-name">Dark Mode</div><div class="f-desc">Warm, quiet dark for the late hours.</div></div>
     </div>
   </div>
 </section>
@@ -658,7 +678,7 @@
         <div class="compare-row"><div class="compare-cell feat">Offline</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Core features require an internet connection.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>Prayer, Qibla, Quran, Dhikr — all work offline.</div></div>
         <div class="compare-row"><div class="compare-cell feat">Lock Screen</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Widgets break between iOS updates.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>Live Activity, Dynamic Island, StandBy — all supported.</div></div>
         <div class="compare-row"><div class="compare-cell feat">Accuracy</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>DST errors, limited calculation methods.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>13 methods, timezone-aware, travel-detecting.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Devices</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Phone only; watch and desktop missing or half-built.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>iPhone, Apple Watch and Mac — synced over iCloud.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Devices</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Phone only; watch and desktop missing or half-built.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>iPhone, iPad, Apple Watch and Mac — synced over iCloud.</div></div>
         <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Dated interfaces; regressions after each update.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>iOS 26 Liquid Glass. Quiet, modern, fast.</div></div>
         <div class="compare-row"><div class="compare-cell feat">Cost</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Paywalls, subscriptions, 'premium' tiers.</div><div class="compare-cell vakit"><span class="cmark yes">Yes</span><br><br>Free today. No tier, no upsell.</div></div>
     </div>
@@ -702,7 +722,8 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Will notifications arrive if I never open the app?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Is everything really free?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Today, yes — the entire app is free, with no subscriptions, paywalls, or 'premium' tier. I can't promise that forever (nobody honestly can), but I can promise there's no catch today.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Where do prayer times come from?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates.</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">Does it run on Mac?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Which devices does it run on?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I choose the adhan sound?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Notifications come with the adhan in five makams: hicaz, rast, saba, segah and ussak. Pick one in Settings → Notifications → Notification Sound, and you can set a different sound per prayer. The recordings ship with the app, so playing them needs no connection.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there an alarm for Fajr?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. You can set an alarm that rings before sunrise and breaks through silent mode if you haven't prayed Fajr yet. Mark the prayer as done and it stays silent. There's also a suhoor alarm that schedules itself around your fasting days.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Where does the Friday sermon come from?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The khutbah Diyanet publishes each week lands in the app; you can read it, listen to the audio recording, and download it for offline reading. Because it is Diyanet's publication, this section appears for users whose calculation method is Diyanet.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">What's in the Quran feature?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, and a hatim tracker. Everything works offline.</div></div></div>
@@ -718,7 +739,7 @@
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/app-icon.png" alt="Vakit" width="88" height="88"></div>
   <h2><span>Don't let your worship</span> <em>be interrupted.</em></h2>
-  <p>Free today. No account. Works offline. iPhone, Apple Watch and Mac — iOS 26 and up.</p>
+  <p>Free today. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 26 and up.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813" class="btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>

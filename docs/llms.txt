@@ -1,6 +1,6 @@
 # Vakit — Vakit: Prayer Times, Qibla, Quran
 
-> Track prayer times, find the Qibla, read the Quran. iPhone, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.
+> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
 Watch and Mac, built by Hakan Çelik. Current release: 1.7.0, requires
@@ -22,10 +22,14 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 ## Features
 
 - **Prayer Times** — 13 calculation methods, timezone-aware, travel-detecting.
+- **Manual Location** — Set your location by hand, or let it follow you as you travel.
 - **Apple Watch** — Prayer times, live qibla, 12 watch face complications.
 - **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
+- **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
-- **Holy Quran** — 114 surahs. Word-by-word, tafsir, recitation, classical Mushaf.
+- **Holy Quran** — 114 surahs. Word-by-word, translation, tafsir, classical Mushaf.
+- **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
+- **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
 - **Hadith** — 36,390 ahadith across seven major collections.
 - **Friday Sermon** — Read, listen to and store the Diyanet khutbah offline.
 - **Dhikr Counter** — Ring-based progress, presets, and custom dhikr.
@@ -41,10 +45,12 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **Live Activity** — Dynamic Island and lock-screen countdowns.
 - **Control Center** — Six quick actions — Qibla, next prayer, more.
 - **Worship Tracking** — Activity Rings: prayer, nafl, Jumu'ah, Eid, Tarawih.
+- **Prayer Discipline** — Your on-time rate, prayer by prayer — last 30 days and all time.
 - **Fajr Alarm** — Breaks through silent mode, silent once you've prayed.
 - **Suhoor Alarm** — Set from your fasting days, so you never miss suhoor.
 - **Holy Day Reminders** — Notification the night before 11 Islamic days.
 - **Notifications** — On-device, local, dependable.
+- **Adhan Sounds** — The adhan in five makams: hicaz, rast, saba, segah, ussak.
 - **Siri Shortcuts** — Ask for times, Qibla, ayat by voice.
 - **Unified Search** — One search, across every tool.
 - **Bookmarks** — Save ayat, hadith, and dhikr.
@@ -74,9 +80,13 @@ Today, yes — the entire app is free, with no subscriptions, paywalls, or 'prem
 
 They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates.
 
-### Does it run on Mac?
+### Which devices does it run on?
 
-Yes. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.
+iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.
+
+### Can I choose the adhan sound?
+
+Yes. Notifications come with the adhan in five makams: hicaz, rast, saba, segah and ussak. Pick one in Settings → Notifications → Notification Sound, and you can set a different sound per prayer. The recordings ship with the app, so playing them needs no connection.
 
 ### Is there an alarm for Fajr?
 
