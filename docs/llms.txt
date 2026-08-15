@@ -28,6 +28,7 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
 - **Holy Quran** — 114 surahs. Word-by-word, translation, tafsir, classical Mushaf.
+- **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
 - **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
 - **Hadith** — 36,390 ahadith across seven major collections.
@@ -37,15 +38,16 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **Asma al-Husna** — 99 names of Allah, with meaning and reflection.
 - **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan.
 - **Karahat Times** — Marked on the day arc, with the narration behind them.
-- **Ablution Guide** — Step-by-step wudu, taught and remembered.
-- **Prayer Guide** — 17 prayer types, illustrated, Madhab-aware.
+- **Purification Guide** — Step-by-step wudu, ghusl and tayammum.
+- **Prayer Guide** — 17 prayer types; standing, seated or by gesture.
 - **Zakat & Fitr** — Calculators grounded in classical rulings.
-- **Qada Tracking** — Track missed prayers by time slot and clear the debt.
+- **Qada Tracking** — Missed prayers by time slot, missed fasts by day.
+- **Excused Days** — Menstruation and postpartum days; your prayer streak holds.
 - **Widgets** — Home Screen, lock screen, StandBy — and on Mac.
 - **Live Activity** — Dynamic Island and lock-screen countdowns.
 - **Control Center** — Six quick actions — Qibla, next prayer, more.
 - **Worship Tracking** — Activity Rings: prayer, nafl, Jumu'ah, Eid, Tarawih.
-- **Prayer Discipline** — Your on-time rate, prayer by prayer — last 30 days and all time.
+- **Prayer Discipline** — How long after each prayer enters you pray — last 30 days and all time.
 - **Fajr Alarm** — Breaks through silent mode, silent once you've prayed.
 - **Suhoor Alarm** — Set from your fasting days, so you never miss suhoor.
 - **Holy Day Reminders** — Notification the night before 11 Islamic days.
@@ -58,7 +60,7 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **Tafsir** — Diyanet commentary, in-line with the text.
 - **Share Cards** — Beautiful cards for ayat and dhikr.
 - **Fasting** — Ramadan, Shawwal, and day-by-day tracking.
-- **Nearby Mosques** — Find masajid without sharing your location.
+- **Nearby Mosques** — Find masajid privately; women's section and your own notes.
 - **Support Vakit** — Opt-in ways to keep the free app alive.
 - **Dark Mode** — Warm, quiet dark for the late hours.
 
