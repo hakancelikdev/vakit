@@ -23,7 +23,7 @@ const fs = require("fs");
 const path = require("path");
 const C = require("./content.js");
 
-const { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL } = C;
+const { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink } = C;
 
 // Long-form legal prose, one module per document, each with tr + en.
 const LEGAL_COPY = {
@@ -70,8 +70,8 @@ function appSchema(lang) {
     name: META[lang].title,
     description: META[lang].description,
     url: SITE.origin + LANGS[lang].path,
-    downloadUrl: SITE.appStoreUrl,
-    installUrl: SITE.appStoreUrl,
+    downloadUrl: storeLink(),
+    installUrl: storeLink(),
     applicationCategory: "LifestyleApplication",
     operatingSystem: SITE.operatingSystem,
     operatingSystemVersion: SITE.minOS,
@@ -334,7 +334,7 @@ ${jsonLd(faqSchema(lang))}
       <a href="${LANGS.en.path}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
       <a href="${LANGS.tr.path}" data-lang="tr"${lang === "tr" ? ' class="on" aria-current="page"' : ' hreflang="tr"'}>TR</a>
     </div>
-    <a href="${SITE.appStoreUrl}" class="nav-dl">${esc(t(lang, "download"))}</a>
+    <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
   </div>
   <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
 </nav>
@@ -349,7 +349,7 @@ ${jsonLd(faqSchema(lang))}
     </h1>
     <p class="hero-sub">${esc(t(lang, "heroSub"))}</p>
     <div class="hero-actions">
-      <a href="${SITE.appStoreUrl}" class="btn-primary">
+      <a href="${storeLink(`site-hero-${lang}`)}" class="btn-primary">
         ${APPLE_LOGO}
         <span>${esc(t(lang, "downloadCta"))}</span>
       </a>
@@ -505,7 +505,7 @@ ${faqList(lang)}
   <h2><span>${esc(t(lang, "fin-h1"))}</span> <em>${esc(t(lang, "fin-h2"))}</em></h2>
   <p>${esc(t(lang, "fin-p"))}</p>
   <div class="final-actions">
-    <a href="${SITE.appStoreUrl}" class="btn-primary">
+    <a href="${storeLink(`site-final-${lang}`)}" class="btn-primary">
       ${APPLE_LOGO}
       <span>${esc(t(lang, "downloadCta2"))}</span>
     </a>
@@ -629,7 +629,7 @@ ${LEGAL_STYLE}
       <a href="${localUrl("en", file)}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
       <a href="${localUrl("tr", file)}" data-lang="tr"${lang === "tr" ? ' class="on" aria-current="page"' : ' hreflang="tr"'}>TR</a>
     </div>
-    <a href="${SITE.appStoreUrl}" class="nav-dl">${esc(nav.download || t(lang, "download"))}</a>
+    <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(nav.download || t(lang, "download"))}</a>
   </div>
   <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
 </nav>
@@ -755,7 +755,7 @@ function llms() {
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
 Watch and Mac, built by ${SITE.author}. Current release: ${SITE.appVersion}, requires
 iOS/macOS ${SITE.minOS} or later. App Store rating ${SITE.rating.value} from
-${SITE.rating.count} ratings. Download: ${SITE.appStoreUrl}
+${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 
 ## What makes it different
 

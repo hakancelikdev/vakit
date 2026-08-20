@@ -13,7 +13,13 @@
 
 const SITE = {
   origin: "https://vakit.hakancelik.dev",
-  appStoreUrl: "https://apps.apple.com/app/id6748356813",
+  // App Store linkleri TEK yerden üretilir — dosyanın sonundaki storeLink().
+  // ⚠️ `pt` (provider token) olmadan `ct` (kampanya) Apple tarafında SESSİZCE sayılmaz ve
+  // hata da vermez; yanlış kurulmuş bir link yalnızca hiç görünmez. Ham link string'i yazma.
+  appStoreId: "6748356813",
+  // App Store Connect sağlayıcı kimliği. Hesap başına sabittir ve gizli değildir (linkin
+  // içinde herkese görünür). Kaynak: `asc web auth status` → providerId.
+  appStoreProviderToken: "127947182",
   appName: "Vakit",
   author: "Hakan Çelik",
   authorUrl: "https://github.com/hakancelikdev",
@@ -401,6 +407,20 @@ const LEGAL = {
   },
 };
 
-const CONTENT = { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL };
+/**
+ * App Store linki üretir.
+ *
+ * @param {string} [campaign] App Store Connect → Analytics → Acquisition → Campaigns altında
+ *   görünecek `ct` değeri. Verilmezse KAMPANYASIZ düz link döner — JSON-LD gibi yapısal
+ *   verilerde kasıtlı olarak öyle kullanılır: arama motorundan gelen her tıklama tek bir
+ *   sahte kampanyaya yazılırsa kanal ayrımı bozulur.
+ */
+function storeLink(campaign) {
+  const base = `https://apps.apple.com/app/id${SITE.appStoreId}`;
+  if (!campaign) return base;
+  return `${base}?pt=${SITE.appStoreProviderToken}&ct=${encodeURIComponent(campaign)}`;
+}
+
+const CONTENT = { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink };
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;
