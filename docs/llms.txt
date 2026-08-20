@@ -60,7 +60,7 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **Tafsir** — Diyanet commentary, in-line with the text.
 - **Share Cards** — Beautiful cards for ayat and dhikr.
 - **Fasting** — Ramadan, Shawwal, and day-by-day tracking.
-- **Nearby Mosques** — Find masajid privately; women's section and your own notes.
+- **Nearby Mosques** — Find masajid privately; map, distance and directions.
 - **Support Vakit** — Opt-in ways to keep the free app alive.
 - **Dark Mode** — Warm, quiet dark for the late hours.
 
@@ -116,7 +116,7 @@ Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla com
 
 ### Where is my data stored?
 
-Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts, live location and search queries are never sent either. The only thing that leaves the device is anonymous usage statistics that carry no identity.
+Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts, live location and search queries are never sent either. What does go to the server is usage statistics and your dhikr list; both are tied to a persistent user code that carries no identifying information — a pseudonym, not anonymous. Details are in the privacy policy.
 
 ## Pages
 

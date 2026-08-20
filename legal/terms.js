@@ -6,7 +6,7 @@
 module.exports = {
   "tr": {
     "title": "Kullanım <em>Şartları</em>",
-    "desc": "Son güncelleme: 9 Ağustos 2026 — Sürüm 1.7.0\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
+    "desc": "Son güncelleme: 20 Ağustos 2026 — Sürüm 1.7.1\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
     "sections": [
       {
         "t": "1. Şartların Kabulü",
@@ -70,7 +70,7 @@ module.exports = {
   },
   "en": {
     "title": "Terms of <em>Use</em>",
-    "desc": "Last updated: 9 August 2026 — Version 1.7.0\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
+    "desc": "Last updated: 20 August 2026 — Version 1.7.1\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
     "sections": [
       {
         "t": "1. Acceptance of Terms",
