@@ -116,7 +116,7 @@ Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla com
 
 ### Where is my data stored?
 
-Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts, live location and search queries are never sent either. What does go to the server is usage statistics and your dhikr list; both are tied to a persistent user code that carries no identifying information — a pseudonym, not anonymous. Details are in the privacy policy.
+Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts and live location are never sent either. What does go to the server is usage statistics, your dhikr list and the words you search for inside the app — so we can see where you couldn't find what you were looking for and fix search. All of it is tied to a persistent user code that carries no identifying information — a pseudonym, not anonymous. Details are in the privacy policy.
 
 ## Pages
 
