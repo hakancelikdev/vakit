@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         "t": "8. Veri Saklama Süresi",
-        "b": "• Yerel cihaz verileri – Uygulamayı silene kadar saklanır.\n• iCloud verileri – iCloud'dan Vakit kapsamını silene veya Apple ID'nizi devre dışı bırakana kadar saklanır.\n• Sunucudaki kullanım istatistikleri – Toplu istatistiksel amaçlarla en fazla 24 ay tutulur, sonra silinir.\n• Çökme raporları (Crashlytics) – 90 gün tutulur, sonra silinir.\n• Sunucu logları – 30 gün içinde rotate edilir."
+        "b": "• Yerel cihaz verileri – Uygulamayı silene kadar saklanır.\n• iCloud verileri – iCloud'dan Vakit kapsamını silene veya Apple ID'nizi devre dışı bırakana kadar saklanır.\n• Sunucudaki kullanım istatistikleri – 180 gün (yaklaşık 6 ay) tutulur, sonra otomatik olarak silinir. Arama sorgu metinleri de bu süreye tabidir.\n• Çökme raporları (Crashlytics) – 90 gün tutulur, sonra silinir.\n• Sunucu logları – 30 gün içinde rotate edilir."
       },
       {
         "t": "9. Haklarınız (KVKK / GDPR)",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         "t": "8. Data Retention",
-        "b": "• Local device data – Stored until you delete the app.\n• iCloud data – Stored until you remove Vakit's scope from iCloud or disable your Apple ID.\n• Usage statistics on the server – Kept for at most 24 months for aggregate statistical purposes, then deleted.\n• Crash reports (Crashlytics) – Kept for 90 days, then deleted.\n• Server logs – Rotated within 30 days."
+        "b": "• Local device data – Stored until you delete the app.\n• iCloud data – Stored until you remove Vakit's scope from iCloud or disable your Apple ID.\n• Usage statistics on the server – Kept for 180 days (about 6 months), then deleted automatically. Search query texts follow the same schedule.\n• Crash reports (Crashlytics) – Kept for 90 days, then deleted.\n• Server logs – Rotated within 30 days."
       },
       {
         "t": "9. Your Rights (KVKK / GDPR)",
