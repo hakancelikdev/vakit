@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Kontakt", footFeedback: "Feedback",
     footPrivacy: "Privatliv", footTerms: "Vilkår", footAds: "Reklamer",
     footSig: "Lavet med omhu · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Slå mørk tilstand til/fra", langLabel: "Sprog",
+    menuLabel: "Menu", themeLabel: "Slå mørk tilstand til/fra", langLabel: "Sprog", closeLabel: "Luk",
     videoLabel: "Vakits bønneskærm: himlen skifter, efterhånden som dagen går",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Solopgang", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },

@@ -47,7 +47,7 @@ module.exports = {
     footContact: "Mawasiliano", footFeedback: "Maoni yako",
     footPrivacy: "Faragha", footTerms: "Masharti", footAds: "Matangazo",
     footSig: "Imetengenezwa kwa uangalifu · © 2026 Hakan Çelik",
-    menuLabel: "Menyu", themeLabel: "Washa au zima hali ya giza", langLabel: "Lugha",
+    menuLabel: "Menyu", themeLabel: "Washa au zima hali ya giza", langLabel: "Lugha", closeLabel: "Funga",
     videoLabel: "Skrini ya swala ya Vakit: anga hubadilika kadiri siku inavyosonga",
   },
 

@@ -194,6 +194,24 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .lang-list a:hover, .lang-list a:focus-visible { background: var(--bg-2); color: var(--ink); outline: none }
 .lang-list a[aria-current] { background: var(--ink); color: var(--bg) }
 
+/* first-visit suggestion: "this page is also in <your language>" — never a redirect */
+.lang-suggest {
+  position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 70;
+  display: flex; align-items: center; gap: 10px;
+  padding-block: 6px; padding-inline: 16px 6px;
+  max-width: calc(100vw - 32px);
+  background: var(--ink); color: var(--bg); border-radius: 999px;
+  font-size: 14px;
+  box-shadow: 0 14px 34px -12px color-mix(in oklch, var(--ink) 55%, transparent);
+}
+.lang-suggest svg { flex-shrink: 0; opacity: .8 }
+.lang-suggest a { font-weight: 500; white-space: nowrap; font-family: system-ui, -apple-system, sans-serif }
+.lang-suggest button {
+  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  font-size: 18px; line-height: 1; color: inherit; opacity: .7;
+}
+.lang-suggest button:hover, .lang-suggest button:focus-visible { opacity: 1; background: color-mix(in oklch, var(--bg) 18%, transparent); outline: none }
+
 .nav-dl {
   padding: 9px 18px; border: 1px solid var(--ink); border-radius: 999px; font-size: 13px; font-weight: 500;
   transition: all .2s; white-space: nowrap;

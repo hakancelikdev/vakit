@@ -47,7 +47,7 @@ module.exports = {
     footContact: "お問い合わせ", footFeedback: "フィードバック",
     footPrivacy: "プライバシー", footTerms: "利用規約", footAds: "広告",
     footSig: "心を込めて · © 2026 Hakan Çelik",
-    menuLabel: "メニュー", themeLabel: "ダークモードの切り替え", langLabel: "言語",
+    menuLabel: "メニュー", themeLabel: "ダークモードの切り替え", langLabel: "言語", closeLabel: "閉じる",
     videoLabel: "Vakit の礼拝画面：一日の移ろいとともに空も変わっていきます",
   },
 

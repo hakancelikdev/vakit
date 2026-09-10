@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Связаться", footFeedback: "Обратная связь",
     footPrivacy: "Конфиденциальность", footTerms: "Условия", footAds: "Реклама",
     footSig: "Сделано с заботой · © 2026 Hakan Çelik",
-    menuLabel: "Меню", themeLabel: "Переключить тёмный режим", langLabel: "Язык",
+    menuLabel: "Меню", themeLabel: "Переключить тёмный режим", langLabel: "Язык", closeLabel: "Закрыть",
     videoLabel: "Экран намаза в Vakit: небо меняется вместе с течением дня",
   },
   PRAYERS: { Fajr: "Имсак", Sunrise: "Восход", Dhuhr: "Зухр", Asr: "Аср", Maghrib: "Магриб", Isha: "Иша" },

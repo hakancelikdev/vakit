@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Əlaqə", footFeedback: "Rəy bildir",
     footPrivacy: "Məxfilik", footTerms: "Şərtlər", footAds: "Reklamlar",
     footSig: "Qayğı ilə hazırlanıb · © 2026 Hakan Çelik",
-    menuLabel: "Menyu", themeLabel: "Tünd rejimi aç/bağla", langLabel: "Dil",
+    menuLabel: "Menyu", themeLabel: "Tünd rejimi aç/bağla", langLabel: "Dil", closeLabel: "Bağla",
     videoLabel: "Vakit-in namaz ekranı: gün irəlilədikcə səma da dəyişir",
   },
   PRAYERS: { Fajr: "İmsak", Sunrise: "Günəş", Dhuhr: "Zöhr", Asr: "Əsr", Maghrib: "Məğrib", Isha: "İşa" },

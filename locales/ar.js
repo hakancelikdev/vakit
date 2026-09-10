@@ -46,7 +46,7 @@ module.exports = {
     footContact: "تواصل", footFeedback: "ملاحظات",
     footPrivacy: "الخصوصية", footTerms: "الشروط", footAds: "الإعلانات",
     footSig: "صُنع بعناية · © 2026 Hakan Çelik",
-    menuLabel: "القائمة", themeLabel: "تبديل الوضع الداكن", langLabel: "اللغة",
+    menuLabel: "القائمة", themeLabel: "تبديل الوضع الداكن", langLabel: "اللغة", closeLabel: "إغلاق",
     videoLabel: "شاشة الصلاة في Vakit: تتغيّر السماء مع مرور اليوم",
   },
   PRAYERS: { Fajr: "الإمساك", Sunrise: "الشروق", Dhuhr: "الظهر", Asr: "العصر", Maghrib: "المغرب", Isha: "العشاء" },

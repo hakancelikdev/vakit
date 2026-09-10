@@ -47,7 +47,7 @@ module.exports = {
     footContact: "Kontakt", footFeedback: "Komente",
     footPrivacy: "Privatësia", footTerms: "Kushtet", footAds: "Reklamat",
     footSig: "Bërë me kujdes · © 2026 Hakan Çelik",
-    menuLabel: "Menyja", themeLabel: "Aktivizo ose çaktivizo modalitetin e errët", langLabel: "Gjuha",
+    menuLabel: "Menyja", themeLabel: "Aktivizo ose çaktivizo modalitetin e errët", langLabel: "Gjuha", closeLabel: "Mbyll",
     videoLabel: "Ekrani i namazit në Vakit: qielli ndryshon ndërsa dita ecën",
   },
   PRAYERS: { Fajr: "Imsaku", Sunrise: "Lindja e diellit", Dhuhr: "Dreka", Asr: "Ikindia", Maghrib: "Akshami", Isha: "Jacia" },

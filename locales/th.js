@@ -47,7 +47,7 @@ module.exports = {
     footContact: "ติดต่อ", footFeedback: "ข้อเสนอแนะ",
     footPrivacy: "ความเป็นส่วนตัว", footTerms: "ข้อกำหนด", footAds: "โฆษณา",
     footSig: "สร้างด้วยความใส่ใจ · © 2026 Hakan Çelik",
-    menuLabel: "เมนู", themeLabel: "สลับโหมดมืด", langLabel: "ภาษา",
+    menuLabel: "เมนู", themeLabel: "สลับโหมดมืด", langLabel: "ภาษา", closeLabel: "ปิด",
     videoLabel: "หน้าละหมาดของ Vakit: ท้องฟ้าเปลี่ยนไปตามเวลาของวัน",
   },
 

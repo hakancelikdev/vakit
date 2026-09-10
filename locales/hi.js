@@ -46,7 +46,7 @@ module.exports = {
     footContact: "संपर्क", footFeedback: "राय दें",
     footPrivacy: "प्राइवेसी", footTerms: "शर्तें", footAds: "विज्ञापन",
     footSig: "पूरी लगन से बनाया गया · © 2026 Hakan Çelik",
-    menuLabel: "मेन्यू", themeLabel: "डार्क मोड चालू/बंद करें", langLabel: "भाषा",
+    menuLabel: "मेन्यू", themeLabel: "डार्क मोड चालू/बंद करें", langLabel: "भाषा", closeLabel: "बंद करें",
     videoLabel: "Vakit का नमाज़ वाला पन्ना: दिन ढलने के साथ आसमान भी बदलता है",
   },
   PRAYERS: { Fajr: "इम्साक", Sunrise: "तुलू", Dhuhr: "ज़ुहर", Asr: "अस्र", Maghrib: "मग़रिब", Isha: "इशा" },

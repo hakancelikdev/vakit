@@ -47,7 +47,7 @@ module.exports = {
     footContact: "Contacto", footFeedback: "Sugestões",
     footPrivacy: "Privacidade", footTerms: "Termos", footAds: "Anúncios",
     footSig: "Feito com cuidado · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Ativar ou desativar o modo escuro", langLabel: "Idioma",
+    menuLabel: "Menu", themeLabel: "Ativar ou desativar o modo escuro", langLabel: "Idioma", closeLabel: "Fechar",
     videoLabel: "O ecrã das orações do Vakit: o céu muda à medida que o dia avança",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Nascer do sol", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },

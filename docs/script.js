@@ -300,10 +300,11 @@ function initMobileMenu() {
 /* Remember the language the visitor chose, so language-detection.js sends
    them to it next time; close the menu on outside click or Escape. */
 function initLangMenu() {
+  const remember = (lang) => {
+    try { localStorage.setItem('preferredLanguage', lang); } catch (e) { /* private mode */ }
+  };
   document.querySelectorAll('a[data-lang]').forEach(a => {
-    a.addEventListener('click', () => {
-      try { localStorage.setItem('preferredLanguage', a.dataset.lang); } catch (e) { /* private mode */ }
-    });
+    a.addEventListener('click', () => remember(a.dataset.lang));
   });
   const menu = document.querySelector('.lang-menu');
   if (!menu) return;
@@ -311,6 +312,48 @@ function initLangMenu() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary')?.focus(); }
   });
+  suggestLanguage(menu, remember);
+}
+
+/* First visit from a browser in another language we have a page for: offer
+   that page in a small banner. Never redirect — see language-detection.js.
+   Following or dismissing the banner counts as a choice and is remembered. */
+function suggestLanguage(menu, remember) {
+  let saved;
+  try { saved = localStorage.getItem('preferredLanguage'); } catch (e) { return; }
+  if (saved) return;
+
+  const current = document.documentElement.lang.toLowerCase().split('-')[0];
+  const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+  let link = null;
+  for (const pref of prefs) {
+    const base = String(pref).toLowerCase().split('-')[0];
+    if (base === current) return; // the visitor already reads this page's language
+    link = menu.querySelector(`a[data-lang="${base}"]`);
+    if (link) break;
+  }
+  if (!link) return;
+
+  const bar = document.createElement('div');
+  bar.className = 'lang-suggest';
+  const globe = menu.querySelector('summary svg');
+  if (globe) bar.appendChild(globe.cloneNode(true));
+
+  const go = document.createElement('a');
+  go.href = link.getAttribute('href');
+  go.lang = link.lang;
+  go.dir = link.dir;
+  go.textContent = `${link.textContent} ${link.dir === 'rtl' ? '←' : '→'}`;
+  go.addEventListener('click', () => remember(link.dataset.lang));
+
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.textContent = '×';
+  close.setAttribute('aria-label', menu.dataset.closeLabel || '×');
+  close.addEventListener('click', () => { remember(current); bar.remove(); });
+
+  bar.append(go, close);
+  document.body.appendChild(bar);
 }
 
 /* ================================================================

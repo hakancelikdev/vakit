@@ -46,7 +46,7 @@ module.exports = {
     footContact: "تماس", footFeedback: "بازخورد",
     footPrivacy: "حریم خصوصی", footTerms: "شرایط", footAds: "تبلیغات",
     footSig: "با دقت ساخته شده · © 2026 Hakan Çelik",
-    menuLabel: "منو", themeLabel: "روشن/خاموش کردن حالت تیره", langLabel: "زبان",
+    menuLabel: "منو", themeLabel: "روشن/خاموش کردن حالت تیره", langLabel: "زبان", closeLabel: "بستن",
     videoLabel: "صفحهٔ نماز Vakit: آسمان با گذر روز تغییر می‌کند",
   },
   PRAYERS: { Fajr: "امساک", Sunrise: "طلوع آفتاب", Dhuhr: "ظهر", Asr: "عصر", Maghrib: "مغرب", Isha: "عشاء" },

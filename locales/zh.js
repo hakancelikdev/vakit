@@ -47,7 +47,7 @@ module.exports = {
     footContact: "联系", footFeedback: "反馈",
     footPrivacy: "隐私", footTerms: "条款", footAds: "广告",
     footSig: "用心打造 · © 2026 Hakan Çelik",
-    menuLabel: "菜单", themeLabel: "切换深色模式", langLabel: "语言",
+    menuLabel: "菜单", themeLabel: "切换深色模式", langLabel: "语言", closeLabel: "关闭",
     videoLabel: "Vakit 的礼拜页面：天空随着一天的推移而变化",
   },
 

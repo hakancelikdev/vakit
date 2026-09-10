@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Contatti", footFeedback: "Suggerimenti",
     footPrivacy: "Privacy", footTerms: "Termini", footAds: "Pubblicità",
     footSig: "Fatto con cura · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Attiva o disattiva la modalità scura", langLabel: "Lingua",
+    menuLabel: "Menu", themeLabel: "Attiva o disattiva la modalità scura", langLabel: "Lingua", closeLabel: "Chiudi",
     videoLabel: "La schermata delle preghiere di Vakit: il cielo cambia con il passare del giorno",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Alba", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },

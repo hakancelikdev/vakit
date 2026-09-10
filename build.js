@@ -189,7 +189,7 @@ function langMenu(lang) {
     const attrs = l === lang ? ' aria-current="page"' : ` hreflang="${L.htmlLang}"`;
     return `<li><a href="${L.path}" data-lang="${l}" lang="${L.htmlLang}" dir="${L.rtl ? "rtl" : "ltr"}"${attrs}>${esc(L.name)}</a></li>`;
   }).join("\n        ");
-  return `<details class="lang-menu">
+  return `<details class="lang-menu" data-close-label="${esc(t(lang, "closeLabel"))}">
       <summary aria-label="${esc(t(lang, "langLabel"))}">${GLOBE}<span>${esc(LANGS[lang].name)}</span></summary>
       <ul class="lang-list">
         ${items}

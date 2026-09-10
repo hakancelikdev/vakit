@@ -1,33 +1,27 @@
 /**
  * Language routing.
  *
- * Every language is a real, separately indexable page: Turkish at "/"
- * (canonical), the others at "/<code>/". This script only handles two things:
- * sending legacy URLs to their new home, and pointing a visitor who lands on
- * "/" at the page in their language.
+ * Every language is a real page ("/" Turkish, "/<code>/" the others) with a full
+ * hreflang set, so search engines send each visitor to the right one. This
+ * script only redirects the root when the visitor has CHOSEN a language before
+ * (the language menu and the suggestion banner store it), and it forwards the
+ * old ?lang=xx links.
  *
- * Crawlers don't execute JavaScript, so they always see the URL they asked
- * for — no redirect ever interferes with indexing any language.
+ * ⚠️ Never redirect by browser language. Googlebot renders JavaScript with an
+ * English browser and no storage: redirecting "/" by browser language made
+ * Google read the Turkish home page as a copy of /en/ — Search Console
+ * (2026-09-10): "/" had user canonical /en/, and /en/ was "Duplicate, Google
+ * chose different canonical". A first-time visitor whose browser speaks another
+ * language gets a suggestion banner instead (script.js → suggestLanguage).
+ *
+ * Old page names (/en.html, /privacy-en.html, /terms-en.html) are static
+ * redirect pages in docs/, not handled here.
  */
 (function () {
   // Must match LANGS in content.js.
   var supported = ['tr', 'en', 'ar', 'az', 'bn', 'da', 'de', 'es', 'fa', 'ff', 'fr', 'hi', 'id', 'it',
     'ja', 'ms', 'nl', 'pt', 'ru', 'sq', 'sw', 'th', 'ug', 'ur', 'zh'];
-  var path = window.location.pathname;
   var pageFor = function (lang) { return lang === 'tr' ? '/' : '/' + lang + '/'; };
-
-  /* ---- legacy URLs from the previous site structure ---- */
-  var legacy = {
-    '/en.html': '/en/',
-    '/privacy-en.html': '/privacy.html',
-    '/terms-en.html': '/terms.html'
-  };
-  for (var old in legacy) {
-    if (path.endsWith(old)) {
-      window.location.replace(legacy[old]);
-      return;
-    }
-  }
 
   var store = {
     get: function () { try { return localStorage.getItem('preferredLanguage'); } catch (e) { return null; } },
@@ -42,32 +36,11 @@
     return;
   }
 
-  /* ---- the root: follow the visitor's choice, else the browser ----
-     Only "/" is ever redirected. Landing on any /<code>/ page is always
-     respected, so a search result or a shared link keeps the language it
-     promised. A browser language we don't have goes to English (x-default). */
+  /* ---- the root: only an explicit earlier choice redirects ---- */
+  var path = window.location.pathname;
   var saved = store.get();
   var atRoot = path === '/' || path === '/index.html';
-
-  if (atRoot) {
-    var target = supported.indexOf(saved) !== -1 ? saved : null;
-    if (!target) {
-      var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'tr'];
-      for (var i = 0; i < prefs.length && !target; i++) {
-        var base = String(prefs[i]).toLowerCase().split('-')[0];
-        if (supported.indexOf(base) !== -1) target = base;
-      }
-      target = target || 'en';
-      store.set(target);
-    }
-    if (target !== 'tr') {
-      window.location.replace(pageFor(target));
-      return;
-    }
-  }
-
-  /* Record the language of the page actually being viewed. */
-  if (!saved) {
-    store.set(document.documentElement.lang.toLowerCase().split('-')[0]);
+  if (atRoot && saved && saved !== 'tr' && supported.indexOf(saved) !== -1) {
+    window.location.replace(pageFor(saved));
   }
 })();

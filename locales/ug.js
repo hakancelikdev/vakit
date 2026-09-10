@@ -46,7 +46,7 @@ module.exports = {
     footContact: "ئالاقە", footFeedback: "پىكىر",
     footPrivacy: "مەخپىيەتلىك", footTerms: "شەرتلەر", footAds: "ئېلانلار",
     footSig: "ئەستايىدىل ياسالدى · © 2026 Hakan Çelik",
-    menuLabel: "تىزىملىك", themeLabel: "قاراڭغۇ ھالەتنى ئالماشتۇرۇش", langLabel: "تىل",
+    menuLabel: "تىزىملىك", themeLabel: "قاراڭغۇ ھالەتنى ئالماشتۇرۇش", langLabel: "تىل", closeLabel: "تاقاش",
     videoLabel: "Vakit نىڭ ناماز ئېكرانى: كۈن ئۆتكەنسېرى ئاسمانمۇ ئۆزگىرىدۇ",
   },
   PRAYERS: { Fajr: "سەھەرلىك", Sunrise: "كۈن چىقىش", Dhuhr: "پېشىن", Asr: "ئەسىر", Maghrib: "شام", Isha: "خۇپتەن" },

@@ -46,7 +46,7 @@ module.exports = {
     footContact: "যোগাযোগ", footFeedback: "মতামত",
     footPrivacy: "গোপনীয়তা", footTerms: "শর্তাবলি", footAds: "বিজ্ঞাপন",
     footSig: "যত্ন নিয়ে বানানো · © 2026 Hakan Çelik",
-    menuLabel: "মেনু", themeLabel: "ডার্ক মোড চালু/বন্ধ করুন", langLabel: "ভাষা",
+    menuLabel: "মেনু", themeLabel: "ডার্ক মোড চালু/বন্ধ করুন", langLabel: "ভাষা", closeLabel: "বন্ধ করুন",
     videoLabel: "Vakit-এর নামাজের পাতা: দিন গড়ানোর সঙ্গে আকাশও বদলায়",
   },
   PRAYERS: { Fajr: "ইমসাক", Sunrise: "সূর্যোদয়", Dhuhr: "যোহর", Asr: "আসর", Maghrib: "মাগরিব", Isha: "এশা" },

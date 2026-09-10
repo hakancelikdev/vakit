@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Jokkondiral", footFeedback: "Miijo mon",
     footPrivacy: "Suturaa", footTerms: "Sarɗiiji", footAds: "Publisite",
     footSig: "Moƴƴinaa e reentaade · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Uddit/uddu mbaydi niɓɓiɗndi", langLabel: "Ɗemngal",
+    menuLabel: "Menu", themeLabel: "Uddit/uddu mbaydi niɓɓiɗndi", langLabel: "Ɗemngal", closeLabel: "Uddu",
     videoLabel: "Hello juulde Vakit: kammu ina waylo no ñalawma ina yahra",
   },
   PRAYERS: { Fajr: "Imsaak", Sunrise: "Puɗal naange", Dhuhr: "Tisbaar", Asr: "Takkusaan", Maghrib: "Futuro", Isha: "Geeƴe" },

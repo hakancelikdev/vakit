@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Voorwaarden", footAds: "Advertenties",
     footSig: "Met zorg gemaakt · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Donkere modus aan/uit", langLabel: "Taal",
+    menuLabel: "Menu", themeLabel: "Donkere modus aan/uit", langLabel: "Taal", closeLabel: "Sluiten",
     videoLabel: "Het gebedsscherm van Vakit: de hemel verandert naarmate de dag vordert",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Zonsopgang", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },

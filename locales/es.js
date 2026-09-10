@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Contacto", footFeedback: "Comentarios",
     footPrivacy: "Privacidad", footTerms: "Condiciones", footAds: "Anuncios",
     footSig: "Hecho con cariño · © 2026 Hakan Çelik",
-    menuLabel: "Menú", themeLabel: "Activar o desactivar el modo oscuro", langLabel: "Idioma",
+    menuLabel: "Menú", themeLabel: "Activar o desactivar el modo oscuro", langLabel: "Idioma", closeLabel: "Cerrar",
     videoLabel: "Pantalla de oración de Vakit: el cielo cambia a medida que avanza el día",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Salida del sol", Dhuhr: "Duhr", Asr: "Asr", Maghrib: "Magrib", Isha: "Isha" },

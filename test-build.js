@@ -106,6 +106,25 @@ test("sitemap her dilin ana sayfasını içeriyor", () => {
   for (const lang of LANGS) assert.ok(map.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}</loc>`), `${lang} yok`);
 });
 
+/**
+ * ⚠️ SEO kilidi: Googlebot JavaScript'i İngilizce tarayıcıyla ve depolamasız çalıştırır.
+ * Kök sayfa tarayıcı diline göre yönlendirince Google Türkçe ana sayfayı /en/'in kopyası
+ * sandı (Search Console, 2026-09-10). Yönlendirme yalnız kullanıcının kaydedilmiş
+ * seçimine bakabilir; tarayıcı dili yalnız öneri şeridinde (script.js) kullanılır.
+ */
+test("language-detection.js tarayıcı diline göre YÖNLENDİRMEZ", () => {
+  const js = fs.readFileSync("docs/language-detection.js", "utf8").replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, "");
+  assert.ok(!/navigator\.(languages?|userLanguage)/.test(js), "tarayıcı dili okunuyor — Googlebot yönlendirilir");
+});
+
+test("eski adresler yeni sayfaya yönleniyor", () => {
+  for (const [file, target] of [["en.html", "/en/"], ["privacy-en.html", "/en/privacy.html"], ["terms-en.html", "/en/terms.html"]]) {
+    const html = fs.readFileSync(path.join("docs", file), "utf8");
+    assert.ok(html.includes(`url=${target}"`), `${file} → ${target} yönlendirmesi yok`);
+    assert.ok(fs.existsSync(path.join("docs", target.endsWith("/") ? target + "index.html" : target)), `${target} yok`);
+  }
+});
+
 test("language-detection.js desteklenen dil listesi LANGS ile aynı", () => {
   const js = fs.readFileSync("docs/language-detection.js", "utf8");
   const m = js.match(/var supported = \[([^\]]+)\]/);

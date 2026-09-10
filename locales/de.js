@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Kontakt", footFeedback: "Feedback",
     footPrivacy: "Datenschutz", footTerms: "Nutzungsbedingungen", footAds: "Werbung",
     footSig: "Mit Sorgfalt gemacht · © 2026 Hakan Çelik",
-    menuLabel: "Menü", themeLabel: "Dunkelmodus ein/aus", langLabel: "Sprache",
+    menuLabel: "Menü", themeLabel: "Dunkelmodus ein/aus", langLabel: "Sprache", closeLabel: "Schließen",
     videoLabel: "Der Gebetsbildschirm von Vakit: Der Himmel verändert sich im Lauf des Tages",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Sonnenaufgang", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },

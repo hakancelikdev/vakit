@@ -46,7 +46,7 @@ module.exports = {
     footContact: "Hubungi", footFeedback: "Maklum Balas",
     footPrivacy: "Privasi", footTerms: "Terma", footAds: "Iklan",
     footSig: "Dibuat dengan teliti · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Hidupkan/matikan mod gelap", langLabel: "Bahasa",
+    menuLabel: "Menu", themeLabel: "Hidupkan/matikan mod gelap", langLabel: "Bahasa", closeLabel: "Tutup",
     videoLabel: "Skrin solat Vakit: langit berubah seiring berlalunya hari",
   },
   PRAYERS: { Fajr: "Imsak", Sunrise: "Syuruk", Dhuhr: "Zohor", Asr: "Asar", Maghrib: "Maghrib", Isha: "Isyak" },

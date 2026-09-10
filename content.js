@@ -140,7 +140,7 @@ const REVIEWERS = ["Meryem Ebrar", "alpaslanx", "h-seyin", "Keskin2298", "Baalba
 
 const META = {
   tr: {
-    title: "Vakit: Namaz, Kıble, Kuran",
+    title: "Vakit: Namaz Vakitleri, Kıble, Kur'an",
     description:
       "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
     keywords:
@@ -195,7 +195,7 @@ const COPY = {
     footContact: "İletişim", footFeedback: "Geri Bildirim",
     footPrivacy: "Gizlilik", footTerms: "Şartlar", footAds: "Reklamlar",
     footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
-    menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat", langLabel: "Dil",
+    menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat", langLabel: "Dil", closeLabel: "Kapat",
     videoLabel: "Vakit'in namaz ekranı: gün ilerledikçe gökyüzü de değişiyor",
   },
   en: {
@@ -237,7 +237,7 @@ const COPY = {
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Terms", footAds: "Ads",
     footSig: "Made with care · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Toggle dark mode", langLabel: "Language",
+    menuLabel: "Menu", themeLabel: "Toggle dark mode", langLabel: "Language", closeLabel: "Close",
     videoLabel: "Vakit's prayer screen: the sky changes as the day moves on",
   },
 };

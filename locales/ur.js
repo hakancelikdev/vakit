@@ -46,7 +46,7 @@ module.exports = {
     footContact: "رابطہ", footFeedback: "رائے",
     footPrivacy: "رازداری", footTerms: "شرائط", footAds: "اشتہارات",
     footSig: "توجہ سے بنائی گئی · © 2026 Hakan Çelik",
-    menuLabel: "مینو", themeLabel: "ڈارک موڈ آن/آف کریں", langLabel: "زبان",
+    menuLabel: "مینو", themeLabel: "ڈارک موڈ آن/آف کریں", langLabel: "زبان", closeLabel: "بند کریں",
     videoLabel: "Vakit کی نماز اسکرین: دن ڈھلنے کے ساتھ آسمان بھی بدلتا ہے",
   },
   PRAYERS: { Fajr: "امساک", Sunrise: "طلوعِ آفتاب", Dhuhr: "ظہر", Asr: "عصر", Maghrib: "مغرب", Isha: "عشاء" },
