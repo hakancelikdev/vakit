@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Vakit: 礼拝時刻・キブラ・クルアーン</title>
@@ -16,10 +25,11 @@
     <meta property="og:url" content="https://vakit.hakancelik.dev/ja/">
     <meta property="og:title" content="Vakit: 礼拝時刻・キブラ・クルアーン">
     <meta property="og:description" content="礼拝時刻を確認し、キブラを見つけ、クルアーンを読む。iPhone、iPad、Apple Watch、Mac に対応。25言語、13の計算方法、ライブアクティビティ、ロック画面ウィジェット、金曜の説教、補いの記録。無料・広告なし・オフライン対応。">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/ja.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vakit: 礼拝時刻・キブラ・クルアーン">
     <meta property="og:site_name" content="Vakit: 礼拝時刻・キブラ・クルアーン">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:locale:alternate" content="tr_TR">
@@ -48,11 +58,11 @@
     <meta property="og:locale:alternate" content="zh_CN">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vakit.hakancelik.dev/ja/">
     <meta name="twitter:title" content="Vakit: 礼拝時刻・キブラ・クルアーン">
     <meta name="twitter:description" content="礼拝時刻を確認し、キブラを見つけ、クルアーンを読む。iPhone、iPad、Apple Watch、Mac に対応。25言語、13の計算方法、ライブアクティビティ、ロック画面ウィジェット、金曜の説教、補いの記録。無料・広告なし・オフライン対応。">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/og/ja.jpg">
     <meta name="twitter:creator" content="@hakancelikdev">
 
     <!-- Apple / theme -->

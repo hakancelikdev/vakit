@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Vakit: 礼拜时间·古兰经·朝向</title>
@@ -16,10 +25,11 @@
     <meta property="og:url" content="https://vakit.hakancelik.dev/zh/">
     <meta property="og:title" content="Vakit: 礼拜时间·古兰经·朝向">
     <meta property="og:description" content="查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch 和 Mac；25 种语言、13 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。免费、无广告、离线可用。">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/zh.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vakit: 礼拜时间·古兰经·朝向">
     <meta property="og:site_name" content="Vakit: 礼拜时间·古兰经·朝向">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:locale:alternate" content="tr_TR">
@@ -48,11 +58,11 @@
     <meta property="og:locale:alternate" content="ur_PK">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vakit.hakancelik.dev/zh/">
     <meta name="twitter:title" content="Vakit: 礼拜时间·古兰经·朝向">
     <meta name="twitter:description" content="查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch 和 Mac；25 种语言、13 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。免费、无广告、离线可用。">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/og/zh.jpg">
     <meta name="twitter:creator" content="@hakancelikdev">
 
     <!-- Apple / theme -->

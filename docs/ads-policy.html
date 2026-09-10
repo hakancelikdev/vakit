@@ -11,9 +11,11 @@
     <meta property="og:url" content="https://vakit.hakancelik.dev/ads-policy.html">
     <meta property="og:title" content="Vakit — Reklam Politikası">
     <meta property="og:description" content="Vakit'in helal-uyumlu reklam politikası. Bahis, alkol, müstehcen, faiz veya fal/büyü içerikli reklam göstermeyiz.">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/tr.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="tr_TR">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vakit — Reklam Politikası">
     <meta name="twitter:description" content="Vakit'in helal-uyumlu reklam politikası. Bahis, alkol, müstehcen, faiz veya fal/büyü içerikli reklam göstermeyiz.">
     <link rel="canonical" href="https://vakit.hakancelik.dev/ads-policy.html">
@@ -41,11 +43,12 @@
       @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
     </style>
     <script>
-      // Apply the saved theme before paint so the page doesn't flash.
       (function () {
-        var t = localStorage.getItem('theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', t);
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
       })();
     </script>
 </head>

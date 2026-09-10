@@ -39,54 +39,19 @@ const DOCS = path.join(__dirname, "docs");
 const BUILD_DATE = SITE.updated;
 const ALL = Object.keys(LANGS);
 
-/**
- * Web fonts per writing system. Instrument Serif and Inter only cover Latin, so
- * other scripts add a Noto family behind them: Latin runs inside the text (the
- * name "Vakit", digits) keep the brand faces, the script itself falls through
- * to Noto. `families` is appended to the Google Fonts css2 URL.
- */
-const SCRIPTS = {
-  latin: {},
-  cyrillic: {
-    families: "Noto+Serif:ital@0;1",
-    serif: "'Instrument Serif', 'Noto Serif', Georgia, serif",
-  },
-  arabic: {
-    families: "Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Naskh Arabic', 'Geeza Pro', serif",
-    sans: "'Inter', 'Noto Sans Arabic', 'Geeza Pro', system-ui, sans-serif",
-  },
-  urdu: {
-    families: "Noto+Nastaliq+Urdu:wght@400;600&family=Noto+Naskh+Arabic:wght@400;500;600",
-    serif: "'Instrument Serif', 'Noto Nastaliq Urdu', serif",
-    sans: "'Inter', 'Noto Naskh Arabic', system-ui, sans-serif",
-  },
-  devanagari: {
-    families: "Noto+Serif+Devanagari:wght@400;500&family=Noto+Sans+Devanagari:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Serif Devanagari', serif",
-    sans: "'Inter', 'Noto Sans Devanagari', system-ui, sans-serif",
-  },
-  bengali: {
-    families: "Noto+Serif+Bengali:wght@400;500&family=Noto+Sans+Bengali:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Serif Bengali', serif",
-    sans: "'Inter', 'Noto Sans Bengali', system-ui, sans-serif",
-  },
-  thai: {
-    families: "Noto+Serif+Thai:wght@400;500&family=Noto+Sans+Thai:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Serif Thai', serif",
-    sans: "'Inter', 'Noto Sans Thai', system-ui, sans-serif",
-  },
-  chinese: {
-    families: "Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Serif SC', 'Songti SC', serif",
-    sans: "'Inter', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif",
-  },
-  japanese: {
-    families: "Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;600",
-    serif: "'Instrument Serif', 'Noto Serif JP', 'Hiragino Mincho ProN', serif",
-    sans: "'Inter', 'Noto Sans JP', 'Hiragino Sans', system-ui, sans-serif",
-  },
-};
+const { SCRIPTS, fontHref, joinsWithoutSpace } = require("./tools/fonts.js");
+
+/* Runs before first paint so a dark-mode visitor never sees a white flash;
+   script.js takes over the toggle once the page has loaded. */
+const THEME_BOOT = `<script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>`;
 
 /* ---------------------------------------------------------------- helpers */
 
@@ -119,10 +84,12 @@ const legalLang = (lang) => (LEGAL_LANGS.includes(lang) ? lang : "en");
 
 const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.webp`;
 
+/** Link-preview card, rendered per language by tools/make-og.js. */
+const ogUrl = (lang) => `/assets/og/${lang}.jpg`;
+
 function fontHead(lang) {
   const s = SCRIPTS[LANGS[lang].script];
-  const extra = s.families ? `&family=${s.families}` : "";
-  const link = `<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700${extra}&display=swap" rel="stylesheet">`;
+  const link = `<link href="${fontHref(LANGS[lang].script)}" rel="stylesheet">`;
   const vars = [s.serif && `--serif: ${s.serif}`, s.sans && `--sans: ${s.sans}`].filter(Boolean);
   return vars.length ? `${link}\n    <style>:root { ${vars.join("; ")} }</style>` : link;
 }
@@ -329,17 +296,18 @@ function page(lang) {
   const L = LANGS[lang];
   const m = META[lang];
   const canonical = SITE.origin + L.path;
-  const ogImage = `${SITE.origin}/assets/app-icon-512x512.png`;
+  const ogImage = SITE.origin + ogUrl(lang);
   const legal = legalLang(lang);
   const note = t(lang, "r-note");
   // Split headings join with a space — except in Chinese and Japanese, which don't space words.
-  const gap = ["chinese", "japanese"].includes(L.script) ? "" : " ";
+  const gap = joinsWithoutSpace(L.script) ? "" : " ";
 
   return `<!DOCTYPE html>
 <html ${htmlAttrs(lang)}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ${THEME_BOOT}
 
     <!-- Primary Meta Tags -->
     <title>${esc(m.title)}</title>
@@ -354,15 +322,16 @@ function page(lang) {
     <meta property="og:title" content="${esc(m.title)}">
     <meta property="og:description" content="${esc(m.description)}">
     <meta property="og:image" content="${ogImage}">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="${esc(SITE.appName)}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${esc(m.title)}">
     <meta property="og:site_name" content="${esc(m.title)}">
     <meta property="og:locale" content="${L.ogLocale}">
 ${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:alternate" content="${LANGS[l].ogLocale}">`).join("\n")}
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="${canonical}">
     <meta name="twitter:title" content="${esc(m.title)}">
     <meta name="twitter:description" content="${esc(m.description)}">
@@ -680,9 +649,11 @@ function legalPage(key, lang) {
     <meta property="og:url" content="${canonical}">
     <meta property="og:title" content="${esc(meta.title)}">
     <meta property="og:description" content="${esc(meta.description)}">
-    <meta property="og:image" content="${SITE.origin}/assets/app-icon-512x512.png">
+    <meta property="og:image" content="${SITE.origin}${ogUrl(lang)}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="${L.ogLocale}">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(meta.title)}">
     <meta name="twitter:description" content="${esc(meta.description)}">
     <link rel="canonical" href="${canonical}">
@@ -699,14 +670,7 @@ function legalPage(key, lang) {
     <style>
 ${LEGAL_STYLE}
     </style>
-    <script>
-      // Apply the saved theme before paint so the page doesn't flash.
-      (function () {
-        var t = localStorage.getItem('theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', t);
-      })();
-    </script>
+    ${THEME_BOOT}
 </head>
 <body>
 
@@ -919,6 +883,7 @@ function check() {
     for (const f of [`sky-${L.video}.mp4`, `sky-${L.video}-poster.webp`]) {
       if (!fs.existsSync(path.join(DOCS, "assets", "video", f))) errors.push(`${lang}: missing /assets/video/${f}`);
     }
+    if (!fs.existsSync(path.join(DOCS, ogUrl(lang)))) errors.push(`${lang}: missing ${ogUrl(lang)} — run node tools/make-og.js`);
     if (!SCRIPTS[L.script]) errors.push(`${lang}: unknown script "${L.script}"`);
   }
   for (const key of Object.keys(LEGAL)) {

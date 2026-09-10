@@ -14,7 +14,10 @@ npm run dev                      # build, then serve docs/ at http://localhost:8
 npm test                         # build + checks on the generated pages (links, hreflang, assets)
 node tools/check-locale.js de    # check one translation against English, even before the others exist
 ./tools/import-media.sh          # re-import screenshots + preview video from ../app-store-toolkit
+node tools/make-og.js            # regenerate link-preview cards (docs/assets/og/<lang>.jpg) — needs Google Chrome
 ```
+
+**Link-preview cards** (`og:image`, 1200×630) are rendered per language from the page's own hero copy and that language's prayer-screen screenshot. Re-run `make-og.js` after changing `h1a/h1b/h1c`/`eyebrow` or re-importing screenshots; `build.js` fails if a card is missing.
 
 CI re-runs the build on a clean checkout and fails the deploy if the committed `docs/` doesn't match, so always commit the regenerated files alongside the `content.js` / `locales/` change.
 

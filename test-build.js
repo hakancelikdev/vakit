@@ -61,6 +61,20 @@ for (const lang of LANGS) {
     }
   });
 
+  test(`${lang}: paylaşım kartı (og:image) o dilin kartı ve diskte`, () => {
+    const m = page.match(/<meta property="og:image" content="([^"]+)">/);
+    assert.ok(m, "og:image yok");
+    assert.strictEqual(m[1], `${C.SITE.origin}/assets/og/${lang}.jpg`);
+    assert.ok(fs.existsSync(path.join("docs", "assets", "og", `${lang}.jpg`)), "kart dosyası yok — node tools/make-og.js");
+    assert.ok(page.includes('<meta name="twitter:card" content="summary_large_image">'), "twitter kartı büyük değil");
+  });
+
+  test(`${lang}: tema ilk boyamadan önce uygulanıyor (koyu modda beyaz yanıp sönme yok)`, () => {
+    const head = page.slice(0, page.indexOf("</head>"));
+    assert.ok(head.includes("setAttribute('data-theme'"), "head içinde tema betiği yok");
+    assert.ok(head.indexOf("setAttribute('data-theme'") < head.indexOf('rel="stylesheet"'), "tema betiği stil dosyasından sonra");
+  });
+
   test(`${lang}: vitrin görselleri ve video diskte`, () => {
     for (const m of page.matchAll(/(?:src|poster)="(\/assets\/(?:screenshots|video)\/[^"]+)"/g)) {
       assert.ok(fs.existsSync(path.join("docs", m[1])), `${m[1]} yok`);

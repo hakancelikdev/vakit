@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Vakit: নামাজের সময় ও আজান</title>
@@ -16,10 +25,11 @@
     <meta property="og:url" content="https://vakit.hakancelik.dev/bn/">
     <meta property="og:title" content="Vakit: নামাজের সময় ও আজান">
     <meta property="og:description" content="নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/bn.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vakit: নামাজের সময় ও আজান">
     <meta property="og:site_name" content="Vakit: নামাজের সময় ও আজান">
     <meta property="og:locale" content="bn_BD">
     <meta property="og:locale:alternate" content="tr_TR">
@@ -48,11 +58,11 @@
     <meta property="og:locale:alternate" content="zh_CN">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vakit.hakancelik.dev/bn/">
     <meta name="twitter:title" content="Vakit: নামাজের সময় ও আজান">
     <meta name="twitter:description" content="নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/og/bn.jpg">
     <meta name="twitter:creator" content="@hakancelikdev">
 
     <!-- Apple / theme -->

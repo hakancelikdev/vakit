@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>Vakit: Namaz, Kıble, Kuran</title>
@@ -16,10 +25,11 @@
     <meta property="og:url" content="https://vakit.hakancelik.dev/">
     <meta property="og:title" content="Vakit: Namaz, Kıble, Kuran">
     <meta property="og:description" content="Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.">
-    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/tr.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vakit: Namaz, Kıble, Kuran">
     <meta property="og:site_name" content="Vakit: Namaz, Kıble, Kuran">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:locale:alternate" content="en_US">
@@ -48,11 +58,11 @@
     <meta property="og:locale:alternate" content="zh_CN">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vakit.hakancelik.dev/">
     <meta name="twitter:title" content="Vakit: Namaz, Kıble, Kuran">
     <meta name="twitter:description" content="Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.">
-    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/og/tr.jpg">
     <meta name="twitter:creator" content="@hakancelikdev">
 
     <!-- Apple / theme -->
