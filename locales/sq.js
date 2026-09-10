@@ -29,7 +29,7 @@ module.exports = {
     "t-3a": "GPS-i mbetet te ju.",
     "t-3b": "Koordinatat tuaja nuk transmetohen askund. Nuk mund ta shohim ku faleni, dhe as nuk duam.",
     "t-4a": "Një politikë e thjeshtë.",
-    "t-4b": "Numërime përdorimi që nuk mbartin identitetin tuaj. Politika jonë e privatësisë lexohet për një minutë — dhe do të mbetet e tillë.",
+    "t-4b": "Të dhëna përdorimi që nuk mbartin identitetin tuaj — politika jonë e privatësisë rendit saktësisht çfarë dërgohet. Lexohet për një minutë, dhe do të mbetet e tillë.",
     "f-eye": "§ 03 · {featureCount} mjete",
     "f-h1": "Një aplikacion,", "f-h2": "mjafton për një jetë ibadeti.",
     "c-h1": "Dallimi,", "c-h2": "i matur.",

@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "Je gps blijft bij jou.",
     "t-3b": "Je coördinaten worden nergens heen gestuurd. We kunnen niet zien waar je bidt, en dat willen we ook niet.",
     "t-4a": "Een beleid in gewone taal.",
-    "t-4b": "Gebruiksaantallen zonder je identiteit. Ons privacybeleid lees je in een minuut – en dat blijft zo.",
+    "t-4b": "Gebruiksgegevens zonder je identiteit – ons privacybeleid zet precies op een rij wat er wordt verstuurd. Je leest het in een minuut en dat blijft zo.",
     "f-eye": "§ 03 · {featureCount} functies",
     "f-h1": "Eén app,", "f-h2": "genoeg voor een leven vol ibada.",
     "c-h1": "Het verschil,", "c-h2": "gemeten.",

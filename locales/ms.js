@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "GPS kekal bersama anda.",
     "t-3b": "Koordinat anda tidak dihantar ke mana-mana. Kami tidak dapat melihat di mana anda solat, dan kami tidak mahu melihatnya.",
     "t-4a": "Dasar dalam bahasa mudah.",
-    "t-4b": "Hanya kiraan penggunaan yang tidak membawa identiti. Dasar privasi kami cukup ringkas untuk dibaca dalam seminit — dan akan kekal begitu.",
+    "t-4b": "Data penggunaan yang tidak membawa identiti — dasar privasi kami menyenaraikan dengan tepat apa yang dihantar. Cukup ringkas untuk dibaca dalam seminit, dan akan kekal begitu.",
     "f-eye": "§ 03 · {featureCount} alat",
     "f-h1": "Satu aplikasi,", "f-h2": "cukup untuk seumur hidup beribadah.",
     "c-h1": "Perbezaan yang", "c-h2": "terukur.",

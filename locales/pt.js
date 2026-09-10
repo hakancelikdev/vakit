@@ -29,7 +29,7 @@ module.exports = {
     "t-3a": "O GPS fica contigo.",
     "t-3b": "As tuas coordenadas não são transmitidas para lado nenhum. Não conseguimos ver onde rezas, nem queremos.",
     "t-4a": "Uma política clara.",
-    "t-4b": "Contagens de utilização que não trazem a tua identidade. A nossa política de privacidade lê-se num minuto — e vai continuar assim.",
+    "t-4b": "Dados de utilização que não trazem a tua identidade — a nossa política de privacidade diz exatamente o que é enviado. Lê-se num minuto, e vai continuar assim.",
     "f-eye": "§ 03 · {featureCount} ferramentas",
     "f-h1": "Uma só app,", "f-h2": "para uma vida inteira de adoração.",
     "c-h1": "A diferença,", "c-h2": "medida.",

@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "GPS sizdə qalır.",
     "t-3b": "Koordinatlarınız heç yerə ötürülmür. Harada namaz qıldığınızı görə bilmirik, görmək də istəmirik.",
     "t-4a": "Sadə bir siyasət.",
-    "t-4b": "Kimliyinizlə bağlı olmayan istifadə sayları. Məxfilik siyasətimiz bir dəqiqədə oxunacaq qədər qısadır — və elə də qalacaq.",
+    "t-4b": "Kimliyinizlə bağlı olmayan istifadə məlumatları — nəyin göndərildiyi məxfilik siyasətimizdə bir-bir yazılıb. Bir dəqiqədə oxunacaq qədər qısadır və elə də qalacaq.",
     "f-eye": "§ 03 · {featureCount} alət",
     "f-h1": "Tək tətbiq", "f-h2": "bir ömürlük ibadətə bəs edir.",
     "c-h1": "Fərq", "c-h2": "göz qabağındadır.",

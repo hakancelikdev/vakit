@@ -46,6 +46,8 @@ Hand-maintained files in `docs/`:
 | `language-detection.js` | Legacy URL redirects; sends a visitor landing on `/` to their language's page |
 | `404.html` | Standalone page, not generated |
 
+The hero's live clock fetches times from the public Aladhan API. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
+
 The site loads **no analytics or tracking scripts** (Google Analytics was removed 2026-09-10; `npm test` fails if it comes back). App Store campaign tokens (`storeLink`) are the only acquisition measurement.
 | `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`) |
 

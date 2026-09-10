@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "GPS ina heddoo e mon.",
     "t-3b": "Koordone mon neldetaake fey. Min mbaawaa yiyde to njuulton, min njiɗaa kadi yiyde ɗum.",
     "t-4a": "Politik laaɓtuki.",
-    "t-4b": "Limooje kuutorgol ɗe alaa heen keɓe keeriiɗe mon. Politik suturaa amen ina raɓɓii no ina jangee e hojomaare wootere — ina heddoo non.",
+    "t-4b": "Keɓe kuutorgol ɗe alaa heen keɓe keeriiɗe mon — politik suturaa amen ina limta huunde kala ko neldetee. Ina raɓɓii no ina jangee e hojomaare wootere, ina heddoo non.",
     "f-eye": "§ 03 · Kuutorɗe {featureCount}",
     "f-h1": "Jaaɓnirgal gootal,", "f-h2": "ina yonii ngam dewal nguurndam fof.",
     "c-h1": "Ceerngal ngal,", "c-h2": "betaama.",

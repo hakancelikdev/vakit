@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "GPS'en bliver hos dig.",
     "t-3b": "Dine koordinater sendes ingen steder hen. Vi kan ikke se, hvor du beder, og det vil vi heller ikke.",
     "t-4a": "En politik i klart sprog.",
-    "t-4b": "Brugstal uden din identitet. Vores privatlivspolitik kan læses på et minut – og sådan forbliver det.",
+    "t-4b": "Brugsdata uden din identitet – vores privatlivspolitik viser præcis, hvad der sendes. Den kan læses på et minut, og sådan forbliver det.",
     "f-eye": "§ 03 · {featureCount} værktøjer",
     "f-h1": "Én app,", "f-h2": "nok til et helt liv med ibada.",
     "c-h1": "Forskellen,", "c-h2": "målt.",

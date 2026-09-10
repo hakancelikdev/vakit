@@ -29,7 +29,7 @@ module.exports = {
     "t-3a": "GPS inabaki kwako.",
     "t-3b": "Viwianishi vyako havitumwi popote. Hatuwezi kuona unaswali wapi, wala hatutaki kuona.",
     "t-4a": "Sera kwa lugha rahisi.",
-    "t-4b": "Takwimu za matumizi zisizobeba utambulisho wako. Sera yetu ya faragha ni fupi, inasomeka kwa dakika moja — na itabaki hivyo.",
+    "t-4b": "Data za matumizi zisizobeba utambulisho wako — sera yetu ya faragha inaorodhesha hasa kile kinachotumwa. Ni fupi, inasomeka kwa dakika moja, na itabaki hivyo.",
     "f-eye": "§ 03 · Zana {featureCount}",
     "f-h1": "Programu moja,", "f-h2": "inatosha kwa maisha yote ya ibada.",
     "c-h1": "Tofauti,", "c-h2": "iliyopimwa.",

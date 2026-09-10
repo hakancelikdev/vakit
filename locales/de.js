@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "Dein GPS bleibt bei dir.",
     "t-3b": "Deine Koordinaten werden nirgendwohin übertragen. Wir sehen nicht, wo du betest – und wollen es auch nicht.",
     "t-4a": "Eine Richtlinie in klaren Worten.",
-    "t-4b": "Nutzungszahlen ohne Bezug zu deiner Person. Unsere Datenschutzerklärung ist in einer Minute gelesen – und das bleibt so.",
+    "t-4b": "Nutzungsdaten ohne Bezug zu deiner Person – unsere Datenschutzerklärung listet genau auf, was gesendet wird. Sie ist in einer Minute gelesen, und das bleibt so.",
     "f-eye": "§ 03 · {featureCount} Funktionen",
     "f-h1": "Eine App,", "f-h2": "genug für ein Leben voller Ibada.",
     "c-h1": "Der Unterschied,", "c-h2": "gemessen.",

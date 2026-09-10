@@ -28,7 +28,7 @@ module.exports = {
     "t-3a": "Le GPS reste chez toi.",
     "t-3b": "Tes coordonnées ne sont transmises nulle part. Nous ne pouvons pas voir où tu pries, et nous ne le voulons pas.",
     "t-4a": "Une politique en langage clair.",
-    "t-4b": "Des chiffres d'usage qui ne portent pas ton identité. Notre politique de confidentialité se lit en une minute, et elle le restera.",
+    "t-4b": "Des données d'usage qui ne portent pas ton identité\u00a0: notre politique de confidentialité indique précisément ce qui est envoyé. Elle se lit en une minute, et elle le restera.",
     "f-eye": "§ 03 · {featureCount} outils",
     "f-h1": "Une seule app,", "f-h2": "pour toute une vie de pratique.",
     "c-h1": "La différence,", "c-h2": "mesurée.",
