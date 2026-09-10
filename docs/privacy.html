@@ -76,7 +76,7 @@
 
 <main class="legal-page">
   <h1>Gizlilik <em>Politikası</em></h1>
-  <p class="legal-desc">Son güncelleme: 1 Eylül 2026 — Sürüm 1.7.3
+  <p class="legal-desc">Son güncelleme: 10 Eylül 2026 — Sürüm 1.7.4
 
 Vakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kişisel kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar tamamen cihazınızda hesaplanır. Hatim, yer imi, hedef ve favori cami kayıtlarınız cihazınızda kalır ve yalnızca sizin Apple iCloud alanınızda senkronlanır — sunucularımıza gönderilmez. Zikir listeniz bunun istisnasıdır: uygulamayı geliştirebilmek için kullanım istatistikleriyle birlikte sunucularımıza da gönderilir (ayrıntı: 1. bölüm). Sunucuya giden her şey kimliğinizi içermeyen kalıcı bir kullanıcı koduna bağlıdır.</p>
   <div class="legal-card"><h3>1. Topladığımız Veriler</h3><p>Toplamadığımız veriler:
@@ -97,7 +97,7 @@ Sunucularımıza gönderilen veriler — kimliğinizi içermeyen kalıcı bir ku
 • Bölgesel konum (ülke, şehir, ilçe) – GPS koordinatları DEĞİL
 • Cihaz modeli, iOS/macOS sürümü, uygulama sürümü, watchOS sürümü
 • Uygulama tercihleri (dil, hesaplama yöntemi, tema, mezhep, takvim türü, namaz rehberi için seçtiğiniz cinsiyet, hangi vakitlerde bildirim istediğiniz, Kur'an ve hadis okuma tercihleriniz — yazı boyutu, meal, okuyucu, mushaf hattı gibi). Okuduğunuz yer ve okuma geçmişiniz buna dahil DEĞİLDİR.
-• Özellik kullanım istatistikleri (ekran görüntülenme, özellik kullanımı). Bu istatistikler yukarıdaki defterlerin kullanıldığını gösterir — örneğin bir mazeret günü işaretlendiğini ya da kaza kaydı girildiğini. Defterin kendisi (kayıtlarınızın listesi ve sayıları) gönderilmez; gönderilen, o işlemin yapıldığı bilgisidir ve her istatistik gibi zaman damgası taşır.
+• Özellik kullanım istatistikleri (ekran görüntülenme, özellik kullanımı). Bu istatistikler yukarıdaki defterlerin kullanıldığını gösterir — örneğin bir mazeret günü işaretlendiğini ya da kaza kaydı girildiğini. Defterin kendisi (kayıtlarınızın listesi) gönderilmez. Gönderilen, o işlemin yapıldığı bilgisi ve bazı sayılardır — örneğin işaretlediğiniz namaz, günlük ibadet sayılarınız, kalan kaza borcunuz, kaydettiğiniz âyetin ya da hadisin numarası; her istatistik gibi zaman damgası taşır.
 • Uygulama içinde yaptığınız aramaların metni (Kur'an, hadis, zikir, Esmâ, cami ve ayar aramaları) – hangi kelimelerin aradığınızı bulamadığını görüp aramayı düzeltmek için toplanır; en fazla 80 karakteri saklanır.
 • Zikir listeniz – zikir adı, türü, kategorisi ve çekim sayaçları; kendi eklediğiniz zikirlerde girdiğiniz Arapça metin, açıklama ve kaynak bilgisi dahil. Hangi zikirlerin ne sıklıkta kullanıldığını görüp uygulamanın zikir bölümünü geliştirmek için toplanır.
 • Çökme raporları (Firebase Crashlytics aracılığıyla, kişisel veri içermez)
@@ -105,11 +105,12 @@ Sunucularımıza gönderilen veriler — kimliğinizi içermeyen kalıcı bir ku
 Bu kullanıcı kodu iCloud anahtar zinciri üzerinden senkronlandığı için aynı Apple ID'ye sahip cihazlarınız tek kullanıcı sayılır ve uygulamayı silip yeniden kurduğunuzda korunur. Kod hiçbir kimlik bilgisi içermez; verileriniz satılmaz ve reklam için kullanılmaz.</p></div>
   <div class="legal-card"><h3>2. Verilerinizi Nasıl Kullanıyoruz</h3><p>• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak Adhan kütüphanesi ile çevrim dışı işlenir.
 • Kıble Yönü – Konum ve pusula yönü cihaz üzerinde birleştirilir.
+• Konum Adı – Bulunduğunuz yerin adını göstermek için koordinatlarınız Apple'ın konum adı hizmetine gönderilir; Vakit sunucusuna gönderilmez.
 • İbadet Hatırlatıcıları – Yerel bildirimler iOS ve macOS tarafından cihazda planlanır.
 • Duyuru Bildirimleri – Mübarek gün ve sürüm duyuruları Firebase Cloud Messaging ile topluca gönderilir; kişiye özel hedefleme yapılmaz.
 • Cuma Hutbesi – Haftanın hutbesi Diyanet'in açık sayfasından indirilir; istekte kimlik bilginiz taşınmaz.
 • Yakındaki Camiler – Konumunuz Apple MapKit'e gönderilir (cami arama, mesafe, yol tarifi); Vakit sunucularına gönderilmez.
-• Kullanıcı Verileri (zikir, hatim, yer imleri) – Cihazınızda SwiftData ile saklanır ve sizin özel Apple iCloud alanınızda senkronlanır. Bunlardan yalnız zikir listesi ayrıca Vakit sunucusuna da gönderilir (bkz. 1. bölüm).
+• Kullanıcı Verileri (zikir, hatim, yer imleri) – Cihazınızda Core Data ile saklanır ve sizin özel Apple iCloud alanınızda senkronlanır. Bunlardan yalnız zikir listesi ayrıca Vakit sunucusuna da gönderilir (bkz. 1. bölüm).
 • Geliştirme ve İyileştirme – Kullanım istatistikleri (GPS koordinatı hariç) performansı izlemek ve hataları tespit etmek için kullanılır.</p></div>
   <div class="legal-card"><h3>3. iCloud Senkronizasyonu (CloudKit)</h3><p>Vakit, ibadet kayıtlarınızı (zikir, hatim, yer imleri, hedefler, favori camiler) Apple'ın CloudKit altyapısı üzerinden cihazlarınız arasında senkronlar. Bu veriler:
 • Yalnızca sizin Apple ID'nize ait özel iCloud alanında (private database) tutulur.
@@ -146,13 +147,12 @@ Not: Firebase Analytics KULLANILMAZ; reklam tanımlayıcısı (IDFA) toplanmaz.
 
 Google gizlilik politikası: policies.google.com/privacy</p></div>
   <div class="legal-card"><h3>6. Reklamlar (Sadaka Modu)</h3><p>Vakit reklam göstermez. Yalnızca isteğe bağlı &quot;Sadaka Modu&quot;nda, kullanıcı geliştiriciyi desteklemek için kendisi başlatırsa Google AdMob üzerinden ödüllü video reklamı görüntülenir. Bu durumda:
-• Reklam Google AdMob tarafından sunulur ve cihaz/reklam tanımlayıcı (IDFA) bilgisi kullanabilir.
-• iOS App Tracking Transparency (ATT) iznini reddederseniz IDFA paylaşılmaz; kişiselleştirilmemiş reklam gösterilir.
-• Bu özellik kullanıcı isteğine bağlıdır; başlatmadığınız sürece hiçbir reklam SDK'sı veri toplamaz.
+• Reklam Google AdMob tarafından sunulur; her zaman kişiselleştirilmemiştir ve genel izleyici (G) sınıfındadır. Vakit ATT izni istemez, reklam tanımlayıcısı (IDFA) paylaşılmaz.
+• Destek Merkezi (&quot;Vakit'i Yaşat&quot;) açıldığında reklam altyapısı başlatılır ve bir reklam önceden yüklenir; siz izlemeyi seçmedikçe reklam gösterilmez.
 • Sadaka Modu özelliği Firebase Remote Config ile uzaktan kapatılabilir; özelliği hiç kullanmamayı tercih edebilirsiniz.
 
 Google AdMob gizlilik: support.google.com/admob/answer/6128543</p></div>
-  <div class="legal-card"><h3>7. Bağışlar (In-App Purchase)</h3><p>Vakit ücretsizdir. Geliştiriciyi desteklemek için &quot;Vakit'i Yaşat&quot; ekranından ₺75 / ₺149 / ₺349 / ₺749 kademelerinde isteğe bağlı bağış yapabilirsiniz. Bu işlemler:
+  <div class="legal-card"><h3>7. Bağışlar (In-App Purchase)</h3><p>Vakit ücretsizdir. Geliştiriciyi desteklemek için &quot;Vakit'i Yaşat&quot; ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilirsiniz. Bu işlemler:
 • Apple StoreKit 2 ile işlenir; ödeme bilgileriniz (kart, IBAN, Apple Pay) yalnızca Apple'a iletilir.
 • Vakit, ödeme yöntemi veya finansal bilgilerinizi görmez ve saklamaz.
 • Bağışların geri ödemesi yalnızca Apple üzerinden talep edilebilir (reportaproblem.apple.com).</p></div>

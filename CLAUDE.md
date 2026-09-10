@@ -78,6 +78,10 @@ Two other things follow from the generator, and both are the point:
 
 `{featureCount}` and `{ratingCount}` in copy strings are substituted at build time, so counts stated in prose can't fall out of sync with the lists.
 
+**Only what is true today — no future (owner's decision, 2026-09-10).** No plans, no "coming", no "we can't promise forever", no future products or promised procedures, on any page including the legal ones. The ad policy once announced a future banner tier, a premium purchase, an in-app report button and quarterly reports; none existed.
+
+**Every claim is checked against the app's code.** The 2026-09-10 audit found ~40 wrong or misleading claims (Siri, holy-day count, bookmark types, worship rings, "coordinates never leave your phone" while Apple geocoding and MapKit receive them, "worship records never reach our servers" while their counts do). When copy names a number, a platform, a privacy boundary or a capability, find the code that makes it true first.
+
 **The feature list is a factual claim.** Every entry in `FEATURES` must correspond to something that ships in the current app. When a feature is removed from the app, remove it here in the same release — in every language. The site once advertised "Zikir Halkası" for months after it had been deleted from the app.
 
 ### CSS theming

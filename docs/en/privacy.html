@@ -76,7 +76,7 @@
 
 <main class="legal-page">
   <h1>Privacy <em>Policy</em></h1>
-  <p class="legal-desc">Last updated: 1 September 2026 — Version 1.7.3
+  <p class="legal-desc">Last updated: 10 September 2026 — Version 1.7.4
 
 Vakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Your khatm progress, bookmarks, goals and favourite mosques stay on your device and sync only within your own Apple iCloud account — they are never sent to our servers. Your dhikr list is the exception: it is sent to our servers along with usage statistics so we can improve the app (see section 1). Everything sent to our servers is tied to a persistent user code containing no identifying information.</p>
   <div class="legal-card"><h3>1. Data We Collect</h3><p>Data we DO NOT collect:
@@ -97,7 +97,7 @@ Data sent to our servers — tied to a persistent user code that contains no ide
 • Regional location (country, city, district) – NOT GPS coordinates
 • Device model, iOS/macOS version, app version, watchOS version
 • App preferences (language, calculation method, theme, school of thought, calendar type, the gender you selected for the prayer guide, which prayers you want notifications for, and your Quran and hadith reading preferences — font size, translation, reciter, script). Your reading position and history are NOT included.
-• Feature usage statistics (screen views, feature usage). These show that a section was used — for example that an excused day was marked or a missed-prayer entry was made. The ledger itself (the list of your records and their counts) is not sent; what is sent is the fact that the action happened, and like every statistic it carries a timestamp.
+• Feature usage statistics (screen views, feature usage). These show that a section was used — for example that an excused day was marked or a missed-prayer entry was made. The ledger itself (the list of your records) is not sent. What is sent is the fact that the action happened plus some numbers — for example the prayer you marked, your daily worship counts, your remaining qada, the number of an ayah or hadith you saved; like every statistic it carries a timestamp.
 • The text of searches you make in the app (Quran, hadith, dhikr, names of Allah, mosque and settings search) – collected so we can see which words fail to find what you are looking for and fix search; at most 80 characters are stored.
 • Your dhikr list – dhikr name, type, category and counters; including the Arabic text, description and source you enter for dhikr you add yourself. They are collected to see which dhikr are used and how often, so the dhikr section can be improved.
 • Crash reports (via Firebase Crashlytics, contains no personal data)
@@ -105,11 +105,12 @@ Data sent to our servers — tied to a persistent user code that contains no ide
 Because this user code syncs through the iCloud keychain, devices on the same Apple ID count as one user and the code survives deleting and reinstalling the app. The code contains no identity data; your data is never sold or used for advertising.</p></div>
   <div class="legal-card"><h3>2. How We Use Your Data</h3><p>• Prayer Time Calculation – Location is processed locally on your device, calculated offline using the Adhan library.
 • Qibla Direction – Location and compass heading are combined on-device.
+• Place Name – To show the name of where you are, your coordinates are sent to Apple's place-name service; not to Vakit servers.
 • Worship Reminders – Local notifications are scheduled on-device by iOS and macOS.
 • Announcements – Blessed-day and release announcements are broadcast via Firebase Cloud Messaging; there is no per-person targeting.
 • Friday Sermon – This week's sermon is downloaded from the Diyanet public page; the request carries no identifying information.
 • Nearby Mosques – Your location is sent to Apple MapKit (mosque search, distance, directions); not to Vakit servers.
-• User Data (dhikr, khatm, bookmarks) – Stored locally with SwiftData and synced within your private Apple iCloud space. Of these, only the dhikr list is additionally sent to the Vakit server (see section 1).
+• User Data (dhikr, khatm, bookmarks) – Stored locally with Core Data and synced within your private Apple iCloud space. Of these, only the dhikr list is additionally sent to the Vakit server (see section 1).
 • Development &amp; Improvement – Usage statistics (no GPS coordinates) are used to monitor performance and detect bugs.</p></div>
   <div class="legal-card"><h3>3. iCloud Synchronization (CloudKit)</h3><p>Vakit syncs your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) across your devices via Apple's CloudKit. This data:
 • Lives only in the private database of your own Apple ID.
@@ -146,13 +147,12 @@ Note: Firebase Analytics is NOT used; the Advertising Identifier (IDFA) is not c
 
 Google's privacy policy: policies.google.com/privacy</p></div>
   <div class="legal-card"><h3>6. Advertising (Sadaka Mode)</h3><p>Vakit does not show ads. Only in the optional &quot;Sadaka Mode&quot;, if the user explicitly starts it to support the developer, a rewarded video ad is shown via Google AdMob. In that case:
-• The ad is served by Google AdMob and may use the advertising identifier (IDFA) and device info.
-• If you decline the iOS App Tracking Transparency (ATT) prompt, IDFA is not shared and a non-personalized ad is shown.
-• The feature is opt-in; no ad SDK collects data unless you start it.
+• The ad is served by Google AdMob; it is always non-personalized and rated for a general audience (G). Vakit never shows the App Tracking Transparency prompt and the advertising identifier (IDFA) is not shared.
+• When the Support Center (&quot;Vakit'i Yaşat&quot;) opens, the ad SDK starts and preloads one ad; no ad is shown unless you choose to watch it.
 • Sadaka Mode can be disabled remotely via Firebase Remote Config; you may simply choose never to use it.
 
 Google AdMob privacy: support.google.com/admob/answer/6128543</p></div>
-  <div class="legal-card"><h3>7. Donations (In-App Purchase)</h3><p>Vakit is free. To support the developer you can make optional donations of ₺75 / ₺149 / ₺349 / ₺749 from the &quot;Vakit'i Yaşat&quot; screen. These transactions:
+  <div class="legal-card"><h3>7. Donations (In-App Purchase)</h3><p>Vakit is free. To support the developer you can make optional donations in tiers from ₺10 to ₺10,000 from the &quot;Vakit'i Yaşat&quot; screen. These transactions:
 • Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.
 • Vakit never sees or stores your payment method or financial details.
 • Refunds can only be requested through Apple (reportaproblem.apple.com).</p></div>

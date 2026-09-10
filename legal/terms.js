@@ -6,7 +6,7 @@
 module.exports = {
   "tr": {
     "title": "Kullanım <em>Şartları</em>",
-    "desc": "Son güncelleme: 20 Ağustos 2026 — Sürüm 1.7.1\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
+    "desc": "Son güncelleme: 10 Eylül 2026 — Sürüm 1.7.4\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
     "sections": [
       {
         "t": "1. Şartların Kabulü",
@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         "t": "3. Ücretsiz Kullanım & Opsiyonel Bağışlar",
-        "b": "Vakit'in tüm temel özellikleri ücretsizdir. Reklam göstermez (yalnızca isteğe bağlı \"Sadaka Modu\"nda kullanıcının kendi başlattığı ödüllü video reklamlar hariç).\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺75 / ₺149 / ₺349 / ₺749 kademelerinde isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir.\n• Tüketilebilir (consumable) ürünlerdir; bağış karşılığında uygulama içi ek özellik veya abonelik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple\\'ın geçerli ödeme şartları ve App Store kuralları geçerlidir."
+        "b": "Vakit'in tüm temel özellikleri ücretsizdir. Reklam göstermez (yalnızca isteğe bağlı \"Sadaka Modu\"nda kullanıcının kendi başlattığı ödüllü video reklamlar hariç).\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir.\n• Tüketilebilir (consumable) ürünlerdir; bağış karşılığında uygulama içi ek özellik veya abonelik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple\\'ın geçerli ödeme şartları ve App Store kuralları geçerlidir."
       },
       {
         "t": "4. Sadaka Modu (Ödüllü Reklam)",
@@ -70,7 +70,7 @@ module.exports = {
   },
   "en": {
     "title": "Terms of <em>Use</em>",
-    "desc": "Last updated: 20 August 2026 — Version 1.7.1\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
+    "desc": "Last updated: 10 September 2026 — Version 1.7.4\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
     "sections": [
       {
         "t": "1. Acceptance of Terms",
@@ -82,7 +82,7 @@ module.exports = {
       },
       {
         "t": "3. Free Use & Optional Donations",
-        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations of ₺75 / ₺149 / ₺349 / ₺749 from the \"Vakit'i Yaşat\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple\\'s payment terms and App Store rules apply."
+        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Vakit'i Yaşat\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple\\'s payment terms and App Store rules apply."
       },
       {
         "t": "4. Sadaka Mode (Rewarded Ad)",
