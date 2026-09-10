@@ -124,24 +124,11 @@ vakit/
 └── README.md              ✅ Proje dokümantasyonu
 ```
 
-## 📊 Analytics (Opsiyonel)
+## 📊 Analytics
 
-Google Analytics eklemek için:
-
-1. Google Analytics hesabı oluşturun
-2. Tracking ID'yi alın
-3. `docs/index.html` dosyasına tracking kodu ekleyin:
-
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_TRACKING_ID');
-</script>
-```
+Site hiçbir analitik/izleme betiği yüklemez (Google Analytics 2026-09-10'da kaldırıldı;
+`npm test` geri gelirse düşer). Siteden gelen indirmeler App Store kampanya token'larıyla
+(`storeLink` → `ct=site-*`) App Store Connect'te ölçülür.
 
 ## 🔄 Güncelleme
 

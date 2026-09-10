@@ -82,6 +82,11 @@ test("llms.txt linki kampanyalı — AI kaynaklı trafiğin tek ölçüm noktas�
   assert.ok(llms.includes("ct=llms-txt"), "llms.txt kampanyasız");
 });
 
+test("hiçbir sayfa Google Analytics / izleme betiği yüklemiyor", () => {
+  const pages = [...LANGS.map(html), ...["404.html", "privacy.html", "en/privacy.html"].map((f) => fs.readFileSync(path.join("docs", f), "utf8"))];
+  for (const page of pages) assert.ok(!/googletagmanager|google-analytics|gtag\(/.test(page), "sayfada Google Analytics var");
+});
+
 test("sitemap her dilin ana sayfasını içeriyor", () => {
   const map = fs.readFileSync("docs/sitemap.xml", "utf8");
   for (const lang of LANGS) assert.ok(map.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}</loc>`), `${lang} yok`);

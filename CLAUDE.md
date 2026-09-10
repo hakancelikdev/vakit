@@ -41,7 +41,9 @@ Hand-maintained files in `docs/`:
 | `styles.css` | All styles (CSS variables for theming, dark mode, responsive, RTL + non-Latin script rules) |
 | `script.js` | Interactivity only: live prayer clock, showcase switching + video, FAQ accordion, theme, language menu, mobile menu |
 | `language-detection.js` | Legacy URL redirects; sends a visitor landing on `/` to their language's page |
-| `presentation.html`, `404.html` | Standalone pages, not generated |
+| `404.html` | Standalone page, not generated |
+
+The site loads **no analytics or tracking scripts** (Google Analytics was removed 2026-09-10; `npm test` fails if it comes back). App Store campaign tokens (`storeLink`) are the only acquisition measurement.
 | `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`) |
 
 ### Why content is generated, not rendered client-side

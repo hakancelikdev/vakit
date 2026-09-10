@@ -341,15 +341,6 @@ function page(lang) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', '${SITE.gaId}');
-    </script>
-
     <!-- Primary Meta Tags -->
     <title>${esc(m.title)}</title>
     <meta name="description" content="${esc(m.description)}">
@@ -628,7 +619,6 @@ ${faqList(lang)}
     <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
     <a href="${localUrl(legal, "ads-policy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footAds"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
-    <a href="/presentation.html">${esc(t(lang, "footDeck"))}</a>
     <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
     <a href="${SITE.feedbackUrl}" target="_blank" rel="noopener">${esc(t(lang, "footFeedback"))}</a>
   </div>
@@ -871,7 +861,9 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
   dhikr and the calendar all work with no connection.
 - **Private by design.** Coordinates never leave the device. Worship tracking, qada
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
-  user's own private iCloud. Only anonymous, non-identifying usage counts are sent.
+  user's own private iCloud. What reaches the server is usage statistics, the dhikr list
+  and in-app search terms, tied to a persistent code that carries no identity (a
+  pseudonym, not anonymous) — see the privacy policy.
 - **No account.** Nothing to sign up for.
 - **${ALL.length} interface languages**, right-to-left in Arabic, Urdu, Persian and Uyghur.
   Content translations (Quran translation, hadith translations) are Turkish and English.

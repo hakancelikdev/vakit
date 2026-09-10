@@ -31,11 +31,10 @@ const SITE = {
   feedbackUrl: "https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU",
   email: "hakancelikdev@gmail.com",
   themeColor: "#2A9D8F",
-  gaId: "G-T1PNWJYF69",
   // From the Turkish storefront (iTunes lookup API), where effectively all
   // ratings are. Re-check on each release:
   //   curl -s "https://itunes.apple.com/lookup?id=6748356813&country=tr"
-  rating: { value: "4.8", count: "340" },
+  rating: { value: "4.8", count: "445" },
   // Mirrors the shipping iOS release. Bump together with the app.
   appVersion: "1.7.4",
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
@@ -194,7 +193,7 @@ const COPY = {
     downloadCta2: "App Store'dan İndir", explore: "Özellikleri keşfet →",
     preview: "Önizle",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
-    footPrivacy: "Gizlilik", footTerms: "Şartlar", footAds: "Reklamlar", footDeck: "Sunum",
+    footPrivacy: "Gizlilik", footTerms: "Şartlar", footAds: "Reklamlar",
     footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
     menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat", langLabel: "Dil",
     videoLabel: "Vakit'in namaz ekranı: gün ilerledikçe gökyüzü de değişiyor",
@@ -236,7 +235,7 @@ const COPY = {
     downloadCta2: "Download on the App Store", explore: "Explore features →",
     preview: "Preview",
     footContact: "Contact", footFeedback: "Feedback",
-    footPrivacy: "Privacy", footTerms: "Terms", footAds: "Ads", footDeck: "Deck",
+    footPrivacy: "Privacy", footTerms: "Terms", footAds: "Ads",
     footSig: "Made with care · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Toggle dark mode", langLabel: "Language",
     videoLabel: "Vakit's prayer screen: the sky changes as the day moves on",
@@ -277,7 +276,7 @@ const FEATURES = {
     { n: "Canlı Gökyüzü", d: "Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre." },
     { n: "Nafile Vakitleri", d: "İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı." },
     { n: "Manuel Konum", d: "Konumu elle seç ya da seyahatte kendiliğinden güncellensin." },
-    { n: "Apple Watch", d: "Namaz vakitleri, canlı kıble, 12 watch face complication." },
+    { n: "Apple Watch", d: "Namaz vakitleri, canlı kıble, 13 watch face complication." },
     { n: "Mac Uygulaması", d: "Menü çubuğunda geri sayım, klavye kısayolları, iCloud senkron." },
     { n: "iPad", d: "Aynı uygulama büyük ekranda; kayıtların iCloud ile senkron." },
     { n: "25 Dil", d: "Arapça, Urduca, Farsça ve Uygurca'da sağdan sola arayüz." },
@@ -324,7 +323,7 @@ const FEATURES = {
     { n: "Live Sky", d: "Real stars and the moon on the day arc — for where you are, right now." },
     { n: "Voluntary Prayer Times", d: "Ishraq, Duha, Awwabin and the parts of the night; optional." },
     { n: "Manual Location", d: "Set your location by hand, or let it follow you as you travel." },
-    { n: "Apple Watch", d: "Prayer times, live qibla, 12 watch face complications." },
+    { n: "Apple Watch", d: "Prayer times, live qibla, 13 watch face complications." },
     { n: "Mac App", d: "Menu bar countdown, keyboard shortcuts, iCloud sync." },
     { n: "iPad", d: "The same app on a bigger screen; your records sync over iCloud." },
     { n: "25 Languages", d: "Right-to-left interface in Arabic, Urdu, Persian and Uyghur." },
@@ -468,8 +467,8 @@ const FAQ = {
     { q: "Cuma hutbesi nereden geliyor?", a: "Diyanet'in o hafta yayımladığı hutbe uygulamaya düşer; okuyabilir, sesli kaydını dinleyebilir ve çevrimdışı okumak için indirebilirsiniz. Hutbe Diyanet'in yayını olduğu için bu bölüm, hesaplama yöntemi Diyanet olan kullanıcılarda görünür." },
     { q: "Kur'an özelliğinde neler var?", a: "Tüm 114 sure, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet ve hatim takibi. Her şey çevrimdışı çalışır." },
     { q: "İbadet takibi nasıl çalışır?", a: "Activity Ring tarzı bir görünüm namazlarınızı, Kur'an okumanızı ve zikirlerinizi kaydeder. Ömür kazanızı vakit bazlı takip edebilir, borcunuzu kıldıkça eritebilirsiniz. Süreklilik ve istatistikler nazikçe gösterilir — suçlandırma yok." },
-    { q: "Hangi widget'lar var?", a: "Namaz vakitleri, geri sayım, günün ayeti, günün esması, Hicri takvim, mübarek günler, ay fazı ve ibadet serileri için 20 widget. Ana ekran, kilit ekranı, StandBy ve Mac masaüstünde kullanılabilir." },
-    { q: "Apple Watch uygulaması var mı?", a: "Evet. Apple Watch uygulaması namaz vakitlerini (geri sayım + liste), canlı kıble pusulasını ve tüm watch face'ler için 12 complication'ı destekler. iPhone ile birlikte çalışır — ayrı kurulum yok." },
+    { q: "Hangi widget'lar var?", a: "Namaz vakitleri, geri sayım, günün ayeti, günün esması, Hicri takvim, mübarek günler, ay fazı ve ibadet serileri için 25 widget. Ana ekran, kilit ekranı, StandBy ve Mac masaüstünde kullanılabilir." },
+    { q: "Apple Watch uygulaması var mı?", a: "Evet. Apple Watch uygulaması namaz vakitlerini (geri sayım + liste), canlı kıble pusulasını ve tüm watch face'ler için 13 complication'ı destekler. iPhone ile birlikte çalışır — ayrı kurulum yok." },
     { q: "Verilerim nerede saklanıyor?", a: "İbadet takibiniz, kaza ve hatim ilerlemeniz, yer imleriniz, okuma geçmişiniz ve favori camileriniz yalnızca cihazınızda ve sizin özel iCloud alanınızda durur — sunucularımıza gönderilmez. Zekât tutarlarınız ve anlık konumunuz da hiçbir zaman gönderilmez. Sunucuya kullanım istatistikleri, zikir listeniz ve uygulama içinde aradığınız kelimeler gider; aradığınızı bulamadığınız yerleri görüp aramayı düzeltebilelim diye. Hepsi kimliğinizi içermeyen kalıcı bir kullanıcı koduna bağlıdır — takma kimlik, anonim değil. Ayrıntısı gizlilik politikasında." },
   ],
   en: [
@@ -484,8 +483,8 @@ const FAQ = {
     { q: "Where does the Friday sermon come from?", a: "The khutbah Diyanet publishes each week lands in the app; you can read it, listen to the audio recording, and download it for offline reading. Because it is Diyanet's publication, this section appears for users whose calculation method is Diyanet." },
     { q: "What's in the Quran feature?", a: "All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, and a hatim tracker. Everything works offline." },
     { q: "How does worship tracking work?", a: "An Activity Ring-style view logs your prayers, Quran reading, and dhikr. You can also track a lifetime of missed prayers (qada) by time slot and clear the debt as you pray them. Streaks and gentle statistics help you keep going, without guilt." },
-    { q: "Which widgets exist?", a: "20 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen, Lock Screen, StandBy, and the Mac desktop." },
-    { q: "Is there an Apple Watch app?", a: "Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 12 watch face complications across all faces. It works alongside iPhone — no separate setup." },
+    { q: "Which widgets exist?", a: "25 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen, Lock Screen, StandBy, and the Mac desktop." },
+    { q: "Is there an Apple Watch app?", a: "Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 13 watch face complications across all faces. It works alongside iPhone — no separate setup." },
     { q: "Where is my data stored?", a: "Your worship tracking, qada and hatim progress, bookmarks, reading history and favourite mosques stay on your device and in your own private iCloud — none of it reaches our servers. Your zakat amounts and live location are never sent either. What does go to the server is usage statistics, your dhikr list and the words you search for inside the app — so we can see where you couldn't find what you were looking for and fix search. All of it is tied to a persistent user code that carries no identifying information — a pseudonym, not anonymous. Details are in the privacy policy." },
   ],
 };

@@ -5,7 +5,7 @@
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
 Watch and Mac, built by Hakan Çelik. Current release: 1.7.4, requires
 iOS/macOS 16.4 or later. App Store rating 4.8 from
-340 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
+445 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 
 ## What makes it different
 
@@ -16,7 +16,9 @@ iOS/macOS 16.4 or later. App Store rating 4.8 from
   dhikr and the calendar all work with no connection.
 - **Private by design.** Coordinates never leave the device. Worship tracking, qada
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
-  user's own private iCloud. Only anonymous, non-identifying usage counts are sent.
+  user's own private iCloud. What reaches the server is usage statistics, the dhikr list
+  and in-app search terms, tied to a persistent code that carries no identity (a
+  pseudonym, not anonymous) — see the privacy policy.
 - **No account.** Nothing to sign up for.
 - **25 interface languages**, right-to-left in Arabic, Urdu, Persian and Uyghur.
   Content translations (Quran translation, hadith translations) are Turkish and English.
@@ -27,7 +29,7 @@ iOS/macOS 16.4 or later. App Store rating 4.8 from
 - **Live Sky** — Real stars and the moon on the day arc — for where you are, right now.
 - **Voluntary Prayer Times** — Ishraq, Duha, Awwabin and the parts of the night; optional.
 - **Manual Location** — Set your location by hand, or let it follow you as you travel.
-- **Apple Watch** — Prayer times, live qibla, 12 watch face complications.
+- **Apple Watch** — Prayer times, live qibla, 13 watch face complications.
 - **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **25 Languages** — Right-to-left interface in Arabic, Urdu, Persian and Uyghur.
@@ -117,11 +119,11 @@ An Activity Ring-style view logs your prayers, Quran reading, and dhikr. You can
 
 ### Which widgets exist?
 
-20 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen, Lock Screen, StandBy, and the Mac desktop.
+25 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen, Lock Screen, StandBy, and the Mac desktop.
 
 ### Is there an Apple Watch app?
 
-Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 12 watch face complications across all faces. It works alongside iPhone — no separate setup.
+Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 13 watch face complications across all faces. It works alongside iPhone — no separate setup.
 
 ### Where is my data stored?
 
