@@ -5,46 +5,34 @@
  * the HTML at build time by ../build.js so crawlers that don't run JavaScript
  * can read it. Do not render content here — edit ../content.js and rebuild.
  *
- * What lives here: the live prayer clock, showcase preview switching, the FAQ
- * accordion, theme toggle, smooth scrolling and the mobile menu.
+ * What lives here: the live prayer clock, showcase preview switching (and its
+ * video), the FAQ accordion, theme toggle, the language menu, smooth scrolling
+ * and the mobile menu.
  */
 
-const APP_STORE_URL = 'https://apps.apple.com/app/id6748356813';
-
-/* The page is served per-language (/ and /en/), so the document tells us
-   which one we're on — there is no client-side language switching. */
-const lang = document.documentElement.lang === 'en' ? 'en' : 'tr';
-
-const CITIES = [
-  { id: 'istanbul',     en: 'Istanbul',      tr: 'İstanbul',      lat: 41.0082, lon: 28.9784, method: 13 },
-  { id: 'mecca',        en: 'Mecca',         tr: 'Mekke',         lat: 21.4225, lon: 39.8262, method: 4 },
-  { id: 'medina',       en: 'Medina',        tr: 'Medine',        lat: 24.4672, lon: 39.6024, method: 4 },
-  { id: 'london',       en: 'London',        tr: 'Londra',        lat: 51.5074, lon: -0.1278, method: 2 },
-  { id: 'berlin',       en: 'Berlin',        tr: 'Berlin',        lat: 52.52,   lon: 13.405,  method: 3 },
-  { id: 'paris',        en: 'Paris',         tr: 'Paris',         lat: 48.8566, lon: 2.3522,  method: 12 },
-  { id: 'newyork',      en: 'New York',      tr: 'New York',      lat: 40.7128, lon: -74.006, method: 2 },
-  { id: 'dubai',        en: 'Dubai',         tr: 'Dubai',         lat: 25.2048, lon: 55.2708, method: 16 },
-  { id: 'cairo',        en: 'Cairo',         tr: 'Kahire',        lat: 30.0444, lon: 31.2357, method: 5 },
-  { id: 'jakarta',      en: 'Jakarta',       tr: 'Cakarta',       lat: -6.2088, lon: 106.8456, method: 20 },
-  { id: 'tokyo',        en: 'Tokyo',         tr: 'Tokyo',         lat: 35.6762, lon: 139.6503, method: 2 },
-  { id: 'kualalumpur',  en: 'Kuala Lumpur',  tr: 'Kuala Lumpur',  lat: 3.139,   lon: 101.6869, method: 2 },
-];
-
-const TR_NAMES = { Fajr: 'İmsak', Sunrise: 'Güneş', Dhuhr: 'Öğle', Asr: 'İkindi', Maghrib: 'Akşam', Isha: 'Yatsı' };
+/* The page is served per language, and build.js embeds everything the clock
+   needs in that language (#vakit-data): prayer names, cities, date locale. */
+const DATA = (() => {
+  try { return JSON.parse(document.getElementById('vakit-data').textContent); } catch (e) { return null; }
+})() || {
+  lang: 'tr',
+  dateLocale: 'tr-u-ca-gregory-nu-latn',
+  prayers: {},
+  cities: [{ id: 'istanbul', name: 'İstanbul', lat: 41.0082, lon: 28.9784, method: 13 }],
+};
 
 const PRAYER_COLORS = { Fajr: 'var(--p-fajr)', Sunrise: 'var(--p-sunrise)', Dhuhr: 'var(--p-dhuhr)', Asr: 'var(--p-asr)', Maghrib: 'var(--p-maghrib)', Isha: 'var(--p-isha)' };
 
 const PRAYER_KEYS = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 
-const cityName = (city) => (lang === 'tr' ? city.tr : city.en);
-const prayerName = (key) => (lang === 'tr' ? (TR_NAMES[key] || key) : key);
+const prayerName = (key) => DATA.prayers[key] || key;
 
 /* ================================================================
    Prayer Times (Aladhan)
    ================================================================ */
 
-let currentCityId = 'istanbul';
-let currentTimings = null;
+let currentCity = DATA.cities[0];
+let current = null; // { times, timezone }
 const cachedTimings = {};
 
 function parseTime(str) {
@@ -56,21 +44,49 @@ function fmtTime(h, m) {
   return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
 }
 
+/* Wall-clock time in the city's time zone, not the visitor's — someone in
+   Berlin looking at Mecca must see Mecca's next prayer. */
+function zonedNow(date, timeZone) {
+  try {
+    const parts = new Intl.DateTimeFormat('en-GB', {
+      timeZone, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+    }).formatToParts(date);
+    const p = Object.fromEntries(parts.map(x => [x.type, x.value]));
+    return { day: p.day, month: p.month, year: p.year, h: +p.hour, m: +p.minute, s: +p.second };
+  } catch (e) {
+    return {
+      day: String(date.getDate()).padStart(2, '0'), month: String(date.getMonth() + 1).padStart(2, '0'),
+      year: String(date.getFullYear()), h: date.getHours(), m: date.getMinutes(), s: date.getSeconds(),
+    };
+  }
+}
+
+/* The city's time zone isn't known until the first response; until then the
+   visitor's own zone picks the date, which is right for their home city. */
+const guessZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 async function fetchPrayerTimes(city) {
-  const cacheKey = city.id + '_' + new Date().toDateString();
+  const zone = (cachedTimings[city.id] && cachedTimings[city.id].timezone) || guessZone();
+  const d = zonedNow(new Date(), zone);
+  const dateKey = d.day + '-' + d.month + '-' + d.year;
+  const cacheKey = city.id + '_' + dateKey;
   if (cachedTimings[cacheKey]) return cachedTimings[cacheKey];
 
   try {
     const res = await fetch(
-      'https://api.aladhan.com/v1/timings?latitude=' + city.lat +
+      'https://api.aladhan.com/v1/timings/' + dateKey + '?latitude=' + city.lat +
       '&longitude=' + city.lon + '&method=' + city.method
     );
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
     const t = data.data.timings;
-    const times = PRAYER_KEYS.map(k => ({ n: k, ...parseTime(t[k]) }));
-    const result = { times, hijri: data.data.date.hijri, gregorian: data.data.date.gregorian };
+    const result = {
+      times: PRAYER_KEYS.map(k => ({ n: k, ...parseTime(t[k]) })),
+      timezone: (data.data.meta && data.data.meta.timezone) || zone,
+    };
     cachedTimings[cacheKey] = result;
+    cachedTimings[city.id] = { timezone: result.timezone };
     return result;
   } catch (e) {
     return null;
@@ -81,43 +97,46 @@ function renderCitySelector() {
   const wrap = document.getElementById('citySelector');
   if (!wrap) return;
   wrap.innerHTML = '';
-  CITIES.forEach(city => {
+  DATA.cities.forEach(city => {
     const btn = document.createElement('button');
-    btn.className = 'city-btn' + (city.id === currentCityId ? ' on' : '');
+    btn.className = 'city-btn' + (city.id === currentCity.id ? ' on' : '');
     btn.dataset.cityId = city.id;
-    btn.textContent = cityName(city);
+    btn.textContent = city.name;
     btn.addEventListener('click', () => selectCity(city.id));
     wrap.appendChild(btn);
   });
 }
 
 async function selectCity(cityId) {
-  const city = CITIES.find(c => c.id === cityId);
+  const city = DATA.cities.find(c => c.id === cityId);
   if (!city) return;
-  currentCityId = cityId;
+  currentCity = city;
 
   document.querySelectorAll('.city-btn').forEach(b => {
     b.classList.toggle('on', b.dataset.cityId === cityId);
   });
 
   const loc = document.getElementById('loc');
-  if (loc) loc.textContent = cityName(city);
+  if (loc) loc.textContent = city.name;
 
   const data = await fetchPrayerTimes(city);
-  if (data) {
-    currentTimings = data.times;
+  if (data && currentCity.id === cityId) {
+    current = data;
     renderClockTick(new Date());
   }
 }
 
 function renderClockTick(now) {
-  if (!currentTimings) return;
+  if (!current) return;
 
-  const opts = { weekday: 'short', day: 'numeric', month: 'short' };
-  document.getElementById('date').textContent = now.toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-GB', opts);
+  const opts = { weekday: 'short', day: 'numeric', month: 'short', timeZone: current.timezone };
+  let dateText;
+  try { dateText = now.toLocaleDateString(DATA.dateLocale, opts); } catch (e) { dateText = now.toLocaleDateString(undefined, opts); }
+  document.getElementById('date').textContent = dateText;
 
-  const today = currentTimings;
-  const nowMin = now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+  const today = current.times;
+  const z = zonedNow(now, current.timezone);
+  const nowMin = z.h * 60 + z.m + z.s / 60;
   let next = today.find(p => p.minutes > nowMin);
   let prev = [...today].reverse().find(p => p.minutes <= nowMin);
   let rollover = false;
@@ -146,19 +165,46 @@ function renderClockTick(now) {
     const isPast = p.minutes <= nowMin && !rollover;
     const isActive = p.n === next.n && !rollover;
     row.className = 'clock-row' + (isActive ? ' active' : isPast ? ' passed' : '');
-    const dotColor = PRAYER_COLORS[p.n] || 'var(--rule)';
-    row.innerHTML = '<span class="clock-name"><span class="dot" style="background:' + dotColor + '"></span>' + prayerName(p.n) + '</span><span class="clock-t">' + fmtTime(p.h, p.m) + '</span>';
+    const name = document.createElement('span');
+    name.className = 'clock-name';
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    dot.style.background = PRAYER_COLORS[p.n] || 'var(--rule)';
+    name.append(dot, prayerName(p.n));
+    const time = document.createElement('span');
+    time.className = 'clock-t';
+    time.textContent = fmtTime(p.h, p.m);
+    row.append(name, time);
     list.appendChild(row);
   });
 }
 
 /* ================================================================
-   Showcase — markup is static, this only switches the visible screen
+   Showcase — markup is static, this only switches the visible screen.
+   Slot 0 is a muted, looping preview video; it plays only while it is
+   the visible slot and on screen, and never for reduced-motion users.
    ================================================================ */
 
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const showcaseVideo = document.querySelector('#phoneScreen video');
+let showcaseIndex = 0;
+let phoneVisible = true;
+
+function syncVideo() {
+  if (!showcaseVideo) return;
+  if (showcaseIndex === 0 && phoneVisible && !reducedMotion.matches) {
+    const p = showcaseVideo.play();
+    if (p && p.catch) p.catch(() => {});
+  } else {
+    showcaseVideo.pause();
+  }
+}
+
 function selectShowcase(i) {
+  showcaseIndex = i;
   document.querySelectorAll('#scList .sc-item').forEach((el, j) => el.classList.toggle('on', i === j));
   document.querySelectorAll('#phoneScreen .phone-screenshot').forEach((el, j) => el.classList.toggle('on', i === j));
+  syncVideo();
 }
 
 function initShowcase() {
@@ -174,6 +220,16 @@ function initShowcase() {
   }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
   items.forEach(el => observer.observe(el));
+
+  if (showcaseVideo) {
+    if (reducedMotion.matches) showcaseVideo.removeAttribute('autoplay');
+    new IntersectionObserver((entries) => {
+      phoneVisible = entries[0].isIntersecting;
+      syncVideo();
+    }).observe(showcaseVideo);
+    reducedMotion.addEventListener?.('change', syncVideo);
+    syncVideo();
+  }
 }
 
 /* ================================================================
@@ -241,11 +297,19 @@ function initMobileMenu() {
   }
 }
 
-/* Remember the language the visitor chose, so language-detection.js
-   doesn't bounce them back on the next visit. */
-function initLangLinks() {
-  document.querySelectorAll('.nav-lang a[data-lang]').forEach(a => {
-    a.addEventListener('click', () => localStorage.setItem('preferredLanguage', a.dataset.lang));
+/* Remember the language the visitor chose, so language-detection.js sends
+   them to it next time; close the menu on outside click or Escape. */
+function initLangMenu() {
+  document.querySelectorAll('a[data-lang]').forEach(a => {
+    a.addEventListener('click', () => {
+      try { localStorage.setItem('preferredLanguage', a.dataset.lang); } catch (e) { /* private mode */ }
+    });
+  });
+  const menu = document.querySelector('.lang-menu');
+  if (!menu) return;
+  document.addEventListener('click', e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary')?.focus(); }
   });
 }
 
@@ -258,9 +322,9 @@ initShowcase();
 initFAQ();
 initSmoothScrolling();
 initMobileMenu();
-initLangLinks();
+initLangMenu();
 renderCitySelector();
-selectCity(currentCityId);
+selectCity(currentCity.id);
 setInterval(() => renderClockTick(new Date()), 1000);
 
 document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);

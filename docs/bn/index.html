@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="bn" class="script-bengali">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1PNWJYF69"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T1PNWJYF69');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Vakit: নামাজের সময় ও আজান</title>
+    <meta name="description" content="নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।">
+    <meta name="keywords" content="namaz time, namaz, azan, quran, prayer times, islamic app, muslim app, qibla, নামাজের সময়, আজান, কিবলা, কুরআন, হাদিস, জিকির, রোজা, সেহরি, ইফতার, সূরা, মসজিদ, হিজরি ক্যালেন্ডার">
+    <meta name="author" content="Hakan Çelik">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/bn/">
+    <meta property="og:title" content="Vakit: নামাজের সময় ও আজান">
+    <meta property="og:description" content="নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:site_name" content="Vakit: নামাজের সময় ও আজান">
+    <meta property="og:locale" content="bn_BD">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="az_AZ">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fa_IR">
+    <meta property="og:locale:alternate" content="ff_SN">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ms_MY">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="pt_PT">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="sq_AL">
+    <meta property="og:locale:alternate" content="sw_KE">
+    <meta property="og:locale:alternate" content="th_TH">
+    <meta property="og:locale:alternate" content="ug_CN">
+    <meta property="og:locale:alternate" content="ur_PK">
+    <meta property="og:locale:alternate" content="zh_CN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://vakit.hakancelik.dev/bn/">
+    <meta name="twitter:title" content="Vakit: নামাজের সময় ও আজান">
+    <meta name="twitter:description" content="নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:creator" content="@hakancelikdev">
+
+    <!-- Apple / theme -->
+    <meta name="theme-color" content="#2A9D8F">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
+    <meta name="apple-mobile-web-app-title" content="Vakit">
+    <meta name="application-name" content="Vakit">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-itunes-app" content="app-id=6748356813">
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://vakit.hakancelik.dev/bn/">
+    <link rel="alternate" hreflang="tr" href="https://vakit.hakancelik.dev/">
+    <link rel="alternate" hreflang="en" href="https://vakit.hakancelik.dev/en/">
+    <link rel="alternate" hreflang="ar" href="https://vakit.hakancelik.dev/ar/">
+    <link rel="alternate" hreflang="az" href="https://vakit.hakancelik.dev/az/">
+    <link rel="alternate" hreflang="bn" href="https://vakit.hakancelik.dev/bn/">
+    <link rel="alternate" hreflang="da" href="https://vakit.hakancelik.dev/da/">
+    <link rel="alternate" hreflang="de" href="https://vakit.hakancelik.dev/de/">
+    <link rel="alternate" hreflang="es" href="https://vakit.hakancelik.dev/es/">
+    <link rel="alternate" hreflang="fa" href="https://vakit.hakancelik.dev/fa/">
+    <link rel="alternate" hreflang="ff" href="https://vakit.hakancelik.dev/ff/">
+    <link rel="alternate" hreflang="fr" href="https://vakit.hakancelik.dev/fr/">
+    <link rel="alternate" hreflang="hi" href="https://vakit.hakancelik.dev/hi/">
+    <link rel="alternate" hreflang="id" href="https://vakit.hakancelik.dev/id/">
+    <link rel="alternate" hreflang="it" href="https://vakit.hakancelik.dev/it/">
+    <link rel="alternate" hreflang="ja" href="https://vakit.hakancelik.dev/ja/">
+    <link rel="alternate" hreflang="ms" href="https://vakit.hakancelik.dev/ms/">
+    <link rel="alternate" hreflang="nl" href="https://vakit.hakancelik.dev/nl/">
+    <link rel="alternate" hreflang="pt" href="https://vakit.hakancelik.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vakit.hakancelik.dev/ru/">
+    <link rel="alternate" hreflang="sq" href="https://vakit.hakancelik.dev/sq/">
+    <link rel="alternate" hreflang="sw" href="https://vakit.hakancelik.dev/sw/">
+    <link rel="alternate" hreflang="th" href="https://vakit.hakancelik.dev/th/">
+    <link rel="alternate" hreflang="ug" href="https://vakit.hakancelik.dev/ug/">
+    <link rel="alternate" hreflang="ur" href="https://vakit.hakancelik.dev/ur/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vakit.hakancelik.dev/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://vakit.hakancelik.dev/en/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500&family=Noto+Sans+Bengali:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>:root { --serif: 'Instrument Serif', 'Noto Serif Bengali', serif; --sans: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif }</style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Vakit: নামাজের সময় ও আজান",
+  "description": "নামাজের সময় জানুন, কিবলার দিক খুঁজুন, কুরআন পড়ুন। iPhone, iPad, Apple Watch ও Mac; 25টি ভাষা, হিসাবের 13টি পদ্ধতি, লাইভ অ্যাক্টিভিটি, লক স্ক্রিন উইজেট, জুমার খুতবা, কাজার হিসাব। বিনামূল্যে, বিজ্ঞাপনমুক্ত, অফলাইনে চলে।",
+  "url": "https://vakit.hakancelik.dev/bn/",
+  "downloadUrl": "https://apps.apple.com/app/id6748356813",
+  "installUrl": "https://apps.apple.com/app/id6748356813",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, iPadOS, macOS, watchOS",
+  "operatingSystemVersion": "16.4",
+  "softwareVersion": "1.7.4",
+  "inLanguage": [
+    "tr",
+    "en",
+    "ar",
+    "az",
+    "bn",
+    "da",
+    "de",
+    "es",
+    "fa",
+    "ff",
+    "fr",
+    "hi",
+    "id",
+    "it",
+    "ja",
+    "ms",
+    "nl",
+    "pt",
+    "ru",
+    "sq",
+    "sw",
+    "th",
+    "ug",
+    "ur",
+    "zh-Hans"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "340",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "নামাজের সময়",
+    "জীবন্ত আকাশ",
+    "নফল নামাজের সময়",
+    "নিজে বাছাই করা লোকেশন",
+    "Apple Watch",
+    "Mac অ্যাপ",
+    "iPad",
+    "25টি ভাষা",
+    "কিবলা কম্পাস",
+    "আল-কুরআন",
+    "মুসহাফের লিপি",
+    "খতমের হিসাব",
+    "অফলাইন তিলাওয়াত",
+    "হাদিস",
+    "জুমার খুতবা",
+    "জিকির গণনাকারী",
+    "তাসবিহাত",
+    "আসমাউল হুসনা",
+    "হিজরি ক্যালেন্ডার",
+    "মাকরুহ সময়",
+    "পবিত্রতার নির্দেশিকা",
+    "নামাজের নির্দেশিকা",
+    "যাকাত ও ফিতরা",
+    "কাজার হিসাব",
+    "ওজরের দিন",
+    "উইজেট",
+    "লাইভ অ্যাক্টিভিটি",
+    "কন্ট্রোল সেন্টার",
+    "ইবাদতের হিসাব",
+    "নামাজের নিয়মানুবর্তিতা",
+    "ফজরের অ্যালার্ম",
+    "সেহরির অ্যালার্ম",
+    "বরকতময় দিনের রিমাইন্ডার",
+    "বিজ্ঞপ্তি",
+    "আজানের সুর",
+    "Siri শর্টকাট",
+    "একীভূত সার্চ",
+    "বুকমার্ক",
+    "iCloud সিঙ্ক",
+    "তাফসির",
+    "শেয়ার কার্ড",
+    "রোজা",
+    "কাছের মসজিদ",
+    "Vakit-কে সহযোগিতা",
+    "ডার্ক মোড"
+  ],
+  "screenshot": [
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/prayer-times.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/widget.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/discover.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/qibla.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/profile.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/qada.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/quran.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/prayer-guide.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/calendar.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/bn/zikirmatik.webp"
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "name": "10/10 একটি অ্যাপ।",
+      "author": {
+        "@type": "Person",
+        "name": "Meryem Ebrar"
+      },
+      "reviewBody": "উইজেটের দারুণ গ্রাফিক্সে দেখানো নামাজের সময়ই হোক, কিংবা অ্যাপটি বিজ্ঞাপনমুক্ত আর এত পরিচ্ছন্ন ইন্টারফেসের হওয়াই হোক — 10/10। সত্যিই খুব খুশি হয়েছি, সবাইকে ব্যবহারের পরামর্শ দিই।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "অসাধারণ।",
+      "author": {
+        "@type": "Person",
+        "name": "alpaslanx"
+      },
+      "reviewBody": "খুঁজে পাওয়া সবচেয়ে পরিচ্ছন্ন আর কাজের অ্যাপ। বিজ্ঞাপন নেই, ইন্টারফেস খুব সাদামাটা আর রুচিশীল। কিবলা খোঁজার অংশটা সত্যিই খুব নির্ভুল আর সুন্দরভাবে কাজ করে। বাকি বিষয়গুলোও খুব সুন্দর হয়েছে।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "সহজ ও কাজের।",
+      "author": {
+        "@type": "Person",
+        "name": "h-seyin"
+      },
+      "reviewBody": "অন্য বেশিরভাগ অ্যাপ, গেম আর সোশ্যাল মিডিয়া অ্যাপের চেয়ে অনেক উঁচু মানের। আপনার পরিশ্রমের জন্য ধন্যবাদ, দারুণ কাজ হয়েছে। আমি নিজের দ্বীনকে আরও গুছিয়ে পালন করার চেষ্টা করি, আর এই অ্যাপটা আমার ডান হাত হয়ে উঠেছে।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "নিখুঁত।",
+      "author": {
+        "@type": "Person",
+        "name": "Keskin2298"
+      },
+      "reviewBody": "যিনি বানিয়েছেন, তাঁর হাত সুস্থ থাকুক। বিজ্ঞাপন নেই। অনেক পরিশ্রম দেওয়া হয়েছে। বোঝাই যায়, শুধু আল্লাহর সন্তুষ্টির জন্য। ধন্যবাদ।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "দুর্লভ একটি অ্যাপ।",
+      "author": {
+        "@type": "Person",
+        "name": "Baalbak9907"
+      },
+      "reviewBody": "আল্লাহ আপনার ওপর সন্তুষ্ট হোন। নামাজের সময় এত গোছানো, হাদিসগুলো যত্নের সঙ্গে আরবি, তুর্কি অনুবাদ আর সহিহ হওয়ার মানসহ দেওয়া — অথচ কোনো বিজ্ঞাপন নেই। এমন অ্যাপ বিরল। ডাউনলোড করুন, সম্ভবত এটি স্থায়ীভাবে আপনার ফোনে থেকে যাবে।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "যা চাওয়া হয়েছিল, ঠিক তা-ই।",
+      "author": {
+        "@type": "Person",
+        "name": "Sswnn21"
+      },
+      "reviewBody": "যিনি ভেবে এটি বানাতে পেরেছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন। বুঝিয়ে বলা, বিজ্ঞাপনমুক্ত আর স্পষ্ট।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "শেষ আপডেটে অসাধারণ হয়েছে।",
+      "author": {
+        "@type": "Person",
+        "name": "Mücahade"
+      },
+      "reviewBody": "সহজ, সুন্দর, কাজের, দ্রুত — আর কী বলব। আপনার হাত, পরিশ্রম আর মন সুস্থ থাকুক।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "আল্লাহ সন্তুষ্ট হোন।",
+      "author": {
+        "@type": "Person",
+        "name": "h.ç44"
+      },
+      "reviewBody": "বিজ্ঞাপনে ভরা, বারবার টাকা চাওয়া, অকেজো ইন্টারফেসে বিরক্ত হয়ে গিয়েছিলাম। Vakit সত্যিই দারুণ; সব জায়গায় চলে, ইন্টারনেট লাগে না, বিজ্ঞাপন নেই। কুরআন, হাদিস, জিকির গণনাকারী, নামাজের হিসাব — আর কোনো অ্যাপের দরকার নেই।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "অন্যগুলো মুছে ফেলেছি।",
+      "author": {
+        "@type": "Person",
+        "name": "Çerkezin biri"
+      },
+      "reviewBody": "যিনি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন। আপনার হাত সুস্থ থাকুক। খুব উপকার হয়েছে।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "সেরা।",
+      "author": {
+        "@type": "Person",
+        "name": "Bessey Çelik"
+      },
+      "reviewBody": "এর চেয়ে ভালো কিছু দেখিনি। প্রতিটি ফোনে থাকা উচিত এমন একটি অ্যাপ। যে ভাই এটি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "সত্যিই উপকারী।",
+      "author": {
+        "@type": "Person",
+        "name": "tolgalive"
+      },
+      "reviewBody": "অ্যাপটি খুব উপকারী আর সহজে ব্যবহারযোগ্য। প্রত্যেক মুসলমানের ফোনে থাকা উচিত। যিনি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "আল্লাহ সন্তুষ্ট হোন।",
+      "author": {
+        "@type": "Person",
+        "name": "Murat KAYAHAN"
+      },
+      "reviewBody": "ভাই, এমন মূল্যবান একটি অ্যাপ বিনামূল্যে বানানোর জন্য অনেক ধন্যবাদ। ইনশাআল্লাহ, আল্লাহ আপনার মনের আশা পূরণ করুন।",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vakit: নামাজের সময় ও আজান",
+  "url": "https://vakit.hakancelik.dev/bn/",
+  "inLanguage": "bn",
+  "publisher": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ইন্টারনেট ছাড়া কি চলে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "হ্যাঁ। নামাজের সময় আপনার লোকেশন থেকে ফোনেই হিসাব হয়। কুরআন, কিবলা, জিকির আর সব মূল টুল পুরোপুরি অফলাইনে চলে।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "অ্যাপ কখনো না খুললেও কি বিজ্ঞপ্তি আসবে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "হ্যাঁ। বিজ্ঞপ্তি আপনার ডিভাইসেই নির্ধারিত হয়, তাই অ্যাপ বন্ধ থাকলেও আসে। 'সবসময়' লোকেশনের অনুমতি দিলে সফরের পর Vakit নিঃশব্দে সময় আবার হিসাব করে নেয়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "সবকিছু কি সত্যিই বিনামূল্যে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "আজ, হ্যাঁ — পুরো অ্যাপ বিনামূল্যে, কোনো সাবস্ক্রিপশন, পেওয়াল বা 'প্রিমিয়াম' স্তর নেই। চিরকাল এমন থাকবে বলে কথা দিতে পারি না (সৎভাবে কেউই পারে না), তবে কথা দিতে পারি যে আজ এর পেছনে কোনো ফাঁদ নেই।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "নামাজের সময় কোথা থেকে আসে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "কোনো সার্ভার থেকে আনা হয় না। Vakit আপনার বেছে নেওয়া পদ্ধতি (13টি আছে) আর আপনার লোকেশনের স্থানাঙ্ক দিয়ে ডিভাইসেই সময় হিসাব করে।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "কোন কোন ভাষায় পাওয়া যায়?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "অ্যাপের ইন্টারফেস 25টি ভাষায়: তুর্কি, ইংরেজি, আরবি, জার্মান, ফরাসি, স্প্যানিশ, ইতালীয়, ডাচ, পর্তুগিজ, ডেনিশ, রুশ, আজারবাইজানি, আলবেনীয়, ইন্দোনেশীয়, মালয়, চীনা, জাপানি, থাই, হিন্দি, বাংলা, উর্দু, ফারসি, উইঘুর, সোয়াহিলি ও ফুলা। আপনার ডিভাইসের ভাষা সমর্থিত হলে অ্যাপ নিজে থেকেই সেই ভাষায় খোলে; সেটিংস থেকে যেকোনো সময় বদলাতে পারেন। আরবি, উর্দু, ফারসি ও উইঘুরে পুরো ইন্টারফেস ডান থেকে বাঁয়ে চলে। তবে বিষয়বস্তুর অনুবাদ আপাতত শুধু তুর্কি ও ইংরেজিতে: কুরআনের অনুবাদ, শব্দার্থ, উচ্চারণ আর হাদিসের অনুবাদ এই দুই ভাষাতেই আসে। আরবি ইন্টারফেসে কুরআনের একাংশের জন্য আরবি তাফসির খোলে; জুমার খুতবা তুর্কি, ইংরেজি এবং কোনো কোনো সপ্তাহে আরবিতে।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "কোন কোন ডিভাইসে চলে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone, iPad, Apple Watch ও Mac। iPad-এ এটি একই অ্যাপ বড় পর্দায়, আর iCloud-এর মাধ্যমে আপনার রেকর্ড সব ডিভাইসে একই থাকে। 1.7.0 থেকে Vakit Mac-এও চলে: সাইডবারে ট্যাব, মেনু বারে পরবর্তী নামাজ ও কাউন্টডাউন, কিবোর্ড শর্টকাট আর ডেস্কটপ উইজেট। নামাজের সময়, কুরআন, হাদিস, জিকির ও ইবাদতের রেকর্ড একই iCloud অ্যাকাউন্টে আপনার iPhone-এর সঙ্গে সিঙ্ক হয়। Mac-এ কম্পাসের হার্ডওয়্যার নেই বলে কিবলা ট্যাব দিক আর কাবা পর্যন্ত দূরত্ব লিখে দেখায়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "আজানের সুর কি বেছে নেওয়া যায়?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "হ্যাঁ। বিজ্ঞপ্তিতে পাঁচটি মাকামে আজান আছে: হিজাজ, রাস্ত, সাবা, সেগাহ ও উশশাক। সেটিংস → বিজ্ঞপ্তি → বিজ্ঞপ্তির শব্দ থেকে বেছে নিন; চাইলে প্রতি ওয়াক্তে আলাদা সুর দিতে পারেন। রেকর্ডিংগুলো অ্যাপের সঙ্গেই আসে, তাই বাজাতে ইন্টারনেট লাগে না।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ফজরের জন্য কি অ্যালার্ম আছে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "হ্যাঁ। ফজর এখনো না পড়ে থাকলে সূর্যোদয়ের আগে বাজে এবং সাইলেন্ট মোড ভেদ করে এমন একটি অ্যালার্ম সেট করতে পারেন। নামাজ পড়া হয়েছে বলে চিহ্নিত করলে এটি আর বাজে না। রোজাদারদের জন্য সেহরির অ্যালার্মও আছে, যা আপনার রোজার দিন ধরে নিজেই সেট হয়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "জুমার খুতবা কোথা থেকে আসে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diyanet প্রতি সপ্তাহে যে খুতবা প্রকাশ করে, সেটি অ্যাপে চলে আসে; পড়তে পারেন, অডিও রেকর্ডিং শুনতে পারেন, আর অফলাইনে পড়ার জন্য ডাউনলোড করতে পারেন। এটি Diyanet-এর প্রকাশনা বলে, যাঁদের হিসাবের পদ্ধতি Diyanet, এই অংশটি শুধু তাঁদেরই দেখায়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "কুরআন অংশে কী কী আছে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "সব 114টি সূরা, শব্দে শব্দে বিশ্লেষণ, Diyanet-এর তাফসির, প্রচলিত মুসহাফ ভিউ, অডিও তিলাওয়াত আর খতমের হিসাব। সবকিছু অফলাইনে চলে।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ইবাদতের হিসাব কীভাবে কাজ করে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "অ্যাক্টিভিটি রিং-ধাঁচের একটি ভিউ আপনার নামাজ, কুরআন তিলাওয়াত আর জিকির লিখে রাখে। সারা জীবনের কাজা নামাজের হিসাবও ওয়াক্ত ধরে রাখতে পারেন, আর যত আদায় করবেন, ঋণ তত কমবে। ধারাবাহিকতা আর কোমল পরিসংখ্যান আপনাকে এগিয়ে যেতে সাহায্য করে — অপরাধবোধ ছাড়াই।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "কী কী উইজেট আছে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "নামাজের সময়, কাউন্টডাউন, দিনের আয়াত, দিনের নাম, হিজরি ক্যালেন্ডার, বরকতময় দিন, চাঁদের দশা আর ইবাদতের ধারাবাহিকতার জন্য 20টি উইজেট। হোম স্ক্রিন, লক স্ক্রিন, StandBy আর Mac ডেস্কটপে ব্যবহার করা যায়।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apple Watch অ্যাপ আছে কি?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "হ্যাঁ। Apple Watch অ্যাপ নামাজের সময় (কাউন্টডাউন + তালিকা), লাইভ কিবলা কম্পাস আর সব ওয়াচ ফেসের জন্য 12টি কমপ্লিকেশন দেখায়। এটি iPhone-এর সঙ্গে মিলে চলে — আলাদা করে কিছু সেট করতে হয় না।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "আমার তথ্য কোথায় থাকে?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "আপনার ইবাদতের হিসাব, কাজা ও খতমের অগ্রগতি, বুকমার্ক, পড়ার ইতিহাস আর প্রিয় মসজিদ থাকে শুধু আপনার ডিভাইসে আর আপনার ব্যক্তিগত iCloud-এ — এর কিছুই আমাদের সার্ভারে পৌঁছায় না। আপনার যাকাতের পরিমাণ আর বর্তমান লোকেশনও কখনো পাঠানো হয় না। সার্ভারে যায় ব্যবহারের পরিসংখ্যান, আপনার জিকিরের তালিকা আর অ্যাপের ভেতরে আপনি যে শব্দগুলো খোঁজেন — যাতে আমরা দেখতে পাই কোথায় আপনি যা খুঁজছিলেন তা পাননি, আর সার্চ ঠিক করতে পারি। এসবই এমন একটি স্থায়ী ব্যবহারকারী কোডের সঙ্গে যুক্ত, যাতে আপনার পরিচয়ের কোনো তথ্য নেই — ছদ্মনাম, বেনামি নয়। বিস্তারিত গোপনীয়তা নীতিতে।"
+      }
+    }
+  ]
+}
+    </script>
+
+    <script src="/language-detection.js"></script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </div>
+  <div class="nav-links">
+    <a href="#showcase">ফিচার</a>
+    <a href="#trust">আমানত</a>
+    <a href="#compare">কেন Vakit</a>
+    <a href="#reviews">রিভিউ</a>
+    <a href="#faq">প্রশ্নোত্তর</a>
+  </div>
+  <div class="nav-cta">
+    <button class="nav-theme" id="themeToggle" aria-label="ডার্ক মোড চালু/বন্ধ করুন">☀</button>
+    <details class="lang-menu">
+      <summary aria-label="ভাষা"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>বাংলা</span></summary>
+      <ul class="lang-list">
+        <li><a href="/" data-lang="tr" lang="tr" dir="ltr" hreflang="tr">Türkçe</a></li>
+        <li><a href="/en/" data-lang="en" lang="en" dir="ltr" hreflang="en">English</a></li>
+        <li><a href="/ar/" data-lang="ar" lang="ar" dir="rtl" hreflang="ar">العربية</a></li>
+        <li><a href="/az/" data-lang="az" lang="az" dir="ltr" hreflang="az">Azərbaycan dili</a></li>
+        <li><a href="/bn/" data-lang="bn" lang="bn" dir="ltr" aria-current="page">বাংলা</a></li>
+        <li><a href="/da/" data-lang="da" lang="da" dir="ltr" hreflang="da">Dansk</a></li>
+        <li><a href="/de/" data-lang="de" lang="de" dir="ltr" hreflang="de">Deutsch</a></li>
+        <li><a href="/es/" data-lang="es" lang="es" dir="ltr" hreflang="es">Español</a></li>
+        <li><a href="/fa/" data-lang="fa" lang="fa" dir="rtl" hreflang="fa">فارسی</a></li>
+        <li><a href="/ff/" data-lang="ff" lang="ff" dir="ltr" hreflang="ff">Pulaar</a></li>
+        <li><a href="/fr/" data-lang="fr" lang="fr" dir="ltr" hreflang="fr">Français</a></li>
+        <li><a href="/hi/" data-lang="hi" lang="hi" dir="ltr" hreflang="hi">हिन्दी</a></li>
+        <li><a href="/id/" data-lang="id" lang="id" dir="ltr" hreflang="id">Bahasa Indonesia</a></li>
+        <li><a href="/it/" data-lang="it" lang="it" dir="ltr" hreflang="it">Italiano</a></li>
+        <li><a href="/ja/" data-lang="ja" lang="ja" dir="ltr" hreflang="ja">日本語</a></li>
+        <li><a href="/ms/" data-lang="ms" lang="ms" dir="ltr" hreflang="ms">Bahasa Melayu</a></li>
+        <li><a href="/nl/" data-lang="nl" lang="nl" dir="ltr" hreflang="nl">Nederlands</a></li>
+        <li><a href="/pt/" data-lang="pt" lang="pt" dir="ltr" hreflang="pt">Português</a></li>
+        <li><a href="/ru/" data-lang="ru" lang="ru" dir="ltr" hreflang="ru">Русский</a></li>
+        <li><a href="/sq/" data-lang="sq" lang="sq" dir="ltr" hreflang="sq">Shqip</a></li>
+        <li><a href="/sw/" data-lang="sw" lang="sw" dir="ltr" hreflang="sw">Kiswahili</a></li>
+        <li><a href="/th/" data-lang="th" lang="th" dir="ltr" hreflang="th">ไทย</a></li>
+        <li><a href="/ug/" data-lang="ug" lang="ug" dir="rtl" hreflang="ug">ئۇيغۇرچە</a></li>
+        <li><a href="/ur/" data-lang="ur" lang="ur" dir="rtl" hreflang="ur">اردو</a></li>
+        <li><a href="/zh/" data-lang="zh" lang="zh-Hans" dir="ltr" hreflang="zh-Hans">简体中文</a></li>
+      </ul>
+    </details>
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-nav-bn" class="nav-dl">ডাউনলোড</a>
+  </div>
+  <button class="nav-toggle" aria-label="মেনু">&#8801;</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">আপনার ইবাদত যেন মাঝপথে থেমে না যায় · বিনামূল্যে · বিজ্ঞাপনমুক্ত</div>
+    <h1>
+      <span>ইবাদতের অ্যাপ,</span><br>
+      <span>যেমনটা হওয়া উচিত,</span> <em>ঠিক তেমন।</em>
+    </h1>
+    <p class="hero-sub">ইবাদতের অ্যাপ, যেমনটা হওয়া উচিত, ঠিক তেমন। পাঁচ ওয়াক্ত নামাজের এক নীরব সঙ্গী — কুরআন, কিবলা, জিকির আর এমন এক ক্যালেন্ডারসহ, যা আপনার দিনগুলোকে মর্যাদা দেয়। দরকার না থাকলে আড়ালে থাকে; দরকার হলেই পাশে।</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-bn" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+        <span>App Store থেকে ডাউনলোড করুন</span>
+      </a>
+      <a href="#showcase" class="btn-ghost">ঘুরে দেখুন →</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="proof">
+        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-lbl">App Store · 340টি রেটিং</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">0 <span class="proof-cur">৳</span></div>
+        <div class="proof-lbl">বিনামূল্যে · আজ</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">13</div>
+        <div class="proof-lbl">হিসাবের পদ্ধতি</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">100%</div>
+        <div class="proof-lbl">অফলাইন · ডিভাইসেই</div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="clock-card">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">ঢাকা</span>
+      <span class="clock-date" id="date">—</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next-lbl">পরবর্তী নামাজ · বাকি সময়</div>
+    <div class="clock-next-name" id="nextName">—</div>
+    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    <div class="clock-list" id="clockList"></div>
+  </aside>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee" aria-hidden="true"><span>ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা</span><span>ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা</span></div>
+</div>
+
+<!-- ========== SHOWCASE ========== -->
+<section class="showcase" id="showcase">
+  <div>
+    <div class="sc-head">§ 01 · সবকিছু, বাড়তি কিছু নয়</div>
+    <h2 class="sc-h2"><span>একজন সঙ্গী,</span><br><em>মনোযোগ কাড়ার যন্ত্র নয়।</em></h2>
+    <p class="sc-lede">দশটি মূল টুল, প্রতিটি এমনভাবে বানানো যে খুললেই মনে প্রশান্তি আসে। দেখতে যেকোনোটিতে ট্যাপ করুন।</p>
+    <div class="sc-list" id="scList">
+        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>আকাশের মতো।</h3><p>প্রতি ওয়াক্ত শুরু হলে পর্দাও আকাশের সঙ্গে বদলায় — আসল তারা আর চাঁদ ঠিক তাদের জায়গায়। মাকরুহ ও নফল সময় ঐচ্ছিক।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>আনলক না করেই।</h3><p>পরবর্তী নামাজ লক স্ক্রিনে, উইজেটে, ডায়নামিক আইল্যান্ডে আর আপনার ঘড়িতে। এক পলকের নীরব দৃষ্টি — কখনো মনোযোগ কেড়ে নেয় না।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>সব এক জায়গায়।</h3><p>কুরআন, হাদিস, জুমার খুতবা, জিকির, আসমাউল হুসনা, নির্দেশিকা আর ক্যালেন্ডার — সব এক জায়গায়। কোনো কিছুই পেওয়ালের পেছনে আটকানো নেই।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>সঠিক দিক।</h3><p>কিবলার দিকে ফিরলেই ফোন কেঁপে ওঠে, পাশে কাবা পর্যন্ত দূরত্ব। আপনার স্থানাঙ্ক কখনো ফোনের বাইরে যায় না।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>ইবাদতের অগ্রগতি, রিংয়ে।</h3><p>নামাজ, রোজা, কুরআন, জিকির ও হাদিসের রিং; প্রতি ওয়াক্ত শুরুর কতক্ষণ পরে নামাজ পড়েন, আর আপনার খতম — কোমল অগ্রগতি, অপরাধবোধ নেই।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>কাজা, আদায়ের সঙ্গে সঙ্গে কমে।</h3><p>সারা জীবনের কাজা নামাজ ওয়াক্ত ধরে হিসাব করুন, একে একে আদায় করুন — কবে শেষ হবে তার আনুমানিক হিসাবসহ।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>কুরআন, ইন্টারনেট ছাড়াও।</h3><p>পড়ুন, শুনুন, ভাবুন — মদিনা বা তুরস্ক লিপি, শব্দে শব্দে অনুসরণ, তাফসির আর ডাউনলোড করা যায় এমন তিলাওয়াত।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>সতেরোটি নামাজ, সচিত্র।</h3><p>অজু থেকে তাসবিহ পর্যন্ত; দাঁড়িয়ে, বসে বা ইশারায় — ধাপে ধাপে, কাউকে ছোট না করে শেখানো।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>বরকতময় দিন মনে রাখা ক্যালেন্ডার।</h3><p>হিজরি আর ইংরেজি একসঙ্গে। বরকতময় রাত, রমজান, দুই ঈদ আর আরাফার দিন — নিচে মাসের ইবাদতের সারসংক্ষেপ।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>গণনা হাতের মুঠোয়।</h3><p>জিকির গণনাকারী আর নামাজের পরের তাসবিহ; প্রস্তুত জিকির, নিজের জিকির আর দৈনিক লক্ষ্য।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+    </div>
+  </div>
+  <div class="sc-phone-wrap">
+    <div class="phone">
+      <div class="phone-screen" id="phoneScreen">
+        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakit-এর নামাজের পাতা: দিন গড়ানোর সঙ্গে আকাশও বদলায়"></video>
+        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/bn/widget.webp" alt="আনলক না করেই।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/bn/discover.webp" alt="সব এক জায়গায়।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/bn/qibla.webp" alt="সঠিক দিক।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/bn/profile.webp" alt="ইবাদতের অগ্রগতি, রিংয়ে।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/bn/qada.webp" alt="কাজা, আদায়ের সঙ্গে সঙ্গে কমে।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/bn/quran.webp" alt="কুরআন, ইন্টারনেট ছাড়াও।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/bn/prayer-guide.webp" alt="সতেরোটি নামাজ, সচিত্র।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/bn/calendar.webp" alt="বরকতময় দিন মনে রাখা ক্যালেন্ডার।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/bn/zikirmatik.webp" alt="গণনা হাতের মুঠোয়।" width="390" height="844" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST / EMANET ========== -->
+<section class="trust" id="trust">
+  <div class="trust-inner">
+    <div class="trust-eyebrow">§ 02 · আমানত</div>
+    <h2>
+      <span>আপনার তথ্য</span> <em>একটি আমানত,</em><br>
+      <span>বিক্রির পণ্য নয়।</span>
+    </h2>
+    <p class="trust-lede">আপনার ইবাদত যেন মাঝপথে থেমে না যায়। অন্য নামাজের অ্যাপ লোকেশনের তথ্য বিক্রি করতে গিয়ে ধরা পড়েছে। Vakit অন্য পথ বেছে নিয়েছে: আপনার স্থানাঙ্ক কখনো আপনার ফোনের বাইরে যায় না। অ্যাকাউন্ট নেই। ট্র্যাকিং নেই। কোনো আপস নেই। এটি কোনো ফিচার নয় — এটি একটি নীতি।</p>
+    <div class="trust-grid">
+      <div class="trust-cell">
+        <div class="trust-cell-num">01 / no account</div>
+        <h3>ডাউনলোড করুন। খুলুন। নামাজ পড়ুন।</h3>
+        <p>সাইন-আপ নেই, লগইন নেই, ভুলে যাওয়ার মতো কোনো পাসওয়ার্ড নেই। ইনস্টল করার মুহূর্ত থেকেই Vakit কাজ শুরু করে।</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">02 / on-device</div>
+        <h3>হিসাব হয় আপনার ফোনেই।</h3>
+        <p>নামাজের সময় আপনার লোকেশন থেকে, আপনার বেছে নেওয়া পদ্ধতিতে, ফোনেই হিসাব করা হয়। 'খুঁজে আনার' জন্য কিছুই কোনো সার্ভারে পাঠানো হয় না।</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">03 / no tracking</div>
+        <h3>GPS থাকে আপনার কাছেই।</h3>
+        <p>আপনার স্থানাঙ্ক কোথাও পাঠানো হয় না। আপনি কোথায় নামাজ পড়েন, আমরা দেখতে পাই না — দেখতেও চাই না।</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">04 / transparent</div>
+        <h3>সহজ ভাষার নীতি।</h3>
+        <p>ব্যবহারের এমন হিসাব, যাতে আপনার পরিচয় থাকে না। আমাদের গোপনীয়তা নীতি এক মিনিটে পড়ে ফেলার মতো ছোট — আর তেমনই থাকবে।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES GRID ========== -->
+<section class="feats" id="features">
+  <div class="f-inner">
+    <div class="f-head">
+      <div class="f-eye">§ 03 · 45টি টুল</div>
+      <h2><span>একটি অ্যাপ,</span><br><em>সারা জীবনের ইবাদতের জন্য যথেষ্ট।</em></h2>
+    </div>
+    <div class="f-grid" id="featGrid">
+        <div class="f-cell"><div class="f-num">01 / 45</div><div class="f-name">নামাজের সময়</div><div class="f-desc">হিসাবের 13টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
+        <div class="f-cell"><div class="f-num">02 / 45</div><div class="f-name">জীবন্ত আকাশ</div><div class="f-desc">দিনের বৃত্তচাপে আসল তারা আর চাঁদ — আপনি যেখানে আছেন, ঠিক এই মুহূর্তের।</div></div>
+        <div class="f-cell"><div class="f-num">03 / 45</div><div class="f-name">নফল নামাজের সময়</div><div class="f-desc">ইশরাক, চাশত, আউওয়াবিন আর রাতের ভাগগুলো; ঐচ্ছিক।</div></div>
+        <div class="f-cell"><div class="f-num">04 / 45</div><div class="f-name">নিজে বাছাই করা লোকেশন</div><div class="f-desc">লোকেশন নিজে বেছে নিন, অথবা সফরে নিজে থেকেই বদলে যেতে দিন।</div></div>
+        <div class="f-cell"><div class="f-num">05 / 45</div><div class="f-name">Apple Watch</div><div class="f-desc">নামাজের সময়, লাইভ কিবলা, ওয়াচ ফেসের জন্য 12টি কমপ্লিকেশন।</div></div>
+        <div class="f-cell"><div class="f-num">06 / 45</div><div class="f-name">Mac অ্যাপ</div><div class="f-desc">মেনু বারে কাউন্টডাউন, কিবোর্ড শর্টকাট, iCloud সিঙ্ক।</div></div>
+        <div class="f-cell"><div class="f-num">07 / 45</div><div class="f-name">iPad</div><div class="f-desc">একই অ্যাপ বড় পর্দায়; আপনার রেকর্ড iCloud-এ সিঙ্ক হয়।</div></div>
+        <div class="f-cell"><div class="f-num">08 / 45</div><div class="f-name">25টি ভাষা</div><div class="f-desc">আরবি, উর্দু, ফারসি ও উইঘুর ভাষায় ডান থেকে বাঁয়ে চলা ইন্টারফেস।</div></div>
+        <div class="f-cell"><div class="f-num">09 / 45</div><div class="f-name">কিবলা কম্পাস</div><div class="f-desc">কম্পনে দিক নির্দেশ, সঙ্গে কাবা পর্যন্ত দূরত্ব।</div></div>
+        <div class="f-cell"><div class="f-num">10 / 45</div><div class="f-name">আল-কুরআন</div><div class="f-desc">114টি সূরা। শব্দে শব্দে অর্থ, অনুবাদ, তাফসির, প্রচলিত মুসহাফ।</div></div>
+        <div class="f-cell"><div class="f-num">11 / 45</div><div class="f-name">মুসহাফের লিপি</div><div class="f-desc">মদিনা বা তুরস্ক লিপি — পৃষ্ঠার বিন্যাসও সঙ্গে বদলায়।</div></div>
+        <div class="f-cell"><div class="f-num">12 / 45</div><div class="f-name">খতমের হিসাব</div><div class="f-desc">114টি সূরা, 30 পারা; সম্পন্ন খতম আর শেষ হওয়ার আনুমানিক সময়।</div></div>
+        <div class="f-cell"><div class="f-num">13 / 45</div><div class="f-name">অফলাইন তিলাওয়াত</div><div class="f-desc">ক্বারি ও কিরাত বেছে নিন; সূরা বা পারা ডাউনলোড করে ইন্টারনেট ছাড়াই শুনুন।</div></div>
+        <div class="f-cell"><div class="f-num">14 / 45</div><div class="f-name">হাদিস</div><div class="f-desc">সাতটি প্রধান গ্রন্থ থেকে 36,390টি হাদিস।</div></div>
+        <div class="f-cell"><div class="f-num">15 / 45</div><div class="f-name">জুমার খুতবা</div><div class="f-desc">Diyanet-এর খুতবা পড়ুন, শুনুন, অফলাইনে রেখে দিন।</div></div>
+        <div class="f-cell"><div class="f-num">16 / 45</div><div class="f-name">জিকির গণনাকারী</div><div class="f-desc">রিংয়ে অগ্রগতি, প্রস্তুত জিকির আর নিজের জিকির।</div></div>
+        <div class="f-cell"><div class="f-num">17 / 45</div><div class="f-name">তাসবিহাত</div><div class="f-desc">33-33-33, অথবা নামাজের পরের পূর্ণ ক্রম।</div></div>
+        <div class="f-cell"><div class="f-num">18 / 45</div><div class="f-name">আসমাউল হুসনা</div><div class="f-desc">আল্লাহর 99টি নাম, অর্থ ও ভাবনার খোরাকসহ।</div></div>
+        <div class="f-cell"><div class="f-num">19 / 45</div><div class="f-name">হিজরি ক্যালেন্ডার</div><div class="f-desc">ইংরেজি + হিজরি, বিশেষ দিন আর রমজানসহ।</div></div>
+        <div class="f-cell"><div class="f-num">20 / 45</div><div class="f-name">মাকরুহ সময়</div><div class="f-desc">দিনের বৃত্তচাপে চিহ্নিত, যে বর্ণনার ভিত্তিতে, সেটিসহ।</div></div>
+        <div class="f-cell"><div class="f-num">21 / 45</div><div class="f-name">পবিত্রতার নির্দেশিকা</div><div class="f-desc">ধাপে ধাপে অজু, গোসল ও তায়াম্মুম।</div></div>
+        <div class="f-cell"><div class="f-num">22 / 45</div><div class="f-name">নামাজের নির্দেশিকা</div><div class="f-desc">17 ধরনের নামাজ; দাঁড়িয়ে, বসে বা ইশারায়।</div></div>
+        <div class="f-cell"><div class="f-num">23 / 45</div><div class="f-name">যাকাত ও ফিতরা</div><div class="f-desc">প্রচলিত ফিকহের ওপর ভিত্তি করা ক্যালকুলেটর।</div></div>
+        <div class="f-cell"><div class="f-num">24 / 45</div><div class="f-name">কাজার হিসাব</div><div class="f-desc">কাজা নামাজ ওয়াক্ত ধরে, কাজা রোজা দিন ধরে।</div></div>
+        <div class="f-cell"><div class="f-num">25 / 45</div><div class="f-name">ওজরের দিন</div><div class="f-desc">হায়েজ ও নিফাসের দিন; নামাজের ধারাবাহিকতা ভাঙে না।</div></div>
+        <div class="f-cell"><div class="f-num">26 / 45</div><div class="f-name">উইজেট</div><div class="f-desc">হোম স্ক্রিন, লক স্ক্রিন, StandBy — Mac-এও।</div></div>
+        <div class="f-cell"><div class="f-num">27 / 45</div><div class="f-name">লাইভ অ্যাক্টিভিটি</div><div class="f-desc">ডায়নামিক আইল্যান্ড ও লক স্ক্রিনে কাউন্টডাউন।</div></div>
+        <div class="f-cell"><div class="f-num">28 / 45</div><div class="f-name">কন্ট্রোল সেন্টার</div><div class="f-desc">ছয়টি দ্রুত কাজ — কিবলা, পরবর্তী নামাজ, আরও অনেক কিছু।</div></div>
+        <div class="f-cell"><div class="f-num">29 / 45</div><div class="f-name">ইবাদতের হিসাব</div><div class="f-desc">অ্যাক্টিভিটি রিং: নামাজ, নফল, জুমা, ঈদ, তারাবিহ।</div></div>
+        <div class="f-cell"><div class="f-num">30 / 45</div><div class="f-name">নামাজের নিয়মানুবর্তিতা</div><div class="f-desc">প্রতি ওয়াক্ত শুরু হওয়ার কতক্ষণ পরে নামাজ পড়েন — গত 30 দিন ও শুরু থেকে এ পর্যন্ত।</div></div>
+        <div class="f-cell"><div class="f-num">31 / 45</div><div class="f-name">ফজরের অ্যালার্ম</div><div class="f-desc">সাইলেন্ট মোড ভেদ করে বাজে, নামাজ পড়া হলে চুপ থাকে।</div></div>
+        <div class="f-cell"><div class="f-num">32 / 45</div><div class="f-name">সেহরির অ্যালার্ম</div><div class="f-desc">আপনার রোজার দিন ধরে সেট হয়, যাতে সেহরি না ছোটে।</div></div>
+        <div class="f-cell"><div class="f-num">33 / 45</div><div class="f-name">বরকতময় দিনের রিমাইন্ডার</div><div class="f-desc">11টি ইসলামি দিনের আগের রাতে বিজ্ঞপ্তি।</div></div>
+        <div class="f-cell"><div class="f-num">34 / 45</div><div class="f-name">বিজ্ঞপ্তি</div><div class="f-desc">ডিভাইসেই, স্থানীয়, নির্ভরযোগ্য।</div></div>
+        <div class="f-cell"><div class="f-num">35 / 45</div><div class="f-name">আজানের সুর</div><div class="f-desc">পাঁচ মাকামে আজান: হিজাজ, রাস্ত, সাবা, সেগাহ, উশশাক।</div></div>
+        <div class="f-cell"><div class="f-num">36 / 45</div><div class="f-name">Siri শর্টকাট</div><div class="f-desc">সময়, কিবলা, আয়াত — মুখে বলে জিজ্ঞেস করুন।</div></div>
+        <div class="f-cell"><div class="f-num">37 / 45</div><div class="f-name">একীভূত সার্চ</div><div class="f-desc">এক সার্চ, সব টুল — 'Baqarah 255' লিখে সরাসরি আয়াতে যান।</div></div>
+        <div class="f-cell"><div class="f-num">38 / 45</div><div class="f-name">বুকমার্ক</div><div class="f-desc">আয়াত, হাদিস ও জিকির সংরক্ষণ করুন।</div></div>
+        <div class="f-cell"><div class="f-num">39 / 45</div><div class="f-name">iCloud সিঙ্ক</div><div class="f-desc">আপনার রেকর্ড থাকে আপনার নিজের iCloud-এ, প্রতিটি ডিভাইসে।</div></div>
+        <div class="f-cell"><div class="f-num">40 / 45</div><div class="f-name">তাফসির</div><div class="f-desc">Diyanet-এর তাফসির, মূল পাঠের পাশাপাশি।</div></div>
+        <div class="f-cell"><div class="f-num">41 / 45</div><div class="f-name">শেয়ার কার্ড</div><div class="f-desc">আয়াত ও জিকিরের জন্য সুন্দর কার্ড।</div></div>
+        <div class="f-cell"><div class="f-num">42 / 45</div><div class="f-name">রোজা</div><div class="f-desc">রমজান, শাওয়াল আর প্রতিদিনের হিসাব।</div></div>
+        <div class="f-cell"><div class="f-num">43 / 45</div><div class="f-name">কাছের মসজিদ</div><div class="f-desc">লোকেশন শেয়ার না করেই খুঁজুন; মানচিত্র, দূরত্ব আর পথনির্দেশ।</div></div>
+        <div class="f-cell"><div class="f-num">44 / 45</div><div class="f-name">Vakit-কে সহযোগিতা</div><div class="f-desc">বিনামূল্যের অ্যাপটি টিকিয়ে রাখার ঐচ্ছিক উপায়।</div></div>
+        <div class="f-cell"><div class="f-num">45 / 45</div><div class="f-name">ডার্ক মোড</div><div class="f-desc">গভীর রাতের জন্য উষ্ণ, শান্ত অন্ধকার।</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARE ========== -->
+<section class="compare" id="compare">
+  <div class="compare-inner">
+    <h2><span>পার্থক্যটা,</span><br><em>মেপে দেখানো।</em></h2>
+    <p class="compare-lede">অন্য নামাজের অ্যাপগুলোর সমস্যা আপনি আগেই জানেন। এখানে প্রতিটির জবাব দিচ্ছে Vakit, লাইন ধরে ধরে।</p>
+    <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">বিষয়</div><div class="compare-cell">অন্য অ্যাপ</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">বিজ্ঞাপন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>ধর্মীয় বিষয়ের পাশে ক্যাসিনো ও অশোভন বিজ্ঞাপন।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>আজ কোনো বিজ্ঞাপন নেই।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">গোপনীয়তা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>তৃতীয় পক্ষের কাছে বিক্রি হওয়া লোকেশনের তথ্য (সংবাদমাধ্যমে প্রকাশিত)।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>স্থানাঙ্ক থাকে আপনার ফোনে। ট্র্যাকিং নেই।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">অফলাইন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>মূল ফিচারের জন্য ইন্টারনেট লাগে।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>নামাজ, কিবলা, কুরআন, জিকির — সবই অফলাইনে চলে।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">লক স্ক্রিন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>iOS আপডেট এলেই উইজেট নষ্ট হয়ে যায়।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>লাইভ অ্যাক্টিভিটি, ডায়নামিক আইল্যান্ড, StandBy — সবই সমর্থিত।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">নির্ভুলতা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>ঘড়ি এগোনো-পেছানোর (ডেলাইট সেভিং) ভুল, সীমিত হিসাব পদ্ধতি।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>13টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">ডিভাইস</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>শুধু ফোন; ঘড়ি ও ডেস্কটপ নেই, নয়তো আধাআধি বানানো।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>iPhone, iPad, Apple Watch ও Mac — iCloud-এ সিঙ্ক।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">নকশা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>পুরোনো ইন্টারফেস; প্রতিটি আপডেটের পর কিছু না কিছু বিগড়ে যায়।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>iOS 26 Liquid Glass। শান্ত, আধুনিক, দ্রুত।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">খরচ</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>পেওয়াল, সাবস্ক্রিপশন, 'প্রিমিয়াম' স্তর।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>আজ বিনামূল্যে। কোনো স্তর নেই, বাড়তি কিছু গছানোর চেষ্টাও নেই।</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials" id="reviews">
+  <div class="t-inner">
+    <div class="t-head">
+      <h2><span>সত্যিকারের মুসল্লিদের</span><br><em>সুন্দর কথা।</em></h2>
+      <div class="t-meta">
+        <span>গড় রেটিং</span>
+        <b>4.8 ★</b>
+        <span>App Store-এর 340টি রেটিং থেকে</span>
+      </div>
+    </div>
+    <p class="t-note">রিভিউগুলো তুর্কি App Store থেকে নেওয়া, তুর্কি থেকে অনুবাদ করা।</p>
+    <div class="t-grid" id="testGrid">
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">10/10 একটি অ্যাপ।</div><p class="t-body">উইজেটের দারুণ গ্রাফিক্সে দেখানো নামাজের সময়ই হোক, কিংবা অ্যাপটি বিজ্ঞাপনমুক্ত আর এত পরিচ্ছন্ন ইন্টারফেসের হওয়াই হোক — 10/10। সত্যিই খুব খুশি হয়েছি, সবাইকে ব্যবহারের পরামর্শ দিই।</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">অসাধারণ।</div><p class="t-body">খুঁজে পাওয়া সবচেয়ে পরিচ্ছন্ন আর কাজের অ্যাপ। বিজ্ঞাপন নেই, ইন্টারফেস খুব সাদামাটা আর রুচিশীল। কিবলা খোঁজার অংশটা সত্যিই খুব নির্ভুল আর সুন্দরভাবে কাজ করে। বাকি বিষয়গুলোও খুব সুন্দর হয়েছে।</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">সহজ ও কাজের।</div><p class="t-body">অন্য বেশিরভাগ অ্যাপ, গেম আর সোশ্যাল মিডিয়া অ্যাপের চেয়ে অনেক উঁচু মানের। আপনার পরিশ্রমের জন্য ধন্যবাদ, দারুণ কাজ হয়েছে। আমি নিজের দ্বীনকে আরও গুছিয়ে পালন করার চেষ্টা করি, আর এই অ্যাপটা আমার ডান হাত হয়ে উঠেছে।</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">নিখুঁত।</div><p class="t-body">যিনি বানিয়েছেন, তাঁর হাত সুস্থ থাকুক। বিজ্ঞাপন নেই। অনেক পরিশ্রম দেওয়া হয়েছে। বোঝাই যায়, শুধু আল্লাহর সন্তুষ্টির জন্য। ধন্যবাদ।</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">দুর্লভ একটি অ্যাপ।</div><p class="t-body">আল্লাহ আপনার ওপর সন্তুষ্ট হোন। নামাজের সময় এত গোছানো, হাদিসগুলো যত্নের সঙ্গে আরবি, তুর্কি অনুবাদ আর সহিহ হওয়ার মানসহ দেওয়া — অথচ কোনো বিজ্ঞাপন নেই। এমন অ্যাপ বিরল। ডাউনলোড করুন, সম্ভবত এটি স্থায়ীভাবে আপনার ফোনে থেকে যাবে।</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">যা চাওয়া হয়েছিল, ঠিক তা-ই।</div><p class="t-body">যিনি ভেবে এটি বানাতে পেরেছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন। বুঝিয়ে বলা, বিজ্ঞাপনমুক্ত আর স্পষ্ট।</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">শেষ আপডেটে অসাধারণ হয়েছে।</div><p class="t-body">সহজ, সুন্দর, কাজের, দ্রুত — আর কী বলব। আপনার হাত, পরিশ্রম আর মন সুস্থ থাকুক।</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">আল্লাহ সন্তুষ্ট হোন।</div><p class="t-body">বিজ্ঞাপনে ভরা, বারবার টাকা চাওয়া, অকেজো ইন্টারফেসে বিরক্ত হয়ে গিয়েছিলাম। Vakit সত্যিই দারুণ; সব জায়গায় চলে, ইন্টারনেট লাগে না, বিজ্ঞাপন নেই। কুরআন, হাদিস, জিকির গণনাকারী, নামাজের হিসাব — আর কোনো অ্যাপের দরকার নেই।</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">অন্যগুলো মুছে ফেলেছি।</div><p class="t-body">যিনি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন। আপনার হাত সুস্থ থাকুক। খুব উপকার হয়েছে।</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">সেরা।</div><p class="t-body">এর চেয়ে ভালো কিছু দেখিনি। প্রতিটি ফোনে থাকা উচিত এমন একটি অ্যাপ। যে ভাই এটি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন।</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">সত্যিই উপকারী।</div><p class="t-body">অ্যাপটি খুব উপকারী আর সহজে ব্যবহারযোগ্য। প্রত্যেক মুসলমানের ফোনে থাকা উচিত। যিনি বানিয়েছেন, আল্লাহ তাঁর ওপর সন্তুষ্ট হোন।</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">আল্লাহ সন্তুষ্ট হোন।</div><p class="t-body">ভাই, এমন মূল্যবান একটি অ্যাপ বিনামূল্যে বানানোর জন্য অনেক ধন্যবাদ। ইনশাআল্লাহ, আল্লাহ আপনার মনের আশা পূরণ করুন।</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2><span>সৎ প্রশ্নের</span><br><em>সৎ উত্তর।</em></h2>
+    <div class="faq-list" id="faqList">
+        <div class="faq-item on"><button class="faq-q" aria-expanded="true">ইন্টারনেট ছাড়া কি চলে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">হ্যাঁ। নামাজের সময় আপনার লোকেশন থেকে ফোনেই হিসাব হয়। কুরআন, কিবলা, জিকির আর সব মূল টুল পুরোপুরি অফলাইনে চলে।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">অ্যাপ কখনো না খুললেও কি বিজ্ঞপ্তি আসবে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">হ্যাঁ। বিজ্ঞপ্তি আপনার ডিভাইসেই নির্ধারিত হয়, তাই অ্যাপ বন্ধ থাকলেও আসে। 'সবসময়' লোকেশনের অনুমতি দিলে সফরের পর Vakit নিঃশব্দে সময় আবার হিসাব করে নেয়।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">সবকিছু কি সত্যিই বিনামূল্যে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">আজ, হ্যাঁ — পুরো অ্যাপ বিনামূল্যে, কোনো সাবস্ক্রিপশন, পেওয়াল বা 'প্রিমিয়াম' স্তর নেই। চিরকাল এমন থাকবে বলে কথা দিতে পারি না (সৎভাবে কেউই পারে না), তবে কথা দিতে পারি যে আজ এর পেছনে কোনো ফাঁদ নেই।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">নামাজের সময় কোথা থেকে আসে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">কোনো সার্ভার থেকে আনা হয় না। Vakit আপনার বেছে নেওয়া পদ্ধতি (13টি আছে) আর আপনার লোকেশনের স্থানাঙ্ক দিয়ে ডিভাইসেই সময় হিসাব করে।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">কোন কোন ভাষায় পাওয়া যায়?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">অ্যাপের ইন্টারফেস 25টি ভাষায়: তুর্কি, ইংরেজি, আরবি, জার্মান, ফরাসি, স্প্যানিশ, ইতালীয়, ডাচ, পর্তুগিজ, ডেনিশ, রুশ, আজারবাইজানি, আলবেনীয়, ইন্দোনেশীয়, মালয়, চীনা, জাপানি, থাই, হিন্দি, বাংলা, উর্দু, ফারসি, উইঘুর, সোয়াহিলি ও ফুলা। আপনার ডিভাইসের ভাষা সমর্থিত হলে অ্যাপ নিজে থেকেই সেই ভাষায় খোলে; সেটিংস থেকে যেকোনো সময় বদলাতে পারেন। আরবি, উর্দু, ফারসি ও উইঘুরে পুরো ইন্টারফেস ডান থেকে বাঁয়ে চলে। তবে বিষয়বস্তুর অনুবাদ আপাতত শুধু তুর্কি ও ইংরেজিতে: কুরআনের অনুবাদ, শব্দার্থ, উচ্চারণ আর হাদিসের অনুবাদ এই দুই ভাষাতেই আসে। আরবি ইন্টারফেসে কুরআনের একাংশের জন্য আরবি তাফসির খোলে; জুমার খুতবা তুর্কি, ইংরেজি এবং কোনো কোনো সপ্তাহে আরবিতে।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">কোন কোন ডিভাইসে চলে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch ও Mac। iPad-এ এটি একই অ্যাপ বড় পর্দায়, আর iCloud-এর মাধ্যমে আপনার রেকর্ড সব ডিভাইসে একই থাকে। 1.7.0 থেকে Vakit Mac-এও চলে: সাইডবারে ট্যাব, মেনু বারে পরবর্তী নামাজ ও কাউন্টডাউন, কিবোর্ড শর্টকাট আর ডেস্কটপ উইজেট। নামাজের সময়, কুরআন, হাদিস, জিকির ও ইবাদতের রেকর্ড একই iCloud অ্যাকাউন্টে আপনার iPhone-এর সঙ্গে সিঙ্ক হয়। Mac-এ কম্পাসের হার্ডওয়্যার নেই বলে কিবলা ট্যাব দিক আর কাবা পর্যন্ত দূরত্ব লিখে দেখায়।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">আজানের সুর কি বেছে নেওয়া যায়?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">হ্যাঁ। বিজ্ঞপ্তিতে পাঁচটি মাকামে আজান আছে: হিজাজ, রাস্ত, সাবা, সেগাহ ও উশশাক। সেটিংস → বিজ্ঞপ্তি → বিজ্ঞপ্তির শব্দ থেকে বেছে নিন; চাইলে প্রতি ওয়াক্তে আলাদা সুর দিতে পারেন। রেকর্ডিংগুলো অ্যাপের সঙ্গেই আসে, তাই বাজাতে ইন্টারনেট লাগে না।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">ফজরের জন্য কি অ্যালার্ম আছে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">হ্যাঁ। ফজর এখনো না পড়ে থাকলে সূর্যোদয়ের আগে বাজে এবং সাইলেন্ট মোড ভেদ করে এমন একটি অ্যালার্ম সেট করতে পারেন। নামাজ পড়া হয়েছে বলে চিহ্নিত করলে এটি আর বাজে না। রোজাদারদের জন্য সেহরির অ্যালার্মও আছে, যা আপনার রোজার দিন ধরে নিজেই সেট হয়।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">জুমার খুতবা কোথা থেকে আসে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Diyanet প্রতি সপ্তাহে যে খুতবা প্রকাশ করে, সেটি অ্যাপে চলে আসে; পড়তে পারেন, অডিও রেকর্ডিং শুনতে পারেন, আর অফলাইনে পড়ার জন্য ডাউনলোড করতে পারেন। এটি Diyanet-এর প্রকাশনা বলে, যাঁদের হিসাবের পদ্ধতি Diyanet, এই অংশটি শুধু তাঁদেরই দেখায়।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">কুরআন অংশে কী কী আছে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">সব 114টি সূরা, শব্দে শব্দে বিশ্লেষণ, Diyanet-এর তাফসির, প্রচলিত মুসহাফ ভিউ, অডিও তিলাওয়াত আর খতমের হিসাব। সবকিছু অফলাইনে চলে।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">ইবাদতের হিসাব কীভাবে কাজ করে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">অ্যাক্টিভিটি রিং-ধাঁচের একটি ভিউ আপনার নামাজ, কুরআন তিলাওয়াত আর জিকির লিখে রাখে। সারা জীবনের কাজা নামাজের হিসাবও ওয়াক্ত ধরে রাখতে পারেন, আর যত আদায় করবেন, ঋণ তত কমবে। ধারাবাহিকতা আর কোমল পরিসংখ্যান আপনাকে এগিয়ে যেতে সাহায্য করে — অপরাধবোধ ছাড়াই।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">কী কী উইজেট আছে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">নামাজের সময়, কাউন্টডাউন, দিনের আয়াত, দিনের নাম, হিজরি ক্যালেন্ডার, বরকতময় দিন, চাঁদের দশা আর ইবাদতের ধারাবাহিকতার জন্য 20টি উইজেট। হোম স্ক্রিন, লক স্ক্রিন, StandBy আর Mac ডেস্কটপে ব্যবহার করা যায়।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Apple Watch অ্যাপ আছে কি?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">হ্যাঁ। Apple Watch অ্যাপ নামাজের সময় (কাউন্টডাউন + তালিকা), লাইভ কিবলা কম্পাস আর সব ওয়াচ ফেসের জন্য 12টি কমপ্লিকেশন দেখায়। এটি iPhone-এর সঙ্গে মিলে চলে — আলাদা করে কিছু সেট করতে হয় না।</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">আমার তথ্য কোথায় থাকে?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">আপনার ইবাদতের হিসাব, কাজা ও খতমের অগ্রগতি, বুকমার্ক, পড়ার ইতিহাস আর প্রিয় মসজিদ থাকে শুধু আপনার ডিভাইসে আর আপনার ব্যক্তিগত iCloud-এ — এর কিছুই আমাদের সার্ভারে পৌঁছায় না। আপনার যাকাতের পরিমাণ আর বর্তমান লোকেশনও কখনো পাঠানো হয় না। সার্ভারে যায় ব্যবহারের পরিসংখ্যান, আপনার জিকিরের তালিকা আর অ্যাপের ভেতরে আপনি যে শব্দগুলো খোঁজেন — যাতে আমরা দেখতে পাই কোথায় আপনি যা খুঁজছিলেন তা পাননি, আর সার্চ ঠিক করতে পারি। এসবই এমন একটি স্থায়ী ব্যবহারকারী কোডের সঙ্গে যুক্ত, যাতে আপনার পরিচয়ের কোনো তথ্য নেই — ছদ্মনাম, বেনামি নয়। বিস্তারিত গোপনীয়তা নীতিতে।</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final" id="download">
+  <div class="final-mark"><img src="/assets/app-icon.png" alt="Vakit" width="88" height="88"></div>
+  <h2><span>আপনার ইবাদত যেন</span> <em>মাঝপথে থেমে না যায়।</em></h2>
+  <p>আজ বিনামূল্যে। অ্যাকাউন্ট নেই। অফলাইনে চলে। iPhone, iPad, Apple Watch ও Mac — iOS 16.4 বা তার পরের সংস্করণ।</p>
+  <div class="final-actions">
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-bn" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+      <span>App Store থেকে ডাউনলোড করুন</span>
+    </a>
+    <a href="#showcase" class="btn-ghost">ফিচারগুলো দেখুন →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="/en/privacy.html" hreflang="en">গোপনীয়তা</a>
+    <a href="/en/terms.html" hreflang="en">শর্তাবলি</a>
+    <a href="/en/ads-policy.html" hreflang="en">বিজ্ঞাপন</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+    <a href="/presentation.html">প্রেজেন্টেশন</a>
+    <a href="mailto:hakancelikdev@gmail.com">যোগাযোগ</a>
+    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU" target="_blank" rel="noopener">মতামত</a>
+  </div>
+  <div class="foot-sig">যত্ন নিয়ে বানানো · © 2026 Hakan Çelik</div>
+</footer>
+
+<script id="vakit-data" type="application/json">{
+  "lang": "bn",
+  "dateLocale": "bn-u-ca-gregory-nu-latn",
+  "prayers": {
+    "Fajr": "ইমসাক",
+    "Sunrise": "সূর্যোদয়",
+    "Dhuhr": "যোহর",
+    "Asr": "আসর",
+    "Maghrib": "মাগরিব",
+    "Isha": "এশা"
+  },
+  "cities": [
+    {
+      "id": "dhaka",
+      "name": "ঢাকা",
+      "lat": 23.8103,
+      "lon": 90.4125,
+      "method": 1
+    },
+    {
+      "id": "mecca",
+      "name": "মক্কা",
+      "lat": 21.4225,
+      "lon": 39.8262,
+      "method": 4
+    },
+    {
+      "id": "medina",
+      "name": "মদিনা",
+      "lat": 24.4672,
+      "lon": 39.6024,
+      "method": 4
+    },
+    {
+      "id": "istanbul",
+      "name": "ইস্তাম্বুল",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "method": 13
+    },
+    {
+      "id": "london",
+      "name": "লন্ডন",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "method": 15
+    },
+    {
+      "id": "berlin",
+      "name": "বার্লিন",
+      "lat": 52.52,
+      "lon": 13.405,
+      "method": 13
+    },
+    {
+      "id": "paris",
+      "name": "প্যারিস",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "method": 12
+    },
+    {
+      "id": "newyork",
+      "name": "নিউ ইয়র্ক",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "method": 2
+    },
+    {
+      "id": "dubai",
+      "name": "দুবাই",
+      "lat": 25.2048,
+      "lon": 55.2708,
+      "method": 16
+    },
+    {
+      "id": "cairo",
+      "name": "কায়রো",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "method": 5
+    },
+    {
+      "id": "jakarta",
+      "name": "জাকার্তা",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "method": 20
+    },
+    {
+      "id": "kualalumpur",
+      "name": "কুয়ালালামপুর",
+      "lat": 3.139,
+      "lon": 101.6869,
+      "method": 17
+    }
+  ]
+}</script>
+<script src="/script.js"></script>
+</body>
+</html>

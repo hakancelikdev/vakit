@@ -137,10 +137,11 @@
     var lang = 'tr';
     try {
         var saved = localStorage.getItem('preferredLanguage');
-        if (saved === 'en') lang = 'en';
-        else if (!saved) {
+        // Only Turkish and English strings exist here; every other language reads English.
+        if (saved) { if (saved !== 'tr') lang = 'en'; }
+        else {
             var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (bl.startsWith('en')) lang = 'en';
+            if (!bl.startsWith('tr')) lang = 'en';
         }
     } catch (e) {}
     var t = {

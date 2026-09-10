@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="nl" class="script-latin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1PNWJYF69"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T1PNWJYF69');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Vakit: Gebedstijden &amp; Widget</title>
+    <meta name="description" content="Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 13 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.">
+    <meta name="keywords" content="gebedstijden, namaz vakitleri, qibla, koran app, islamitische app, moslim app, gebeds app, ezan, adhan, athan, azan, gebedstijden widget, dhikr teller, hadith, ramadan, vasten, moskee, hidjri kalender, namaz, dua">
+    <meta name="author" content="Hakan Çelik">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/nl/">
+    <meta property="og:title" content="Vakit: Gebedstijden &amp; Widget">
+    <meta property="og:description" content="Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 13 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:site_name" content="Vakit: Gebedstijden &amp; Widget">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="az_AZ">
+    <meta property="og:locale:alternate" content="bn_BD">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fa_IR">
+    <meta property="og:locale:alternate" content="ff_SN">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ms_MY">
+    <meta property="og:locale:alternate" content="pt_PT">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="sq_AL">
+    <meta property="og:locale:alternate" content="sw_KE">
+    <meta property="og:locale:alternate" content="th_TH">
+    <meta property="og:locale:alternate" content="ug_CN">
+    <meta property="og:locale:alternate" content="ur_PK">
+    <meta property="og:locale:alternate" content="zh_CN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://vakit.hakancelik.dev/nl/">
+    <meta name="twitter:title" content="Vakit: Gebedstijden &amp; Widget">
+    <meta name="twitter:description" content="Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 13 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:creator" content="@hakancelikdev">
+
+    <!-- Apple / theme -->
+    <meta name="theme-color" content="#2A9D8F">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
+    <meta name="apple-mobile-web-app-title" content="Vakit">
+    <meta name="application-name" content="Vakit">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-itunes-app" content="app-id=6748356813">
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://vakit.hakancelik.dev/nl/">
+    <link rel="alternate" hreflang="tr" href="https://vakit.hakancelik.dev/">
+    <link rel="alternate" hreflang="en" href="https://vakit.hakancelik.dev/en/">
+    <link rel="alternate" hreflang="ar" href="https://vakit.hakancelik.dev/ar/">
+    <link rel="alternate" hreflang="az" href="https://vakit.hakancelik.dev/az/">
+    <link rel="alternate" hreflang="bn" href="https://vakit.hakancelik.dev/bn/">
+    <link rel="alternate" hreflang="da" href="https://vakit.hakancelik.dev/da/">
+    <link rel="alternate" hreflang="de" href="https://vakit.hakancelik.dev/de/">
+    <link rel="alternate" hreflang="es" href="https://vakit.hakancelik.dev/es/">
+    <link rel="alternate" hreflang="fa" href="https://vakit.hakancelik.dev/fa/">
+    <link rel="alternate" hreflang="ff" href="https://vakit.hakancelik.dev/ff/">
+    <link rel="alternate" hreflang="fr" href="https://vakit.hakancelik.dev/fr/">
+    <link rel="alternate" hreflang="hi" href="https://vakit.hakancelik.dev/hi/">
+    <link rel="alternate" hreflang="id" href="https://vakit.hakancelik.dev/id/">
+    <link rel="alternate" hreflang="it" href="https://vakit.hakancelik.dev/it/">
+    <link rel="alternate" hreflang="ja" href="https://vakit.hakancelik.dev/ja/">
+    <link rel="alternate" hreflang="ms" href="https://vakit.hakancelik.dev/ms/">
+    <link rel="alternate" hreflang="nl" href="https://vakit.hakancelik.dev/nl/">
+    <link rel="alternate" hreflang="pt" href="https://vakit.hakancelik.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vakit.hakancelik.dev/ru/">
+    <link rel="alternate" hreflang="sq" href="https://vakit.hakancelik.dev/sq/">
+    <link rel="alternate" hreflang="sw" href="https://vakit.hakancelik.dev/sw/">
+    <link rel="alternate" hreflang="th" href="https://vakit.hakancelik.dev/th/">
+    <link rel="alternate" hreflang="ug" href="https://vakit.hakancelik.dev/ug/">
+    <link rel="alternate" hreflang="ur" href="https://vakit.hakancelik.dev/ur/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vakit.hakancelik.dev/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://vakit.hakancelik.dev/en/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Vakit: Gebedstijden & Widget",
+  "description": "Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 13 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.",
+  "url": "https://vakit.hakancelik.dev/nl/",
+  "downloadUrl": "https://apps.apple.com/app/id6748356813",
+  "installUrl": "https://apps.apple.com/app/id6748356813",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, iPadOS, macOS, watchOS",
+  "operatingSystemVersion": "16.4",
+  "softwareVersion": "1.7.4",
+  "inLanguage": [
+    "tr",
+    "en",
+    "ar",
+    "az",
+    "bn",
+    "da",
+    "de",
+    "es",
+    "fa",
+    "ff",
+    "fr",
+    "hi",
+    "id",
+    "it",
+    "ja",
+    "ms",
+    "nl",
+    "pt",
+    "ru",
+    "sq",
+    "sw",
+    "th",
+    "ug",
+    "ur",
+    "zh-Hans"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "340",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Gebedstijden",
+    "Levende hemel",
+    "Vrijwillige gebedstijden",
+    "Handmatige locatie",
+    "Apple Watch",
+    "Mac-app",
+    "iPad",
+    "25 talen",
+    "Qibla-kompas",
+    "De Heilige Koran",
+    "Moeshaf-schrift",
+    "Chatm bijhouden",
+    "Offline recitatie",
+    "Hadith",
+    "Vrijdagpreek",
+    "Dhikr-teller",
+    "Tesbihat",
+    "De 99 namen van Allah",
+    "Hidjri-kalender",
+    "Afgeraden tijden",
+    "Reinigingsgids",
+    "Gebedsgids",
+    "Zakat en fitra",
+    "Qada bijhouden",
+    "Uitzonderingsdagen",
+    "Widgets",
+    "Live activiteit",
+    "Bedieningspaneel",
+    "Ibada bijhouden",
+    "Gebedsdiscipline",
+    "Fajr-wekker",
+    "Suhur-wekker",
+    "Herinnering aan gezegende dagen",
+    "Meldingen",
+    "Adhan-geluiden",
+    "Siri-opdrachten",
+    "Eén zoekfunctie",
+    "Bladwijzers",
+    "iCloud-sync",
+    "Tafsir",
+    "Deelkaarten",
+    "Vasten",
+    "Moskeeën in de buurt",
+    "Steun Vakit",
+    "Donkere modus"
+  ],
+  "screenshot": [
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/prayer-times.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/widget.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/discover.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/qibla.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/profile.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/qada.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/quran.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/prayer-guide.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/calendar.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/nl/zikirmatik.webp"
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "name": "Een app van 10/10.",
+      "author": {
+        "@type": "Person",
+        "name": "Meryem Ebrar"
+      },
+      "reviewBody": "Of het nu gaat om de gebedstijden met die prachtige grafische weergave in de widget, of om het feit dat de app geen advertenties heeft en zo'n schone interface – 10/10. Ik ben er echt heel blij mee en raad hem iedereen aan.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Geweldig.",
+      "author": {
+        "@type": "Person",
+        "name": "alpaslanx"
+      },
+      "reviewBody": "De schoonste en handigste app die je kunt vinden. Geen advertenties, een heel sobere en stijlvolle interface. Het vinden van de qibla werkt echt heel nauwkeurig en fijn. De rest van de inhoud is ook heel mooi geworden.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Eenvoudig en handig.",
+      "author": {
+        "@type": "Person",
+        "name": "h-seyin"
+      },
+      "reviewBody": "Hij staat op een hoger niveau dan de meeste andere apps, games en sociale media. Bedankt voor jullie inzet, het is prachtig werk geworden. Ik probeer mijn geloof bewuster te beleven en deze app is mijn rechterhand geworden.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Perfect.",
+      "author": {
+        "@type": "Person",
+        "name": "Keskin2298"
+      },
+      "reviewBody": "Gezegend zijn de handen die dit maakten. Geen advertenties. Er is serieus werk in gestoken. Duidelijk alleen omwille van Allahs welbehagen. Dank je.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Een zeldzame app.",
+      "author": {
+        "@type": "Person",
+        "name": "Baalbak9907"
+      },
+      "reviewBody": "Moge Allah tevreden met jullie zijn. De gebedstijden zo overzichtelijk bij elkaar, de hadiths zorgvuldig met het Arabisch, het Turks en hun betrouwbaarheidsgraad – en toch geen advertenties. Zo'n app is zeldzaam. Download hem; waarschijnlijk blijft hij voorgoed op je telefoon.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Precies wat nodig was.",
+      "author": {
+        "@type": "Person",
+        "name": "Sswnn21"
+      },
+      "reviewBody": "Moge Allah tevreden zijn met wie dit heeft bedacht en gemaakt. Verhelderend, zonder advertenties en duidelijk.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Met de laatste update geweldig geworden.",
+      "author": {
+        "@type": "Person",
+        "name": "Mücahade"
+      },
+      "reviewBody": "Eenvoudig, mooi, handig, snel – wat zal ik zeggen. Gezegend zijn je handen, je inzet en je hart.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Moge Allah tevreden met je zijn.",
+      "author": {
+        "@type": "Person",
+        "name": "h.ç44"
+      },
+      "reviewBody": "Ik was de onhandige interfaces vol advertenties, die steeds om geld vragen, zat. Vakit is echt geweldig: het werkt overal, zonder internet en zonder advertenties. Koran, hadith, dhikr-teller, gebeden bijhouden – ik heb geen andere app meer nodig.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "De andere heb ik verwijderd.",
+      "author": {
+        "@type": "Person",
+        "name": "Çerkezin biri"
+      },
+      "reviewBody": "Moge Allah tevreden zijn met wie dit heeft gemaakt. Gezegend zijn jullie handen. Het is heel nuttig gebleken.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "De beste.",
+      "author": {
+        "@type": "Person",
+        "name": "Bessey Çelik"
+      },
+      "reviewBody": "Iets beters heb ik nog niet gezien. Een app die op elke telefoon hoort. Moge Allah tevreden zijn met de ontwikkelaar.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Echt nuttig.",
+      "author": {
+        "@type": "Person",
+        "name": "tolgalive"
+      },
+      "reviewBody": "De app is heel nuttig en praktisch. Hij hoort op de telefoon van elke moslim. Moge Allah tevreden zijn met de ontwikkelaar.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Moge Allah tevreden met je zijn.",
+      "author": {
+        "@type": "Person",
+        "name": "Murat KAYAHAN"
+      },
+      "reviewBody": "Broeder, heel erg bedankt dat je zo'n waardevolle app gratis hebt gemaakt. Moge Allah je geven wat je hart wenst, insha'Allah.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vakit: Gebedstijden & Widget",
+  "url": "https://vakit.hakancelik.dev/nl/",
+  "inLanguage": "nl",
+  "publisher": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Werkt de app zonder internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Gebedstijden worden op je telefoon berekend op basis van je locatie. Koran, qibla, dhikr en alle basisfuncties werken volledig offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Krijg ik meldingen, ook als ik de app nooit open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Ze worden lokaal op je apparaat ingepland, dus je krijgt ze ook als de app gesloten is. Geef je 'Altijd' locatietoegang, dan rekent Vakit na een reis de tijden stilletjes opnieuw uit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is echt alles gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Op dit moment wel – de hele app is gratis, zonder abonnement, betaalmuur of 'premium'-niveau. Ik kan niet beloven dat het altijd zo blijft (niemand kan dat eerlijk beloven), maar ik kan beloven dat er vandaag geen addertje onder het gras zit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waar komen de gebedstijden vandaan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ze worden niet van een server gehaald. Vakit berekent ze op je apparaat, met de methode die je kiest (er zijn er 13) en je coördinaten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "In welke talen is de app beschikbaar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De interface van de app is er in 25 talen: Turks, Engels, Arabisch, Duits, Frans, Spaans, Italiaans, Nederlands, Portugees, Deens, Russisch, Azerbeidzjaans, Albanees, Indonesisch, Maleis, Chinees, Japans, Thai, Hindi, Bengaals, Urdu, Perzisch, Oeigoers, Swahili en Fula. Wordt de taal van je apparaat ondersteund, dan opent de app daar automatisch in; je kunt dit altijd wijzigen in Instellingen. In het Arabisch, Urdu, Perzisch en Oeigoers loopt de hele interface van rechts naar links. De vertalingen van de inhoud zijn voorlopig echter alleen in het Turks en Engels: de Koranvertaling, woordbetekenissen, transliteratie en hadithvertalingen zijn er in die twee talen. Met de Arabische interface opent voor een deel van de Koran een Arabische tafsir; de vrijdagpreek is in het Turks, Engels en sommige weken in het Arabisch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Op welke apparaten werkt de app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone, iPad, Apple Watch en Mac. Op de iPad is het dezelfde app op een groter scherm, en via iCloud blijven je gegevens op al je apparaten gelijk. Sinds versie 1.7.0 werkt Vakit ook op de Mac: tabbladen in de navigatiekolom, het volgende gebed en de aftelling in de menubalk, toetscombinaties en bureaubladwidgets. Gebedstijden, Koran, hadith, dhikr en je ibada-gegevens synchroniseren met je iPhone via hetzelfde iCloud-account. Omdat een Mac geen kompas heeft, toont het qibla-tabblad de richting en afstand tot de Kaäba als tekst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik het adhan-geluid kiezen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Meldingen komen met de adhan in vijf makams: hicaz, rast, saba, segah en uşşak. Kies er een in Instellingen → Meldingen → Meldingsgeluid; je kunt ook per gebed een ander geluid instellen. De opnames zitten in de app, dus afspelen kan zonder internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is er een wekker voor Fajr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Je kunt een wekker zetten die vóór zonsopgang afgaat en door de stille modus heen breekt als je Fajr nog niet hebt gebeden. Vink je het gebed af, dan blijft hij stil. Er is ook een suhur-wekker die zich naar je vastendagen richt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waar komt de vrijdagpreek vandaan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De preek die Diyanet elke week publiceert, verschijnt in de app; je kunt hem lezen, de audio-opname beluisteren en hem downloaden om offline te lezen. Omdat het een publicatie van Diyanet is, verschijnt dit onderdeel bij gebruikers met Diyanet als berekeningsmethode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat zit er in het Koran-gedeelte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alle 114 soera's, woord-voor-woordanalyse, de tafsir van Diyanet in het Turks, de klassieke moeshaf-weergave, recitatie om te beluisteren en een chatm-teller. Alles werkt offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe werkt het bijhouden van je ibada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Een weergave in de stijl van activiteitsringen houdt je gebeden, je Koranlezen en je dhikr bij. Je kunt ook de gemiste gebeden van een heel leven (qada) per gebedstijd bijhouden en die schuld aflossen terwijl je ze inhaalt. Reeksen en milde statistieken helpen je volhouden, zonder schuldgevoel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke widgets zijn er?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "20 widgets voor gebedstijden, aftelling, vers van de dag, naam van de dag, Hidjri-kalender, heilige dagen, maanfase en ibada-reeksen. Beschikbaar op het beginscherm, het toegangsscherm, in StandBy en op het bureaublad van de Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is er een app voor Apple Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. De Apple Watch-app toont de gebedstijden (aftelling + lijst), een live qibla-kompas en 12 complicaties voor alle wijzerplaten. Hij werkt samen met je iPhone – geen aparte installatie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waar worden mijn gegevens bewaard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wat je bijhoudt aan ibada, je voortgang met qada en chatm, je bladwijzers, je leesgeschiedenis en je favoriete moskeeën blijven op je apparaat en in je eigen privé-iCloud – niets daarvan komt op onze servers. Ook je zakatbedragen en je actuele locatie worden nooit verstuurd. Wat wel naar de server gaat: gebruiksstatistieken, je dhikr-lijst en de woorden waarop je in de app zoekt – zodat we zien waar je niet vond wat je zocht en de zoekfunctie kunnen verbeteren. Dat alles is gekoppeld aan een vaste gebruikerscode zonder identificerende gegevens – een pseudoniem, niet anoniem. Meer hierover in het privacybeleid."
+      }
+    }
+  ]
+}
+    </script>
+
+    <script src="/language-detection.js"></script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </div>
+  <div class="nav-links">
+    <a href="#showcase">Functies</a>
+    <a href="#trust">Vertrouwen</a>
+    <a href="#compare">Waarom Vakit</a>
+    <a href="#reviews">Recensies</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <button class="nav-theme" id="themeToggle" aria-label="Donkere modus aan/uit">☀</button>
+    <details class="lang-menu">
+      <summary aria-label="Taal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Nederlands</span></summary>
+      <ul class="lang-list">
+        <li><a href="/" data-lang="tr" lang="tr" dir="ltr" hreflang="tr">Türkçe</a></li>
+        <li><a href="/en/" data-lang="en" lang="en" dir="ltr" hreflang="en">English</a></li>
+        <li><a href="/ar/" data-lang="ar" lang="ar" dir="rtl" hreflang="ar">العربية</a></li>
+        <li><a href="/az/" data-lang="az" lang="az" dir="ltr" hreflang="az">Azərbaycan dili</a></li>
+        <li><a href="/bn/" data-lang="bn" lang="bn" dir="ltr" hreflang="bn">বাংলা</a></li>
+        <li><a href="/da/" data-lang="da" lang="da" dir="ltr" hreflang="da">Dansk</a></li>
+        <li><a href="/de/" data-lang="de" lang="de" dir="ltr" hreflang="de">Deutsch</a></li>
+        <li><a href="/es/" data-lang="es" lang="es" dir="ltr" hreflang="es">Español</a></li>
+        <li><a href="/fa/" data-lang="fa" lang="fa" dir="rtl" hreflang="fa">فارسی</a></li>
+        <li><a href="/ff/" data-lang="ff" lang="ff" dir="ltr" hreflang="ff">Pulaar</a></li>
+        <li><a href="/fr/" data-lang="fr" lang="fr" dir="ltr" hreflang="fr">Français</a></li>
+        <li><a href="/hi/" data-lang="hi" lang="hi" dir="ltr" hreflang="hi">हिन्दी</a></li>
+        <li><a href="/id/" data-lang="id" lang="id" dir="ltr" hreflang="id">Bahasa Indonesia</a></li>
+        <li><a href="/it/" data-lang="it" lang="it" dir="ltr" hreflang="it">Italiano</a></li>
+        <li><a href="/ja/" data-lang="ja" lang="ja" dir="ltr" hreflang="ja">日本語</a></li>
+        <li><a href="/ms/" data-lang="ms" lang="ms" dir="ltr" hreflang="ms">Bahasa Melayu</a></li>
+        <li><a href="/nl/" data-lang="nl" lang="nl" dir="ltr" aria-current="page">Nederlands</a></li>
+        <li><a href="/pt/" data-lang="pt" lang="pt" dir="ltr" hreflang="pt">Português</a></li>
+        <li><a href="/ru/" data-lang="ru" lang="ru" dir="ltr" hreflang="ru">Русский</a></li>
+        <li><a href="/sq/" data-lang="sq" lang="sq" dir="ltr" hreflang="sq">Shqip</a></li>
+        <li><a href="/sw/" data-lang="sw" lang="sw" dir="ltr" hreflang="sw">Kiswahili</a></li>
+        <li><a href="/th/" data-lang="th" lang="th" dir="ltr" hreflang="th">ไทย</a></li>
+        <li><a href="/ug/" data-lang="ug" lang="ug" dir="rtl" hreflang="ug">ئۇيغۇرچە</a></li>
+        <li><a href="/ur/" data-lang="ur" lang="ur" dir="rtl" hreflang="ur">اردو</a></li>
+        <li><a href="/zh/" data-lang="zh" lang="zh-Hans" dir="ltr" hreflang="zh-Hans">简体中文</a></li>
+      </ul>
+    </details>
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-nav-nl" class="nav-dl">Download</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Zodat je ibada nooit onderbroken wordt · Gratis · Zonder advertenties</div>
+    <h1>
+      <span>De app voor je ibada,</span><br>
+      <span>zoals die</span> <em>hoort te zijn.</em>
+    </h1>
+    <p class="hero-sub">De app voor je ibada, zoals die hoort te zijn. Een rustige metgezel bij de vijf dagelijkse gebeden – met Koran, qibla, dhikr en een kalender die je dagen eert. Hij stapt opzij als je hem niet nodig hebt, en staat klaar als je hem wel nodig hebt.</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-nl" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+        <span>Download in de App Store</span>
+      </a>
+      <a href="#showcase" class="btn-ghost">Bekijk de rondleiding →</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="proof">
+        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-lbl">App Store · 340 beoordelingen</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">0 <span class="proof-cur">€</span></div>
+        <div class="proof-lbl">Gratis · nu</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">13</div>
+        <div class="proof-lbl">Berekeningsmethoden</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">100%</div>
+        <div class="proof-lbl">Offline · op je apparaat</div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="clock-card">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Amsterdam</span>
+      <span class="clock-date" id="date">—</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next-lbl">Volgende · over</div>
+    <div class="clock-next-name" id="nextName">—</div>
+    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    <div class="clock-list" id="clockList"></div>
+  </aside>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha</span><span>Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Zonsopgang · Dhuhr · Asr · Maghrib · Isha</span></div>
+</div>
+
+<!-- ========== SHOWCASE ========== -->
+<section class="showcase" id="showcase">
+  <div>
+    <div class="sc-head">§ 01 · Alles, niets te veel</div>
+    <h2 class="sc-h2"><span>Een metgezel,</span><br><em>geen aandachtsvreter.</em></h2>
+    <p class="sc-lede">Tien kernfuncties, elk zo ontworpen dat het rustig aanvoelt zodra je het opent. Tik erop voor een voorbeeld.</p>
+    <div class="sc-list" id="scList">
+        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Zoals de hemel.</h3><p>Bij elke gebedstijd verandert het scherm mee met de hemel – echte sterren en de maan op hun ware plek. Afgeraden tijden en vrijwillige gebedstijden zijn optioneel.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Zonder te ontgrendelen.</h3><p>Het volgende gebed op je toegangsscherm, in een widget, in het Dynamic Island en op je horloge. Een rustige blik – zonder dat het je aandacht opeist.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Alles in één.</h3><p>Koran, hadith, vrijdagpreek, dhikr, de 99 namen, gidsen en de kalender – alles op één plek. Niets zit achter een betaalmuur.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>De juiste richting.</h3><p>Draai naar de qibla en je telefoon trilt, met de afstand tot de Kaäba ernaast. Je coördinaten verlaten je telefoon nooit.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Je ibada in ringen.</h3><p>Ringen voor gebed, vasten, Koran, dhikr en hadith; hoe snel na het begin van elke tijd je bidt, en je chatm – rustige voortgang, geen schuldgevoel.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Qada, ingehaald gebed na gebed.</h3><p>Bereken de gemiste gebeden van een heel leven per gebedstijd en haal ze een voor een in – met een schatting van wanneer je klaar bent.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>De Koran, ook offline.</h3><p>Lezen, luisteren, overdenken – Medina- of Turkije-schrift, woord voor woord meelezen, tafsir en recitatie om te downloaden.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Zeventien gebeden, geïllustreerd.</h3><p>Van de wassing tot de tesbihat; staand, zittend of met gebaren – stap voor stap, zonder te betuttelen.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Een kalender die onthoudt.</h3><p>Hidjri en Gregoriaans samen. Heilige nachten, ramadan, de feesten en de vooravond – met eronder het ibada-overzicht van de maand.</p></div><span class="sc-tag">Voorbeeld</span></button>
+        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>De telling in de hand.</h3><p>Een dhikr-teller en de tesbihat na het gebed; sjablonen, je eigen dhikr en een dagdoel.</p></div><span class="sc-tag">Voorbeeld</span></button>
+    </div>
+  </div>
+  <div class="sc-phone-wrap">
+    <div class="phone">
+      <div class="phone-screen" id="phoneScreen">
+        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Het gebedsscherm van Vakit: de hemel verandert naarmate de dag vordert"></video>
+        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/nl/widget.webp" alt="Zonder te ontgrendelen." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/nl/discover.webp" alt="Alles in één." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/nl/qibla.webp" alt="De juiste richting." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/nl/profile.webp" alt="Je ibada in ringen." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/nl/qada.webp" alt="Qada, ingehaald gebed na gebed." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/nl/quran.webp" alt="De Koran, ook offline." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/nl/prayer-guide.webp" alt="Zeventien gebeden, geïllustreerd." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/nl/calendar.webp" alt="Een kalender die onthoudt." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/nl/zikirmatik.webp" alt="De telling in de hand." width="390" height="844" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST / EMANET ========== -->
+<section class="trust" id="trust">
+  <div class="trust-inner">
+    <div class="trust-eyebrow">§ 02 · Emanet – een toevertrouwd goed</div>
+    <h2>
+      <span>Je gegevens zijn</span> <em>aan ons toevertrouwd,</em><br>
+      <span>geen handelswaar.</span>
+    </h2>
+    <p class="trust-lede">Je ibada hoort nooit onderbroken te worden. Andere gebedsapps zijn betrapt op het verkopen van locatiegegevens. Vakit koos een andere weg: je coördinaten verlaten je telefoon nooit. Geen account. Geen tracking. Geen compromis. Dit is geen functie – het is een principe.</p>
+    <div class="trust-grid">
+      <div class="trust-cell">
+        <div class="trust-cell-num">01 / no account</div>
+        <h3>Downloaden. Openen. Bidden.</h3>
+        <p>Geen registratie, geen inloggen, geen wachtwoord dat je vergeet. Vakit werkt zodra je het installeert.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">02 / on-device</div>
+        <h3>Berekend op je telefoon.</h3>
+        <p>Gebedstijden worden lokaal berekend op basis van je locatie, met de methode die jij kiest. Er gaat niets naar een server om te worden 'opgezocht'.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">03 / no tracking</div>
+        <h3>Je gps blijft bij jou.</h3>
+        <p>Je coördinaten worden nergens heen gestuurd. We kunnen niet zien waar je bidt, en dat willen we ook niet.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">04 / transparent</div>
+        <h3>Een beleid in gewone taal.</h3>
+        <p>Gebruiksaantallen zonder je identiteit. Ons privacybeleid lees je in een minuut – en dat blijft zo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES GRID ========== -->
+<section class="feats" id="features">
+  <div class="f-inner">
+    <div class="f-head">
+      <div class="f-eye">§ 03 · 45 functies</div>
+      <h2><span>Eén app,</span><br><em>genoeg voor een leven vol ibada.</em></h2>
+    </div>
+    <div class="f-grid" id="featGrid">
+        <div class="f-cell"><div class="f-num">01 / 45</div><div class="f-name">Gebedstijden</div><div class="f-desc">13 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist.</div></div>
+        <div class="f-cell"><div class="f-num">02 / 45</div><div class="f-name">Levende hemel</div><div class="f-desc">Echte sterren en de maan op de dagboog – voor waar jij nu bent.</div></div>
+        <div class="f-cell"><div class="f-num">03 / 45</div><div class="f-name">Vrijwillige gebedstijden</div><div class="f-desc">Isjraq, Doeha, Awwabin en de delen van de nacht; optioneel.</div></div>
+        <div class="f-cell"><div class="f-num">04 / 45</div><div class="f-name">Handmatige locatie</div><div class="f-desc">Stel je locatie zelf in, of laat die je volgen als je reist.</div></div>
+        <div class="f-cell"><div class="f-num">05 / 45</div><div class="f-name">Apple Watch</div><div class="f-desc">Gebedstijden, live qibla, 12 complicaties voor wijzerplaten.</div></div>
+        <div class="f-cell"><div class="f-num">06 / 45</div><div class="f-name">Mac-app</div><div class="f-desc">Aftelling in de menubalk, toetscombinaties, iCloud-sync.</div></div>
+        <div class="f-cell"><div class="f-num">07 / 45</div><div class="f-name">iPad</div><div class="f-desc">Dezelfde app op een groter scherm; je gegevens synchroniseren via iCloud.</div></div>
+        <div class="f-cell"><div class="f-num">08 / 45</div><div class="f-name">25 talen</div><div class="f-desc">Interface van rechts naar links in het Arabisch, Urdu, Perzisch en Oeigoers.</div></div>
+        <div class="f-cell"><div class="f-num">09 / 45</div><div class="f-name">Qibla-kompas</div><div class="f-desc">Haptische richting met de afstand tot de Kaäba.</div></div>
+        <div class="f-cell"><div class="f-num">10 / 45</div><div class="f-name">De Heilige Koran</div><div class="f-desc">114 soera's. Woord voor woord, tafsir, klassieke moeshaf; vertaling in het Turks en Engels.</div></div>
+        <div class="f-cell"><div class="f-num">11 / 45</div><div class="f-name">Moeshaf-schrift</div><div class="f-desc">Medina- of Turkije-schrift – de pagina-indeling past zich aan.</div></div>
+        <div class="f-cell"><div class="f-num">12 / 45</div><div class="f-name">Chatm bijhouden</div><div class="f-desc">114 soera's, 30 djoez; voltooide chatms en een verwachte einddatum.</div></div>
+        <div class="f-cell"><div class="f-num">13 / 45</div><div class="f-name">Offline recitatie</div><div class="f-desc">Kies een reciteerder en stijl; download soera's of djoez en luister offline.</div></div>
+        <div class="f-cell"><div class="f-num">14 / 45</div><div class="f-name">Hadith</div><div class="f-desc">36.390 hadiths uit zeven grote verzamelingen.</div></div>
+        <div class="f-cell"><div class="f-num">15 / 45</div><div class="f-name">Vrijdagpreek</div><div class="f-desc">Lees en beluister de preek van Diyanet en bewaar hem offline.</div></div>
+        <div class="f-cell"><div class="f-num">16 / 45</div><div class="f-name">Dhikr-teller</div><div class="f-desc">Voortgang in een ring, sjablonen en eigen dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">17 / 45</div><div class="f-name">Tesbihat</div><div class="f-desc">33-33-33, of de volledige volgorde na het gebed.</div></div>
+        <div class="f-cell"><div class="f-num">18 / 45</div><div class="f-name">De 99 namen van Allah</div><div class="f-desc">Asma al-Husna, met betekenis en bezinning.</div></div>
+        <div class="f-cell"><div class="f-num">19 / 45</div><div class="f-name">Hidjri-kalender</div><div class="f-desc">Gregoriaans + Hidjri, met bijzondere dagen en ramadan.</div></div>
+        <div class="f-cell"><div class="f-num">20 / 45</div><div class="f-name">Afgeraden tijden</div><div class="f-desc">Gemarkeerd op de dagboog, met de overlevering waarop ze berusten.</div></div>
+        <div class="f-cell"><div class="f-num">21 / 45</div><div class="f-name">Reinigingsgids</div><div class="f-desc">Stap voor stap: wassing, ghoesl en tayammoem.</div></div>
+        <div class="f-cell"><div class="f-num">22 / 45</div><div class="f-name">Gebedsgids</div><div class="f-desc">17 soorten gebed; staand, zittend of met gebaren.</div></div>
+        <div class="f-cell"><div class="f-num">23 / 45</div><div class="f-name">Zakat en fitra</div><div class="f-desc">Rekenhulpen gebaseerd op de klassieke fiqh.</div></div>
+        <div class="f-cell"><div class="f-num">24 / 45</div><div class="f-name">Qada bijhouden</div><div class="f-desc">Gemiste gebeden per gebedstijd, gemiste vastendagen per dag.</div></div>
+        <div class="f-cell"><div class="f-num">25 / 45</div><div class="f-name">Uitzonderingsdagen</div><div class="f-desc">Menstruatie en kraamtijd; je gebedsreeks blijft intact.</div></div>
+        <div class="f-cell"><div class="f-num">26 / 45</div><div class="f-name">Widgets</div><div class="f-desc">Beginscherm, toegangsscherm, StandBy – ook op de Mac.</div></div>
+        <div class="f-cell"><div class="f-num">27 / 45</div><div class="f-name">Live activiteit</div><div class="f-desc">Aftellingen in het Dynamic Island en op het toegangsscherm.</div></div>
+        <div class="f-cell"><div class="f-num">28 / 45</div><div class="f-name">Bedieningspaneel</div><div class="f-desc">Zes snelle acties – qibla, volgend gebed en meer.</div></div>
+        <div class="f-cell"><div class="f-num">29 / 45</div><div class="f-name">Ibada bijhouden</div><div class="f-desc">Activiteitsringen: gebed, nafl, vrijdaggebed, Eid, tarawih.</div></div>
+        <div class="f-cell"><div class="f-num">30 / 45</div><div class="f-name">Gebedsdiscipline</div><div class="f-desc">Hoe lang na het begin van elke gebedstijd je bidt – de laatste 30 dagen en altijd.</div></div>
+        <div class="f-cell"><div class="f-num">31 / 45</div><div class="f-name">Fajr-wekker</div><div class="f-desc">Breekt door de stille modus heen en zwijgt zodra je hebt gebeden.</div></div>
+        <div class="f-cell"><div class="f-num">32 / 45</div><div class="f-name">Suhur-wekker</div><div class="f-desc">Afgestemd op je vastendagen, zodat je de suhur nooit mist.</div></div>
+        <div class="f-cell"><div class="f-num">33 / 45</div><div class="f-name">Herinnering aan gezegende dagen</div><div class="f-desc">Een melding de avond vóór 11 islamitische dagen.</div></div>
+        <div class="f-cell"><div class="f-num">34 / 45</div><div class="f-name">Meldingen</div><div class="f-desc">Op je apparaat, lokaal, betrouwbaar.</div></div>
+        <div class="f-cell"><div class="f-num">35 / 45</div><div class="f-name">Adhan-geluiden</div><div class="f-desc">De adhan in vijf makams: hicaz, rast, saba, segah, uşşak.</div></div>
+        <div class="f-cell"><div class="f-num">36 / 45</div><div class="f-name">Siri-opdrachten</div><div class="f-desc">Vraag met je stem naar gebedstijden, qibla of verzen.</div></div>
+        <div class="f-cell"><div class="f-num">37 / 45</div><div class="f-name">Eén zoekfunctie</div><div class="f-desc">Eén zoekveld voor alles – typ 'Baqara 255' en je gaat naar het vers.</div></div>
+        <div class="f-cell"><div class="f-num">38 / 45</div><div class="f-name">Bladwijzers</div><div class="f-desc">Bewaar verzen, hadiths en dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">39 / 45</div><div class="f-name">iCloud-sync</div><div class="f-desc">Je gegevens blijven in je eigen iCloud, op elk apparaat.</div></div>
+        <div class="f-cell"><div class="f-num">40 / 45</div><div class="f-name">Tafsir</div><div class="f-desc">Tafsir van Diyanet in het Turks, naast de tekst.</div></div>
+        <div class="f-cell"><div class="f-num">41 / 45</div><div class="f-name">Deelkaarten</div><div class="f-desc">Mooie kaarten voor verzen en dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">42 / 45</div><div class="f-name">Vasten</div><div class="f-desc">Ramadan, sjawwal en per dag bijhouden.</div></div>
+        <div class="f-cell"><div class="f-num">43 / 45</div><div class="f-name">Moskeeën in de buurt</div><div class="f-desc">Vind moskeeën met behoud van privacy; kaart, afstand en route.</div></div>
+        <div class="f-cell"><div class="f-num">44 / 45</div><div class="f-name">Steun Vakit</div><div class="f-desc">Vrijwillige manieren om de gratis app in de lucht te houden.</div></div>
+        <div class="f-cell"><div class="f-num">45 / 45</div><div class="f-name">Donkere modus</div><div class="f-desc">Warm, rustig donker voor de late uren.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARE ========== -->
+<section class="compare" id="compare">
+  <div class="compare-inner">
+    <h2><span>Het verschil,</span><br><em>gemeten.</em></h2>
+    <p class="compare-lede">Je weet al wat er mis is met andere gebedsapps. Zo beantwoordt Vakit elk punt, regel voor regel.</p>
+    <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Onderwerp</div><div class="compare-cell">Andere apps</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Advertenties</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Casino- en ongepaste advertenties naast religieuze inhoud.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Nu geen advertenties.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Privacy</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Locatiegegevens verkocht aan derden (in de media verschenen).</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Coördinaten blijven op je telefoon. Geen tracking.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Offline</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Basisfuncties hebben internet nodig.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Gebed, qibla, Koran, dhikr – alles werkt offline.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Toegangsscherm</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Widgets gaan stuk bij iOS-updates.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Live activiteit, Dynamic Island, StandBy – allemaal ondersteund.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Nauwkeurigheid</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Fouten rond zomer- en wintertijd, weinig berekeningsmethoden.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>13 methoden, houdt rekening met tijdzones, merkt het als je reist.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Apparaten</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Alleen de telefoon; horloge en desktop ontbreken of zijn half af.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>iPhone, iPad, Apple Watch en Mac – gesynchroniseerd via iCloud.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Ontwerp</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Verouderde interfaces; na elke update een stap terug.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>iOS 26 Liquid Glass. Rustig, modern, snel.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Kosten</div><div class="compare-cell other"><span class="cmark no">Nee</span><br><br>Betaalmuren, abonnementen, 'premium'-niveaus.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Nu gratis. Geen niveaus, geen upsell.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials" id="reviews">
+  <div class="t-inner">
+    <div class="t-head">
+      <h2><span>Mooie woorden</span><br><em>van echte gebruikers.</em></h2>
+      <div class="t-meta">
+        <span>Gemiddelde beoordeling</span>
+        <b>4.8 ★</b>
+        <span>uit 340 beoordelingen in de App Store</span>
+      </div>
+    </div>
+    <p class="t-note">Recensies uit de Turkse App Store, vertaald uit het Turks.</p>
+    <div class="t-grid" id="testGrid">
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Een app van 10/10.</div><p class="t-body">Of het nu gaat om de gebedstijden met die prachtige grafische weergave in de widget, of om het feit dat de app geen advertenties heeft en zo'n schone interface – 10/10. Ik ben er echt heel blij mee en raad hem iedereen aan.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Geweldig.</div><p class="t-body">De schoonste en handigste app die je kunt vinden. Geen advertenties, een heel sobere en stijlvolle interface. Het vinden van de qibla werkt echt heel nauwkeurig en fijn. De rest van de inhoud is ook heel mooi geworden.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Eenvoudig en handig.</div><p class="t-body">Hij staat op een hoger niveau dan de meeste andere apps, games en sociale media. Bedankt voor jullie inzet, het is prachtig werk geworden. Ik probeer mijn geloof bewuster te beleven en deze app is mijn rechterhand geworden.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Perfect.</div><p class="t-body">Gezegend zijn de handen die dit maakten. Geen advertenties. Er is serieus werk in gestoken. Duidelijk alleen omwille van Allahs welbehagen. Dank je.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Een zeldzame app.</div><p class="t-body">Moge Allah tevreden met jullie zijn. De gebedstijden zo overzichtelijk bij elkaar, de hadiths zorgvuldig met het Arabisch, het Turks en hun betrouwbaarheidsgraad – en toch geen advertenties. Zo'n app is zeldzaam. Download hem; waarschijnlijk blijft hij voorgoed op je telefoon.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Precies wat nodig was.</div><p class="t-body">Moge Allah tevreden zijn met wie dit heeft bedacht en gemaakt. Verhelderend, zonder advertenties en duidelijk.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Met de laatste update geweldig geworden.</div><p class="t-body">Eenvoudig, mooi, handig, snel – wat zal ik zeggen. Gezegend zijn je handen, je inzet en je hart.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Moge Allah tevreden met je zijn.</div><p class="t-body">Ik was de onhandige interfaces vol advertenties, die steeds om geld vragen, zat. Vakit is echt geweldig: het werkt overal, zonder internet en zonder advertenties. Koran, hadith, dhikr-teller, gebeden bijhouden – ik heb geen andere app meer nodig.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">De andere heb ik verwijderd.</div><p class="t-body">Moge Allah tevreden zijn met wie dit heeft gemaakt. Gezegend zijn jullie handen. Het is heel nuttig gebleken.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">De beste.</div><p class="t-body">Iets beters heb ik nog niet gezien. Een app die op elke telefoon hoort. Moge Allah tevreden zijn met de ontwikkelaar.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Echt nuttig.</div><p class="t-body">De app is heel nuttig en praktisch. Hij hoort op de telefoon van elke moslim. Moge Allah tevreden zijn met de ontwikkelaar.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Moge Allah tevreden met je zijn.</div><p class="t-body">Broeder, heel erg bedankt dat je zo'n waardevolle app gratis hebt gemaakt. Moge Allah je geven wat je hart wenst, insha'Allah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2><span>Eerlijke antwoorden</span><br><em>op eerlijke vragen.</em></h2>
+    <div class="faq-list" id="faqList">
+        <div class="faq-item on"><button class="faq-q" aria-expanded="true">Werkt de app zonder internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ja. Gebedstijden worden op je telefoon berekend op basis van je locatie. Koran, qibla, dhikr en alle basisfuncties werken volledig offline.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Krijg ik meldingen, ook als ik de app nooit open?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ja. Ze worden lokaal op je apparaat ingepland, dus je krijgt ze ook als de app gesloten is. Geef je 'Altijd' locatietoegang, dan rekent Vakit na een reis de tijden stilletjes opnieuw uit.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Is echt alles gratis?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Op dit moment wel – de hele app is gratis, zonder abonnement, betaalmuur of 'premium'-niveau. Ik kan niet beloven dat het altijd zo blijft (niemand kan dat eerlijk beloven), maar ik kan beloven dat er vandaag geen addertje onder het gras zit.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Waar komen de gebedstijden vandaan?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ze worden niet van een server gehaald. Vakit berekent ze op je apparaat, met de methode die je kiest (er zijn er 13) en je coördinaten.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">In welke talen is de app beschikbaar?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">De interface van de app is er in 25 talen: Turks, Engels, Arabisch, Duits, Frans, Spaans, Italiaans, Nederlands, Portugees, Deens, Russisch, Azerbeidzjaans, Albanees, Indonesisch, Maleis, Chinees, Japans, Thai, Hindi, Bengaals, Urdu, Perzisch, Oeigoers, Swahili en Fula. Wordt de taal van je apparaat ondersteund, dan opent de app daar automatisch in; je kunt dit altijd wijzigen in Instellingen. In het Arabisch, Urdu, Perzisch en Oeigoers loopt de hele interface van rechts naar links. De vertalingen van de inhoud zijn voorlopig echter alleen in het Turks en Engels: de Koranvertaling, woordbetekenissen, transliteratie en hadithvertalingen zijn er in die twee talen. Met de Arabische interface opent voor een deel van de Koran een Arabische tafsir; de vrijdagpreek is in het Turks, Engels en sommige weken in het Arabisch.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Op welke apparaten werkt de app?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch en Mac. Op de iPad is het dezelfde app op een groter scherm, en via iCloud blijven je gegevens op al je apparaten gelijk. Sinds versie 1.7.0 werkt Vakit ook op de Mac: tabbladen in de navigatiekolom, het volgende gebed en de aftelling in de menubalk, toetscombinaties en bureaubladwidgets. Gebedstijden, Koran, hadith, dhikr en je ibada-gegevens synchroniseren met je iPhone via hetzelfde iCloud-account. Omdat een Mac geen kompas heeft, toont het qibla-tabblad de richting en afstand tot de Kaäba als tekst.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Kan ik het adhan-geluid kiezen?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ja. Meldingen komen met de adhan in vijf makams: hicaz, rast, saba, segah en uşşak. Kies er een in Instellingen → Meldingen → Meldingsgeluid; je kunt ook per gebed een ander geluid instellen. De opnames zitten in de app, dus afspelen kan zonder internet.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Is er een wekker voor Fajr?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ja. Je kunt een wekker zetten die vóór zonsopgang afgaat en door de stille modus heen breekt als je Fajr nog niet hebt gebeden. Vink je het gebed af, dan blijft hij stil. Er is ook een suhur-wekker die zich naar je vastendagen richt.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Waar komt de vrijdagpreek vandaan?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">De preek die Diyanet elke week publiceert, verschijnt in de app; je kunt hem lezen, de audio-opname beluisteren en hem downloaden om offline te lezen. Omdat het een publicatie van Diyanet is, verschijnt dit onderdeel bij gebruikers met Diyanet als berekeningsmethode.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Wat zit er in het Koran-gedeelte?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Alle 114 soera's, woord-voor-woordanalyse, de tafsir van Diyanet in het Turks, de klassieke moeshaf-weergave, recitatie om te beluisteren en een chatm-teller. Alles werkt offline.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Hoe werkt het bijhouden van je ibada?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Een weergave in de stijl van activiteitsringen houdt je gebeden, je Koranlezen en je dhikr bij. Je kunt ook de gemiste gebeden van een heel leven (qada) per gebedstijd bijhouden en die schuld aflossen terwijl je ze inhaalt. Reeksen en milde statistieken helpen je volhouden, zonder schuldgevoel.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Welke widgets zijn er?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">20 widgets voor gebedstijden, aftelling, vers van de dag, naam van de dag, Hidjri-kalender, heilige dagen, maanfase en ibada-reeksen. Beschikbaar op het beginscherm, het toegangsscherm, in StandBy en op het bureaublad van de Mac.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Is er een app voor Apple Watch?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ja. De Apple Watch-app toont de gebedstijden (aftelling + lijst), een live qibla-kompas en 12 complicaties voor alle wijzerplaten. Hij werkt samen met je iPhone – geen aparte installatie.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Waar worden mijn gegevens bewaard?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Wat je bijhoudt aan ibada, je voortgang met qada en chatm, je bladwijzers, je leesgeschiedenis en je favoriete moskeeën blijven op je apparaat en in je eigen privé-iCloud – niets daarvan komt op onze servers. Ook je zakatbedragen en je actuele locatie worden nooit verstuurd. Wat wel naar de server gaat: gebruiksstatistieken, je dhikr-lijst en de woorden waarop je in de app zoekt – zodat we zien waar je niet vond wat je zocht en de zoekfunctie kunnen verbeteren. Dat alles is gekoppeld aan een vaste gebruikerscode zonder identificerende gegevens – een pseudoniem, niet anoniem. Meer hierover in het privacybeleid.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final" id="download">
+  <div class="final-mark"><img src="/assets/app-icon.png" alt="Vakit" width="88" height="88"></div>
+  <h2><span>Zodat je ibada</span> <em>nooit onderbroken wordt.</em></h2>
+  <p>Nu gratis. Geen account. Werkt offline. iPhone, iPad, Apple Watch en Mac – vanaf iOS 16.4.</p>
+  <div class="final-actions">
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-nl" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+      <span>Download in de App Store</span>
+    </a>
+    <a href="#showcase" class="btn-ghost">Ontdek de functies →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="/en/privacy.html" hreflang="en">Privacy</a>
+    <a href="/en/terms.html" hreflang="en">Voorwaarden</a>
+    <a href="/en/ads-policy.html" hreflang="en">Advertenties</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+    <a href="/presentation.html">Presentatie</a>
+    <a href="mailto:hakancelikdev@gmail.com">Contact</a>
+    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU" target="_blank" rel="noopener">Feedback</a>
+  </div>
+  <div class="foot-sig">Met zorg gemaakt · © 2026 Hakan Çelik</div>
+</footer>
+
+<script id="vakit-data" type="application/json">{
+  "lang": "nl",
+  "dateLocale": "nl-u-ca-gregory-nu-latn",
+  "prayers": {
+    "Fajr": "Imsak",
+    "Sunrise": "Zonsopgang",
+    "Dhuhr": "Dhuhr",
+    "Asr": "Asr",
+    "Maghrib": "Maghrib",
+    "Isha": "Isha"
+  },
+  "cities": [
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "method": 13
+    },
+    {
+      "id": "mecca",
+      "name": "Mekka",
+      "lat": 21.4225,
+      "lon": 39.8262,
+      "method": 4
+    },
+    {
+      "id": "medina",
+      "name": "Medina",
+      "lat": 24.4672,
+      "lon": 39.6024,
+      "method": 4
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanboel",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "method": 13
+    },
+    {
+      "id": "london",
+      "name": "Londen",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "method": 15
+    },
+    {
+      "id": "berlin",
+      "name": "Berlijn",
+      "lat": 52.52,
+      "lon": 13.405,
+      "method": 13
+    },
+    {
+      "id": "paris",
+      "name": "Parijs",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "method": 12
+    },
+    {
+      "id": "newyork",
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "method": 2
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "lat": 25.2048,
+      "lon": 55.2708,
+      "method": 16
+    },
+    {
+      "id": "cairo",
+      "name": "Caïro",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "method": 5
+    },
+    {
+      "id": "jakarta",
+      "name": "Jakarta",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "method": 20
+    },
+    {
+      "id": "kualalumpur",
+      "name": "Kuala Lumpur",
+      "lat": 3.139,
+      "lon": 101.6869,
+      "method": 17
+    }
+  ]
+}</script>
+<script src="/script.js"></script>
+</body>
+</html>

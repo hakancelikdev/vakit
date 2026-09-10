@@ -1,10 +1,10 @@
 # Vakit — Vakit: Prayer Times, Qibla, Quran
 
-> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.
+> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
-Watch and Mac, built by Hakan Çelik. Current release: 1.7.0, requires
-iOS/macOS 26.0 or later. App Store rating 4.8 from
+Watch and Mac, built by Hakan Çelik. Current release: 1.7.4, requires
+iOS/macOS 16.4 or later. App Store rating 4.8 from
 340 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 
 ## What makes it different
@@ -18,14 +18,19 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
   user's own private iCloud. Only anonymous, non-identifying usage counts are sent.
 - **No account.** Nothing to sign up for.
+- **25 interface languages**, right-to-left in Arabic, Urdu, Persian and Uyghur.
+  Content translations (Quran translation, hadith translations) are Turkish and English.
 
 ## Features
 
 - **Prayer Times** — 13 calculation methods, timezone-aware, travel-detecting.
+- **Live Sky** — Real stars and the moon on the day arc — for where you are, right now.
+- **Voluntary Prayer Times** — Ishraq, Duha, Awwabin and the parts of the night; optional.
 - **Manual Location** — Set your location by hand, or let it follow you as you travel.
 - **Apple Watch** — Prayer times, live qibla, 12 watch face complications.
 - **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
+- **25 Languages** — Right-to-left interface in Arabic, Urdu, Persian and Uyghur.
 - **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
 - **Holy Quran** — 114 surahs. Word-by-word, translation, tafsir, classical Mushaf.
 - **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
@@ -54,7 +59,7 @@ iOS/macOS 26.0 or later. App Store rating 4.8 from
 - **Notifications** — On-device, local, dependable.
 - **Adhan Sounds** — The adhan in five makams: hicaz, rast, saba, segah, ussak.
 - **Siri Shortcuts** — Ask for times, Qibla, ayat by voice.
-- **Unified Search** — One search, across every tool.
+- **Unified Search** — One search, every tool — type 'Baqarah 255' to jump to the ayah.
 - **Bookmarks** — Save ayat, hadith, and dhikr.
 - **iCloud Sync** — Your records stay in your own iCloud, on every device.
 - **Tafsir** — Diyanet commentary, in-line with the text.
@@ -81,6 +86,10 @@ Today, yes — the entire app is free, with no subscriptions, paywalls, or 'prem
 ### Where do prayer times come from?
 
 They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates.
+
+### Which languages is it available in?
+
+The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only for now: the Quran translation, word meanings, transliteration and hadith translations come in those two languages. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon is in Turkish, English and, in some weeks, Arabic.
 
 ### Which devices does it run on?
 
@@ -120,11 +129,37 @@ Your worship tracking, qada and hatim progress, bookmarks, reading history and f
 
 ## Pages
 
-- [Turkish home page](https://vakit.hakancelik.dev/) — canonical
-- [English home page](https://vakit.hakancelik.dev/en/)
+The home page exists in every interface language:
+
+- [Türkçe](https://vakit.hakancelik.dev/)
+- [English](https://vakit.hakancelik.dev/en/)
+- [العربية](https://vakit.hakancelik.dev/ar/)
+- [Azərbaycan dili](https://vakit.hakancelik.dev/az/)
+- [বাংলা](https://vakit.hakancelik.dev/bn/)
+- [Dansk](https://vakit.hakancelik.dev/da/)
+- [Deutsch](https://vakit.hakancelik.dev/de/)
+- [Español](https://vakit.hakancelik.dev/es/)
+- [فارسی](https://vakit.hakancelik.dev/fa/)
+- [Pulaar](https://vakit.hakancelik.dev/ff/)
+- [Français](https://vakit.hakancelik.dev/fr/)
+- [हिन्दी](https://vakit.hakancelik.dev/hi/)
+- [Bahasa Indonesia](https://vakit.hakancelik.dev/id/)
+- [Italiano](https://vakit.hakancelik.dev/it/)
+- [日本語](https://vakit.hakancelik.dev/ja/)
+- [Bahasa Melayu](https://vakit.hakancelik.dev/ms/)
+- [Nederlands](https://vakit.hakancelik.dev/nl/)
+- [Português](https://vakit.hakancelik.dev/pt/)
+- [Русский](https://vakit.hakancelik.dev/ru/)
+- [Shqip](https://vakit.hakancelik.dev/sq/)
+- [Kiswahili](https://vakit.hakancelik.dev/sw/)
+- [ไทย](https://vakit.hakancelik.dev/th/)
+- [ئۇيغۇرچە](https://vakit.hakancelik.dev/ug/)
+- [اردو](https://vakit.hakancelik.dev/ur/)
+- [简体中文](https://vakit.hakancelik.dev/zh/)
+
 - [Privacy policy](https://vakit.hakancelik.dev/en/privacy.html) ([Turkish](https://vakit.hakancelik.dev/privacy.html))
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Advertising policy](https://vakit.hakancelik.dev/en/ads-policy.html) ([Turkish](https://vakit.hakancelik.dev/ads-policy.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-08-09
+Last updated: 2026-09-10

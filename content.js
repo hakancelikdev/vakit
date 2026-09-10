@@ -1,10 +1,14 @@
 /**
  * Vakit landing page — single source of truth for every piece of page copy.
  *
- * Consumed by build.js (Node) to generate:
- *   docs/index.html     (tr)
- *   docs/en/index.html  (en)
+ * Consumed by build.js (Node) to generate one static page per language:
+ *   docs/index.html          (tr — canonical root)
+ *   docs/<lang>/index.html   (every other language in LANGS)
  *   docs/sitemap.xml, docs/robots.txt, docs/llms.txt
+ *
+ * Turkish and English live in this file; they are the source the other
+ * languages are translated from. The remaining languages each have their own
+ * module under locales/<lang>.js with the same shape (see locales/README.md).
  *
  * Nothing here is fetched by the browser: the generator bakes it all into
  * static HTML so search engines and AI crawlers (which do not run JavaScript)
@@ -33,34 +37,120 @@ const SITE = {
   //   curl -s "https://itunes.apple.com/lookup?id=6748356813&country=tr"
   rating: { value: "4.8", count: "340" },
   // Mirrors the shipping iOS release. Bump together with the app.
-  appVersion: "1.7.0",
+  appVersion: "1.7.4",
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-08-09",
-  minOS: "26.0",
+  updated: "2026-09-10",
+  minOS: "16.4",
   operatingSystem: "iOS, iPadOS, macOS, watchOS",
 };
 
-// Language → URL. Turkish is the canonical root; English gets its own
-// indexable directory so it can rank on its own.
+/**
+ * Every language the app ships in (VakitApp-Swift/vakit/Infrastructure/Localization/*.lproj).
+ * Each one is a real, separately indexable URL.
+ *
+ *   name     native name, shown in the language menu (same strings as the app's picker)
+ *   script   picks the web fonts and typography adjustments (build.js → SCRIPTS)
+ *   rtl      right-to-left page
+ *   shots    screenshot directory under docs/assets/screenshots/. Languages without
+ *            their own capture use English — the same rule as the App Store listing.
+ *   video    preview video: Turkish has its own recording, everyone else gets English.
+ *   city     default city in the live prayer clock
+ *   currency shown next to the "0" price in the hero
+ */
 const LANGS = {
-  tr: { htmlLang: "tr", ogLocale: "tr_TR", path: "/", dir: "." },
-  en: { htmlLang: "en", ogLocale: "en_US", path: "/en/", dir: "en" },
+  tr: { name: "Türkçe", htmlLang: "tr", ogLocale: "tr_TR", path: "/", dir: ".", script: "latin", shots: "tr", video: "tr", city: "istanbul", currency: "₺" },
+  en: { name: "English", htmlLang: "en", ogLocale: "en_US", path: "/en/", dir: "en", script: "latin", shots: "en", video: "en", city: "london", currency: "$" },
+  ar: { name: "العربية", htmlLang: "ar", ogLocale: "ar_SA", path: "/ar/", dir: "ar", script: "arabic", rtl: true, shots: "ar", video: "en", city: "mecca", currency: "ر.س" },
+  az: { name: "Azərbaycan dili", htmlLang: "az", ogLocale: "az_AZ", path: "/az/", dir: "az", script: "latin", shots: "en", video: "en", city: "baku", currency: "₼" },
+  bn: { name: "বাংলা", htmlLang: "bn", ogLocale: "bn_BD", path: "/bn/", dir: "bn", script: "bengali", shots: "bn", video: "en", city: "dhaka", currency: "৳" },
+  da: { name: "Dansk", htmlLang: "da", ogLocale: "da_DK", path: "/da/", dir: "da", script: "latin", shots: "da", video: "en", city: "copenhagen", currency: "kr" },
+  de: { name: "Deutsch", htmlLang: "de", ogLocale: "de_DE", path: "/de/", dir: "de", script: "latin", shots: "de", video: "en", city: "berlin", currency: "€" },
+  es: { name: "Español", htmlLang: "es", ogLocale: "es_ES", path: "/es/", dir: "es", script: "latin", shots: "es", video: "en", city: "madrid", currency: "€" },
+  fa: { name: "فارسی", htmlLang: "fa", ogLocale: "fa_IR", path: "/fa/", dir: "fa", script: "arabic", rtl: true, shots: "en", video: "en", city: "tehran", currency: "$" },
+  ff: { name: "Pulaar", htmlLang: "ff", ogLocale: "ff_SN", path: "/ff/", dir: "ff", script: "latin", shots: "en", video: "en", city: "dakar", currency: "CFA" },
+  fr: { name: "Français", htmlLang: "fr", ogLocale: "fr_FR", path: "/fr/", dir: "fr", script: "latin", shots: "fr", video: "en", city: "paris", currency: "€" },
+  hi: { name: "हिन्दी", htmlLang: "hi", ogLocale: "hi_IN", path: "/hi/", dir: "hi", script: "devanagari", shots: "hi", video: "en", city: "delhi", currency: "₹" },
+  id: { name: "Bahasa Indonesia", htmlLang: "id", ogLocale: "id_ID", path: "/id/", dir: "id", script: "latin", shots: "id", video: "en", city: "jakarta", currency: "Rp" },
+  it: { name: "Italiano", htmlLang: "it", ogLocale: "it_IT", path: "/it/", dir: "it", script: "latin", shots: "it", video: "en", city: "rome", currency: "€" },
+  ja: { name: "日本語", htmlLang: "ja", ogLocale: "ja_JP", path: "/ja/", dir: "ja", script: "japanese", shots: "ja", video: "en", city: "tokyo", currency: "¥" },
+  ms: { name: "Bahasa Melayu", htmlLang: "ms", ogLocale: "ms_MY", path: "/ms/", dir: "ms", script: "latin", shots: "ms", video: "en", city: "kualalumpur", currency: "RM" },
+  nl: { name: "Nederlands", htmlLang: "nl", ogLocale: "nl_NL", path: "/nl/", dir: "nl", script: "latin", shots: "nl", video: "en", city: "amsterdam", currency: "€" },
+  pt: { name: "Português", htmlLang: "pt", ogLocale: "pt_PT", path: "/pt/", dir: "pt", script: "latin", shots: "pt", video: "en", city: "lisbon", currency: "€" },
+  ru: { name: "Русский", htmlLang: "ru", ogLocale: "ru_RU", path: "/ru/", dir: "ru", script: "cyrillic", shots: "ru", video: "en", city: "moscow", currency: "₽" },
+  sq: { name: "Shqip", htmlLang: "sq", ogLocale: "sq_AL", path: "/sq/", dir: "sq", script: "latin", shots: "en", video: "en", city: "tirana", currency: "L" },
+  sw: { name: "Kiswahili", htmlLang: "sw", ogLocale: "sw_KE", path: "/sw/", dir: "sw", script: "latin", shots: "en", video: "en", city: "nairobi", currency: "KSh" },
+  th: { name: "ไทย", htmlLang: "th", ogLocale: "th_TH", path: "/th/", dir: "th", script: "thai", shots: "th", video: "en", city: "bangkok", currency: "฿" },
+  ug: { name: "ئۇيغۇرچە", htmlLang: "ug", ogLocale: "ug_CN", path: "/ug/", dir: "ug", script: "arabic", rtl: true, shots: "en", video: "en", city: "urumqi", currency: "¥" },
+  ur: { name: "اردو", htmlLang: "ur", ogLocale: "ur_PK", path: "/ur/", dir: "ur", script: "urdu", rtl: true, shots: "ur", video: "en", city: "karachi", currency: "₨" },
+  zh: { name: "简体中文", htmlLang: "zh-Hans", ogLocale: "zh_CN", path: "/zh/", dir: "zh", script: "chinese", shots: "zh", video: "en", city: "beijing", currency: "¥" },
 };
+
+// Legal documents are binding texts and exist only in Turkish and English.
+// Every other language links to the English version.
+const LEGAL_LANGS = ["tr", "en"];
+
+/**
+ * Cities for the live prayer clock in the hero. `method` is the Aladhan
+ * calculation-method id (https://aladhan.com/calculation-methods). Names are
+ * localized per language (CITIES in each copy block).
+ */
+const CITY_CATALOG = {
+  istanbul: { lat: 41.0082, lon: 28.9784, method: 13 },
+  mecca: { lat: 21.4225, lon: 39.8262, method: 4 },
+  medina: { lat: 24.4672, lon: 39.6024, method: 4 },
+  london: { lat: 51.5074, lon: -0.1278, method: 15 },
+  berlin: { lat: 52.52, lon: 13.405, method: 13 },
+  paris: { lat: 48.8566, lon: 2.3522, method: 12 },
+  newyork: { lat: 40.7128, lon: -74.006, method: 2 },
+  dubai: { lat: 25.2048, lon: 55.2708, method: 16 },
+  cairo: { lat: 30.0444, lon: 31.2357, method: 5 },
+  jakarta: { lat: -6.2088, lon: 106.8456, method: 20 },
+  kualalumpur: { lat: 3.139, lon: 101.6869, method: 17 },
+  karachi: { lat: 24.8607, lon: 67.0011, method: 1 },
+  tokyo: { lat: 35.6762, lon: 139.6503, method: 3 },
+  baku: { lat: 40.4093, lon: 49.8671, method: 13 },
+  dhaka: { lat: 23.8103, lon: 90.4125, method: 1 },
+  copenhagen: { lat: 55.6761, lon: 12.5683, method: 3 },
+  madrid: { lat: 40.4168, lon: -3.7038, method: 3 },
+  tehran: { lat: 35.6892, lon: 51.389, method: 7 },
+  dakar: { lat: 14.7167, lon: -17.4677, method: 3 },
+  delhi: { lat: 28.6139, lon: 77.209, method: 1 },
+  rome: { lat: 41.9028, lon: 12.4964, method: 3 },
+  amsterdam: { lat: 52.3676, lon: 4.9041, method: 13 },
+  lisbon: { lat: 38.7223, lon: -9.1393, method: 22 },
+  moscow: { lat: 55.7558, lon: 37.6173, method: 14 },
+  tirana: { lat: 41.3275, lon: 19.8187, method: 13 },
+  nairobi: { lat: -1.2921, lon: 36.8219, method: 3 },
+  bangkok: { lat: 13.7563, lon: 100.5018, method: 3 },
+  urumqi: { lat: 43.8256, lon: 87.6168, method: 3 },
+  beijing: { lat: 39.9042, lon: 116.4074, method: 3 },
+};
+
+// The clock shows the language's home city first, then these.
+const CITY_DEFAULTS = ["mecca", "medina", "istanbul", "london", "berlin", "paris", "newyork", "dubai", "cairo", "jakarta", "kualalumpur", "karachi"];
+const CITY_SLOTS = 12;
+
+// Showcase order. Index 0 is the preview video (the prayer screen's sky); the
+// rest are screenshots. Must match SHOTS in tools/import-media.sh.
+const SHOWCASE_IMG = ["prayer-times", "widget", "discover", "qibla", "profile", "qada", "quran", "prayer-guide", "calendar", "zikirmatik"];
+
+// App Store reviewers, in REVIEWS order. Names are never translated.
+const REVIEWERS = ["Meryem Ebrar", "alpaslanx", "h-seyin", "Keskin2298", "Baalbak9907", "Sswnn21", "Mücahade", "h.ç44", "Çerkezin biri", "Bessey Çelik", "tolgalive", "Murat KAYAHAN"];
 
 const META = {
   tr: {
     title: "Vakit: Namaz, Kıble, Kuran",
     description:
-      "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Tamamen ücretsiz, reklamsız, çevrimdışı.",
+      "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
     keywords:
       "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, kaza namazı takibi, cuma hutbesi, kerahat vakitleri, sahur alarmı, apple watch, ipad, mac uygulaması, ezan sesi, hatim takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, namaz uygulaması",
   },
   en: {
     title: "Vakit: Prayer Times, Qibla, Quran",
     description:
-      "Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Completely free, ad-free, offline.",
+      "Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.",
     keywords:
       "prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, ipad prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app",
   },
@@ -77,7 +167,7 @@ const COPY = {
     nextPrayer: "Sıradaki · içinde",
     "sc-head": "§ 01 · Her şey, fazlası değil",
     "sc-h2a": "Bir arkadaş,", "sc-h2b": "bir dikkat makinesi değil.",
-    "sc-lede": "Dokuz temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı. Önizlemek için dokun.",
+    "sc-lede": "On temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı. Önizlemek için dokun.",
     "trust-eye": "§ 02 · Emanet",
     "trust-h1": "Verileriniz", "trust-h2": "bir emanettir,", "trust-h3": "bir ürün değil.",
     "trust-lede": "İbadetin yarıda kesilmesin. Diğer ibadet uygulamaları konum verilerini satarken yakalandı. Vakit farklı bir yol seçti: koordinatlarınız telefonunuzdan asla çıkmaz. Hesap yok. Takip yok. Taviz yok.",
@@ -97,15 +187,17 @@ const COPY = {
     "c-no": "Hayır", "c-yes": "Evet",
     "r-h1": "Gerçek kullanıcılardan", "r-h2": "güzel sözler.",
     "r-m1": "Ortalama puan", "r-m2": "{ratingCount} App Store değerlendirmesinden",
+    "r-note": "",
     "q-h1": "Dürüst sorulara", "q-h2": "dürüst cevaplar.",
     "fin-h1": "İbadetin yarıda", "fin-h2": "kesilmesin.",
-    "fin-p": "Şu an ücretsiz. Hesap yok. Çevrimdışı çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 18 ve üzeri.",
+    "fin-p": "Şu an ücretsiz. Hesap yok. Çevrimdışı çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 16.4 ve üzeri.",
     downloadCta2: "App Store'dan İndir", explore: "Özellikleri keşfet →",
     preview: "Önizle",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
     footPrivacy: "Gizlilik", footTerms: "Şartlar", footAds: "Reklamlar", footDeck: "Sunum",
-    footSig: "Özenle yapıldı · MIT lisanslı · © 2026 Hakan Çelik",
-    menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat",
+    footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
+    menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat", langLabel: "Dil",
+    videoLabel: "Vakit'in namaz ekranı: gün ilerledikçe gökyüzü de değişiyor",
   },
   en: {
     features: "Features", trust: "Trust", compare: "Why Vakit", reviews: "Reviews", faq: "FAQ", download: "Download",
@@ -117,7 +209,7 @@ const COPY = {
     nextPrayer: "Next · in",
     "sc-head": "§ 01 · Everything, nothing extra",
     "sc-h2a": "A companion,", "sc-h2b": "not an attention machine.",
-    "sc-lede": "Nine core tools, each designed to feel calm the moment you open it. Tap any to preview.",
+    "sc-lede": "Ten core tools, each designed to feel calm the moment you open it. Tap any to preview.",
     "trust-eye": "§ 02 · Emanet — a trust",
     "trust-h1": "Your data is", "trust-h2": "a trust,", "trust-h3": "not a product.",
     "trust-lede": "Don't let your worship be interrupted. Other prayer apps have been caught selling location data. Vakit went a different way: your coordinates never leave your phone. No account. No tracking. No compromise. This isn't a feature — it's a principle.",
@@ -137,27 +229,58 @@ const COPY = {
     "c-no": "No", "c-yes": "Yes",
     "r-h1": "Kind words from", "r-h2": "real worshippers.",
     "r-m1": "Average rating", "r-m2": "from {ratingCount} App Store ratings",
+    "r-note": "Reviews from the Turkish App Store, translated from Turkish.",
     "q-h1": "Honest answers", "q-h2": "to honest questions.",
     "fin-h1": "Don't let your worship", "fin-h2": "be interrupted.",
-    "fin-p": "Free today. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 18 and up.",
+    "fin-p": "Free today. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 16.4 and up.",
     downloadCta2: "Download on the App Store", explore: "Explore features →",
     preview: "Preview",
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Terms", footAds: "Ads", footDeck: "Deck",
-    footSig: "Made with care · MIT licensed · © 2026 Hakan Çelik",
-    menuLabel: "Menu", themeLabel: "Toggle dark mode",
+    footSig: "Made with care · © 2026 Hakan Çelik",
+    menuLabel: "Menu", themeLabel: "Toggle dark mode", langLabel: "Language",
+    videoLabel: "Vakit's prayer screen: the sky changes as the day moves on",
+  },
+};
+
+// Prayer names in the hero clock and the marquee. The clock's first time is
+// the start of dawn (imsak), so it takes the app's `prayer_imsak` string —
+// "İmsak" in Turkish, "Fajr" in English.
+const PRAYERS = {
+  tr: { Fajr: "İmsak", Sunrise: "Güneş", Dhuhr: "Öğle", Asr: "İkindi", Maghrib: "Akşam", Isha: "Yatsı" },
+  en: { Fajr: "Fajr", Sunrise: "Sunrise", Dhuhr: "Dhuhr", Asr: "Asr", Maghrib: "Maghrib", Isha: "Isha" },
+};
+
+const CITIES = {
+  tr: {
+    istanbul: "İstanbul", mecca: "Mekke", medina: "Medine", london: "Londra", berlin: "Berlin", paris: "Paris",
+    newyork: "New York", dubai: "Dubai", cairo: "Kahire", jakarta: "Cakarta", kualalumpur: "Kuala Lumpur",
+    karachi: "Karaçi", tokyo: "Tokyo", baku: "Bakü", dhaka: "Dakka", copenhagen: "Kopenhag", madrid: "Madrid",
+    tehran: "Tahran", dakar: "Dakar", delhi: "Delhi", rome: "Roma", amsterdam: "Amsterdam", lisbon: "Lizbon",
+    moscow: "Moskova", tirana: "Tiran", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Urumçi", beijing: "Pekin",
+  },
+  en: {
+    istanbul: "Istanbul", mecca: "Mecca", medina: "Medina", london: "London", berlin: "Berlin", paris: "Paris",
+    newyork: "New York", dubai: "Dubai", cairo: "Cairo", jakarta: "Jakarta", kualalumpur: "Kuala Lumpur",
+    karachi: "Karachi", tokyo: "Tokyo", baku: "Baku", dhaka: "Dhaka", copenhagen: "Copenhagen", madrid: "Madrid",
+    tehran: "Tehran", dakar: "Dakar", delhi: "Delhi", rome: "Rome", amsterdam: "Amsterdam", lisbon: "Lisbon",
+    moscow: "Moscow", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Ürümqi", beijing: "Beijing",
   },
 };
 
 // Every entry must correspond to a feature that actually ships in the app.
-// When a feature is removed from the app, remove it here in the same release.
+// When a feature is removed from the app, remove it here in the same release —
+// in every language.
 const FEATURES = {
   tr: [
     { n: "Namaz Vakitleri", d: "13 hesaplama yöntemi, zaman dilimine duyarlı, seyahat algılayan." },
+    { n: "Canlı Gökyüzü", d: "Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre." },
+    { n: "Nafile Vakitleri", d: "İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı." },
     { n: "Manuel Konum", d: "Konumu elle seç ya da seyahatte kendiliğinden güncellensin." },
     { n: "Apple Watch", d: "Namaz vakitleri, canlı kıble, 12 watch face complication." },
     { n: "Mac Uygulaması", d: "Menü çubuğunda geri sayım, klavye kısayolları, iCloud senkron." },
     { n: "iPad", d: "Aynı uygulama büyük ekranda; kayıtların iCloud ile senkron." },
+    { n: "25 Dil", d: "Arapça, Urduca, Farsça ve Uygurca'da sağdan sola arayüz." },
     { n: "Kıble Pusulası", d: "Haptik yönlendirme, Kâbe'ye mesafe bilgisi." },
     { n: "Kur'an-ı Kerim", d: "114 sure. Kelime kelime, meal, tefsir, klasik Mushaf." },
     { n: "Mushaf Hattı", d: "Medine ya da Türkiye hattı; sayfa düzeni de değişir." },
@@ -186,7 +309,7 @@ const FEATURES = {
     { n: "Bildirimler", d: "Cihazda, yerel, güvenilir." },
     { n: "Ezan Sesleri", d: "Beş makamda ezan: hicaz, rast, saba, segah, uşşak." },
     { n: "Siri Kısayolları", d: "Vakitleri, Kıble'yi, ayeti sesle sor." },
-    { n: "Birleşik Arama", d: "Tek arama, her araç." },
+    { n: "Birleşik Arama", d: "Tek arama, her araç — 'Bakara 255' yaz, âyete git." },
     { n: "Yer İmleri", d: "Ayet, hadis ve zikirleri kaydet." },
     { n: "iCloud Senkron", d: "Kayıtlarınız kendi iCloud alanınızda, her cihazda." },
     { n: "Tefsir", d: "Diyanet tefsiri, metinle hizalı." },
@@ -198,10 +321,13 @@ const FEATURES = {
   ],
   en: [
     { n: "Prayer Times", d: "13 calculation methods, timezone-aware, travel-detecting." },
+    { n: "Live Sky", d: "Real stars and the moon on the day arc — for where you are, right now." },
+    { n: "Voluntary Prayer Times", d: "Ishraq, Duha, Awwabin and the parts of the night; optional." },
     { n: "Manual Location", d: "Set your location by hand, or let it follow you as you travel." },
     { n: "Apple Watch", d: "Prayer times, live qibla, 12 watch face complications." },
     { n: "Mac App", d: "Menu bar countdown, keyboard shortcuts, iCloud sync." },
     { n: "iPad", d: "The same app on a bigger screen; your records sync over iCloud." },
+    { n: "25 Languages", d: "Right-to-left interface in Arabic, Urdu, Persian and Uyghur." },
     { n: "Qibla Compass", d: "Haptic bearing with distance to the Ka'bah." },
     { n: "Holy Quran", d: "114 surahs. Word-by-word, translation, tafsir, classical Mushaf." },
     { n: "Mushaf Script", d: "Madinah or Türkiye script — page layout follows too." },
@@ -230,7 +356,7 @@ const FEATURES = {
     { n: "Notifications", d: "On-device, local, dependable." },
     { n: "Adhan Sounds", d: "The adhan in five makams: hicaz, rast, saba, segah, ussak." },
     { n: "Siri Shortcuts", d: "Ask for times, Qibla, ayat by voice." },
-    { n: "Unified Search", d: "One search, across every tool." },
+    { n: "Unified Search", d: "One search, every tool — type 'Baqarah 255' to jump to the ayah." },
     { n: "Bookmarks", d: "Save ayat, hadith, and dhikr." },
     { n: "iCloud Sync", d: "Your records stay in your own iCloud, on every device." },
     { n: "Tafsir", d: "Diyanet commentary, in-line with the text." },
@@ -242,29 +368,32 @@ const FEATURES = {
   ],
 };
 
-// Nine entries, each paired with assets/screenshots/<lang>/<img>.webp
+// Ten entries, in SHOWCASE_IMG order: the first is the preview video, the rest
+// pair with assets/screenshots/<shots>/<img>.webp.
 const SHOWCASE = {
   tr: [
-    { t: "Vakitler, kolunuzda.", d: "Beş vakit, şehrin, bugün. Apple Watch bunları elinizin altına taşır. Eller doluysa Dynamic Island.", img: 1 },
-    { t: "Her ekranda bir bakış.", d: "Ana ekran widget'ları, kilit ekranı widget'ları, StandBy ve Dynamic Island. Sessiz bir bakış — hiç dikkat çalmadan.", img: 2 },
-    { t: "Kur'an, internetsiz de.", d: "Oku, dinle, tefekkür et — kelime kelime, tefsir, klasik Mushaf. Yer imleri çevrim içine döndüğünüzde cihazlar arası senkron.", img: 3 },
-    { t: "Tüm araçlar, hep ücretsiz.", d: "Kur'an, zikir, hadis, esma, takvim, hesaplayıcılar — tek bir hub'da. Hiçbir özellik paywall arkasında değil.", img: 4 },
-    { t: "Kıble, gizliliğin yerinde.", d: "Haptik yön ve Kâbe'ye mesafe. Koordinatlarınız telefonunuzdan asla çıkmaz — hesap yok, takip yok.", img: 5 },
-    { t: "Cemaate yetişin.", d: "Yakındaki camiler haritada, vakte yetişme ipucu ile. Konum dışarıya çıkmaz.", img: 6 },
-    { t: "On yedi namaz, resimli.", d: "Abdest, tüm namaz türleri, cemaat incelikleri ve namazda okunan kısa sureler — kibirsiz, öğretici.", img: 7 },
-    { t: "Hatırlayan bir takvim.", d: "Hicri ve Miladi birlikte. Kandil geceleri, Ramazan, bayramlar, arefe — önemli her gün, işaretli.", img: 8 },
-    { t: "İbadetinizin halkaları.", d: "Namaz, oruç, Kur'an, zikir ve hadis için Activity Ring. Seriler ve hatim — sakin ilerleme, suçluluk yok.", img: 9 },
+    { t: "Gökyüzü gibi.", d: "Vakit girdikçe ekran da gökyüzüyle birlikte değişir; yıldızlar ve ay gerçek yerlerinde. Kerahat ve nafile vakitleri isteğe bağlı." },
+    { t: "Ekranı açmadan.", d: "Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinizde. Sessiz bir bakış — hiç dikkat çalmadan." },
+    { t: "Tüm araçlar, tek yerde.", d: "Kur'an, hadis, Cuma hutbesi, zikir, esma, rehberler ve takvim — tek bir hub'da. Hiçbir özellik paywall arkasında değil." },
+    { t: "Doğru yön.", d: "Kıbleye döndüğünüzde telefon titrer; Kâbe'ye mesafe de yanında. Koordinatlarınız telefonunuzdan asla çıkmaz." },
+    { t: "İbadetinizin halkaları.", d: "Namaz, oruç, Kur'an, zikir ve hadis için halkalar; namazı vakit girdikten ne kadar sonra kıldığınız ve hatim — sakin ilerleme, suçluluk yok." },
+    { t: "Kaza, kıldıkça erir.", d: "Ömür boyu kaza borcunuzu vakit bazlı hesaplayın, kıldıkça düşün; ne zaman biteceği de görünür." },
+    { t: "Kur'an, internetsiz de.", d: "Oku, dinle, tefekkür et — Medine ya da Türkiye hattı, kelime kelime takip, tefsir ve indirilebilen tilavet." },
+    { t: "On yedi namaz, resimli.", d: "Abdestten tesbihata; ayakta, oturarak ya da îmâ ile — adım adım, kibirsiz, öğretici." },
+    { t: "Hatırlayan bir takvim.", d: "Hicri ve Miladi birlikte. Kandil geceleri, Ramazan, bayramlar, arefe; altında ayın ibadet özeti." },
+    { t: "Sayaç elinizde.", d: "Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirleriniz ve günlük hedef." },
   ],
   en: [
-    { t: "Times, on your wrist.", d: "The five prayers, your city, today. Apple Watch keeps them in reach. Dynamic Island when your hands are busy.", img: 1 },
-    { t: "Always one screen away.", d: "Home Screen widgets, lock-screen widgets, StandBy, and Dynamic Island. A quiet glance — never a stare.", img: 2 },
-    { t: "The Quran, even offline.", d: "Read, listen, reflect — word-by-word, tafsir, classical Mushaf. Bookmarks sync across your devices when you are back online.", img: 3 },
-    { t: "Every tool, free — always.", d: "Quran, dhikr, hadith, asma, calendar, calculators — all in one hub. Nothing locked behind a paywall.", img: 4 },
-    { t: "Qibla, privately.", d: "Haptic bearing with distance to the Ka'bah. Your coordinates never leave your phone — no account, no tracking.", img: 5 },
-    { t: "Find the jama'ah.", d: "Nearby mosques on the map, with whether you can still catch the prayer. Your location stays with you.", img: 6 },
-    { t: "Seventeen prayers, illustrated.", d: "Wudu, every prayer type, congregational nuances, and short surahs — taught and remembered, without condescension.", img: 7 },
-    { t: "A calendar that remembers.", d: "Hijri and Gregorian together. Kandil nights, Ramadan, eids, arefe — every day that matters, marked.", img: 8 },
-    { t: "Your worship, in rings.", d: "Activity Rings for prayer, fasting, Quran, dhikr and hadith. Streaks and hatim — gentle progress, no guilt.", img: 9 },
+    { t: "Like the sky.", d: "As each prayer time enters, the screen changes with the sky — real stars and the moon in their true places. Makruh and voluntary times are optional." },
+    { t: "Without unlocking.", d: "The next prayer on your Lock Screen, in a widget, in the Dynamic Island and on your watch. A quiet glance — never a stare." },
+    { t: "Every tool, in one place.", d: "Quran, hadith, Friday sermon, dhikr, asma, guides and the calendar — all in one hub. Nothing locked behind a paywall." },
+    { t: "The right direction.", d: "Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside. Your coordinates never leave your phone." },
+    { t: "Your worship, in rings.", d: "Rings for prayer, fasting, Quran, dhikr and hadith; how soon after each time enters you pray, and your khatm — gentle progress, no guilt." },
+    { t: "Qada, cleared as you pray.", d: "Calculate a lifetime of missed prayers by time slot and clear them one by one — with an estimate of when you'll be done." },
+    { t: "The Quran, even offline.", d: "Read, listen, reflect — Madinah or Türkiye script, word-by-word follow-along, tafsir and downloadable recitation." },
+    { t: "Seventeen prayers, illustrated.", d: "From wudu to tasbih; standing, seated or by gesture — step by step, taught without condescension." },
+    { t: "A calendar that remembers.", d: "Hijri and Gregorian together. Holy nights, Ramadan, the Eids and the eve before — with the month's worship summary below." },
+    { t: "The count, in hand.", d: "A dhikr counter and the post-prayer tasbihat; presets, your own dhikr and a daily goal." },
   ],
 };
 
@@ -291,34 +420,36 @@ const COMPARE = {
   ],
 };
 
+// Real App Store reviews (Turkish storefront). The reviewer of each entry is
+// REVIEWERS[i]; other languages translate the text and say so in "r-note".
 const REVIEWS = {
   tr: [
-    { t: "10/10 bir uygulama.", b: "Gerek widget'daki harika grafik görselleriyle gösterilen namaz vakitleri olsun, gerek uygulamanın reklamsız oluşu ve çok temiz bir arayüze sahip olması olsun 10/10. Gerçekten çok memnun kaldım, herkese tavsiye ederim.", n: "Meryem Ebrar" },
-    { t: "Harika.", b: "Bulabileceğiniz en temiz ve kullanışlı uygulama. Reklam yok, arayüz çok sade ve şık. Kıble bulma kısmı gerçekten çok doğru ve güzel çalışıyor. Diğer içerikleri de çok hoş olmuş.", n: "alpaslanx" },
-    { t: "Sade ve kullanışlı.", b: "Başka uygulamaların, oyunların, sosyal medya uygulamalarının çoğundan daha iyi bir seviyede. Teşekkür ederim çabalarınız için, harika bir iş olmuş. Dinimi daha planlı yaşamaya çalışan biriyim ve elim ayağım oldu bu uygulama.", n: "h-seyin" },
-    { t: "Kusursuz.", b: "Yapanın eline sağlık. Reklam yok. Ciddi emek verilmiş. Belliki sadece Allah rızası için. Sağolun.", n: "Keskin2298" },
-    { t: "Nadir bir uygulama.", b: "Allah sizden razı olsun. Gerek namaz vakitlerinin bu şekilde derli toplu olması, gerekse hadislerin hassasiyet gözetilerek Arapçaları, Türkçeleri ve sıhhat dereceleriyle verilmesi ama reklam gösterilmemesi — böyle bir uygulama nadirdir. İndirin, muhtemelen kalıcı uygulamanız olacaktır.", n: "Baalbak9907" },
-    { t: "İsteklerin tam karşılığı.", b: "Kim düşünüp yapabildiyse Allah razı olsun. Açıklayıcı, reklamsız ve net.", n: "Sswnn21" },
-    { t: "Son güncellemeyle muazzam olmuş.", b: "Basit, estetik, kullanışlı, hızlı — ne diyeyim. Eline emeğine gönlüne sağlık.", n: "Mücahade" },
-    { t: "Allah razı olsun.", b: "Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım. Vakit gerçekten harika; her yerde çalışması, internetsiz olması, reklamsız olması harika. Kuran, hadis, zikirmatik, namaz takibi — başka uygulamaya ihtiyacım yok.", n: "h.ç44" },
-    { t: "Diğerlerini sildim.", b: "Allah yapandan razı olsun. Elinize sağlık. Çok faydalı oldu.", n: "Çerkezin biri" },
-    { t: "En iyisi.", b: "Bundan daha iyisini görmedim. Her telefonda olması gereken bir uygulama. Geliştiren arkadaştan Allah razı olsun.", n: "Bessey Çelik" },
-    { t: "Gerçekten faydalı.", b: "Uygulama çok faydalı ve pratik. Her Müslümanın telefonunda olması gereken bir uygulama. Geliştirenden Allah razı olsun.", n: "tolgalive" },
-    { t: "Allah razı olsun.", b: "Kardeşim, böylesine değerli bir uygulamayı ücretsiz yaptığın için çok teşekkürler. Allah gönlüne göre versin inşallah.", n: "Murat KAYAHAN" },
+    { t: "10/10 bir uygulama.", b: "Gerek widget'daki harika grafik görselleriyle gösterilen namaz vakitleri olsun, gerek uygulamanın reklamsız oluşu ve çok temiz bir arayüze sahip olması olsun 10/10. Gerçekten çok memnun kaldım, herkese tavsiye ederim." },
+    { t: "Harika.", b: "Bulabileceğiniz en temiz ve kullanışlı uygulama. Reklam yok, arayüz çok sade ve şık. Kıble bulma kısmı gerçekten çok doğru ve güzel çalışıyor. Diğer içerikleri de çok hoş olmuş." },
+    { t: "Sade ve kullanışlı.", b: "Başka uygulamaların, oyunların, sosyal medya uygulamalarının çoğundan daha iyi bir seviyede. Teşekkür ederim çabalarınız için, harika bir iş olmuş. Dinimi daha planlı yaşamaya çalışan biriyim ve elim ayağım oldu bu uygulama." },
+    { t: "Kusursuz.", b: "Yapanın eline sağlık. Reklam yok. Ciddi emek verilmiş. Belliki sadece Allah rızası için. Sağolun." },
+    { t: "Nadir bir uygulama.", b: "Allah sizden razı olsun. Gerek namaz vakitlerinin bu şekilde derli toplu olması, gerekse hadislerin hassasiyet gözetilerek Arapçaları, Türkçeleri ve sıhhat dereceleriyle verilmesi ama reklam gösterilmemesi — böyle bir uygulama nadirdir. İndirin, muhtemelen kalıcı uygulamanız olacaktır." },
+    { t: "İsteklerin tam karşılığı.", b: "Kim düşünüp yapabildiyse Allah razı olsun. Açıklayıcı, reklamsız ve net." },
+    { t: "Son güncellemeyle muazzam olmuş.", b: "Basit, estetik, kullanışlı, hızlı — ne diyeyim. Eline emeğine gönlüne sağlık." },
+    { t: "Allah razı olsun.", b: "Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım. Vakit gerçekten harika; her yerde çalışması, internetsiz olması, reklamsız olması harika. Kuran, hadis, zikirmatik, namaz takibi — başka uygulamaya ihtiyacım yok." },
+    { t: "Diğerlerini sildim.", b: "Allah yapandan razı olsun. Elinize sağlık. Çok faydalı oldu." },
+    { t: "En iyisi.", b: "Bundan daha iyisini görmedim. Her telefonda olması gereken bir uygulama. Geliştiren arkadaştan Allah razı olsun." },
+    { t: "Gerçekten faydalı.", b: "Uygulama çok faydalı ve pratik. Her Müslümanın telefonunda olması gereken bir uygulama. Geliştirenden Allah razı olsun." },
+    { t: "Allah razı olsun.", b: "Kardeşim, böylesine değerli bir uygulamayı ücretsiz yaptığın için çok teşekkürler. Allah gönlüne göre versin inşallah." },
   ],
   en: [
-    { t: "A 10/10 app.", b: "Whether it's the prayer times shown with those beautiful widget graphics, or the fact that it has no ads and such a clean interface — 10/10. I'm genuinely delighted with it and recommend it to everyone.", n: "Meryem Ebrar" },
-    { t: "Wonderful.", b: "The cleanest, most usable app you can find. No ads, a clean and elegant interface. The qibla finder works really accurately. The rest of the features are lovely too.", n: "alpaslanx" },
-    { t: "Simple and useful.", b: "It's at a higher level than most other apps, games and social media apps. Thank you for your effort — wonderful work. I'm someone trying to live my faith more deliberately, and this app has become my right hand.", n: "h-seyin" },
-    { t: "Flawless.", b: "Hats off to the developer. No ads. Serious effort put in. Clearly built for the sake of Allah alone. Thank you.", n: "Keskin2298" },
-    { t: "A rare app.", b: "May God be pleased with you. Prayer times this well organised, and hadiths given carefully with their Arabic, Turkish and authenticity grading — yet no ads. An app like this is rare. Download it; it will probably stay on your phone for good.", n: "Baalbak9907" },
-    { t: "Exactly what was needed.", b: "May God bless whoever thought of this. Explanatory, ad-free and to the point.", n: "Sswnn21" },
-    { t: "The latest update made it superb.", b: "Simple, elegant, useful, fast — what more can I say. Bless your hands, your effort and your heart.", n: "Mücahade" },
-    { t: "May God be pleased.", b: "I was tired of ad-filled, paywalled, unusable interfaces. Vakit is truly wonderful — works everywhere, offline, ad-free. Quran, hadith, dhikr, prayer tracking — I barely need any other app.", n: "h.ç44" },
-    { t: "I deleted the others.", b: "May God be pleased with whoever made this. Bless your hands. It has been so useful.", n: "Çerkezin biri" },
-    { t: "The best one.", b: "I haven't seen anything better than this — an app that should be on every phone. God bless the developer.", n: "Bessey Çelik" },
-    { t: "Truly useful.", b: "The app is extremely useful and practical. It should be on every Muslim's phone. God bless the developer.", n: "tolgalive" },
-    { t: "May God be pleased.", b: "Brother, thank you so much for making an app this valuable free of charge. May God grant you your heart's wishes.", n: "Murat KAYAHAN" },
+    { t: "A 10/10 app.", b: "Whether it's the prayer times shown with those beautiful widget graphics, or the fact that it has no ads and such a clean interface — 10/10. I'm genuinely delighted with it and recommend it to everyone." },
+    { t: "Wonderful.", b: "The cleanest, most usable app you can find. No ads, a clean and elegant interface. The qibla finder works really accurately. The rest of the features are lovely too." },
+    { t: "Simple and useful.", b: "It's at a higher level than most other apps, games and social media apps. Thank you for your effort — wonderful work. I'm someone trying to live my faith more deliberately, and this app has become my right hand." },
+    { t: "Flawless.", b: "Hats off to the developer. No ads. Serious effort put in. Clearly built for the sake of Allah alone. Thank you." },
+    { t: "A rare app.", b: "May God be pleased with you. Prayer times this well organised, and hadiths given carefully with their Arabic, Turkish and authenticity grading — yet no ads. An app like this is rare. Download it; it will probably stay on your phone for good." },
+    { t: "Exactly what was needed.", b: "May God bless whoever thought of this. Explanatory, ad-free and to the point." },
+    { t: "The latest update made it superb.", b: "Simple, elegant, useful, fast — what more can I say. Bless your hands, your effort and your heart." },
+    { t: "May God be pleased.", b: "I was tired of ad-filled, paywalled, unusable interfaces. Vakit is truly wonderful — works everywhere, offline, ad-free. Quran, hadith, dhikr, prayer tracking — I barely need any other app." },
+    { t: "I deleted the others.", b: "May God be pleased with whoever made this. Bless your hands. It has been so useful." },
+    { t: "The best one.", b: "I haven't seen anything better than this — an app that should be on every phone. God bless the developer." },
+    { t: "Truly useful.", b: "The app is extremely useful and practical. It should be on every Muslim's phone. God bless the developer." },
+    { t: "May God be pleased.", b: "Brother, thank you so much for making an app this valuable free of charge. May God grant you your heart's wishes." },
   ],
 };
 
@@ -330,6 +461,7 @@ const FAQ = {
     { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazınızda yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsınız. 'Her Zaman' konum izni verirseniz, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
     { q: "Her şey gerçekten ücretsiz mi?", a: "Şu an evet — tüm uygulama ücretsiz, abonelik yok, paywall yok, 'premium' yok. Sonsuza kadar böyle olacağına söz veremem (kimse dürüstçe veremez), ama şu an katıksız ücretsiz olduğuna söz verebilirim." },
     { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazınızda, seçtiğiniz yönteme (13 yöntem mevcut) ve konumunuza göre hesaplar." },
+    { q: "Hangi dillerde kullanılabiliyor?", a: "Uygulamanın arayüzü 25 dilde: Türkçe, İngilizce, Arapça, Almanca, Fransızca, İspanyolca, İtalyanca, Hollandaca, Portekizce, Danca, Rusça, Azerice, Arnavutça, Endonezce, Malayca, Çince, Japonca, Tayca, Hintçe, Bengalce, Urduca, Farsça, Uygurca, Svahili ve Fulahça. Cihazınızın dili destekleniyorsa uygulama kendiliğinden o dilde açılır; istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Arapça, Urduca, Farsça ve Uygurca'da arayüz baştan sona sağdan sola akar. İçerik çevirileri ise şimdilik yalnız Türkçe ve İngilizce: Kur'an meali, kelime anlamları, okunuş ve hadis çevirileri bu iki dilde. Arapça arayüzde âyetlerin bir kısmı için Arapça tefsir açılır; Cuma hutbesi Türkçe, İngilizce ve bazı haftalar Arapça." },
     { q: "Hangi cihazlarda çalışıyor?", a: "iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: sekmeler sol kenar çubuğunda, menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları ve masaüstü widget'ları ile. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unuzla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir." },
     { q: "Ezan sesini seçebiliyor muyum?", a: "Evet. Bildirimlerde beş ayrı makamda ezan var: hicaz, rast, saba, segah ve uşşak. Sesi Ayarlar → Bildirimler → Bildirim Sesi'nden seçiyorsun; istersen her vakit için ayrı ses belirleyebilirsin. Ezanlar uygulamayla birlikte geldiği için çalmaları internet gerektirmez." },
     { q: "Sabah namazı için alarm var mı?", a: "Evet. Sabah namazını henüz kılmadıysanız güneş doğmadan önce çalan, sessiz modu delen bir alarm kurabilirsiniz. Namazı kıldıysanız alarm çalmaz. Oruç tutanlar için ayrıca, oruç günlerinize göre kurulan bir sahur alarmı var." },
@@ -345,6 +477,7 @@ const FAQ = {
     { q: "Will notifications arrive if I never open the app?", a: "Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel." },
     { q: "Is everything really free?", a: "Today, yes — the entire app is free, with no subscriptions, paywalls, or 'premium' tier. I can't promise that forever (nobody honestly can), but I can promise there's no catch today." },
     { q: "Where do prayer times come from?", a: "They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates." },
+    { q: "Which languages is it available in?", a: "The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only for now: the Quran translation, word meanings, transliteration and hadith translations come in those two languages. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon is in Turkish, English and, in some weeks, Arabic." },
     { q: "Which devices does it run on?", a: "iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: tabs in the sidebar, next prayer and countdown in the menu bar, keyboard shortcuts and desktop widgets. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware." },
     { q: "Can I choose the adhan sound?", a: "Yes. Notifications come with the adhan in five makams: hicaz, rast, saba, segah and ussak. Pick one in Settings → Notifications → Notification Sound, and you can set a different sound per prayer. The recordings ship with the app, so playing them needs no connection." },
     { q: "Is there an alarm for Fajr?", a: "Yes. You can set an alarm that rings before sunrise and breaks through silent mode if you haven't prayed Fajr yet. Mark the prayer as done and it stays silent. There's also a suhoor alarm that schedules itself around your fasting days." },
@@ -357,7 +490,7 @@ const FAQ = {
   ],
 };
 
-// Legal pages. The prose lives in legal/<key>.js (both languages); this is the
+// Legal pages. The prose lives in legal/<key>.js (tr + en); this is the
 // per-language <head> metadata and the sitemap entry for each.
 const LEGAL = {
   privacy: {
@@ -421,6 +554,38 @@ function storeLink(campaign) {
   return `${base}?pt=${SITE.appStoreProviderToken}&ct=${encodeURIComponent(campaign)}`;
 }
 
-const CONTENT = { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink };
+/* ------------------------------------------------------------------ assembly */
+
+// Every language other than tr/en brings its copy from locales/<lang>.js.
+for (const lang of Object.keys(LANGS)) {
+  if (lang === "tr" || lang === "en") continue;
+  const L = require(`./locales/${lang}.js`);
+  META[lang] = L.META;
+  COPY[lang] = L.COPY;
+  PRAYERS[lang] = L.PRAYERS;
+  CITIES[lang] = L.CITIES;
+  FEATURES[lang] = L.FEATURES;
+  SHOWCASE[lang] = L.SHOWCASE;
+  COMPARE[lang] = L.COMPARE;
+  REVIEWS[lang] = L.REVIEWS;
+  FAQ[lang] = L.FAQ;
+}
+
+// Attach the language-independent parts: screenshot names and reviewer names.
+for (const lang of Object.keys(LANGS)) {
+  SHOWCASE[lang] = SHOWCASE[lang].map((s, i) => ({ ...s, img: SHOWCASE_IMG[i] }));
+  REVIEWS[lang] = REVIEWS[lang].map((r, i) => ({ ...r, n: REVIEWERS[i] }));
+}
+
+/** Cities shown in a language's clock: its home city first, then the defaults. */
+function clockCities(lang) {
+  const ids = [LANGS[lang].city, ...CITY_DEFAULTS.filter((c) => c !== LANGS[lang].city)].slice(0, CITY_SLOTS);
+  return ids.map((id) => ({ id, name: CITIES[lang][id], ...CITY_CATALOG[id] }));
+}
+
+const CONTENT = {
+  SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, CITIES, CITY_CATALOG, FEATURES, SHOWCASE,
+  SHOWCASE_IMG, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
+};
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;

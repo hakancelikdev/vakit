@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         "t": "2. Hizmetin Tanımı",
-        "b": "Vakit, namaz vakitleri, kıble yönü, Kur'an, hadis, zikirmatik, namaz/abdest rehberi, hatim ve ibadet takibi, Cuma hutbesi, yakındaki camiler ve dini gün takvimi gibi ibadet araçları sunan ücretsiz bir uygulamadır. iOS 26+ ve macOS 26+ üzerinde çalışır; watchOS 26+ için companion bir Apple Watch uygulaması da içerir."
+        "b": "Vakit, namaz vakitleri, kıble yönü, Kur'an, hadis, zikirmatik, namaz/abdest rehberi, hatim ve ibadet takibi, Cuma hutbesi, yakındaki camiler ve dini gün takvimi gibi ibadet araçları sunan ücretsiz bir uygulamadır. iOS 16.4+ ve macOS 13+ üzerinde çalışır; watchOS 9+ için companion bir Apple Watch uygulaması da içerir."
       },
       {
         "t": "3. Ücretsiz Kullanım & Opsiyonel Bağışlar",
@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         "t": "5. Apple Watch Companion Uygulaması",
-        "b": "Vakit, watchOS 26+ üzerinde namaz vakitleri, kıble pusulası ve komplikasyonlar sunan bir companion uygulama içerir. Watch uygulamasının kullanımı bu Şartlara tabidir. Apple Watch donanım sınırlamaları (GPS doğruluğu, pusula sapması, batarya) nedeniyle Watch sonuçları iPhone\\'dan farklılık gösterebilir."
+        "b": "Vakit, watchOS 9+ üzerinde namaz vakitleri, kıble pusulası ve komplikasyonlar sunan bir companion uygulama içerir. Watch uygulamasının kullanımı bu Şartlara tabidir. Apple Watch donanım sınırlamaları (GPS doğruluğu, pusula sapması, batarya) nedeniyle Watch sonuçları iPhone\\'dan farklılık gösterebilir."
       },
       {
         "t": "6. Kullanıcı Sorumlulukları",
@@ -78,7 +78,7 @@ module.exports = {
       },
       {
         "t": "2. Description of Service",
-        "b": "Vakit is a free app providing worship tools such as prayer times, qibla direction, Quran, hadith, a dhikr counter, prayer/ablution guides, khatm and worship tracking, the Friday sermon, nearby mosques, and a religious-day calendar. It runs on iOS 26+ and macOS 26+, and ships a companion Apple Watch app for watchOS 26+."
+        "b": "Vakit is a free app providing worship tools such as prayer times, qibla direction, Quran, hadith, a dhikr counter, prayer/ablution guides, khatm and worship tracking, the Friday sermon, nearby mosques, and a religious-day calendar. It runs on iOS 16.4+ and macOS 13+, and ships a companion Apple Watch app for watchOS 9+."
       },
       {
         "t": "3. Free Use & Optional Donations",
@@ -90,7 +90,7 @@ module.exports = {
       },
       {
         "t": "5. Apple Watch Companion App",
-        "b": "Vakit ships a companion app on watchOS 26+ with prayer times, the qibla compass and complications. Use of the Watch app is subject to these Terms. Watch results may differ from iPhone due to Apple Watch hardware limitations (GPS accuracy, compass deviation, battery)."
+        "b": "Vakit ships a companion app on watchOS 9+ with prayer times, the qibla compass and complications. Use of the Watch app is subject to these Terms. Watch results may differ from iPhone due to Apple Watch hardware limitations (GPS accuracy, compass deviation, battery)."
       },
       {
         "t": "6. User Responsibilities",

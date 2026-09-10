@@ -11,6 +11,9 @@ on:
       # yalnız hukuki metni değiştiren bir commit deploy'u HİÇ tetiklemiyordu:
       # `docs/` doğru üretiliyor, commit'leniyor, ama yayına çıkmıyordu (2026-08-12).
       - 'legal/**'
+      # locales/* (23 dilin metni) ve tools/validate.js de build girdisi — aynı ders.
+      - 'locales/**'
+      - 'tools/**'
       - 'apps.json'
       - '.github/workflows/deploy.yml'
   pull_request:
@@ -23,6 +26,9 @@ on:
       # yalnız hukuki metni değiştiren bir commit deploy'u HİÇ tetiklemiyordu:
       # `docs/` doğru üretiliyor, commit'leniyor, ama yayına çıkmıyordu (2026-08-12).
       - 'legal/**'
+      # locales/* (23 dilin metni) ve tools/validate.js de build girdisi — aynı ders.
+      - 'locales/**'
+      - 'tools/**'
       - 'apps.json'
       - '.github/workflows/deploy.yml'
 

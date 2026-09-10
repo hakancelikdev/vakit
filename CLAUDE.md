@@ -4,28 +4,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Landing page for VakitApp (iOS/macOS prayer times app), deployed to GitHub Pages at https://vakit.hakancelik.dev. Plain HTML/CSS/JS with one small Node generator — no framework, no bundler, no dependencies.
+Landing page for VakitApp (iOS/macOS prayer times app), deployed to GitHub Pages at https://vakit.hakancelik.dev. Plain HTML/CSS/JS with one small Node generator — no framework, no bundler, no dependencies. **One page per app language — 25 of them** (the same set as `VakitApp-Swift/vakit/Infrastructure/Localization/*.lproj`).
 
 ## Commands
 
 ```bash
-npm run build     # regenerate the pages from content.js  (required after any copy change)
-npm run dev       # build, then serve docs/ at http://localhost:8000
+npm run build                    # regenerate the pages from content.js + locales/  (required after any copy change)
+npm run dev                      # build, then serve docs/ at http://localhost:8000
+npm test                         # build + checks on the generated pages (links, hreflang, assets)
+node tools/check-locale.js de    # check one translation against English, even before the others exist
+./tools/import-media.sh          # re-import screenshots + preview video from ../app-store-toolkit
 ```
 
-CI re-runs the build on a clean checkout and fails the deploy if the committed `docs/` doesn't match, so always commit the regenerated files alongside the `content.js` change.
+CI re-runs the build on a clean checkout and fails the deploy if the committed `docs/` doesn't match, so always commit the regenerated files alongside the `content.js` / `locales/` change.
 
 ## Architecture
 
-Page copy lives in **`content.js`** (landing page + page metadata) and **`legal/*.js`** (long-form legal prose, both languages). **`build.js`** renders them into static files under `docs/`:
+Page copy lives in **`content.js`** (Turkish + English, page metadata, language table) and **`locales/<lang>.js`** (the other 23 languages, same shape — see `locales/README.md`). Long-form legal prose is in **`legal/*.js`**. **`build.js`** renders them into static files under `docs/`:
 
 | Generated file | Contents |
 |---|---|
 | `docs/index.html` | Turkish landing page — canonical, served at `/` |
-| `docs/en/index.html` | English landing page — served at `/en/` |
+| `docs/<lang>/index.html` | every other language, served at `/<lang>/` (`LANGS[*].path`) |
 | `docs/{privacy,terms,ads-policy}.html` | Turkish legal pages |
 | `docs/en/{privacy,terms,ads-policy}.html` | English legal pages |
-| `docs/sitemap.xml` | every page in both languages, cross-linked with hreflang |
+| `docs/sitemap.xml` | every page, cross-linked with hreflang |
 | `docs/robots.txt` | search + AI crawler rules |
 | `docs/llms.txt` | plain-text app summary for AI assistants |
 
@@ -35,11 +38,11 @@ Hand-maintained files in `docs/`:
 
 | File | Purpose |
 |---|---|
-| `styles.css` | All styles (CSS variables for theming, dark mode, responsive) |
-| `script.js` | Interactivity only: live prayer clock, showcase switching, FAQ accordion, theme, mobile menu |
-| `language-detection.js` | Legacy URL redirects; sends first-time English visitors from `/` to `/en/` |
+| `styles.css` | All styles (CSS variables for theming, dark mode, responsive, RTL + non-Latin script rules) |
+| `script.js` | Interactivity only: live prayer clock, showcase switching + video, FAQ accordion, theme, language menu, mobile menu |
+| `language-detection.js` | Legacy URL redirects; sends a visitor landing on `/` to their language's page |
 | `presentation.html`, `404.html` | Standalone pages, not generated |
-| `assets/` | Favicons, app icons, localized screenshots (`assets/screenshots/{en,tr}/1-9.webp`) |
+| `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`) |
 
 ### Why content is generated, not rendered client-side
 
@@ -48,23 +51,31 @@ Crawlers that don't execute JavaScript — Googlebot's first pass, GPTBot, Claud
 Two other things follow from the generator, and both are the point:
 
 - The on-page FAQ and the `FAQPage` structured data come from the **same array**, so they can't drift apart.
-- Each language is a real URL with its own `canonical`, so English can be indexed on its own. There is no client-side language switching — the EN/TR control is a plain link.
+- Each language is a real URL with its own `canonical` and a full hreflang set (`x-default` → English). There is no client-side language switching — the language menu is plain links.
+
+### Languages
+
+`LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → web fonts in `build.js` `SCRIPTS`), screenshot and video source, the clock's home city and the currency next to the "0" price. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
+
+- **Legal pages exist in Turkish and English only** (binding texts). Other languages link to English.
+- **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
+- **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
 
 ### Editing content
 
-1. Landing page → `content.js` (`COPY`, `FEATURES`, `SHOWCASE`, `COMPARE`, `REVIEWS`, `FAQ`, `META`).
+1. Landing page → `content.js` (`COPY`, `FEATURES`, `SHOWCASE`, `COMPARE`, `REVIEWS`, `FAQ`, `META`, `PRAYERS`, `CITIES`) **and the same entry in every `locales/*.js`**.
    Legal text → `legal/privacy.js`, `legal/terms.js`, `legal/ads-policy.js`; their `<head>` metadata → `LEGAL` in `content.js`.
-2. Keep `tr` and `en` arrays the same length; `build.js` throws if they diverge.
+2. `build.js` throws if any language is missing a key or a list has a different length than English — a feature added to Turkish/English cannot silently skip a language.
 3. Bump `SITE.updated` (drives sitemap `lastmod`).
 4. Run `npm run build` and commit the regenerated files.
 
 `{featureCount}` and `{ratingCount}` in copy strings are substituted at build time, so counts stated in prose can't fall out of sync with the lists.
 
-**The feature list is a factual claim.** Every entry in `FEATURES` must correspond to something that ships in the current app. When a feature is removed from the app, remove it here in the same release — the site once advertised "Zikir Halkası" for months after it had been deleted from the app.
+**The feature list is a factual claim.** Every entry in `FEATURES` must correspond to something that ships in the current app. When a feature is removed from the app, remove it here in the same release — in every language. The site once advertised "Zikir Halkası" for months after it had been deleted from the app.
 
 ### CSS theming
 
-All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Dark mode is driven by `data-theme` on `<html>`.
+All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Dark mode is driven by `data-theme` on `<html>`. `<html>` also carries `dir="rtl"` for Arabic-script pages and a `script-<name>` class; non-Latin scripts drop italics and letter-spacing (they break joined letters) and get taller line-heights. Use logical properties (`inline-start`, `text-align: start`) for anything directional.
 
 ## Deployment
 
@@ -72,9 +83,10 @@ GitHub Pages via GitHub Actions. Push to `main` triggers the workflow, which fir
 
 ## Keeping the site in step with the app
 
-The site describes `VakitApp-Swift`. After every App Store release, check `VakitApp-Swift/CHANGELOG.md` and update `content.js`:
+The site describes `VakitApp-Swift`. After every App Store release, check `VakitApp-Swift/CHANGELOG.md` and update `content.js` + `locales/`:
 
 - new user-facing features → `FEATURES`, and `FAQ` if they raise an obvious question
 - removed features → delete from `FEATURES`
 - `SITE.appVersion`, `SITE.minOS`, `SITE.operatingSystem` → match the release
 - platform changes (e.g. Mac support) → `META` descriptions and the `fin-p` copy
+- new App Store screenshots or preview video → `./tools/import-media.sh`, then rebuild

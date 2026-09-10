@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="it" class="script-latin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1PNWJYF69"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T1PNWJYF69');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Vakit: Ora di preghiera, Salat</title>
+    <meta name="description" content="Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 13 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate. Gratuita, senza pubblicità, offline.">
+    <meta name="keywords" content="orari di preghiera, preghiera islamica, qibla, corano, quran, app musulmana, islam, salat, namaz, adhan, azan, azkar, dhikr, dua, hadith, tasbih, calendario hegiriano, ramadan, digiuno, moschea">
+    <meta name="author" content="Hakan Çelik">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/it/">
+    <meta property="og:title" content="Vakit: Ora di preghiera, Salat">
+    <meta property="og:description" content="Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 13 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate. Gratuita, senza pubblicità, offline.">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Vakit">
+    <meta property="og:site_name" content="Vakit: Ora di preghiera, Salat">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="az_AZ">
+    <meta property="og:locale:alternate" content="bn_BD">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fa_IR">
+    <meta property="og:locale:alternate" content="ff_SN">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ms_MY">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="pt_PT">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="sq_AL">
+    <meta property="og:locale:alternate" content="sw_KE">
+    <meta property="og:locale:alternate" content="th_TH">
+    <meta property="og:locale:alternate" content="ug_CN">
+    <meta property="og:locale:alternate" content="ur_PK">
+    <meta property="og:locale:alternate" content="zh_CN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://vakit.hakancelik.dev/it/">
+    <meta name="twitter:title" content="Vakit: Ora di preghiera, Salat">
+    <meta name="twitter:description" content="Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 13 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate. Gratuita, senza pubblicità, offline.">
+    <meta name="twitter:image" content="https://vakit.hakancelik.dev/assets/app-icon-512x512.png">
+    <meta name="twitter:creator" content="@hakancelikdev">
+
+    <!-- Apple / theme -->
+    <meta name="theme-color" content="#2A9D8F">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
+    <meta name="apple-mobile-web-app-title" content="Vakit">
+    <meta name="application-name" content="Vakit">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-itunes-app" content="app-id=6748356813">
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://vakit.hakancelik.dev/it/">
+    <link rel="alternate" hreflang="tr" href="https://vakit.hakancelik.dev/">
+    <link rel="alternate" hreflang="en" href="https://vakit.hakancelik.dev/en/">
+    <link rel="alternate" hreflang="ar" href="https://vakit.hakancelik.dev/ar/">
+    <link rel="alternate" hreflang="az" href="https://vakit.hakancelik.dev/az/">
+    <link rel="alternate" hreflang="bn" href="https://vakit.hakancelik.dev/bn/">
+    <link rel="alternate" hreflang="da" href="https://vakit.hakancelik.dev/da/">
+    <link rel="alternate" hreflang="de" href="https://vakit.hakancelik.dev/de/">
+    <link rel="alternate" hreflang="es" href="https://vakit.hakancelik.dev/es/">
+    <link rel="alternate" hreflang="fa" href="https://vakit.hakancelik.dev/fa/">
+    <link rel="alternate" hreflang="ff" href="https://vakit.hakancelik.dev/ff/">
+    <link rel="alternate" hreflang="fr" href="https://vakit.hakancelik.dev/fr/">
+    <link rel="alternate" hreflang="hi" href="https://vakit.hakancelik.dev/hi/">
+    <link rel="alternate" hreflang="id" href="https://vakit.hakancelik.dev/id/">
+    <link rel="alternate" hreflang="it" href="https://vakit.hakancelik.dev/it/">
+    <link rel="alternate" hreflang="ja" href="https://vakit.hakancelik.dev/ja/">
+    <link rel="alternate" hreflang="ms" href="https://vakit.hakancelik.dev/ms/">
+    <link rel="alternate" hreflang="nl" href="https://vakit.hakancelik.dev/nl/">
+    <link rel="alternate" hreflang="pt" href="https://vakit.hakancelik.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vakit.hakancelik.dev/ru/">
+    <link rel="alternate" hreflang="sq" href="https://vakit.hakancelik.dev/sq/">
+    <link rel="alternate" hreflang="sw" href="https://vakit.hakancelik.dev/sw/">
+    <link rel="alternate" hreflang="th" href="https://vakit.hakancelik.dev/th/">
+    <link rel="alternate" hreflang="ug" href="https://vakit.hakancelik.dev/ug/">
+    <link rel="alternate" hreflang="ur" href="https://vakit.hakancelik.dev/ur/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vakit.hakancelik.dev/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://vakit.hakancelik.dev/en/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Vakit: Ora di preghiera, Salat",
+  "description": "Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 13 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate. Gratuita, senza pubblicità, offline.",
+  "url": "https://vakit.hakancelik.dev/it/",
+  "downloadUrl": "https://apps.apple.com/app/id6748356813",
+  "installUrl": "https://apps.apple.com/app/id6748356813",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, iPadOS, macOS, watchOS",
+  "operatingSystemVersion": "16.4",
+  "softwareVersion": "1.7.4",
+  "inLanguage": [
+    "tr",
+    "en",
+    "ar",
+    "az",
+    "bn",
+    "da",
+    "de",
+    "es",
+    "fa",
+    "ff",
+    "fr",
+    "hi",
+    "id",
+    "it",
+    "ja",
+    "ms",
+    "nl",
+    "pt",
+    "ru",
+    "sq",
+    "sw",
+    "th",
+    "ug",
+    "ur",
+    "zh-Hans"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "340",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Orari di preghiera",
+    "Cielo dal vivo",
+    "Preghiere volontarie",
+    "Posizione manuale",
+    "Apple Watch",
+    "App per Mac",
+    "iPad",
+    "25 lingue",
+    "Bussola Qibla",
+    "Il Sacro Corano",
+    "Grafia del mushaf",
+    "Monitoraggio del khatm",
+    "Recitazione offline",
+    "Hadith",
+    "Sermone del venerdì",
+    "Contatore di dhikr",
+    "Tasbihat",
+    "Asma al-Husna",
+    "Calendario hegiriano",
+    "Tempi makruh",
+    "Guida alla purificazione",
+    "Guida alla preghiera",
+    "Zakat e fitra",
+    "Preghiere mancate",
+    "Giorni di esenzione",
+    "Widget",
+    "Attività in tempo reale",
+    "Centro di Controllo",
+    "Monitoraggio dell'adorazione",
+    "Puntualità nella preghiera",
+    "Sveglia del Fajr",
+    "Sveglia del suhur",
+    "Promemoria dei giorni sacri",
+    "Notifiche",
+    "Suoni dell'adhan",
+    "Comandi rapidi di Siri",
+    "Ricerca unificata",
+    "Segnalibri",
+    "Sincronizzazione iCloud",
+    "Tafsir",
+    "Schede da condividere",
+    "Digiuno",
+    "Moschee vicine",
+    "Sostieni Vakit",
+    "Modalità scura"
+  ],
+  "screenshot": [
+    "https://vakit.hakancelik.dev/assets/screenshots/it/prayer-times.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/widget.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/discover.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/qibla.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/profile.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/qada.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/quran.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/prayer-guide.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/calendar.webp",
+    "https://vakit.hakancelik.dev/assets/screenshots/it/zikirmatik.webp"
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "name": "Un'app da 10/10.",
+      "author": {
+        "@type": "Person",
+        "name": "Meryem Ebrar"
+      },
+      "reviewBody": "Che si tratti degli orari di preghiera mostrati con quelle bellissime grafiche del widget, o del fatto che non ha pubblicità e ha un'interfaccia pulitissima: 10/10. Sono davvero molto soddisfatto e la consiglio a tutti.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Fantastica.",
+      "author": {
+        "@type": "Person",
+        "name": "alpaslanx"
+      },
+      "reviewBody": "L'app più pulita e pratica che si possa trovare. Niente pubblicità, un'interfaccia semplice ed elegante. La ricerca della Qibla funziona davvero con grande precisione. Anche il resto dei contenuti è molto bello.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Semplice e pratica.",
+      "author": {
+        "@type": "Person",
+        "name": "h-seyin"
+      },
+      "reviewBody": "È a un livello più alto della maggior parte delle altre app, dei giochi e dei social. Grazie per il vostro impegno, è un lavoro splendido. Cerco di vivere la mia fede in modo più ordinato, e questa app è diventata il mio braccio destro.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Impeccabile.",
+      "author": {
+        "@type": "Person",
+        "name": "Keskin2298"
+      },
+      "reviewBody": "Benedette le mani di chi l'ha fatta. Niente pubblicità. C'è un impegno serio dietro. Si vede che è fatta solo per il compiacimento di Allah. Grazie.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Un'app rara.",
+      "author": {
+        "@type": "Person",
+        "name": "Baalbak9907"
+      },
+      "reviewBody": "Che Allah sia soddisfatto di voi. Orari di preghiera così ben organizzati, e hadith riportati con cura, con il testo arabo, la traduzione turca e il grado di autenticità, eppure senza pubblicità: un'app così è rara. Scaricatela, probabilmente vi resterà sul telefono per sempre.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Esattamente ciò che serviva.",
+      "author": {
+        "@type": "Person",
+        "name": "Sswnn21"
+      },
+      "reviewBody": "Che Allah benedica chi l'ha pensata e realizzata. Chiara, senza pubblicità e diretta.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Con l'ultimo aggiornamento è diventata splendida.",
+      "author": {
+        "@type": "Person",
+        "name": "Mücahade"
+      },
+      "reviewBody": "Semplice, elegante, pratica, veloce: che altro dire? Benedette le tue mani, il tuo impegno e il tuo cuore.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Che Allah sia soddisfatto.",
+      "author": {
+        "@type": "Person",
+        "name": "h.ç44"
+      },
+      "reviewBody": "Ero stanco di interfacce piene di pubblicità, che chiedono soldi di continuo e sono scomode da usare. Vakit è davvero fantastica: funziona ovunque, senza internet, senza pubblicità. Corano, hadith, contatore di dhikr, monitoraggio delle preghiere: non mi serve nessun'altra app.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Ho cancellato le altre.",
+      "author": {
+        "@type": "Person",
+        "name": "Çerkezin biri"
+      },
+      "reviewBody": "Che Allah sia soddisfatto di chi l'ha fatta. Benedette le vostre mani. Mi è stata utilissima.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "La migliore.",
+      "author": {
+        "@type": "Person",
+        "name": "Bessey Çelik"
+      },
+      "reviewBody": "Non ho mai visto niente di meglio. Un'app che dovrebbe esserci su ogni telefono. Che Allah sia soddisfatto del fratello che l'ha sviluppata.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Davvero utile.",
+      "author": {
+        "@type": "Person",
+        "name": "tolgalive"
+      },
+      "reviewBody": "L'app è utilissima e pratica. Dovrebbe esserci sul telefono di ogni musulmano. Che Allah sia soddisfatto di chi l'ha sviluppata.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "name": "Che Allah sia soddisfatto.",
+      "author": {
+        "@type": "Person",
+        "name": "Murat KAYAHAN"
+      },
+      "reviewBody": "Fratello, grazie di cuore per aver reso gratuita un'app così preziosa. Che Allah ti conceda ciò che il tuo cuore desidera, in sha Allah.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vakit: Ora di preghiera, Salat",
+  "url": "https://vakit.hakancelik.dev/it/",
+  "inLanguage": "it",
+  "publisher": {
+    "@type": "Person",
+    "name": "Hakan Çelik",
+    "url": "https://github.com/hakancelikdev"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Funziona senza internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Gli orari di preghiera vengono calcolati sul telefono a partire dalla tua posizione. Corano, Qibla, dhikr e tutti gli strumenti principali funzionano completamente offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le notifiche arrivano anche se non apro mai l'app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Vengono programmate localmente sul dispositivo, quindi le ricevi anche ad app chiusa. Se concedi l'accesso alla posizione «Sempre», Vakit ricalcola gli orari in silenzio dopo un viaggio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "È davvero tutto gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oggi sì: l'intera app è gratuita, senza abbonamenti, paywall o livelli «premium». Non posso promettere che sarà così per sempre (nessuno può farlo onestamente), ma posso promettere che oggi non c'è nessun trucco."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Da dove arrivano gli orari di preghiera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non vengono scaricati da un server. Vakit li calcola sul tuo dispositivo con il metodo che scegli (ce ne sono 13) e con le tue coordinate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "In quali lingue è disponibile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'interfaccia dell'app è in 25 lingue: turco, inglese, arabo, tedesco, francese, spagnolo, italiano, olandese, portoghese, danese, russo, azero, albanese, indonesiano, malese, cinese, giapponese, thailandese, hindi, bengalese, urdu, persiano, uiguro, swahili e fula. Se la lingua del tuo dispositivo è supportata, l'app si apre direttamente in quella lingua; puoi cambiarla quando vuoi in Impostazioni. In arabo, urdu, persiano e uiguro l'intera interfaccia scorre da destra a sinistra. Le traduzioni dei contenuti, invece, per ora sono solo in turco e in inglese: la traduzione del Corano, i significati delle parole, la traslitterazione e le traduzioni degli hadith sono disponibili in queste due lingue. Con l'interfaccia in arabo, per una parte del Corano si apre un tafsir in arabo; il sermone del venerdì è in turco, in inglese e, in alcune settimane, in arabo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Su quali dispositivi funziona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone, iPad, Apple Watch e Mac. Su iPad è la stessa app su uno schermo più grande, e i tuoi dati restano identici su tutti i dispositivi grazie a iCloud. Dalla versione 1.7.0 Vakit funziona anche su Mac: schede nella barra laterale, prossima preghiera e conto alla rovescia nella barra dei menu, scorciatoie da tastiera e widget sulla scrivania. Orari di preghiera, Corano, hadith, dhikr e registri dell'adorazione si sincronizzano con l'iPhone tramite lo stesso account iCloud. Poiché i Mac non hanno una bussola, la scheda Qibla mostra come testo la direzione e la distanza dalla Kaaba."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso scegliere il suono dell'adhan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Le notifiche includono l'adhan in cinque maqam: hicaz, rast, saba, segah e ussak. Sceglilo in Impostazioni → Notifiche → Suono di notifica; puoi anche impostare un suono diverso per ogni preghiera. Le registrazioni sono incluse nell'app, quindi per suonare non serve la connessione."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "C'è una sveglia per il Fajr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Puoi impostare una sveglia che suona prima del sorgere del sole, anche in modalità silenziosa, se non hai ancora pregato il Fajr. Se segni la preghiera come compiuta, non suona. C'è anche una sveglia del suhur che si programma da sola in base ai tuoi giorni di digiuno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Da dove arriva il sermone del venerdì?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il sermone che Diyanet pubblica ogni settimana arriva nell'app: puoi leggerlo, ascoltarne la registrazione e scaricarlo per leggerlo offline. Poiché è una pubblicazione di Diyanet, questa sezione compare per chi usa Diyanet come metodo di calcolo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa include la sezione del Corano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tutte le 114 sure, l'analisi parola per parola, il tafsir di Diyanet, la visualizzazione tradizionale del mushaf, la recitazione audio e il monitoraggio del khatm. Tutto funziona offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come funziona il monitoraggio dell'adorazione?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una vista in stile anelli Attività registra le tue preghiere, la lettura del Corano e il dhikr. Puoi anche tenere il conto delle preghiere mancate di una vita (qada) per ciascun tempo e ridurre il debito man mano che le recuperi. Serie e statistiche discrete ti aiutano ad andare avanti, senza sensi di colpa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quali widget ci sono?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "20 widget per orari di preghiera, conto alla rovescia, versetto del giorno, nome del giorno, calendario hegiriano, giorni sacri, fase lunare e serie di adorazione. Disponibili nella schermata Home, nella schermata di blocco, in StandBy e sulla scrivania del Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Esiste un'app per Apple Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. L'app per Apple Watch mostra gli orari di preghiera (conto alla rovescia ed elenco), una bussola Qibla dal vivo e 12 complicazioni per tutti i quadranti. Funziona insieme all'iPhone, senza configurazioni separate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dove vengono conservati i miei dati?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il monitoraggio dell'adorazione, i progressi di qada e khatm, i segnalibri, la cronologia di lettura e le moschee preferite restano sul tuo dispositivo e nel tuo iCloud privato: nulla di tutto ciò arriva ai nostri server. Nemmeno gli importi dello zakat e la tua posizione in tempo reale vengono mai inviati. Al server arrivano invece le statistiche d'uso, il tuo elenco di dhikr e le parole che cerchi nell'app, così possiamo vedere dove non hai trovato ciò che cercavi e migliorare la ricerca. Tutto è collegato a un codice utente permanente che non contiene informazioni identificative: uno pseudonimo, non l'anonimato. I dettagli sono nell'informativa sulla privacy."
+      }
+    }
+  ]
+}
+    </script>
+
+    <script src="/language-detection.js"></script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </div>
+  <div class="nav-links">
+    <a href="#showcase">Funzioni</a>
+    <a href="#trust">Fiducia</a>
+    <a href="#compare">Perché Vakit</a>
+    <a href="#reviews">Recensioni</a>
+    <a href="#faq">Domande</a>
+  </div>
+  <div class="nav-cta">
+    <button class="nav-theme" id="themeToggle" aria-label="Attiva o disattiva la modalità scura">☀</button>
+    <details class="lang-menu">
+      <summary aria-label="Lingua"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Italiano</span></summary>
+      <ul class="lang-list">
+        <li><a href="/" data-lang="tr" lang="tr" dir="ltr" hreflang="tr">Türkçe</a></li>
+        <li><a href="/en/" data-lang="en" lang="en" dir="ltr" hreflang="en">English</a></li>
+        <li><a href="/ar/" data-lang="ar" lang="ar" dir="rtl" hreflang="ar">العربية</a></li>
+        <li><a href="/az/" data-lang="az" lang="az" dir="ltr" hreflang="az">Azərbaycan dili</a></li>
+        <li><a href="/bn/" data-lang="bn" lang="bn" dir="ltr" hreflang="bn">বাংলা</a></li>
+        <li><a href="/da/" data-lang="da" lang="da" dir="ltr" hreflang="da">Dansk</a></li>
+        <li><a href="/de/" data-lang="de" lang="de" dir="ltr" hreflang="de">Deutsch</a></li>
+        <li><a href="/es/" data-lang="es" lang="es" dir="ltr" hreflang="es">Español</a></li>
+        <li><a href="/fa/" data-lang="fa" lang="fa" dir="rtl" hreflang="fa">فارسی</a></li>
+        <li><a href="/ff/" data-lang="ff" lang="ff" dir="ltr" hreflang="ff">Pulaar</a></li>
+        <li><a href="/fr/" data-lang="fr" lang="fr" dir="ltr" hreflang="fr">Français</a></li>
+        <li><a href="/hi/" data-lang="hi" lang="hi" dir="ltr" hreflang="hi">हिन्दी</a></li>
+        <li><a href="/id/" data-lang="id" lang="id" dir="ltr" hreflang="id">Bahasa Indonesia</a></li>
+        <li><a href="/it/" data-lang="it" lang="it" dir="ltr" aria-current="page">Italiano</a></li>
+        <li><a href="/ja/" data-lang="ja" lang="ja" dir="ltr" hreflang="ja">日本語</a></li>
+        <li><a href="/ms/" data-lang="ms" lang="ms" dir="ltr" hreflang="ms">Bahasa Melayu</a></li>
+        <li><a href="/nl/" data-lang="nl" lang="nl" dir="ltr" hreflang="nl">Nederlands</a></li>
+        <li><a href="/pt/" data-lang="pt" lang="pt" dir="ltr" hreflang="pt">Português</a></li>
+        <li><a href="/ru/" data-lang="ru" lang="ru" dir="ltr" hreflang="ru">Русский</a></li>
+        <li><a href="/sq/" data-lang="sq" lang="sq" dir="ltr" hreflang="sq">Shqip</a></li>
+        <li><a href="/sw/" data-lang="sw" lang="sw" dir="ltr" hreflang="sw">Kiswahili</a></li>
+        <li><a href="/th/" data-lang="th" lang="th" dir="ltr" hreflang="th">ไทย</a></li>
+        <li><a href="/ug/" data-lang="ug" lang="ug" dir="rtl" hreflang="ug">ئۇيغۇرچە</a></li>
+        <li><a href="/ur/" data-lang="ur" lang="ur" dir="rtl" hreflang="ur">اردو</a></li>
+        <li><a href="/zh/" data-lang="zh" lang="zh-Hans" dir="ltr" hreflang="zh-Hans">简体中文</a></li>
+      </ul>
+    </details>
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-nav-it" class="nav-dl">Scarica</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Che nulla interrompa la tua adorazione · Gratis · Senza pubblicità</div>
+    <h1>
+      <span>L'app per l'adorazione,</span><br>
+      <span>come</span> <em>dev'essere.</em>
+    </h1>
+    <p class="hero-sub">L'app per l'adorazione, come dev'essere. Una compagna discreta per le cinque preghiere quotidiane, con Corano, Qibla, dhikr e un calendario che dà valore ai tuoi giorni. Fatta per sparire quando non ti serve, e per esserci quando ti serve.</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-it" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+        <span>Scarica su App Store</span>
+      </a>
+      <a href="#showcase" class="btn-ghost">Fai il tour →</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="proof">
+        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-lbl">App Store · 340 valutazioni</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">0 <span class="proof-cur">€</span></div>
+        <div class="proof-lbl">Gratis · oggi</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">13</div>
+        <div class="proof-lbl">Metodi di calcolo</div>
+      </div>
+      <div class="proof">
+        <div class="proof-val">100%</div>
+        <div class="proof-lbl">Offline · sul dispositivo</div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="clock-card">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Roma</span>
+      <span class="clock-date" id="date">—</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next-lbl">Prossima · tra</div>
+    <div class="clock-next-name" id="nextName">—</div>
+    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    <div class="clock-list" id="clockList"></div>
+  </aside>
+</section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsak · Alba · Dhuhr · Asr · Maghrib · Isha · Imsak · Alba · Dhuhr · Asr · Maghrib · Isha · Imsak · Alba · Dhuhr · Asr · Maghrib · Isha</span><span>Imsak · Alba · Dhuhr · Asr · Maghrib · Isha · Imsak · Alba · Dhuhr · Asr · Maghrib · Isha · Imsak · Alba · Dhuhr · Asr · Maghrib · Isha</span></div>
+</div>
+
+<!-- ========== SHOWCASE ========== -->
+<section class="showcase" id="showcase">
+  <div>
+    <div class="sc-head">§ 01 · Tutto, niente di superfluo</div>
+    <h2 class="sc-h2"><span>Una compagna,</span><br><em>non una macchina per catturare l'attenzione.</em></h2>
+    <p class="sc-lede">Dieci strumenti essenziali, ognuno pensato per trasmettere calma appena lo apri. Tocca per un'anteprima.</p>
+    <div class="sc-list" id="scList">
+        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Come il cielo.</h3><p>A ogni ingresso di un tempo di preghiera lo schermo cambia insieme al cielo: stelle vere e la luna al loro posto reale. I tempi makruh e quelli delle preghiere volontarie sono facoltativi.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Senza sbloccare.</h3><p>La prossima preghiera sulla schermata di blocco, in un widget, nella Dynamic Island e sull'orologio. Uno sguardo sereno, mai una distrazione.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Tutto in un solo posto.</h3><p>Corano, hadith, sermone del venerdì, dhikr, i 99 nomi, guide e calendario: tutto riunito in un unico posto. Nessuna funzione bloccata a pagamento.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>La direzione giusta.</h3><p>Rivolgiti verso la Qibla e il telefono vibra, con la distanza dalla Kaaba sempre in vista. Le tue coordinate non lasciano mai il telefono.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>La tua adorazione, in anelli.</h3><p>Anelli per preghiera, digiuno, Corano, dhikr e hadith; quanto presto preghi dopo l'ingresso di ogni tempo, e il tuo khatm. Progressi sereni, senza sensi di colpa.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Le preghiere mancate, recuperate una a una.</h3><p>Calcola le preghiere mancate di una vita per ciascun tempo e recuperale una alla volta, con una stima di quando avrai finito.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Il Corano, anche offline.</h3><p>Leggi, ascolta, rifletti: grafia di Medina o di Turchia, lettura guidata parola per parola, tafsir e recitazione scaricabile.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Diciassette preghiere, illustrate.</h3><p>Dall'abluzione al tasbih; in piedi, da seduti o a gesti. Passo dopo passo, spiegate senza condiscendenza.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Un calendario che ricorda.</h3><p>Hegiriano e gregoriano insieme. Notti sacre, Ramadan, gli Eid e la loro vigilia, con il riepilogo mensile dell'adorazione subito sotto.</p></div><span class="sc-tag">Anteprima</span></button>
+        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Il conto, sempre a portata di mano.</h3><p>Contatore di dhikr e tasbihat dopo la preghiera; dhikr predefiniti, i tuoi dhikr e un obiettivo giornaliero.</p></div><span class="sc-tag">Anteprima</span></button>
+    </div>
+  </div>
+  <div class="sc-phone-wrap">
+    <div class="phone">
+      <div class="phone-screen" id="phoneScreen">
+        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="La schermata delle preghiere di Vakit: il cielo cambia con il passare del giorno"></video>
+        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/it/widget.webp" alt="Senza sbloccare." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/it/discover.webp" alt="Tutto in un solo posto." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/it/qibla.webp" alt="La direzione giusta." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/it/profile.webp" alt="La tua adorazione, in anelli." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/it/qada.webp" alt="Le preghiere mancate, recuperate una a una." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/it/quran.webp" alt="Il Corano, anche offline." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/it/prayer-guide.webp" alt="Diciassette preghiere, illustrate." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/it/calendar.webp" alt="Un calendario che ricorda." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/it/zikirmatik.webp" alt="Il conto, sempre a portata di mano." width="390" height="844" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST / EMANET ========== -->
+<section class="trust" id="trust">
+  <div class="trust-inner">
+    <div class="trust-eyebrow">§ 02 · Emanet — un bene affidato</div>
+    <h2>
+      <span>I tuoi dati sono</span> <em>un bene affidato,</em><br>
+      <span>non un prodotto.</span>
+    </h2>
+    <p class="trust-lede">Che nulla interrompa la tua adorazione. Altre app di preghiera sono state scoperte a vendere i dati di posizione. Vakit ha scelto un'altra strada: le tue coordinate non lasciano mai il telefono. Nessun account. Nessun tracciamento. Nessun compromesso. Non è una funzione: è un principio.</p>
+    <div class="trust-grid">
+      <div class="trust-cell">
+        <div class="trust-cell-num">01 / no account</div>
+        <h3>Scarica. Apri. Prega.</h3>
+        <p>Niente registrazione, niente accesso, nessuna password da dimenticare. Vakit funziona dal momento in cui la installi.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">02 / on-device</div>
+        <h3>Calcolato sul tuo telefono.</h3>
+        <p>Gli orari di preghiera vengono calcolati sul dispositivo a partire dalla tua posizione, con il metodo che scegli. Nulla viene inviato a un server per essere «consultato».</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">03 / no tracking</div>
+        <h3>Il GPS resta con te.</h3>
+        <p>Le tue coordinate non vengono trasmesse da nessuna parte. Non possiamo vedere dove preghi, e non vogliamo.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="trust-cell-num">04 / transparent</div>
+        <h3>Un'informativa chiara.</h3>
+        <p>Conteggi d'uso che non portano la tua identità. La nostra informativa sulla privacy si legge in un minuto, e resterà così.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES GRID ========== -->
+<section class="feats" id="features">
+  <div class="f-inner">
+    <div class="f-head">
+      <div class="f-eye">§ 03 · 45 strumenti</div>
+      <h2><span>Una sola app,</span><br><em>per una vita intera di adorazione.</em></h2>
+    </div>
+    <div class="f-grid" id="featGrid">
+        <div class="f-cell"><div class="f-num">01 / 45</div><div class="f-name">Orari di preghiera</div><div class="f-desc">13 metodi di calcolo, attenti al fuso orario e ai tuoi viaggi.</div></div>
+        <div class="f-cell"><div class="f-num">02 / 45</div><div class="f-name">Cielo dal vivo</div><div class="f-desc">Stelle vere e la luna sull'arco del giorno, per il luogo e l'ora in cui sei.</div></div>
+        <div class="f-cell"><div class="f-num">03 / 45</div><div class="f-name">Preghiere volontarie</div><div class="f-desc">Ishraq, Duha, Awwabin e le parti della notte; facoltative.</div></div>
+        <div class="f-cell"><div class="f-num">04 / 45</div><div class="f-name">Posizione manuale</div><div class="f-desc">Imposta la posizione a mano, o lascia che ti segua quando viaggi.</div></div>
+        <div class="f-cell"><div class="f-num">05 / 45</div><div class="f-name">Apple Watch</div><div class="f-desc">Orari di preghiera, Qibla dal vivo, 12 complicazioni per il quadrante.</div></div>
+        <div class="f-cell"><div class="f-num">06 / 45</div><div class="f-name">App per Mac</div><div class="f-desc">Conto alla rovescia nella barra dei menu, scorciatoie da tastiera, sincronizzazione iCloud.</div></div>
+        <div class="f-cell"><div class="f-num">07 / 45</div><div class="f-name">iPad</div><div class="f-desc">La stessa app su uno schermo più grande; i tuoi dati si sincronizzano con iCloud.</div></div>
+        <div class="f-cell"><div class="f-num">08 / 45</div><div class="f-name">25 lingue</div><div class="f-desc">Interfaccia da destra a sinistra in arabo, urdu, persiano e uiguro.</div></div>
+        <div class="f-cell"><div class="f-num">09 / 45</div><div class="f-name">Bussola Qibla</div><div class="f-desc">Ti guida con la vibrazione e mostra la distanza dalla Kaaba.</div></div>
+        <div class="f-cell"><div class="f-num">10 / 45</div><div class="f-name">Il Sacro Corano</div><div class="f-desc">114 sure. Parola per parola, traduzione in turco e inglese, tafsir, mushaf classico.</div></div>
+        <div class="f-cell"><div class="f-num">11 / 45</div><div class="f-name">Grafia del mushaf</div><div class="f-desc">Grafia di Medina o di Turchia; anche l'impaginazione cambia.</div></div>
+        <div class="f-cell"><div class="f-num">12 / 45</div><div class="f-name">Monitoraggio del khatm</div><div class="f-desc">114 sure, 30 juz; khatm completati e una data di fine stimata.</div></div>
+        <div class="f-cell"><div class="f-num">13 / 45</div><div class="f-name">Recitazione offline</div><div class="f-desc">Scegli recitatore e stile; scarica sure o juz e ascolta senza internet.</div></div>
+        <div class="f-cell"><div class="f-num">14 / 45</div><div class="f-name">Hadith</div><div class="f-desc">36.390 hadith da sette grandi raccolte.</div></div>
+        <div class="f-cell"><div class="f-num">15 / 45</div><div class="f-name">Sermone del venerdì</div><div class="f-desc">Leggi, ascolta e conserva offline il sermone di Diyanet.</div></div>
+        <div class="f-cell"><div class="f-num">16 / 45</div><div class="f-name">Contatore di dhikr</div><div class="f-desc">Avanzamento ad anello, dhikr predefiniti e personalizzati.</div></div>
+        <div class="f-cell"><div class="f-num">17 / 45</div><div class="f-name">Tasbihat</div><div class="f-desc">33-33-33, oppure la sequenza completa dopo la preghiera.</div></div>
+        <div class="f-cell"><div class="f-num">18 / 45</div><div class="f-name">Asma al-Husna</div><div class="f-desc">I 99 nomi di Allah, con significato e riflessione.</div></div>
+        <div class="f-cell"><div class="f-num">19 / 45</div><div class="f-name">Calendario hegiriano</div><div class="f-desc">Gregoriano e hegiriano, con i giorni speciali e il Ramadan.</div></div>
+        <div class="f-cell"><div class="f-num">20 / 45</div><div class="f-name">Tempi makruh</div><div class="f-desc">Segnati sull'arco del giorno, con la narrazione su cui si basano.</div></div>
+        <div class="f-cell"><div class="f-num">21 / 45</div><div class="f-name">Guida alla purificazione</div><div class="f-desc">Abluzione, ghusl e tayammum, passo dopo passo.</div></div>
+        <div class="f-cell"><div class="f-num">22 / 45</div><div class="f-name">Guida alla preghiera</div><div class="f-desc">17 tipi di preghiera; in piedi, da seduti o a gesti.</div></div>
+        <div class="f-cell"><div class="f-num">23 / 45</div><div class="f-name">Zakat e fitra</div><div class="f-desc">Calcolatori fondati sul fiqh classico.</div></div>
+        <div class="f-cell"><div class="f-num">24 / 45</div><div class="f-name">Preghiere mancate</div><div class="f-desc">Le preghiere di qada per ciascun tempo, i digiuni mancati giorno per giorno.</div></div>
+        <div class="f-cell"><div class="f-num">25 / 45</div><div class="f-name">Giorni di esenzione</div><div class="f-desc">Giorni di mestruazioni e di puerperio; la tua serie di preghiere resta intatta.</div></div>
+        <div class="f-cell"><div class="f-num">26 / 45</div><div class="f-name">Widget</div><div class="f-desc">Schermata Home, schermata di blocco, StandBy, e anche su Mac.</div></div>
+        <div class="f-cell"><div class="f-num">27 / 45</div><div class="f-name">Attività in tempo reale</div><div class="f-desc">Conto alla rovescia nella Dynamic Island e nella schermata di blocco.</div></div>
+        <div class="f-cell"><div class="f-num">28 / 45</div><div class="f-name">Centro di Controllo</div><div class="f-desc">Sei azioni rapide: Qibla, prossima preghiera e altro.</div></div>
+        <div class="f-cell"><div class="f-num">29 / 45</div><div class="f-name">Monitoraggio dell'adorazione</div><div class="f-desc">Anelli Attività: preghiera, preghiere volontarie, Jumu'a, Eid, Tarawih.</div></div>
+        <div class="f-cell"><div class="f-num">30 / 45</div><div class="f-name">Puntualità nella preghiera</div><div class="f-desc">Quanto tempo dopo l'ingresso di ogni preghiera preghi: ultimi 30 giorni e da sempre.</div></div>
+        <div class="f-cell"><div class="f-num">31 / 45</div><div class="f-name">Sveglia del Fajr</div><div class="f-desc">Suona anche in modalità silenziosa e tace quando hai pregato.</div></div>
+        <div class="f-cell"><div class="f-num">32 / 45</div><div class="f-name">Sveglia del suhur</div><div class="f-desc">Si imposta in base ai tuoi giorni di digiuno, così non perdi il suhur.</div></div>
+        <div class="f-cell"><div class="f-num">33 / 45</div><div class="f-name">Promemoria dei giorni sacri</div><div class="f-desc">Una notifica la sera prima di 11 giorni islamici importanti.</div></div>
+        <div class="f-cell"><div class="f-num">34 / 45</div><div class="f-name">Notifiche</div><div class="f-desc">Sul dispositivo, locali, affidabili.</div></div>
+        <div class="f-cell"><div class="f-num">35 / 45</div><div class="f-name">Suoni dell'adhan</div><div class="f-desc">L'adhan in cinque maqam: hicaz, rast, saba, segah, ussak.</div></div>
+        <div class="f-cell"><div class="f-num">36 / 45</div><div class="f-name">Comandi rapidi di Siri</div><div class="f-desc">Chiedi a voce orari, Qibla o un versetto.</div></div>
+        <div class="f-cell"><div class="f-num">37 / 45</div><div class="f-name">Ricerca unificata</div><div class="f-desc">Una ricerca, tutti gli strumenti: scrivi «Al-Baqara 255» e vai dritto al versetto.</div></div>
+        <div class="f-cell"><div class="f-num">38 / 45</div><div class="f-name">Segnalibri</div><div class="f-desc">Salva versetti, hadith e dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">39 / 45</div><div class="f-name">Sincronizzazione iCloud</div><div class="f-desc">I tuoi dati restano nel tuo iCloud, su ogni dispositivo.</div></div>
+        <div class="f-cell"><div class="f-num">40 / 45</div><div class="f-name">Tafsir</div><div class="f-desc">Il tafsir di Diyanet (in turco e inglese), accanto al testo.</div></div>
+        <div class="f-cell"><div class="f-num">41 / 45</div><div class="f-name">Schede da condividere</div><div class="f-desc">Belle schede per versetti e dhikr.</div></div>
+        <div class="f-cell"><div class="f-num">42 / 45</div><div class="f-name">Digiuno</div><div class="f-desc">Ramadan, Shawwal e monitoraggio giorno per giorno.</div></div>
+        <div class="f-cell"><div class="f-num">43 / 45</div><div class="f-name">Moschee vicine</div><div class="f-desc">Trovale senza condividere la posizione; mappa, distanza e indicazioni.</div></div>
+        <div class="f-cell"><div class="f-num">44 / 45</div><div class="f-name">Sostieni Vakit</div><div class="f-desc">Modi facoltativi per mantenere viva l'app gratuita.</div></div>
+        <div class="f-cell"><div class="f-num">45 / 45</div><div class="f-name">Modalità scura</div><div class="f-desc">Un buio caldo e quieto per le ore tarde.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARE ========== -->
+<section class="compare" id="compare">
+  <div class="compare-inner">
+    <h2><span>La differenza,</span><br><em>misurata.</em></h2>
+    <p class="compare-lede">Sai già cosa non va nelle altre app di preghiera. Ecco come risponde Vakit, punto per punto.</p>
+    <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Aspetto</div><div class="compare-cell">Altre app</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Pubblicità</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Pubblicità di casinò e inappropriate accanto a contenuti religiosi.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Oggi nessuna pubblicità.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Privacy</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Dati di posizione venduti a terzi (riportato dalla stampa).</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Le coordinate restano sul telefono. Nessun tracciamento.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Offline</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Le funzioni principali richiedono una connessione a internet.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Preghiera, Qibla, Corano, dhikr: tutto funziona offline.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Schermata di blocco</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>I widget si rompono da un aggiornamento di iOS all'altro.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Attività in tempo reale, Dynamic Island, StandBy: tutto supportato.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Precisione</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Errori con l'ora legale, pochi metodi di calcolo.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>13 metodi, attenti al fuso orario e ai viaggi.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Dispositivi</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Solo il telefono; orologio e computer assenti o fatti a metà.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>iPhone, iPad, Apple Watch e Mac, sincronizzati con iCloud.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Interfacce datate; passi indietro a ogni aggiornamento.</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Liquid Glass di iOS 26. Sobria, moderna, veloce.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Costo</div><div class="compare-cell other"><span class="cmark no">No</span><br><br>Paywall, abbonamenti, livelli «premium».</div><div class="compare-cell vakit"><span class="cmark yes">Sì</span><br><br>Gratis oggi. Nessun livello, nessuna vendita aggiuntiva.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials" id="reviews">
+  <div class="t-inner">
+    <div class="t-head">
+      <h2><span>Belle parole da</span><br><em>utenti reali.</em></h2>
+      <div class="t-meta">
+        <span>Valutazione media</span>
+        <b>4.8 ★</b>
+        <span>su 340 valutazioni dell'App Store</span>
+      </div>
+    </div>
+    <p class="t-note">Recensioni dell'App Store turco, tradotte dal turco.</p>
+    <div class="t-grid" id="testGrid">
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Un'app da 10/10.</div><p class="t-body">Che si tratti degli orari di preghiera mostrati con quelle bellissime grafiche del widget, o del fatto che non ha pubblicità e ha un'interfaccia pulitissima: 10/10. Sono davvero molto soddisfatto e la consiglio a tutti.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Fantastica.</div><p class="t-body">L'app più pulita e pratica che si possa trovare. Niente pubblicità, un'interfaccia semplice ed elegante. La ricerca della Qibla funziona davvero con grande precisione. Anche il resto dei contenuti è molto bello.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Semplice e pratica.</div><p class="t-body">È a un livello più alto della maggior parte delle altre app, dei giochi e dei social. Grazie per il vostro impegno, è un lavoro splendido. Cerco di vivere la mia fede in modo più ordinato, e questa app è diventata il mio braccio destro.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Impeccabile.</div><p class="t-body">Benedette le mani di chi l'ha fatta. Niente pubblicità. C'è un impegno serio dietro. Si vede che è fatta solo per il compiacimento di Allah. Grazie.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Un'app rara.</div><p class="t-body">Che Allah sia soddisfatto di voi. Orari di preghiera così ben organizzati, e hadith riportati con cura, con il testo arabo, la traduzione turca e il grado di autenticità, eppure senza pubblicità: un'app così è rara. Scaricatela, probabilmente vi resterà sul telefono per sempre.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Esattamente ciò che serviva.</div><p class="t-body">Che Allah benedica chi l'ha pensata e realizzata. Chiara, senza pubblicità e diretta.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Con l'ultimo aggiornamento è diventata splendida.</div><p class="t-body">Semplice, elegante, pratica, veloce: che altro dire? Benedette le tue mani, il tuo impegno e il tuo cuore.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Ero stanco di interfacce piene di pubblicità, che chiedono soldi di continuo e sono scomode da usare. Vakit è davvero fantastica: funziona ovunque, senza internet, senza pubblicità. Corano, hadith, contatore di dhikr, monitoraggio delle preghiere: non mi serve nessun'altra app.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Ho cancellato le altre.</div><p class="t-body">Che Allah sia soddisfatto di chi l'ha fatta. Benedette le vostre mani. Mi è stata utilissima.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">La migliore.</div><p class="t-body">Non ho mai visto niente di meglio. Un'app che dovrebbe esserci su ogni telefono. Che Allah sia soddisfatto del fratello che l'ha sviluppata.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Davvero utile.</div><p class="t-body">L'app è utilissima e pratica. Dovrebbe esserci sul telefono di ogni musulmano. Che Allah sia soddisfatto di chi l'ha sviluppata.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Fratello, grazie di cuore per aver reso gratuita un'app così preziosa. Che Allah ti conceda ciò che il tuo cuore desidera, in sha Allah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2><span>Risposte sincere</span><br><em>a domande sincere.</em></h2>
+    <div class="faq-list" id="faqList">
+        <div class="faq-item on"><button class="faq-q" aria-expanded="true">Funziona senza internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Gli orari di preghiera vengono calcolati sul telefono a partire dalla tua posizione. Corano, Qibla, dhikr e tutti gli strumenti principali funzionano completamente offline.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Le notifiche arrivano anche se non apro mai l'app?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Vengono programmate localmente sul dispositivo, quindi le ricevi anche ad app chiusa. Se concedi l'accesso alla posizione «Sempre», Vakit ricalcola gli orari in silenzio dopo un viaggio.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">È davvero tutto gratis?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Oggi sì: l'intera app è gratuita, senza abbonamenti, paywall o livelli «premium». Non posso promettere che sarà così per sempre (nessuno può farlo onestamente), ma posso promettere che oggi non c'è nessun trucco.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Da dove arrivano gli orari di preghiera?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Non vengono scaricati da un server. Vakit li calcola sul tuo dispositivo con il metodo che scegli (ce ne sono 13) e con le tue coordinate.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">In quali lingue è disponibile?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">L'interfaccia dell'app è in 25 lingue: turco, inglese, arabo, tedesco, francese, spagnolo, italiano, olandese, portoghese, danese, russo, azero, albanese, indonesiano, malese, cinese, giapponese, thailandese, hindi, bengalese, urdu, persiano, uiguro, swahili e fula. Se la lingua del tuo dispositivo è supportata, l'app si apre direttamente in quella lingua; puoi cambiarla quando vuoi in Impostazioni. In arabo, urdu, persiano e uiguro l'intera interfaccia scorre da destra a sinistra. Le traduzioni dei contenuti, invece, per ora sono solo in turco e in inglese: la traduzione del Corano, i significati delle parole, la traslitterazione e le traduzioni degli hadith sono disponibili in queste due lingue. Con l'interfaccia in arabo, per una parte del Corano si apre un tafsir in arabo; il sermone del venerdì è in turco, in inglese e, in alcune settimane, in arabo.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Su quali dispositivi funziona?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch e Mac. Su iPad è la stessa app su uno schermo più grande, e i tuoi dati restano identici su tutti i dispositivi grazie a iCloud. Dalla versione 1.7.0 Vakit funziona anche su Mac: schede nella barra laterale, prossima preghiera e conto alla rovescia nella barra dei menu, scorciatoie da tastiera e widget sulla scrivania. Orari di preghiera, Corano, hadith, dhikr e registri dell'adorazione si sincronizzano con l'iPhone tramite lo stesso account iCloud. Poiché i Mac non hanno una bussola, la scheda Qibla mostra come testo la direzione e la distanza dalla Kaaba.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Posso scegliere il suono dell'adhan?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Le notifiche includono l'adhan in cinque maqam: hicaz, rast, saba, segah e ussak. Sceglilo in Impostazioni → Notifiche → Suono di notifica; puoi anche impostare un suono diverso per ogni preghiera. Le registrazioni sono incluse nell'app, quindi per suonare non serve la connessione.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">C'è una sveglia per il Fajr?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Puoi impostare una sveglia che suona prima del sorgere del sole, anche in modalità silenziosa, se non hai ancora pregato il Fajr. Se segni la preghiera come compiuta, non suona. C'è anche una sveglia del suhur che si programma da sola in base ai tuoi giorni di digiuno.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Da dove arriva il sermone del venerdì?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Il sermone che Diyanet pubblica ogni settimana arriva nell'app: puoi leggerlo, ascoltarne la registrazione e scaricarlo per leggerlo offline. Poiché è una pubblicazione di Diyanet, questa sezione compare per chi usa Diyanet come metodo di calcolo.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Cosa include la sezione del Corano?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Tutte le 114 sure, l'analisi parola per parola, il tafsir di Diyanet, la visualizzazione tradizionale del mushaf, la recitazione audio e il monitoraggio del khatm. Tutto funziona offline.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Come funziona il monitoraggio dell'adorazione?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Una vista in stile anelli Attività registra le tue preghiere, la lettura del Corano e il dhikr. Puoi anche tenere il conto delle preghiere mancate di una vita (qada) per ciascun tempo e ridurre il debito man mano che le recuperi. Serie e statistiche discrete ti aiutano ad andare avanti, senza sensi di colpa.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Quali widget ci sono?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">20 widget per orari di preghiera, conto alla rovescia, versetto del giorno, nome del giorno, calendario hegiriano, giorni sacri, fase lunare e serie di adorazione. Disponibili nella schermata Home, nella schermata di blocco, in StandBy e sulla scrivania del Mac.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Esiste un'app per Apple Watch?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. L'app per Apple Watch mostra gli orari di preghiera (conto alla rovescia ed elenco), una bussola Qibla dal vivo e 12 complicazioni per tutti i quadranti. Funziona insieme all'iPhone, senza configurazioni separate.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Dove vengono conservati i miei dati?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Il monitoraggio dell'adorazione, i progressi di qada e khatm, i segnalibri, la cronologia di lettura e le moschee preferite restano sul tuo dispositivo e nel tuo iCloud privato: nulla di tutto ciò arriva ai nostri server. Nemmeno gli importi dello zakat e la tua posizione in tempo reale vengono mai inviati. Al server arrivano invece le statistiche d'uso, il tuo elenco di dhikr e le parole che cerchi nell'app, così possiamo vedere dove non hai trovato ciò che cercavi e migliorare la ricerca. Tutto è collegato a un codice utente permanente che non contiene informazioni identificative: uno pseudonimo, non l'anonimato. I dettagli sono nell'informativa sulla privacy.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final" id="download">
+  <div class="final-mark"><img src="/assets/app-icon.png" alt="Vakit" width="88" height="88"></div>
+  <h2><span>Che nulla interrompa</span> <em>la tua adorazione.</em></h2>
+  <p>Gratis oggi. Nessun account. Funziona offline. iPhone, iPad, Apple Watch e Mac, con iOS 16.4 o versioni successive.</p>
+  <div class="final-actions">
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-it" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+      <span>Scarica su App Store</span>
+    </a>
+    <a href="#showcase" class="btn-ghost">Scopri le funzioni →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="/en/privacy.html" hreflang="en">Privacy</a>
+    <a href="/en/terms.html" hreflang="en">Termini</a>
+    <a href="/en/ads-policy.html" hreflang="en">Pubblicità</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+    <a href="/presentation.html">Presentazione</a>
+    <a href="mailto:hakancelikdev@gmail.com">Contatti</a>
+    <a href="https://docs.google.com/forms/d/1kFwSM_XayYaRrkUyB8rynTJzWF8ahrcnHQp7fvhSfNU" target="_blank" rel="noopener">Suggerimenti</a>
+  </div>
+  <div class="foot-sig">Fatto con cura · © 2026 Hakan Çelik</div>
+</footer>
+
+<script id="vakit-data" type="application/json">{
+  "lang": "it",
+  "dateLocale": "it-u-ca-gregory-nu-latn",
+  "prayers": {
+    "Fajr": "Imsak",
+    "Sunrise": "Alba",
+    "Dhuhr": "Dhuhr",
+    "Asr": "Asr",
+    "Maghrib": "Maghrib",
+    "Isha": "Isha"
+  },
+  "cities": [
+    {
+      "id": "rome",
+      "name": "Roma",
+      "lat": 41.9028,
+      "lon": 12.4964,
+      "method": 3
+    },
+    {
+      "id": "mecca",
+      "name": "La Mecca",
+      "lat": 21.4225,
+      "lon": 39.8262,
+      "method": 4
+    },
+    {
+      "id": "medina",
+      "name": "Medina",
+      "lat": 24.4672,
+      "lon": 39.6024,
+      "method": 4
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanbul",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "method": 13
+    },
+    {
+      "id": "london",
+      "name": "Londra",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "method": 15
+    },
+    {
+      "id": "berlin",
+      "name": "Berlino",
+      "lat": 52.52,
+      "lon": 13.405,
+      "method": 13
+    },
+    {
+      "id": "paris",
+      "name": "Parigi",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "method": 12
+    },
+    {
+      "id": "newyork",
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "method": 2
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "lat": 25.2048,
+      "lon": 55.2708,
+      "method": 16
+    },
+    {
+      "id": "cairo",
+      "name": "Il Cairo",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "method": 5
+    },
+    {
+      "id": "jakarta",
+      "name": "Giacarta",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "method": 20
+    },
+    {
+      "id": "kualalumpur",
+      "name": "Kuala Lumpur",
+      "lat": 3.139,
+      "lon": 101.6869,
+      "method": 17
+    }
+  ]
+}</script>
+<script src="/script.js"></script>
+</body>
+</html>

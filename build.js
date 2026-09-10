@@ -2,13 +2,15 @@
 /**
  * Vakit landing page generator.
  *
- * Reads content.js and writes fully static pages into docs/:
+ * Reads content.js (+ locales/*.js through it) and writes fully static pages
+ * into docs/:
  *
- *   docs/index.html      Turkish, canonical root
- *   docs/en/index.html   English, its own indexable URL
- *   docs/sitemap.xml     both languages, cross-linked with hreflang
- *   docs/robots.txt      search + AI crawlers
- *   docs/llms.txt        plain-text summary for AI assistants
+ *   docs/index.html          Turkish, canonical root
+ *   docs/<lang>/index.html   every other language in LANGS, each its own indexable URL
+ *   docs/{,en/}{privacy,terms,ads-policy}.html   legal pages (Turkish + English only)
+ *   docs/sitemap.xml         every page, cross-linked with hreflang
+ *   docs/robots.txt          search + AI crawlers
+ *   docs/llms.txt            plain-text summary for AI assistants
  *
  * Why a generator: crawlers that don't execute JavaScript — Googlebot's first
  * pass, GPTBot, ClaudeBot, PerplexityBot — used to see empty <div>s where the
@@ -22,8 +24,9 @@
 const fs = require("fs");
 const path = require("path");
 const C = require("./content.js");
+const { validateLocale } = require("./tools/validate.js");
 
-const { SITE, LANGS, META, COPY, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink } = C;
+const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
 // Long-form legal prose, one module per document, each with tr + en.
 const LEGAL_COPY = {
@@ -34,6 +37,56 @@ const LEGAL_COPY = {
 
 const DOCS = path.join(__dirname, "docs");
 const BUILD_DATE = SITE.updated;
+const ALL = Object.keys(LANGS);
+
+/**
+ * Web fonts per writing system. Instrument Serif and Inter only cover Latin, so
+ * other scripts add a Noto family behind them: Latin runs inside the text (the
+ * name "Vakit", digits) keep the brand faces, the script itself falls through
+ * to Noto. `families` is appended to the Google Fonts css2 URL.
+ */
+const SCRIPTS = {
+  latin: {},
+  cyrillic: {
+    families: "Noto+Serif:ital@0;1",
+    serif: "'Instrument Serif', 'Noto Serif', Georgia, serif",
+  },
+  arabic: {
+    families: "Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Naskh Arabic', 'Geeza Pro', serif",
+    sans: "'Inter', 'Noto Sans Arabic', 'Geeza Pro', system-ui, sans-serif",
+  },
+  urdu: {
+    families: "Noto+Nastaliq+Urdu:wght@400;600&family=Noto+Naskh+Arabic:wght@400;500;600",
+    serif: "'Instrument Serif', 'Noto Nastaliq Urdu', serif",
+    sans: "'Inter', 'Noto Naskh Arabic', system-ui, sans-serif",
+  },
+  devanagari: {
+    families: "Noto+Serif+Devanagari:wght@400;500&family=Noto+Sans+Devanagari:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Serif Devanagari', serif",
+    sans: "'Inter', 'Noto Sans Devanagari', system-ui, sans-serif",
+  },
+  bengali: {
+    families: "Noto+Serif+Bengali:wght@400;500&family=Noto+Sans+Bengali:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Serif Bengali', serif",
+    sans: "'Inter', 'Noto Sans Bengali', system-ui, sans-serif",
+  },
+  thai: {
+    families: "Noto+Serif+Thai:wght@400;500&family=Noto+Sans+Thai:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Serif Thai', serif",
+    sans: "'Inter', 'Noto Sans Thai', system-ui, sans-serif",
+  },
+  chinese: {
+    families: "Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Serif SC', 'Songti SC', serif",
+    sans: "'Inter', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif",
+  },
+  japanese: {
+    families: "Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;600",
+    serif: "'Instrument Serif', 'Noto Serif JP', 'Hiragino Mincho ProN', serif",
+    sans: "'Inter', 'Noto Sans JP', 'Hiragino Sans', system-ui, sans-serif",
+  },
+};
 
 /* ---------------------------------------------------------------- helpers */
 
@@ -53,13 +106,32 @@ function t(lang, key) {
     .replace(/\{ratingCount\}/g, SITE.rating.count);
 }
 
-/** JSON-LD is embedded in HTML, so "<" must never close the script early. */
+/** JSON embedded in HTML: "<" must never close the script early. */
 const jsonLd = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
 
 const pad2 = (n) => String(n).padStart(2, "0");
 
-/** Language-aware path for a page that exists in both languages. */
+/** Language-aware path for a page. */
 const localUrl = (lang, file = "") => LANGS[lang].path + file;
+
+/** Legal pages exist in Turkish and English only; everyone else reads English. */
+const legalLang = (lang) => (LEGAL_LANGS.includes(lang) ? lang : "en");
+
+const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.webp`;
+
+function fontHead(lang) {
+  const s = SCRIPTS[LANGS[lang].script];
+  const extra = s.families ? `&family=${s.families}` : "";
+  const link = `<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700${extra}&display=swap" rel="stylesheet">`;
+  const vars = [s.serif && `--serif: ${s.serif}`, s.sans && `--sans: ${s.sans}`].filter(Boolean);
+  return vars.length ? `${link}\n    <style>:root { ${vars.join("; ")} }</style>` : link;
+}
+
+/** <html> attributes: language, direction, and a script class for typography. */
+function htmlAttrs(lang) {
+  const L = LANGS[lang];
+  return `lang="${L.htmlLang}"${L.rtl ? ' dir="rtl"' : ""} class="script-${L.script}"`;
+}
 
 /* ------------------------------------------------------------ structured data */
 
@@ -76,7 +148,7 @@ function appSchema(lang) {
     operatingSystem: SITE.operatingSystem,
     operatingSystemVersion: SITE.minOS,
     softwareVersion: SITE.appVersion,
-    inLanguage: [lang === "tr" ? "tr-TR" : "en-US"],
+    inLanguage: ALL.map((l) => LANGS[l].htmlLang),
     author: { "@type": "Person", name: SITE.author, url: SITE.authorUrl },
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     aggregateRating: {
@@ -87,7 +159,7 @@ function appSchema(lang) {
       worstRating: "1",
     },
     featureList: FEATURES[lang].map((f) => f.n),
-    screenshot: SHOWCASE[lang].map((s) => `${SITE.origin}/assets/screenshots/${lang}/${s.img}.webp`),
+    screenshot: SHOWCASE[lang].map((s) => SITE.origin + shotUrl(lang, s.img)),
     review: REVIEWS[lang].map((r) => ({
       "@type": "Review",
       name: r.t,
@@ -104,7 +176,7 @@ function siteSchema(lang) {
     "@type": "WebSite",
     name: META[lang].title,
     url: SITE.origin + LANGS[lang].path,
-    inLanguage: lang === "tr" ? "tr-TR" : "en-US",
+    inLanguage: LANGS[lang].htmlLang,
     publisher: { "@type": "Person", name: SITE.author, url: SITE.authorUrl },
   };
 }
@@ -121,7 +193,42 @@ function faqSchema(lang) {
   };
 }
 
+/** Everything script.js needs for the live clock, in the page's language. */
+function clockData(lang) {
+  return {
+    lang,
+    dateLocale: `${LANGS[lang].htmlLang}-u-ca-gregory-nu-latn`,
+    prayers: PRAYERS[lang],
+    cities: clockCities(lang).map(({ id, name, lat, lon, method }) => ({ id, name, lat, lon, method })),
+  };
+}
+
 /* ----------------------------------------------------------------- sections */
+
+function hreflangLinks(urlFor) {
+  return (
+    ALL.map((l) => `<link rel="alternate" hreflang="${LANGS[l].htmlLang}" href="${urlFor(l)}">`).join("\n    ") +
+    `\n    <link rel="alternate" hreflang="x-default" href="${urlFor("en")}">`
+  );
+}
+
+const GLOBE =
+  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg>';
+
+/** Language picker: plain links, so crawlers can reach every language from every page. */
+function langMenu(lang) {
+  const items = ALL.map((l) => {
+    const L = LANGS[l];
+    const attrs = l === lang ? ' aria-current="page"' : ` hreflang="${L.htmlLang}"`;
+    return `<li><a href="${L.path}" data-lang="${l}" lang="${L.htmlLang}" dir="${L.rtl ? "rtl" : "ltr"}"${attrs}>${esc(L.name)}</a></li>`;
+  }).join("\n        ");
+  return `<details class="lang-menu">
+      <summary aria-label="${esc(t(lang, "langLabel"))}">${GLOBE}<span>${esc(LANGS[lang].name)}</span></summary>
+      <ul class="lang-list">
+        ${items}
+      </ul>
+    </details>`;
+}
 
 function showcaseList(lang) {
   return SHOWCASE[lang]
@@ -135,13 +242,17 @@ function showcaseList(lang) {
     .join("\n");
 }
 
+/** Slot 0 is the preview video; the rest are screenshots in the page's language. */
 function showcaseScreens(lang) {
+  const v = LANGS[lang].video;
   return SHOWCASE[lang]
-    .map(
-      (item, i) =>
-        `        <img class="phone-screenshot${i === 0 ? " on" : ""}" data-i="${i}"` +
-        ` src="/assets/screenshots/${lang}/${item.img}.webp" alt="${esc(item.t)}"` +
-        ` width="390" height="844" loading="${i === 0 ? "eager" : "lazy"}">`
+    .map((item, i) =>
+      i === 0
+        ? `        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-${v}.mp4"` +
+          ` poster="/assets/video/sky-${v}-poster.webp" width="390" height="844"` +
+          ` muted loop playsinline autoplay preload="metadata" aria-label="${esc(t(lang, "videoLabel"))}"></video>`
+        : `        <img class="phone-screenshot" data-i="${i}" src="${shotUrl(lang, item.img)}" alt="${esc(item.t)}"` +
+          ` width="390" height="844" loading="lazy">`
     )
     .join("\n");
 }
@@ -203,10 +314,8 @@ function faqList(lang) {
 }
 
 function marquee(lang) {
-  const names =
-    lang === "tr"
-      ? ["İmsak", "Güneş", "Öğle", "İkindi", "Akşam", "Yatsı"]
-      : ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
+  const p = PRAYERS[lang];
+  const names = [p.Fajr, p.Sunrise, p.Dhuhr, p.Asr, p.Maghrib, p.Isha];
   const line = Array(3).fill(names.join(" · ")).join(" · ");
   return `<span>${esc(line)}</span><span>${esc(line)}</span>`;
 }
@@ -219,12 +328,15 @@ const APPLE_LOGO =
 function page(lang) {
   const L = LANGS[lang];
   const m = META[lang];
-  const other = lang === "tr" ? "en" : "tr";
   const canonical = SITE.origin + L.path;
   const ogImage = `${SITE.origin}/assets/app-icon-512x512.png`;
+  const legal = legalLang(lang);
+  const note = t(lang, "r-note");
+  // Split headings join with a space — except in Chinese and Japanese, which don't space words.
+  const gap = ["chinese", "japanese"].includes(L.script) ? "" : " ";
 
   return `<!DOCTYPE html>
-<html lang="${L.htmlLang}">
+<html ${htmlAttrs(lang)}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -256,7 +368,7 @@ function page(lang) {
     <meta property="og:image:alt" content="${esc(SITE.appName)}">
     <meta property="og:site_name" content="${esc(m.title)}">
     <meta property="og:locale" content="${L.ogLocale}">
-    <meta property="og:locale:alternate" content="${LANGS[other].ogLocale}">
+${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:alternate" content="${LANGS[l].ogLocale}">`).join("\n")}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
@@ -278,9 +390,7 @@ function page(lang) {
 
     <!-- Canonical + hreflang -->
     <link rel="canonical" href="${canonical}">
-    <link rel="alternate" hreflang="tr" href="${SITE.origin}${LANGS.tr.path}">
-    <link rel="alternate" hreflang="en" href="${SITE.origin}${LANGS.en.path}">
-    <link rel="alternate" hreflang="x-default" href="${SITE.origin}${LANGS.tr.path}">
+    ${hreflangLinks((l) => SITE.origin + LANGS[l].path)}
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -295,10 +405,8 @@ function page(lang) {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="/styles.css">
+    ${fontHead(lang)}
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -330,10 +438,7 @@ ${jsonLd(faqSchema(lang))}
   </div>
   <div class="nav-cta">
     <button class="nav-theme" id="themeToggle" aria-label="${esc(t(lang, "themeLabel"))}">☀</button>
-    <div class="nav-lang">
-      <a href="${LANGS.en.path}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
-      <a href="${LANGS.tr.path}" data-lang="tr"${lang === "tr" ? ' class="on" aria-current="page"' : ' hreflang="tr"'}>TR</a>
-    </div>
+    ${langMenu(lang)}
     <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
   </div>
   <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
@@ -345,7 +450,7 @@ ${jsonLd(faqSchema(lang))}
     <div class="eyebrow">${esc(t(lang, "eyebrow"))}</div>
     <h1>
       <span>${esc(t(lang, "h1a"))}</span><br>
-      <span>${esc(t(lang, "h1b"))}</span> <em>${esc(t(lang, "h1c"))}</em>
+      <span>${esc(t(lang, "h1b"))}</span>${gap}<em>${esc(t(lang, "h1c"))}</em>
     </h1>
     <p class="hero-sub">${esc(t(lang, "heroSub"))}</p>
     <div class="hero-actions">
@@ -362,7 +467,7 @@ ${jsonLd(faqSchema(lang))}
         <div class="proof-lbl">${esc(t(lang, "p1"))}</div>
       </div>
       <div class="proof">
-        <div class="proof-val">0 <span style="font-family:var(--sans); font-size:16px; color:var(--ink-3); font-weight:400">₺</span></div>
+        <div class="proof-val">0 <span class="proof-cur">${esc(L.currency)}</span></div>
         <div class="proof-lbl">${esc(t(lang, "p2"))}</div>
       </div>
       <div class="proof">
@@ -378,7 +483,7 @@ ${jsonLd(faqSchema(lang))}
 
   <aside class="clock-card">
     <div class="clock-top">
-      <span class="clock-loc" id="loc">${lang === "tr" ? "İstanbul" : "Istanbul"}</span>
+      <span class="clock-loc" id="loc">${esc(C.CITIES[lang][L.city])}</span>
       <span class="clock-date" id="date">—</span>
     </div>
     <div class="city-selector" id="citySelector"></div>
@@ -419,7 +524,7 @@ ${showcaseScreens(lang)}
   <div class="trust-inner">
     <div class="trust-eyebrow">${esc(t(lang, "trust-eye"))}</div>
     <h2>
-      <span>${esc(t(lang, "trust-h1"))}</span> <em>${esc(t(lang, "trust-h2"))}</em><br>
+      <span>${esc(t(lang, "trust-h1"))}</span>${gap}<em>${esc(t(lang, "trust-h2"))}</em><br>
       <span>${esc(t(lang, "trust-h3"))}</span>
     </h2>
     <p class="trust-lede">${esc(t(lang, "trust-lede"))}</p>
@@ -483,7 +588,7 @@ ${compareTable(lang)}
         <span>${esc(t(lang, "r-m2"))}</span>
       </div>
     </div>
-    <div class="t-grid" id="testGrid">
+${note ? `    <p class="t-note">${esc(note)}</p>\n` : ""}    <div class="t-grid" id="testGrid">
 ${reviewGrid(lang)}
     </div>
   </div>
@@ -502,7 +607,7 @@ ${faqList(lang)}
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/app-icon.png" alt="${esc(SITE.appName)}" width="88" height="88"></div>
-  <h2><span>${esc(t(lang, "fin-h1"))}</span> <em>${esc(t(lang, "fin-h2"))}</em></h2>
+  <h2><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
   <p>${esc(t(lang, "fin-p"))}</p>
   <div class="final-actions">
     <a href="${storeLink(`site-final-${lang}`)}" class="btn-primary">
@@ -519,9 +624,9 @@ ${faqList(lang)}
     ${esc(SITE.appName)}
   </div>
   <div class="foot-links">
-    <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
-    <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
-    <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
+    <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
+    <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
+    <a href="${localUrl(legal, "ads-policy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footAds"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
     <a href="/presentation.html">${esc(t(lang, "footDeck"))}</a>
     <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
@@ -530,6 +635,7 @@ ${faqList(lang)}
   <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
 </footer>
 
+<script id="vakit-data" type="application/json">${jsonLd(clockData(lang))}</script>
 <script src="/script.js"></script>
 </body>
 </html>
@@ -572,7 +678,7 @@ function legalPage(key, lang) {
     .join("\n");
 
   return `<!DOCTYPE html>
-<html lang="${L.htmlLang}">
+<html ${htmlAttrs(lang)}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -592,14 +698,14 @@ function legalPage(key, lang) {
     <link rel="canonical" href="${canonical}">
     <link rel="alternate" hreflang="tr" href="${SITE.origin}${localUrl("tr", file)}">
     <link rel="alternate" hreflang="en" href="${SITE.origin}${localUrl("en", file)}">
-    <link rel="alternate" hreflang="x-default" href="${SITE.origin}${localUrl("tr", file)}">
+    <link rel="alternate" hreflang="x-default" href="${SITE.origin}${localUrl("en", file)}">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    ${fontHead(lang)}
     <style>
 ${LEGAL_STYLE}
     </style>
@@ -680,25 +786,23 @@ ${sections}
 /* ------------------------------------------------------------ sitemap/robots */
 
 function sitemap() {
-  /** One <url> block per language, each listing both languages as alternates. */
-  const entry = (file, changefreq, priority) =>
-    ["tr", "en"]
-      .map(
-        (l) => `  <url>
-    <loc>${SITE.origin}${localUrl(l, file)}</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="${SITE.origin}${localUrl("tr", file)}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${SITE.origin}${localUrl("en", file)}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE.origin}${localUrl("tr", file)}"/>
+  const block = (loc, langs, urlFor, changefreq, priority) => `  <url>
+    <loc>${loc}</loc>
+${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLang}" href="${urlFor(l)}"/>`).join("\n")}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("en")}"/>
     <lastmod>${BUILD_DATE}</lastmod>
     <changefreq>${changefreq}</changefreq>
-    <priority>${l === "tr" ? priority.tr : priority.en}</priority>
-  </url>`
-      )
-      .join("\n");
+    <priority>${priority}</priority>
+  </url>`;
 
-  const home = entry("", "weekly", { tr: "1.0", en: "0.9" });
+  const homeUrl = (l) => SITE.origin + LANGS[l].path;
+  const home = ALL.map((l) => block(homeUrl(l), ALL, homeUrl, "weekly", l === "tr" ? "1.0" : l === "en" ? "0.9" : "0.8")).join("\n");
+
   const legal = Object.values(LEGAL)
-    .map((d) => entry(d.file, d.changefreq, { tr: d.priority, en: d.priority }))
+    .map((d) => {
+      const url = (l) => SITE.origin + localUrl(l, d.file);
+      return LEGAL_LANGS.map((l) => block(url(l), LEGAL_LANGS, url, d.changefreq, d.priority)).join("\n");
+    })
     .join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -747,6 +851,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 function llms() {
   const feats = FEATURES.en.map((f) => `- **${f.n}** — ${f.d}`).join("\n");
   const faqs = FAQ.en.map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n");
+  const langs = ALL.map((l) => `- [${LANGS[l].name}](${SITE.origin}${LANGS[l].path})`).join("\n");
 
   return `# Vakit — ${META.en.title}
 
@@ -768,6 +873,8 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
   user's own private iCloud. Only anonymous, non-identifying usage counts are sent.
 - **No account.** Nothing to sign up for.
+- **${ALL.length} interface languages**, right-to-left in Arabic, Urdu, Persian and Uyghur.
+  Content translations (Quran translation, hadith translations) are Turkish and English.
 
 ## Features
 
@@ -779,8 +886,10 @@ ${faqs}
 
 ## Pages
 
-- [Turkish home page](${SITE.origin}${LANGS.tr.path}) — canonical
-- [English home page](${SITE.origin}${LANGS.en.path})
+The home page exists in every interface language:
+
+${langs}
+
 - [Privacy policy](${SITE.origin}${localUrl("en", "privacy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "privacy.html")}))
 - [Terms of use](${SITE.origin}${localUrl("en", "terms.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "terms.html")}))
 - [Advertising policy](${SITE.origin}${localUrl("en", "ads-policy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "ads-policy.html")}))
@@ -796,49 +905,59 @@ function write(rel, body) {
   const file = path.join(DOCS, rel);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, body, "utf8");
-  console.log(`  ${rel.padEnd(20)} ${String(Buffer.byteLength(body, "utf8")).padStart(7)} bytes`);
+  console.log(`  ${rel.padEnd(24)} ${String(Buffer.byteLength(body, "utf8")).padStart(7)} bytes`);
 }
 
-function main() {
-  // Fail loudly rather than shipping a page that claims a removed feature.
-  for (const lang of Object.keys(LANGS)) {
-    if (FEATURES[lang].length !== FEATURES.tr.length) {
-      throw new Error(`FEATURES.${lang} has ${FEATURES[lang].length} entries, tr has ${FEATURES.tr.length}`);
-    }
-    if (FAQ[lang].length !== FAQ.tr.length) {
-      throw new Error(`FAQ.${lang} has ${FAQ[lang].length} entries, tr has ${FAQ.tr.length}`);
-    }
-    if (SHOWCASE[lang].length !== 9) {
-      throw new Error(`SHOWCASE.${lang} must have 9 entries (screenshots 1-9)`);
-    }
+/** Fail loudly rather than shipping a page with a missing string, feature or image. */
+function check() {
+  const errors = [];
+  for (const lang of ALL) {
+    if (lang === "en") continue;
+    const copy = { META: META[lang], COPY: COPY[lang], PRAYERS: PRAYERS[lang], CITIES: C.CITIES[lang],
+      FEATURES: FEATURES[lang], SHOWCASE: SHOWCASE[lang], COMPARE: COMPARE[lang], REVIEWS: REVIEWS[lang], FAQ: FAQ[lang] };
+    const { errors: e, warnings } = validateLocale(C, lang, copy);
+    errors.push(...e.map((x) => `${lang}: ${x}`));
+    warnings.forEach((w) => console.warn(`  warning ${lang}: ${w}`));
   }
-
+  for (const lang of ALL) {
+    const L = LANGS[lang];
+    for (const s of SHOWCASE[lang].slice(1)) {
+      if (!fs.existsSync(path.join(DOCS, shotUrl(lang, s.img)))) errors.push(`${lang}: missing ${shotUrl(lang, s.img)}`);
+    }
+    for (const f of [`sky-${L.video}.mp4`, `sky-${L.video}-poster.webp`]) {
+      if (!fs.existsSync(path.join(DOCS, "assets", "video", f))) errors.push(`${lang}: missing /assets/video/${f}`);
+    }
+    if (!SCRIPTS[L.script]) errors.push(`${lang}: unknown script "${L.script}"`);
+  }
   for (const key of Object.keys(LEGAL)) {
     const copy = LEGAL_COPY[key];
-    if (!copy) throw new Error(`No legal copy module for "${key}"`);
-    for (const lang of Object.keys(LANGS)) {
-      if (!copy[lang]) throw new Error(`legal/${key}.js is missing "${lang}"`);
-      if (copy[lang].sections.length !== copy.tr.sections.length) {
-        throw new Error(`legal/${key}.js: ${lang} has ${copy[lang].sections.length} sections, tr has ${copy.tr.sections.length}`);
+    if (!copy) errors.push(`No legal copy module for "${key}"`);
+    for (const lang of LEGAL_LANGS) {
+      if (!copy[lang]) errors.push(`legal/${key}.js is missing "${lang}"`);
+      else if (copy[lang].sections.length !== copy.tr.sections.length) {
+        errors.push(`legal/${key}.js: ${lang} has ${copy[lang].sections.length} sections, tr has ${copy.tr.sections.length}`);
       }
     }
   }
+  if (errors.length) throw new Error("Build check failed:\n  " + errors.join("\n  "));
+}
+
+function main() {
+  check();
 
   console.log("Building Vakit landing page...");
-  write("index.html", page("tr"));
-  write(path.join(LANGS.en.dir, "index.html"), page("en"));
+  for (const lang of ALL) write(path.join(LANGS[lang].dir, "index.html"), page(lang));
 
   for (const key of Object.keys(LEGAL)) {
-    write(LEGAL[key].file, legalPage(key, "tr"));
-    write(path.join(LANGS.en.dir, LEGAL[key].file), legalPage(key, "en"));
+    for (const lang of LEGAL_LANGS) write(path.join(LANGS[lang].dir, LEGAL[key].file), legalPage(key, lang));
   }
 
   write("sitemap.xml", sitemap());
   write("robots.txt", robots());
   write("llms.txt", llms());
   console.log(
-    `Done — ${FEATURES.tr.length} features, ${FAQ.tr.length} FAQ entries, ` +
-      `${Object.keys(LEGAL).length} legal documents, 2 languages.`
+    `Done — ${ALL.length} languages, ${FEATURES.tr.length} features, ${FAQ.tr.length} FAQ entries, ` +
+      `${Object.keys(LEGAL).length} legal documents.`
   );
 }
 

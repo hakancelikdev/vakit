@@ -27,6 +27,7 @@
   --p-maghrib: #E76F51;
   --p-isha: #264653;
 
+  /* Non-Latin pages override --serif/--sans from build.js (SCRIPTS). */
   --serif: 'Instrument Serif', 'Times New Roman', serif;
   --sans: 'Inter', system-ui, sans-serif;
   --mono: ui-rounded, 'SF Pro Rounded', -apple-system, 'Inter', system-ui, sans-serif;
@@ -163,9 +164,39 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .nav-lang a { padding: 4px 10px; border-radius: 999px; color: var(--ink-3); transition: all .2s }
 .nav-lang a:hover { color: var(--ink) }
 .nav-lang a.on { background: var(--ink); color: var(--bg) }
+
+/* language menu — every language, plain links (no JS needed to switch) */
+.lang-menu { position: relative }
+.lang-menu summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; gap: 7px;
+  height: 34px; padding: 0 13px;
+  border: 1px solid var(--rule); border-radius: 999px;
+  font-size: 13px; color: var(--ink-2);
+  transition: border-color .2s, color .2s;
+}
+.lang-menu summary::-webkit-details-marker { display: none }
+.lang-menu summary:hover, .lang-menu[open] summary { border-color: var(--ink); color: var(--ink) }
+.lang-menu summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.lang-list {
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 60;
+  list-style: none; padding: 6px;
+  display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 2px;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 14px;
+  box-shadow: 0 18px 40px -16px color-mix(in oklch, var(--ink) 30%, transparent);
+  max-height: min(70vh, 560px); overflow-y: auto;
+}
+.lang-list a {
+  display: block; padding: 8px 12px; border-radius: 8px;
+  font-family: system-ui, -apple-system, sans-serif; font-size: 14px; color: var(--ink-2);
+  white-space: nowrap; text-align: start;
+}
+.lang-list a:hover, .lang-list a:focus-visible { background: var(--bg-2); color: var(--ink); outline: none }
+.lang-list a[aria-current] { background: var(--ink); color: var(--bg) }
+
 .nav-dl {
   padding: 9px 18px; border: 1px solid var(--ink); border-radius: 999px; font-size: 13px; font-weight: 500;
-  transition: all .2s;
+  transition: all .2s; white-space: nowrap;
 }
 .nav-dl:hover { background: var(--ink); color: var(--bg) }
 .nav-toggle {
@@ -189,7 +220,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   color: var(--ink-3); margin-bottom: 32px;
   display: flex; align-items: center; gap: 12px;
 }
-.eyebrow::before { content: ""; display: block; width: 24px; height: 1px; background: var(--ink-3) }
+.eyebrow::before { content: ""; display: block; flex-shrink: 0; width: 24px; height: 1px; background: var(--ink-3) }
 .hero h1 {
   font-family: var(--serif);
   font-size: clamp(56px, 9vw, 140px);
@@ -226,6 +257,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .proof { display: flex; flex-direction: column; gap: 6px }
 .proof-val { font-family: var(--serif); font-size: 34px; color: var(--ink); line-height: 1 }
 .proof-val .star { color: var(--star); font-size: 28px; vertical-align: -1px }
+.proof-cur { font-family: var(--sans); font-size: 16px; color: var(--ink-3); font-weight: 400 }
 .proof-lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3) }
 
 /* live clock card in hero */
@@ -258,10 +290,11 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .city-btn.on { background: var(--accent); color: #fff; border-color: var(--accent) }
 
 .clock-next-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px }
-.clock-next-name { font-family: var(--serif); font-size: 36px; color: var(--ink); line-height: 1 }
+.clock-next-name { font-family: var(--serif); font-size: 36px; color: var(--ink); line-height: 1.1 }
 .clock-countdown {
   font-family: var(--mono); font-size: 28px; color: var(--ink); margin-top: 12px;
   letter-spacing: -0.02em; font-weight: 500;
+  direction: ltr; text-align: start; unicode-bidi: isolate;
 }
 .clock-countdown .sep { color: var(--ink-3) }
 .clock-bar-wrap { height: 3px; background: var(--rule-2); margin: 20px 0 24px; border-radius: 2px; overflow: hidden }
@@ -279,7 +312,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .clock-name .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule) }
 .clock-row.active .dot { background: var(--accent) }
 .clock-row.passed .dot { background: var(--rule-2) }
-.clock-t { font-family: var(--mono); font-size: 13px; letter-spacing: -0.01em }
+.clock-t { font-family: var(--mono); font-size: 13px; letter-spacing: -0.01em; direction: ltr; unicode-bidi: isolate }
 
 /* ---------- marquee sub-band ---------- */
 .marquee {
@@ -288,13 +321,14 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   padding: 18px 0;
 }
 .marquee-track {
-  display: flex; gap: 56px; white-space: nowrap;
+  display: flex; gap: 56px; white-space: nowrap; width: max-content;
   font-family: var(--serif); font-size: 20px; color: var(--ink-3);
   animation: slide 40s linear infinite; font-style: italic;
 }
 .marquee-track span { display: flex; align-items: center; gap: 56px }
 .marquee-track span::after { content: "\2726"; font-size: 13px; color: var(--accent) }
 @keyframes slide { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+@keyframes slide-rtl { from { transform: translateX(0) } to { transform: translateX(50%) } }
 
 /* ---------- section: showcase ---------- */
 .showcase {
@@ -312,7 +346,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .sc-item {
   display: grid; grid-template-columns: 48px 1fr 120px; align-items: start; gap: 20px;
   padding: 24px 0; border-top: 1px solid var(--rule-2); cursor: pointer;
-  transition: all .3s; width: 100%; text-align: left;
+  transition: all .3s; width: 100%; text-align: start;
 }
 .sc-item:last-child { border-bottom: 1px solid var(--rule-2) }
 .sc-item.on { padding: 28px 0 }
@@ -320,8 +354,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .sc-item.on .sc-num { color: var(--accent) }
 .sc-body h3 { font-family: var(--serif); font-size: 24px; line-height: 1.2; color: var(--ink); font-weight: 400; margin-bottom: 8px; letter-spacing: -0.01em }
 .sc-body p { font-size: 14px; color: var(--ink-3); line-height: 1.5; max-height: 0; overflow: hidden; transition: max-height .4s, margin .4s, opacity .4s; opacity: 0 }
-.sc-item.on .sc-body p { max-height: 100px; margin-top: 6px; opacity: 1 }
-.sc-tag { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-align: right; padding-top: 8px; text-transform: uppercase; letter-spacing: 0.06em }
+.sc-item.on .sc-body p { max-height: 220px; margin-top: 6px; opacity: 1 }
+.sc-tag { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-align: end; padding-top: 8px; text-transform: uppercase; letter-spacing: 0.06em }
 
 /* phone preview */
 .sc-phone-wrap { position: sticky; top: 120px; height: fit-content }
@@ -344,6 +378,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   opacity: 0; transition: opacity .4s;
 }
 .phone-screenshot.on { opacity: 1 }
+.phone-video { background: #20263a }
 
 /* ---------- emanet / trust ---------- */
 .trust {
@@ -356,7 +391,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   color: var(--ink-3); margin-bottom: 48px;
   display: flex; align-items: center; gap: 12px;
 }
-.trust-eyebrow::before { content: ""; display: block; width: 24px; height: 1px; background: var(--ink-3) }
+.trust-eyebrow::before { content: ""; display: block; flex-shrink: 0; width: 24px; height: 1px; background: var(--ink-3) }
 .trust h2 {
   font-family: var(--serif); font-size: clamp(48px, 8vw, 120px); line-height: 0.96; letter-spacing: -0.02em; max-width: 1000px; margin-bottom: 40px;
 }
@@ -382,21 +417,21 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .f-inner { max-width: 1280px; margin: 0 auto }
 .f-head { margin-bottom: 72px }
 .f-eye { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px }
-.f-eye::before { content: ""; display: block; width: 24px; height: 1px; background: var(--ink-3) }
+.f-eye::before { content: ""; display: block; flex-shrink: 0; width: 24px; height: 1px; background: var(--ink-3) }
 .f-head h2 { font-family: var(--serif); font-size: 72px; letter-spacing: -0.02em; line-height: 1.02 }
 .f-head h2 em { font-style: italic; color: var(--accent-ink) }
 .f-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--ink); border-left: 1px solid var(--rule);
+  border-top: 1px solid var(--ink); border-inline-start: 1px solid var(--rule);
 }
 .f-cell {
-  border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  border-inline-end: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
   padding: 28px 24px 32px; min-height: 180px;
   display: flex; flex-direction: column; gap: 12px;
   transition: background .2s;
 }
 .f-cell:hover { background: var(--bg-2) }
-.f-num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em }
+.f-num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em; direction: ltr }
 .f-name { font-family: var(--serif); font-size: 22px; line-height: 1.1; color: var(--ink); letter-spacing: -0.01em }
 .f-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; margin-top: auto }
 
@@ -418,8 +453,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 }
 .compare-cell { padding: 28px 28px; font-size: 15px; line-height: 1.5 }
 .compare-cell.feat { font-family: var(--serif); font-size: 22px; color: var(--ink); padding-top: 32px }
-.compare-cell.other { color: var(--ink-3); border-left: 1px solid var(--rule-2) }
-.compare-cell.vakit { color: var(--ink); border-left: 1px solid var(--rule-2); background: color-mix(in oklch, var(--accent) 4%, transparent) }
+.compare-cell.other { color: var(--ink-3); border-inline-start: 1px solid var(--rule-2) }
+.compare-cell.vakit { color: var(--ink); border-inline-start: 1px solid var(--rule-2); background: color-mix(in oklch, var(--accent) 4%, transparent) }
 .cmark { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase }
 .cmark.yes { color: var(--accent-ink) }
 .cmark.no { color: oklch(0.55 0.1 28) }
@@ -433,8 +468,9 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .t-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 64px; gap: 40px }
 .t-head h2 { font-family: var(--serif); font-size: 72px; line-height: 1.02; letter-spacing: -0.02em; max-width: 700px }
 .t-head h2 em { font-style: italic; color: var(--accent-ink) }
-.t-meta { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-align: right; letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0 }
+.t-meta { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-align: end; letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0 }
 .t-meta b { font-family: var(--serif); display: block; text-transform: none; letter-spacing: 0; font-size: 44px; color: var(--ink); font-weight: 400; margin-top: 4px }
+.t-note { font-size: 13px; color: var(--ink-3); margin: -40px 0 40px; font-style: italic }
 .t-grid { columns: 3; column-gap: 24px }
 .t-card {
   break-inside: avoid; background: var(--paper); border: 1px solid var(--rule);
@@ -454,7 +490,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .faq-list { border-top: 1px solid var(--ink) }
 .faq-item { border-bottom: 1px solid var(--rule) }
 .faq-q {
-  width: 100%; text-align: left;
+  width: 100%; text-align: start;
   padding: 28px 0; display: flex; justify-content: space-between; align-items: center; gap: 40px;
   font-family: var(--serif); font-size: 26px; color: var(--ink); letter-spacing: -0.01em; font-weight: 400;
   transition: color .2s;
@@ -468,7 +504,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .faq-item.on .faq-icon { background: var(--ink); color: var(--bg); transform: rotate(45deg); border-color: var(--ink) }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease }
 .faq-a-inner { padding: 0 0 32px; font-size: 16px; line-height: 1.6; color: var(--ink-2); max-width: 720px; font-weight: 300 }
-.faq-item.on .faq-a { max-height: 300px }
+/* Generous: the longest answers (languages, data) run long in some languages. */
+.faq-item.on .faq-a { max-height: 1400px }
 
 /* ---------- final cta ---------- */
 .final { padding: 160px 48px 120px; text-align: center; position: relative }
@@ -495,9 +532,45 @@ footer {
 }
 .foot-brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 20px }
 .foot-mark-img { width: 26px; height: 26px; border-radius: 22%; object-fit: cover; box-shadow: 0 2px 6px -2px rgba(42, 157, 143, 0.4) }
-.foot-links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-3); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em }
+.foot-links { display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 13px; color: var(--ink-3); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em }
 .foot-links a:hover { color: var(--ink) }
 .foot-sig { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em }
+
+/* ==========================================================================
+   Scripts & direction
+   ========================================================================== */
+
+/* Right-to-left pages (ar, fa, ur, ug). Layout mirrors through flex/grid and
+   logical properties above; what's left is motion and the few things that
+   must stay left-to-right (clock digits). */
+[dir="rtl"] .marquee-track { animation-name: slide-rtl }
+/* Numbers read left to right ("01 / 45", "02:14:37") but sit on the right. */
+[dir="rtl"] :is(.f-num, .clock-countdown) { text-align: right }
+
+/* Scripts without italics or case: italics are faked (slanted glyphs), and
+   tracking breaks joined letters (Arabic) or looks wrong (CJK, Indic, Thai).
+   The accent colour alone carries the emphasis. */
+html:not(.script-latin):not(.script-cyrillic) em,
+html:not(.script-latin):not(.script-cyrillic) .marquee-track { font-style: normal }
+html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !important }
+
+/* Tall scripts: the Latin display line-heights (0.94–1.02) clip marks above and
+   below the line. :where() keeps these at base specificity so the per-script
+   rules below (Urdu) win. */
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.hero h1, .trust h2, .final h2) { line-height: 1.2 }
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2) { line-height: 1.25 }
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.hero-sub, .sc-lede, .trust-lede, .compare-lede, .faq-a-inner, .final p) { line-height: 1.7 }
+
+/* Nastaliq (Urdu) needs far more vertical room than any other script, and
+   reads large at display sizes. */
+.script-urdu :is(.hero h1, .trust h2, .final h2) { line-height: 2.15; font-size: clamp(34px, 5vw, 76px) }
+.script-urdu :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2) { line-height: 2.1; font-size: clamp(30px, 4vw, 56px) }
+.script-urdu :is(.sc-body h3, .trust-cell h3, .f-name, .t-title, .faq-q, .compare-cell.feat, .clock-next-name) { line-height: 2 }
+
+/* CJK: a calmer size for dense glyphs, and break headings between phrases
+   rather than between any two characters. */
+:is(.script-chinese, .script-japanese) .hero h1 { font-size: clamp(34px, 7vw, 112px) }
+:is(.script-chinese, .script-japanese) :is(h1, h2, h3) { word-break: auto-phrase }
 
 /* ==========================================================================
    Responsive
@@ -527,6 +600,7 @@ footer {
   .sc-phone-wrap { position: static; order: -1 }
   .phone { width: 260px }
   .compare-row { grid-template-columns: 1.5fr 2fr 2fr }
+  .nav-links { gap: 20px }
 }
 
 @media (max-width: 768px) {
@@ -542,6 +616,10 @@ footer {
   .nav-links.open { display: flex }
   .nav-toggle { display: flex }
   .nav-dl { display: none }
+  .nav-cta { gap: 10px }
+  .lang-menu summary span { display: none }
+  .lang-menu summary { width: 34px; padding: 0; justify-content: center }
+  .lang-list { position: fixed; top: 64px; inset-inline: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)) }
 
   .hero { padding: 40px 20px 60px }
   .hero h1 { font-size: 48px; line-height: 1 }
@@ -578,7 +656,8 @@ footer {
   .testimonials { padding: 80px 20px }
   .t-head { flex-direction: column; align-items: start }
   .t-head h2 { font-size: 40px }
-  .t-meta { text-align: left }
+  .t-meta { text-align: start }
+  .t-note { margin: -32px 0 32px }
   .t-grid { columns: 1 }
 
   .faq { padding: 80px 20px }
@@ -594,6 +673,10 @@ footer {
     gap: 20px;
   }
   .foot-links { flex-wrap: wrap; justify-content: center; gap: 16px }
+
+  :where(html:not(.script-latin):not(.script-cyrillic)) .hero h1 { line-height: 1.25 }
+  .script-urdu .hero h1 { font-size: 32px; line-height: 2.2 }
+  .script-urdu :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2, .trust h2, .final h2) { font-size: 28px }
 }
 
 @media (max-width: 480px) {
@@ -608,4 +691,9 @@ footer {
   .trust-cell h3 { font-size: 24px }
   .compare h2 { font-size: 36px }
   .faq h2 { font-size: 36px }
+  .script-urdu .hero h1 { font-size: 30px }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none }
 }

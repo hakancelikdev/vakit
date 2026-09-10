@@ -1,19 +1,21 @@
 /**
- * Üretilen sayfaların App Store linklerini doğrular.
+ * Üretilen sayfaları doğrular.
  *
  * Çalıştırma: npm test  (önce build koşar — testler docs/ çıktısını okur)
  *
- * ⚠️ Bu testlerin varlık sebebi: `pt` (provider token) olmadan `ct` (kampanya) Apple
- * tarafında SESSİZCE sayılmaz ve hata da vermez. Yanlış kurulmuş bir link yalnızca
- * hiç görünmez — o yüzden kural teste bağlandı.
+ * ⚠️ App Store link testlerinin varlık sebebi: `pt` (provider token) olmadan `ct`
+ * (kampanya) Apple tarafında SESSİZCE sayılmaz ve hata da vermez. Yanlış kurulmuş bir
+ * link yalnızca hiç görünmez — o yüzden kural teste bağlandı.
  */
 const test = require("node:test");
 const assert = require("node:assert");
 const fs = require("fs");
+const path = require("path");
 const C = require("./content.js");
 
-const TR = fs.readFileSync("docs/index.html", "utf8");
-const EN = fs.readFileSync("docs/en/index.html", "utf8");
+const LANGS = Object.keys(C.LANGS);
+const html = (lang) => fs.readFileSync(path.join("docs", C.LANGS[lang].dir, "index.html"), "utf8");
+const TR = html("tr");
 
 test("storeLink kampanyasız düz link döndürür", () => {
   assert.strictEqual(C.storeLink(), "https://apps.apple.com/app/id6748356813");
@@ -25,15 +27,43 @@ test("storeLink pt VE ct taşır", () => {
   assert.strictEqual(url.searchParams.get("ct"), "site-hero-tr");
 });
 
-for (const [lang, html] of [["tr", TR], ["en", EN]]) {
+for (const lang of LANGS) {
+  const page = html(lang);
+
   test(`${lang}: kullanıcıya görünen linklerin hepsi kampanyalı`, () => {
-    const bare = html.match(/href="https:\/\/apps\.apple\.com\/app\/id6748356813"/g) || [];
+    const bare = page.match(/href="https:\/\/apps\.apple\.com\/app\/id6748356813"/g) || [];
     assert.strictEqual(bare.length, 0, `kampanyasız href sayısı: ${bare.length}`);
   });
 
   test(`${lang}: beklenen kampanya token'ları sayfada`, () => {
     for (const slot of ["site-nav", "site-hero", "site-final"]) {
-      assert.ok(html.includes(`ct=${slot}-${lang}`), `${slot}-${lang} yok`);
+      assert.ok(page.includes(`ct=${slot}-${lang}`), `${slot}-${lang} yok`);
+    }
+  });
+
+  test(`${lang}: dil, yön ve hreflang doğru`, () => {
+    const L = C.LANGS[lang];
+    assert.ok(page.includes(`<html lang="${L.htmlLang}"${L.rtl ? ' dir="rtl"' : ""}`), "html lang/dir yanlış");
+    const alternates = page.match(/<link rel="alternate" hreflang=/g) || [];
+    assert.strictEqual(alternates.length, LANGS.length + 1, "her dil + x-default olmalı");
+    assert.ok(page.includes(`<link rel="canonical" href="${C.SITE.origin}${L.path}">`), "canonical yanlış");
+  });
+
+  test(`${lang}: dil menüsü her dile bağlanıyor`, () => {
+    for (const other of LANGS) {
+      assert.ok(page.includes(`href="${C.LANGS[other].path}" data-lang="${other}"`), `${other} bağlantısı yok`);
+    }
+  });
+
+  test(`${lang}: yasal bağlantılar var olan sayfaya gidiyor`, () => {
+    for (const m of page.matchAll(/href="(\/(?:[a-z]+\/)?(?:privacy|terms|ads-policy)\.html)"/g)) {
+      assert.ok(fs.existsSync(path.join("docs", m[1])), `${m[1]} yok`);
+    }
+  });
+
+  test(`${lang}: vitrin görselleri ve video diskte`, () => {
+    for (const m of page.matchAll(/(?:src|poster)="(\/assets\/(?:screenshots|video)\/[^"]+)"/g)) {
+      assert.ok(fs.existsSync(path.join("docs", m[1])), `${m[1]} yok`);
     }
   });
 }
@@ -50,4 +80,17 @@ test("JSON-LD linkinde ct YOK — yapısal veriye kampanya token'ı girmez", () 
 test("llms.txt linki kampanyalı — AI kaynaklı trafiğin tek ölçüm noktası", () => {
   const llms = fs.readFileSync("docs/llms.txt", "utf8");
   assert.ok(llms.includes("ct=llms-txt"), "llms.txt kampanyasız");
+});
+
+test("sitemap her dilin ana sayfasını içeriyor", () => {
+  const map = fs.readFileSync("docs/sitemap.xml", "utf8");
+  for (const lang of LANGS) assert.ok(map.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}</loc>`), `${lang} yok`);
+});
+
+test("language-detection.js desteklenen dil listesi LANGS ile aynı", () => {
+  const js = fs.readFileSync("docs/language-detection.js", "utf8");
+  const m = js.match(/var supported = \[([^\]]+)\]/);
+  assert.ok(m, "supported listesi bulunamadı");
+  const list = m[1].match(/'([a-z]+)'/g).map((s) => s.slice(1, -1));
+  assert.deepStrictEqual([...list].sort(), [...LANGS].sort());
 });
