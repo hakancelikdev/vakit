@@ -117,7 +117,7 @@ module.exports = {
     { t: "Limoore ndee, e juuɗe mon.", d: "Limoowo jikru e tasbiiha ɓaawo juulde; jikru heɓaaɗi, jikru mon keeriiɗo e faandaare ñalawma." },
   ],
   COMPARE: [
-    { f: "Publisite", o: "Publisite kaziino e ko haanaani, hollaaɗe sara loowdi diine.", v: "Publisite alaa hannde." },
+    { f: "Publisite", o: "Publisite kaziino e ko haanaani, hollaaɗe sara loowdi diine.", v: "Publisite alaa fey. Tan si aɗon njiɗi wallude Vakit, aɗon waawi suɓaade yiyde publisite." },
     { f: "Suturaa", o: "Keɓe nokku yeeyaaɗe e tataɓe (ina anndaa e jaayndeeji).", v: "Koordone ina heddoo e telefoŋ mon. Ƴeewndagol alaa." },
     { f: "Tawa enterneet alaa", o: "Kuutorɗe mawɗe ina naamnoo enterneet.", v: "Juulde, Alqibla, Alkur'aana, Jikru — fof ina golloo hay so enterneet alaa." },
     { f: "Ecraŋ Sokaaɗo", o: "Widget ina bonna so iOS hesɗitinaama.", v: "Live Activity, Dynamic Island, StandBy — fof ina jaɓaa." },

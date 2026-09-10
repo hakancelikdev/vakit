@@ -117,7 +117,7 @@ module.exports = {
     { t: "Hitungan di genggaman.", d: "Penghitung zikir dan tasbih setelah salat; zikir siap pakai, zikir buatanmu, dan target harian." },
   ],
   COMPARE: [
-    { f: "Iklan", o: "Iklan kasino dan iklan tak pantas, tampil di samping konten agama.", v: "Saat ini tanpa iklan." },
+    { f: "Iklan", o: "Iklan kasino dan iklan tak pantas, tampil di samping konten agama.", v: "Sepenuhnya bebas iklan. Satu-satunya pengecualian: kalau kamu ingin mendukung Vakit, kamu bisa memilih menonton iklan." },
     { f: "Privasi", o: "Data lokasi dijual ke pihak ketiga (sudah diberitakan media).", v: "Koordinat tetap di ponselmu. Tanpa pelacakan." },
     { f: "Offline", o: "Fitur utama butuh koneksi internet.", v: "Salat, kiblat, Al-Qur'an, zikir — semua jalan offline." },
     { f: "Layar Terkunci", o: "Widget rusak setiap kali iOS diperbarui.", v: "Aktivitas Langsung, Dynamic Island, StandBy — semuanya didukung." },

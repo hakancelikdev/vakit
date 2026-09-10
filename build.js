@@ -819,7 +819,8 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 ## What makes it different
 
 - **Free, with no paywall today.** No subscription, no "premium" tier, no locked features.
-- **No ads.** Nothing is sold beside religious content.
+- **Completely ad-free.** No screen shows an ad. The one exception is opt-in: a user who
+  wants to support the app can choose to watch an ad.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 13 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.

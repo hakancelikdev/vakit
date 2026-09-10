@@ -123,7 +123,7 @@ module.exports = {
   ],
 
   COMPARE: [
-    { f: "Matangazo", o: "Matangazo ya kasino na yasiyofaa, kando ya maudhui ya dini.", v: "Hakuna matangazo kwa sasa." },
+    { f: "Matangazo", o: "Matangazo ya kasino na yasiyofaa, kando ya maudhui ya dini.", v: "Bila matangazo kabisa. Isipokuwa jambo moja tu: ukitaka kuiunga mkono Vakit, unaweza kuchagua kutazama tangazo." },
     { f: "Faragha", o: "Data za mahali ulipo huuzwa kwa watu wengine (imeripotiwa hadharani).", v: "Viwianishi vinabaki kwenye simu yako. Hakuna ufuatiliaji." },
     { f: "Bila intaneti", o: "Vipengele vya msingi vinahitaji intaneti.", v: "Swala, Kibla, Qurani, Dhikri — vyote bila intaneti." },
     { f: "Skrini ya Kufuli", o: "Wijeti huharibika kila iOS inaposasishwa.", v: "Shughuli Hai, Dynamic Island, StandBy — vyote vinatumika." },

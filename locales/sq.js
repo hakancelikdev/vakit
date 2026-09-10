@@ -118,7 +118,7 @@ module.exports = {
     { t: "Numërimi, në dorën tuaj.", d: "Numëruesi i dhikrit dhe tesbihati pas namazit; dhikër të gatshëm, dhikri juaj dhe një synim ditor." },
   ],
   COMPARE: [
-    { f: "Reklamat", o: "Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.", v: "Sot pa reklama." },
+    { f: "Reklamat", o: "Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.", v: "Plotësisht pa reklama. I vetmi përjashtim: nëse doni ta mbështetni Vakit, mund të zgjidhni vetë të shikoni një reklamë." },
     { f: "Privatësia", o: "Të dhëna vendndodhjeje të shitura palëve të treta (u raportua publikisht).", v: "Koordinatat mbeten në telefonin tuaj. Pa gjurmim." },
     { f: "Pa internet", o: "Veçoritë bazë kërkojnë lidhje me internetin.", v: "Namazi, kibla, Kurani, dhikri — të gjitha punojnë pa internet." },
     { f: "Ekrani i kyçjes", o: "Widget-et prishen nga një përditësim i iOS te tjetri.", v: "Live Activity, Dynamic Island, StandBy — të gjitha të mbështetura." },

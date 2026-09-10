@@ -117,7 +117,7 @@ module.exports = {
     { t: "Immer griffbereit.", d: "Ein Dhikr-Zähler und die Tasbihat nach dem Gebet; Vorlagen, eigene Dhikr und ein Tagesziel." },
   ],
   COMPARE: [
-    { f: "Werbung", o: "Casino- und unpassende Werbung direkt neben religiösen Inhalten.", v: "Derzeit keine Werbung." },
+    { f: "Werbung", o: "Casino- und unpassende Werbung direkt neben religiösen Inhalten.", v: "Komplett werbefrei. Einzige Ausnahme: Wenn du Vakit unterstützen möchtest, kannst du freiwillig eine Werbung ansehen." },
     { f: "Datenschutz", o: "Standortdaten an Dritte verkauft (öffentlich berichtet).", v: "Koordinaten bleiben auf deinem Telefon. Kein Tracking." },
     { f: "Offline", o: "Grundfunktionen brauchen eine Internetverbindung.", v: "Gebet, Qibla, Koran, Dhikr – alles funktioniert offline." },
     { f: "Sperrbildschirm", o: "Widgets gehen bei iOS-Updates kaputt.", v: "Live-Aktivität, Dynamic Island, StandBy – alles unterstützt." },

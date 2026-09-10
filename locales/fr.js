@@ -117,7 +117,7 @@ module.exports = {
     { t: "Le compte toujours en main.", d: "Un compteur de dhikr et les tasbihat après la prière\u00a0; dhikr prêts à l'emploi, les tiens et un objectif quotidien." },
   ],
   COMPARE: [
-    { f: "Publicité", o: "Publicités de casino et inappropriées, affichées à côté de contenus religieux.", v: "Aucune publicité aujourd'hui." },
+    { f: "Publicité", o: "Publicités de casino et inappropriées, affichées à côté de contenus religieux.", v: "Entièrement sans publicité. Seule exception\u00a0: si tu veux soutenir Vakit, tu peux choisir de regarder une publicité." },
     { f: "Confidentialité", o: "Données de localisation vendues à des tiers (révélé par la presse).", v: "Les coordonnées restent sur ton téléphone. Aucun pistage." },
     { f: "Hors ligne", o: "Les fonctions essentielles exigent une connexion Internet.", v: "Prière, Qibla, Coran, dhikr\u00a0: tout fonctionne hors ligne." },
     { f: "Écran verrouillé", o: "Les widgets cassent au fil des mises à jour d'iOS.", v: "Activité en direct, Dynamic Island, En veille\u00a0: tout est pris en charge." },

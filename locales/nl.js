@@ -117,7 +117,7 @@ module.exports = {
     { t: "De telling in de hand.", d: "Een dhikr-teller en de tesbihat na het gebed; sjablonen, je eigen dhikr en een dagdoel." },
   ],
   COMPARE: [
-    { f: "Advertenties", o: "Casino- en ongepaste advertenties naast religieuze inhoud.", v: "Nu geen advertenties." },
+    { f: "Advertenties", o: "Casino- en ongepaste advertenties naast religieuze inhoud.", v: "Volledig reclamevrij. Enige uitzondering: wil je Vakit steunen, dan kun je er zelf voor kiezen een advertentie te bekijken." },
     { f: "Privacy", o: "Locatiegegevens verkocht aan derden (in de media verschenen).", v: "Coördinaten blijven op je telefoon. Geen tracking." },
     { f: "Offline", o: "Basisfuncties hebben internet nodig.", v: "Gebed, qibla, Koran, dhikr – alles werkt offline." },
     { f: "Toegangsscherm", o: "Widgets gaan stuk bij iOS-updates.", v: "Live activiteit, Dynamic Island, StandBy – allemaal ondersteund." },

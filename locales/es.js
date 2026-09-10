@@ -117,7 +117,7 @@ module.exports = {
     { t: "La cuenta, siempre a mano.", d: "Contador de dhikr y tasbihat tras la oración; dhikr predefinidos, los tuyos propios y una meta diaria." },
   ],
   COMPARE: [
-    { f: "Publicidad", o: "Anuncios de casinos e inapropiados junto a contenido religioso.", v: "Hoy, sin anuncios." },
+    { f: "Publicidad", o: "Anuncios de casinos e inapropiados junto a contenido religioso.", v: "Totalmente sin anuncios. La única excepción: si quieres apoyar a Vakit, puedes elegir ver un anuncio." },
     { f: "Privacidad", o: "Datos de ubicación vendidos a terceros (salió en la prensa).", v: "Las coordenadas se quedan en tu teléfono. Sin rastreo." },
     { f: "Sin conexión", o: "Las funciones básicas necesitan internet.", v: "Oración, alquibla, Corán, dhikr: todo funciona sin conexión." },
     { f: "Pantalla bloqueada", o: "Los widgets fallan de una actualización de iOS a otra.", v: "Actividad en vivo, Dynamic Island, StandBy: todo compatible." },

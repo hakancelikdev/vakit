@@ -117,7 +117,7 @@ module.exports = {
     { t: "Kiraan dalam genggaman.", d: "Pengira zikir dan tasbih selepas solat; zikir sedia ada, zikir anda sendiri dan sasaran harian." },
   ],
   COMPARE: [
-    { f: "Iklan", o: "Iklan kasino dan iklan tidak sesuai, dipaparkan di sebelah kandungan agama.", v: "Tiada iklan buat masa ini." },
+    { f: "Iklan", o: "Iklan kasino dan iklan tidak sesuai, dipaparkan di sebelah kandungan agama.", v: "Bebas iklan sepenuhnya. Satu-satunya pengecualian: jika anda ingin menyokong Vakit, anda boleh memilih untuk menonton iklan." },
     { f: "Privasi", o: "Data lokasi dijual kepada pihak ketiga (dilaporkan media).", v: "Koordinat kekal dalam telefon anda. Tiada penjejakan." },
     { f: "Luar talian", o: "Ciri utama memerlukan sambungan internet.", v: "Solat, kiblat, Al-Quran, zikir — semuanya berfungsi luar talian." },
     { f: "Skrin Kunci", o: "Widget rosak setiap kali iOS dikemas kini.", v: "Aktiviti Langsung, Dynamic Island, StandBy — semuanya disokong." },

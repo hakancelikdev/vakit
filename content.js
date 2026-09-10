@@ -398,7 +398,7 @@ const SHOWCASE = {
 
 const COMPARE = {
   tr: [
-    { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Şu an reklam yok." },
+    { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Tamamen reklamsız. Tek istisna: destek olmak isteyen, kendi isteğiyle bir reklam izleyebilir." },
     { f: "Gizlilik", o: "Üçüncü taraflara satılan konum verisi (basına yansıdı).", v: "Koordinatlar telefonunuzda kalır. Takip yok." },
     { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz, Kıble, Kur'an, Zikir — hepsi çevrimdışı." },
     { f: "Kilit Ekranı", o: "Widget'lar iOS güncellemelerinde bozulur.", v: "Live Activity, Dynamic Island, StandBy — tamamı destekli." },
@@ -408,7 +408,7 @@ const COMPARE = {
     { f: "Maliyet", o: "Paywall, abonelik, 'premium' seviyeler.", v: "Şu an ücretsiz. Seviye yok, upsell yok." },
   ],
   en: [
-    { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "No ads today." },
+    { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "Completely ad-free. The one exception: if you want to support Vakit, you can choose to watch an ad." },
     { f: "Privacy", o: "Location data sold to third parties (publicly reported).", v: "Coordinates stay on your phone. No tracking." },
     { f: "Offline", o: "Core features require an internet connection.", v: "Prayer, Qibla, Quran, Dhikr — all work offline." },
     { f: "Lock Screen", o: "Widgets break between iOS updates.", v: "Live Activity, Dynamic Island, StandBy — all supported." },

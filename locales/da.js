@@ -117,7 +117,7 @@ module.exports = {
     { t: "Tællingen i hånden.", d: "En dhikr-tæller og tasbihat efter bønnen; skabeloner, dine egne dhikr og et dagligt mål." },
   ],
   COMPARE: [
-    { f: "Reklamer", o: "Casino- og upassende reklamer lige ved siden af religiøst indhold.", v: "Ingen reklamer i dag." },
+    { f: "Reklamer", o: "Casino- og upassende reklamer lige ved siden af religiøst indhold.", v: "Helt uden reklamer. Eneste undtagelse: vil du støtte Vakit, kan du selv vælge at se en reklame." },
     { f: "Privatliv", o: "Placeringsdata solgt til tredjeparter (omtalt i medierne).", v: "Koordinaterne bliver på din telefon. Ingen sporing." },
     { f: "Offline", o: "Grundfunktioner kræver internetforbindelse.", v: "Bøn, qibla, Koranen, dhikr – alt virker offline." },
     { f: "Låst skærm", o: "Widgets går i stykker ved iOS-opdateringer.", v: "Live-aktivitet, Dynamic Island, StandBy – alt understøttet." },

@@ -118,7 +118,7 @@ module.exports = {
     { t: "A contagem sempre à mão.", d: "Contador de dhikr e tasbihat depois da oração; dhikr predefinidos, os teus próprios dhikr e uma meta diária." },
   ],
   COMPARE: [
-    { f: "Publicidade", o: "Anúncios de casinos e inapropriados ao lado de conteúdo religioso.", v: "Hoje, sem anúncios." },
+    { f: "Publicidade", o: "Anúncios de casinos e inapropriados ao lado de conteúdo religioso.", v: "Totalmente sem anúncios. A única exceção: se quiseres apoiar o Vakit, podes optar por ver um anúncio." },
     { f: "Privacidade", o: "Dados de localização vendidos a terceiros (noticiado na imprensa).", v: "As coordenadas ficam no teu telemóvel. Sem rastreio." },
     { f: "Offline", o: "As funcionalidades essenciais precisam de ligação à internet.", v: "Oração, Qibla, Alcorão, dhikr — tudo funciona offline." },
     { f: "Ecrã bloqueado", o: "Os widgets avariam de uma atualização do iOS para a outra.", v: "Atividade Ao Vivo, Dynamic Island, StandBy — tudo suportado." },

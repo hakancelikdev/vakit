@@ -117,7 +117,7 @@ module.exports = {
     { t: "Sayğac əlinizdə.", d: "Zikr sayğacı və namazdan sonra təsbihat; hazır zikrlər, öz zikrləriniz və gündəlik hədəf." },
   ],
   COMPARE: [
-    { f: "Reklam", o: "Dini məzmunun yanında kazino və yersiz reklamlar.", v: "Hazırda reklam yoxdur." },
+    { f: "Reklam", o: "Dini məzmunun yanında kazino və yersiz reklamlar.", v: "Tamamilə reklamsızdır. Yeganə istisna: dəstək olmaq istəsəniz, öz istəyinizlə bir reklam izləyə bilərsiniz." },
     { f: "Məxfilik", o: "Üçüncü tərəflərə satılan məkan məlumatı (mətbuatda yazıldı).", v: "Koordinatlar telefonunuzda qalır. İzləmə yoxdur." },
     { f: "Oflayn", o: "Əsas funksiyalar internet tələb edir.", v: "Namaz, qiblə, Quran, zikr — hamısı oflayn." },
     { f: "Kilid ekranı", o: "Vidjetlər iOS yeniləmələrində xarab olur.", v: "Live Activity, Dynamic Island, StandBy — hamısı dəstəklənir." },
