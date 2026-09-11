@@ -45,6 +45,7 @@ Hand-maintained files in `docs/`:
 | `script.js` | Interactivity only: live prayer clock, showcase switching + video, FAQ accordion, theme, language menu, mobile menu |
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
+| `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
 | `404.html` | Standalone page, not generated |
 
 The hero's live clock fetches times from the public Aladhan API. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
@@ -99,6 +100,6 @@ The site describes `VakitApp-Swift`. After every App Store release, check `Vakit
 
 - new user-facing features → `FEATURES`, and `FAQ` if they raise an obvious question
 - removed features → delete from `FEATURES`
-- `SITE.appVersion`, `SITE.minOS`, `SITE.operatingSystem` → match the release
+- `SITE.appVersion`, `SITE.minOS` (per platform: iOS · watchOS · macOS deployment targets), `SITE.operatingSystem` → match the release
 - platform changes (e.g. Mac support) → `META` descriptions and the `fin-p` copy
 - new App Store screenshots or preview video → `./tools/import-media.sh`, then rebuild
