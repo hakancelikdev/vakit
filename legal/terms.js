@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         "t": "3. Ücretsiz Kullanım & Opsiyonel Bağışlar",
-        "b": "Vakit'in tüm temel özellikleri ücretsizdir. Reklam göstermez (yalnızca isteğe bağlı \"Sadaka Modu\"nda kullanıcının kendi başlattığı ödüllü video reklamlar hariç).\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir.\n• Tüketilebilir (consumable) ürünlerdir; bağış karşılığında uygulama içi ek özellik veya abonelik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple\\'ın geçerli ödeme şartları ve App Store kuralları geçerlidir."
+        "b": "Vakit'in tüm temel özellikleri ücretsizdir. Reklam göstermez (yalnızca isteğe bağlı \"Sadaka Modu\"nda kullanıcının kendi başlattığı ödüllü video reklamlar hariç).\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir.\n• Tüketilebilir (consumable) ürünlerdir; bağış karşılığında uygulama içi ek özellik veya abonelik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple'ın geçerli ödeme şartları ve App Store kuralları geçerlidir."
       },
       {
         "t": "4. Sadaka Modu (Ödüllü Reklam)",
@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         "t": "5. Apple Watch Companion Uygulaması",
-        "b": "Vakit, watchOS 9+ üzerinde namaz vakitleri, kıble pusulası ve komplikasyonlar sunan bir companion uygulama içerir. Watch uygulamasının kullanımı bu Şartlara tabidir. Apple Watch donanım sınırlamaları (GPS doğruluğu, pusula sapması, batarya) nedeniyle Watch sonuçları iPhone\\'dan farklılık gösterebilir."
+        "b": "Vakit, watchOS 9+ üzerinde namaz vakitleri, kıble pusulası ve komplikasyonlar sunan bir companion uygulama içerir. Watch uygulamasının kullanımı bu Şartlara tabidir. Apple Watch donanım sınırlamaları (GPS doğruluğu, pusula sapması, batarya) nedeniyle Watch sonuçları iPhone'dan farklılık gösterebilir."
       },
       {
         "t": "6. Kullanıcı Sorumlulukları",
@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         "t": "8. Fikri Mülkiyet",
-        "b": "Uygulamadaki kod ve tasarım Hakan Çelik'e aittir; uygulama MIT lisansı altında açık kaynaklıdır.\n\nVakit, üçüncü taraf içerik ve kütüphaneleri saygıyla kullanır:\n• Kur'an-ı Kerim Arapça metni: kamuya açık (public domain)\n• Türkçe meal: Diyanet İşleri Başkanlığı Meali\n• Hadis koleksiyonları: kamuya açık tasniflerden derlenmiştir\n• Kur'an okuma sesleri: ilgili sanatçıların izinleri ve lisansları AUDIO-LICENSES.md\\'de listelenmiştir\n• Adhan, SwiftAA, GRDB.swift: ilgili açık kaynak lisansları\n\nUygulama, ezan ve tilavet seslerini yalnızca dini ibadet maksadıyla kullanır."
+        "b": "Uygulamadaki kod ve tasarım Hakan Çelik'e aittir; uygulama MIT lisansı altında açık kaynaklıdır.\n\nVakit, üçüncü taraf içerik ve kütüphaneleri saygıyla kullanır:\n• Kur'an-ı Kerim Arapça metni: kamuya açık (public domain)\n• Türkçe meal: Diyanet İşleri Başkanlığı Meali\n• Hadis koleksiyonları: kamuya açık tasniflerden derlenmiştir\n• Kur'an okuma sesleri: ilgili sanatçıların izinleri ve lisansları AUDIO-LICENSES.md'de listelenmiştir\n• Adhan, SwiftAA, GRDB.swift: ilgili açık kaynak lisansları\n\nUygulama, ezan ve tilavet seslerini yalnızca dini ibadet maksadıyla kullanır."
       },
       {
         "t": "9. Sorumluluk Sınırlaması",
@@ -82,7 +82,7 @@ module.exports = {
       },
       {
         "t": "3. Free Use & Optional Donations",
-        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Vakit'i Yaşat\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple\\'s payment terms and App Store rules apply."
+        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Vakit'i Yaşat\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple's payment terms and App Store rules apply."
       },
       {
         "t": "4. Sadaka Mode (Rewarded Ad)",

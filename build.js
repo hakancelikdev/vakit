@@ -28,7 +28,7 @@ const { validateLocale } = require("./tools/validate.js");
 
 const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
-// Long-form legal prose, one module per document, each with tr + en.
+// Long-form legal prose: the Turkish + English originals, one module per document.
 const LEGAL_COPY = {
   privacy: require("./legal/privacy.js"),
   terms: require("./legal/terms.js"),
@@ -38,6 +38,18 @@ const LEGAL_COPY = {
 const DOCS = path.join(__dirname, "docs");
 const BUILD_DATE = SITE.updated;
 const ALL = Object.keys(LANGS);
+
+// Every other language: all three documents translated from English, one module
+// per language (legal/i18n/<lang>.js). A missing file is reported by check().
+const LEGAL_ORIGINAL_LANGS = ["tr", "en"];
+const LEGAL_I18N = Object.fromEntries(
+  LEGAL_LANGS.filter((l) => !LEGAL_ORIGINAL_LANGS.includes(l)).map((l) => {
+    const file = path.join(__dirname, "legal", "i18n", `${l}.js`);
+    return [l, fs.existsSync(file) ? require(file) : null];
+  })
+);
+const legalCopy = (key, lang) => LEGAL_COPY[key][lang] || LEGAL_I18N[lang]?.[key];
+const legalMeta = (key, lang) => LEGAL[key][lang] || LEGAL_I18N[lang]?.[key]?.meta;
 
 const { SCRIPTS, fontHref, joinsWithoutSpace } = require("./tools/fonts.js");
 
@@ -611,6 +623,8 @@ ${faqList(lang)}
 const LEGAL_STYLE = `      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
       .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
       .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+      .legal-notice { font-size: 14px; line-height: 1.6; color: var(--ink-3); border-inline-start: 2px solid var(--accent-ink); padding-inline-start: 14px; margin-bottom: 28px }
+      .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
       .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
@@ -618,6 +632,7 @@ const LEGAL_STYLE = `      .legal-page { padding: 120px 48px 80px; max-width: 86
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
       .legal-contact a:hover { color: var(--ink) }
+      :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
       @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }`;
 
 /** Heading markup: most documents ship it as HTML, ads-policy as two parts. */
@@ -628,12 +643,21 @@ function legalHeading(doc) {
 
 function legalPage(key, lang) {
   const L = LANGS[lang];
-  const meta = LEGAL[key][lang];
-  const doc = LEGAL_COPY[key][lang];
+  const meta = legalMeta(key, lang);
+  const doc = legalCopy(key, lang);
   const file = LEGAL[key].file;
   const nav = doc.nav || {};
   const canonical = SITE.origin + localUrl(lang, file);
   const home = localUrl(lang);
+  const isOriginal = LEGAL_ORIGINAL_LANGS.includes(lang);
+  // A translation says so, and points at the English text that applies.
+  const notice = isOriginal
+    ? ""
+    : `\n  <p class="legal-notice">${esc(LEGAL_I18N[lang].notice)} <a href="${localUrl("en", file)}" hreflang="en" lang="en">English</a></p>`;
+  const alternates = LEGAL_LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${LANGS[l].htmlLang}" href="${SITE.origin}${localUrl(l, file)}">`
+  ).join("\n    ");
+  const currentLang = isOriginal ? "" : `<a class="on" aria-current="page">${esc(lang.toUpperCase())}</a>\n      `;
 
   const sections = doc.sections
     .map((s) => `  <div class="legal-card"><h3>${esc(s.t)}</h3><p>${esc(s.b)}</p></div>`)
@@ -660,8 +684,7 @@ function legalPage(key, lang) {
     <meta name="twitter:title" content="${esc(meta.title)}">
     <meta name="twitter:description" content="${esc(meta.description)}">
     <link rel="canonical" href="${canonical}">
-    <link rel="alternate" hreflang="tr" href="${SITE.origin}${localUrl("tr", file)}">
-    <link rel="alternate" hreflang="en" href="${SITE.origin}${localUrl("en", file)}">
+    ${alternates}
     <link rel="alternate" hreflang="x-default" href="${SITE.origin}${localUrl("en", file)}">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -689,7 +712,7 @@ ${LEGAL_STYLE}
   </div>
   <div class="nav-cta">
     <div class="nav-lang">
-      <a href="${localUrl("en", file)}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
+      ${currentLang}<a href="${localUrl("en", file)}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
       <a href="${localUrl("tr", file)}" data-lang="tr"${lang === "tr" ? ' class="on" aria-current="page"' : ' hreflang="tr"'}>TR</a>
     </div>
     <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(nav.download || t(lang, "download"))}</a>
@@ -698,7 +721,7 @@ ${LEGAL_STYLE}
 </nav>
 
 <main class="legal-page">
-  <h1>${legalHeading(doc)}</h1>
+  <h1>${legalHeading(doc)}</h1>${notice}
   <p class="legal-desc">${esc(doc.desc)}</p>
 ${sections}
   <div class="legal-contact">
@@ -892,14 +915,22 @@ function check() {
     if (!fs.existsSync(path.join(DOCS, ogUrl(lang)))) errors.push(`${lang}: missing ${ogUrl(lang)} — run node tools/make-og.js`);
     if (!SCRIPTS[L.script]) errors.push(`${lang}: unknown script "${L.script}"`);
   }
+  for (const [lang, mod] of Object.entries(LEGAL_I18N)) {
+    if (!mod) errors.push(`legal/i18n/${lang}.js is missing`);
+    else if (!mod.notice) errors.push(`legal/i18n/${lang}.js has no "notice"`);
+  }
   for (const key of Object.keys(LEGAL)) {
     const copy = LEGAL_COPY[key];
     if (!copy) errors.push(`No legal copy module for "${key}"`);
     for (const lang of LEGAL_LANGS) {
-      if (!copy[lang]) errors.push(`legal/${key}.js is missing "${lang}"`);
-      else if (copy[lang].sections.length !== copy.tr.sections.length) {
-        errors.push(`legal/${key}.js: ${lang} has ${copy[lang].sections.length} sections, tr has ${copy.tr.sections.length}`);
+      const doc = legalCopy(key, lang);
+      const src = LEGAL_ORIGINAL_LANGS.includes(lang) ? `legal/${key}.js` : `legal/i18n/${lang}.js`;
+      if (!doc) errors.push(`${src} is missing "${key}" for "${lang}"`);
+      else if (doc.sections.length !== copy.tr.sections.length) {
+        errors.push(`${src}: ${key} has ${doc.sections.length} sections, tr has ${copy.tr.sections.length}`);
       }
+      const meta = legalMeta(key, lang);
+      if (!meta || !meta.title || !meta.description) errors.push(`${src}: ${key} has no <head> title/description`);
     }
   }
   if (errors.length) throw new Error("Build check failed:\n  " + errors.join("\n  "));

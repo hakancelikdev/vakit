@@ -61,6 +61,19 @@ for (const lang of LANGS) {
     }
   });
 
+  // App Store her dilin gizlilik linkini o dilin sayfasına verir (2026-09-11).
+  test(`${lang}: yasal sayfalar kendi dilinde`, () => {
+    for (const f of ["privacy.html", "terms.html", "ads-policy.html"]) {
+      const href = C.LANGS[lang].path + f;
+      assert.ok(page.includes(`href="${href}"`), `${href} bağlantısı yok`);
+      const legal = fs.readFileSync(path.join("docs", href), "utf8");
+      assert.ok(legal.includes(`lang="${C.LANGS[lang].htmlLang}"`), `${href} o dilde değil`);
+      if (!["tr", "en"].includes(lang)) {
+        assert.ok(legal.includes('class="legal-notice"'), `${href}: "İngilizce metin geçerlidir" notu yok`);
+      }
+    }
+  });
+
   test(`${lang}: paylaşım kartı (og:image) o dilin kartı ve diskte`, () => {
     const m = page.match(/<meta property="og:image" content="([^"]+)">/);
     assert.ok(m, "og:image yok");

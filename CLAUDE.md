@@ -30,7 +30,7 @@ Page copy lives in **`content.js`** (Turkish + English, page metadata, language 
 | `docs/index.html` | Turkish landing page — canonical, served at `/` |
 | `docs/<lang>/index.html` | every other language, served at `/<lang>/` (`LANGS[*].path`) |
 | `docs/{privacy,terms,ads-policy}.html` | Turkish legal pages |
-| `docs/en/{privacy,terms,ads-policy}.html` | English legal pages |
+| `docs/<lang>/{privacy,terms,ads-policy}.html` | the same three documents in every other language |
 | `docs/sitemap.xml` | every page, cross-linked with hreflang |
 | `docs/robots.txt` | search + AI crawler rules |
 | `docs/llms.txt` | plain-text app summary for AI assistants |
@@ -66,14 +66,14 @@ Two other things follow from the generator, and both are the point:
 
 `LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → web fonts in `build.js` `SCRIPTS`), screenshot and video source, the clock's home city and the currency next to the "0" price. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
 
-- **Legal pages exist in Turkish and English only** (binding texts). Other languages link to English.
+- **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, all three documents + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
 - **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
 
 ### Editing content
 
 1. Landing page → `content.js` (`COPY`, `FEATURES`, `SHOWCASE`, `COMPARE`, `REVIEWS`, `FAQ`, `META`, `PRAYERS`, `CITIES`) **and the same entry in every `locales/*.js`**.
-   Legal text → `legal/privacy.js`, `legal/terms.js`, `legal/ads-policy.js`; their `<head>` metadata → `LEGAL` in `content.js`.
+   Legal text → `legal/privacy.js`, `legal/terms.js`, `legal/ads-policy.js` (tr + en; `<head>` metadata → `LEGAL` in `content.js`) **and the same change in every `legal/i18n/*.js`**.
 2. `build.js` throws if any language is missing a key or a list has a different length than English — a feature added to Turkish/English cannot silently skip a language.
 3. Bump `SITE.updated` (drives sitemap `lastmod`).
 4. Run `npm run build` and commit the regenerated files.

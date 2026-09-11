@@ -88,9 +88,11 @@ const LANGS = {
   zh: { name: "简体中文", htmlLang: "zh-Hans", ogLocale: "zh_CN", path: "/zh/", dir: "zh", script: "chinese", shots: "zh", video: "en", city: "beijing", currency: "¥" },
 };
 
-// Legal documents are binding texts and exist only in Turkish and English.
-// Every other language links to the English version.
-const LEGAL_LANGS = ["tr", "en"];
+// Every language has its own legal pages (owner's decision, 2026-09-11 — the App
+// Store listing links each language to its own privacy policy). Turkish and English
+// are the originals (legal/*.js); the rest are translations of the English text
+// (legal/i18n/<lang>.js) and each says the English version applies if they differ.
+const LEGAL_LANGS = Object.keys(LANGS);
 
 /**
  * Cities for the live prayer clock in the hero. `method` is the Aladhan
@@ -492,7 +494,8 @@ const FAQ = {
 };
 
 // Legal pages. The prose lives in legal/<key>.js (tr + en); this is the
-// per-language <head> metadata and the sitemap entry for each.
+// per-language <head> metadata and the sitemap entry for each. Translations
+// carry their own metadata in legal/i18n/<lang>.js (`<key>.meta`).
 const LEGAL = {
   privacy: {
     file: "privacy.html",

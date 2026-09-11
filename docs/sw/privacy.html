@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="sw" class="script-latin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vakit — Sera ya Faragha</title>
+    <meta name="description" content="Sera ya faragha ya Vakit. Hakuna akaunti inayohitajika, hakuna viwianishi vya GPS vinavyokusanywa; kumbukumbu za hitima na alamisho husawazishwa kupitia Apple iCloud yako mwenyewe pekee.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Hakan Çelik">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vakit.hakancelik.dev/sw/privacy.html">
+    <meta property="og:title" content="Vakit — Sera ya Faragha">
+    <meta property="og:description" content="Sera ya faragha ya Vakit. Hakuna akaunti inayohitajika, hakuna viwianishi vya GPS vinavyokusanywa; kumbukumbu za hitima na alamisho husawazishwa kupitia Apple iCloud yako mwenyewe pekee.">
+    <meta property="og:image" content="https://vakit.hakancelik.dev/assets/og/sw.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="sw_KE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vakit — Sera ya Faragha">
+    <meta name="twitter:description" content="Sera ya faragha ya Vakit. Hakuna akaunti inayohitajika, hakuna viwianishi vya GPS vinavyokusanywa; kumbukumbu za hitima na alamisho husawazishwa kupitia Apple iCloud yako mwenyewe pekee.">
+    <link rel="canonical" href="https://vakit.hakancelik.dev/sw/privacy.html">
+    <link rel="alternate" hreflang="tr" href="https://vakit.hakancelik.dev/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://vakit.hakancelik.dev/en/privacy.html">
+    <link rel="alternate" hreflang="ar" href="https://vakit.hakancelik.dev/ar/privacy.html">
+    <link rel="alternate" hreflang="az" href="https://vakit.hakancelik.dev/az/privacy.html">
+    <link rel="alternate" hreflang="bn" href="https://vakit.hakancelik.dev/bn/privacy.html">
+    <link rel="alternate" hreflang="da" href="https://vakit.hakancelik.dev/da/privacy.html">
+    <link rel="alternate" hreflang="de" href="https://vakit.hakancelik.dev/de/privacy.html">
+    <link rel="alternate" hreflang="es" href="https://vakit.hakancelik.dev/es/privacy.html">
+    <link rel="alternate" hreflang="fa" href="https://vakit.hakancelik.dev/fa/privacy.html">
+    <link rel="alternate" hreflang="ff" href="https://vakit.hakancelik.dev/ff/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://vakit.hakancelik.dev/fr/privacy.html">
+    <link rel="alternate" hreflang="hi" href="https://vakit.hakancelik.dev/hi/privacy.html">
+    <link rel="alternate" hreflang="id" href="https://vakit.hakancelik.dev/id/privacy.html">
+    <link rel="alternate" hreflang="it" href="https://vakit.hakancelik.dev/it/privacy.html">
+    <link rel="alternate" hreflang="ja" href="https://vakit.hakancelik.dev/ja/privacy.html">
+    <link rel="alternate" hreflang="ms" href="https://vakit.hakancelik.dev/ms/privacy.html">
+    <link rel="alternate" hreflang="nl" href="https://vakit.hakancelik.dev/nl/privacy.html">
+    <link rel="alternate" hreflang="pt" href="https://vakit.hakancelik.dev/pt/privacy.html">
+    <link rel="alternate" hreflang="ru" href="https://vakit.hakancelik.dev/ru/privacy.html">
+    <link rel="alternate" hreflang="sq" href="https://vakit.hakancelik.dev/sq/privacy.html">
+    <link rel="alternate" hreflang="sw" href="https://vakit.hakancelik.dev/sw/privacy.html">
+    <link rel="alternate" hreflang="th" href="https://vakit.hakancelik.dev/th/privacy.html">
+    <link rel="alternate" hreflang="ug" href="https://vakit.hakancelik.dev/ug/privacy.html">
+    <link rel="alternate" hreflang="ur" href="https://vakit.hakancelik.dev/ur/privacy.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vakit.hakancelik.dev/zh/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://vakit.hakancelik.dev/en/privacy.html">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
+      .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
+      .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+      .legal-notice { font-size: 14px; line-height: 1.6; color: var(--ink-3); border-inline-start: 2px solid var(--accent-ink); padding-inline-start: 14px; margin-bottom: 28px }
+      .legal-notice a { color: var(--accent-ink); text-decoration: underline }
+      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
+      .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
+      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
+      .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
+      .legal-contact a { color: var(--accent-ink); transition: color .2s }
+      .legal-contact a:hover { color: var(--ink) }
+      :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
+      @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { /* storage blocked: stay on the light default */ }
+      })();
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/sw/" class="nav-brand">
+    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">Vakit</div>
+  </a>
+  <div class="nav-links">
+    <a href="/sw/#showcase">Vipengele</a>
+    <a href="/sw/#trust">Amana</a>
+    <a href="/sw/#faq">Maswali</a>
+  </div>
+  <div class="nav-cta">
+    <div class="nav-lang">
+      <a class="on" aria-current="page">SW</a>
+      <a href="/en/privacy.html" data-lang="en" hreflang="en">EN</a>
+      <a href="/privacy.html" data-lang="tr" hreflang="tr">TR</a>
+    </div>
+    <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-nav-sw" class="nav-dl">Pakua</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menyu">&#8801;</button>
+</nav>
+
+<main class="legal-page">
+  <h1>Sera ya <em>Faragha</em></h1>
+  <p class="legal-notice">Ukurasa huu ni tafsiri iliyotolewa kwa urahisi wako; ikiwa unatofautiana na toleo la Kiingereza, toleo la Kiingereza ndilo litakalotumika. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
+  <p class="legal-desc">Ilisasishwa mwisho: 10 Septemba 2026 — Toleo 1.7.4
+
+Vakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi taarifa zinazoweza kukutambulisha binafsi (jina, barua pepe, simu, picha, anwani za mawasiliano). Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa kikamilifu ndani ya kifaa chako. Maendeleo yako ya hitima, alamisho, malengo na misikiti uipendayo hubaki ndani ya kifaa chako na husawazishwa tu ndani ya akaunti yako mwenyewe ya Apple iCloud — hayatumwi kamwe kwenye seva zetu. Orodha yako ya dhikri ndiyo tofauti: hutumwa kwenye seva zetu pamoja na takwimu za matumizi ili tuweze kuboresha programu (ona sehemu ya 1). Kila kinachotumwa kwenye seva zetu kimeunganishwa na msimbo wa kudumu wa mtumiaji usio na taarifa zozote za utambulisho.</p>
+  <div class="legal-card"><h3>1. Data Tunazokusanya</h3><p>Data AMBAZO HATUKUSANYI:
+• Jina, barua pepe, simu, picha, maikrofoni, kamera, anwani za mawasiliano
+• Viwianishi vya GPS (latitudo/longitudo) – havitumwi kamwe kwenye seva zetu
+• Taarifa za kuingia kwenye akaunti (Vakit haina mfumo wa akaunti)
+
+Data zinazohifadhiwa ndani ya kifaa chako na kusawazishwa ndani ya nafasi yako binafsi ya iCloud:
+• Kumbukumbu za dhikri, maendeleo ya hitima, malengo ya ibada
+• Alamisho za Qurani na hadithi, historia ya usomaji
+• Vihesabu vya kukamilisha sura, hali ya sehemu za hadithi
+• Daftari zako za swala za kadhaa na funga za kadhaa
+• Alama zako za siku za udhuru
+• Misikiti uipendayo
+• Mapendeleo ya programu (lugha, njia ya kukokotoa, mipangilio ya arifa, mandhari)
+
+Data zinazotumwa kwenye seva zetu — zimeunganishwa na msimbo wa kudumu wa mtumiaji usio na taarifa zozote za utambulisho (ni jina bandia, si data isiyotambulika kabisa):
+• Mahali pa kikanda (nchi, jiji, wilaya) – SI viwianishi vya GPS
+• Modeli ya kifaa, toleo la iOS/macOS, toleo la programu, toleo la watchOS
+• Mapendeleo ya programu (lugha, njia ya kukokotoa, mandhari, madhehebu, aina ya kalenda, jinsia uliyochagua kwa mwongozo wa swala, swala zipi unazotaka kupata arifa, na mapendeleo yako ya usomaji wa Qurani na hadithi — ukubwa wa maandishi, tafsiri, msomaji, hati). Mahali ulipofikia katika usomaji na historia yako ya usomaji HAVIJUMUISHWI.
+• Takwimu za matumizi ya vipengele (kutazamwa kwa skrini, matumizi ya vipengele). Takwimu hizi huonyesha kuwa sehemu fulani ilitumika — kwa mfano kuwa siku ya udhuru iliwekewa alama au kuwa swala ya kadhaa iliingizwa. Daftari lenyewe (orodha ya kumbukumbu zako) halitumwi. Kinachotumwa ni ukweli kwamba kitendo hicho kilifanyika pamoja na baadhi ya namba — kwa mfano swala uliyoiwekea alama, idadi zako za ibada za kila siku, kadhaa iliyobaki kwako, namba ya aya au hadithi uliyohifadhi; kama kila takwimu, hubeba muhuri wa muda.
+• Maandishi ya utafutaji unaofanya ndani ya programu (utafutaji wa Qurani, hadithi, dhikri, Majina Mazuri ya Allah, misikiti na mipangilio) – hukusanywa ili tuone ni maneno yapi yanashindwa kukupatia unachotafuta na turekebishe utafutaji; huhifadhiwa hadi herufi 80 tu.
+• Orodha yako ya dhikri – jina la dhikri, aina, kundi na vihesabu; ikijumuisha maandishi ya Kiarabu, maelezo na chanzo unavyoingiza kwa dhikri unazoongeza mwenyewe. Hukusanywa ili kuona ni dhikri zipi zinatumika na mara ngapi, ili sehemu ya dhikri iboreshwe.
+• Ripoti za kuanguka kwa programu (kupitia Firebase Crashlytics, hazina data binafsi)
+
+Kwa kuwa msimbo huu wa mtumiaji husawazishwa kupitia iCloud Keychain, vifaa vyenye Apple ID moja huhesabiwa kama mtumiaji mmoja na msimbo hubaki hata ukifuta na kusakinisha programu upya. Msimbo hauna data yoyote ya utambulisho; data yako haiuzwi kamwe wala haitumiki kwa matangazo.</p></div>
+  <div class="legal-card"><h3>2. Jinsi Tunavyotumia Data Yako</h3><p>• Kukokotoa Nyakati za Swala – Mahali huchakatwa ndani ya kifaa chako na nyakati hukokotolewa bila mtandao kwa maktaba ya Adhan.
+• Mwelekeo wa Kibla – Mahali na mwelekeo wa dira huunganishwa ndani ya kifaa.
+• Jina la Mahali – Ili kuonyesha jina la mahali ulipo, viwianishi vyako hutumwa kwa huduma ya majina ya mahali ya Apple; si kwa seva za Vakit.
+• Vikumbusho vya Ibada – Arifa za ndani hupangwa ndani ya kifaa na iOS na macOS.
+• Matangazo – Matangazo ya siku za baraka na ya matoleo mapya hutumwa kwa wote kupitia Firebase Cloud Messaging; hakuna ulengaji wa mtu binafsi.
+• Khutba ya Ijumaa – Khutba ya wiki hii hupakuliwa kutoka ukurasa wa umma wa Diyanet (Idara ya Mambo ya Dini ya Uturuki); ombi hilo halibebi taarifa yoyote ya utambulisho.
+• Misikiti Iliyo Karibu – Mahali ulipo hutumwa kwa Apple MapKit (kutafuta misikiti, umbali, maelekezo); si kwa seva za Vakit.
+• Data ya Mtumiaji (dhikri, hitima, alamisho) – Huhifadhiwa ndani ya kifaa kwa Core Data na husawazishwa ndani ya nafasi yako binafsi ya Apple iCloud. Kati ya hizi, ni orodha ya dhikri pekee inayotumwa pia kwenye seva ya Vakit (ona sehemu ya 1).
+• Uendelezaji na Uboreshaji – Takwimu za matumizi (bila viwianishi vya GPS) hutumika kufuatilia utendaji na kugundua hitilafu.</p></div>
+  <div class="legal-card"><h3>3. Usawazishaji wa iCloud (CloudKit)</h3><p>Vakit husawazisha kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) kati ya vifaa vyako kupitia CloudKit ya Apple. Data hii:
+• Hukaa tu katika hifadhidata binafsi ya Apple ID yako mwenyewe.
+• Husimbwa kwa njia fiche kwenye miundombinu ya Apple; sisi, wafanyakazi wa Apple na watu wa tatu hatuwezi kuifikia.
+• Husawazishwa kiotomatiki kati ya iPhone, iPad, Mac na Apple Watch.
+• Hubaki kwenye kifaa chako pekee ukizima iCloud.
+• Huondolewa kwenye vifaa vyako vyote unapotumia “Futa Akaunti” au kuondoa data ya Vakit kutoka iCloud.
+
+Maelezo: apple.com/legal/privacy</p></div>
+  <div class="legal-card"><h3>4. Data ya Apple Watch na Mac</h3><p>Vakit ina programu shirikishi kwenye watchOS 9+. Kwenye Watch:
+• Ruhusa ya mahali hutolewa kwenye Watch kivyake; ikiwa Vakit imesakinishwa kwenye iPhone, mahali hupokelewa kupitia WatchConnectivity, vinginevyo GPS ya Watch hutumika.
+• Kihisi cha dira huchakatwa ndani ya kifaa kwa ajili ya kibla; hakitumwi kamwe kwenye seva.
+• Hatusomi data ya Afya (HealthKit), shughuli wala mapigo ya moyo.
+• Arifa huakisiwa kutoka iPhone kupitia uakisi wa arifa wa iOS; Watch ikifanya kazi peke yake, hupanga arifa zake za ndani yenyewe.
+
+Kwenye Mac (macOS 13+):
+• Programu ya Mac ni programu ileile iliyo kwenye iPhone; data yako bado huhifadhiwa ndani ya kifaa na kusawazishwa ndani ya iCloud yako binafsi.
+• Mac haina kifaa cha dira, kwa hiyo hakuna dira ya kibla ya moja kwa moja; mwelekeo na umbali hukokotolewa kutoka mahali ulipo na kuonyeshwa kwa maandishi.
+• Taarifa za mahali kwenye Mac hutoka kwenye huduma za mahali zinazotegemea Wi-Fi badala ya GPS, na vilevile hazitumwi kamwe kwenye seva zetu.
+• Ruhusa ya arifa na mipangilio ya arifa ni ya kila kifaa; kuzibadilisha kwenye Mac hakuathiri iPhone yako.</p></div>
+  <div class="legal-card"><h3>5. Huduma za Watu wa Tatu</h3><p>Vakit hutumia huduma zifuatazo kwa malengo maalum. Hakuna hata moja inayohusishwa na utambulisho wako binafsi:
+
+• Apple iCloud / CloudKit – Usawazishaji wa data ya mtumiaji (katika nafasi yako binafsi ya iCloud).
+• Apple MapKit – Misikiti iliyo karibu, ramani na maelekezo (mahali hutumwa kwa Apple).
+• Firebase Crashlytics (Google) – Ripoti za kuanguka kwa programu bila data ya utambulisho (stack trace, modeli ya kifaa, toleo la iOS/macOS).
+• Firebase Remote Config (Google) – Kuwasha au kuzima vipengele kwa mbali na kuvisambaza hatua kwa hatua (haisomi data kutoka kwenye kifaa).
+• Google AdMob – Kwa ajili ya kuonyesha matangazo ya video yenye zawadi katika “Hali ya Sadaka” ya hiari pekee. Maelezo hapa chini.
+• Apple StoreKit 2 – Michango ya hiari (IAP). Maelezo ya malipo huchakatwa na Apple; Vakit haioni kamwe data ya kadi.
+• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Matangazo ya siku za baraka na ya matoleo mapya. Matangazo hayo hutumwa kwa wote kwa mada; hakuna ulengaji wa mtu binafsi.
+• Diyanet (dinhizmetleri.diyanet.gov.tr) – Maandishi na sauti ya khutba ya Ijumaa.
+• Seva ya Vakit (Ujerumani, Frankfurt) – Takwimu za matumizi na orodha yako ya dhikri, zilizounganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Kumbukumbu zako za hitima, alamisho, malengo na usomaji hazitumwi kamwe huko.
+
+Kumbuka: Firebase Analytics HAITUMIKI; kitambulisho cha matangazo (IDFA) hakikusanywi.
+
+Sera ya faragha ya Google: policies.google.com/privacy</p></div>
+  <div class="legal-card"><h3>6. Matangazo (Hali ya Sadaka)</h3><p>Vakit haionyeshi matangazo. Ni katika “Hali ya Sadaka” ya hiari pekee, ikiwa mtumiaji ataianzisha mwenyewe waziwazi ili kumsaidia msanidi, ndipo tangazo la video lenye zawadi huonyeshwa kupitia Google AdMob. Katika hali hiyo:
+• Tangazo hutolewa na Google AdMob; daima halijabinafsishwa na limepangwa kwa hadhira ya jumla (G). Vakit haionyeshi kamwe ombi la App Tracking Transparency, na kitambulisho cha matangazo (IDFA) hakishirikiwi.
+• Kituo cha Msaada (“Iendeleze Vakit”) kinapofunguliwa, SDK ya matangazo huanza na kupakia tangazo moja mapema; hakuna tangazo linaloonyeshwa isipokuwa ukichagua kulitazama.
+• Hali ya Sadaka inaweza kuzimwa kwa mbali kupitia Firebase Remote Config; unaweza pia kuchagua kutoitumia kamwe.
+
+Faragha ya Google AdMob: support.google.com/admob/answer/6128543</p></div>
+  <div class="legal-card"><h3>7. Michango (Manunuzi Ndani ya Programu)</h3><p>Vakit ni bure. Ili kumsaidia msanidi, unaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:
+• Huchakatwa na Apple StoreKit 2; maelezo ya malipo (kadi, IBAN, Apple Pay) hutumwa kwa Apple pekee.
+• Vakit haioni wala haihifadhi kamwe njia yako ya malipo au taarifa zako za kifedha.
+• Marejesho ya fedha yanaweza kuombwa kupitia Apple pekee (reportaproblem.apple.com).</p></div>
+  <div class="legal-card"><h3>8. Muda wa Kuhifadhi Data</h3><p>• Data ya ndani ya kifaa – Huhifadhiwa hadi utakapofuta programu.
+• Data ya iCloud – Huhifadhiwa hadi utakapoondoa sehemu ya Vakit kutoka iCloud au kuzima Apple ID yako.
+• Takwimu za matumizi kwenye seva – Huhifadhiwa kwa siku 180 (takriban miezi 6), kisha hufutwa kiotomatiki. Maandishi ya utafutaji hufuata ratiba hiyohiyo.
+• Ripoti za kuanguka kwa programu (Crashlytics) – Huhifadhiwa kwa siku 90, kisha hufutwa.
+• Kumbukumbu za seva (logs) – Huzungushwa ndani ya siku 30.</p></div>
+  <div class="legal-card"><h3>9. Haki Zako (KVKK / GDPR)</h3><p>Chini ya KVKK ya Uturuki na GDPR ya Umoja wa Ulaya una haki ya:
+• Kujua ni data zipi zinazokusanywa kukuhusu
+• Kupinga uchakataji wa data (ondoa ruhusa za Mahali, Arifa au Mwendo katika Settings → Vakit kwenye iOS, au System Settings → Vakit kwenye Mac)
+• Kuomba data yako ifutwe: Mipangilio → Futa Akaunti huondoa kila kitu kilicho ndani ya kifaa chako na katika iCloud. Ili takwimu za matumizi zilizo kwenye seva yetu zifutwe, andika kwa hakancelikdev@gmail.com; ombi lako hutekelezwa ndani ya siku 30 kwa kuchelewa zaidi.
+• Uhamishaji wa data
+• Kuwasilisha malalamiko kwa mamlaka ya KVKK
+
+Tuma maombi kwa hakancelikdev@gmail.com; tunajibu ndani ya siku 30 kwa kuchelewa zaidi.</p></div>
+  <div class="legal-card"><h3>10. Faragha ya Watoto</h3><p>Vakit inatolewa katika App Store kwa kiwango cha umri 4+, lakini hatukusanyi kwa makusudi data binafsi kutoka kwa watumiaji walio chini ya miaka 13. Ukiamini kuwa mtoto aliye chini ya miaka 13 ametoa data, tafadhali andika kwa hakancelikdev@gmail.com nasi tutafuta data husika mara moja.</p></div>
+  <div class="legal-card"><h3>11. Usalama</h3><p>Data zote za ndani hubaki kwenye kifaa chako, zikilindwa na sandbox ya iOS/macOS na usimbaji fiche wa kifaa. Data ya iCloud husimbwa kwa njia fiche kwenye miundombinu ya Apple. Data inayotumwa kwenye seva yetu husafirishwa kwa HTTPS/TLS na kuhifadhiwa katika hifadhidata iliyosimbwa kwa njia fiche; haina taarifa zozote za utambulisho. Vakit pia hufanya ugunduzi wa jailbreak, debugger na injection kwa ulinzi wa ziada wakati wa shughuli nyeti.</p></div>
+  <div class="legal-card"><h3>12. Mabadiliko ya Sera</h3><p>Sera hii inaweza kusasishwa kadri programu inavyoendelea kukua. Kwa mabadiliko muhimu, tarehe ya “Ilisasishwa mwisho” kwenye ukurasa huu husasishwa na taarifa huonyeshwa ndani ya programu. Tunapendekeza upitie sera hii mara kwa mara.</p></div>
+  <div class="legal-card"><h3>13. Mawasiliano</h3><p>Kwa maswali, maombi au maoni kuhusu faragha: hakancelikdev@gmail.com
+
+Mdhibiti wa Data: Hakan Çelik (Uturuki)</p></div>
+  <div class="legal-contact">
+    <a href="mailto:hakancelikdev@gmail.com">hakancelikdev@gmail.com</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    Vakit
+  </div>
+  <div class="foot-links">
+    <a href="/sw/privacy.html">Faragha</a>
+    <a href="/sw/terms.html">Masharti</a>
+    <a href="/sw/ads-policy.html">Matangazo</a>
+    <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
+  </div>
+  <div class="foot-sig">Imetengenezwa kwa uangalifu · © 2026 Hakan Çelik</div>
+</footer>
+
+<script>
+  // Remember the chosen language, and drive the mobile menu.
+  document.querySelectorAll('.nav-lang a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () { localStorage.setItem('preferredLanguage', a.dataset.lang); });
+  });
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      links.classList.toggle('open');
+      toggle.textContent = links.classList.contains('open') ? '\u00D7' : '\u2261';
+    });
+  })();
+</script>
+</body>
+</html>
