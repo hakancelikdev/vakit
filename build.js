@@ -102,6 +102,12 @@ function htmlAttrs(lang) {
 
 /* ------------------------------------------------------------ structured data */
 
+/**
+ * No aggregateRating and no review here. The rating and the quotes come from the
+ * App Store, and Google's review-snippet rules say "Don't aggregate reviews or
+ * ratings from other websites" — marking them up risks a structured-data manual
+ * action (2026-09-11). They stay on the page as plain text.
+ */
 function appSchema(lang) {
   return {
     "@context": "https://schema.org",
@@ -113,35 +119,30 @@ function appSchema(lang) {
     installUrl: storeLink(),
     applicationCategory: "LifestyleApplication",
     operatingSystem: SITE.operatingSystem,
-    operatingSystemVersion: SITE.minOS,
+    operatingSystemVersion: minOSText(),
     softwareVersion: SITE.appVersion,
     inLanguage: ALL.map((l) => LANGS[l].htmlLang),
     author: { "@type": "Person", name: SITE.author, url: SITE.authorUrl },
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE.rating.value,
-      ratingCount: SITE.rating.count,
-      bestRating: "5",
-      worstRating: "1",
-    },
     featureList: FEATURES[lang].map((f) => f.n),
     screenshot: SHOWCASE[lang].map((s) => SITE.origin + shotUrl(lang, s.img)),
-    review: REVIEWS[lang].map((r) => ({
-      "@type": "Review",
-      name: r.t,
-      author: { "@type": "Person", name: r.n },
-      reviewBody: r.b,
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    })),
+    sameAs: [storeLink()],
   };
 }
 
+/** "iOS 16.4+, watchOS 9+, macOS 13+" — one platform's minimum is not the others'. */
+function minOSText() {
+  const m = SITE.minOS;
+  return `iOS ${m.ios}+, watchOS ${m.watchos}+, macOS ${m.macos}+`;
+}
+
+/** `name` is the short brand Google shows as the site name; the page title is the alternate. */
 function siteSchema(lang) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: META[lang].title,
+    name: SITE.appName,
+    alternateName: META[lang].title,
     url: SITE.origin + LANGS[lang].path,
     inLanguage: LANGS[lang].htmlLang,
     publisher: { "@type": "Person", name: SITE.author, url: SITE.authorUrl },
@@ -232,7 +233,9 @@ function featureGrid(lang) {
       (f, i) =>
         `        <div class="f-cell">` +
         `<div class="f-num">${pad2(i + 1)} / ${total}</div>` +
-        `<div class="f-name">${esc(f.n)}</div>` +
+        // h3, not div: these 45 names are the page's only keyword-bearing headings
+        // (the showcase titles are poetic). Styled exactly as before.
+        `<h3 class="f-name">${esc(f.n)}</h3>` +
         `<div class="f-desc">${esc(f.d)}</div></div>`
     )
     .join("\n");
@@ -326,7 +329,7 @@ function page(lang) {
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="${esc(m.title)}">
-    <meta property="og:site_name" content="${esc(m.title)}">
+    <meta property="og:site_name" content="${esc(SITE.appName)}">
     <meta property="og:locale" content="${L.ogLocale}">
 ${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:alternate" content="${LANGS[l].ogLocale}">`).join("\n")}
 
@@ -807,13 +810,13 @@ function llms() {
   const faqs = FAQ.en.map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n");
   const langs = ALL.map((l) => `- [${LANGS[l].name}](${SITE.origin}${LANGS[l].path})`).join("\n");
 
-  return `# Vakit — ${META.en.title}
+  return `# ${META.en.title}
 
 > ${META.en.description}
 
-Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
-Watch and Mac, built by ${SITE.author}. Current release: ${SITE.appVersion}, requires
-iOS/macOS ${SITE.minOS} or later. App Store rating ${SITE.rating.value} from
+Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
+Apple Watch and Mac, built by ${SITE.author}. Current release: ${SITE.appVersion}; requires
+${minOSText()}. App Store rating ${SITE.rating.value} from
 ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 
 ## What makes it different
@@ -824,7 +827,9 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 13 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.
-- **Private by design.** Coordinates never leave the device. Worship tracking, qada
+- **Private by design.** Coordinates never reach Vakit's servers — only country, city
+  and district do. To show the place name and nearby mosques, the device sends
+  coordinates to Apple (its place-name service and MapKit). Worship tracking, qada
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
   user's own private iCloud. What reaches the server is usage statistics, the dhikr list
   and in-app search terms, tied to a persistent code that carries no identity (a

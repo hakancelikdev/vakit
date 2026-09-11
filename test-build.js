@@ -96,6 +96,29 @@ test("llms.txt linki kampanyalı — AI kaynaklı trafiğin tek ölçüm noktas�
   assert.ok(llms.includes("ct=llms-txt"), "llms.txt kampanyasız");
 });
 
+/**
+ * Google review-snippet kuralı: "Don't aggregate reviews or ratings from other websites."
+ * Puan ve yorumlar App Store'dan — işaretlenirse yapısal veri manuel işlemi riski (2026-09-11).
+ */
+for (const lang of LANGS) {
+  test(`${lang}: JSON-LD'de App Store puanı/yorumu YOK`, () => {
+    const ld = [...html(lang).matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]).join("");
+    assert.ok(!/"aggregateRating"|"@type":\s*"Review"/.test(ld), "JSON-LD başka siteden puan/yorum işaretliyor");
+  });
+}
+
+test("llms.txt gizlilik iddiası gizlilik politikasıyla çelişmiyor", () => {
+  // Konum adı ve yakındaki camiler için koordinat Apple'a gider — "cihazdan çıkmaz" yanlış.
+  const llms = fs.readFileSync("docs/llms.txt", "utf8");
+  assert.ok(!/never leave the device/i.test(llms), "llms.txt 'Coordinates never leave the device' diyor");
+  assert.ok(!/iOS\/macOS/.test(llms), "iOS ve macOS minimum sürümü aynı değil");
+});
+
+test("IndexNow anahtar dosyası yayında", () => {
+  const key = fs.readFileSync("tools/indexnow.js", "utf8").match(/INDEXNOW_KEY = "([0-9a-f]+)"/)[1];
+  assert.strictEqual(fs.readFileSync(path.join("docs", `${key}.txt`), "utf8").trim(), key);
+});
+
 test("hiçbir sayfa Google Analytics / izleme betiği yüklemiyor", () => {
   const pages = [...LANGS.map(html), ...["404.html", "privacy.html", "en/privacy.html"].map((f) => fs.readFileSync(path.join("docs", f), "utf8"))];
   for (const page of pages) assert.ok(!/googletagmanager|google-analytics|gtag\(/.test(page), "sayfada Google Analytics var");

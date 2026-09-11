@@ -40,8 +40,10 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-09-10",
-  minOS: "16.4",
+  updated: "2026-09-11",
+  // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
+  // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
+  minOS: { ios: "16.4", watchos: "9", macos: "13" },
   operatingSystem: "iOS, iPadOS, macOS, watchOS",
 };
 

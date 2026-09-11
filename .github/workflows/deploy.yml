@@ -75,3 +75,10 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v5
       if: github.ref == 'refs/heads/main'
+
+    # Bing/Yandex recrawl the changed pages within hours (Bing feeds ChatGPT Search
+    # and Copilot). A failed ping must not fail a deploy that already went out.
+    - name: Notify IndexNow
+      if: github.ref == 'refs/heads/main'
+      continue-on-error: true
+      run: node tools/indexnow.js

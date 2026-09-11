@@ -1,10 +1,10 @@
-# Vakit — Vakit: Prayer Times, Qibla, Quran
+# Vakit: Prayer Times, Qibla, Quran
 
 > Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.
 
-Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, Apple
-Watch and Mac, built by Hakan Çelik. Current release: 1.7.4, requires
-iOS/macOS 16.4 or later. App Store rating 4.8 from
+Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
+Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.4; requires
+iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 445 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 
 ## What makes it different
@@ -15,7 +15,9 @@ iOS/macOS 16.4 or later. App Store rating 4.8 from
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 13 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.
-- **Private by design.** Coordinates never leave the device. Worship tracking, qada
+- **Private by design.** Coordinates never reach Vakit's servers — only country, city
+  and district do. To show the place name and nearby mosques, the device sends
+  coordinates to Apple (its place-name service and MapKit). Worship tracking, qada
   and hatim progress, bookmarks and favourite mosques stay on-device and in the
   user's own private iCloud. What reaches the server is usage statistics, the dhikr list
   and in-app search terms, tied to a persistent code that carries no identity (a
@@ -165,4 +167,4 @@ The home page exists in every interface language:
 - [Advertising policy](https://vakit.hakancelik.dev/en/ads-policy.html) ([Turkish](https://vakit.hakancelik.dev/ads-policy.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-10
+Last updated: 2026-09-11
