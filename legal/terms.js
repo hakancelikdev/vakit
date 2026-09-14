@@ -82,7 +82,7 @@ module.exports = {
       },
       {
         "t": "3. Free Use & Optional Donations",
-        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Vakit'i Yaşat\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple's payment terms and App Store rules apply."
+        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple's payment terms and App Store rules apply."
       },
       {
         "t": "4. Sadaka Mode (Rewarded Ad)",

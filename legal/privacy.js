@@ -94,11 +94,11 @@ module.exports = {
       },
       {
         "t": "6. Advertising (Sadaka Mode)",
-        "b": "Vakit does not show ads. Only in the optional \"Sadaka Mode\", if the user explicitly starts it to support the developer, a rewarded video ad is shown via Google AdMob. In that case:\n• The ad is served by Google AdMob; it is always non-personalized and rated for a general audience (G). Vakit never shows the App Tracking Transparency prompt and the advertising identifier (IDFA) is not shared.\n• When the Support Center (\"Vakit'i Yaşat\") opens, the ad SDK starts and preloads one ad; no ad is shown unless you choose to watch it.\n• Sadaka Mode can be disabled remotely via Firebase Remote Config; you may simply choose never to use it.\n\nGoogle AdMob privacy: support.google.com/admob/answer/6128543"
+        "b": "Vakit does not show ads. Only in the optional \"Sadaka Mode\", if the user explicitly starts it to support the developer, a rewarded video ad is shown via Google AdMob. In that case:\n• The ad is served by Google AdMob; it is always non-personalized and rated for a general audience (G). Vakit never shows the App Tracking Transparency prompt and the advertising identifier (IDFA) is not shared.\n• When the Support Center (\"Keep Vakit Alive\") opens, the ad SDK starts and preloads one ad; no ad is shown unless you choose to watch it.\n• Sadaka Mode can be disabled remotely via Firebase Remote Config; you may simply choose never to use it.\n\nGoogle AdMob privacy: support.google.com/admob/answer/6128543"
       },
       {
         "t": "7. Donations (In-App Purchase)",
-        "b": "Vakit is free. To support the developer you can make optional donations in tiers from ₺10 to ₺10,000 from the \"Vakit'i Yaşat\" screen. These transactions:\n• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.\n• Vakit never sees or stores your payment method or financial details.\n• Refunds can only be requested through Apple (reportaproblem.apple.com)."
+        "b": "Vakit is free. To support the developer you can make optional donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These transactions:\n• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.\n• Vakit never sees or stores your payment method or financial details.\n• Refunds can only be requested through Apple (reportaproblem.apple.com)."
       },
       {
         "t": "8. Data Retention",

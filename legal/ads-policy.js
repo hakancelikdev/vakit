@@ -48,7 +48,7 @@ module.exports = {
     "sections": [
       {
         "t": "1. Where Ads Appear",
-        "b": "Vakit shows no banner, interstitial or app-open ads on any screen. The only ad is a short rewarded video that a user can choose to watch from the Support Center (\"Vakit'i Yaşat\", \"Sadaka Mode\") to support the app. You never have to use it, and no feature depends on it."
+        "b": "Vakit shows no banner, interstitial or app-open ads on any screen. The only ad is a short rewarded video that a user can choose to watch from the Support Center (\"Keep Vakit Alive\", \"Sadaka Mode\") to support the app. You never have to use it, and no feature depends on it."
       },
       {
         "t": "2. Categories We Never Show",
