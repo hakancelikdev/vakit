@@ -41,12 +41,16 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 - **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
 - **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
+- **Spoken Translation** — Hear the translation in your device's own voice — alone or after each verse, offline.
 - **Hadith** — Over 36,000 ahadith across seven major collections.
+- **Daily Content** — Verse, hadith and name of the day on one screen; look back over the past week.
 - **Friday Sermon** — For Diyanet-method users: read, listen to and store the khutbah offline.
 - **Dhikr Counter** — Ring-based progress, presets, and custom dhikr.
 - **Tasbihat** — 33-33-33, or the full post-prayer sequence.
 - **Asma al-Husna** — 99 names of Allah, with transliteration and meaning; add any as dhikr.
 - **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan.
+- **Imsakiye** — A whole month of prayer times in one list; Ramadan day count and iftar.
+- **Blessed Days** — Holy nights, Eids and their eves from today onward, each with a guide.
 - **Karahat Times** — Marked on the day arc, with the narration behind them.
 - **Purification Guide** — Step-by-step wudu, ghusl and tayammum.
 - **Prayer Guide** — 17 prayer types; standing, seated or by gesture.
@@ -114,7 +118,7 @@ The khutbah Diyanet publishes each week lands in the app; you can read it, liste
 
 ### What's in the Quran feature?
 
-All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, and a hatim tracker. The text, translation and tafsir work offline; recitation plays offline for the surahs or juz you download.
+All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text, translation and tafsir work offline; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no download and no internet needed.
 
 ### How does worship tracking work?
 
