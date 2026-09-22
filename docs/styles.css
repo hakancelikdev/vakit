@@ -78,6 +78,12 @@
   box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.6);
 }
 
+/* --- iPad + Mac: same reason ---------------------------------- */
+[data-theme="dark"] .dv-frame.ipad {
+  box-shadow: 0 0 0 1px oklch(0.34 0.008 250), 0 24px 60px -16px rgba(0, 0, 0, 0.6);
+}
+[data-theme="dark"] .mac .dv-screen { filter: drop-shadow(0 24px 36px rgba(0, 0, 0, 0.55)) }
+
 /* --- features grid --------------------------------------------- */
 /* border-top uses var(--ink) = near-white → too harsh */
 [data-theme="dark"] .f-grid {
@@ -398,6 +404,62 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .phone-screenshot.on { opacity: 1 }
 .phone-video { background: #20263a }
 
+/* ---------- iPad + Mac ---------- */
+.devices { padding: 120px 48px; border-bottom: 1px solid var(--rule-2) }
+.dv-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: 56px 72px;
+  align-items: start;
+}
+/* No text-transform: uppercase would turn "iPad" into "İPAD" on the Turkish page. */
+.dv-eye {
+  grid-column: 1 / -1;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink-3);
+}
+/* Frame, name, description and tabs share rows across both devices, so the
+   captions line up even though the iPad and the Mac window differ in height. */
+.dv-col { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0 }
+.dv-frame { position: relative; margin-bottom: 32px; align-self: end }
+.dv-screen { position: relative; overflow: hidden }
+.dv-shot {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  opacity: 0; transition: opacity .4s;
+}
+.dv-shot.on { opacity: 1 }
+
+/* iPad: the capture is the bare screen, so the page draws the bezel */
+.dv-frame.ipad {
+  padding: 3.4%; border-radius: 34px; background: #0c0e12;
+  box-shadow: 0 0 0 1px color-mix(in oklch, var(--ink) 14%, transparent),
+              0 24px 60px -16px color-mix(in oklch, var(--ink) 22%, transparent);
+}
+.ipad .dv-screen { aspect-ratio: 3 / 4; border-radius: 20px; background: #20263a }
+.ipad .dv-shot { object-fit: cover }
+
+/* Mac: the capture is a whole window, rounded corners and all */
+.mac .dv-screen {
+  aspect-ratio: 1200 / 914;
+  filter: drop-shadow(0 24px 36px color-mix(in oklch, var(--ink) 22%, transparent));
+}
+.mac .dv-shot { object-fit: contain }
+.mac-menubar {
+  /* physical right, also on RTL pages: the Mac window is LTR and menu bar extras sit on the right */
+  position: absolute; top: -5%; right: -4%; width: 27%; height: auto;
+  filter: drop-shadow(0 16px 28px rgb(0 0 0 / .35));
+}
+
+.dv-name { font-family: var(--serif); font-size: 32px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 8px }
+.dv-desc { font-size: 15px; line-height: 1.5; color: var(--ink-3); max-width: 460px; margin-bottom: 20px }
+.dv-tabs { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; align-content: flex-start }
+.dv-tab {
+  padding: 6px 12px; border-radius: 999px; font-size: 12px;
+  font-family: var(--mono); color: var(--ink-3);
+  border: 1px solid var(--rule-2); background: none;
+  transition: all .15s; cursor: pointer;
+}
+.dv-tab:hover { color: var(--ink-2); border-color: var(--rule) }
+.dv-tab.on { background: var(--accent); color: #fff; border-color: var(--accent) }
+
 /* ---------- emanet / trust ---------- */
 .trust {
   padding: 140px 48px;
@@ -617,6 +679,11 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   }
   .sc-phone-wrap { position: static; order: -1 }
   .phone { width: 260px }
+  .devices { padding: 80px 32px }
+  .dv-inner { gap: 40px 40px }
+  .dv-name { font-size: 26px }
+  .dv-frame.ipad { border-radius: 24px }
+  .ipad .dv-screen { border-radius: 14px }
   .compare-row { grid-template-columns: 1.5fr 2fr 2fr }
   .nav-links { gap: 20px }
 }
@@ -654,6 +721,8 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .sc-item { grid-template-columns: 36px 1fr; gap: 12px }
   .sc-tag { display: none }
   .phone { width: 220px }
+
+  .devices { padding: 60px 20px }
 
   .trust { padding: 80px 20px }
   .trust h2 { font-size: 40px }
@@ -695,6 +764,26 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   :where(html:not(.script-latin):not(.script-cyrillic)) .hero h1 { line-height: 1.25 }
   .script-urdu .hero h1 { font-size: 32px; line-height: 2.2 }
   .script-urdu :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2, .trust h2, .final h2) { font-size: 28px }
+}
+
+/* Portrait iPad (744–1024 px): keep the showcase list and its phone side by side,
+   so the phone stays in view while you tap down the list. Stacked, the phone sat
+   above ten rows and changed off-screen. */
+@media (min-width: 700px) and (max-width: 1024px) {
+  .showcase { grid-template-columns: minmax(0, 1fr) 232px; gap: 40px }
+  .sc-phone-wrap { position: sticky; top: 96px; order: 0 }
+  .phone { width: 232px }
+  .sc-h2 { font-size: 44px }
+  .sc-item { grid-template-columns: 36px 1fr; gap: 12px }
+  .sc-tag { display: none }
+}
+
+/* Phones: iPad and Mac stack */
+@media (max-width: 699px) {
+  .dv-inner { grid-template-columns: minmax(0, 1fr); gap: 56px }
+  .dv-col { display: block }
+  .dv-ipad .dv-frame { width: min(100%, 300px) }
+  .mac-menubar { width: 32%; top: -8%; right: -2% }
 }
 
 @media (max-width: 480px) {

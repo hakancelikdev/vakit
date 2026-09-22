@@ -26,7 +26,7 @@ const path = require("path");
 const C = require("./content.js");
 const { validateLocale } = require("./tools/validate.js");
 
-const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
+const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
 // Long-form legal prose: the Turkish + English originals, one module per document.
 const PRESS = require("./press.js");
@@ -101,6 +101,23 @@ const legalLang = (lang) => (LEGAL_LANGS.includes(lang) ? lang : "en");
 const pressLang = (lang) => (PRESS_LANGS.includes(lang) ? lang : "en");
 
 const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.webp`;
+
+/** iPad captures follow the iPhone ones; the Mac was captured in Turkish and English only. */
+const deviceUrl = (lang, device, img) =>
+  `/assets/screenshots/${device === "mac" ? (lang === "tr" ? "tr" : "en") : LANGS[lang].shots}/${device}/${img}.webp`;
+
+/** A DEVICES label → copy that already exists in every language (see content.js). */
+function deviceCopy(lang, ref) {
+  if (ref.feature) {
+    const i = FEATURES.en.findIndex((f) => f.n === ref.feature);
+    if (i < 0) throw new Error(`DEVICES: no feature named "${ref.feature}"`);
+    return FEATURES[lang][i];
+  }
+  const s = SHOWCASE[lang].find((x) => x.img === ref.showcase);
+  if (!s) throw new Error(`DEVICES: no showcase entry "${ref.showcase}"`);
+  // Showcase titles are sentences ("Every tool, in one place."); a tab label drops the stop.
+  return { n: s.t.replace(/[.。۔]$/u, ""), d: s.d };
+}
 
 /** Link-preview card, rendered per language by tools/make-og.js. */
 const ogUrl = (lang) => `/assets/og/${lang}.jpg`;
@@ -241,6 +258,37 @@ function showcaseScreens(lang) {
           ` width="390" height="844" loading="lazy">`
     )
     .join("\n");
+}
+
+/** One device column of the iPad/Mac section: the screens, their tabs, and the caption. */
+function deviceColumn(lang, device) {
+  const D = DEVICES[device];
+  const cap = deviceCopy(lang, D.caption);
+  const size = device === "mac" ? 'width="1200" height="914"' : 'width="900" height="1200"';
+  const shots = D.shots
+    .map((s, i) =>
+      `          <img class="dv-shot${i === 0 ? " on" : ""}" src="${deviceUrl(lang, device, s.img)}"` +
+      ` alt="${esc(`${cap.n} · ${deviceCopy(lang, s.label).n}`)}" ${size} loading="lazy">`)
+    .join("\n");
+  const tabs = D.shots
+    .map((s, i) =>
+      `        <button class="dv-tab${i === 0 ? " on" : ""}" aria-pressed="${i === 0}">${esc(deviceCopy(lang, s.label).n)}</button>`)
+    .join("\n");
+  const menuBar = device === "mac"
+    ? `\n        <img class="mac-menubar" src="${deviceUrl(lang, "mac", "menu-bar")}" alt="" width="360" height="389" loading="lazy">`
+    : "";
+  return `    <div class="dv-col dv-${device}">
+      <div class="dv-frame ${device}">
+        <div class="dv-screen">
+${shots}
+        </div>${menuBar}
+      </div>
+      <h3 class="dv-name">${esc(cap.n)}</h3>
+      <p class="dv-desc">${esc(cap.d)}</p>
+      <div class="dv-tabs" role="group" aria-label="${esc(cap.n)}">
+${tabs}
+      </div>
+    </div>`;
 }
 
 function featureGrid(lang) {
@@ -497,6 +545,15 @@ ${showcaseList(lang)}
 ${showcaseScreens(lang)}
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== IPAD + MAC ========== -->
+<section class="devices" id="devices">
+  <div class="dv-inner">
+    <div class="dv-eye">iPad · Mac</div>
+${deviceColumn(lang, "ipad")}
+${deviceColumn(lang, "mac")}
   </div>
 </section>
 
@@ -1099,6 +1156,12 @@ function check() {
     const L = LANGS[lang];
     for (const s of SHOWCASE[lang].slice(1)) {
       if (!fs.existsSync(path.join(DOCS, shotUrl(lang, s.img)))) errors.push(`${lang}: missing ${shotUrl(lang, s.img)}`);
+    }
+    for (const device of Object.keys(DEVICES)) {
+      const imgs = [...DEVICES[device].shots.map((s) => s.img), ...(device === "mac" ? ["menu-bar"] : [])];
+      for (const img of imgs) {
+        if (!fs.existsSync(path.join(DOCS, deviceUrl(lang, device, img)))) errors.push(`${lang}: missing ${deviceUrl(lang, device, img)}`);
+      }
     }
     for (const f of [`sky-${L.video}.mp4`, `sky-${L.video}-poster.webp`]) {
       if (!fs.existsSync(path.join(DOCS, "assets", "video", f))) errors.push(`${lang}: missing /assets/video/${f}`);

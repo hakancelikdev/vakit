@@ -43,6 +43,37 @@ for pair in $PAIRS; do
   echo "screenshots/$lang ← $locale"
 done
 
+# iPad and Mac: the "devices" section. Must match DEVICES in content.js.
+# iPad has a capture for every language above; Mac only for Turkish and
+# English, so every other page shows the English Mac windows. The toolkit's
+# iPad "qada.png" is really the prayer guide, hence the rename.
+IPAD="prayer-times:prayer-times discover:discover quran:quran hadith:hadith accounting:accounting qada:prayer-guide"
+MAC="prayer-times discover calendar zikirmatik prayer-guide"
+
+for pair in $PAIRS; do
+  lang="${pair%%:*}"; locale="${pair##*:}"
+  src="$RAW/$locale/_ipad"; dst="$OUT/screenshots/$lang/ipad"
+  mkdir -p "$dst"
+  for shot in $IPAD; do
+    from="${shot%%:*}"; to="${shot##*:}"
+    [ -f "$src/$from.png" ] || { echo "missing $src/$from.png" >&2; exit 1; }
+    cwebp -quiet -q "$QUALITY" -resize 900 0 "$src/$from.png" -o "$dst/$to.webp"
+  done
+  echo "screenshots/$lang/ipad ← $locale"
+done
+
+for pair in tr:tr en:en-US; do
+  lang="${pair%%:*}"; locale="${pair##*:}"
+  src="$RAW/$locale/_mac"; dst="$OUT/screenshots/$lang/mac"
+  mkdir -p "$dst"
+  for shot in $MAC; do
+    [ -f "$src/$shot.png" ] || { echo "missing $src/$shot.png" >&2; exit 1; }
+    cwebp -quiet -q "$QUALITY" -resize 1200 0 "$src/$shot.png" -o "$dst/$shot.webp"
+  done
+  cwebp -quiet -q "$QUALITY" -resize 360 0 "$src/menu-bar.png" -o "$dst/menu-bar.webp"
+  echo "screenshots/$lang/mac ← $locale"
+done
+
 # Preview video: Turkish has its own recording, every other language uses the
 # English one (as on the App Store). Audio is dropped — the page plays it muted.
 mkdir -p "$OUT/video"

@@ -138,6 +138,35 @@ const CITY_CATALOG = {
 const CITY_DEFAULTS = ["mecca", "medina", "istanbul", "london", "berlin", "paris", "newyork", "dubai", "cairo", "jakarta", "kualalumpur", "karachi"];
 const CITY_SLOTS = 12;
 
+// iPad and Mac section: screenshots under assets/screenshots/<shots>/ipad/ and
+// <tr|en>/mac/ (the Mac was captured in Turkish and English only). Labels and
+// captions reuse copy that exists in every language — `feature` names a
+// FEATURES entry by its English name, `showcase` a SHOWCASE entry by its image.
+// Must match IPAD / MAC in tools/import-media.sh.
+const DEVICES = {
+  ipad: {
+    caption: { feature: "iPad" },
+    shots: [
+      { img: "prayer-times", label: { feature: "Prayer Times" } },
+      { img: "discover", label: { showcase: "discover" } },
+      { img: "quran", label: { feature: "Holy Quran" } },
+      { img: "hadith", label: { feature: "Hadith" } },
+      { img: "accounting", label: { feature: "Worship Tracking" } },
+      { img: "prayer-guide", label: { feature: "Prayer Guide" } },
+    ],
+  },
+  mac: {
+    caption: { feature: "Mac App" },
+    shots: [
+      { img: "prayer-times", label: { feature: "Prayer Times" } },
+      { img: "discover", label: { showcase: "discover" } },
+      { img: "calendar", label: { feature: "Hijri Calendar" } },
+      { img: "zikirmatik", label: { feature: "Dhikr Counter" } },
+      { img: "prayer-guide", label: { feature: "Purification Guide" } },
+    ],
+  },
+};
+
 // Showcase order. Index 0 is the preview video (the prayer screen's sky); the
 // rest are screenshots. Must match SHOTS in tools/import-media.sh.
 const SHOWCASE_IMG = ["prayer-times", "widget", "discover", "qibla", "profile", "qada", "quran", "prayer-guide", "calendar", "zikirmatik"];
@@ -585,7 +614,7 @@ function clockCities(lang) {
 
 const CONTENT = {
   SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, CITIES, CITY_CATALOG, FEATURES, SHOWCASE,
-  SHOWCASE_IMG, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
+  SHOWCASE_IMG, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
 };
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;

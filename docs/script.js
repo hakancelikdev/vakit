@@ -6,7 +6,7 @@
  * can read it. Do not render content here — edit ../content.js and rebuild.
  *
  * What lives here: the live prayer clock, showcase preview switching (and its
- * video), the FAQ accordion, theme toggle, the language menu, smooth scrolling
+ * video), the iPad/Mac screen tabs, the FAQ accordion, theme toggle, the language menu, smooth scrolling
  * and the mobile menu.
  */
 
@@ -233,6 +233,21 @@ function initShowcase() {
 }
 
 /* ================================================================
+   iPad + Mac — each device's tabs switch its own screen
+   ================================================================ */
+
+function initDevices() {
+  document.querySelectorAll('.dv-col').forEach(col => {
+    const tabs = col.querySelectorAll('.dv-tab');
+    const shots = col.querySelectorAll('.dv-shot');
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => {
+      tabs.forEach((t, j) => { t.classList.toggle('on', i === j); t.setAttribute('aria-pressed', String(i === j)); });
+      shots.forEach((s, j) => s.classList.toggle('on', i === j));
+    }));
+  });
+}
+
+/* ================================================================
    FAQ — markup is static, this only opens and closes it
    ================================================================ */
 
@@ -362,6 +377,7 @@ function suggestLanguage(menu, remember) {
 
 applyTheme();
 initShowcase();
+initDevices();
 initFAQ();
 initSmoothScrolling();
 initMobileMenu();

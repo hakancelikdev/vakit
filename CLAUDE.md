@@ -42,7 +42,7 @@ Hand-maintained files in `docs/`:
 | File | Purpose |
 |---|---|
 | `styles.css` | All styles (CSS variables for theming, dark mode, responsive, RTL + non-Latin script rules) |
-| `script.js` | Interactivity only: live prayer clock, showcase switching + video, FAQ accordion, theme, language menu, mobile menu |
+| `script.js` | Interactivity only: live prayer clock, showcase switching + video, iPad/Mac screen tabs, FAQ accordion, theme, language menu, mobile menu |
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
@@ -67,6 +67,7 @@ Two other things follow from the generator, and both are the point:
 `LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → web fonts in `build.js` `SCRIPTS`), screenshot and video source, the clock's home city and the currency next to the "0" price. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
 
 - **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, all three documents + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
+- **iPad and Mac** (`DEVICES` in `content.js`, the section under the showcase): iPad captures follow the iPhone rule; the Mac was captured in Turkish and English only, so every other page shows the English windows. Tab labels and captions reuse `FEATURES`/`SHOWCASE` copy, so the section needs no translations of its own.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
 - **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
 
