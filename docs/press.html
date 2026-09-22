@@ -54,6 +54,7 @@
       .press-facts td { padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); line-height: 1.6; vertical-align: top }
       .press-facts tr:last-child td { border-bottom: 0 }
       .press-facts td:first-child { width: 38%; color: var(--ink-3); padding-inline-end: 16px }
+      .press-video { width: 100%; max-width: 320px; display: block; margin: 0 auto; border-radius: 22px; background: #0b1020 }
       .press-assets { list-style: none; padding: 0; margin: 0 }
       .press-assets li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px }
       .press-assets li:last-child { border-bottom: 0 }
@@ -100,6 +101,15 @@
   <div class="press-block">
     <h3>Tek cümle</h3>
     <p>Vakit; namaz vakitlerini cihazda hesaplayan, Kur'an'ı, hadisi ve ibadet defterini yanında taşıyan, reklamsız ve hesapsız bir ibadet uygulamasıdır.</p>
+  </div>
+
+  <div class="press-block">
+    <h3>Tanıtım turu</h3>
+    <video class="press-video" controls preload="none" playsinline
+           poster="/assets/video/walkthrough-poster.jpg">
+      <source src="/assets/video/walkthrough.mp4" type="video/mp4">
+    </video>
+    <p class="press-note">26 saniye, seslendirme yok, İngilizce alt yazı. Ekranlar gerçek uygulamadan, iki yıllık kayıt geçmişiyle çekildi.</p>
   </div>
 
   <div class="press-block">
@@ -168,6 +178,7 @@
     <a href="/privacy.html">Gizlilik</a>
     <a href="/terms.html">Şartlar</a>
     <a href="/ads-policy.html">Reklamlar</a>
+    <a href="/press.html">Basın</a>
     <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
   </div>
   <div class="foot-sig">Özenle yapıldı · © 2026 Hakan Çelik</div>

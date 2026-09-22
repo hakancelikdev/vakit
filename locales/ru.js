@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Загрузите в App Store", explore: "Все возможности →",
     preview: "Посмотреть",
     footContact: "Связаться", footFeedback: "Обратная связь",
-    footPrivacy: "Конфиденциальность", footTerms: "Условия", footAds: "Реклама",
+    footPrivacy: "Конфиденциальность", footTerms: "Условия", footAds: "Реклама", footPress: "Пресса",
     footSig: "Сделано с заботой · © 2026 Hakan Çelik",
     menuLabel: "Меню", themeLabel: "Переключить тёмный режим", langLabel: "Язык", closeLabel: "Закрыть",
     videoLabel: "Экран намаза в Vakit: небо меняется вместе с течением дня",

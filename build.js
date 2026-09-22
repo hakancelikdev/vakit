@@ -98,6 +98,9 @@ const localUrl = (lang, file = "") => LANGS[lang].path + file;
 /** Legal pages exist in Turkish and English only; everyone else reads English. */
 const legalLang = (lang) => (LEGAL_LANGS.includes(lang) ? lang : "en");
 
+/** Same rule for the press kit: Turkish and English, everyone else the English page. */
+const pressLang = (lang) => (PRESS_LANGS.includes(lang) ? lang : "en");
+
 const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.webp`;
 
 /** Link-preview card, rendered per language by tools/make-og.js. */
@@ -606,6 +609,7 @@ ${faqList(lang)}
     <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
     <a href="${localUrl(legal, "ads-policy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footAds"))}</a>
+    <a href="${localUrl(pressLang(lang), "press.html")}"${pressLang(lang) !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
     <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
     <a href="${SITE.feedbackUrl}" target="_blank" rel="noopener">${esc(t(lang, "footFeedback"))}</a>
@@ -742,6 +746,7 @@ ${sections}
     <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
     <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
+    <a href="${localUrl(pressLang(lang), "press.html")}">${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
   </div>
   <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
@@ -782,6 +787,7 @@ const PRESS_STYLE = `      .press-block { background: var(--paper); border: 1px 
       .press-facts td { padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); line-height: 1.6; vertical-align: top }
       .press-facts tr:last-child td { border-bottom: 0 }
       .press-facts td:first-child { width: 38%; color: var(--ink-3); padding-inline-end: 16px }
+      .press-video { width: 100%; max-width: 320px; display: block; margin: 0 auto; border-radius: 22px; background: #0b1020 }
       .press-assets { list-style: none; padding: 0; margin: 0 }
       .press-assets li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px }
       .press-assets li:last-child { border-bottom: 0 }
@@ -877,6 +883,15 @@ ${PRESS_STYLE}
   </div>
 
   <div class="press-block">
+    <h3>${esc(doc.videoTitle)}</h3>
+    <video class="press-video" controls preload="none" playsinline
+           poster="/assets/video/walkthrough-poster.jpg">
+      <source src="/assets/video/walkthrough.mp4" type="video/mp4">
+    </video>
+    <p class="press-note">${esc(doc.videoNote)}</p>
+  </div>
+
+  <div class="press-block">
     <h3>${esc(doc.boiler.t)}</h3>
     <div class="press-boiler"><span>25</span><p>${esc(doc.boiler.short)}</p></div>
     <div class="press-boiler"><span>50</span><p>${esc(doc.boiler.medium)}</p></div>
@@ -915,6 +930,7 @@ ${assets}
     <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
     <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
+    <a href="${localUrl(pressLang(lang), "press.html")}">${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
   </div>
   <div class="foot-sig">${esc(t(lang, "footSig"))}</div>

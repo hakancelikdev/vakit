@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Unduh di App Store", explore: "Jelajahi fitur →",
     preview: "Pratinjau",
     footContact: "Kontak", footFeedback: "Masukan",
-    footPrivacy: "Privasi", footTerms: "Ketentuan", footAds: "Iklan",
+    footPrivacy: "Privasi", footTerms: "Ketentuan", footAds: "Iklan", footPress: "Pers",
     footSig: "Dibuat dengan sepenuh hati · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Nyalakan/matikan mode gelap", langLabel: "Bahasa", closeLabel: "Tutup",
     videoLabel: "Layar salat Vakit: langit berubah seiring berjalannya hari",

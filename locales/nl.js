@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Download in de App Store", explore: "Ontdek de functies →",
     preview: "Voorbeeld",
     footContact: "Contact", footFeedback: "Feedback",
-    footPrivacy: "Privacy", footTerms: "Voorwaarden", footAds: "Advertenties",
+    footPrivacy: "Privacy", footTerms: "Voorwaarden", footAds: "Advertenties", footPress: "Pers",
     footSig: "Met zorg gemaakt · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Donkere modus aan/uit", langLabel: "Taal", closeLabel: "Sluiten",
     videoLabel: "Het gebedsscherm van Vakit: de hemel verandert naarmate de dag vordert",

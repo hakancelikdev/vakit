@@ -45,7 +45,7 @@ module.exports = {
     downloadCta2: "App Store からダウンロード", explore: "機能を見る →",
     preview: "プレビュー",
     footContact: "お問い合わせ", footFeedback: "フィードバック",
-    footPrivacy: "プライバシー", footTerms: "利用規約", footAds: "広告",
+    footPrivacy: "プライバシー", footTerms: "利用規約", footAds: "広告", footPress: "プレス",
     footSig: "心を込めて · © 2026 Hakan Çelik",
     menuLabel: "メニュー", themeLabel: "ダークモードの切り替え", langLabel: "言語", closeLabel: "閉じる",
     videoLabel: "Vakit の礼拝画面：一日の移ろいとともに空も変わっていきます",

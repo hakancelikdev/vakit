@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "App Store-dan yükləyin", explore: "Xüsusiyyətləri kəşf et →",
     preview: "Bax",
     footContact: "Əlaqə", footFeedback: "Rəy bildir",
-    footPrivacy: "Məxfilik", footTerms: "Şərtlər", footAds: "Reklamlar",
+    footPrivacy: "Məxfilik", footTerms: "Şərtlər", footAds: "Reklamlar", footPress: "Mətbuat",
     footSig: "Qayğı ilə hazırlanıb · © 2026 Hakan Çelik",
     menuLabel: "Menyu", themeLabel: "Tünd rejimi aç/bağla", langLabel: "Dil", closeLabel: "Bağla",
     videoLabel: "Vakit-in namaz ekranı: gün irəlilədikcə səma da dəyişir",

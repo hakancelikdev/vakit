@@ -45,7 +45,7 @@ module.exports = {
     downloadCta2: "Descarregar na App Store", explore: "Explorar funcionalidades →",
     preview: "Pré-visualizar",
     footContact: "Contacto", footFeedback: "Sugestões",
-    footPrivacy: "Privacidade", footTerms: "Termos", footAds: "Anúncios",
+    footPrivacy: "Privacidade", footTerms: "Termos", footAds: "Anúncios", footPress: "Imprensa",
     footSig: "Feito com cuidado · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Ativar ou desativar o modo escuro", langLabel: "Idioma", closeLabel: "Fechar",
     videoLabel: "O ecrã das orações do Vakit: o céu muda à medida que o dia avança",

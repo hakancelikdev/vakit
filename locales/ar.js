@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "حمّله من App Store", explore: "استكشف الميزات ←",
     preview: "معاينة",
     footContact: "تواصل", footFeedback: "ملاحظات",
-    footPrivacy: "الخصوصية", footTerms: "الشروط", footAds: "الإعلانات",
+    footPrivacy: "الخصوصية", footTerms: "الشروط", footAds: "الإعلانات", footPress: "الصحافة",
     footSig: "صُنع بعناية · © 2026 Hakan Çelik",
     menuLabel: "القائمة", themeLabel: "تبديل الوضع الداكن", langLabel: "اللغة", closeLabel: "إغلاق",
     videoLabel: "شاشة الصلاة في Vakit: تتغيّر السماء مع مرور اليوم",

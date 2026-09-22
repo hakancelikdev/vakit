@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Télécharger dans l'App Store", explore: "Découvrir les fonctionnalités →",
     preview: "Aperçu",
     footContact: "Contact", footFeedback: "Suggestions",
-    footPrivacy: "Confidentialité", footTerms: "Conditions", footAds: "Publicité",
+    footPrivacy: "Confidentialité", footTerms: "Conditions", footAds: "Publicité", footPress: "Presse",
     footSig: "Fait avec soin · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Activer ou désactiver le mode sombre", langLabel: "Langue", closeLabel: "Fermer",
     videoLabel: "L'écran des prières de Vakit\u00a0: le ciel change au fil de la journée",

@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Laden im App Store", explore: "Funktionen entdecken →",
     preview: "Vorschau",
     footContact: "Kontakt", footFeedback: "Feedback",
-    footPrivacy: "Datenschutz", footTerms: "Nutzungsbedingungen", footAds: "Werbung",
+    footPrivacy: "Datenschutz", footTerms: "Nutzungsbedingungen", footAds: "Werbung", footPress: "Presse",
     footSig: "Mit Sorgfalt gemacht · © 2026 Hakan Çelik",
     menuLabel: "Menü", themeLabel: "Dunkelmodus ein/aus", langLabel: "Sprache", closeLabel: "Schließen",
     videoLabel: "Der Gebetsbildschirm von Vakit: Der Himmel verändert sich im Lauf des Tages",

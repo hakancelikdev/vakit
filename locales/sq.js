@@ -45,7 +45,7 @@ module.exports = {
     downloadCta2: "Shkarkojeni nga App Store", explore: "Zbuloni veçoritë →",
     preview: "Parapamje",
     footContact: "Kontakt", footFeedback: "Komente",
-    footPrivacy: "Privatësia", footTerms: "Kushtet", footAds: "Reklamat",
+    footPrivacy: "Privatësia", footTerms: "Kushtet", footAds: "Reklamat", footPress: "Shtypi",
     footSig: "Bërë me kujdes · © 2026 Hakan Çelik",
     menuLabel: "Menyja", themeLabel: "Aktivizo ose çaktivizo modalitetin e errët", langLabel: "Gjuha", closeLabel: "Mbyll",
     videoLabel: "Ekrani i namazit në Vakit: qielli ndryshon ndërsa dita ecën",

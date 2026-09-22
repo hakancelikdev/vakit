@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "دریافت از App Store", explore: "ویژگی‌ها را ببینید ←",
     preview: "پیش‌نمایش",
     footContact: "تماس", footFeedback: "بازخورد",
-    footPrivacy: "حریم خصوصی", footTerms: "شرایط", footAds: "تبلیغات",
+    footPrivacy: "حریم خصوصی", footTerms: "شرایط", footAds: "تبلیغات", footPress: "رسانه",
     footSig: "با دقت ساخته شده · © 2026 Hakan Çelik",
     menuLabel: "منو", themeLabel: "روشن/خاموش کردن حالت تیره", langLabel: "زبان", closeLabel: "بستن",
     videoLabel: "صفحهٔ نماز Vakit: آسمان با گذر روز تغییر می‌کند",

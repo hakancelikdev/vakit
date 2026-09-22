@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "App Store से डाउनलोड करें", explore: "फ़ीचर देखें →",
     preview: "झलक",
     footContact: "संपर्क", footFeedback: "राय दें",
-    footPrivacy: "प्राइवेसी", footTerms: "शर्तें", footAds: "विज्ञापन",
+    footPrivacy: "प्राइवेसी", footTerms: "शर्तें", footAds: "विज्ञापन", footPress: "प्रेस",
     footSig: "पूरी लगन से बनाया गया · © 2026 Hakan Çelik",
     menuLabel: "मेन्यू", themeLabel: "डार्क मोड चालू/बंद करें", langLabel: "भाषा", closeLabel: "बंद करें",
     videoLabel: "Vakit का नमाज़ वाला पन्ना: दिन ढलने के साथ आसमान भी बदलता है",

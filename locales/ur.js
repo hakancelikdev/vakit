@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "App Store سے ڈاؤن لوڈ کریں", explore: "خصوصیات دیکھیں ←",
     preview: "جھلک",
     footContact: "رابطہ", footFeedback: "رائے",
-    footPrivacy: "رازداری", footTerms: "شرائط", footAds: "اشتہارات",
+    footPrivacy: "رازداری", footTerms: "شرائط", footAds: "اشتہارات", footPress: "پریس",
     footSig: "توجہ سے بنائی گئی · © 2026 Hakan Çelik",
     menuLabel: "مینو", themeLabel: "ڈارک موڈ آن/آف کریں", langLabel: "زبان", closeLabel: "بند کریں",
     videoLabel: "Vakit کی نماز اسکرین: دن ڈھلنے کے ساتھ آسمان بھی بدلتا ہے",

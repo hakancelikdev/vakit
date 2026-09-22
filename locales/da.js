@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Hent i App Store", explore: "Udforsk funktionerne →",
     preview: "Forhåndsvis",
     footContact: "Kontakt", footFeedback: "Feedback",
-    footPrivacy: "Privatliv", footTerms: "Vilkår", footAds: "Reklamer",
+    footPrivacy: "Privatliv", footTerms: "Vilkår", footAds: "Reklamer", footPress: "Presse",
     footSig: "Lavet med omhu · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Slå mørk tilstand til/fra", langLabel: "Sprog", closeLabel: "Luk",
     videoLabel: "Vakits bønneskærm: himlen skifter, efterhånden som dagen går",
