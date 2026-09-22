@@ -452,7 +452,7 @@ ${jsonLd(faqSchema(lang))}
         <div class="proof-lbl">${esc(t(lang, "p2"))}</div>
       </div>
       <div class="proof">
-        <div class="proof-val">13</div>
+        <div class="proof-val">${SITE.calcMethods}</div>
         <div class="proof-lbl">${esc(t(lang, "p3"))}</div>
       </div>
       <div class="proof">

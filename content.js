@@ -45,6 +45,9 @@ const SITE = {
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
   operatingSystem: "iOS, iPadOS, macOS, watchOS",
+  // Methods the user can pick: CalculationMethod.userSelectableCases in
+  // VakitApp-Swift (every case except .other, which the menu hides).
+  calcMethods: 12,
 };
 
 /**
