@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Waktu Solat & Azan",
     description:
-      "Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch dan Mac; 25 bahasa, 13 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada. Percuma, tanpa iklan, luar talian.",
+      "Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch dan Mac; 25 bahasa, 12 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada. Percuma, tanpa iklan, luar talian.",
     keywords:
       "waktu solat, jadual solat, azan, arah kiblat, kompas kiblat, qiblat finder, al quran, quran offline, yasin, surah, tasbih digital, zikir, doa, azkar, hadis, puasa, imsak, kalendar hijrah, widget solat, aplikasi muslim malaysia",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moscow", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Urumqi", beijing: "Beijing",
   },
   FEATURES: [
-    { n: "Waktu Solat", d: "13 kaedah pengiraan, peka zon waktu, mengesan perjalanan." },
+    { n: "Waktu Solat", d: "12 kaedah pengiraan, peka zon waktu, mengesan perjalanan." },
     { n: "Langit Hidup", d: "Bintang dan bulan sebenar pada lengkung hari — ikut tempat anda, pada saat ini." },
     { n: "Waktu Solat Sunat", d: "Isyraq, Duha, Awwabin dan bahagian-bahagian malam; pilihan." },
     { n: "Lokasi Manual", d: "Tetapkan lokasi sendiri, atau biar ia mengikut anda semasa bermusafir." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Privasi", o: "Data lokasi dijual kepada pihak ketiga (dilaporkan media).", v: "Koordinat tidak pernah sampai ke pelayan kami. Tiada penjejakan." },
     { f: "Luar talian", o: "Ciri utama memerlukan sambungan internet.", v: "Solat, kiblat, teks Al-Quran, zikir — semuanya berfungsi luar talian." },
     { f: "Skrin Kunci", o: "Widget rosak setiap kali iOS dikemas kini.", v: "Aktiviti Langsung dan Dynamic Island; StandBy sejak iOS 17." },
-    { f: "Ketepatan", o: "Ralat waktu musim panas, kaedah pengiraan terhad.", v: "13 kaedah, peka zon waktu, mengesan perjalanan." },
+    { f: "Ketepatan", o: "Ralat waktu musim panas, kaedah pengiraan terhad.", v: "12 kaedah, peka zon waktu, mengesan perjalanan." },
     { f: "Peranti", o: "Telefon sahaja; jam tangan dan desktop tiada atau separuh siap.", v: "iPhone, iPad dan Mac melalui iCloud; Apple Watch diselaraskan melalui iPhone." },
     { f: "Reka bentuk", o: "Antara muka lapuk; ada sahaja yang rosak selepas setiap kemas kini.", v: "Liquid Glass pada iOS 26, berfungsi sejak iOS 16.4. Tenang, moden, pantas." },
     { f: "Kos", o: "Dinding bayaran, langganan, peringkat ‘premium’.", v: "Percuma. Tiada peringkat, tiada desakan naik taraf." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "Bolehkah ia berfungsi tanpa internet?", a: "Boleh. Waktu solat dikira dalam telefon anda berdasarkan lokasi anda. Teks Al-Quran, kiblat, zikir dan semua alat utama berfungsi sepenuhnya luar talian." },
     { q: "Adakah pemberitahuan tetap sampai walaupun saya tidak membuka aplikasi?", a: "Ya. Pemberitahuan dijadualkan secara setempat dalam peranti, jadi ia tetap sampai walaupun aplikasi ditutup. Jika anda memberi kebenaran lokasi ‘Sentiasa’, Vakit akan mengira semula waktu secara senyap selepas anda bermusafir." },
     { q: "Adakah semuanya benar-benar percuma?", a: "Ya. Seluruh aplikasi percuma: tanpa langganan, dinding bayaran atau peringkat ‘premium’, dan tiada apa-apa yang dikunci. Jika anda ingin menyokongnya, anda boleh menderma atau memilih untuk menonton iklan; kedua-duanya tidak membuka kunci apa-apa." },
-    { q: "Dari mana datangnya waktu solat?", a: "Ia tidak diambil dari pelayan. Vakit mengiranya dalam peranti anda menggunakan kaedah pilihan anda — terdapat 13 kaedah — dan koordinat lokasi anda." },
+    { q: "Dari mana datangnya waktu solat?", a: "Ia tidak diambil dari pelayan. Vakit mengiranya dalam peranti anda menggunakan kaedah pilihan anda — terdapat 12 kaedah — dan koordinat lokasi anda." },
     { q: "Dalam bahasa apakah aplikasi ini tersedia?", a: "Antara muka aplikasi tersedia dalam 25 bahasa: Turki, Inggeris, Arab, Jerman, Perancis, Sepanyol, Itali, Belanda, Portugis, Denmark, Rusia, Azerbaijan, Albania, Indonesia, Melayu, Cina, Jepun, Thai, Hindi, Bengali, Urdu, Parsi, Uighur, Swahili dan Fula. Jika bahasa peranti anda disokong, aplikasi dibuka dalam bahasa itu secara automatik; anda boleh menukarnya di Tetapan pada bila-bila masa. Dalam bahasa Arab, Urdu, Parsi dan Uighur, keseluruhan antara muka bergerak dari kanan ke kiri. Namun, terjemahan kandungan buat masa ini hanya dalam bahasa Turki dan Inggeris: terjemahan Al-Quran, transliterasi dan terjemahan hadis tersedia dalam dua bahasa itu; maksud perkataan hanya dalam bahasa Inggeris, dan sesetengah kitab hadis hanya sebahagiannya diterjemahkan ke bahasa Turki. Dengan antara muka bahasa Arab, tafsir berbahasa Arab dibuka untuk sebahagian Al-Quran; khutbah Jumaat hadir dalam bahasa yang diterbitkan oleh Diyanet (Turki, dan pada sesetengah minggu Inggeris dan Arab)." },
     { q: "Pada peranti apakah ia berfungsi?", a: "iPhone, iPad, Apple Watch dan Mac. Di iPad, ia aplikasi yang sama pada skrin lebih besar, dan catatan anda kekal sama di semua peranti melalui iCloud. Sejak versi 1.7.0, Vakit turut berfungsi di Mac: solat seterusnya dan kiraan detik di bar menu, pintasan papan kekunci, widget desktop, dan tab di bar sisi sejak macOS 15. Waktu solat, Al-Quran, hadis, zikir dan catatan ibadah diselaraskan dengan iPhone anda melalui akaun iCloud yang sama. Tab Kiblat di Mac memaparkan arah dan jarak ke Kaabah dalam bentuk teks, kerana Mac tidak mempunyai perkakasan kompas." },
     { q: "Bolehkah saya memilih bunyi azan?", a: "Boleh. Dengan pilihan Azan, setiap waktu dikumandangkan dalam maqamnya sendiri: Subuh saba, Zohor ussak, Asar rast, Maghrib segah, Isyak hicaz. Anda juga boleh menetapkan bunyi pemberitahuan berbeza bagi setiap waktu solat. Rakaman azan disertakan bersama aplikasi, jadi memainkannya tidak memerlukan internet." },

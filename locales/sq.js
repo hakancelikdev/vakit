@@ -4,7 +4,7 @@ module.exports = {
   META: {
     title: "Vakit: Kohët e namazit, Kibla, Kurani",
     description:
-      "Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch dhe Mac; 25 gjuhë, 13 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza. Falas, pa reklama, pa internet.",
+      "Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch dhe Mac; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza. Falas, pa reklama, pa internet.",
     keywords:
       "kohët e namazit, takvimi, vaktet e namazit, kibla, drejtimi i kiblës, kurani, aplikacion islam, mysliman, namaz, ezan, dhikër, tesbih, hadith, kalendari hixhri, ramazan, syfyr, iftar, xhami, namazet kaza, esmaul husna",
   },
@@ -59,7 +59,7 @@ module.exports = {
     moscow: "Moska", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkoku", urumqi: "Urumqi", beijing: "Pekini",
   },
   FEATURES: [
-    { n: "Kohët e namazit", d: "13 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni." },
+    { n: "Kohët e namazit", d: "12 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni." },
     { n: "Qielli i gjallë", d: "Yje të vërtetë dhe hëna mbi harkun e ditës — për vendin ku jeni, tani." },
     { n: "Kohët e namazeve nafile", d: "Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës." },
     { n: "Vendndodhje manuale", d: "Zgjidheni vendndodhjen vetë, ose lëreni t'ju ndjekë kur udhëtoni." },
@@ -126,7 +126,7 @@ module.exports = {
     { f: "Privatësia", o: "Të dhëna vendndodhjeje të shitura palëve të treta (u raportua publikisht).", v: "Koordinatat nuk arrijnë në serverët tanë. Pa gjurmim." },
     { f: "Pa internet", o: "Veçoritë bazë kërkojnë lidhje me internetin.", v: "Namazi, kibla, teksti i Kuranit, dhikri — të gjitha punojnë pa internet." },
     { f: "Ekrani i kyçjes", o: "Widget-et prishen nga një përditësim i iOS te tjetri.", v: "Live Activity dhe Dynamic Island; StandBy nga iOS 17." },
-    { f: "Saktësia", o: "Gabime me orën verore, metoda të kufizuara llogaritjeje.", v: "13 metoda, sipas zonës kohore, e dallon udhëtimin." },
+    { f: "Saktësia", o: "Gabime me orën verore, metoda të kufizuara llogaritjeje.", v: "12 metoda, sipas zonës kohore, e dallon udhëtimin." },
     { f: "Pajisjet", o: "Vetëm telefoni; ora dhe kompjuteri mungojnë ose janë gjysmake.", v: "iPhone, iPad dhe Mac përmes iCloud; Apple Watch sinkronizohet përmes iPhone-it." },
     { f: "Dizajni", o: "Ndërfaqe të vjetruara; kthime prapa pas çdo përditësimi.", v: "Liquid Glass në iOS 26, punon që nga iOS 16.4. I qetë, modern, i shpejtë." },
     { f: "Kostoja", o: "Mure pagese, abonime, nivele «premium».", v: "Falas. Pa nivele, pa shitje shtesë." },
@@ -149,7 +149,7 @@ module.exports = {
     { q: "A punon pa internet?", a: "Po. Kohët e namazit llogariten në telefonin tuaj sipas vendndodhjes suaj. Teksti i Kuranit, kibla, dhikri dhe të gjitha mjetet bazë punojnë plotësisht pa internet." },
     { q: "A vijnë njoftimet edhe nëse nuk e hap kurrë aplikacionin?", a: "Po. Ato planifikohen lokalisht në pajisjen tuaj, kështu që i merrni edhe kur aplikacioni është i mbyllur. Nëse jepni leje vendndodhjeje «Gjithmonë», Vakit i rillogarit kohët në heshtje pasi udhëtoni." },
     { q: "A është vërtet gjithçka falas?", a: "Po. I gjithë aplikacioni është falas: pa abonime, pa mure pagese, pa nivel «premium», dhe asgjë nuk është e kyçur. Nëse doni ta mbështetni, mund të bëni një dhurim ose të zgjidhni vetë të shikoni një reklamë; asnjëra prej tyre nuk zhbllokon asgjë." },
-    { q: "Nga vijnë kohët e namazit?", a: "Nuk merren nga ndonjë server. Vakit i llogarit në pajisjen tuaj me metodën që zgjidhni (ka 13 në dispozicion) dhe me koordinatat tuaja." },
+    { q: "Nga vijnë kohët e namazit?", a: "Nuk merren nga ndonjë server. Vakit i llogarit në pajisjen tuaj me metodën që zgjidhni (ka 12 në dispozicion) dhe me koordinatat tuaja." },
     { q: "Në cilat gjuhë është i disponueshëm?", a: "Ndërfaqja e aplikacionit është në 25 gjuhë: turqisht, anglisht, arabisht, gjermanisht, frëngjisht, spanjisht, italisht, holandisht, portugalisht, danisht, rusisht, azerbajxhanisht, shqip, indonezisht, malajisht, kinezisht, japonisht, tajlandisht, hindisht, bengalisht, urdisht, persisht, ujgurisht, suahilisht dhe fula. Nëse gjuha e pajisjes suaj mbështetet, aplikacioni hapet vetvetiu në të; mund ta ndryshoni kur të doni te Cilësimet. Në arabisht, urdisht, persisht dhe ujgurisht e gjithë ndërfaqja rrjedh nga e djathta në të majtë. Përkthimet e përmbajtjes, megjithatë, janë tani për tani vetëm në turqisht dhe anglisht: përkthimi i Kuranit, transliterimi dhe përkthimet e hadithit ofrohen në këto dy gjuhë; kuptimet e fjalëve janë vetëm në anglisht, dhe disa koleksione hadithi janë përkthyer vetëm pjesërisht në turqisht. Me ndërfaqen në arabisht, për një pjesë të Kuranit hapet një tefsir në arabisht; hutbeja e xhumasë vjen në gjuhët në të cilat e publikon Diyanet (turqisht, dhe disa javë anglisht e arabisht)." },
     { q: "Në cilat pajisje punon?", a: "iPhone, iPad, Apple Watch dhe Mac. Në iPad është i njëjti aplikacion në ekran më të madh, dhe regjistrimet tuaja mbeten të njëjta në të gjitha pajisjet përmes iCloud. Që nga versioni 1.7.0, Vakit punon edhe në Mac: namazi i radhës dhe numërimi mbrapsht në shiritin e menysë, shkurtore tastiere, widget në desktop dhe, që nga macOS 15, skedat në shiritin anësor. Kohët e namazit, Kurani, hadithet, dhikri dhe regjistrimet e ibadetit sinkronizohen me iPhone-in tuaj përmes së njëjtës llogari iCloud. Meqë Mac-ët nuk kanë busull, skeda Kibla e tregon me tekst drejtimin dhe largësinë deri te Qabja." },
     { q: "A mund ta zgjedh zërin e ezanit?", a: "Po. Me opsionin Ezan, çdo namaz luhet në makamin e vet: sabahu saba, dreka ushak, ikindia rast, akshami segah, jacia hixhaz. Mund të caktoni edhe një zë njoftimi të ndryshëm për çdo namaz. Regjistrimet vijnë bashkë me aplikacionin, ndaj nuk kanë nevojë për internet që të luhen." },

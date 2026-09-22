@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Gebedstijden & Widget",
     description:
-      "Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 13 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.",
+      "Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 12 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden. Gratis, zonder advertenties, offline.",
     keywords:
       "gebedstijden, namaz vakitleri, qibla, koran app, islamitische app, moslim app, gebeds app, ezan, adhan, athan, azan, gebedstijden widget, dhikr teller, hadith, ramadan, vasten, moskee, hidjri kalender, namaz, dua",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moskou", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Ürümqi", beijing: "Peking",
   },
   FEATURES: [
-    { n: "Gebedstijden", d: "13 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist." },
+    { n: "Gebedstijden", d: "12 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist." },
     { n: "Levende hemel", d: "Echte sterren en de maan op de dagboog – voor waar jij nu bent." },
     { n: "Vrijwillige gebedstijden", d: "Isjraq, Doeha, Awwabin en de delen van de nacht; optioneel." },
     { n: "Handmatige locatie", d: "Stel je locatie zelf in, of laat die je volgen als je reist." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Privacy", o: "Locatiegegevens verkocht aan derden (in de media verschenen).", v: "Coördinaten komen nooit op onze servers. Geen tracking." },
     { f: "Offline", o: "Basisfuncties hebben internet nodig.", v: "Gebed, qibla, Korantekst, dhikr – alles werkt offline." },
     { f: "Toegangsscherm", o: "Widgets gaan stuk bij iOS-updates.", v: "Live activiteit en Dynamic Island; StandBy vanaf iOS 17." },
-    { f: "Nauwkeurigheid", o: "Fouten rond zomer- en wintertijd, weinig berekeningsmethoden.", v: "13 methoden, houdt rekening met tijdzones, merkt het als je reist." },
+    { f: "Nauwkeurigheid", o: "Fouten rond zomer- en wintertijd, weinig berekeningsmethoden.", v: "12 methoden, houdt rekening met tijdzones, merkt het als je reist." },
     { f: "Apparaten", o: "Alleen de telefoon; horloge en desktop ontbreken of zijn half af.", v: "iPhone, iPad en Mac via iCloud; de Apple Watch synchroniseert via de iPhone." },
     { f: "Ontwerp", o: "Verouderde interfaces; na elke update een stap terug.", v: "Liquid Glass op iOS 26, werkt vanaf iOS 16.4. Rustig, modern, snel." },
     { f: "Kosten", o: "Betaalmuren, abonnementen, 'premium'-niveaus.", v: "Gratis. Geen niveaus, geen upsell." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "Werkt de app zonder internet?", a: "Ja. Gebedstijden worden op je telefoon berekend op basis van je locatie. De Korantekst, qibla, dhikr en alle basisfuncties werken volledig offline." },
     { q: "Krijg ik meldingen, ook als ik de app nooit open?", a: "Ja. Ze worden lokaal op je apparaat ingepland, dus je krijgt ze ook als de app gesloten is. Geef je 'Altijd' locatietoegang, dan rekent Vakit na een reis de tijden stilletjes opnieuw uit." },
     { q: "Is echt alles gratis?", a: "Ja. De hele app is gratis: geen abonnement, geen betaalmuur, geen 'premium'-niveau, niets zit op slot. Wil je Vakit steunen, dan kun je doneren of er zelf voor kiezen een advertentie te bekijken; geen van beide ontgrendelt iets." },
-    { q: "Waar komen de gebedstijden vandaan?", a: "Ze worden niet van een server gehaald. Vakit berekent ze op je apparaat, met de methode die je kiest (er zijn er 13) en je coördinaten." },
+    { q: "Waar komen de gebedstijden vandaan?", a: "Ze worden niet van een server gehaald. Vakit berekent ze op je apparaat, met de methode die je kiest (er zijn er 12) en je coördinaten." },
     { q: "In welke talen is de app beschikbaar?", a: "De interface van de app is er in 25 talen: Turks, Engels, Arabisch, Duits, Frans, Spaans, Italiaans, Nederlands, Portugees, Deens, Russisch, Azerbeidzjaans, Albanees, Indonesisch, Maleis, Chinees, Japans, Thai, Hindi, Bengaals, Urdu, Perzisch, Oeigoers, Swahili en Fula. Wordt de taal van je apparaat ondersteund, dan opent de app daar automatisch in; je kunt dit altijd wijzigen in Instellingen. In het Arabisch, Urdu, Perzisch en Oeigoers loopt de hele interface van rechts naar links. De vertalingen van de inhoud zijn voorlopig echter alleen in het Turks en Engels: de Koranvertaling, transliteratie en hadithvertalingen zijn er in die twee talen; woordbetekenissen alleen in het Engels, en sommige hadithverzamelingen zijn maar deels in het Turks vertaald. Met de Arabische interface opent voor een deel van de Koran een Arabische tafsir; de vrijdagpreek verschijnt in de talen waarin Diyanet hem publiceert (Turks, en sommige weken ook Engels en Arabisch)." },
     { q: "Op welke apparaten werkt de app?", a: "iPhone, iPad, Apple Watch en Mac. Op de iPad is het dezelfde app op een groter scherm, en via iCloud blijven je gegevens op al je apparaten gelijk. Sinds versie 1.7.0 werkt Vakit ook op de Mac: het volgende gebed en de aftelling in de menubalk, toetscombinaties, bureaubladwidgets en vanaf macOS 15 tabbladen in de navigatiekolom. Gebedstijden, Koran, hadith, dhikr en je ibada-gegevens synchroniseren met je iPhone via hetzelfde iCloud-account. Omdat een Mac geen kompas heeft, toont het qibla-tabblad de richting en afstand tot de Kaäba als tekst." },
     { q: "Kan ik het adhan-geluid kiezen?", a: "Ja. Met de optie Adhan klinkt elk gebed in zijn eigen makam: Fajr saba, Dhuhr uşşak, Asr rast, Maghrib segah, Isha hicaz. Je kunt ook per gebed een ander meldingsgeluid instellen. De opnames zitten in de app, dus afspelen kan zonder internet." },

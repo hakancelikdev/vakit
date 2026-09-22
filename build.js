@@ -1044,7 +1044,7 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 - **Completely ad-free.** No screen shows an ad. The one exception is opt-in: a user who
   wants to support the app can choose to watch an ad.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
-  using one of 13 calculation methods — not fetched from a server. Quran, qibla,
+  using one of 12 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.
 - **Private by design.** Coordinates never reach Vakit's servers — only country, city
   and district do. To show the place name and nearby mosques, the device sends

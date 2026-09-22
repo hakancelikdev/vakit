@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Hora de oración, Salat",
     description:
-      "Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch y Mac; 25 idiomas, 13 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes. Gratis, sin anuncios y sin conexión.",
+      "Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch y Mac; 25 idiomas, 12 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes. Gratis, sin anuncios y sin conexión.",
     keywords:
       "horarios de oración, hora de oración, alquibla, qibla, Corán, quran, app musulmana, islam, salat, namaz, adhán, athan, azkar, dhikr, dua, hadiz, tasbih, calendario hégira, Ramadán, mezquita, oraciones pendientes",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moscú", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Urumqi", beijing: "Pekín",
   },
   FEATURES: [
-    { n: "Horarios de oración", d: "13 métodos de cálculo, atentos a la zona horaria y a tus viajes." },
+    { n: "Horarios de oración", d: "12 métodos de cálculo, atentos a la zona horaria y a tus viajes." },
     { n: "Cielo en vivo", d: "Estrellas reales y la luna sobre el arco del día, según dónde estás y la hora." },
     { n: "Oraciones voluntarias", d: "Ishraq, Duha, Awwabin y las partes de la noche; opcionales." },
     { n: "Ubicación manual", d: "Elige tu ubicación a mano o deja que te acompañe cuando viajas." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Privacidad", o: "Datos de ubicación vendidos a terceros (salió en la prensa).", v: "Las coordenadas nunca llegan a nuestros servidores. Sin rastreo." },
     { f: "Sin conexión", o: "Las funciones básicas necesitan internet.", v: "Oración, alquibla, texto del Corán, dhikr: todo funciona sin conexión." },
     { f: "Pantalla bloqueada", o: "Los widgets fallan de una actualización de iOS a otra.", v: "Actividad en vivo y Dynamic Island; StandBy desde iOS 17." },
-    { f: "Precisión", o: "Errores con el horario de verano, pocos métodos de cálculo.", v: "13 métodos, atentos a la zona horaria y a tus viajes." },
+    { f: "Precisión", o: "Errores con el horario de verano, pocos métodos de cálculo.", v: "12 métodos, atentos a la zona horaria y a tus viajes." },
     { f: "Dispositivos", o: "Solo el teléfono; reloj y ordenador ausentes o a medias.", v: "iPhone, iPad y Mac con iCloud; el Apple Watch se sincroniza a través del iPhone." },
     { f: "Diseño", o: "Interfaces anticuadas; retrocesos tras cada actualización.", v: "Liquid Glass en iOS 26; funciona desde iOS 16.4. Sereno, moderno y rápido." },
     { f: "Coste", o: "Muros de pago, suscripciones, niveles «premium».", v: "Gratis. Sin niveles ni ventas adicionales." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "¿Funciona sin internet?", a: "Sí. Los horarios de oración se calculan en tu teléfono a partir de tu ubicación. El texto del Corán, la alquibla, el dhikr y todas las herramientas básicas funcionan totalmente sin conexión." },
     { q: "¿Recibiré notificaciones aunque no abra la app?", a: "Sí. Se programan de forma local en tu dispositivo, así que te llegan incluso con la app cerrada. Si das acceso a la ubicación «Siempre», Vakit recalcula los horarios discretamente después de un viaje." },
     { q: "¿De verdad es todo gratis?", a: "Sí. Toda la app es gratuita: sin suscripciones, sin muros de pago, sin nivel «premium» y sin nada bloqueado. Si quieres apoyarla, puedes hacer una donación o elegir ver un anuncio; ninguna de las dos cosas desbloquea nada." },
-    { q: "¿De dónde salen los horarios de oración?", a: "No se descargan de ningún servidor. Vakit los calcula en tu dispositivo con el método que elijas (hay 13 disponibles) y con tus coordenadas." },
+    { q: "¿De dónde salen los horarios de oración?", a: "No se descargan de ningún servidor. Vakit los calcula en tu dispositivo con el método que elijas (hay 12 disponibles) y con tus coordenadas." },
     { q: "¿En qué idiomas está disponible?", a: "La interfaz de la app está en 25 idiomas: turco, inglés, árabe, alemán, francés, español, italiano, neerlandés, portugués, danés, ruso, azerí, albanés, indonesio, malayo, chino, japonés, tailandés, hindi, bengalí, urdu, persa, uigur, suajili y fula. Si el idioma de tu dispositivo es compatible, la app se abre directamente en él; puedes cambiarlo cuando quieras en Ajustes. En árabe, urdu, persa y uigur toda la interfaz va de derecha a izquierda. Las traducciones del contenido, en cambio, de momento solo están en turco e inglés: la traducción del Corán, la transliteración y la traducción de los hadices se ofrecen en esos dos idiomas; el significado de las palabras solo está en inglés, y algunas colecciones de hadices solo están traducidas al turco en parte. Con la interfaz en árabe, se abre un tafsir en árabe para una parte del Corán; el sermón del viernes llega en los idiomas en que lo publica Diyanet (turco y, algunas semanas, inglés y árabe)." },
     { q: "¿En qué dispositivos funciona?", a: "iPhone, iPad, Apple Watch y Mac. En el iPad es la misma app en una pantalla más grande, y tus registros se mantienen iguales en todos tus dispositivos gracias a iCloud. Desde la versión 1.7.0, Vakit también funciona en el Mac: la próxima oración y la cuenta atrás en la barra de menús, atajos de teclado, widgets de escritorio y, desde macOS 15, pestañas en la barra lateral. Los horarios de oración, el Corán, los hadices, el dhikr y los registros de adoración se sincronizan con tu iPhone a través de la misma cuenta de iCloud. Como el Mac no tiene brújula, la pestaña Alquibla muestra en texto la dirección y la distancia a la Kaaba." },
     { q: "¿Puedo elegir el sonido del adhán?", a: "Sí. Con la opción Adhán, cada oración suena en su propio maqam: Fajr en saba, Duhr en ussak, Asr en rast, Magrib en segah e Isha en hicaz. También puedes poner un sonido de notificación distinto para cada oración. Las grabaciones vienen con la app, así que no necesitan conexión para sonar." },

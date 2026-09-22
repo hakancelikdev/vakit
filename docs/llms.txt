@@ -1,6 +1,6 @@
 # Vakit: Prayer Times, Qibla, Quran
 
-> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.
+> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.4; requires
@@ -13,7 +13,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 - **Completely ad-free.** No screen shows an ad. The one exception is opt-in: a user who
   wants to support the app can choose to watch an ad.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
-  using one of 13 calculation methods — not fetched from a server. Quran, qibla,
+  using one of 12 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.
 - **Private by design.** Coordinates never reach Vakit's servers — only country, city
   and district do. To show the place name and nearby mosques, the device sends
@@ -28,7 +28,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 
 ## Features
 
-- **Prayer Times** — 13 calculation methods, timezone-aware, travel-detecting.
+- **Prayer Times** — 12 calculation methods, timezone-aware, travel-detecting.
 - **Live Sky** — Real stars and the moon on the day arc — for where you are, right now.
 - **Voluntary Prayer Times** — Ishraq, Duha, Awwabin and the parts of the night; optional.
 - **Manual Location** — Set your location by hand, or let it follow you as you travel.
@@ -94,7 +94,7 @@ Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, noth
 
 ### Where do prayer times come from?
 
-They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates.
+They're not fetched from a server. Vakit calculates them on your device using the method you pick — 12 are available — and your local coordinates.
 
 ### Which languages is it available in?
 
@@ -171,4 +171,4 @@ The home page exists in every interface language:
 - [Advertising policy](https://vakit.hakancelik.dev/en/ads-policy.html) ([Turkish](https://vakit.hakancelik.dev/ads-policy.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-11
+Last updated: 2026-09-22

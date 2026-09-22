@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-09-11",
+  updated: "2026-09-22",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -146,14 +146,14 @@ const META = {
   tr: {
     title: "Vakit: Namaz Vakitleri, Kıble, Kur'an",
     description:
-      "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 13 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
+      "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
     keywords:
       "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, kaza namazı takibi, cuma hutbesi, kerahat vakitleri, sahur alarmı, apple watch, ipad, mac uygulaması, ezan sesi, hatim takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, namaz uygulaması",
   },
   en: {
     title: "Vakit: Prayer Times, Qibla, Quran",
     description:
-      "Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 13 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.",
+      "Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.",
     keywords:
       "prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, ipad prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app",
   },
@@ -276,7 +276,7 @@ const CITIES = {
 // in every language.
 const FEATURES = {
   tr: [
-    { n: "Namaz Vakitleri", d: "13 hesaplama yöntemi, zaman dilimine duyarlı, seyahat algılayan." },
+    { n: "Namaz Vakitleri", d: "12 hesaplama yöntemi, zaman dilimine duyarlı, seyahat algılayan." },
     { n: "Canlı Gökyüzü", d: "Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre." },
     { n: "Nafile Vakitleri", d: "İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı." },
     { n: "Manuel Konum", d: "Konumu elle seç ya da seyahatte kendiliğinden güncellensin." },
@@ -327,7 +327,7 @@ const FEATURES = {
     { n: "Karanlık Mod", d: "Geç saatler için sıcak, sakin karanlık." },
   ],
   en: [
-    { n: "Prayer Times", d: "13 calculation methods, timezone-aware, travel-detecting." },
+    { n: "Prayer Times", d: "12 calculation methods, timezone-aware, travel-detecting." },
     { n: "Live Sky", d: "Real stars and the moon on the day arc — for where you are, right now." },
     { n: "Voluntary Prayer Times", d: "Ishraq, Duha, Awwabin and the parts of the night; optional." },
     { n: "Manual Location", d: "Set your location by hand, or let it follow you as you travel." },
@@ -414,7 +414,7 @@ const COMPARE = {
     { f: "Gizlilik", o: "Üçüncü taraflara satılan konum verisi (basına yansıdı).", v: "Koordinatlar sunucumuza gitmez. Takip yok." },
     { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz, kıble, Kur'an metni, zikir — hepsi çevrimdışı." },
     { f: "Kilit Ekranı", o: "Widget'lar iOS güncellemelerinde bozulur.", v: "Live Activity ve Dynamic Island; iOS 17'den itibaren StandBy." },
-    { f: "Doğruluk", o: "Yaz/kış saati hataları, sınırlı hesaplama.", v: "13 yöntem, zaman dilimi bilinci, seyahat algılama." },
+    { f: "Doğruluk", o: "Yaz/kış saati hataları, sınırlı hesaplama.", v: "12 yöntem, zaman dilimi bilinci, seyahat algılama." },
     { f: "Cihazlar", o: "Yalnız telefon; saat ve masaüstü yok ya da yarım.", v: "iPhone, iPad ve Mac iCloud ile; Apple Watch iPhone üzerinden senkron." },
     { f: "Tasarım", o: "Eski arayüzler; her güncellemede geriye dönüşler.", v: "iOS 26'da Liquid Glass, iOS 16.4'ten itibaren. Sade, modern, hızlı." },
     { f: "Maliyet", o: "Paywall, abonelik, 'premium' seviyeler.", v: "Ücretsiz. Seviye yok, upsell yok." },
@@ -424,7 +424,7 @@ const COMPARE = {
     { f: "Privacy", o: "Location data sold to third parties (publicly reported).", v: "Coordinates never reach our servers. No tracking." },
     { f: "Offline", o: "Core features require an internet connection.", v: "Prayer, qibla, Quran text, dhikr — all work offline." },
     { f: "Lock Screen", o: "Widgets break between iOS updates.", v: "Live Activity and Dynamic Island; StandBy from iOS 17." },
-    { f: "Accuracy", o: "DST errors, limited calculation methods.", v: "13 methods, timezone-aware, travel-detecting." },
+    { f: "Accuracy", o: "DST errors, limited calculation methods.", v: "12 methods, timezone-aware, travel-detecting." },
     { f: "Devices", o: "Phone only; watch and desktop missing or half-built.", v: "iPhone, iPad and Mac over iCloud; Apple Watch syncs through iPhone." },
     { f: "Design", o: "Dated interfaces; regressions after each update.", v: "Liquid Glass on iOS 26, runs from iOS 16.4. Quiet, modern, fast." },
     { f: "Cost", o: "Paywalls, subscriptions, 'premium' tiers.", v: "Free. No tier, no upsell." },
@@ -471,7 +471,7 @@ const FAQ = {
     { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumunuza göre telefonunuzda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır." },
     { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazınızda yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsınız. 'Her Zaman' konum izni verirseniz, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
     { q: "Her şey gerçekten ücretsiz mi?", a: "Evet. Uygulamanın tamamı ücretsiz: abonelik, paywall ya da 'premium' yok, hiçbir özellik kilitli değil. Destek olmak isteyen bağış yapabilir ya da kendi seçimiyle bir reklam izleyebilir; ikisi de hiçbir şeyin kilidini açmaz." },
-    { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazınızda, seçtiğiniz yönteme (13 yöntem mevcut) ve konumunuza göre hesaplar." },
+    { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazınızda, seçtiğiniz yönteme (12 yöntem mevcut) ve konumunuza göre hesaplar." },
     { q: "Hangi dillerde kullanılabiliyor?", a: "Uygulamanın arayüzü 25 dilde: Türkçe, İngilizce, Arapça, Almanca, Fransızca, İspanyolca, İtalyanca, Hollandaca, Portekizce, Danca, Rusça, Azerice, Arnavutça, Endonezce, Malayca, Çince, Japonca, Tayca, Hintçe, Bengalce, Urduca, Farsça, Uygurca, Svahili ve Fulahça. Cihazınızın dili destekleniyorsa uygulama kendiliğinden o dilde açılır; istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Arapça, Urduca, Farsça ve Uygurca'da arayüz baştan sona sağdan sola akar. İçerik çevirileri ise şimdilik yalnız Türkçe ve İngilizce: Kur'an meali, okunuş ve hadis çevirileri bu iki dilde; kelime anlamları yalnız İngilizce, bazı hadis koleksiyonlarının Türkçe çevirisi de kısmi. Arapça arayüzde âyetlerin bir kısmı için Arapça tefsir açılır; Cuma hutbesi Diyanet'in yayımladığı dillerde gelir (Türkçe; yayımlandığı haftalarda İngilizce ve Arapça)." },
     { q: "Hangi cihazlarda çalışıyor?", a: "iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları, masaüstü widget'ları ve macOS 15'ten itibaren kenar çubuğunda sekmeler. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unuzla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir." },
     { q: "Ezan sesini seçebiliyor muyum?", a: "Evet. Ezan seçeneğinde her vakit kendi makamında okunur: sabah saba, öğle uşşak, ikindi rast, akşam segah, yatsı hicaz. İstersen her vakte ayrı bir bildirim sesi de seçebilirsin. Ezanlar uygulamayla birlikte geldiği için çalmaları internet gerektirmez." },
@@ -487,7 +487,7 @@ const FAQ = {
     { q: "Does it work without internet?", a: "Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline." },
     { q: "Will notifications arrive if I never open the app?", a: "Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel." },
     { q: "Is everything really free?", a: "Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate or choose to watch an ad; neither unlocks anything." },
-    { q: "Where do prayer times come from?", a: "They're not fetched from a server. Vakit calculates them on your device using the method you pick — 13 are available — and your local coordinates." },
+    { q: "Where do prayer times come from?", a: "They're not fetched from a server. Vakit calculates them on your device using the method you pick — 12 are available — and your local coordinates." },
     { q: "Which languages is it available in?", a: "The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only for now: the Quran translation, transliteration and hadith translations come in those two languages; word meanings are English only, and some hadith collections are only partly translated into Turkish. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon comes in the languages Diyanet publishes it in (Turkish, and in some weeks English and Arabic)." },
     { q: "Which devices does it run on?", a: "iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: next prayer and countdown in the menu bar, keyboard shortcuts, desktop widgets, and tabs in the sidebar from macOS 15. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware." },
     { q: "Can I choose the adhan sound?", a: "Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer. The recordings ship with the app, so playing them needs no connection." },

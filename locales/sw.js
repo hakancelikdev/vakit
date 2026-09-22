@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Nyakati za Swala, Kibla, Qurani",
     description:
-      "Fuatilia nyakati za swala, pata Kibla, soma Qurani. iPhone, iPad, Apple Watch na Mac; lugha 25, mbinu 13 za kukokotoa, Shughuli Hai, wijeti za Skrini ya Kufuli, khutba ya Ijumaa, ufuatiliaji wa kadhaa. Bila malipo, bila matangazo, bila intaneti.",
+      "Fuatilia nyakati za swala, pata Kibla, soma Qurani. iPhone, iPad, Apple Watch na Mac; lugha 25, mbinu 12 za kukokotoa, Shughuli Hai, wijeti za Skrini ya Kufuli, khutba ya Ijumaa, ufuatiliaji wa kadhaa. Bila malipo, bila matangazo, bila intaneti.",
     keywords:
       "nyakati za swala, ratiba ya swala, kibla, qurani, adhana, muislamu, uislamu, programu ya kiislamu, hadithi, dhikri, tasbihi, ramadhani, funga, daku, msikiti, zaka, kalenda ya hijria, swala za kadhaa, prayer times, qibla",
   },
@@ -62,7 +62,7 @@ module.exports = {
   },
 
   FEATURES: [
-    { n: "Nyakati za Swala", d: "Mbinu 13 za kukokotoa, zinazozingatia saa za eneo na kutambua unaposafiri." },
+    { n: "Nyakati za Swala", d: "Mbinu 12 za kukokotoa, zinazozingatia saa za eneo na kutambua unaposafiri." },
     { n: "Anga Hai", d: "Nyota halisi na mwezi kwenye upinde wa siku — kwa mahali ulipo, sasa hivi." },
     { n: "Nyakati za Swala za Sunna", d: "Ishraki, Dhuha, Awwabin na sehemu za usiku; kwa hiari." },
     { n: "Mahali kwa Mkono", d: "Weka mahali ulipo mwenyewe, au iache ikufuate unaposafiri." },
@@ -131,7 +131,7 @@ module.exports = {
     { f: "Faragha", o: "Data za mahali ulipo huuzwa kwa watu wengine (imeripotiwa hadharani).", v: "Viwianishi havifiki kwenye seva zetu. Hakuna ufuatiliaji." },
     { f: "Bila intaneti", o: "Vipengele vya msingi vinahitaji intaneti.", v: "Swala, kibla, maandishi ya Qurani, dhikri — vyote bila intaneti." },
     { f: "Skrini ya Kufuli", o: "Wijeti huharibika kila iOS inaposasishwa.", v: "Shughuli Hai na Dynamic Island; StandBy kuanzia iOS 17." },
-    { f: "Usahihi", o: "Makosa ya saa za majira ya joto, mbinu chache za kukokotoa.", v: "Mbinu 13, huzingatia saa za eneo, hutambua unaposafiri." },
+    { f: "Usahihi", o: "Makosa ya saa za majira ya joto, mbinu chache za kukokotoa.", v: "Mbinu 12, huzingatia saa za eneo, hutambua unaposafiri." },
     { f: "Vifaa", o: "Simu pekee; saa na kompyuta hazipo au zimekamilika nusu.", v: "iPhone, iPad na Mac kupitia iCloud; Apple Watch husawazishwa kupitia iPhone." },
     { f: "Muundo", o: "Violesura vilivyopitwa na wakati; hurudi nyuma kila sasisho.", v: "Liquid Glass kwenye iOS 26, inafanya kazi kuanzia iOS 16.4. Tulivu, ya kisasa, ya haraka." },
     { f: "Gharama", o: "Kuta za malipo, usajili, viwango vya “premium”.", v: "Bila malipo. Hakuna viwango, hakuna kushawishiwa kununua zaidi." },
@@ -156,7 +156,7 @@ module.exports = {
     { q: "Inafanya kazi bila intaneti?", a: "Ndiyo. Nyakati za swala zinakokotolewa kwenye simu yako kulingana na mahali ulipo. Maandishi ya Qurani, kibla, dhikri na kila zana ya msingi hufanya kazi kikamilifu bila intaneti." },
     { q: "Nitapata arifa hata nisipofungua programu?", a: "Ndiyo. Arifa hupangwa kwenye kifaa chenyewe, kwa hiyo utazipata hata programu ikiwa imefungwa. Ukiruhusu mahali pako “Kila Wakati”, Vakit hukokotoa upya kimya kimya baada ya kusafiri." },
     { q: "Je, kila kitu ni bila malipo kweli?", a: "Ndiyo. Programu yote ni bila malipo: hakuna usajili, hakuna kuta za malipo, hakuna kiwango cha “premium”, na hakuna kilichofungwa. Ukitaka kuiunga mkono, unaweza kutoa mchango au kuchagua kutazama tangazo; hakuna kimojawapo kinachofungua chochote." },
-    { q: "Nyakati za swala zinatoka wapi?", a: "Hazichukuliwi kutoka kwenye seva. Vakit huzikokotoa kwenye kifaa chako kwa mbinu unayochagua — zipo 13 — na viwianishi vya mahali ulipo." },
+    { q: "Nyakati za swala zinatoka wapi?", a: "Hazichukuliwi kutoka kwenye seva. Vakit huzikokotoa kwenye kifaa chako kwa mbinu unayochagua — zipo 12 — na viwianishi vya mahali ulipo." },
     { q: "Inapatikana kwa lugha zipi?", a: "Kiolesura cha programu kiko katika lugha 25: Kituruki, Kiingereza, Kiarabu, Kijerumani, Kifaransa, Kihispania, Kiitaliano, Kiholanzi, Kireno, Kidenmaki, Kirusi, Kiazerbaijani, Kialbania, Kiindonesia, Kimalei, Kichina, Kijapani, Kithai, Kihindi, Kibengali, Kiurdu, Kiajemi, Kiuyghur, Kiswahili na Kifula. Ikiwa lugha ya kifaa chako inatumika, programu hufunguka kwa lugha hiyo yenyewe; unaweza kuibadilisha katika Mipangilio wakati wowote. Kwa Kiarabu, Kiurdu, Kiajemi na Kiuyghur, kiolesura chote huenda kutoka kulia kwenda kushoto. Hata hivyo, tafsiri za maudhui kwa sasa ziko kwa Kituruki na Kiingereza pekee: tarjuma ya Qurani, unukuzi na tarjuma za hadithi zinapatikana kwa lugha hizo mbili; maana za maneno ziko kwa Kiingereza pekee, na baadhi ya mikusanyiko ya hadithi imetafsiriwa kwa Kituruki kwa sehemu tu. Ukitumia kiolesura cha Kiarabu, tafsiri ya Kiarabu hufunguka kwa sehemu ya Qurani; khutba ya Ijumaa huja kwa lugha ambazo Diyanet huichapisha (Kituruki, na katika baadhi ya wiki Kiingereza na Kiarabu)." },
     { q: "Inafanya kazi kwenye vifaa gani?", a: "iPhone, iPad, Apple Watch na Mac. Kwenye iPad ni programu ileile katika skrini kubwa, na kumbukumbu zako hubaki sawa kwenye vifaa vyote kupitia iCloud. Tangu toleo la 1.7.0 Vakit inafanya kazi pia kwenye Mac: swala inayofuata na hesabu ya muda kwenye upau wa menyu, njia za mkato za kibodi, wijeti za eneo-kazi, na vichupo kwenye utepe wa pembeni kuanzia macOS 15. Nyakati za swala, Qurani, hadithi, dhikri na kumbukumbu za ibada husawazishwa na iPhone yako kupitia akaunti ileile ya iCloud. Kichupo cha Kibla huonyesha mwelekeo na umbali hadi Al-Kaaba kwa maandishi, kwa kuwa Mac haina dira." },
     { q: "Naweza kuchagua sauti ya adhana?", a: "Ndiyo. Ukichagua adhana, kila swala husomwa kwa makamu yake: Alfajiri saba, Adhuhuri ussak, Alasiri rast, Magharibi segah, Isha hicaz. Unaweza pia kuweka sauti tofauti ya arifa kwa kila swala. Rekodi zimo ndani ya programu, kwa hiyo kuzicheza hakuhitaji intaneti." },

@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Jadwal Sholat & Adzan",
     description:
-      "Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, dan Mac; 25 bahasa, 13 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada. Gratis, tanpa iklan, offline.",
+      "Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, dan Mac; 25 bahasa, 12 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada. Gratis, tanpa iklan, offline.",
     keywords:
       "jadwal sholat, jadwal salat, waktu sholat, adzan, azan, arah kiblat, kompas kiblat, al quran, alquran offline, murottal, yasin, tasbih digital, dzikir, doa, hadis, puasa, imsakiyah, kalender hijriah, widget sholat, aplikasi muslim",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moskow", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Urumqi", beijing: "Beijing",
   },
   FEATURES: [
-    { n: "Jadwal Salat", d: "13 metode perhitungan, mengikuti zona waktu, mendeteksi perjalanan." },
+    { n: "Jadwal Salat", d: "12 metode perhitungan, mengikuti zona waktu, mendeteksi perjalanan." },
     { n: "Langit Hidup", d: "Bintang dan bulan sungguhan di busur hari — sesuai tempatmu, saat ini juga." },
     { n: "Waktu Salat Sunah", d: "Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional." },
     { n: "Lokasi Manual", d: "Atur lokasi sendiri, atau biarkan ia mengikutimu saat bepergian." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Privasi", o: "Data lokasi dijual ke pihak ketiga (sudah diberitakan media).", v: "Koordinat tidak pernah sampai ke server kami. Tanpa pelacakan." },
     { f: "Offline", o: "Fitur utama butuh koneksi internet.", v: "Salat, kiblat, teks Al-Qur'an, zikir — semua jalan offline." },
     { f: "Layar Terkunci", o: "Widget rusak setiap kali iOS diperbarui.", v: "Aktivitas Langsung dan Dynamic Island; StandBy sejak iOS 17." },
-    { f: "Akurasi", o: "Meleset saat pergantian jam musim panas, metode perhitungan terbatas.", v: "13 metode, mengikuti zona waktu, mendeteksi perjalanan." },
+    { f: "Akurasi", o: "Meleset saat pergantian jam musim panas, metode perhitungan terbatas.", v: "12 metode, mengikuti zona waktu, mendeteksi perjalanan." },
     { f: "Perangkat", o: "Hanya ponsel; jam tangan dan desktop tidak ada atau setengah jadi.", v: "iPhone, iPad, dan Mac lewat iCloud; Apple Watch tersinkron melalui iPhone." },
     { f: "Desain", o: "Tampilan usang; ada saja yang mundur tiap kali diperbarui.", v: "Liquid Glass di iOS 26, berjalan sejak iOS 16.4. Tenang, modern, cepat." },
     { f: "Biaya", o: "Dinding berbayar, langganan, tingkatan ‘premium’.", v: "Gratis. Tanpa tingkatan, tanpa bujukan upgrade." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "Apakah bisa dipakai tanpa internet?", a: "Bisa. Jadwal salat dihitung di ponselmu berdasarkan lokasimu. Teks Al-Qur'an, kiblat, zikir, dan semua alat utama bekerja sepenuhnya offline." },
     { q: "Apakah notifikasi tetap datang meski aplikasi tidak pernah dibuka?", a: "Ya. Notifikasi dijadwalkan secara lokal di perangkat, jadi tetap datang meski aplikasi ditutup. Jika kamu memberi izin lokasi ‘Selalu’, Vakit akan menghitung ulang jadwal secara diam-diam setelah kamu bepergian." },
     { q: "Apakah semuanya benar-benar gratis?", a: "Ya. Seluruh aplikasi gratis: tanpa langganan, tanpa dinding berbayar, tanpa tingkatan ‘premium’, dan tidak ada yang dikunci. Kalau kamu ingin mendukungnya, kamu bisa berdonasi atau memilih menonton iklan; keduanya tidak membuka apa pun." },
-    { q: "Dari mana jadwal salat berasal?", a: "Tidak diambil dari server. Vakit menghitungnya di perangkatmu dengan metode pilihanmu — ada 13 metode — dan koordinat lokasimu." },
+    { q: "Dari mana jadwal salat berasal?", a: "Tidak diambil dari server. Vakit menghitungnya di perangkatmu dengan metode pilihanmu — ada 12 metode — dan koordinat lokasimu." },
     { q: "Tersedia dalam bahasa apa saja?", a: "Antarmuka aplikasi tersedia dalam 25 bahasa: Turki, Inggris, Arab, Jerman, Prancis, Spanyol, Italia, Belanda, Portugis, Denmark, Rusia, Azerbaijan, Albania, Indonesia, Melayu, Mandarin, Jepang, Thai, Hindi, Bengali, Urdu, Persia, Uighur, Swahili, dan Fula. Jika bahasa perangkatmu didukung, aplikasi otomatis terbuka dalam bahasa itu; kamu bisa menggantinya kapan saja di Pengaturan. Dalam bahasa Arab, Urdu, Persia, dan Uighur, seluruh antarmuka berjalan dari kanan ke kiri. Namun terjemahan konten untuk saat ini hanya ada dalam bahasa Turki dan Inggris: terjemahan Al-Qur'an, transliterasi, dan terjemahan hadis tersedia dalam dua bahasa itu; arti kata hanya dalam bahasa Inggris, dan sebagian kitab hadis baru sebagian diterjemahkan ke bahasa Turki. Pada antarmuka bahasa Arab, tafsir berbahasa Arab terbuka untuk sebagian Al-Qur'an; khotbah Jumat hadir dalam bahasa yang diterbitkan Diyanet (Turki, dan pada sebagian pekan Inggris serta Arab)." },
     { q: "Bisa dipakai di perangkat apa saja?", a: "iPhone, iPad, Apple Watch, dan Mac. Di iPad, ini aplikasi yang sama di layar yang lebih besar, dan catatanmu tetap sama di semua perangkat lewat iCloud. Sejak versi 1.7.0, Vakit juga hadir di Mac: salat berikutnya dan hitung mundurnya di bilah menu, pintasan keyboard, widget desktop, serta tab di bilah samping sejak macOS 15. Jadwal salat, Al-Qur'an, hadis, zikir, dan catatan ibadah tersinkron dengan iPhone lewat akun iCloud yang sama. Karena Mac tidak punya kompas, tab Kiblat di Mac menampilkan arah dan jarak ke Ka'bah dalam bentuk teks." },
     { q: "Bisakah saya memilih suara azan?", a: "Bisa. Dengan pilihan Azan, setiap waktu salat dikumandangkan dalam maqamnya sendiri: Subuh saba, Zuhur ussak, Asar rast, Magrib segah, Isya hicaz. Kamu juga bisa memasang suara notifikasi berbeda untuk tiap waktu salat. Rekaman azan sudah ada di dalam aplikasi, jadi memutarnya tidak butuh internet." },

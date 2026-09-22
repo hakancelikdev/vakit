@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Heure de prière, Salat",
     description:
-      "Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch et Mac\u00a0; 25 langues, 13 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada. Gratuit, sans publicité, hors ligne.",
+      "Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch et Mac\u00a0; 25 langues, 12 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada. Gratuit, sans publicité, hors ligne.",
     keywords:
       "horaires de prière, heure de prière, salat, qibla, coran, application musulmane, muslim, adhan, athan, adan, azkar, dhikr, tasbih, dua, hadith, ramadan, mosquée, namaz vakitleri, calendrier hégirien",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moscou", tirana: "Tirana", nairobi: "Nairobi", bangkok: "Bangkok", urumqi: "Ürümqi", beijing: "Pékin",
   },
   FEATURES: [
-    { n: "Horaires de prière", d: "13 méthodes de calcul, fuseaux horaires pris en compte, détection des voyages." },
+    { n: "Horaires de prière", d: "12 méthodes de calcul, fuseaux horaires pris en compte, détection des voyages." },
     { n: "Ciel vivant", d: "De vraies étoiles et la lune sur l'arc du jour, là où tu es, en ce moment." },
     { n: "Prières surérogatoires", d: "Ichraq, Doha, Awwabin et les parties de la nuit\u00a0; au choix." },
     { n: "Position manuelle", d: "Choisis ta position à la main, ou laisse-la te suivre en voyage." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Confidentialité", o: "Données de localisation vendues à des tiers (révélé par la presse).", v: "Les coordonnées n'arrivent jamais sur nos serveurs. Aucun pistage." },
     { f: "Hors ligne", o: "Les fonctions essentielles exigent une connexion Internet.", v: "Prière, Qibla, texte du Coran, dhikr\u00a0: tout fonctionne hors ligne." },
     { f: "Écran verrouillé", o: "Les widgets cassent au fil des mises à jour d'iOS.", v: "Activité en direct et Dynamic Island\u00a0; En veille à partir d'iOS 17." },
-    { f: "Précision", o: "Erreurs au changement d'heure, peu de méthodes de calcul.", v: "13 méthodes, fuseaux horaires pris en compte, détection des voyages." },
+    { f: "Précision", o: "Erreurs au changement d'heure, peu de méthodes de calcul.", v: "12 méthodes, fuseaux horaires pris en compte, détection des voyages." },
     { f: "Appareils", o: "Téléphone seulement\u00a0; montre et ordinateur absents ou bâclés.", v: "iPhone, iPad et Mac via iCloud\u00a0; l'Apple Watch se synchronise par l'iPhone." },
     { f: "Design", o: "Interfaces datées\u00a0; régressions à chaque mise à jour.", v: "Liquid Glass sur iOS 26, fonctionne dès iOS 16.4. Sobre, moderne, rapide." },
     { f: "Coût", o: "Paywalls, abonnements, niveaux «\u00a0premium\u00a0».", v: "Gratuit. Ni niveaux, ni vente forcée." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "Ça marche sans Internet\u00a0?", a: "Oui. Les horaires de prière sont calculés sur ton téléphone à partir de ta position. Le texte du Coran, la Qibla, le dhikr et tous les outils essentiels fonctionnent entièrement hors ligne." },
     { q: "Les notifications arrivent-elles si je n'ouvre jamais l'app\u00a0?", a: "Oui. Elles sont programmées localement sur ton appareil\u00a0: tu les reçois donc même quand l'app est fermée. Si tu autorises l'accès à la position «\u00a0Toujours\u00a0», Vakit recalcule discrètement les horaires après un voyage." },
     { q: "Tout est-il vraiment gratuit\u00a0?", a: "Oui. Toute l'app est gratuite\u00a0: sans abonnement, sans paywall, sans offre «\u00a0premium\u00a0», et rien n'est verrouillé. Si tu veux la soutenir, tu peux faire un don ou choisir de regarder une publicité, mais ni l'un ni l'autre ne débloque rien." },
-    { q: "D'où viennent les horaires de prière\u00a0?", a: "Ils ne sont pas récupérés sur un serveur. Vakit les calcule sur ton appareil, selon la méthode que tu choisis (13 sont disponibles) et tes coordonnées." },
+    { q: "D'où viennent les horaires de prière\u00a0?", a: "Ils ne sont pas récupérés sur un serveur. Vakit les calcule sur ton appareil, selon la méthode que tu choisis (12 sont disponibles) et tes coordonnées." },
     { q: "Dans quelles langues l'app est-elle disponible\u00a0?", a: "L'interface de l'app existe en 25 langues\u00a0: turc, anglais, arabe, allemand, français, espagnol, italien, néerlandais, portugais, danois, russe, azerbaïdjanais, albanais, indonésien, malais, chinois, japonais, thaï, hindi, bengali, ourdou, persan, ouïghour, swahili et peul. Si la langue de ton appareil est prise en charge, l'app s'ouvre automatiquement dans cette langue\u00a0; tu peux la changer à tout moment dans Réglages. En arabe, en ourdou, en persan et en ouïghour, toute l'interface se lit de droite à gauche. Les traductions du contenu, en revanche, n'existent pour l'instant qu'en turc et en anglais\u00a0: la traduction du Coran, la translittération et les traductions des hadiths sont dans ces deux langues\u00a0; le sens des mots n'existe qu'en anglais, et certains recueils de hadiths ne sont que partiellement traduits en turc. Avec l'interface en arabe, un tafsir en arabe s'ouvre pour une partie du Coran\u00a0; le sermon du vendredi arrive dans les langues où la Diyanet le publie (en turc et, certaines semaines, en anglais et en arabe)." },
     { q: "Sur quels appareils fonctionne-t-elle\u00a0?", a: "iPhone, iPad, Apple Watch et Mac. Sur iPad, c'est la même app sur un plus grand écran, et tes données restent identiques sur tous tes appareils grâce à iCloud. Depuis la version 1.7.0, Vakit fonctionne aussi sur Mac\u00a0: prochaine prière et décompte dans la barre des menus, raccourcis clavier, widgets de bureau et, à partir de macOS 15, onglets dans la barre latérale. Horaires de prière, Coran, hadiths, dhikr et suivi de ta pratique se synchronisent avec ton iPhone via le même compte iCloud. Comme le Mac n'a pas de boussole, l'onglet Qibla indique la direction et la distance jusqu'à la Kaaba sous forme de texte." },
     { q: "Puis-je choisir le son de l'adhan\u00a0?", a: "Oui. Avec l'option Adhan, chaque prière est jouée dans son propre maqam\u00a0: Fajr en saba, Dohr en uşşak, Asr en rast, Maghreb en segah, Icha en hicaz. Tu peux aussi choisir un son de notification différent pour chaque prière. Les enregistrements sont inclus dans l'app\u00a0: aucune connexion n'est nécessaire pour les écouter." },

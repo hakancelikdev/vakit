@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Namaz vaxtları, Qiblə, Quran",
     description:
-      "Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch və Mac; 25 dil, 13 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə. Pulsuz, reklamsız, oflayn.",
+      "Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch və Mac; 25 dil, 12 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə. Pulsuz, reklamsız, oflayn.",
     keywords:
       "namaz vaxtları, namaz vaxti, azan vaxtı, qiblə, qiblə istiqaməti, quran, quran oxu, zikr, təsbeh, zikr sayğacı, qəza namazı, hicri təqvim, ramazan, imsakiyyə, iftar, sahur, oruc, cümə xütbəsi, dəstəmaz, namaz qılmaq qaydası, məscid",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moskva", tirana: "Tirana", nairobi: "Nayrobi", bangkok: "Banqkok", urumqi: "Urumçi", beijing: "Pekin",
   },
   FEATURES: [
-    { n: "Namaz vaxtları", d: "13 hesablama üsulu, saat qurşağını nəzərə alır, səfəri tanıyır." },
+    { n: "Namaz vaxtları", d: "12 hesablama üsulu, saat qurşağını nəzərə alır, səfəri tanıyır." },
     { n: "Canlı səma", d: "Gün qövsündə əsl ulduzlar və ay — olduğunuz yerə və saata görə." },
     { n: "Nafilə vaxtları", d: "İşraq, Duha, Əvvabin və gecənin hissələri; istəyə bağlı." },
     { n: "Əl ilə məkan", d: "Məkanı əl ilə seçin və ya səfərdə özü yenilənsin." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Məxfilik", o: "Üçüncü tərəflərə satılan məkan məlumatı (mətbuatda yazıldı).", v: "Koordinatlar serverimizə getmir. İzləmə yoxdur." },
     { f: "Oflayn", o: "Əsas funksiyalar internet tələb edir.", v: "Namaz, qiblə, Quran mətni, zikr — hamısı oflayn." },
     { f: "Kilid ekranı", o: "Vidjetlər iOS yeniləmələrində xarab olur.", v: "Live Activity və Dynamic Island; iOS 17-dən etibarən StandBy." },
-    { f: "Dəqiqlik", o: "Yay/qış saatı xətaları, məhdud hesablama.", v: "13 üsul, saat qurşağı nəzərə alınır, səfər tanınır." },
+    { f: "Dəqiqlik", o: "Yay/qış saatı xətaları, məhdud hesablama.", v: "12 üsul, saat qurşağı nəzərə alınır, səfər tanınır." },
     { f: "Cihazlar", o: "Yalnız telefon; saat və masaüstü ya yoxdur, ya yarımçıqdır.", v: "iPhone, iPad və Mac iCloud ilə; Apple Watch iPhone vasitəsilə sinxronlaşır." },
     { f: "Dizayn", o: "Köhnə interfeyslər; hər yeniləmədə geriləmə.", v: "iOS 26-da Liquid Glass, iOS 16.4-dən etibarən işləyir. Sadə, müasir, sürətli." },
     { f: "Qiymət", o: "Ödəniş divarı, abunə, «premium» səviyyələr.", v: "Pulsuz. Səviyyə yox, əlavə satış yox." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "İnternet olmadan işləyirmi?", a: "Bəli. Namaz vaxtları məkanınıza görə telefonunuzda hesablanır. Quran mətni, qiblə, zikr və bütün əsas alətlər tamamilə oflayn işləyir." },
     { q: "Tətbiqi açmasam da bildirişlər gəlir?", a: "Bəli. Bildirişlər cihazınızda yerli olaraq planlaşdırılır, ona görə tətbiq bağlı olanda da gəlir. «Həmişə» məkan icazəsi versəniz, səfərdən sonra vaxtlar səssizcə yenidən hesablanır." },
     { q: "Hər şey həqiqətən pulsuzdur?", a: "Bəli. Bütün tətbiq pulsuzdur: abunə yoxdur, ödəniş divarı yoxdur, «premium» yoxdur, heç nə kilidli deyil. Dəstək olmaq istəsəniz, ianə edə və ya öz istəyinizlə bir reklam izləyə bilərsiniz; heç biri nəyinsə kilidini açmır." },
-    { q: "Namaz vaxtları haradan gəlir?", a: "Serverdən götürülmür. Vakit onları cihazınızda, seçdiyiniz üsula (13 üsul var) və məkanınıza görə hesablayır." },
+    { q: "Namaz vaxtları haradan gəlir?", a: "Serverdən götürülmür. Vakit onları cihazınızda, seçdiyiniz üsula (12 üsul var) və məkanınıza görə hesablayır." },
     { q: "Hansı dillərdə istifadə etmək olar?", a: "Tətbiqin interfeysi 25 dildədir: türk, ingilis, ərəb, alman, fransız, ispan, italyan, niderland, portuqal, danimarka, rus, Azərbaycan, alban, indoneziya, malay, çin, yapon, tay, hind, benqal, urdu, fars, uyğur, suahili və fula dilləri. Cihazınızın dili dəstəklənirsə, tətbiq avtomatik olaraq o dildə açılır; istədiyiniz vaxt Ayarlardan dəyişə bilərsiniz. Ərəb, urdu, fars və uyğur dillərində interfeys başdan-başa sağdan sola axır. Məzmun tərcümələri isə hələlik yalnız türk və ingilis dillərindədir: Quran məalı, oxunuş və hədis tərcümələri bu iki dildədir; kəlmə mənaları yalnız ingilis dilindədir, bəzi hədis məcmuələrinin türkcə tərcüməsi də qismən mövcuddur. Ərəb interfeysində ayələrin bir hissəsi üçün ərəbcə təfsir açılır; cümə xütbəsi Diyanət-in yayımladığı dillərdə gəlir (türk; yayımlandığı həftələrdə ingilis və ərəb dilində)." },
     { q: "Hansı cihazlarda işləyir?", a: "iPhone, iPad, Apple Watch və Mac. iPad-də eyni tətbiq böyük ekranda işləyir; qeydləriniz iCloud vasitəsilə bütün cihazlarınızda eyni qalır. Vakit 1.7.0 ilə Mac-ə də gəldi: menyu zolağında növbəti namaz və geri sayım, klaviatura qısayolları, masaüstü vidjetləri və macOS 15-dən etibarən sol kənar paneldə bölmələr. Namaz vaxtları, Quran, hədis, zikr sayğacı və ibadət qeydləri iPhone-unuzla eyni iCloud hesabı üzərindən sinxronlaşır. Mac-də kompas avadanlığı olmadığı üçün Qiblə bölməsi istiqaməti və Kəbəyə məsafəni yazı ilə göstərir." },
     { q: "Azan səsini seçə bilərəm?", a: "Bəli. Azan seçimində hər namaz öz məqamında oxunur: sübh saba, zöhr üşşaq, əsr rast, məğrib segah, işa hicaz. İstəsəniz, hər namaz üçün ayrıca bildiriş səsi də seçə bilərsiniz. Azanlar tətbiqlə birlikdə gəldiyi üçün səslənməsi internet tələb etmir." },

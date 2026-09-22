@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Waktuuji juulde, Alqibla, Alkur'aana",
     description:
-      "Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch e Mac; ɗemɗe 25, laabi hesaabo 13, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa. Meere, publisite alaa, ina golloo hay so enterneet alaa.",
+      "Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch e Mac; ɗemɗe 25, laabi hesaabo 12, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa. Meere, publisite alaa, ina golloo hay so enterneet alaa.",
     keywords:
       "waktuuji juulde, juulde, alqibla, Alkur'aana, hadiisa, jikru, aadaan, koorka, Ramadaan, kalandiriye hijra, jumaa, prayer times, qibla, quran, islamic app, muslim app, Pulaar",
   },
@@ -58,7 +58,7 @@ module.exports = {
     moscow: "Moskow", tirana: "Tirana", nairobi: "Nayrobi", bangkok: "Bangkok", urumqi: "Urumci", beijing: "Pekin",
   },
   FEATURES: [
-    { n: "Waktuuji juulde", d: "Laabi hesaabo 13, ina fota e waktu leydi kala, ina tawta ɗanngol mon." },
+    { n: "Waktuuji juulde", d: "Laabi hesaabo 12, ina fota e waktu leydi kala, ina tawta ɗanngol mon." },
     { n: "Kammu wuuruɗo", d: "Koode e lewru goonga e laawol ñalawma — e nokku mon, jooni jooni." },
     { n: "Waktuuji nafila", d: "Ishraaq, Duhaa, Awwaabiin e pecce jemma; so on njiɗii." },
     { n: "Nokku suɓaaɗo e juuɗe", d: "Suɓee nokku mon e juuɗe mon, walla accee mo jokka on e ɗanngol." },
@@ -125,7 +125,7 @@ module.exports = {
     { f: "Suturaa", o: "Keɓe nokku yeeyaaɗe e tataɓe (ina anndaa e jaayndeeji).", v: "Koordone yottataa sarwoor amen. Ƴeewndagol alaa." },
     { f: "Tawa enterneet alaa", o: "Kuutorɗe mawɗe ina naamnoo enterneet.", v: "Juulde, alqibla, binndol Alkur'aana, jikru — fof ina golloo hay so enterneet alaa." },
     { f: "Ecraŋ Sokaaɗo", o: "Widget ina bonna so iOS hesɗitinaama.", v: "Live Activity e Dynamic Island; StandBy gila iOS 17." },
-    { f: "Peewal", o: "Juumeeje waylugol montoor (waktu ceeɗu), laabi hesaabo seeɗa.", v: "Laabi 13, ina fota e waktu leydi kala, ina tawta ɗanngol." },
+    { f: "Peewal", o: "Juumeeje waylugol montoor (waktu ceeɗu), laabi hesaabo seeɗa.", v: "Laabi 12, ina fota e waktu leydi kala, ina tawta ɗanngol." },
     { f: "Kaɓirɗe", o: "Telefoŋ tan; montoor e ordinateer ngalaa walla timmaani.", v: "iPhone, iPad e Mac e iCloud; Apple Watch ina jotondira rewrude e iPhone." },
     { f: "Mbaydi", o: "Jaaɓnirɗe ɓooyɗe; ko bonata ɓaawo hesɗitinol kala.", v: "Liquid Glass e iOS 26, ina golloo gila iOS 16.4. Deƴƴuɗo, kesɗo, yaawɗo." },
     { f: "Coggu", o: "Njoɓdi, abonemaa, daajeeji 'premium'.", v: "Meere. Daajol alaa, alaa ko ɓeydaa ngam yeeyeede." },
@@ -148,7 +148,7 @@ module.exports = {
     { q: "Ina golloo tawa enterneet alaa?", a: "Eey. Waktuuji juulde ina hesaabee e nder telefoŋ mon, gila e nokku mon. Binndol Alkur'aana, alqibla, jikru e kuutorɗe mawɗe fof ina ngollira hay so enterneet alaa." },
     { q: "Tintinal ina ara hay so mi udditaani jaaɓnirgal ngal?", a: "Eey. Tintinal ina cosee e nder kaɓirgal mon, ɗum waɗi ina ara hay so jaaɓnirgal ngal uddaama. So on njamirii nokku 'Sahaa kala', Vakit ina hesaboo waktuuji ɗii e deƴƴere ɓaawo ɗanngol." },
     { q: "Kala huunde ko meere goonga?", a: "Eey. Jaaɓnirgal ngal fof ko meere: abonemaa alaa, njoɓdi alaa, daajol 'premium' alaa, alaa ko uddaa. Si aɗon njiɗi wallude ngal, aɗon waawi rokkude dokkal walla suɓaade yiyde publisite; hay gootum e majji udditataa huunde." },
-    { q: "Waktuuji juulde ɗii iwata toy?", a: "Ɗi ƴettaaka e sarwoor. Vakit ina hesaboo ɗi e nder kaɓirgal mon, e laawol ngol cuɓɗon (laabi 13 ina ngoodi) e koordone nokku mon." },
+    { q: "Waktuuji juulde ɗii iwata toy?", a: "Ɗi ƴettaaka e sarwoor. Vakit ina hesaboo ɗi e nder kaɓirgal mon, e laawol ngol cuɓɗon (laabi 12 ina ngoodi) e koordone nokku mon." },
     { q: "E ɗemɗe honɗe jaaɓnirgal ngal woodi?", a: "Jaaɓnirgal ngal ina woodi e ɗemɗe 25: Turkeere, Engeleere, Aarabu, Almaneere, Farayseere, Espaañeere, Italiyeere, Olandeere, Portugeere, Danuwaa, Ruseere, Aserbaysaneere, Albanee, Endoneesii, Male, Sinuwaa, Sapoŋ, Taay, Hindi, Bengaali, Urdu, Fersi, Uyguur, Suwahili e Pulaar. So ɗemngal kaɓirgal mon ina jaɓaa, jaaɓnirgal ngal ina udditoo e mum e hoore mum; aɗon waawi waylude ɗum e Teelte sahaa kala. E Aarabu, Urdu, Fersi e Uyguur, jaaɓnirgal ngal fof ina yahra gila ñaamo faade nano. Kono firooji loowdi ngoni ko e Turkeere e Engeleere tan jooni: firo Alkur'aana, janngirde e firooji hadiisa ngoni ko e ɗemɗe ɗiɗi ɗee; firooji konnguɗi ngoni ko e Engeleere tan, won e deftere hadiisa kadi firaaka e Turkeere fof. E jaaɓnirgal Aarabu, tafsiir Aarabu ina udditoo ngam won e Alkur'aana; khutba Aljumaa ina ara e ɗemɗe ɗe Diyanet yaltinta nde (Turkeere; e yontereeji ɗi nde yaltinaa, Engeleere e Aarabu)." },
     { q: "Ina golloo e kaɓirɗe honɗe?", a: "iPhone, iPad, Apple Watch e Mac. E iPad ko jaaɓnirgal gootal ngal e ecraŋ mawngal, winndanɗe mon kadi ina ngoni gootum e kaɓirɗe fof sabu iCloud. Gila 1.7.0, Vakit ina golloo e Mac kadi: juulde aroore e limoore e barre menu, laabi ɓadiiɗi klawiye, widget biro, e tabbe e palal senngo gila macOS 15. Waktuuji juulde, Alkur'aana, hadiisa, jikru e winndanɗe dewal ina jotondira e iPhone mon e konte iCloud gootel. Tab Alqibla ina holla bannge e goɗɗeendi haa Kaaba e binndol, sabu Mac alaa kompaas." },
     { q: "Mbaawi mi suɓaade sawtu aadaan?", a: "Eey. So cuɓɗon aadaan, waktu kala ina janngee e makaamu mum: Fajiri saba, Tisbaar ussak, Takkusaan rast, Futuro segah, Geeƴe hicaz. Aɗon waawi kadi suɓaade sawto tintinal goɗɗo ngam juulde kala. Aadaan ɗeen ina ngara e jaaɓnirgal ngal, ɗum waɗi ɗe naamnotaako enterneet ngam heɗaade." },
