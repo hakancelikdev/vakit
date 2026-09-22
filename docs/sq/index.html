@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Gjithçka, asgjë më tepër</div>
     <h2 class="sc-h2"><span>Një shoqërues,</span><br><em>jo një makinë që ju vjedh vëmendjen.</em></h2>
     <p class="sc-lede">Dhjetë mjete kryesore, secili i menduar t'ju japë qetësi sapo e hapni. Prekni cilindo për ta parë.</p>
@@ -503,6 +503,18 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Një kalendar që kujton.</h3><p>Hixhri dhe gregorian bashkë. Netët e bekuara, Ramazani, bajramet dhe arefeja — me përmbledhjen e ibadetit të muajit poshtë.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Numërimi, në dorën tuaj.</h3><p>Numëruesi i dhikrit dhe tesbihati pas namazit; dhikër të gatshëm, dhikri juaj dhe një synim ditor.</p></div><span class="sc-tag">Parapamje</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.">Kohët e namazeve nafile</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.">Kaligrafia e mus'hafit</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.">Esmaul-Husna</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, ose radha e plotë pas namazit.">Tesbihati</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.">Ndjekja e ibadetit</button>
+      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Mbi 36 000 hadithe nga shtatë koleksione të mëdha.">Hadithet</button>
+      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.">Kërkim i unifikuar</button>
+      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.">Xhamitë afër</button>
+      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.">Live Activity</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +529,15 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="Shtatëmbëdhjetë namaze, të ilustruara." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="Një kalendar që kujton." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="Numërimi, në dorën tuaj." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Kohët e namazeve nafile" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Kaligrafia e mus'hafit" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Esmaul-Husna" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Tesbihati" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="Ndjekja e ibadetit" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hadithet" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Kërkim i unifikuar" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Xhamitë afër" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +546,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +588,24 @@
         <button class="dv-tab" aria-pressed="false">Kalendari hixhri</button>
         <button class="dv-tab" aria-pressed="false">Numëruesi i dhikrit</button>
         <button class="dv-tab" aria-pressed="false">Udhëzuesi i pastrimit</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Kohët e namazit" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Busulla e kiblës" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Numëruesi i dhikrit" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widget-et" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Kohët e namazit, kibla e gjallë, 13 komplikime.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Kohët e namazit</button>
+        <button class="dv-tab" aria-pressed="false">Busulla e kiblës</button>
+        <button class="dv-tab" aria-pressed="false">Numëruesi i dhikrit</button>
+        <button class="dv-tab" aria-pressed="false">Widget-et</button>
       </div>
     </div>
   </div>

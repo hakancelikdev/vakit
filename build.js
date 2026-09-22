@@ -26,7 +26,7 @@ const path = require("path");
 const C = require("./content.js");
 const { validateLocale } = require("./tools/validate.js");
 
-const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
+const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
 // Long-form legal prose: the Turkish + English originals, one module per document.
 const PRESS = require("./press.js");
@@ -102,9 +102,16 @@ const pressLang = (lang) => (PRESS_LANGS.includes(lang) ? lang : "en");
 
 const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.webp`;
 
-/** iPad captures follow the iPhone ones; the Mac was captured in Turkish and English only. */
+/** iPad captures follow the iPhone ones; the Mac and the Watch were captured in Turkish and English only. */
 const deviceUrl = (lang, device, img) =>
-  `/assets/screenshots/${device === "mac" ? (lang === "tr" ? "tr" : "en") : LANGS[lang].shots}/${device}/${img}.webp`;
+  `/assets/screenshots/${device === "ipad" ? LANGS[lang].shots : lang === "tr" ? "tr" : "en"}/${device}/${img}.webp`;
+
+const moreUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/more/${img}.webp`;
+
+/** SHOWCASE_MORE entries this language has a capture for (the `all` ones are required, see check()). */
+const showcaseMore = (lang) =>
+  SHOWCASE_MORE.filter((m) => m.all || fs.existsSync(path.join(DOCS, moreUrl(lang, m.img))))
+    .map((m) => ({ ...m, f: deviceCopy(lang, { feature: m.label }) }));
 
 /** A DEVICES label → copy that already exists in every language (see content.js). */
 function deviceCopy(lang, ref) {
@@ -257,6 +264,18 @@ function showcaseScreens(lang) {
         : `        <img class="phone-screenshot" data-i="${i}" src="${shotUrl(lang, item.img)}" alt="${esc(item.t)}"` +
           ` width="390" height="844" loading="lazy">`
     )
+    .concat(showcaseMore(lang).map((m, k) =>
+      `        <img class="phone-screenshot" data-i="${SHOWCASE[lang].length + k}" src="${moreUrl(lang, m.img)}" alt="${esc(m.f.n)}"` +
+      ` width="390" height="844" loading="lazy">`))
+    .join("\n");
+}
+
+/** More screens for the same phone: tabs under the showcase list, labelled with feature names. */
+function showcaseChips(lang) {
+  const base = SHOWCASE[lang].length;
+  return showcaseMore(lang)
+    .map((m, k) =>
+      `      <button class="dv-tab sc-chip" data-index="${base + k}" aria-pressed="false" data-desc="${esc(m.f.d)}">${esc(m.f.n)}</button>`)
     .join("\n");
 }
 
@@ -264,7 +283,7 @@ function showcaseScreens(lang) {
 function deviceColumn(lang, device) {
   const D = DEVICES[device];
   const cap = deviceCopy(lang, D.caption);
-  const size = device === "mac" ? 'width="1200" height="914"' : 'width="900" height="1200"';
+  const size = { ipad: 'width="900" height="1200"', mac: 'width="1200" height="914"', watch: 'width="396" height="484"' }[device];
   const shots = D.shots
     .map((s, i) =>
       `          <img class="dv-shot${i === 0 ? " on" : ""}" src="${deviceUrl(lang, device, s.img)}"` +
@@ -531,13 +550,17 @@ ${jsonLd(faqSchema(lang))}
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">${esc(t(lang, "sc-head"))}</div>
     <h2 class="sc-h2"><span>${esc(t(lang, "sc-h2a"))}</span><br><em>${esc(t(lang, "sc-h2b"))}</em></h2>
     <p class="sc-lede">${esc(t(lang, "sc-lede"))}</p>
     <div class="sc-list" id="scList">
 ${showcaseList(lang)}
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+${showcaseChips(lang)}
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -551,9 +574,10 @@ ${showcaseScreens(lang)}
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
 ${deviceColumn(lang, "ipad")}
 ${deviceColumn(lang, "mac")}
+${deviceColumn(lang, "watch")}
   </div>
 </section>
 
@@ -1156,6 +1180,9 @@ function check() {
     const L = LANGS[lang];
     for (const s of SHOWCASE[lang].slice(1)) {
       if (!fs.existsSync(path.join(DOCS, shotUrl(lang, s.img)))) errors.push(`${lang}: missing ${shotUrl(lang, s.img)}`);
+    }
+    for (const m of SHOWCASE_MORE.filter((x) => x.all)) {
+      if (!fs.existsSync(path.join(DOCS, moreUrl(lang, m.img)))) errors.push(`${lang}: missing ${moreUrl(lang, m.img)}`);
     }
     for (const device of Object.keys(DEVICES)) {
       const imgs = [...DEVICES[device].shots.map((s) => s.img), ...(device === "mac" ? ["menu-bar"] : [])];

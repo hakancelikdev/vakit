@@ -142,7 +142,8 @@ const CITY_SLOTS = 12;
 // <tr|en>/mac/ (the Mac was captured in Turkish and English only). Labels and
 // captions reuse copy that exists in every language — `feature` names a
 // FEATURES entry by its English name, `showcase` a SHOWCASE entry by its image.
-// Must match IPAD / MAC in tools/import-media.sh.
+// The Watch, like the Mac, was fully captured in Turkish and English only.
+// Must match IPAD / MAC / WATCH in tools/import-media.sh.
 const DEVICES = {
   ipad: {
     caption: { feature: "iPad" },
@@ -153,6 +154,15 @@ const DEVICES = {
       { img: "hadith", label: { feature: "Hadith" } },
       { img: "accounting", label: { feature: "Worship Tracking" } },
       { img: "prayer-guide", label: { feature: "Prayer Guide" } },
+    ],
+  },
+  watch: {
+    caption: { feature: "Apple Watch" },
+    shots: [
+      { img: "prayer-dial", label: { feature: "Prayer Times" } },
+      { img: "qibla", label: { feature: "Qibla Compass" } },
+      { img: "dhikr", label: { feature: "Dhikr Counter" } },
+      { img: "complications", label: { feature: "Widgets" } },
     ],
   },
   mac: {
@@ -166,6 +176,22 @@ const DEVICES = {
     ],
   },
 };
+
+// More iPhone screens, as tabs under the showcase list (same phone). Labels are
+// FEATURES names. `all: true` screens exist in every captured language; the
+// rest only in Turkish and English, so other pages simply leave them out rather
+// than mix an English screen into their phone. Must match EXTRAS in import-media.sh.
+const SHOWCASE_MORE = [
+  { img: "prayer-nafile", label: "Voluntary Prayer Times", all: true },
+  { img: "mushaf", label: "Mushaf Script", all: true },
+  { img: "esma-ul-husna", label: "Asma al-Husna", all: true },
+  { img: "tesbihat", label: "Tasbihat", all: true },
+  { img: "accounting-year", label: "Worship Tracking", all: true },
+  { img: "hadith", label: "Hadith" },
+  { img: "search", label: "Unified Search" },
+  { img: "nearby-mosques", label: "Nearby Mosques" },
+  { img: "lock-screen-live-activity", label: "Live Activity" },
+];
 
 // Showcase order. Index 0 is the preview video (the prayer screen's sky); the
 // rest are screenshots. Must match SHOTS in tools/import-media.sh.
@@ -614,7 +640,7 @@ function clockCities(lang) {
 
 const CONTENT = {
   SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, CITIES, CITY_CATALOG, FEATURES, SHOWCASE,
-  SHOWCASE_IMG, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
+  SHOWCASE_IMG, SHOWCASE_MORE, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
 };
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;

@@ -181,18 +181,23 @@ function renderClockTick(now) {
 
 /* ================================================================
    Showcase — markup is static, this only switches the visible screen.
-   Slot 0 is a muted, looping preview video; it plays only while it is
-   the visible slot and on screen, and never for reduced-motion users.
+   Screens change only when a list item or a "more screens" tab is tapped;
+   they used to follow the scroll position, which on phones swapped the
+   video out as soon as the list passed through the middle of the screen.
+   Slot 0 is a muted, looping preview video: it plays while it is the visible
+   slot and at least a third on screen. Tapping the phone pauses or resumes
+   it (and starts it where autoplay is blocked, e.g. iOS Low Power Mode).
    ================================================================ */
 
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const showcaseVideo = document.querySelector('#phoneScreen video');
+const mobileShowcase = window.matchMedia('(max-width: 699px)');
 let showcaseIndex = 0;
-let phoneVisible = true;
+let phoneVisible = false;
+let videoPausedByUser = false;
 
 function syncVideo() {
   if (!showcaseVideo) return;
-  if (showcaseIndex === 0 && phoneVisible && !reducedMotion.matches) {
+  if (showcaseIndex === 0 && phoneVisible && !videoPausedByUser) {
     const p = showcaseVideo.play();
     if (p && p.catch) p.catch(() => {});
   } else {
@@ -200,36 +205,50 @@ function syncVideo() {
   }
 }
 
+function showcaseTriggers() {
+  return [...document.querySelectorAll('#scList .sc-item, #scMore .sc-chip')];
+}
+
 function selectShowcase(i) {
   showcaseIndex = i;
-  document.querySelectorAll('#scList .sc-item').forEach((el, j) => el.classList.toggle('on', i === j));
+  showcaseTriggers().forEach((el, j) => {
+    el.classList.toggle('on', i === j);
+    if (el.classList.contains('sc-chip')) el.setAttribute('aria-pressed', String(i === j));
+  });
   document.querySelectorAll('#phoneScreen .phone-screenshot').forEach((el, j) => el.classList.toggle('on', i === j));
+
+  // One line under the tabs: on phones for every screen (the list is reduced to
+  // tabs there), on wider screens only for the extra tabs, whose description
+  // has nowhere else to go.
+  const caption = document.getElementById('scCaption');
+  if (caption) {
+    const el = showcaseTriggers()[i];
+    const desc = el?.dataset.desc || (mobileShowcase.matches ? el?.querySelector('p')?.textContent : '') || '';
+    caption.textContent = desc;
+  }
   syncVideo();
 }
 
 function initShowcase() {
-  const items = document.querySelectorAll('#scList .sc-item');
-  if (!items.length) return;
+  const triggers = showcaseTriggers();
+  if (!triggers.length) return;
 
-  items.forEach((el, i) => el.addEventListener('click', () => selectShowcase(i)));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) selectShowcase(Number(entry.target.dataset.index));
-    });
-  }, { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 });
-
-  items.forEach(el => observer.observe(el));
+  triggers.forEach((el, i) => el.addEventListener('click', () => selectShowcase(i)));
+  mobileShowcase.addEventListener?.('change', () => selectShowcase(showcaseIndex));
 
   if (showcaseVideo) {
-    if (reducedMotion.matches) showcaseVideo.removeAttribute('autoplay');
     new IntersectionObserver((entries) => {
       phoneVisible = entries[0].isIntersecting;
       syncVideo();
-    }).observe(showcaseVideo);
-    reducedMotion.addEventListener?.('change', syncVideo);
-    syncVideo();
+    }, { threshold: 0.33 }).observe(showcaseVideo);
+
+    showcaseVideo.addEventListener('click', () => {
+      videoPausedByUser = !showcaseVideo.paused;
+      if (videoPausedByUser) showcaseVideo.pause();
+      else syncVideo();
+    });
   }
+  selectShowcase(0);
 }
 
 /* ================================================================

@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Everything, nothing extra</div>
     <h2 class="sc-h2"><span>A companion,</span><br><em>not an attention machine.</em></h2>
     <p class="sc-lede">Ten core tools, each designed to feel calm the moment you open it. Tap any to preview.</p>
@@ -503,6 +503,18 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>A calendar that remembers.</h3><p>Hijri and Gregorian together. Holy nights, Ramadan, the Eids and the eve before — with the month's worship summary below.</p></div><span class="sc-tag">Preview</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>The count, in hand.</h3><p>A dhikr counter and the post-prayer tasbihat; presets, your own dhikr and a daily goal.</p></div><span class="sc-tag">Preview</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraq, Duha, Awwabin and the parts of the night; optional.">Voluntary Prayer Times</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Madinah or Türkiye script — page layout follows too.">Mushaf Script</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 names of Allah, with transliteration and meaning; add any as dhikr.">Asma al-Husna</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, or the full post-prayer sequence.">Tasbihat</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Rings for prayer, Quran, dhikr, hadith and qada.">Worship Tracking</button>
+      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Over 36,000 ahadith across seven major collections.">Hadith</button>
+      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="One search, every tool — type 'Baqarah 255' to jump to the ayah.">Unified Search</button>
+      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.">Nearby Mosques</button>
+      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Dynamic Island and lock-screen countdowns.">Live Activity</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +529,15 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="Seventeen prayers, illustrated." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="A calendar that remembers." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="The count, in hand." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Voluntary Prayer Times" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Mushaf Script" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="Worship Tracking" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hadith" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Unified Search" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Nearby Mosques" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +546,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +588,24 @@
         <button class="dv-tab" aria-pressed="false">Hijri Calendar</button>
         <button class="dv-tab" aria-pressed="false">Dhikr Counter</button>
         <button class="dv-tab" aria-pressed="false">Purification Guide</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Prayer Times" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Qibla Compass" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Dhikr Counter" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widgets" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Prayer times, live qibla, 13 complications.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Prayer Times</button>
+        <button class="dv-tab" aria-pressed="false">Qibla Compass</button>
+        <button class="dv-tab" aria-pressed="false">Dhikr Counter</button>
+        <button class="dv-tab" aria-pressed="false">Widgets</button>
       </div>
     </div>
   </div>

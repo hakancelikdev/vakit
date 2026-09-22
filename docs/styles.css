@@ -79,6 +79,7 @@
 }
 
 /* --- iPad + Mac: same reason ---------------------------------- */
+[data-theme="dark"] .dv-frame.watch,
 [data-theme="dark"] .dv-frame.ipad {
   box-shadow: 0 0 0 1px oklch(0.34 0.008 250), 0 24px 60px -16px rgba(0, 0, 0, 0.6);
 }
@@ -402,13 +403,18 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   opacity: 0; transition: opacity .4s;
 }
 .phone-screenshot.on { opacity: 1 }
+/* hidden screens sit on top of the video; let taps reach it */
+.phone-screenshot:not(.on) { pointer-events: none }
+.sc-more { margin-top: 28px }
+.sc-caption { margin-top: 14px; font-size: 14px; line-height: 1.5; color: var(--ink-3); max-width: 520px }
+.sc-caption:empty { display: none }
 .phone-video { background: #20263a }
 
 /* ---------- iPad + Mac ---------- */
 .devices { padding: 120px 48px; border-bottom: 1px solid var(--rule-2) }
 .dv-inner {
   max-width: 1280px; margin: 0 auto;
-  display: grid; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: 56px 72px;
+  display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.25fr) minmax(0, 0.42fr); gap: 56px 56px;
   align-items: start;
 }
 /* No text-transform: uppercase would turn "iPad" into "İPAD" on the Turkish page. */
@@ -447,6 +453,15 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   position: absolute; top: -5%; right: -4%; width: 27%; height: auto;
   filter: drop-shadow(0 16px 28px rgb(0 0 0 / .35));
 }
+
+/* Apple Watch: bare screen, drawn case */
+.dv-frame.watch {
+  padding: 8%; border-radius: 30% / 25%; background: #0c0e12;
+  box-shadow: 0 0 0 1px color-mix(in oklch, var(--ink) 14%, transparent),
+              0 24px 50px -16px color-mix(in oklch, var(--ink) 22%, transparent);
+}
+.watch .dv-screen { aspect-ratio: 396 / 484; border-radius: 22% / 18%; background: #000 }
+.watch .dv-shot { object-fit: cover }
 
 .dv-name { font-family: var(--serif); font-size: 32px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 8px }
 .dv-desc { font-size: 15px; line-height: 1.5; color: var(--ink-3); max-width: 460px; margin-bottom: 20px }
@@ -683,6 +698,12 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .dv-inner { gap: 40px 40px }
   .dv-name { font-size: 26px }
   .dv-frame.ipad { border-radius: 24px }
+  .dv-inner { grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr) }
+  .dv-watch {
+    grid-column: 1 / -1; grid-row: auto;
+    grid-template-columns: 170px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 36px;
+  }
+  .dv-watch .dv-frame { grid-row: 1 / span 3; margin-bottom: 0; align-self: start }
   .ipad .dv-screen { border-radius: 14px }
   .compare-row { grid-template-columns: 1.5fr 2fr 2fr }
   .nav-links { gap: 20px }
@@ -783,6 +804,25 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .dv-inner { grid-template-columns: minmax(0, 1fr); gap: 56px }
   .dv-col { display: block }
   .dv-ipad .dv-frame { width: min(100%, 300px) }
+  .dv-watch .dv-frame { width: 180px; margin-bottom: 32px }
+
+  /* Showcase on phones: heading, then the phone, then every screen as a tab
+     right under it — tapping a row far below the phone changed it off-screen. */
+  .showcase { row-gap: 0 }
+  .sc-copy { display: contents }
+  .sc-phone-wrap { order: 1; margin: 8px 0 28px }
+  .sc-list { order: 2; flex-direction: row; flex-wrap: wrap; gap: 6px }
+  .sc-more { order: 3; margin-top: 6px }
+  .sc-caption { order: 4 }
+  .sc-lede { margin-bottom: 24px }
+  .sc-item, .sc-item.on, .sc-item:last-child {
+    display: block; width: auto; padding: 6px 12px;
+    border: 1px solid var(--rule-2); border-radius: 999px;
+  }
+  .sc-item.on { background: var(--accent); border-color: var(--accent) }
+  .sc-num, .sc-tag, .sc-body p { display: none }
+  .sc-body h3 { font-family: var(--mono); font-size: 12px; line-height: 1.5; letter-spacing: 0; margin: 0; color: var(--ink-3) }
+  .sc-item.on .sc-body h3 { color: #fff }
   .mac-menubar { width: 32%; top: -8%; right: -2% }
 }
 

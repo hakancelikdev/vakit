@@ -488,7 +488,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · 必要なものはすべて、余計なものは何も</div>
     <h2 class="sc-h2"><span>寄り添う相棒。</span><br><em>注意を奪う機械ではなく。</em></h2>
     <p class="sc-lede">10の基本ツール。どれも開いた瞬間に心が落ち着くようにデザインしました。タップしてプレビューできます。</p>
@@ -504,6 +504,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>覚えていてくれるカレンダー。</h3><p>ヒジュラ暦と西暦を一緒に。聖なる夜、ラマダーン、二つの祭りとその前日——下にはその月の礼拝のまとめ。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>カウントを手の中に。</h3><p>ズィクル・カウンターと礼拝後のタスビーフ。プリセット、自分のズィクル、そして1日の目標。</p></div><span class="sc-tag">プレビュー</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="イシュラーク、ドゥハー、アウワービーン、夜の区分。表示はお好みで。">任意の礼拝の時間</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="マディーナかトルコの書体——ページの配置も合わせて変わります。">ムスハフの書体</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99の美名を、音写と意味とともに。ズィクルとして追加することもできます。">アッラーの美名99</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33、または礼拝後の完全な順序。">タスビーフ</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="リング：礼拝、クルアーン、ズィクル、ハディース、補い。">信仰の記録</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -518,6 +526,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/ja/prayer-guide.webp" alt="17の礼拝を、イラストで。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/ja/calendar.webp" alt="覚えていてくれるカレンダー。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/ja/zikirmatik.webp" alt="カウントを手の中に。" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/ja/more/prayer-nafile.webp" alt="任意の礼拝の時間" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/ja/more/mushaf.webp" alt="ムスハフの書体" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/ja/more/esma-ul-husna.webp" alt="アッラーの美名99" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/ja/more/tesbihat.webp" alt="タスビーフ" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/ja/more/accounting-year.webp" alt="信仰の記録" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -526,7 +539,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -568,6 +581,24 @@
         <button class="dv-tab" aria-pressed="false">ヒジュラ暦</button>
         <button class="dv-tab" aria-pressed="false">ズィクル・カウンター</button>
         <button class="dv-tab" aria-pressed="false">清めの手引き</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · 礼拝時刻" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · キブラ・コンパス" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · ズィクル・カウンター" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · ウィジェット" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">礼拝時刻、ライブのキブラ、13種類のコンプリケーション。</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">礼拝時刻</button>
+        <button class="dv-tab" aria-pressed="false">キブラ・コンパス</button>
+        <button class="dv-tab" aria-pressed="false">ズィクル・カウンター</button>
+        <button class="dv-tab" aria-pressed="false">ウィジェット</button>
       </div>
     </div>
   </div>

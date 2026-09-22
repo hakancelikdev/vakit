@@ -488,7 +488,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · सब कुछ, फ़ालतू कुछ नहीं</div>
     <h2 class="sc-h2"><span>एक साथी,</span><br><em>ध्यान खींचने वाली मशीन नहीं।</em></h2>
     <p class="sc-lede">दस बुनियादी औज़ार, हर एक ऐसा कि खोलते ही सुकून महसूस हो। झलक देखने के लिए किसी पर भी टैप करें।</p>
@@ -504,6 +504,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>मुबारक दिन याद रखने वाला कैलेंडर।</h3><p>हिजरी और ईसवी साथ-साथ। मुबारक रातें, रमज़ान, ईदें और अरफ़ा का दिन — नीचे महीने की इबादत का सारांश।</p></div><span class="sc-tag">झलक</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>गिनती आपकी मुट्ठी में।</h3><p>ज़िक्र काउंटर और नमाज़ के बाद की तस्बीह; तैयार ज़िक्र, आपके अपने ज़िक्र और रोज़ का लक्ष्य।</p></div><span class="sc-tag">झलक</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="इशराक़, चाश्त, अव्वाबीन और रात के हिस्से; आपकी मर्ज़ी से।">नफ़्ल नमाज़ों के वक़्त</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="मदीना या तुर्की लिपि — पन्ने की बनावट भी साथ बदलती है।">मुसहफ़ की लिपि</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="अल्लाह के 99 नाम, लिप्यंतरण और मतलब के साथ; किसी भी नाम को ज़िक्र में जोड़ें।">अस्मा-उल-हुस्ना</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, या नमाज़ के बाद का पूरा क्रम।">तस्बीहात</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="रिंग: नमाज़, क़ुरआन, ज़िक्र, हदीस और क़ज़ा।">इबादत का हिसाब</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -518,6 +526,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/hi/prayer-guide.webp" alt="सत्रह नमाज़ें, तस्वीरों के साथ।" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/hi/calendar.webp" alt="मुबारक दिन याद रखने वाला कैलेंडर।" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/hi/zikirmatik.webp" alt="गिनती आपकी मुट्ठी में।" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/hi/more/prayer-nafile.webp" alt="नफ़्ल नमाज़ों के वक़्त" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/hi/more/mushaf.webp" alt="मुसहफ़ की लिपि" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/hi/more/esma-ul-husna.webp" alt="अस्मा-उल-हुस्ना" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/hi/more/tesbihat.webp" alt="तस्बीहात" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/hi/more/accounting-year.webp" alt="इबादत का हिसाब" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -526,7 +539,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -568,6 +581,24 @@
         <button class="dv-tab" aria-pressed="false">हिजरी कैलेंडर</button>
         <button class="dv-tab" aria-pressed="false">ज़िक्र काउंटर</button>
         <button class="dv-tab" aria-pressed="false">पाकीज़गी की गाइड</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · नमाज़ के वक़्त" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · क़िबला कम्पास" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · ज़िक्र काउंटर" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · विजेट" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">नमाज़ के वक़्त, लाइव क़िबला, 13 कॉम्प्लिकेशन।</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">नमाज़ के वक़्त</button>
+        <button class="dv-tab" aria-pressed="false">क़िबला कम्पास</button>
+        <button class="dv-tab" aria-pressed="false">ज़िक्र काउंटर</button>
+        <button class="dv-tab" aria-pressed="false">विजेट</button>
       </div>
     </div>
   </div>

@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Kala huunde, alaa ko ɓeydaa</div>
     <h2 class="sc-h2"><span>Gonɗiɗo,</span><br><em>wonaa masiŋ nanngoowo hakkille.</em></h2>
     <p class="sc-lede">Kuutorɗe sappo mawɗe; gooto kala ina addana deƴƴere tuma nde udditaa. Ñoƴƴee gooto ngam ƴeewde.</p>
@@ -503,6 +503,18 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Kalandiriye siftortooɗo.</h3><p>Hijra e Miilaadi kawriiɗe. Jemmaaji barka, Ramadaan, Korite, Tabaski e ñalngu Arafa — ciimtol dewal lewru ndun ina les.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Limoore ndee, e juuɗe mon.</h3><p>Limoowo jikru e tasbiiha ɓaawo juulde; jikru heɓaaɗi, jikru mon keeriiɗo e faandaare ñalawma.</p></div><span class="sc-tag">Ƴeew</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraaq, Duhaa, Awwaabiin e pecce jemma; so on njiɗii.">Waktuuji nafila</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Binndol Madiina walla Turkiya — mbaydi hello ina jokka ɗum.">Binndol mushaf</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="Inɗe 99 Alla, e janngirde mum e firo mum; aɗon waawi ɓeydude gooto kala e jikru.">Inɗe moƴƴe Alla</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, walla doggol timmungol ɓaawo juulde.">Tasbiiha</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Taariiɗe ngam juulde, Alkur'aana, jikru, hadiisa e kaadaa.">Rewindagol dewe</button>
+      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Hadiisaaji ɓuri 36,000 e nder deftere mawɗe jeeɗiɗi.">Hadiisa</button>
+      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="Yiylo gootal, kuutorɗe fof — winndee 'Baqarah 255', ngardon e aaya ndee.">Yiylo gootal</button>
+      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Yiytee jumaaji e Apple Maps, tawa nokku mon yottaaki sarwoor amen; kartal, goɗɗeendi, laawol.">Jumaaji ɓadiiɗi</button>
+      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Limoore e Dynamic Island e Ecraŋ Sokaaɗo.">Live Activity</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +529,15 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="Juulɗe sappo e jeeɗiɗi, e nate." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="Kalandiriye siftortooɗo." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="Limoore ndee, e juuɗe mon." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Waktuuji nafila" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Binndol mushaf" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Inɗe moƴƴe Alla" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Tasbiiha" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="Rewindagol dewe" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hadiisa" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Yiylo gootal" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Jumaaji ɓadiiɗi" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +546,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +588,24 @@
         <button class="dv-tab" aria-pressed="false">Kalandiriye hijra</button>
         <button class="dv-tab" aria-pressed="false">Limoowo jikru</button>
         <button class="dv-tab" aria-pressed="false">Ɗowirde laaɓal</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Waktuuji juulde" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Kompaas alqibla" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Limoowo jikru" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widget" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Waktuuji juulde, alqibla wuuruɗo, complication 13.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Waktuuji juulde</button>
+        <button class="dv-tab" aria-pressed="false">Kompaas alqibla</button>
+        <button class="dv-tab" aria-pressed="false">Limoowo jikru</button>
+        <button class="dv-tab" aria-pressed="false">Widget</button>
       </div>
     </div>
   </div>

@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Tutto, niente di superfluo</div>
     <h2 class="sc-h2"><span>Una compagna,</span><br><em>non una macchina per catturare l'attenzione.</em></h2>
     <p class="sc-lede">Dieci strumenti essenziali, ognuno pensato per trasmettere calma appena lo apri. Tocca per un'anteprima.</p>
@@ -503,6 +503,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Un calendario che ricorda.</h3><p>Hegiriano e gregoriano insieme. Notti sacre, Ramadan, gli Eid e la loro vigilia, con il riepilogo mensile dell'adorazione subito sotto.</p></div><span class="sc-tag">Anteprima</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Il conto, sempre a portata di mano.</h3><p>Contatore di dhikr e tasbihat dopo la preghiera; dhikr predefiniti, i tuoi dhikr e un obiettivo giornaliero.</p></div><span class="sc-tag">Anteprima</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraq, Duha, Awwabin e le parti della notte; facoltative.">Preghiere volontarie</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Grafia di Medina o di Turchia; anche l'impaginazione cambia.">Grafia del mushaf</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="I 99 nomi di Allah, con traslitterazione e significato; puoi aggiungerli come dhikr.">Asma al-Husna</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, oppure la sequenza completa dopo la preghiera.">Tasbihat</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Anelli per preghiera, Corano, dhikr, hadith e qada.">Monitoraggio dell'adorazione</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +525,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/it/prayer-guide.webp" alt="Diciassette preghiere, illustrate." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/it/calendar.webp" alt="Un calendario che ricorda." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/it/zikirmatik.webp" alt="Il conto, sempre a portata di mano." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/it/more/prayer-nafile.webp" alt="Preghiere volontarie" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/it/more/mushaf.webp" alt="Grafia del mushaf" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/it/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/it/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/it/more/accounting-year.webp" alt="Monitoraggio dell'adorazione" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +538,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +580,24 @@
         <button class="dv-tab" aria-pressed="false">Calendario hegiriano</button>
         <button class="dv-tab" aria-pressed="false">Contatore di dhikr</button>
         <button class="dv-tab" aria-pressed="false">Guida alla purificazione</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Orari di preghiera" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Bussola Qibla" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Contatore di dhikr" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widget" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Orari di preghiera, Qibla dal vivo, 13 complicazioni.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Orari di preghiera</button>
+        <button class="dv-tab" aria-pressed="false">Bussola Qibla</button>
+        <button class="dv-tab" aria-pressed="false">Contatore di dhikr</button>
+        <button class="dv-tab" aria-pressed="false">Widget</button>
       </div>
     </div>
   </div>

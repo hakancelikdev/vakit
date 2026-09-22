@@ -488,7 +488,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · ครบทุกอย่าง ไม่มีส่วนเกิน</div>
     <h2 class="sc-h2"><span>เพื่อนร่วมทาง</span><br><em>ไม่ใช่เครื่องแย่งความสนใจ</em></h2>
     <p class="sc-lede">เครื่องมือหลักสิบอย่าง แต่ละอย่างออกแบบให้รู้สึกสงบตั้งแต่วินาทีที่เปิด แตะเพื่อดูตัวอย่าง</p>
@@ -504,6 +504,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>ปฏิทินที่ไม่ลืมวันสำคัญ</h3><p>ฮิจเราะฮฺและสากลคู่กัน คืนอันประเสริฐ รอมฎอน วันอีดทั้งสอง และวันก่อนอีด พร้อมสรุปอิบาดะฮฺของเดือนอยู่ด้านล่าง</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>จำนวนนับอยู่ในมือ</h3><p>ตัวนับซิกิรและตัสบีหฺหลังละหมาด ซิกิรสำเร็จรูป ซิกิรของคุณเอง และเป้าหมายรายวัน</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="อิชร็อก ฎุฮา เอาวาบีน และช่วงต่าง ๆ ของกลางคืน เลือกเปิดได้">เวลาละหมาดสุนัต</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="แบบมะดีนะฮฺหรือแบบตุรกี การจัดหน้าก็เปลี่ยนตาม">อักขรวิธีมุศหัฟ</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 พระนามของอัลลอฮฺ พร้อมคำถอดเสียงและความหมาย เพิ่มเป็นซิกิรได้">พระนามอันวิจิตร 99</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 หรือลำดับเต็มหลังละหมาด">ตัสบีหฺ</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้">ติดตามอิบาดะฮฺ</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -518,6 +526,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/th/prayer-guide.webp" alt="ละหมาด 17 แบบ พร้อมภาพประกอบ" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/th/calendar.webp" alt="ปฏิทินที่ไม่ลืมวันสำคัญ" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/th/zikirmatik.webp" alt="จำนวนนับอยู่ในมือ" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/th/more/prayer-nafile.webp" alt="เวลาละหมาดสุนัต" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/th/more/mushaf.webp" alt="อักขรวิธีมุศหัฟ" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/th/more/esma-ul-husna.webp" alt="พระนามอันวิจิตร 99" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/th/more/tesbihat.webp" alt="ตัสบีหฺ" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/th/more/accounting-year.webp" alt="ติดตามอิบาดะฮฺ" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -526,7 +539,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -568,6 +581,24 @@
         <button class="dv-tab" aria-pressed="false">ปฏิทินฮิจเราะฮฺ</button>
         <button class="dv-tab" aria-pressed="false">ตัวนับซิกิร</button>
         <button class="dv-tab" aria-pressed="false">คู่มือการชำระล้าง</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · เวลาละหมาด" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · เข็มทิศกิบลัต" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · ตัวนับซิกิร" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · วิดเจ็ต" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">เวลาละหมาด กิบลัตแบบสด และส่วนเสริมหน้าปัด 13 แบบ</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">เวลาละหมาด</button>
+        <button class="dv-tab" aria-pressed="false">เข็มทิศกิบลัต</button>
+        <button class="dv-tab" aria-pressed="false">ตัวนับซิกิร</button>
+        <button class="dv-tab" aria-pressed="false">วิดเจ็ต</button>
       </div>
     </div>
   </div>

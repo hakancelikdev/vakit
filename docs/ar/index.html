@@ -488,7 +488,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · كل ما تحتاجه، ولا شيء زائد</div>
     <h2 class="sc-h2"><span>رفيق،</span><br><em>لا آلة لسرقة الانتباه.</em></h2>
     <p class="sc-lede">عشر أدوات أساسية، صُمّمت كل واحدة منها لتبعث السكينة من اللحظة الأولى. المس أياً منها للمعاينة.</p>
@@ -504,6 +504,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>تقويم لا ينسى.</h3><p>الهجري والميلادي معاً. الليالي المباركة ورمضان والعيدان ويوم عرفة — وتحتها ملخّص عبادات الشهر.</p></div><span class="sc-tag">معاينة</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>العدّ في يدك.</h3><p>عدّاد الذكر والتسبيحات بعد الصلاة؛ أذكار جاهزة وأذكارك الخاصة وهدف يومي.</p></div><span class="sc-tag">معاينة</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="الإشراق والضحى والأوابين وأجزاء الليل؛ اختيارية.">أوقات النوافل</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="مصحف المدينة أو مصحف تركيا — ويتبعه ترتيب الصفحات أيضاً.">خط المصحف</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="أسماء الله الحسنى التسعة والتسعون، بنطقها ومعانيها؛ ويمكن إضافة أيٍّ منها ذكراً.">الأسماء الحسنى</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33، أو التسلسل الكامل بعد الصلاة.">التسبيحات</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="حلقات للصلاة والقرآن والذكر والحديث والقضاء.">متابعة العبادات</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -518,6 +526,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/ar/prayer-guide.webp" alt="سبع عشرة صلاة، مصوّرة." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/ar/calendar.webp" alt="تقويم لا ينسى." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/ar/zikirmatik.webp" alt="العدّ في يدك." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/ar/more/prayer-nafile.webp" alt="أوقات النوافل" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/ar/more/mushaf.webp" alt="خط المصحف" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/ar/more/esma-ul-husna.webp" alt="الأسماء الحسنى" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/ar/more/tesbihat.webp" alt="التسبيحات" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/ar/more/accounting-year.webp" alt="متابعة العبادات" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -526,7 +539,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -568,6 +581,24 @@
         <button class="dv-tab" aria-pressed="false">التقويم الهجري</button>
         <button class="dv-tab" aria-pressed="false">عدّاد الذكر</button>
         <button class="dv-tab" aria-pressed="false">دليل الطهارة</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · أوقات الصلاة" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · بوصلة القبلة" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · عدّاد الذكر" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · الأدوات" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">أوقات الصلاة، والقبلة مباشرة، و13 إضافة.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">أوقات الصلاة</button>
+        <button class="dv-tab" aria-pressed="false">بوصلة القبلة</button>
+        <button class="dv-tab" aria-pressed="false">عدّاد الذكر</button>
+        <button class="dv-tab" aria-pressed="false">الأدوات</button>
       </div>
     </div>
   </div>

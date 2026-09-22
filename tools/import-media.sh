@@ -29,6 +29,10 @@ it:it ja:ja ms:ms nl:nl-NL pt:pt-PT ru:ru th:th ur:ur-PK zh:zh-Hans"
 # Must match SHOWCASE[*].img in content.js.
 SHOTS="prayer-times widget discover qibla profile qada quran prayer-guide calendar zikirmatik"
 
+# Captures known to be broken in the toolkit: the committed webp stays until the
+# toolkit is re-shot. tr/qibla (2026-09-21) shows the location name in Chinese.
+KEEP="${KEEP-tr/qibla}"
+
 WIDTH=780   # phone mockup is 320 CSS px; ~2.4x covers retina without shipping 1206 px
 QUALITY=80
 
@@ -37,6 +41,7 @@ for pair in $PAIRS; do
   src="$RAW/$locale"; dst="$OUT/screenshots/$lang"
   mkdir -p "$dst"
   for shot in $SHOTS; do
+    case " $KEEP " in *" $lang/$shot "*) echo "  kept $lang/$shot (KEEP)"; continue ;; esac
     [ -f "$src/$shot.png" ] || { echo "missing $src/$shot.png" >&2; exit 1; }
     cwebp -quiet -q "$QUALITY" -resize "$WIDTH" 0 "$src/$shot.png" -o "$dst/$shot.webp"
   done
@@ -72,6 +77,33 @@ for pair in tr:tr en:en-US; do
   done
   cwebp -quiet -q "$QUALITY" -resize 360 0 "$src/menu-bar.png" -o "$dst/menu-bar.webp"
   echo "screenshots/$lang/mac ← $locale"
+done
+
+# Apple Watch: Turkish and English captures only, like the Mac.
+WATCH="prayer-dial qibla dhikr complications"
+for pair in tr:tr en:en-US; do
+  lang="${pair%%:*}"; locale="${pair##*:}"
+  src="$RAW/$locale/_watch"; dst="$OUT/screenshots/$lang/watch"
+  mkdir -p "$dst"
+  for shot in $WATCH; do
+    [ -f "$src/$shot.png" ] || { echo "missing $src/$shot.png" >&2; exit 1; }
+    cwebp -quiet -q "$QUALITY" -resize 396 0 "$src/$shot.png" -o "$dst/$shot.webp"
+  done
+  echo "screenshots/$lang/watch ← $locale"
+done
+
+# More iPhone screens (SHOWCASE_MORE in content.js). Every language has the
+# first five; the rest exist only where the toolkit captured them (tr, en).
+EXTRAS="prayer-nafile mushaf esma-ul-husna tesbihat accounting-year hadith search nearby-mosques lock-screen-live-activity"
+for pair in $PAIRS; do
+  lang="${pair%%:*}"; locale="${pair##*:}"
+  src="$RAW/$locale/extras"; dst="$OUT/screenshots/$lang/more"
+  mkdir -p "$dst"
+  for shot in $EXTRAS; do
+    [ -f "$src/$shot.png" ] || continue
+    cwebp -quiet -q "$QUALITY" -resize "$WIDTH" 0 "$src/$shot.png" -o "$dst/$shot.webp"
+  done
+  echo "screenshots/$lang/more ← $locale"
 done
 
 # Preview video: Turkish has its own recording, every other language uses the

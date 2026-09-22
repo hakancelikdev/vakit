@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Hər şey var, artığı yox</div>
     <h2 class="sc-h2"><span>Bir yoldaş,</span><br><em>diqqət tələsi deyil.</em></h2>
     <p class="sc-lede">On əsas alət; hər biri açıldığı andan rahatlıq versin deyə hazırlanıb. Baxmaq üçün toxunun.</p>
@@ -503,6 +503,18 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Yadda saxlayan təqvim.</h3><p>Hicri və miladi birlikdə. Mübarək gecələr, Ramazan, bayramlar, ərəfə; altında ayın ibadət xülasəsi.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Sayğac əlinizdə.</h3><p>Zikr sayğacı və namazdan sonra təsbihat; hazır zikrlər, öz zikrləriniz və gündəlik hədəf.</p></div><span class="sc-tag">Bax</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="İşraq, Duha, Əvvabin və gecənin hissələri; istəyə bağlı.">Nafilə vaxtları</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir.">Müshəf xətti</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="Allahın 99 adı, oxunuşu və mənası ilə; zikr kimi əlavə edilə bilər.">Əsmayi-Hüsna</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 və ya namazdan sonra tam tərtib.">Təsbihat</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Halqalar: namaz, Quran, zikr, hədis və qəza.">İbadət izləmə</button>
+      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Yeddi böyük məcmuədən 36 mindən çox hədis.">Hədis</button>
+      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="Tək axtarış, bütün alətlər — «Bəqərə 255» yazın, ayəyə keçin.">Vahid axtarış</button>
+      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Məkanınız serverimizə getmədən, Apple Xəritələr ilə tapın; xəritə, məsafə, marşrut.">Yaxındakı məscidlər</button>
+      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Dynamic Island və kilid ekranında geri sayım.">Live Activity</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +529,15 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="On yeddi namaz, şəkillərlə." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="Yadda saxlayan təqvim." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="Sayğac əlinizdə." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Nafilə vaxtları" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Müshəf xətti" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Əsmayi-Hüsna" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Təsbihat" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="İbadət izləmə" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hədis" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Vahid axtarış" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Yaxındakı məscidlər" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +546,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +588,24 @@
         <button class="dv-tab" aria-pressed="false">Hicri təqvim</button>
         <button class="dv-tab" aria-pressed="false">Zikr sayğacı</button>
         <button class="dv-tab" aria-pressed="false">Təmizlik bələdçisi</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Namaz vaxtları" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Qiblə kompası" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Zikr sayğacı" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Vidjetlər" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Namaz vaxtları, canlı qiblə, 13 komplikasiya.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Namaz vaxtları</button>
+        <button class="dv-tab" aria-pressed="false">Qiblə kompası</button>
+        <button class="dv-tab" aria-pressed="false">Zikr sayğacı</button>
+        <button class="dv-tab" aria-pressed="false">Vidjetlər</button>
       </div>
     </div>
   </div>

@@ -488,7 +488,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Всё нужное, ничего лишнего</div>
     <h2 class="sc-h2"><span>Спутник,</span><br><em>а не ловушка для внимания.</em></h2>
     <p class="sc-lede">Десять главных инструментов, и каждый устроен так, чтобы с первой секунды было спокойно. Коснитесь любого, чтобы посмотреть.</p>
@@ -504,6 +504,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Календарь, который помнит.</h3><p>Хиджра и григорианский календарь вместе. Благословенные ночи, Рамадан, праздники Ид и их канун — а ниже итог ибадата за месяц.</p></div><span class="sc-tag">Посмотреть</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Счёт всегда под рукой.</h3><p>Счётчик зикра и тасбихат после намаза; готовые зикры, ваши собственные и цель на день.</p></div><span class="sc-tag">Посмотреть</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ишрак, духа, аввабин и части ночи — по желанию.">Время добровольных молитв</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Мединское или турецкое — вместе с ним меняется и разметка страниц.">Письмо мусхафа</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="С транслитерацией и значением; любое имя можно добавить как зикр.">99 имён Аллаха</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 или полный порядок после намаза.">Тасбихат</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Кольца для намаза, Корана, зикра, хадисов и када.">Учёт ибадатов</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -518,6 +526,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/ru/prayer-guide.webp" alt="Семнадцать намазов в иллюстрациях." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/ru/calendar.webp" alt="Календарь, который помнит." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/ru/zikirmatik.webp" alt="Счёт всегда под рукой." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/ru/more/prayer-nafile.webp" alt="Время добровольных молитв" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/ru/more/mushaf.webp" alt="Письмо мусхафа" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/ru/more/esma-ul-husna.webp" alt="99 имён Аллаха" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/ru/more/tesbihat.webp" alt="Тасбихат" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/ru/more/accounting-year.webp" alt="Учёт ибадатов" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -526,7 +539,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -568,6 +581,24 @@
         <button class="dv-tab" aria-pressed="false">Календарь по хиджре</button>
         <button class="dv-tab" aria-pressed="false">Счётчик зикра</button>
         <button class="dv-tab" aria-pressed="false">Руководство по очищению</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Время намаза" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Компас киблы" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Счётчик зикра" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Виджеты" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Время намаза, кибла в реальном времени, 13 расширений.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Время намаза</button>
+        <button class="dv-tab" aria-pressed="false">Компас киблы</button>
+        <button class="dv-tab" aria-pressed="false">Счётчик зикра</button>
+        <button class="dv-tab" aria-pressed="false">Виджеты</button>
       </div>
     </div>
   </div>

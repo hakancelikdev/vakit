@@ -487,7 +487,7 @@
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
-  <div>
+  <div class="sc-copy">
     <div class="sc-head">§ 01 · Semua yang perlu, tiada yang lebih</div>
     <h2 class="sc-h2"><span>Seorang teman,</span><br><em>bukan mesin perampas perhatian.</em></h2>
     <p class="sc-lede">Sepuluh alat utama, setiap satu direka supaya terasa tenang sebaik dibuka. Ketik mana-mana untuk pratonton.</p>
@@ -503,6 +503,14 @@
         <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Kalendar yang mengingati.</h3><p>Hijrah dan Masihi bersama. Malam-malam mulia, Ramadan, Hari Raya dan malam sebelumnya — dengan ringkasan ibadah bulan itu di bawahnya.</p></div><span class="sc-tag">Pratonton</span></button>
         <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Kiraan dalam genggaman.</h3><p>Pengira zikir dan tasbih selepas solat; zikir sedia ada, zikir anda sendiri dan sasaran harian.</p></div><span class="sc-tag">Pratonton</span></button>
     </div>
+    <div class="sc-more dv-tabs" id="scMore">
+      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Isyraq, Duha, Awwabin dan bahagian-bahagian malam; pilihan.">Waktu Solat Sunat</button>
+      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Rasm Madinah atau Turki — susun atur halaman turut berubah.">Rasm Mushaf</button>
+      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 nama Allah, dengan transliterasi dan maksud; boleh ditambah sebagai zikir.">Asmaul Husna</button>
+      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, atau susunan penuh selepas solat.">Tasbih</button>
+      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Gelang untuk solat, Al-Quran, zikir, hadis dan qada.">Catatan Ibadah</button>
+    </div>
+    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
   </div>
   <div class="sc-phone-wrap">
     <div class="phone">
@@ -517,6 +525,11 @@
         <img class="phone-screenshot" data-i="7" src="/assets/screenshots/ms/prayer-guide.webp" alt="Panduan bergambar untuk 17 solat." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="8" src="/assets/screenshots/ms/calendar.webp" alt="Kalendar yang mengingati." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="9" src="/assets/screenshots/ms/zikirmatik.webp" alt="Kiraan dalam genggaman." width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/ms/more/prayer-nafile.webp" alt="Waktu Solat Sunat" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/ms/more/mushaf.webp" alt="Rasm Mushaf" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/ms/more/esma-ul-husna.webp" alt="Asmaul Husna" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/ms/more/tesbihat.webp" alt="Tasbih" width="390" height="844" loading="lazy">
+        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/ms/more/accounting-year.webp" alt="Catatan Ibadah" width="390" height="844" loading="lazy">
       </div>
     </div>
   </div>
@@ -525,7 +538,7 @@
 <!-- ========== IPAD + MAC ========== -->
 <section class="devices" id="devices">
   <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac</div>
+    <div class="dv-eye">iPad · Mac · Apple Watch</div>
     <div class="dv-col dv-ipad">
       <div class="dv-frame ipad">
         <div class="dv-screen">
@@ -567,6 +580,24 @@
         <button class="dv-tab" aria-pressed="false">Kalendar Hijrah</button>
         <button class="dv-tab" aria-pressed="false">Pengira Zikir</button>
         <button class="dv-tab" aria-pressed="false">Panduan Bersuci</button>
+      </div>
+    </div>
+    <div class="dv-col dv-watch">
+      <div class="dv-frame watch">
+        <div class="dv-screen">
+          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Waktu Solat" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Kompas Kiblat" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Pengira Zikir" width="396" height="484" loading="lazy">
+          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widget" width="396" height="484" loading="lazy">
+        </div>
+      </div>
+      <h3 class="dv-name">Apple Watch</h3>
+      <p class="dv-desc">Waktu solat, kiblat langsung, 13 komplikasi.</p>
+      <div class="dv-tabs" role="group" aria-label="Apple Watch">
+        <button class="dv-tab on" aria-pressed="true">Waktu Solat</button>
+        <button class="dv-tab" aria-pressed="false">Kompas Kiblat</button>
+        <button class="dv-tab" aria-pressed="false">Pengira Zikir</button>
+        <button class="dv-tab" aria-pressed="false">Widget</button>
       </div>
     </div>
   </div>
