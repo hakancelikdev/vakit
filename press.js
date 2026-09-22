@@ -134,7 +134,7 @@ module.exports = {
     { href: "/assets/screenshots/en/quran.webp", tr: "Kur'an-ı Kerim ekranı", en: "Qur'an screen" },
     { href: "/assets/screenshots/en/qibla.webp", tr: "Kıble pusulası", en: "Qibla compass" },
     { href: "/assets/screenshots/en/widget.webp", tr: "Widget'lar", en: "Widgets" },
-    { href: "/assets/video/walkthrough.mp4", tr: "Tanıtım turu (23 sn, MP4)", en: "Walkthrough (23 s, MP4)" },
+    { href: "/assets/video/walkthrough.mp4", tr: "Tanıtım turu (26 sn, MP4)", en: "Walkthrough (26 s, MP4)" },
     { href: "/assets/video/sky-en.mp4", tr: "Gökyüzü videosu (MP4, sessiz)", en: "Sky video (MP4, silent)" },
   ],
 };
