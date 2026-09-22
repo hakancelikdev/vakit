@@ -45,7 +45,7 @@ module.exports = {
     downloadCta2: "Shkarkojeni nga App Store", explore: "Zbuloni veçoritë →",
     preview: "Parapamje",
     footContact: "Kontakt", footFeedback: "Komente",
-    footPrivacy: "Privatësia", footTerms: "Kushtet", footAds: "Reklamat", footPress: "Shtypi",
+    footPrivacy: "Privatësia", footTerms: "Kushtet", footPress: "Shtypi",
     footSig: "Bërë me kujdes · © 2026 Hakan Çelik",
     menuLabel: "Menyja", themeLabel: "Aktivizo ose çaktivizo modalitetin e errët", langLabel: "Gjuha", closeLabel: "Mbyll",
     videoLabel: "Ekrani i namazit në Vakit: qielli ndryshon ndërsa dita ecën",
@@ -122,7 +122,7 @@ module.exports = {
     { t: "Numërimi, në dorën tuaj.", d: "Numëruesi i dhikrit dhe tesbihati pas namazit; dhikër të gatshëm, dhikri juaj dhe një synim ditor." },
   ],
   COMPARE: [
-    { f: "Reklamat", o: "Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.", v: "Plotësisht pa reklama. I vetmi përjashtim: nëse doni ta mbështetni Vakit, mund të zgjidhni vetë të shikoni një reklamë." },
+    { f: "Reklamat", o: "Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.", v: "Plotësisht pa reklama, as opsionale: Vakit nuk shfaq fare reklama." },
     { f: "Privatësia", o: "Të dhëna vendndodhjeje të shitura palëve të treta (u raportua publikisht).", v: "Koordinatat nuk arrijnë në serverët tanë. Pa gjurmim." },
     { f: "Pa internet", o: "Veçoritë bazë kërkojnë lidhje me internetin.", v: "Namazi, kibla, teksti i Kuranit, dhikri — të gjitha punojnë pa internet." },
     { f: "Ekrani i kyçjes", o: "Widget-et prishen nga një përditësim i iOS te tjetri.", v: "Live Activity dhe Dynamic Island; StandBy nga iOS 17." },
@@ -148,7 +148,7 @@ module.exports = {
   FAQ: [
     { q: "A punon pa internet?", a: "Po. Kohët e namazit llogariten në telefonin tuaj sipas vendndodhjes suaj. Teksti i Kuranit, kibla, dhikri dhe të gjitha mjetet bazë punojnë plotësisht pa internet." },
     { q: "A vijnë njoftimet edhe nëse nuk e hap kurrë aplikacionin?", a: "Po. Ato planifikohen lokalisht në pajisjen tuaj, kështu që i merrni edhe kur aplikacioni është i mbyllur. Nëse jepni leje vendndodhjeje «Gjithmonë», Vakit i rillogarit kohët në heshtje pasi udhëtoni." },
-    { q: "A është vërtet gjithçka falas?", a: "Po. I gjithë aplikacioni është falas: pa abonime, pa mure pagese, pa nivel «premium», dhe asgjë nuk është e kyçur. Nëse doni ta mbështetni, mund të bëni një dhurim ose të zgjidhni vetë të shikoni një reklamë; asnjëra prej tyre nuk zhbllokon asgjë." },
+    { q: "A është vërtet gjithçka falas?", a: "Po. I gjithë aplikacioni është falas: pa abonime, pa mure pagese, pa nivel «premium», dhe asgjë nuk është e kyçur. Nëse doni ta mbështetni, mund të bëni një dhurim; ai nuk zhbllokon asgjë, sepse asgjë nuk është e kyçur." },
     { q: "Nga vijnë kohët e namazit?", a: "Nuk merren nga ndonjë server. Vakit i llogarit në pajisjen tuaj me metodën që zgjidhni (ka 12 në dispozicion) dhe me koordinatat tuaja." },
     { q: "Në cilat gjuhë është i disponueshëm?", a: "Ndërfaqja e aplikacionit është në 25 gjuhë: turqisht, anglisht, arabisht, gjermanisht, frëngjisht, spanjisht, italisht, holandisht, portugalisht, danisht, rusisht, azerbajxhanisht, shqip, indonezisht, malajisht, kinezisht, japonisht, tajlandisht, hindisht, bengalisht, urdisht, persisht, ujgurisht, suahilisht dhe fula. Nëse gjuha e pajisjes suaj mbështetet, aplikacioni hapet vetvetiu në të; mund ta ndryshoni kur të doni te Cilësimet. Në arabisht, urdisht, persisht dhe ujgurisht e gjithë ndërfaqja rrjedh nga e djathta në të majtë. Përkthimet e përmbajtjes, megjithatë, janë tani për tani vetëm në turqisht dhe anglisht: përkthimi i Kuranit, transliterimi dhe përkthimet e hadithit ofrohen në këto dy gjuhë; kuptimet e fjalëve janë vetëm në anglisht, dhe disa koleksione hadithi janë përkthyer vetëm pjesërisht në turqisht. Me ndërfaqen në arabisht, për një pjesë të Kuranit hapet një tefsir në arabisht; hutbeja e xhumasë vjen në gjuhët në të cilat e publikon Diyanet (turqisht, dhe disa javë anglisht e arabisht)." },
     { q: "Në cilat pajisje punon?", a: "iPhone, iPad, Apple Watch dhe Mac. Në iPad është i njëjti aplikacion në ekran më të madh, dhe regjistrimet tuaja mbeten të njëjta në të gjitha pajisjet përmes iCloud. Që nga versioni 1.7.0, Vakit punon edhe në Mac: namazi i radhës dhe numërimi mbrapsht në shiritin e menysë, shkurtore tastiere, widget në desktop dhe, që nga macOS 15, skedat në shiritin anësor. Kohët e namazit, Kurani, hadithet, dhikri dhe regjistrimet e ibadetit sinkronizohen me iPhone-in tuaj përmes së njëjtës llogari iCloud. Meqë Mac-ët nuk kanë busull, skeda Kibla e tregon me tekst drejtimin dhe largësinë deri te Qabja." },

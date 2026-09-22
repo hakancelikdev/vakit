@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. Layanan pihak ketiga",
-        b: "Vakit memakai layanan berikut untuk tujuan terbatas. Tidak satu pun terhubung ke identitas pribadimu:\n\n• Apple iCloud / CloudKit – Sinkronisasi data pengguna (di ruang iCloud pribadimu).\n• Apple MapKit – Masjid terdekat, peta, dan rute (lokasi dikirim ke Apple).\n• Firebase Crashlytics (Google) – Laporan kerusakan tanpa data identitas (stack trace, model perangkat, versi iOS/macOS).\n• Firebase Remote Config (Google) – Penanda fitur dan peluncuran bertahap (tidak membaca data dari perangkat).\n• Google AdMob – Hanya untuk menampilkan iklan video berhadiah pada “Mode Sedekah” yang opsional. Detailnya ada di bagian berikut.\n• Apple StoreKit 2 – Donasi opsional (pembelian dalam aplikasi). Data pembayaran diproses oleh Apple; Vakit tidak pernah melihat data kartu.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Pengumuman hari besar dan versi baru. Pengumuman disiarkan per topik; tidak ada penargetan per orang.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Teks dan audio khotbah Jumat.\n• Server Vakit (Jerman, Frankfurt) – Statistik penggunaan dan daftar zikirmu, terhubung ke kode pengguna yang tidak memuat informasi identitas. Catatan khatam, penanda, target, dan bacaanmu tidak pernah dikirim ke sana.\n\nCatatan: Firebase Analytics TIDAK dipakai; ID iklan (IDFA) tidak dikumpulkan.\n\nKebijakan privasi Google: policies.google.com/privacy",
+        b: "Vakit memakai layanan berikut untuk tujuan terbatas. Tidak satu pun terhubung ke identitas pribadimu:\n\n• Apple iCloud / CloudKit – Sinkronisasi data pengguna (di ruang iCloud pribadimu).\n• Apple MapKit – Masjid terdekat, peta, dan rute (lokasi dikirim ke Apple).\n• Firebase Crashlytics (Google) – Laporan kerusakan tanpa data identitas (stack trace, model perangkat, versi iOS/macOS).\n• Firebase Remote Config (Google) – Penanda fitur dan peluncuran bertahap (tidak membaca data dari perangkat).\n• Apple StoreKit 2 – Donasi opsional (pembelian dalam aplikasi). Data pembayaran diproses oleh Apple; Vakit tidak pernah melihat data kartu.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Pengumuman hari besar dan versi baru. Pengumuman disiarkan per topik; tidak ada penargetan per orang.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Teks dan audio khotbah Jumat.\n• Server Vakit (Jerman, Frankfurt) – Statistik penggunaan dan daftar zikirmu, terhubung ke kode pengguna yang tidak memuat informasi identitas. Catatan khatam, penanda, target, dan bacaanmu tidak pernah dikirim ke sana.\n\nCatatan: Firebase Analytics TIDAK dipakai; ID iklan (IDFA) tidak dikumpulkan.\n\nKebijakan privasi Google: policies.google.com/privacy",
       },
       {
-        t: "6. Iklan (Mode Sedekah)",
-        b: "Vakit tidak menampilkan iklan. Hanya pada “Mode Sedekah” yang opsional, jika pengguna sendiri yang memulainya untuk mendukung pengembang, iklan video berhadiah ditampilkan lewat Google AdMob. Dalam hal ini:\n• Iklan disajikan oleh Google AdMob; iklannya selalu tidak dipersonalisasi dan berperingkat untuk semua umur (G). Vakit tidak pernah menampilkan permintaan App Tracking Transparency, dan ID iklan (IDFA) tidak dibagikan.\n• Saat Pusat Dukungan (“Jaga Vakit tetap hidup”) dibuka, SDK iklan dimulai dan memuat satu iklan lebih dulu; tidak ada iklan yang ditampilkan kecuali kamu memilih untuk menontonnya.\n• Mode Sedekah bisa dinonaktifkan dari jarak jauh lewat Firebase Remote Config; kamu juga bisa memilih untuk tidak pernah memakainya.\n\nPrivasi Google AdMob: support.google.com/admob/answer/6128543",
+        t: "6. Iklan",
+        b: "Vakit tidak menampilkan iklan. Satu-satunya sumber pemasukan aplikasi adalah donasi sukarela dari pengguna.",
       },
       {
         t: "7. Donasi (pembelian dalam aplikasi)",
@@ -89,8 +89,8 @@ module.exports = {
         b: "Semua fitur inti Vakit gratis. Aplikasi ini tidak menampilkan iklan (kecuali iklan video berhadiah pada “Mode Sedekah” yang opsional, yang dimulai sendiri oleh pengguna).\n\nPengguna yang ingin mendukung pengembang bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Donasi ini:\n• Diproses lewat Apple In-App Purchase (StoreKit 2).\n• Merupakan produk habis pakai (consumable); donasi tidak membuka fitur tambahan atau langganan.\n• Permintaan pengembalian dana hanya bisa diajukan lewat Apple (reportaproblem.apple.com).\n• Ketentuan pembayaran Apple dan aturan App Store berlaku.",
       },
       {
-        t: "4. Mode Sedekah (iklan berhadiah)",
-        b: "“Mode Sedekah” adalah fitur opsional ketika pengguna dengan sukarela menonton iklan video berhadiah singkat untuk mendukung pengembang. Iklan disajikan lewat Google AdMob. Fitur ini tidak wajib dipakai; pengembang juga bisa menonaktifkannya dari jarak jauh lewat Firebase Remote Config.",
+        t: "4. Iklan",
+        b: "Vakit tidak menampilkan iklan. Satu-satunya sumber pemasukan aplikasi adalah donasi sukarela dari pengguna.",
       },
       {
         t: "5. Aplikasi pendamping Apple Watch",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. Layanan pihak ketiga",
-        b: "Vakit memakai layanan pihak ketiga berikut dan tunduk pada ketentuan masing-masing:\n• Apple iCloud / CloudKit (sinkronisasi data pengguna)\n• Apple MapKit (masjid terdekat, peta)\n• Firebase Crashlytics, Remote Config, dan Cloud Messaging (Google)\n• Google AdMob (hanya untuk Mode Sedekah)\n• Apple StoreKit 2 (donasi)\n• Diyanet (teks dan audio khotbah Jumat)\n• Pustaka Adhan (perhitungan jadwal salat, sumber terbuka)\n• SwiftAA (perhitungan astronomi, sumber terbuka)\n\nKetentuan penggunaan dan kebijakan privasi layanan-layanan ini adalah milik penyedianya masing-masing.",
+        b: "Vakit memakai layanan pihak ketiga berikut dan tunduk pada ketentuan masing-masing:\n• Apple iCloud / CloudKit (sinkronisasi data pengguna)\n• Apple MapKit (masjid terdekat, peta)\n• Firebase Crashlytics, Remote Config, dan Cloud Messaging (Google)\n• Apple StoreKit 2 (donasi)\n• Diyanet (teks dan audio khotbah Jumat)\n• Pustaka Adhan (perhitungan jadwal salat, sumber terbuka)\n• SwiftAA (perhitungan astronomi, sumber terbuka)\n\nKetentuan penggunaan dan kebijakan privasi layanan-layanan ini adalah milik penyedianya masing-masing.",
       },
       {
         t: "8. Hak kekayaan intelektual",
@@ -127,38 +127,6 @@ module.exports = {
       {
         t: "13. Kontak",
         b: "Untuk pertanyaan tentang Ketentuan ini: hakancelikdev@gmail.com\n\nPengembang: Hakan Çelik (Turki)",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Kebijakan Iklan",
-      description:
-        "Kebijakan iklan Vakit yang sesuai prinsip halal. Kami tidak menampilkan iklan judi, alkohol, konten dewasa, pinjaman berbunga, atau ramalan.",
-    },
-    titleBefore: "Kebijakan ",
-    titleEm: "Iklan",
-    desc: "Terakhir diperbarui: 10 September 2026 — Versi 1.7.4\n\nDi aplikasi Islami, iklan yang kamu lihat menjadi bagian dari momen ibadahmu. Karena itu Vakit tidak menampilkan iklan. Satu-satunya pengecualian bersifat pilihan: pengguna yang ingin mendukung aplikasi bisa memilih untuk menonton iklan video berhadiah yang singkat. Halaman ini menjelaskan aturan yang berlaku untuk iklan tersebut.",
-    sections: [
-      {
-        t: "1. Di mana iklan muncul",
-        b: "Vakit tidak menampilkan iklan banner, interstisial, atau iklan pembuka aplikasi di layar mana pun. Satu-satunya iklan adalah video berhadiah singkat yang bisa dipilih pengguna untuk ditonton dari Pusat Dukungan (“Jaga Vakit tetap hidup”, “Mode Sedekah”) demi mendukung aplikasi. Kamu tidak pernah wajib memakainya, dan tidak ada fitur yang bergantung padanya.",
-      },
-      {
-        t: "2. Kategori yang tidak pernah kami tampilkan",
-        b: "Iklan dalam kategori berikut diblokir di jaringan iklan:\n\n• Judi, taruhan, kasino, taruhan olahraga, poker\n• Minuman beralkohol dan produk tembakau\n• Konten dewasa, kencan, konten seksual, produk seks\n• Ketelanjangan dalam bentuk apa pun\n• Pinjaman berbunga, pinjaman kilat (payday loan), investasi berbunga\n• Ramalan, astrologi, paranormal, sihir, tarot\n• Babi dan produk babi\n• Skema cepat kaya, jebakan MLM\n• Propaganda keagamaan dari agama lain",
-      },
-      {
-        t: "3. Pengamanan teknis",
-        b: "Pengaturan berikut diterapkan di sisi jaringan iklan (Google AdMob):\n\n• Rating konten maksimum: G (semua umur).\n• Di Brand Safety > Block Content, semua kategori di atas ditandai.\n• Daftar blokir URL dan kata kunci: iklan yang memuat istilah seperti “casino”, “betting”, “gambling”, “flirt”, “dating”, “horoscope”, “psychic”, “tarot” tidak bisa lolos.\n• Iklan selalu tidak dipersonalisasi; Vakit tidak pernah menampilkan permintaan App Tracking Transparency, dan ID iklan (IDFA) tidak dibagikan.",
-      },
-      {
-        t: "4. Jika kamu melihat iklan yang tidak pantas",
-        b: "Jika kamu melihat iklan yang bertentangan dengan kepekaan agamamu, kirim email ke hakancelikdev@gmail.com beserta tangkapan layarnya. Setiap laporan yang valid ditambahkan ke daftar blokir AdMob.",
-      },
-      {
-        t: "5. Kontak",
-        b: "Untuk pertanyaan, laporan, atau usulan kategori: hakancelikdev@gmail.com\n\nPengembang: Hakan Çelik (Turki)",
       },
     ],
   },

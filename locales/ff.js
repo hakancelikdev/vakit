@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Jippin e App Store", explore: "Yiy kuutorɗe →",
     preview: "Ƴeew",
     footContact: "Jokkondiral", footFeedback: "Miijo mon",
-    footPrivacy: "Suturaa", footTerms: "Sarɗiiji", footAds: "Publisite", footPress: "Jaaynde",
+    footPrivacy: "Suturaa", footTerms: "Sarɗiiji", footPress: "Jaaynde",
     footSig: "Moƴƴinaa e reentaade · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Uddit/uddu mbaydi niɓɓiɗndi", langLabel: "Ɗemngal", closeLabel: "Uddu",
     videoLabel: "Hello juulde Vakit: kammu ina waylo no ñalawma ina yahra",

@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. Huduma za Watu wa Tatu",
-        b: "Vakit hutumia huduma zifuatazo kwa malengo maalum. Hakuna hata moja inayohusishwa na utambulisho wako binafsi:\n\n• Apple iCloud / CloudKit – Usawazishaji wa data ya mtumiaji (katika nafasi yako binafsi ya iCloud).\n• Apple MapKit – Misikiti iliyo karibu, ramani na maelekezo (mahali hutumwa kwa Apple).\n• Firebase Crashlytics (Google) – Ripoti za kuanguka kwa programu bila data ya utambulisho (stack trace, modeli ya kifaa, toleo la iOS/macOS).\n• Firebase Remote Config (Google) – Kuwasha au kuzima vipengele kwa mbali na kuvisambaza hatua kwa hatua (haisomi data kutoka kwenye kifaa).\n• Google AdMob – Kwa ajili ya kuonyesha matangazo ya video yenye zawadi katika “Hali ya Sadaka” ya hiari pekee. Maelezo hapa chini.\n• Apple StoreKit 2 – Michango ya hiari (IAP). Maelezo ya malipo huchakatwa na Apple; Vakit haioni kamwe data ya kadi.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Matangazo ya siku za baraka na ya matoleo mapya. Matangazo hayo hutumwa kwa wote kwa mada; hakuna ulengaji wa mtu binafsi.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Maandishi na sauti ya khutba ya Ijumaa.\n• Seva ya Vakit (Ujerumani, Frankfurt) – Takwimu za matumizi na orodha yako ya dhikri, zilizounganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Kumbukumbu zako za hitima, alamisho, malengo na usomaji hazitumwi kamwe huko.\n\nKumbuka: Firebase Analytics HAITUMIKI; kitambulisho cha matangazo (IDFA) hakikusanywi.\n\nSera ya faragha ya Google: policies.google.com/privacy",
+        b: "Vakit hutumia huduma zifuatazo kwa malengo maalum. Hakuna hata moja inayohusishwa na utambulisho wako binafsi:\n\n• Apple iCloud / CloudKit – Usawazishaji wa data ya mtumiaji (katika nafasi yako binafsi ya iCloud).\n• Apple MapKit – Misikiti iliyo karibu, ramani na maelekezo (mahali hutumwa kwa Apple).\n• Firebase Crashlytics (Google) – Ripoti za kuanguka kwa programu bila data ya utambulisho (stack trace, modeli ya kifaa, toleo la iOS/macOS).\n• Firebase Remote Config (Google) – Kuwasha au kuzima vipengele kwa mbali na kuvisambaza hatua kwa hatua (haisomi data kutoka kwenye kifaa).\n• Apple StoreKit 2 – Michango ya hiari (IAP). Maelezo ya malipo huchakatwa na Apple; Vakit haioni kamwe data ya kadi.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Matangazo ya siku za baraka na ya matoleo mapya. Matangazo hayo hutumwa kwa wote kwa mada; hakuna ulengaji wa mtu binafsi.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Maandishi na sauti ya khutba ya Ijumaa.\n• Seva ya Vakit (Ujerumani, Frankfurt) – Takwimu za matumizi na orodha yako ya dhikri, zilizounganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Kumbukumbu zako za hitima, alamisho, malengo na usomaji hazitumwi kamwe huko.\n\nKumbuka: Firebase Analytics HAITUMIKI; kitambulisho cha matangazo (IDFA) hakikusanywi.\n\nSera ya faragha ya Google: policies.google.com/privacy",
       },
       {
-        t: "6. Matangazo (Hali ya Sadaka)",
-        b: "Vakit haionyeshi matangazo. Ni katika “Hali ya Sadaka” ya hiari pekee, ikiwa mtumiaji ataianzisha mwenyewe waziwazi ili kumsaidia msanidi, ndipo tangazo la video lenye zawadi huonyeshwa kupitia Google AdMob. Katika hali hiyo:\n• Tangazo hutolewa na Google AdMob; daima halijabinafsishwa na limepangwa kwa hadhira ya jumla (G). Vakit haionyeshi kamwe ombi la App Tracking Transparency, na kitambulisho cha matangazo (IDFA) hakishirikiwi.\n• Kituo cha Msaada (“Iendeleze Vakit”) kinapofunguliwa, SDK ya matangazo huanza na kupakia tangazo moja mapema; hakuna tangazo linaloonyeshwa isipokuwa ukichagua kulitazama.\n• Hali ya Sadaka inaweza kuzimwa kwa mbali kupitia Firebase Remote Config; unaweza pia kuchagua kutoitumia kamwe.\n\nFaragha ya Google AdMob: support.google.com/admob/answer/6128543",
+        t: "6. Matangazo",
+        b: "Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.",
       },
       {
         t: "7. Michango (Manunuzi Ndani ya Programu)",
@@ -85,12 +85,12 @@ module.exports = {
         b: "Vakit ni programu ya bure inayotoa zana za ibada kama nyakati za swala, mwelekeo wa kibla, Qurani, hadithi, kihesabu cha dhikri, miongozo ya swala/udhu, ufuatiliaji wa hitima na ibada, khutba ya Ijumaa, misikiti iliyo karibu na kalenda ya siku za dini. Inafanya kazi kwenye iOS 16.4+ na macOS 13+, na ina programu shirikishi ya Apple Watch kwa watchOS 9+.",
       },
       {
-        t: "3. Matumizi ya Bure na Michango ya Hiari",
-        b: "Vipengele vyote vya msingi vya Vakit ni bure. Programu haionyeshi matangazo (isipokuwa matangazo ya video yenye zawadi ya “Hali ya Sadaka” ya hiari, ambayo mtumiaji huyaanzisha mwenyewe).\n\nWatumiaji wanaotaka kumsaidia msanidi wanaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Michango hii:\n• Huchakatwa kupitia Apple In-App Purchase (StoreKit 2).\n• Ni bidhaa zinazotumika mara moja (consumable); michango haifungui vipengele vya ziada wala usajili.\n• Maombi ya kurejeshewa fedha yanaweza kuwasilishwa kupitia Apple pekee (reportaproblem.apple.com).\n• Masharti ya malipo ya Apple na kanuni za App Store yanatumika.",
+        t: "3. Matangazo",
+        b: "Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.",
       },
       {
-        t: "4. Hali ya Sadaka (Tangazo Lenye Zawadi)",
-        b: "“Hali ya Sadaka” ni kipengele cha hiari ambapo mtumiaji hutazama kwa hiari yake tangazo fupi la video lenye zawadi ili kumsaidia msanidi. Tangazo hutolewa kupitia Google AdMob. Kutumia kipengele hiki si lazima; msanidi pia anaweza kukizima kwa mbali kupitia Firebase Remote Config.",
+        t: "4. Matangazo",
+        b: "Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.",
       },
       {
         t: "5. Programu Shirikishi ya Apple Watch",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. Huduma za Watu wa Tatu",
-        b: "Vakit hutumia huduma zifuatazo za watu wa tatu na iko chini ya masharti yao wenyewe:\n• Apple iCloud / CloudKit (usawazishaji wa data ya mtumiaji)\n• Apple MapKit (misikiti iliyo karibu, ramani)\n• Firebase Crashlytics, Remote Config na Cloud Messaging (Google)\n• Google AdMob (kwa Hali ya Sadaka pekee)\n• Apple StoreKit 2 (michango)\n• Diyanet (maandishi na sauti ya khutba ya Ijumaa)\n• Maktaba ya Adhan (hesabu ya nyakati za swala, chanzo huria)\n• SwiftAA (hesabu ya kiastronomia, chanzo huria)\n\nMasharti na sera za faragha za huduma hizi ni za watoa huduma husika.",
+        b: "Vakit hutumia huduma zifuatazo za watu wa tatu na iko chini ya masharti yao wenyewe:\n• Apple iCloud / CloudKit (usawazishaji wa data ya mtumiaji)\n• Apple MapKit (misikiti iliyo karibu, ramani)\n• Firebase Crashlytics, Remote Config na Cloud Messaging (Google)\n• Apple StoreKit 2 (michango)\n• Diyanet (maandishi na sauti ya khutba ya Ijumaa)\n• Maktaba ya Adhan (hesabu ya nyakati za swala, chanzo huria)\n• SwiftAA (hesabu ya kiastronomia, chanzo huria)\n\nMasharti na sera za faragha za huduma hizi ni za watoa huduma husika.",
       },
       {
         t: "8. Haki Miliki",
@@ -127,38 +127,6 @@ module.exports = {
       {
         t: "13. Mawasiliano",
         b: "Kwa maswali kuhusu Masharti haya: hakancelikdev@gmail.com\n\nMsanidi: Hakan Çelik (Uturuki)",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Sera ya Matangazo",
-      description:
-        "Sera ya matangazo ya Vakit inayozingatia misingi ya halali. Hatuonyeshi matangazo ya kamari, pombe, maudhui ya watu wazima, riba wala utabiri wa bahati.",
-    },
-    titleBefore: "Sera ya ",
-    titleEm: "Matangazo",
-    desc: "Ilisasishwa mwisho: 10 Septemba 2026 — Toleo 1.7.4\n\nKatika programu ya Kiislamu, matangazo unayoyaona huwa sehemu ya wakati wako wa ibada. Ndiyo sababu Vakit haionyeshi matangazo. Tofauti pekee ni ya hiari: mtumiaji anayetaka kuisaidia programu anaweza kuchagua kutazama tangazo fupi la video lenye zawadi. Ukurasa huu unaeleza kanuni zinazotumika kwa matangazo hayo.",
-    sections: [
-      {
-        t: "1. Matangazo Yanapoonekana",
-        b: "Vakit haionyeshi matangazo ya bango, ya skrini nzima kati ya kurasa (interstitial) wala ya wakati wa kufungua programu kwenye skrini yoyote. Tangazo pekee ni video fupi yenye zawadi ambayo mtumiaji anaweza kuchagua kuitazama kutoka Kituo cha Msaada (“Iendeleze Vakit”, “Hali ya Sadaka”) ili kuisaidia programu. Hulazimiki kamwe kuitumia, na hakuna kipengele kinachoitegemea.",
-      },
-      {
-        t: "2. Makundi Tusiyoyaonyesha Kamwe",
-        b: "Matangazo ya makundi yafuatayo yamezuiwa kwenye mtandao wa matangazo:\n\n• Kamari, kubashiri, kasino, kubashiri matokeo ya michezo, poka\n• Pombe na bidhaa za tumbaku\n• Maudhui ya watu wazima, kutafuta wachumba, maudhui ya ngono, bidhaa za ngono\n• Uchi wa aina yoyote\n• Mikopo yenye riba, mikopo ya muda mfupi ya hadi mshahara (payday loans), uwekezaji wenye riba\n• Utabiri wa bahati, unajimu, uaguzi wa kiroho, uchawi, tarot\n• Nyama ya nguruwe na bidhaa zake\n• Mipango ya kutajirika haraka, mitego ya MLM\n• Propaganda za kidini za imani nyingine",
-      },
-      {
-        t: "3. Kinga za Kiufundi",
-        b: "Mipangilio hii inatumika upande wa mtandao wa matangazo (Google AdMob):\n\n• Kiwango cha juu cha maudhui: G (hadhira ya jumla).\n• Katika Brand Safety > Block Content, makundi yote yaliyo hapo juu yamewekewa alama.\n• Orodha ya kuzuia URL na maneno muhimu: matangazo yenye maneno kama “casino”, “betting”, “gambling”, “flirt”, “dating”, “horoscope”, “psychic”, “tarot” hayawezi kupita.\n• Matangazo daima hayajabinafsishwa; Vakit haionyeshi kamwe ombi la App Tracking Transparency, na kitambulisho cha matangazo (IDFA) hakishirikiwi.",
-      },
-      {
-        t: "4. Ukiona Tangazo Lisilofaa",
-        b: "Ukiona tangazo linalokwenda kinyume na hisia zako za kidini, andika kwa hakancelikdev@gmail.com pamoja na picha ya skrini. Kila ripoti halali huongezwa kwenye orodha ya kuzuia ya AdMob.",
-      },
-      {
-        t: "5. Mawasiliano",
-        b: "Kwa maswali, ripoti au mapendekezo ya makundi: hakancelikdev@gmail.com\n\nMsanidi: Hakan Çelik (Uturuki)",
       },
     ],
   },

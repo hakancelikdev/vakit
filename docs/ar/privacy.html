@@ -166,7 +166,6 @@
 • Apple MapKit – المساجد القريبة، والخريطة، والاتجاهات (يُرسل الموقع إلى Apple).
 • Firebase Crashlytics (Google) – تقارير أعطال لا تحوي بيانات هوية (stack trace، وطراز الجهاز، وإصدار iOS/macOS).
 • Firebase Remote Config (Google) – مفاتيح تشغيل الميزات وطرحها التدريجي (لا يقرأ بيانات من الجهاز).
-• Google AdMob – فقط لعرض إعلانات فيديو بمكافأة في «وضع الصدقة» الاختياري. التفاصيل أدناه.
 • Apple StoreKit 2 – التبرعات الاختيارية (IAP). تعالج Apple تفاصيل الدفع؛ ولا يرى Vakit بيانات البطاقة أبداً.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – إشعارات الأيام المباركة والإصدارات. تُبث حسب الموضوع (topic) إلى الجميع؛ دون أي استهداف فردي.
 • رئاسة الشؤون الدينية التركية (Diyanet، dinhizmetleri.diyanet.gov.tr) – نص خطبة الجمعة وتسجيلها الصوتي.
@@ -175,12 +174,7 @@
 ملاحظة: لا يُستخدم Firebase Analytics مطلقاً؛ ولا يُجمع معرّف الإعلانات (IDFA).
 
 سياسة خصوصية Google: policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. الإعلانات (وضع الصدقة)</h3><p>لا يعرض Vakit إعلانات. وفي «وضع الصدقة» الاختياري وحده، إذا بدأه المستخدم بنفسه صراحةً لدعم المطوّر، يُعرض إعلان فيديو بمكافأة عبر Google AdMob. وفي هذه الحالة:
-• يقدّم Google AdMob الإعلان؛ وهو دائماً غير مخصّص ومصنّف للجمهور العام (G). ولا يعرض Vakit أبداً طلب إذن App Tracking Transparency، ولا يُشارَك معرّف الإعلانات (IDFA).
-• عند فتح مركز الدعم («أحيِ Vakit») يبدأ تشغيل مكوّن الإعلانات ويحمّل إعلاناً واحداً مسبقاً؛ ولا يُعرض أي إعلان ما لم تختر مشاهدته.
-• يمكن تعطيل وضع الصدقة عن بُعد عبر Firebase Remote Config؛ ولك ببساطة ألا تستخدمه أبداً.
-
-خصوصية Google AdMob: support.google.com/admob/answer/6128543</p></div>
+  <div class="legal-card"><h3>6. الإعلانات</h3><p>لا يعرض Vakit أي إعلانات. مصدر الدخل الوحيد للتطبيق هو تبرعات المستخدمين الاختيارية.</p></div>
   <div class="legal-card"><h3>7. التبرعات (الشراء داخل التطبيق)</h3><p>Vakit مجاني. ولدعم المطوّر يمكنك التبرع اختيارياً بمستويات تتراوح من ₺10 إلى ₺10,000 من شاشة «أحيِ Vakit». وهذه العمليات:
 • تعالجها Apple عبر StoreKit 2؛ وتُرسل تفاصيل الدفع (البطاقة، وIBAN، وApple Pay) إلى Apple وحدها.
 • لا يرى Vakit وسيلة دفعك أو بياناتك المالية ولا يحفظها أبداً.
@@ -217,7 +211,6 @@
   <div class="foot-links">
     <a href="/ar/privacy.html">الخصوصية</a>
     <a href="/ar/terms.html">الشروط</a>
-    <a href="/ar/ads-policy.html">الإعلانات</a>
     <a href="/en/press.html">الصحافة</a>
     <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
   </div>

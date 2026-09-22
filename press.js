@@ -33,7 +33,7 @@ module.exports = {
       short:
         "Vakit, iPhone, iPad, Apple Watch ve Mac için namaz vakitleri ve ibadet uygulamasıdır. Vakitler cihazda hesaplanır, çekirdek özellikler internetsiz çalışır.",
       medium:
-        "Vakit, iPhone, iPad, Apple Watch ve Mac için bir namaz vakitleri ve ibadet uygulamasıdır. Diyanet dahil 12 hesaplama yöntemiyle vakitleri cihazın kendisinde hesaplar; Kur'an-ı Kerim, 36.000'den fazla hadis ve illüstrasyonlu namaz rehberi uygulamanın içinde geldiği için çekirdek özellikler internetsiz çalışır. Ücretsizdir, zorunlu reklam göstermez ve hesap açmanızı istemez.",
+        "Vakit, iPhone, iPad, Apple Watch ve Mac için bir namaz vakitleri ve ibadet uygulamasıdır. Diyanet dahil 12 hesaplama yöntemiyle vakitleri cihazın kendisinde hesaplar; Kur'an-ı Kerim, 36.000'den fazla hadis ve illüstrasyonlu namaz rehberi uygulamanın içinde geldiği için çekirdek özellikler internetsiz çalışır. Ücretsizdir, hiç reklam göstermez ve hesap açmanızı istemez; tek gelir kaynağı isteğe bağlı bağışlardır.",
       long:
         "Vakit, tek bir geliştiricinin yazdığı, iPhone, iPad, Apple Watch ve Mac için çalışan bir namaz vakitleri ve ibadet uygulamasıdır. Vakitler Diyanet dahil 12 yöntemle cihazda hesaplanır; Kur'an-ı Kerim (kelime kelime meal ve tilavetle), 36.000'den fazla hadis, Esmâ-ül Hüsnâ, zikirmatik, kaza defteri ve illüstrasyonlu namaz rehberi uygulamayla birlikte gelir, bu yüzden çekirdek özellikler internetsiz çalışır. Kilit ekranı ve ana ekran widget'ları, Dynamic Island'da canlı geri sayım, Denetim Merkezi kısayolları, Apple Watch komplikasyonları ve Mac menü çubuğu desteklenir. Uygulama 25 dilde konuşur; kimlik bilgisi toplamaz, hesap açtırmaz, veri satmaz.",
     },
@@ -44,7 +44,7 @@ module.exports = {
       ["Kategori", "Yaşam Tarzı (birincil), Başvuru"],
       ["Platformlar", "iPhone ve iPad (iOS 16.4+), Apple Watch (watchOS 9+), Mac (macOS 13+)"],
       ["Diller", "25"],
-      ["Fiyat", "Ücretsiz. İsteğe bağlı bağış; reklam yalnız kullanıcının kendi açtığı Sadaka Modu'nda"],
+      ["Fiyat", "Ücretsiz ve reklamsız. Tek gelir kaynağı kullanıcıların isteğe bağlı bağışları"],
       ["İlk yayın", "16 Ağustos 2025"],
       ["Güncel sürüm", SITE.appVersion],
       ["App Store puanı", `${RATING} (Türkiye mağazası)`],
@@ -54,7 +54,7 @@ module.exports = {
     sections: [
       {
         t: "Vakit'i ayıran ne",
-        b: "• Vakitler cihazda hesaplanır — Türkiye için Diyanet'in kendi yöntemi ayrı bir hesaplayıcıyla yazıldı, resmî takvimle karşılaştırılarak ölçülür.\n• Gökyüzü uygulamanın içinde: güneş ve ayın konumu astronomik olarak hesaplanır, ekranın rengi ilk ışıktan derin geceye yedi durakta değişir; aynı palet widget'larda, kilit ekranında ve Apple Watch'ta sürer.\n• İbadet defteri kullanıcının kendisinde kalır: kaza namazı ve orucu, hatim, zikir, hedefler yalnız cihazda ve kullanıcının kendi iCloud alanında durur.\n• Reklam kategorinin kuralıdır; Vakit'te zorunlu reklam yoktur. Reklam yalnız kullanıcının kendi açtığı, geliştiriciyi desteklemek için var olan Sadaka Modu'nda görünür.",
+        b: "• Vakitler cihazda hesaplanır — Türkiye için Diyanet'in kendi yöntemi ayrı bir hesaplayıcıyla yazıldı, resmî takvimle karşılaştırılarak ölçülür.\n• Gökyüzü uygulamanın içinde: güneş ve ayın konumu astronomik olarak hesaplanır, ekranın rengi ilk ışıktan derin geceye yedi durakta değişir; aynı palet widget'larda, kilit ekranında ve Apple Watch'ta sürer.\n• İbadet defteri kullanıcının kendisinde kalır: kaza namazı ve orucu, hatim, zikir, hedefler yalnız cihazda ve kullanıcının kendi iCloud alanında durur.\n• Reklam kategorinin kuralıdır; Vakit hiç reklam göstermez. Uygulamanın tek gelir kaynağı kullanıcıların isteğe bağlı bağışlarıdır.",
       },
       {
         t: "Öne çıkan özellikler",
@@ -90,7 +90,7 @@ module.exports = {
       short:
         "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. Times are computed on the device and the core features work without a network.",
       medium:
-        "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. It computes the times on the device with 12 calculation methods, Diyanet's among them, and ships the Qur'an, 36,000+ hadith and illustrated prayer guides inside the app, so the core works without a network. It is free, shows no forced advertising and asks for no account.",
+        "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. It computes the times on the device with 12 calculation methods, Diyanet's among them, and ships the Qur'an, 36,000+ hadith and illustrated prayer guides inside the app, so the core works without a network. It is free, shows no advertising at all and asks for no account; its only income is optional donations.",
       long:
         "Vakit is a prayer-times and worship app written by a single developer for iPhone, iPad, Apple Watch and Mac. Prayer times are computed on the device with 12 methods, including the Turkish Diyanet's own. The Qur'an with word-by-word translation and recitation, 36,000+ hadith, the 99 Names, a dhikr counter, a make-up prayer ledger and illustrated prayer guides all ship inside the app, so the core works without a network. It supports Home and Lock Screen widgets, a live countdown in the Dynamic Island, Control Center controls, Apple Watch complications and a Mac menu bar item. The app speaks 25 languages, collects no identity data, requires no account and sells nothing.",
     },
@@ -101,7 +101,7 @@ module.exports = {
       ["Category", "Lifestyle (primary), Reference"],
       ["Platforms", "iPhone and iPad (iOS 16.4+), Apple Watch (watchOS 9+), Mac (macOS 13+)"],
       ["Languages", "25"],
-      ["Price", "Free. Optional donations; ads only inside the opt-in Sadaka (charity) Mode"],
+      ["Price", "Free and ad-free. Its only income is optional donations from users"],
       ["First release", "16 August 2025"],
       ["Current version", SITE.appVersion],
       ["App Store rating", `${RATING} (Turkish storefront)`],
@@ -111,7 +111,7 @@ module.exports = {
     sections: [
       {
         t: "What sets it apart",
-        b: "• Times are computed on the device — the Turkish Diyanet method is implemented as its own calculator and measured against the authority's published calendar.\n• The sky is part of the app: the sun and the moon are placed astronomically and the palette moves through seven stages, from first light to deep night; the same palette continues in the widgets, on the Lock Screen and on Apple Watch.\n• Worship records stay with the person: make-up prayers and fasts, hatim progress, dhikr and goals live on the device and in the user's own iCloud.\n• Advertising is the norm in this category; Vakit has none by default. Ads appear only inside Sadaka Mode, which the user opens deliberately to support the developer.",
+        b: "• Times are computed on the device — the Turkish Diyanet method is implemented as its own calculator and measured against the authority's published calendar.\n• The sky is part of the app: the sun and the moon are placed astronomically and the palette moves through seven stages, from first light to deep night; the same palette continues in the widgets, on the Lock Screen and on Apple Watch.\n• Worship records stay with the person: make-up prayers and fasts, hatim progress, dhikr and goals live on the device and in the user's own iCloud.\n• Advertising is the norm in this category; Vakit shows none at all. The app's only source of income is optional donations from users.",
       },
       {
         t: "Feature highlights",

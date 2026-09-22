@@ -165,7 +165,6 @@ På Mac (macOS 13+):
 • Apple MapKit – Moskeer i nærheden, kort og rutevejledning (positionen sendes til Apple).
 • Firebase Crashlytics (Google) – Nedbrudsrapporter uden identitetsdata (stack trace, enhedsmodel, iOS-/macOS-version).
 • Firebase Remote Config (Google) – Funktionsflag og gradvis udrulning (læser ingen data fra enheden).
-• Google AdMob – Kun for at vise videoreklamer med belønning i den valgfrie «Sadaka-tilstand». Detaljer nedenfor.
 • Apple StoreKit 2 – Valgfrie donationer (køb i app). Betalingsoplysninger behandles af Apple; Vakit ser aldrig kortdata.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Fredagsprædikenens tekst og lyd.
@@ -174,12 +173,7 @@ På Mac (macOS 13+):
 Bemærk: Firebase Analytics bruges IKKE; annonce-id'et (IDFA) indsamles ikke.
 
 Googles privatlivspolitik: policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. Reklamer (Sadaka-tilstand)</h3><p>Vakit viser ikke reklamer. Kun i den valgfrie «Sadaka-tilstand» vises en videoreklame med belønning via Google AdMob, hvis brugeren udtrykkeligt selv starter den for at støtte udvikleren. I så fald:
-• Leveres reklamen af Google AdMob; den er altid ikke-personaliseret og egnet til et bredt publikum (G). Vakit viser aldrig anmodningen om App Tracking Transparency, og annonce-id'et (IDFA) deles ikke.
-• Når skærmen «Hold Vakit i live» åbnes, startes reklame-SDK'et, og én reklame indlæses på forhånd; der vises ingen reklame, medmindre du vælger at se den.
-• Kan Sadaka-tilstand slås fra på afstand via Firebase Remote Config; du kan også helt enkelt vælge aldrig at bruge den.
-
-Google AdMob og privatliv: support.google.com/admob/answer/6128543</p></div>
+  <div class="legal-card"><h3>6. Reklamer</h3><p>Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.</p></div>
   <div class="legal-card"><h3>7. Donationer (køb i app)</h3><p>Vakit er gratis. For at støtte udvikleren kan du give valgfrie donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:
 • Behandles af Apple StoreKit 2; betalingsoplysninger (kort, IBAN, Apple Pay) sendes kun til Apple.
 • Vakit ser eller gemmer aldrig din betalingsmetode eller dine økonomiske oplysninger.
@@ -216,7 +210,6 @@ Dataansvarlig: Hakan Çelik (Tyrkiet)</p></div>
   <div class="foot-links">
     <a href="/da/privacy.html">Privatliv</a>
     <a href="/da/terms.html">Vilkår</a>
-    <a href="/da/ads-policy.html">Reklamer</a>
     <a href="/en/press.html">Presse</a>
     <a href="https://github.com/hakancelikdev/vakit">GitHub</a>
   </div>

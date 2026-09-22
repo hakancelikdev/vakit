@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Scarica su App Store", explore: "Scopri le funzioni →",
     preview: "Anteprima",
     footContact: "Contatti", footFeedback: "Suggerimenti",
-    footPrivacy: "Privacy", footTerms: "Termini", footAds: "Pubblicità", footPress: "Stampa",
+    footPrivacy: "Privacy", footTerms: "Termini", footPress: "Stampa",
     footSig: "Fatto con cura · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Attiva o disattiva la modalità scura", langLabel: "Lingua", closeLabel: "Chiudi",
     videoLabel: "La schermata delle preghiere di Vakit: il cielo cambia con il passare del giorno",

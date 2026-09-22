@@ -32,11 +32,11 @@ module.exports = {
       },
       {
         t: "5. Diensten van derden",
-        b: "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen ervan is aan je persoonlijke identiteit gekoppeld:\n\n• Apple iCloud / CloudKit – Synchronisatie van gebruikersgegevens (in je privé-iCloudruimte).\n• Apple MapKit – Moskeeën in de buurt, kaart en routebeschrijving (de locatie wordt naar Apple gestuurd).\n• Firebase Crashlytics (Google) – Crashrapporten zonder identiteitsgegevens (stack trace, apparaatmodel, iOS-/macOS-versie).\n• Firebase Remote Config (Google) – Functievlaggen en geleidelijke uitrol (leest geen gegevens van het apparaat).\n• Google AdMob – Alleen om beloonde videoadvertenties te tonen in de optionele «Sadaka-modus». Details hieronder.\n• Apple StoreKit 2 – Optionele donaties (in-app-aankoop). Betaalgegevens worden door Apple verwerkt; Vakit ziet nooit kaartgegevens.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen worden per onderwerp naar iedereen tegelijk verstuurd; er is geen targeting per persoon.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Tekst en audio van de vrijdagpreek.\n• Vakit-server (Duitsland, Frankfurt) – Gebruiksstatistieken en je dhikr-lijst, gekoppeld aan een gebruikerscode zonder identificerende gegevens. Je chatm-, bladwijzer-, doel- en leesgegevens worden daar nooit naartoe gestuurd.\n\nLet op: Firebase Analytics wordt NIET gebruikt; de reclame-identificatie (IDFA) wordt niet verzameld.\n\nPrivacybeleid van Google: policies.google.com/privacy",
+        b: "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen ervan is aan je persoonlijke identiteit gekoppeld:\n\n• Apple iCloud / CloudKit – Synchronisatie van gebruikersgegevens (in je privé-iCloudruimte).\n• Apple MapKit – Moskeeën in de buurt, kaart en routebeschrijving (de locatie wordt naar Apple gestuurd).\n• Firebase Crashlytics (Google) – Crashrapporten zonder identiteitsgegevens (stack trace, apparaatmodel, iOS-/macOS-versie).\n• Firebase Remote Config (Google) – Functievlaggen en geleidelijke uitrol (leest geen gegevens van het apparaat).\n• Apple StoreKit 2 – Optionele donaties (in-app-aankoop). Betaalgegevens worden door Apple verwerkt; Vakit ziet nooit kaartgegevens.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen worden per onderwerp naar iedereen tegelijk verstuurd; er is geen targeting per persoon.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Tekst en audio van de vrijdagpreek.\n• Vakit-server (Duitsland, Frankfurt) – Gebruiksstatistieken en je dhikr-lijst, gekoppeld aan een gebruikerscode zonder identificerende gegevens. Je chatm-, bladwijzer-, doel- en leesgegevens worden daar nooit naartoe gestuurd.\n\nLet op: Firebase Analytics wordt NIET gebruikt; de reclame-identificatie (IDFA) wordt niet verzameld.\n\nPrivacybeleid van Google: policies.google.com/privacy",
       },
       {
-        t: "6. Advertenties (Sadaka-modus)",
-        b: "Vakit toont geen advertenties. Alleen in de optionele «Sadaka-modus» wordt, als de gebruiker die uitdrukkelijk zelf start om de ontwikkelaar te steunen, via Google AdMob een beloonde videoadvertentie getoond. In dat geval:\n• Wordt de advertentie door Google AdMob geleverd; ze is altijd niet-gepersonaliseerd en geschikt voor een algemeen publiek (G). Vakit toont nooit de App Tracking Transparency-vraag en de reclame-identificatie (IDFA) wordt niet gedeeld.\n• Wordt, zodra het scherm «Houd Vakit in leven» opent, de advertentie-SDK gestart en één advertentie vooraf geladen; er wordt geen advertentie getoond tenzij je ervoor kiest die te bekijken.\n• Kan de Sadaka-modus op afstand worden uitgeschakeld via Firebase Remote Config; je kunt er ook gewoon voor kiezen hem nooit te gebruiken.\n\nPrivacy bij Google AdMob: support.google.com/admob/answer/6128543",
+        t: "6. Advertenties",
+        b: "Vakit toont geen advertenties. De enige inkomstenbron van de app zijn vrijwillige donaties van gebruikers.",
       },
       {
         t: "7. Donaties (in-app-aankoop)",
@@ -87,12 +87,12 @@ module.exports = {
         b: "Vakit is een gratis app met hulpmiddelen voor aanbidding, zoals gebedstijden, Qibla-richting, Koran, hadith, een dhikr-teller, gidsen voor gebed en wassing, chatm- en aanbiddingsregistratie, de vrijdagpreek, moskeeën in de buurt en een kalender met religieuze dagen. De app werkt op iOS 16.4+ en macOS 13+ en bevat een begeleidende Apple Watch-app voor watchOS 9+.",
       },
       {
-        t: "3. Gratis gebruik en optionele donaties",
-        b: "Alle kernfuncties van Vakit zijn gratis. De app toont geen advertenties (behalve de beloonde videoadvertenties in de optionele «Sadaka-modus», die de gebruiker zelf start).\n\nGebruikers die de ontwikkelaar willen steunen, kunnen op het scherm «Houd Vakit in leven» optionele donaties doen in niveaus van ₺10 tot ₺10.000. Deze donaties:\n• Worden verwerkt via Apple In-App Purchase (StoreKit 2).\n• Zijn verbruiksproducten (consumables); donaties ontgrendelen geen extra functies of abonnementen.\n• Verzoeken om terugbetaling kunnen alleen via Apple worden ingediend (reportaproblem.apple.com).\n• Hierop zijn de betalingsvoorwaarden van Apple en de regels van de App Store van toepassing.",
+        t: "3. Advertenties",
+        b: "Vakit toont geen advertenties. De enige inkomstenbron van de app zijn vrijwillige donaties van gebruikers.",
       },
       {
-        t: "4. Sadaka-modus (beloonde advertentie)",
-        b: "De «Sadaka-modus» is een optionele functie waarbij de gebruiker vrijwillig een korte beloonde videoadvertentie bekijkt om de ontwikkelaar te steunen. De advertentie wordt via Google AdMob geleverd. Het gebruik van deze functie is niet verplicht; de ontwikkelaar kan de functie ook op afstand uitschakelen via Firebase Remote Config.",
+        t: "4. Advertenties",
+        b: "Vakit toont geen advertenties. De enige inkomstenbron van de app zijn vrijwillige donaties van gebruikers.",
       },
       {
         t: "5. Begeleidende Apple Watch-app",
@@ -104,7 +104,7 @@ module.exports = {
       },
       {
         t: "7. Diensten van derden",
-        b: "Vakit gebruikt de volgende diensten van derden, waarop hun eigen voorwaarden van toepassing zijn:\n• Apple iCloud / CloudKit (synchronisatie van gebruikersgegevens)\n• Apple MapKit (moskeeën in de buurt, kaarten)\n• Firebase Crashlytics, Remote Config en Cloud Messaging (Google)\n• Google AdMob (alleen voor de Sadaka-modus)\n• Apple StoreKit 2 (donaties)\n• Diyanet (tekst en audio van de vrijdagpreek)\n• Adhan-bibliotheek (berekening van gebedstijden, opensource)\n• SwiftAA (astronomische berekeningen, opensource)\n\nDe voorwaarden en het privacybeleid van deze diensten behoren toe aan hun respectieve aanbieders.",
+        b: "Vakit gebruikt de volgende diensten van derden, waarop hun eigen voorwaarden van toepassing zijn:\n• Apple iCloud / CloudKit (synchronisatie van gebruikersgegevens)\n• Apple MapKit (moskeeën in de buurt, kaarten)\n• Firebase Crashlytics, Remote Config en Cloud Messaging (Google)\n• Apple StoreKit 2 (donaties)\n• Diyanet (tekst en audio van de vrijdagpreek)\n• Adhan-bibliotheek (berekening van gebedstijden, opensource)\n• SwiftAA (astronomische berekeningen, opensource)\n\nDe voorwaarden en het privacybeleid van deze diensten behoren toe aan hun respectieve aanbieders.",
       },
       {
         t: "8. Intellectueel eigendom",
@@ -133,36 +133,4 @@ module.exports = {
     ],
   },
 
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Advertentiebeleid",
-      description:
-        "Het halal-conforme advertentiebeleid van Vakit. We tonen geen advertenties voor gokken, alcohol, inhoud voor volwassenen, producten met rente of waarzeggerij.",
-    },
-    titleBefore: "Advertentie",
-    titleEm: "beleid",
-    desc: "Laatst bijgewerkt: 10 september 2026 — Versie 1.7.4\n\nIn een islamitische app worden de advertenties die je ziet deel van je moment van aanbidding. Daarom toont Vakit geen advertenties. De enige uitzondering is vrijwillig: een gebruiker die de app wil steunen, kan ervoor kiezen een korte beloonde videoadvertentie te bekijken. Deze pagina beschrijft de regels die voor die advertenties gelden.",
-    sections: [
-      {
-        t: "1. Waar advertenties verschijnen",
-        b: "Vakit toont op geen enkel scherm banner-, tussenpagina- of openingsadvertenties. De enige advertentie is een korte beloonde video die een gebruiker op het scherm «Houd Vakit in leven» («Sadaka-modus») kan kiezen te bekijken om de app te steunen. Je hoeft er nooit gebruik van te maken en geen enkele functie is ervan afhankelijk.",
-      },
-      {
-        t: "2. Categorieën die we nooit tonen",
-        b: "Advertenties in de volgende categorieën zijn in het advertentienetwerk geblokkeerd:\n\n• Gokken, wedden, casino, sportweddenschappen, poker\n• Alcohol en tabaksproducten\n• Inhoud voor volwassenen, dating, seksuele inhoud, seksproducten\n• Naaktheid in welke vorm dan ook\n• Leningen met rente, flitskredieten, rentedragende beleggingen\n• Waarzeggerij, astrologie, helderziendheid, magie, tarot\n• Varkensvlees en varkensproducten\n• Snel-rijk-wordenschema's, MLM-valkuilen\n• Religieuze propaganda van andere geloofsovertuigingen",
-      },
-      {
-        t: "3. Technische waarborgen",
-        b: "De volgende instellingen worden aan de kant van het advertentienetwerk (Google AdMob) toegepast:\n\n• Maximale inhoudsclassificatie: G (algemeen publiek).\n• In Brand Safety > Block Content zijn alle bovenstaande categorieën aangevinkt.\n• Blokkeerlijst voor URL's en trefwoorden: advertenties met termen als «casino», «betting», «gambling», «flirt», «dating», «horoscope», «psychic», «tarot» komen er niet door.\n• Advertenties zijn altijd niet-gepersonaliseerd; Vakit toont nooit de App Tracking Transparency-vraag en de reclame-identificatie (IDFA) wordt niet gedeeld.",
-      },
-      {
-        t: "4. Als je een ongepaste advertentie ziet",
-        b: "Zie je een advertentie die botst met je religieuze gevoeligheden, schrijf dan met een schermafbeelding naar hakancelikdev@gmail.com. Elke terechte melding wordt aan de blokkeerlijst van AdMob toegevoegd.",
-      },
-      {
-        t: "5. Contact",
-        b: "Voor vragen, meldingen of voorstellen voor categorieën: hakancelikdev@gmail.com\n\nOntwikkelaar: Hakan Çelik (Turkije)",
-      },
-    ],
-  },
 };

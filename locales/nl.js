@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Download in de App Store", explore: "Ontdek de functies →",
     preview: "Voorbeeld",
     footContact: "Contact", footFeedback: "Feedback",
-    footPrivacy: "Privacy", footTerms: "Voorwaarden", footAds: "Advertenties", footPress: "Pers",
+    footPrivacy: "Privacy", footTerms: "Voorwaarden", footPress: "Pers",
     footSig: "Met zorg gemaakt · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Donkere modus aan/uit", langLabel: "Taal", closeLabel: "Sluiten",
     videoLabel: "Het gebedsscherm van Vakit: de hemel verandert naarmate de dag vordert",
@@ -121,7 +121,7 @@ module.exports = {
     { t: "De telling in de hand.", d: "Een dhikr-teller en de tesbihat na het gebed; sjablonen, je eigen dhikr en een dagdoel." },
   ],
   COMPARE: [
-    { f: "Advertenties", o: "Casino- en ongepaste advertenties naast religieuze inhoud.", v: "Volledig reclamevrij. Enige uitzondering: wil je Vakit steunen, dan kun je er zelf voor kiezen een advertentie te bekijken." },
+    { f: "Advertenties", o: "Casino- en ongepaste advertenties naast religieuze inhoud.", v: "Volledig reclamevrij, ook niet vrijwillig: Vakit toont helemaal geen advertenties." },
     { f: "Privacy", o: "Locatiegegevens verkocht aan derden (in de media verschenen).", v: "Coördinaten komen nooit op onze servers. Geen tracking." },
     { f: "Offline", o: "Basisfuncties hebben internet nodig.", v: "Gebed, qibla, Korantekst, dhikr – alles werkt offline." },
     { f: "Toegangsscherm", o: "Widgets gaan stuk bij iOS-updates.", v: "Live activiteit en Dynamic Island; StandBy vanaf iOS 17." },
@@ -147,7 +147,7 @@ module.exports = {
   FAQ: [
     { q: "Werkt de app zonder internet?", a: "Ja. Gebedstijden worden op je telefoon berekend op basis van je locatie. De Korantekst, qibla, dhikr en alle basisfuncties werken volledig offline." },
     { q: "Krijg ik meldingen, ook als ik de app nooit open?", a: "Ja. Ze worden lokaal op je apparaat ingepland, dus je krijgt ze ook als de app gesloten is. Geef je 'Altijd' locatietoegang, dan rekent Vakit na een reis de tijden stilletjes opnieuw uit." },
-    { q: "Is echt alles gratis?", a: "Ja. De hele app is gratis: geen abonnement, geen betaalmuur, geen 'premium'-niveau, niets zit op slot. Wil je Vakit steunen, dan kun je doneren of er zelf voor kiezen een advertentie te bekijken; geen van beide ontgrendelt iets." },
+    { q: "Is echt alles gratis?", a: "Ja. De hele app is gratis: geen abonnement, geen betaalmuur, geen 'premium'-niveau, niets zit op slot. Wil je Vakit steunen, dan kun je doneren; dat ontgrendelt niets, want er zit niets op slot." },
     { q: "Waar komen de gebedstijden vandaan?", a: "Ze worden niet van een server gehaald. Vakit berekent ze op je apparaat, met de methode die je kiest (er zijn er 12) en je coördinaten." },
     { q: "In welke talen is de app beschikbaar?", a: "De interface van de app is er in 25 talen: Turks, Engels, Arabisch, Duits, Frans, Spaans, Italiaans, Nederlands, Portugees, Deens, Russisch, Azerbeidzjaans, Albanees, Indonesisch, Maleis, Chinees, Japans, Thai, Hindi, Bengaals, Urdu, Perzisch, Oeigoers, Swahili en Fula. Wordt de taal van je apparaat ondersteund, dan opent de app daar automatisch in; je kunt dit altijd wijzigen in Instellingen. In het Arabisch, Urdu, Perzisch en Oeigoers loopt de hele interface van rechts naar links. De vertalingen van de inhoud zijn voorlopig echter alleen in het Turks en Engels: de Koranvertaling, transliteratie en hadithvertalingen zijn er in die twee talen; woordbetekenissen alleen in het Engels, en sommige hadithverzamelingen zijn maar deels in het Turks vertaald. Met de Arabische interface opent voor een deel van de Koran een Arabische tafsir; de vrijdagpreek verschijnt in de talen waarin Diyanet hem publiceert (Turks, en sommige weken ook Engels en Arabisch)." },
     { q: "Op welke apparaten werkt de app?", a: "iPhone, iPad, Apple Watch en Mac. Op de iPad is het dezelfde app op een groter scherm, en via iCloud blijven je gegevens op al je apparaten gelijk. Sinds versie 1.7.0 werkt Vakit ook op de Mac: het volgende gebed en de aftelling in de menubalk, toetscombinaties, bureaubladwidgets en vanaf macOS 15 tabbladen in de navigatiekolom. Gebedstijden, Koran, hadith, dhikr en je ibada-gegevens synchroniseren met je iPhone via hetzelfde iCloud-account. Omdat een Mac geen kompas heeft, toont het qibla-tabblad de richting en afstand tot de Kaäba als tekst." },

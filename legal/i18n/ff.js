@@ -31,12 +31,12 @@ module.exports = {
         b: "Vakit ina jogii jaaɓnirgal companion e watchOS 9+. E Watch ndee:\n• Yamiroore nokku ina hokkee e Watch ndee e hoore mum; so Vakit ina e iPhone, nokku ina heɓee e WatchConnectivity, so wonaa ɗum GPS Watch ndee huutoretee.\n• Sensoor kompaas ina gollee e nder kaɓirgal ngam alqibla; neldetaake haa abada to seerbeer.\n• Min njanngataa keɓe Cellal (HealthKit), golle ɓalli (activity) walla piyugol ɓernde.\n• Tintine ina ngara e iPhone rewrude e notification mirroring iOS; so Watch ndee ina golla hoore mum, ina eɓɓa tintine mum lokaal.\n\nE Mac (macOS 13+):\n• Jaaɓnirgal Mac ko jaaɓnirgal gootal ngal e iPhone; keɓe mon ina mooftee kadi e kaɓirgal, ina njokkondiree e nder iCloud mon keeriiɗo.\n• Mac alaa kaɓirgal kompaas, ndeen kompaas alqibla e sahaa mum alaa; senngo e njaajeendi ina limee e nokku mon, ina kollee e binndi.\n• Nokku e Mac ina iwa e sarwiis nokku tuugiiɗo e Wi-Fi, wonaa GPS, kadi neldetaake haa abada to seerbeeruuji amen.\n• Yamiroore tintinal e teelte tintinal ko kaɓirgal kala e hoore mum; waylude ɗe e Mac waylataa iPhone mon.",
       },
       {
-        t: "5. Sarwiisuuji tataɓe",
-        b: "Vakit ina huutoroo sarwiisuuji garooji ɗii e faandaaje keeriiɗe. Hay gootol e majji jokkondiraaki e keɓe keeriiɗe mon:\n\n• Apple iCloud / CloudKit – Jokkondiral keɓe kuutoroowo (e nder nokku mon keeriiɗo iCloud).\n• Apple MapKit – Jumaaji ɓadiiɗi, kaarte e laawol (nokku ina neldee to Apple).\n• Firebase Crashlytics (Google) – Cifitorɗe firtagol ɗe alaa heen keɓe keeriiɗe (stack trace, model kaɓirgal, versiyoŋ iOS/macOS).\n• Firebase Remote Config (Google) – Udditde walla uddude kuule e woɗɗaare e yaltinde ɗe seeɗa seeɗa (janngataa keɓe e kaɓirgal).\n• Google AdMob – Tan ngam hollude publisite widewo njoɓdi e \"Sadaka Mode\" suɓaaɗo. Humpito e tiitoonde garoore.\n• Apple StoreKit 2 – Dokke suɓaaɗe (IAP). Keɓe njoɓdi ina gollee e Apple; Vakit yiyataa haa abada keɓe kart.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Jeeyle ñalɗi barka e versiyoŋ kesa. Jeeyle ina neldee denndaangal e topic; alaa ko neldetee neɗɗo gooto e hoore mum.\n• Diiwaan Diine Turkiya (dinhizmetleri.diyanet.gov.tr) – Binndi e sawtu Khutba Aljumaa.\n• Seerbeer Vakit (Almaañ, Frankfurt) – Limooje kuutorgol e doggol jikru mon, jokkondirɗe e kod kuutoroowo mo alaa heen keɓe keeriiɗe. Winndanɗe khatma, maandorɗe, payndaale e janngugol mon neldetaake haa abada ɗoon.\n\nTeskuya: Firebase Analytics HUUTORAAKA; maandorgal publisite (IDFA) mooɓetaake.\n\nPolitik suturaa Google: policies.google.com/privacy",
+        t: "5. Jeeyle",
+        b: "Vakit hollirtaa jeeyle. Ko sadakaaji suɓaaɗi kuutinooɓe woni ɗum tan ngalu jaaɓnirgal ngal.",
       },
       {
-        t: "6. Publisite (Sadaka Mode)",
-        b: "Vakit hollirtaa publisite. Ko tan e \"Sadaka Mode\" suɓaaɗo, so kuutoroowo oo fuɗɗii ɗum e hoore mum ngam wallude gollanoowo oo, publisite widewo njoɓdi ina hollee e Google AdMob. E oon sahaa:\n• Publisite oo ina okkee e Google AdMob; ko publisite mo wonaa keeriiɗo sahaa kala, ina rewi e daraja yimɓe fof (G). Vakit naamnataa haa abada yamiroore App Tracking Transparency (ATT), maandorgal publisite (IDFA) pecciditaake.\n• So hello \"Wuurnu Vakit\" udditii, SDK publisite ina fuɗɗoo, ina loowa publisite gooto adii; publisite hollotaako si on cuɓaani yiyde mo.\n• Sadaka Mode ina waawi ñifeede e woɗɗaare e Firebase Remote Config; on mbaawi kadi suɓaade wata on kuutoro ɗum haa abada.\n\nSuturaa Google AdMob: support.google.com/admob/answer/6128543",
+        t: "6. Jeeyle",
+        b: "Vakit hollirtaa jeeyle. Ko sadakaaji suɓaaɗi kuutinooɓe woni ɗum tan ngalu jaaɓnirgal ngal.",
       },
       {
         t: "7. Dokke (In-App Purchase)",
@@ -86,12 +86,12 @@ module.exports = {
         b: "Vakit ko jaaɓnirgal meere hokkoowo kuutorɗe dewal wano waktuuji juulde, senngo alqibla, Alkur'aana, hadiisa, limoowo jikru, peeje juulde/salligi, jokkugol khatma e dewal, Khutba Aljumaa, jumaaji ɓadiiɗi e kalandiriye ñalɗi diine. Ina golloo e iOS 16.4+ e macOS 13+, ina jogii kadi jaaɓnirgal companion Apple Watch ngam watchOS 9+.",
       },
       {
-        t: "3. Kuutorgol meere e dokke suɓaaɗe",
-        b: "Kuule mawɗe Vakit fof ko meere. Jaaɓnirgal ngal hollirtaa publisite (si wonaa publisite widewo njoɓdi \"Sadaka Mode\" suɓaaɗo, ɗe kuutoroowo oo fuɗɗintta hoore mum).\n\nKuutorooɓe njiɗooɓe wallude gollanoowo oo ina mbaawi okkude dokke suɓaaɗe e darajaaji gila ₺10 haa ₺10,000 e hello \"Wuurnu Vakit\". Ɗee dokke:\n• Ina gollee e Apple In-App Purchase (StoreKit 2).\n• Ko coodguuji nattooji (consumable); dokke udditataa kuule goɗɗe walla abonemaa.\n• Naamndeeji ruttugol kaalis ina neldee tan e Apple (reportaproblem.apple.com).\n• Sarɗiiji njoɓdi Apple e kuule App Store ina njokkee.",
+        t: "3. Jeeyle",
+        b: "Vakit hollirtaa jeeyle. Ko sadakaaji suɓaaɗi kuutinooɓe woni ɗum tan ngalu jaaɓnirgal ngal.",
       },
       {
-        t: "4. Sadaka Mode (Publisite njoɓdi)",
-        b: "\"Sadaka Mode\" ko kuule suɓaaɗe ɗe kuutoroowo oo yiyata publisite widewo raɓɓiɗɗo njoɓdi e muuyal mum ngam wallude gollanoowo oo. Publisite oo ina okkee e Google AdMob. Kuutorgol ɗee kuule waɗɗaaki; gollanoowo oo ina waawi kadi ñifde ɗe e woɗɗaare e Firebase Remote Config.",
+        t: "4. Jeeyle",
+        b: "Vakit hollirtaa jeeyle. Ko sadakaaji suɓaaɗi kuutinooɓe woni ɗum tan ngalu jaaɓnirgal ngal.",
       },
       {
         t: "5. Jaaɓnirgal companion Apple Watch",
@@ -103,7 +103,7 @@ module.exports = {
       },
       {
         t: "7. Sarwiisuuji tataɓe",
-        b: "Vakit ina huutoroo sarwiisuuji tataɓe garooji ɗii, ina rewi e sarɗiiji majji:\n• Apple iCloud / CloudKit (jokkondiral keɓe kuutoroowo)\n• Apple MapKit (jumaaji ɓadiiɗi, kaarte)\n• Firebase Crashlytics, Remote Config e Cloud Messaging (Google)\n• Google AdMob (tan ngam Sadaka Mode)\n• Apple StoreKit 2 (dokke)\n• Diiwaan Diine Turkiya (binndi e sawtu Khutba Aljumaa)\n• Biblotek Adhan (limgol waktuuji juulde, kod udditiiɗo)\n• SwiftAA (limgol astronomii, kod udditiiɗo)\n\nSarɗiiji kuutorgol e politikaaji suturaa ɗii sarwiisuuji ko jeyaaɗi okkooɓe mum en.",
+        b: "Vakit ina huutoroo sarwiisuuji tataɓe garooji ɗii, ina rewi e sarɗiiji majji:\n• Apple iCloud / CloudKit (jokkondiral keɓe kuutoroowo)\n• Apple MapKit (jumaaji ɓadiiɗi, kaarte)\n• Firebase Crashlytics, Remote Config e Cloud Messaging (Google)\n• Apple StoreKit 2 (dokke)\n• Diiwaan Diine Turkiya (binndi e sawtu Khutba Aljumaa)\n• Biblotek Adhan (limgol waktuuji juulde, kod udditiiɗo)\n• SwiftAA (limgol astronomii, kod udditiiɗo)\n\nSarɗiiji kuutorgol e politikaaji suturaa ɗii sarwiisuuji ko jeyaaɗi okkooɓe mum en.",
       },
       {
         t: "8. Jeyal miijo",
@@ -128,38 +128,6 @@ module.exports = {
       {
         t: "13. Jokkondiral",
         b: "Ngam naamne baɗte ɗii Sarɗiiji: hakancelikdev@gmail.com\n\nCosɗo: Hakan Çelik (Turkiya)",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Politik publisite",
-      description:
-        "Politik publisite Vakit, rewndo e halal. Min kollataa publisite pari, sangara, ko mawɓe tan, riba walla gisol ko garata.",
-    },
-    titleBefore: "Politik ",
-    titleEm: "publisite",
-    desc: "Kesɗitinal sakkitiingal: 10 siilto 2026 — Versiyoŋ 1.7.4\n\nE nder jaaɓnirgal Lislaam, publisite mo njiyɗon ina wonta geɗal saha dewal mon. Ɗum waɗi Vakit hollirtaa publisite. Ko seerti heen gooto ko suɓaaɗo: kuutoroowo njiɗɗo wallude jaaɓnirgal ngal ina waawi suɓaade yiyde publisite widewo raɓɓiɗɗo njoɓdi. Ngoo hello ina sifa kuule jokketee e ɓeen publisite.",
-    sections: [
-      {
-        t: "1. Toy publisite hollotoo",
-        b: "Vakit hollirtaa banner, publisite hakkundeejo (interstitial) walla publisite udditgol jaaɓnirgal e hello woo. Publisite gooto tan ko widewo raɓɓiɗɗo njoɓdi mo kuutoroowo ina waawi suɓaade yiyde e hello \"Wuurnu Vakit\" (\"Sadaka Mode\") ngam wallude jaaɓnirgal ngal. Waɗɗaaki on kuutoraade ɗum haa abada, alaa kuule tuugiiɗe e mum.",
-      },
-      {
-        t: "2. Kategoriiji ɗi min kollataa haa abada",
-        b: "Publisite e kategoriiji garooji ɗii ina paddaa e resoo publisite:\n\n• Pari e kaziino kala (gambling), pari sport, poker\n• Sangara e taba\n• Ko mawɓe tan (adult), yiggitagol (dating), loowdi seksuwal, coodguuji seksuwal\n• Nate yimɓe ɓe ɓoornaaki, e mbaydi kala\n• Ñamaleeji riba, ñamaleeji yaawɗi haa njoɓdi lebbi (payday), jawdi jogiindi riba\n• Gisol ko garata (fal), astroloji, ƴeewooɓe (medium), sihiru, tarot\n• Teew khinziir e ko iwi e mum\n• Peeje alɗugol e yaawre (get-rich-quick), peeje MLM fuunte\n• Publisite waaju diine goɗɗe",
-      },
-      {
-        t: "3. Reenaandeeji teknik",
-        b: "Ɗee teelte ina ngollee e bannge resoo publisite (Google AdMob):\n\n• Daraja loowdi ɓurɗo: G (yimɓe fof).\n• E Brand Safety > Block Content, kategoriiji dow ɗii fof ina maandinaa.\n• Doggol paddugol URL e kelme: publisite jogiiɗo kelme wano \"casino\", \"betting\", \"gambling\", \"flirt\", \"dating\", \"horoscope\", \"psychic\", \"tarot\" waawaa yaltude.\n• Publisite ko wonaa keeriiɗo sahaa kala; Vakit naamnataa haa abada yamiroore App Tracking Transparency (ATT), maandorgal publisite (IDFA) pecciditaake.",
-      },
-      {
-        t: "4. So on njiyii publisite mo haanaani",
-        b: "So on njiyii publisite mo luundii e yiɗde diine mon, winndanee hakancelikdev@gmail.com e nate ekraŋ (screenshot). Kala tintinal mo tabitii ina ɓeydee e doggol paddugol AdMob.",
-      },
-      {
-        t: "5. Jokkondiral",
-        b: "Ngam naamne, tintine walla ɓeyditte kategorii: hakancelikdev@gmail.com\n\nCosɗo: Hakan Çelik (Turkiya)",
       },
     ],
   },

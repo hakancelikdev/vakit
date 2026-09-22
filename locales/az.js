@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "App Store-dan yükləyin", explore: "Xüsusiyyətləri kəşf et →",
     preview: "Bax",
     footContact: "Əlaqə", footFeedback: "Rəy bildir",
-    footPrivacy: "Məxfilik", footTerms: "Şərtlər", footAds: "Reklamlar", footPress: "Mətbuat",
+    footPrivacy: "Məxfilik", footTerms: "Şərtlər", footPress: "Mətbuat",
     footSig: "Qayğı ilə hazırlanıb · © 2026 Hakan Çelik",
     menuLabel: "Menyu", themeLabel: "Tünd rejimi aç/bağla", langLabel: "Dil", closeLabel: "Bağla",
     videoLabel: "Vakit-in namaz ekranı: gün irəlilədikcə səma da dəyişir",
@@ -121,7 +121,7 @@ module.exports = {
     { t: "Sayğac əlinizdə.", d: "Zikr sayğacı və namazdan sonra təsbihat; hazır zikrlər, öz zikrləriniz və gündəlik hədəf." },
   ],
   COMPARE: [
-    { f: "Reklam", o: "Dini məzmunun yanında kazino və yersiz reklamlar.", v: "Tamamilə reklamsızdır. Yeganə istisna: dəstək olmaq istəsəniz, öz istəyinizlə bir reklam izləyə bilərsiniz." },
+    { f: "Reklam", o: "Dini məzmunun yanında kazino və yersiz reklamlar.", v: "Tamamilə reklamsızdır. İstəyə bağlısı da yoxdur: Vakit heç reklam göstərmir." },
     { f: "Məxfilik", o: "Üçüncü tərəflərə satılan məkan məlumatı (mətbuatda yazıldı).", v: "Koordinatlar serverimizə getmir. İzləmə yoxdur." },
     { f: "Oflayn", o: "Əsas funksiyalar internet tələb edir.", v: "Namaz, qiblə, Quran mətni, zikr — hamısı oflayn." },
     { f: "Kilid ekranı", o: "Vidjetlər iOS yeniləmələrində xarab olur.", v: "Live Activity və Dynamic Island; iOS 17-dən etibarən StandBy." },
@@ -147,7 +147,7 @@ module.exports = {
   FAQ: [
     { q: "İnternet olmadan işləyirmi?", a: "Bəli. Namaz vaxtları məkanınıza görə telefonunuzda hesablanır. Quran mətni, qiblə, zikr və bütün əsas alətlər tamamilə oflayn işləyir." },
     { q: "Tətbiqi açmasam da bildirişlər gəlir?", a: "Bəli. Bildirişlər cihazınızda yerli olaraq planlaşdırılır, ona görə tətbiq bağlı olanda da gəlir. «Həmişə» məkan icazəsi versəniz, səfərdən sonra vaxtlar səssizcə yenidən hesablanır." },
-    { q: "Hər şey həqiqətən pulsuzdur?", a: "Bəli. Bütün tətbiq pulsuzdur: abunə yoxdur, ödəniş divarı yoxdur, «premium» yoxdur, heç nə kilidli deyil. Dəstək olmaq istəsəniz, ianə edə və ya öz istəyinizlə bir reklam izləyə bilərsiniz; heç biri nəyinsə kilidini açmır." },
+    { q: "Hər şey həqiqətən pulsuzdur?", a: "Bəli. Bütün tətbiq pulsuzdur: abunə yoxdur, ödəniş divarı yoxdur, «premium» yoxdur, heç nə kilidli deyil. Dəstək olmaq istəsəniz, ianə edə bilərsiniz; ianə heç nəyin kilidini açmır, onsuz da kilidli heç nə yoxdur." },
     { q: "Namaz vaxtları haradan gəlir?", a: "Serverdən götürülmür. Vakit onları cihazınızda, seçdiyiniz üsula (12 üsul var) və məkanınıza görə hesablayır." },
     { q: "Hansı dillərdə istifadə etmək olar?", a: "Tətbiqin interfeysi 25 dildədir: türk, ingilis, ərəb, alman, fransız, ispan, italyan, niderland, portuqal, danimarka, rus, Azərbaycan, alban, indoneziya, malay, çin, yapon, tay, hind, benqal, urdu, fars, uyğur, suahili və fula dilləri. Cihazınızın dili dəstəklənirsə, tətbiq avtomatik olaraq o dildə açılır; istədiyiniz vaxt Ayarlardan dəyişə bilərsiniz. Ərəb, urdu, fars və uyğur dillərində interfeys başdan-başa sağdan sola axır. Məzmun tərcümələri isə hələlik yalnız türk və ingilis dillərindədir: Quran məalı, oxunuş və hədis tərcümələri bu iki dildədir; kəlmə mənaları yalnız ingilis dilindədir, bəzi hədis məcmuələrinin türkcə tərcüməsi də qismən mövcuddur. Ərəb interfeysində ayələrin bir hissəsi üçün ərəbcə təfsir açılır; cümə xütbəsi Diyanət-in yayımladığı dillərdə gəlir (türk; yayımlandığı həftələrdə ingilis və ərəb dilində)." },
     { q: "Hansı cihazlarda işləyir?", a: "iPhone, iPad, Apple Watch və Mac. iPad-də eyni tətbiq böyük ekranda işləyir; qeydləriniz iCloud vasitəsilə bütün cihazlarınızda eyni qalır. Vakit 1.7.0 ilə Mac-ə də gəldi: menyu zolağında növbəti namaz və geri sayım, klaviatura qısayolları, masaüstü vidjetləri və macOS 15-dən etibarən sol kənar paneldə bölmələr. Namaz vaxtları, Quran, hədis, zikr sayğacı və ibadət qeydləri iPhone-unuzla eyni iCloud hesabı üzərindən sinxronlaşır. Mac-də kompas avadanlığı olmadığı üçün Qiblə bölməsi istiqaməti və Kəbəyə məsafəni yazı ilə göstərir." },

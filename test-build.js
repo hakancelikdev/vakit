@@ -56,14 +56,14 @@ for (const lang of LANGS) {
   });
 
   test(`${lang}: yasal bağlantılar var olan sayfaya gidiyor`, () => {
-    for (const m of page.matchAll(/href="(\/(?:[a-z]+\/)?(?:privacy|terms|ads-policy)\.html)"/g)) {
+    for (const m of page.matchAll(/href="(\/(?:[a-z]+\/)?(?:privacy|terms)\.html)"/g)) {
       assert.ok(fs.existsSync(path.join("docs", m[1])), `${m[1]} yok`);
     }
   });
 
   // App Store her dilin gizlilik linkini o dilin sayfasına verir (2026-09-11).
   test(`${lang}: yasal sayfalar kendi dilinde`, () => {
-    for (const f of ["privacy.html", "terms.html", "ads-policy.html"]) {
+    for (const f of ["privacy.html", "terms.html"]) {
       const href = C.LANGS[lang].path + f;
       assert.ok(page.includes(`href="${href}"`), `${href} bağlantısı yok`);
       const legal = fs.readFileSync(path.join("docs", href), "utf8");

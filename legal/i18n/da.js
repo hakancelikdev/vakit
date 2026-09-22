@@ -32,11 +32,11 @@ module.exports = {
       },
       {
         t: "5. Tredjepartstjenester",
-        b: "Vakit bruger følgende tjenester til afgrænsede formål. Ingen af dem er knyttet til din personlige identitet:\n\n• Apple iCloud / CloudKit – Synkronisering af brugerdata (i dit private iCloud-rum).\n• Apple MapKit – Moskeer i nærheden, kort og rutevejledning (positionen sendes til Apple).\n• Firebase Crashlytics (Google) – Nedbrudsrapporter uden identitetsdata (stack trace, enhedsmodel, iOS-/macOS-version).\n• Firebase Remote Config (Google) – Funktionsflag og gradvis udrulning (læser ingen data fra enheden).\n• Google AdMob – Kun for at vise videoreklamer med belønning i den valgfrie «Sadaka-tilstand». Detaljer nedenfor.\n• Apple StoreKit 2 – Valgfrie donationer (køb i app). Betalingsoplysninger behandles af Apple; Vakit ser aldrig kortdata.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Fredagsprædikenens tekst og lyd.\n• Vakits server (Tyskland, Frankfurt) – Brugsstatistik og din dhikr-liste, knyttet til en brugerkode uden identificerende oplysninger. Dine registreringer af khatm, bogmærker, mål og læsning sendes aldrig dertil.\n\nBemærk: Firebase Analytics bruges IKKE; annonce-id'et (IDFA) indsamles ikke.\n\nGoogles privatlivspolitik: policies.google.com/privacy",
+        b: "Vakit bruger følgende tjenester til afgrænsede formål. Ingen af dem er knyttet til din personlige identitet:\n\n• Apple iCloud / CloudKit – Synkronisering af brugerdata (i dit private iCloud-rum).\n• Apple MapKit – Moskeer i nærheden, kort og rutevejledning (positionen sendes til Apple).\n• Firebase Crashlytics (Google) – Nedbrudsrapporter uden identitetsdata (stack trace, enhedsmodel, iOS-/macOS-version).\n• Firebase Remote Config (Google) – Funktionsflag og gradvis udrulning (læser ingen data fra enheden).\n• Apple StoreKit 2 – Valgfrie donationer (køb i app). Betalingsoplysninger behandles af Apple; Vakit ser aldrig kortdata.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Fredagsprædikenens tekst og lyd.\n• Vakits server (Tyskland, Frankfurt) – Brugsstatistik og din dhikr-liste, knyttet til en brugerkode uden identificerende oplysninger. Dine registreringer af khatm, bogmærker, mål og læsning sendes aldrig dertil.\n\nBemærk: Firebase Analytics bruges IKKE; annonce-id'et (IDFA) indsamles ikke.\n\nGoogles privatlivspolitik: policies.google.com/privacy",
       },
       {
-        t: "6. Reklamer (Sadaka-tilstand)",
-        b: "Vakit viser ikke reklamer. Kun i den valgfrie «Sadaka-tilstand» vises en videoreklame med belønning via Google AdMob, hvis brugeren udtrykkeligt selv starter den for at støtte udvikleren. I så fald:\n• Leveres reklamen af Google AdMob; den er altid ikke-personaliseret og egnet til et bredt publikum (G). Vakit viser aldrig anmodningen om App Tracking Transparency, og annonce-id'et (IDFA) deles ikke.\n• Når skærmen «Hold Vakit i live» åbnes, startes reklame-SDK'et, og én reklame indlæses på forhånd; der vises ingen reklame, medmindre du vælger at se den.\n• Kan Sadaka-tilstand slås fra på afstand via Firebase Remote Config; du kan også helt enkelt vælge aldrig at bruge den.\n\nGoogle AdMob og privatliv: support.google.com/admob/answer/6128543",
+        t: "6. Reklamer",
+        b: "Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.",
       },
       {
         t: "7. Donationer (køb i app)",
@@ -87,12 +87,12 @@ module.exports = {
         b: "Vakit er en gratis app med værktøjer til tilbedelse som bedetider, Qibla-retning, Koran, hadith, dhikr-tæller, guider til bøn og wudu, khatm- og tilbedelsesregistrering, fredagsprædiken, moskeer i nærheden og en kalender med religiøse dage. Den kører på iOS 16.4+ og macOS 13+ og har en ledsagende Apple Watch-app til watchOS 9+.",
       },
       {
-        t: "3. Gratis brug og valgfrie donationer",
-        b: "Alle Vakits kernefunktioner er gratis. Appen viser ingen reklamer (bortset fra videoreklamerne med belønning i den valgfrie «Sadaka-tilstand», som brugeren selv starter).\n\nBrugere, der ønsker at støtte udvikleren, kan give valgfrie donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse donationer:\n• Behandles via Apple In-App Purchase (StoreKit 2).\n• Er forbrugsprodukter (consumables); donationer låser ikke yderligere funktioner eller abonnementer op.\n• Anmodninger om refusion kan kun indsendes via Apple (reportaproblem.apple.com).\n• Apples betalingsvilkår og App Stores regler gælder.",
+        t: "3. Reklamer",
+        b: "Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.",
       },
       {
-        t: "4. Sadaka-tilstand (reklame med belønning)",
-        b: "«Sadaka-tilstand» er en valgfri funktion, hvor brugeren frivilligt ser en kort videoreklame med belønning for at støtte udvikleren. Reklamen leveres via Google AdMob. Det er ikke påkrævet at bruge funktionen; udvikleren kan også slå funktionen fra på afstand via Firebase Remote Config.",
+        t: "4. Reklamer",
+        b: "Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.",
       },
       {
         t: "5. Ledsagende Apple Watch-app",
@@ -104,7 +104,7 @@ module.exports = {
       },
       {
         t: "7. Tredjepartstjenester",
-        b: "Vakit bruger følgende tredjepartstjenester og er omfattet af deres egne vilkår:\n• Apple iCloud / CloudKit (synkronisering af brugerdata)\n• Apple MapKit (moskeer i nærheden, kort)\n• Firebase Crashlytics, Remote Config og Cloud Messaging (Google)\n• Google AdMob (kun til Sadaka-tilstand)\n• Apple StoreKit 2 (donationer)\n• Diyanet (fredagsprædikenens tekst og lyd)\n• Adhan-biblioteket (beregning af bedetider, open source)\n• SwiftAA (astronomiske beregninger, open source)\n\nDisse tjenesters vilkår og privatlivspolitikker tilhører de respektive udbydere.",
+        b: "Vakit bruger følgende tredjepartstjenester og er omfattet af deres egne vilkår:\n• Apple iCloud / CloudKit (synkronisering af brugerdata)\n• Apple MapKit (moskeer i nærheden, kort)\n• Firebase Crashlytics, Remote Config og Cloud Messaging (Google)\n• Apple StoreKit 2 (donationer)\n• Diyanet (fredagsprædikenens tekst og lyd)\n• Adhan-biblioteket (beregning af bedetider, open source)\n• SwiftAA (astronomiske beregninger, open source)\n\nDisse tjenesters vilkår og privatlivspolitikker tilhører de respektive udbydere.",
       },
       {
         t: "8. Immaterielle rettigheder",
@@ -133,36 +133,4 @@ module.exports = {
     ],
   },
 
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Reklamepolitik",
-      description:
-        "Vakits halal-kompatible reklamepolitik. Vi viser ingen reklamer for gambling, alkohol, voksenindhold, rentebaserede produkter eller spådomme.",
-    },
-    titleBefore: "Reklame",
-    titleEm: "politik",
-    desc: "Sidst opdateret: 10. september 2026 — Version 1.7.4\n\nI en islamisk app bliver de reklamer, du ser, en del af dit øjeblik med tilbedelse. Derfor viser Vakit ingen reklamer. Den eneste undtagelse er frivillig: En bruger, der vil støtte appen, kan vælge at se en kort videoreklame med belønning. Denne side beskriver de regler, der gælder for disse reklamer.",
-    sections: [
-      {
-        t: "1. Hvor reklamer vises",
-        b: "Vakit viser ingen bannerreklamer, mellemsidereklamer eller åbningsreklamer på nogen skærm. Den eneste reklame er en kort video med belønning, som en bruger kan vælge at se på skærmen «Hold Vakit i live» («Sadaka-tilstand») for at støtte appen. Du behøver aldrig at bruge den, og ingen funktion afhænger af den.",
-      },
-      {
-        t: "2. Kategorier, vi aldrig viser",
-        b: "Reklamer i følgende kategorier er blokeret i reklamenetværket:\n\n• Gambling, væddemål, kasino, sportsvæddemål, poker\n• Alkohol og tobaksvarer\n• Voksenindhold, dating, seksuelt indhold, sexprodukter\n• Nøgenhed i enhver form\n• Lån med renter, kviklån, rentebærende investeringer\n• Spådomme, astrologi, clairvoyance, magi, tarot\n• Svinekød og svinekødsprodukter\n• Bliv-hurtigt-rig-ordninger, MLM-fælder\n• Religiøs propaganda fra andre trosretninger",
-      },
-      {
-        t: "3. Tekniske sikkerhedsforanstaltninger",
-        b: "Følgende indstillinger anvendes hos reklamenetværket (Google AdMob):\n\n• Maksimal indholdsklassificering: G (bredt publikum).\n• Under Brand Safety > Block Content er alle ovenstående kategorier markeret.\n• Blokeringsliste for URL'er og søgeord: reklamer med ord som «casino», «betting», «gambling», «flirt», «dating», «horoscope», «psychic», «tarot» slipper ikke igennem.\n• Reklamerne er altid ikke-personaliserede; Vakit viser aldrig anmodningen om App Tracking Transparency, og annonce-id'et (IDFA) deles ikke.",
-      },
-      {
-        t: "4. Hvis du ser en upassende reklame",
-        b: "Hvis du ser en reklame, der strider mod dine religiøse følelser, så skriv til hakancelikdev@gmail.com med et skærmbillede. Hver berettiget indberetning føjes til AdMobs blokeringsliste.",
-      },
-      {
-        t: "5. Kontakt",
-        b: "Spørgsmål, indberetninger eller forslag til kategorier: hakancelikdev@gmail.com\n\nUdvikler: Hakan Çelik (Tyrkiet)",
-      },
-    ],
-  },
 };

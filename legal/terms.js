@@ -17,12 +17,12 @@ module.exports = {
         "b": "Vakit, namaz vakitleri, kıble yönü, Kur'an, hadis, zikirmatik, namaz/abdest rehberi, hatim ve ibadet takibi, Cuma hutbesi, yakındaki camiler ve dini gün takvimi gibi ibadet araçları sunan ücretsiz bir uygulamadır. iOS 16.4+ ve macOS 13+ üzerinde çalışır; watchOS 9+ için companion bir Apple Watch uygulaması da içerir."
       },
       {
-        "t": "3. Ücretsiz Kullanım & Opsiyonel Bağışlar",
-        "b": "Vakit'in tüm temel özellikleri ücretsizdir. Reklam göstermez (yalnızca isteğe bağlı \"Sadaka Modu\"nda kullanıcının kendi başlattığı ödüllü video reklamlar hariç).\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir.\n• Tüketilebilir (consumable) ürünlerdir; bağış karşılığında uygulama içi ek özellik veya abonelik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple'ın geçerli ödeme şartları ve App Store kuralları geçerlidir."
+        "t": "3. Reklamlar",
+        "b": "Vakit reklam göstermez. Uygulamanın tek gelir kaynağı, kullanıcıların isteğe bağlı bağışlarıdır."
       },
       {
-        "t": "4. Sadaka Modu (Ödüllü Reklam)",
-        "b": "\"Sadaka Modu\", kullanıcının geliştiriciyi desteklemek için kendi seçimiyle kısa bir ödüllü video reklam izlediği isteğe bağlı bir özelliktir. Reklam Google AdMob aracılığıyla sunulur. Bu özelliği kullanmak zorunlu değildir; özellik ayrıca Firebase Remote Config aracılığıyla geliştirici tarafından devre dışı bırakılabilir."
+        "t": "4. Reklamlar",
+        "b": "Vakit reklam göstermez. Uygulamanın tek gelir kaynağı, kullanıcıların isteğe bağlı bağışlarıdır."
       },
       {
         "t": "5. Apple Watch Companion Uygulaması",
@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         "t": "7. Üçüncü Taraf Hizmetler",
-        "b": "Vakit aşağıdaki üçüncü taraf hizmetleri kullanır ve onların kendi şartlarına tabidir:\n• Apple iCloud / CloudKit (kullanıcı verisi senkronizasyonu)\n• Apple MapKit (yakındaki camiler, harita)\n• Firebase Crashlytics, Remote Config ve Cloud Messaging (Google)\n• Google AdMob (yalnızca Sadaka Modu için)\n• Apple StoreKit 2 (bağışlar)\n• Diyanet İşleri Başkanlığı (Cuma hutbesi metni ve ses kaydı)\n• Adhan kütüphanesi (namaz vakti hesaplama, açık kaynak)\n• SwiftAA (astronomik hesaplama, açık kaynak)\n\nBu hizmetlerin kullanım şartları ve gizlilik politikaları kendi sağlayıcılarına aittir."
+        "b": "Vakit aşağıdaki üçüncü taraf hizmetleri kullanır ve onların kendi şartlarına tabidir:\n• Apple iCloud / CloudKit (kullanıcı verisi senkronizasyonu)\n• Apple MapKit (yakındaki camiler, harita)\n• Firebase Crashlytics, Remote Config ve Cloud Messaging (Google)\n• Apple StoreKit 2 (bağışlar)\n• Diyanet İşleri Başkanlığı (Cuma hutbesi metni ve ses kaydı)\n• Adhan kütüphanesi (namaz vakti hesaplama, açık kaynak)\n• SwiftAA (astronomik hesaplama, açık kaynak)\n\nBu hizmetlerin kullanım şartları ve gizlilik politikaları kendi sağlayıcılarına aittir."
       },
       {
         "t": "8. Fikri Mülkiyet",
@@ -81,12 +81,12 @@ module.exports = {
         "b": "Vakit is a free app providing worship tools such as prayer times, qibla direction, Quran, hadith, a dhikr counter, prayer/ablution guides, khatm and worship tracking, the Friday sermon, nearby mosques, and a religious-day calendar. It runs on iOS 16.4+ and macOS 13+, and ships a companion Apple Watch app for watchOS 9+."
       },
       {
-        "t": "3. Free Use & Optional Donations",
-        "b": "All core features of Vakit are free. The app shows no ads (except in the optional \"Sadaka Mode\" rewarded video ads, which the user starts themselves).\n\nUsers who wish to support the developer can make optional donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2).\n• Are consumable products; donations do not unlock additional features or subscriptions.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple's payment terms and App Store rules apply."
+        "t": "3. Advertising",
+        "b": "Vakit shows no ads. The app's only source of income is optional donations from users."
       },
       {
-        "t": "4. Sadaka Mode (Rewarded Ad)",
-        "b": "\"Sadaka Mode\" is an optional feature where the user voluntarily watches a short rewarded video ad to support the developer. The ad is served via Google AdMob. Use of this feature is not required; the feature can also be disabled remotely by the developer through Firebase Remote Config."
+        "t": "4. Advertising",
+        "b": "Vakit shows no ads. The app's only source of income is optional donations from users."
       },
       {
         "t": "5. Apple Watch Companion App",
@@ -98,7 +98,7 @@ module.exports = {
       },
       {
         "t": "7. Third-Party Services",
-        "b": "Vakit uses the following third-party services and is subject to their own terms:\n• Apple iCloud / CloudKit (user data sync)\n• Apple MapKit (nearby mosques, maps)\n• Firebase Crashlytics, Remote Config and Cloud Messaging (Google)\n• Google AdMob (only for Sadaka Mode)\n• Apple StoreKit 2 (donations)\n• Diyanet (Friday sermon text and audio)\n• Adhan library (prayer time calculation, open source)\n• SwiftAA (astronomical computation, open source)\n\nThe terms and privacy policies of these services belong to their respective providers."
+        "b": "Vakit uses the following third-party services and is subject to their own terms:\n• Apple iCloud / CloudKit (user data sync)\n• Apple MapKit (nearby mosques, maps)\n• Firebase Crashlytics, Remote Config and Cloud Messaging (Google)\n• Apple StoreKit 2 (donations)\n• Diyanet (Friday sermon text and audio)\n• Adhan library (prayer time calculation, open source)\n• SwiftAA (astronomical computation, open source)\n\nThe terms and privacy policies of these services belong to their respective providers."
       },
       {
         "t": "8. Intellectual Property",

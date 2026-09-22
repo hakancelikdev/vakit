@@ -90,7 +90,7 @@ Yes. They're scheduled locally. You'll receive them even when the app is closed.
 
 ### Is everything really free?
 
-Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate or choose to watch an ad; neither unlocks anything.
+Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate; a donation unlocks nothing, because nothing is locked.
 
 ### Where do prayer times come from?
 
@@ -168,7 +168,6 @@ The home page exists in every interface language:
 
 - [Privacy policy](https://vakit.hakancelik.dev/en/privacy.html) ([Turkish](https://vakit.hakancelik.dev/privacy.html))
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
-- [Advertising policy](https://vakit.hakancelik.dev/en/ads-policy.html) ([Turkish](https://vakit.hakancelik.dev/ads-policy.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
 Last updated: 2026-09-22

@@ -32,11 +32,11 @@ module.exports = {
       },
       {
         t: "5. Shërbimet e palëve të treta",
-        b: "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjë prej tyre nuk lidhet me identitetin tuaj personal:\n\n• Apple iCloud / CloudKit – Sinkronizimi i të dhënave të përdoruesit (në hapësirën tuaj private iCloud).\n• Apple MapKit – Xhamitë afër, harta dhe udhëzimet e rrugës (vendndodhja i dërgohet Apple).\n• Firebase Crashlytics (Google) – Raporte rrëzimesh pa të dhëna identiteti (stack trace, modeli i pajisjes, versioni i iOS/macOS).\n• Firebase Remote Config (Google) – Flamurë veçorish dhe shpërndarje graduale (nuk lexon të dhëna nga pajisja).\n• Google AdMob – Vetëm për të shfaqur reklama video me shpërblim në «Modalitetin Sadaka» opsional. Detajet më poshtë.\n• Apple StoreKit 2 – Donacione opsionale (blerje brenda aplikacionit). Detajet e pagesës përpunohen nga Apple; Vakit nuk sheh kurrë të dhëna karte.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Njoftime për ditët e bekuara dhe versionet e reja. Njoftimet dërgohen sipas temës; nuk ka shënjestrim individual.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Teksti dhe audioja e hutbes së xhumasë.\n• Serveri i Vakit (Gjermani, Frankfurt) – Statistikat e përdorimit dhe lista juaj e dhikrit, të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Regjistrimet tuaja të hatmes, shënuesve, synimeve dhe leximit nuk dërgohen kurrë atje.\n\nShënim: Firebase Analytics NUK përdoret; identifikuesi i reklamave (IDFA) nuk mblidhet.\n\nPolitika e privatësisë e Google: policies.google.com/privacy",
+        b: "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjë prej tyre nuk lidhet me identitetin tuaj personal:\n\n• Apple iCloud / CloudKit – Sinkronizimi i të dhënave të përdoruesit (në hapësirën tuaj private iCloud).\n• Apple MapKit – Xhamitë afër, harta dhe udhëzimet e rrugës (vendndodhja i dërgohet Apple).\n• Firebase Crashlytics (Google) – Raporte rrëzimesh pa të dhëna identiteti (stack trace, modeli i pajisjes, versioni i iOS/macOS).\n• Firebase Remote Config (Google) – Flamurë veçorish dhe shpërndarje graduale (nuk lexon të dhëna nga pajisja).\n• Apple StoreKit 2 – Donacione opsionale (blerje brenda aplikacionit). Detajet e pagesës përpunohen nga Apple; Vakit nuk sheh kurrë të dhëna karte.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Njoftime për ditët e bekuara dhe versionet e reja. Njoftimet dërgohen sipas temës; nuk ka shënjestrim individual.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Teksti dhe audioja e hutbes së xhumasë.\n• Serveri i Vakit (Gjermani, Frankfurt) – Statistikat e përdorimit dhe lista juaj e dhikrit, të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Regjistrimet tuaja të hatmes, shënuesve, synimeve dhe leximit nuk dërgohen kurrë atje.\n\nShënim: Firebase Analytics NUK përdoret; identifikuesi i reklamave (IDFA) nuk mblidhet.\n\nPolitika e privatësisë e Google: policies.google.com/privacy",
       },
       {
-        t: "6. Reklamat (Modaliteti Sadaka)",
-        b: "Vakit nuk shfaq reklama. Vetëm në «Modalitetin Sadaka» opsional, nëse përdoruesi e nis vetë shprehimisht për të mbështetur zhvilluesin, shfaqet një reklamë video me shpërblim përmes Google AdMob. Në atë rast:\n• Reklama shërbehet nga Google AdMob; ajo është gjithmonë jo e personalizuar dhe e klasifikuar për publikun e gjerë (G). Vakit nuk e shfaq kurrë kërkesën e App Tracking Transparency dhe identifikuesi i reklamave (IDFA) nuk ndahet.\n• Kur hapet ekrani «Mbajeni Vakit gjallë», nis SDK-ja e reklamave dhe ngarkohet paraprakisht një reklamë; asnjë reklamë nuk shfaqet nëse nuk zgjidhni ta shikoni.\n• Modaliteti Sadaka mund të çaktivizohet nga distanca përmes Firebase Remote Config; ju mund të zgjidhni thjesht të mos e përdorni kurrë.\n\nPrivatësia e Google AdMob: support.google.com/admob/answer/6128543",
+        t: "6. Reklamat",
+        b: "Vakit nuk shfaq reklama. Burimi i vetëm i të ardhurave të aplikacionit janë dhurimet vullnetare të përdoruesve.",
       },
       {
         t: "7. Donacionet (blerje brenda aplikacionit)",
@@ -87,12 +87,12 @@ module.exports = {
         b: "Vakit është një aplikacion falas që ofron mjete ibadeti si kohët e namazit, drejtimi i kiblës, Kurani, hadithi, numëruesi i dhikrit, udhëzuesit e namazit dhe të abdesit, ndjekja e hatmes dhe e ibadetit, hutbeja e xhumasë, xhamitë afër dhe kalendari i ditëve fetare. Punon në iOS 16.4+ dhe macOS 13+ dhe përfshin një aplikacion shoqërues për Apple Watch me watchOS 9+.",
       },
       {
-        t: "3. Përdorim falas dhe donacione opsionale",
-        b: "Të gjitha veçoritë bazë të Vakit janë falas. Aplikacioni nuk shfaq reklama (përveç reklamave video me shpërblim në «Modalitetin Sadaka» opsional, të cilat i nis vetë përdoruesi).\n\nPërdoruesit që dëshirojnë të mbështesin zhvilluesin mund të bëjnë donacione opsionale në nivele nga ₺10 deri në ₺10.000 nga ekrani «Mbajeni Vakit gjallë». Këto donacione:\n• Përpunohen përmes Apple In-App Purchase (StoreKit 2).\n• Janë produkte të konsumueshme (consumable); donacionet nuk zhbllokojnë veçori shtesë apo abonime.\n• Kërkesat për rimbursim mund të dërgohen vetëm përmes Apple (reportaproblem.apple.com).\n• Zbatohen kushtet e pagesës të Apple dhe rregullat e App Store.",
+        t: "3. Reklamat",
+        b: "Vakit nuk shfaq reklama. Burimi i vetëm i të ardhurave të aplikacionit janë dhurimet vullnetare të përdoruesve.",
       },
       {
-        t: "4. Modaliteti Sadaka (reklamë me shpërblim)",
-        b: "«Modaliteti Sadaka» është një veçori opsionale ku përdoruesi shikon vullnetarisht një reklamë të shkurtër video me shpërblim për të mbështetur zhvilluesin. Reklama shërbehet përmes Google AdMob. Përdorimi i kësaj veçorie nuk është i detyrueshëm; veçoria mund të çaktivizohet edhe nga distanca prej zhvilluesit përmes Firebase Remote Config.",
+        t: "4. Reklamat",
+        b: "Vakit nuk shfaq reklama. Burimi i vetëm i të ardhurave të aplikacionit janë dhurimet vullnetare të përdoruesve.",
       },
       {
         t: "5. Aplikacioni shoqërues për Apple Watch",
@@ -104,7 +104,7 @@ module.exports = {
       },
       {
         t: "7. Shërbimet e palëve të treta",
-        b: "Vakit përdor shërbimet e mëposhtme të palëve të treta dhe u nënshtrohet kushteve të tyre:\n• Apple iCloud / CloudKit (sinkronizimi i të dhënave të përdoruesit)\n• Apple MapKit (xhamitë afër, hartat)\n• Firebase Crashlytics, Remote Config dhe Cloud Messaging (Google)\n• Google AdMob (vetëm për Modalitetin Sadaka)\n• Apple StoreKit 2 (donacionet)\n• Diyanet – Kryesia e Çështjeve Fetare e Turqisë (teksti dhe audioja e hutbes së xhumasë)\n• Biblioteka Adhan (llogaritja e kohëve të namazit, burim i hapur)\n• SwiftAA (llogaritje astronomike, burim i hapur)\n\nKushtet dhe politikat e privatësisë së këtyre shërbimeve u përkasin ofruesve përkatës.",
+        b: "Vakit përdor shërbimet e mëposhtme të palëve të treta dhe u nënshtrohet kushteve të tyre:\n• Apple iCloud / CloudKit (sinkronizimi i të dhënave të përdoruesit)\n• Apple MapKit (xhamitë afër, hartat)\n• Firebase Crashlytics, Remote Config dhe Cloud Messaging (Google)\n• Apple StoreKit 2 (donacionet)\n• Diyanet – Kryesia e Çështjeve Fetare e Turqisë (teksti dhe audioja e hutbes së xhumasë)\n• Biblioteka Adhan (llogaritja e kohëve të namazit, burim i hapur)\n• SwiftAA (llogaritje astronomike, burim i hapur)\n\nKushtet dhe politikat e privatësisë së këtyre shërbimeve u përkasin ofruesve përkatës.",
       },
       {
         t: "8. Pronësia intelektuale",
@@ -133,36 +133,4 @@ module.exports = {
     ],
   },
 
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Politika e reklamave",
-      description:
-        "Politika e reklamave e Vakit, në përputhje me hallallin. Nuk shfaqim reklama për bixhoz, alkool, përmbajtje për të rritur, produkte me kamatë apo fall.",
-    },
-    titleBefore: "Politika e ",
-    titleEm: "reklamave",
-    desc: "Përditësimi i fundit: 10 shtator 2026 — Versioni 1.7.4\n\nNë një aplikacion islam, reklamat që shihni bëhen pjesë e çastit tuaj të ibadetit. Prandaj Vakit nuk shfaq reklama. I vetmi përjashtim është vullnetar: një përdorues që dëshiron ta mbështesë aplikacionin mund të zgjedhë të shikojë një reklamë të shkurtër video me shpërblim. Kjo faqe përshkruan rregullat që zbatohen për ato reklama.",
-    sections: [
-      {
-        t: "1. Ku shfaqen reklamat",
-        b: "Vakit nuk shfaq reklama banner, ndërmjetëse (interstitial) apo reklama në hapje të aplikacionit në asnjë ekran. E vetmja reklamë është një video e shkurtër me shpërblim që përdoruesi mund të zgjedhë ta shikojë nga ekrani «Mbajeni Vakit gjallë» («Modaliteti Sadaka») për të mbështetur aplikacionin. Nuk jeni kurrë të detyruar ta përdorni dhe asnjë veçori nuk varet prej saj.",
-      },
-      {
-        t: "2. Kategoritë që nuk i shfaqim kurrë",
-        b: "Reklamat në kategoritë e mëposhtme janë të bllokuara në rrjetin e reklamave:\n\n• Bixhozi, bastet, kazinotë, bastet sportive, pokeri\n• Pijet alkoolike dhe produktet e duhanit\n• Përmbajtja për të rritur, takimet (dating), përmbajtja seksuale, produktet seksuale\n• Lakuriqësia në çdo formë\n• Kreditë me kamatë, kreditë e shpejta, investimet me kamatë\n• Falli, astrologjia, mediumët, magjia, tarot\n• Mishi i derrit dhe produktet e derrit\n• Skemat e pasurimit të shpejtë, kurthet MLM\n• Propaganda fetare e besimeve të tjera",
-      },
-      {
-        t: "3. Masat teknike mbrojtëse",
-        b: "Në anën e rrjetit të reklamave (Google AdMob) zbatohen këto cilësime:\n\n• Klasifikimi maksimal i përmbajtjes: G (publiku i gjerë).\n• Te Brand Safety > Block Content janë shënuar të gjitha kategoritë e mësipërme.\n• Lista e bllokimit për URL dhe fjalë kyçe: reklamat që përmbajnë terma si «casino», «betting», «gambling», «flirt», «dating», «horoscope», «psychic», «tarot» nuk kalojnë.\n• Reklamat janë gjithmonë jo të personalizuara; Vakit nuk e shfaq kurrë kërkesën e App Tracking Transparency dhe identifikuesi i reklamave (IDFA) nuk ndahet.",
-      },
-      {
-        t: "4. Nëse shihni një reklamë të papërshtatshme",
-        b: "Nëse shihni një reklamë që bie ndesh me ndjeshmëritë tuaja fetare, shkruani në hakancelikdev@gmail.com me një pamje ekrani. Çdo raportim i vlefshëm shtohet në listën e bllokimit të AdMob.",
-      },
-      {
-        t: "5. Kontakti",
-        b: "Për pyetje, raportime ose sugjerime për kategori: hakancelikdev@gmail.com\n\nZhvilluesi: Hakan Çelik (Turqi)",
-      },
-    ],
-  },
 };

@@ -197,7 +197,7 @@ const COPY = {
     downloadCta2: "App Store'dan İndir", explore: "Özellikleri keşfet →",
     preview: "Önizle",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
-    footPrivacy: "Gizlilik", footTerms: "Şartlar", footAds: "Reklamlar", footPress: "Basın",
+    footPrivacy: "Gizlilik", footTerms: "Şartlar", footPress: "Basın",
     footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
     menuLabel: "Menü", themeLabel: "Koyu modu aç/kapat", langLabel: "Dil", closeLabel: "Kapat",
     videoLabel: "Vakit'in namaz ekranı: gün ilerledikçe gökyüzü de değişiyor",
@@ -239,7 +239,7 @@ const COPY = {
     downloadCta2: "Download on the App Store", explore: "Explore features →",
     preview: "Preview",
     footContact: "Contact", footFeedback: "Feedback",
-    footPrivacy: "Privacy", footTerms: "Terms", footAds: "Ads", footPress: "Press",
+    footPrivacy: "Privacy", footTerms: "Terms", footPress: "Press",
     footSig: "Made with care · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Toggle dark mode", langLabel: "Language", closeLabel: "Close",
     videoLabel: "Vakit's prayer screen: the sky changes as the day moves on",
@@ -410,7 +410,7 @@ const SHOWCASE = {
 
 const COMPARE = {
   tr: [
-    { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Tamamen reklamsız. Tek istisna: destek olmak isteyen, kendi isteğiyle bir reklam izleyebilir." },
+    { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Tamamen reklamsız. İsteğe bağlısı da yok: Vakit hiç reklam göstermez." },
     { f: "Gizlilik", o: "Üçüncü taraflara satılan konum verisi (basına yansıdı).", v: "Koordinatlar sunucumuza gitmez. Takip yok." },
     { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz, kıble, Kur'an metni, zikir — hepsi çevrimdışı." },
     { f: "Kilit Ekranı", o: "Widget'lar iOS güncellemelerinde bozulur.", v: "Live Activity ve Dynamic Island; iOS 17'den itibaren StandBy." },
@@ -420,7 +420,7 @@ const COMPARE = {
     { f: "Maliyet", o: "Paywall, abonelik, 'premium' seviyeler.", v: "Ücretsiz. Seviye yok, upsell yok." },
   ],
   en: [
-    { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "Completely ad-free. The one exception: if you want to support Vakit, you can choose to watch an ad." },
+    { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "Completely ad-free. Not even optional ones: Vakit shows no ads at all." },
     { f: "Privacy", o: "Location data sold to third parties (publicly reported).", v: "Coordinates never reach our servers. No tracking." },
     { f: "Offline", o: "Core features require an internet connection.", v: "Prayer, qibla, Quran text, dhikr — all work offline." },
     { f: "Lock Screen", o: "Widgets break between iOS updates.", v: "Live Activity and Dynamic Island; StandBy from iOS 17." },
@@ -470,7 +470,7 @@ const FAQ = {
   tr: [
     { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumunuza göre telefonunuzda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır." },
     { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazınızda yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsınız. 'Her Zaman' konum izni verirseniz, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
-    { q: "Her şey gerçekten ücretsiz mi?", a: "Evet. Uygulamanın tamamı ücretsiz: abonelik, paywall ya da 'premium' yok, hiçbir özellik kilitli değil. Destek olmak isteyen bağış yapabilir ya da kendi seçimiyle bir reklam izleyebilir; ikisi de hiçbir şeyin kilidini açmaz." },
+    { q: "Her şey gerçekten ücretsiz mi?", a: "Evet. Uygulamanın tamamı ücretsiz: abonelik, paywall ya da 'premium' yok, hiçbir özellik kilitli değil. Destek olmak isteyen bağış yapabilir; bağış hiçbir şeyin kilidini açmaz — zaten kilitli bir şey yok." },
     { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazınızda, seçtiğiniz yönteme (12 yöntem mevcut) ve konumunuza göre hesaplar." },
     { q: "Hangi dillerde kullanılabiliyor?", a: "Uygulamanın arayüzü 25 dilde: Türkçe, İngilizce, Arapça, Almanca, Fransızca, İspanyolca, İtalyanca, Hollandaca, Portekizce, Danca, Rusça, Azerice, Arnavutça, Endonezce, Malayca, Çince, Japonca, Tayca, Hintçe, Bengalce, Urduca, Farsça, Uygurca, Svahili ve Fulahça. Cihazınızın dili destekleniyorsa uygulama kendiliğinden o dilde açılır; istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Arapça, Urduca, Farsça ve Uygurca'da arayüz baştan sona sağdan sola akar. İçerik çevirileri ise şimdilik yalnız Türkçe ve İngilizce: Kur'an meali, okunuş ve hadis çevirileri bu iki dilde; kelime anlamları yalnız İngilizce, bazı hadis koleksiyonlarının Türkçe çevirisi de kısmi. Arapça arayüzde âyetlerin bir kısmı için Arapça tefsir açılır; Cuma hutbesi Diyanet'in yayımladığı dillerde gelir (Türkçe; yayımlandığı haftalarda İngilizce ve Arapça)." },
     { q: "Hangi cihazlarda çalışıyor?", a: "iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları, masaüstü widget'ları ve macOS 15'ten itibaren kenar çubuğunda sekmeler. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unuzla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir." },
@@ -486,7 +486,7 @@ const FAQ = {
   en: [
     { q: "Does it work without internet?", a: "Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline." },
     { q: "Will notifications arrive if I never open the app?", a: "Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel." },
-    { q: "Is everything really free?", a: "Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate or choose to watch an ad; neither unlocks anything." },
+    { q: "Is everything really free?", a: "Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate; a donation unlocks nothing, because nothing is locked." },
     { q: "Where do prayer times come from?", a: "They're not fetched from a server. Vakit calculates them on your device using the method you pick — 12 are available — and your local coordinates." },
     { q: "Which languages is it available in?", a: "The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only for now: the Quran translation, transliteration and hadith translations come in those two languages; word meanings are English only, and some hadith collections are only partly translated into Turkish. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon comes in the languages Diyanet publishes it in (Turkish, and in some weeks English and Arabic)." },
     { q: "Which devices does it run on?", a: "iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: next prayer and countdown in the menu bar, keyboard shortcuts, desktop widgets, and tabs in the sidebar from macOS 15. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware." },
@@ -533,21 +533,6 @@ const LEGAL = {
       title: "Vakit — Terms of Use",
       description:
         "Vakit's terms of use. Free to use, with optional donations (IAP); every core feature is free.",
-    },
-  },
-  "ads-policy": {
-    file: "ads-policy.html",
-    priority: "0.2",
-    changefreq: "yearly",
-    tr: {
-      title: "Vakit — Reklam Politikası",
-      description:
-        "Vakit'in helal-uyumlu reklam politikası. Bahis, alkol, müstehcen, faiz veya fal/büyü içerikli reklam göstermeyiz.",
-    },
-    en: {
-      title: "Vakit — Ad Policy",
-      description:
-        "Vakit's halal-compliant advertising policy. We show no gambling, alcohol, adult, interest-based or fortune-telling ads.",
     },
   },
 };

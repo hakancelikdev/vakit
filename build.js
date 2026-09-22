@@ -7,7 +7,7 @@
  *
  *   docs/index.html          Turkish, canonical root
  *   docs/<lang>/index.html   every other language in LANGS, each its own indexable URL
- *   docs/{,en/}{privacy,terms,ads-policy}.html   legal pages (Turkish + English only)
+ *   docs/{,en/}{privacy,terms}.html          legal pages (Turkish + English only)
  *   docs/sitemap.xml         every page, cross-linked with hreflang
  *   docs/robots.txt          search + AI crawlers
  *   docs/llms.txt            plain-text summary for AI assistants
@@ -34,7 +34,6 @@ const PRESS = require("./press.js");
 const LEGAL_COPY = {
   privacy: require("./legal/privacy.js"),
   terms: require("./legal/terms.js"),
-  "ads-policy": require("./legal/ads-policy.js"),
 };
 
 const DOCS = path.join(__dirname, "docs");
@@ -608,7 +607,6 @@ ${faqList(lang)}
   <div class="foot-links">
     <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
-    <a href="${localUrl(legal, "ads-policy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footAds"))}</a>
     <a href="${localUrl(pressLang(lang), "press.html")}"${pressLang(lang) !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
     <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
@@ -643,7 +641,7 @@ const LEGAL_STYLE = `      .legal-page { padding: 120px 48px 80px; max-width: 86
       :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
       @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }`;
 
-/** Heading markup: most documents ship it as HTML, ads-policy as two parts. */
+/** Heading markup: documents ship it as HTML; some as two parts. */
 function legalHeading(doc) {
   if (doc.title) return doc.title; // trusted authored HTML, contains <em>
   return esc(doc.titleBefore) + "<em>" + esc(doc.titleEm) + "</em>";
@@ -745,7 +743,6 @@ ${sections}
   <div class="foot-links">
     <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
-    <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
     <a href="${localUrl(pressLang(lang), "press.html")}">${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
   </div>
@@ -929,7 +926,6 @@ ${assets}
   <div class="foot-links">
     <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
-    <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
     <a href="${localUrl(pressLang(lang), "press.html")}">${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
   </div>
@@ -1073,7 +1069,6 @@ ${langs}
 
 - [Privacy policy](${SITE.origin}${localUrl("en", "privacy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "privacy.html")}))
 - [Terms of use](${SITE.origin}${localUrl("en", "terms.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "terms.html")}))
-- [Advertising policy](${SITE.origin}${localUrl("en", "ads-policy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "ads-policy.html")}))
 - [Source](${SITE.repoUrl})
 
 Last updated: ${BUILD_DATE}

@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Muat turun di App Store", explore: "Terokai ciri →",
     preview: "Pratonton",
     footContact: "Hubungi", footFeedback: "Maklum Balas",
-    footPrivacy: "Privasi", footTerms: "Terma", footAds: "Iklan", footPress: "Media",
+    footPrivacy: "Privasi", footTerms: "Terma", footPress: "Media",
     footSig: "Dibuat dengan teliti · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Hidupkan/matikan mod gelap", langLabel: "Bahasa", closeLabel: "Tutup",
     videoLabel: "Skrin solat Vakit: langit berubah seiring berlalunya hari",
@@ -121,7 +121,7 @@ module.exports = {
     { t: "Kiraan dalam genggaman.", d: "Pengira zikir dan tasbih selepas solat; zikir sedia ada, zikir anda sendiri dan sasaran harian." },
   ],
   COMPARE: [
-    { f: "Iklan", o: "Iklan kasino dan iklan tidak sesuai, dipaparkan di sebelah kandungan agama.", v: "Bebas iklan sepenuhnya. Satu-satunya pengecualian: jika anda ingin menyokong Vakit, anda boleh memilih untuk menonton iklan." },
+    { f: "Iklan", o: "Iklan kasino dan iklan tidak sesuai, dipaparkan di sebelah kandungan agama.", v: "Bebas iklan sepenuhnya, termasuk yang pilihan: Vakit langsung tidak memaparkan iklan." },
     { f: "Privasi", o: "Data lokasi dijual kepada pihak ketiga (dilaporkan media).", v: "Koordinat tidak pernah sampai ke pelayan kami. Tiada penjejakan." },
     { f: "Luar talian", o: "Ciri utama memerlukan sambungan internet.", v: "Solat, kiblat, teks Al-Quran, zikir — semuanya berfungsi luar talian." },
     { f: "Skrin Kunci", o: "Widget rosak setiap kali iOS dikemas kini.", v: "Aktiviti Langsung dan Dynamic Island; StandBy sejak iOS 17." },
@@ -147,7 +147,7 @@ module.exports = {
   FAQ: [
     { q: "Bolehkah ia berfungsi tanpa internet?", a: "Boleh. Waktu solat dikira dalam telefon anda berdasarkan lokasi anda. Teks Al-Quran, kiblat, zikir dan semua alat utama berfungsi sepenuhnya luar talian." },
     { q: "Adakah pemberitahuan tetap sampai walaupun saya tidak membuka aplikasi?", a: "Ya. Pemberitahuan dijadualkan secara setempat dalam peranti, jadi ia tetap sampai walaupun aplikasi ditutup. Jika anda memberi kebenaran lokasi ‘Sentiasa’, Vakit akan mengira semula waktu secara senyap selepas anda bermusafir." },
-    { q: "Adakah semuanya benar-benar percuma?", a: "Ya. Seluruh aplikasi percuma: tanpa langganan, dinding bayaran atau peringkat ‘premium’, dan tiada apa-apa yang dikunci. Jika anda ingin menyokongnya, anda boleh menderma atau memilih untuk menonton iklan; kedua-duanya tidak membuka kunci apa-apa." },
+    { q: "Adakah semuanya benar-benar percuma?", a: "Ya. Seluruh aplikasi percuma: tanpa langganan, dinding bayaran atau peringkat ‘premium’, dan tiada apa-apa yang dikunci. Jika anda ingin menyokongnya, anda boleh menderma; dermaan tidak membuka kunci apa-apa kerana tiada apa-apa yang dikunci." },
     { q: "Dari mana datangnya waktu solat?", a: "Ia tidak diambil dari pelayan. Vakit mengiranya dalam peranti anda menggunakan kaedah pilihan anda — terdapat 12 kaedah — dan koordinat lokasi anda." },
     { q: "Dalam bahasa apakah aplikasi ini tersedia?", a: "Antara muka aplikasi tersedia dalam 25 bahasa: Turki, Inggeris, Arab, Jerman, Perancis, Sepanyol, Itali, Belanda, Portugis, Denmark, Rusia, Azerbaijan, Albania, Indonesia, Melayu, Cina, Jepun, Thai, Hindi, Bengali, Urdu, Parsi, Uighur, Swahili dan Fula. Jika bahasa peranti anda disokong, aplikasi dibuka dalam bahasa itu secara automatik; anda boleh menukarnya di Tetapan pada bila-bila masa. Dalam bahasa Arab, Urdu, Parsi dan Uighur, keseluruhan antara muka bergerak dari kanan ke kiri. Namun, terjemahan kandungan buat masa ini hanya dalam bahasa Turki dan Inggeris: terjemahan Al-Quran, transliterasi dan terjemahan hadis tersedia dalam dua bahasa itu; maksud perkataan hanya dalam bahasa Inggeris, dan sesetengah kitab hadis hanya sebahagiannya diterjemahkan ke bahasa Turki. Dengan antara muka bahasa Arab, tafsir berbahasa Arab dibuka untuk sebahagian Al-Quran; khutbah Jumaat hadir dalam bahasa yang diterbitkan oleh Diyanet (Turki, dan pada sesetengah minggu Inggeris dan Arab)." },
     { q: "Pada peranti apakah ia berfungsi?", a: "iPhone, iPad, Apple Watch dan Mac. Di iPad, ia aplikasi yang sama pada skrin lebih besar, dan catatan anda kekal sama di semua peranti melalui iCloud. Sejak versi 1.7.0, Vakit turut berfungsi di Mac: solat seterusnya dan kiraan detik di bar menu, pintasan papan kekunci, widget desktop, dan tab di bar sisi sejak macOS 15. Waktu solat, Al-Quran, hadis, zikir dan catatan ibadah diselaraskan dengan iPhone anda melalui akaun iCloud yang sama. Tab Kiblat di Mac memaparkan arah dan jarak ke Kaabah dalam bentuk teks, kerana Mac tidak mempunyai perkakasan kompas." },

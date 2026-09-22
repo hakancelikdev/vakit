@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. Services tiers",
-        b: "Vakit utilise les services suivants à des fins limitées. Aucun n'est lié à ton identité personnelle :\n\n• Apple iCloud / CloudKit – Synchronisation des données utilisateur (dans ton espace iCloud privé).\n• Apple MapKit – Mosquées à proximité, carte et itinéraires (la position est envoyée à Apple).\n• Firebase Crashlytics (Google) – Rapports de plantage sans donnée d'identité (trace d'appels, modèle de l'appareil, version d'iOS/macOS).\n• Firebase Remote Config (Google) – Indicateurs de fonctionnalités et déploiement progressif (ne lit aucune donnée de l'appareil).\n• Google AdMob – Uniquement pour afficher des vidéos récompensées dans le « mode Sadaqa » facultatif. Détails ci-dessous.\n• Apple StoreKit 2 – Dons facultatifs (achats intégrés). Les données de paiement sont traitées par Apple ; Vakit ne voit jamais les données de carte.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Annonces de jours bénis et de nouvelles versions. Les annonces sont diffusées par thème ; il n'y a aucun ciblage individuel.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Texte et audio du sermon du vendredi.\n• Serveur de Vakit (Allemagne, Francfort) – Statistiques d'utilisation et ta liste de dhikr, rattachées à un code utilisateur qui ne contient aucune information identifiante. Tes enregistrements de khatm, de signets, d'objectifs et de lecture n'y sont jamais envoyés.\n\nRemarque : Firebase Analytics n'est PAS utilisé ; l'identifiant publicitaire (IDFA) n'est pas collecté.\n\nPolitique de confidentialité de Google : policies.google.com/privacy",
+        b: "Vakit utilise les services suivants à des fins limitées. Aucun n'est lié à ton identité personnelle :\n\n• Apple iCloud / CloudKit – Synchronisation des données utilisateur (dans ton espace iCloud privé).\n• Apple MapKit – Mosquées à proximité, carte et itinéraires (la position est envoyée à Apple).\n• Firebase Crashlytics (Google) – Rapports de plantage sans donnée d'identité (trace d'appels, modèle de l'appareil, version d'iOS/macOS).\n• Firebase Remote Config (Google) – Indicateurs de fonctionnalités et déploiement progressif (ne lit aucune donnée de l'appareil).\n• Apple StoreKit 2 – Dons facultatifs (achats intégrés). Les données de paiement sont traitées par Apple ; Vakit ne voit jamais les données de carte.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Annonces de jours bénis et de nouvelles versions. Les annonces sont diffusées par thème ; il n'y a aucun ciblage individuel.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Texte et audio du sermon du vendredi.\n• Serveur de Vakit (Allemagne, Francfort) – Statistiques d'utilisation et ta liste de dhikr, rattachées à un code utilisateur qui ne contient aucune information identifiante. Tes enregistrements de khatm, de signets, d'objectifs et de lecture n'y sont jamais envoyés.\n\nRemarque : Firebase Analytics n'est PAS utilisé ; l'identifiant publicitaire (IDFA) n'est pas collecté.\n\nPolitique de confidentialité de Google : policies.google.com/privacy",
       },
       {
-        t: "6. Publicité (mode Sadaqa)",
-        b: "Vakit n'affiche pas de publicité. Uniquement dans le « mode Sadaqa » facultatif, si l'utilisateur le lance lui-même pour soutenir le développeur, une vidéo récompensée est diffusée via Google AdMob. Dans ce cas :\n• La publicité est fournie par Google AdMob ; elle est toujours non personnalisée et classée tous publics (G). Vakit n'affiche jamais la demande de Transparence du suivi des apps et l'identifiant publicitaire (IDFA) n'est pas partagé.\n• À l'ouverture du centre de soutien (« Faire vivre Vakit »), le SDK publicitaire démarre et précharge une publicité ; aucune publicité n'est affichée tant que tu ne choisis pas de la regarder.\n• Le mode Sadaqa peut être désactivé à distance via Firebase Remote Config ; tu peux aussi tout simplement ne jamais l'utiliser.\n\nConfidentialité de Google AdMob : support.google.com/admob/answer/6128543",
+        t: "6. Publicité",
+        b: "Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.",
       },
       {
         t: "7. Dons (achats intégrés)",
@@ -85,12 +85,12 @@ module.exports = {
         b: "Vakit est une app gratuite qui propose des outils d'adoration tels que les horaires de prière, la direction de la Qibla, le Coran, les hadiths, un compteur de dhikr, des guides de la prière et des ablutions, le suivi du khatm et des adorations, le sermon du vendredi, les mosquées à proximité et un calendrier des jours religieux. Elle fonctionne sur iOS 16.4+ et macOS 13+, et comprend une app compagnon pour Apple Watch sous watchOS 9+.",
       },
       {
-        t: "3. Utilisation gratuite et dons facultatifs",
-        b: "Toutes les fonctionnalités essentielles de Vakit sont gratuites. L'app n'affiche aucune publicité (à l'exception des vidéos récompensées du « mode Sadaqa » facultatif, que l'utilisateur lance lui-même).\n\nLes utilisateurs qui souhaitent soutenir le développeur peuvent faire des dons facultatifs, par paliers de 10 ₺ à 10 000 ₺, depuis l'écran « Faire vivre Vakit ». Ces dons :\n• Sont traités via les achats intégrés d'Apple (StoreKit 2).\n• Sont des produits consommables ; les dons ne débloquent aucune fonctionnalité supplémentaire ni aucun abonnement.\n• Les demandes de remboursement ne peuvent être faites qu'auprès d'Apple (reportaproblem.apple.com).\n• Les conditions de paiement d'Apple et les règles de l'App Store s'appliquent.",
+        t: "3. Publicité",
+        b: "Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.",
       },
       {
-        t: "4. Mode Sadaqa (vidéo récompensée)",
-        b: "Le « mode Sadaqa » est une fonctionnalité facultative dans laquelle l'utilisateur regarde volontairement une courte vidéo publicitaire récompensée pour soutenir le développeur. La publicité est diffusée via Google AdMob. L'utilisation de cette fonctionnalité n'est pas obligatoire ; le développeur peut également la désactiver à distance via Firebase Remote Config.",
+        t: "4. Publicité",
+        b: "Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.",
       },
       {
         t: "5. App compagnon pour Apple Watch",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. Services tiers",
-        b: "Vakit utilise les services tiers suivants et est soumise à leurs propres conditions :\n• Apple iCloud / CloudKit (synchronisation des données utilisateur)\n• Apple MapKit (mosquées à proximité, cartes)\n• Firebase Crashlytics, Remote Config et Cloud Messaging (Google)\n• Google AdMob (uniquement pour le mode Sadaqa)\n• Apple StoreKit 2 (dons)\n• Diyanet (texte et audio du sermon du vendredi)\n• Bibliothèque Adhan (calcul des horaires de prière, open source)\n• SwiftAA (calcul astronomique, open source)\n\nLes conditions d'utilisation et les politiques de confidentialité de ces services relèvent de leurs fournisseurs respectifs.",
+        b: "Vakit utilise les services tiers suivants et est soumise à leurs propres conditions :\n• Apple iCloud / CloudKit (synchronisation des données utilisateur)\n• Apple MapKit (mosquées à proximité, cartes)\n• Firebase Crashlytics, Remote Config et Cloud Messaging (Google)\n• Apple StoreKit 2 (dons)\n• Diyanet (texte et audio du sermon du vendredi)\n• Bibliothèque Adhan (calcul des horaires de prière, open source)\n• SwiftAA (calcul astronomique, open source)\n\nLes conditions d'utilisation et les politiques de confidentialité de ces services relèvent de leurs fournisseurs respectifs.",
       },
       {
         t: "8. Propriété intellectuelle",
@@ -131,35 +131,4 @@ module.exports = {
     ],
   },
 
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Politique publicitaire",
-      description: "La politique publicitaire de Vakit, conforme aux principes halal. Nous ne diffusons aucune publicité pour les jeux d'argent, l'alcool, les contenus pour adultes, les produits à intérêt ou la voyance.",
-    },
-    titleBefore: "Politique ",
-    titleEm: "publicitaire",
-    desc: "Dernière mise à jour : 10 septembre 2026 — Version 1.7.4\n\nDans une app islamique, la publicité que tu vois fait partie de ton moment d'adoration. C'est pourquoi Vakit n'affiche pas de publicité. La seule exception est facultative : un utilisateur qui souhaite soutenir l'app peut choisir de regarder une courte vidéo récompensée. Cette page décrit les règles qui s'appliquent à ces publicités.",
-    sections: [
-      {
-        t: "1. Où apparaissent les publicités",
-        b: "Vakit n'affiche aucune bannière, publicité interstitielle ou publicité à l'ouverture, sur aucun écran. La seule publicité est une courte vidéo récompensée que tu peux choisir de regarder depuis le centre de soutien (« Faire vivre Vakit », « mode Sadaqa ») pour soutenir l'app. Tu n'es jamais obligé de l'utiliser, et aucune fonctionnalité n'en dépend.",
-      },
-      {
-        t: "2. Catégories que nous n'affichons jamais",
-        b: "Les publicités des catégories suivantes sont bloquées sur le réseau publicitaire :\n\n• Jeux d'argent, paris, casino, paris sportifs, poker\n• Alcool et produits du tabac\n• Contenus pour adultes, rencontres, contenus sexuels, produits sexuels\n• Nudité sous toutes ses formes\n• Prêts à intérêt, crédits rapides (prêts sur salaire), placements à intérêt\n• Voyance, astrologie, médiums, magie, tarot\n• Porc et produits à base de porc\n• Combines d'enrichissement rapide, pièges MLM\n• Propagande religieuse d'autres confessions",
-      },
-      {
-        t: "3. Mesures techniques",
-        b: "Ces réglages sont appliqués côté réseau publicitaire (Google AdMob) :\n\n• Classification maximale du contenu : G (tous publics).\n• Dans Brand Safety > Block Content, toutes les catégories ci-dessus sont cochées.\n• Liste de blocage d'URL et de mots-clés : les publicités contenant des termes tels que « casino », « betting », « gambling », « flirt », « dating », « horoscope », « psychic », « tarot » ne peuvent pas passer.\n• Les publicités sont toujours non personnalisées ; Vakit n'affiche jamais la demande de Transparence du suivi des apps et l'identifiant publicitaire (IDFA) n'est pas partagé.",
-      },
-      {
-        t: "4. Si tu vois une publicité inappropriée",
-        b: "Si tu vois une publicité qui heurte ta sensibilité religieuse, écris à hakancelikdev@gmail.com avec une capture d'écran. Chaque signalement fondé est ajouté à la liste de blocage d'AdMob.",
-      },
-      {
-        t: "5. Contact",
-        b: "Pour toute question, tout signalement ou toute suggestion de catégorie : hakancelikdev@gmail.com\n\nDéveloppeur : Hakan Çelik (Turquie)",
-      },
-    ],
-  },
 };

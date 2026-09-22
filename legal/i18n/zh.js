@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. 第三方服务",
-        b: "Vakit 出于有限的目的使用以下服务。它们都不与你的个人身份关联：\n\n• Apple iCloud / CloudKit——用户数据同步（在你私人的 iCloud 空间内）。\n• Apple MapKit——附近的清真寺、地图与路线（位置会发送给 Apple）。\n• Firebase Crashlytics（Google）——不含身份数据的崩溃报告（堆栈跟踪、设备型号、iOS/macOS 版本）。\n• Firebase Remote Config（Google）——功能开关与逐步发布（不读取设备上的数据）。\n• Google AdMob——仅用于在可选的「施舍模式」中展示激励视频广告。详见下一节。\n• Apple StoreKit 2——自愿捐助（应用内购买）。付款信息由 Apple 处理；Vakit 从不接触卡片数据。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）——吉庆之日与版本公告。公告按主题广播；不针对个人推送。\n• 土耳其宗教事务部（dinhizmetleri.diyanet.gov.tr）——主麻讲道的文本与音频。\n• Vakit 服务器（德国，法兰克福）——使用统计和你的记主列表，关联到一个不含任何身份信息的用户代码。你的通读、书签、目标和阅读记录从不发送到那里。\n\n注意：我们完全不使用 Firebase Analytics；不收集广告标识符（IDFA）。\n\nGoogle 的隐私政策：policies.google.com/privacy",
+        b: "Vakit 出于有限的目的使用以下服务。它们都不与你的个人身份关联：\n\n• Apple iCloud / CloudKit——用户数据同步（在你私人的 iCloud 空间内）。\n• Apple MapKit——附近的清真寺、地图与路线（位置会发送给 Apple）。\n• Firebase Crashlytics（Google）——不含身份数据的崩溃报告（堆栈跟踪、设备型号、iOS/macOS 版本）。\n• Firebase Remote Config（Google）——功能开关与逐步发布（不读取设备上的数据）。\n• Apple StoreKit 2——自愿捐助（应用内购买）。付款信息由 Apple 处理；Vakit 从不接触卡片数据。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）——吉庆之日与版本公告。公告按主题广播；不针对个人推送。\n• 土耳其宗教事务部（dinhizmetleri.diyanet.gov.tr）——主麻讲道的文本与音频。\n• Vakit 服务器（德国，法兰克福）——使用统计和你的记主列表，关联到一个不含任何身份信息的用户代码。你的通读、书签、目标和阅读记录从不发送到那里。\n\n注意：我们完全不使用 Firebase Analytics；不收集广告标识符（IDFA）。\n\nGoogle 的隐私政策：policies.google.com/privacy",
       },
       {
-        t: "6. 广告（施舍模式）",
-        b: "Vakit 不展示广告。只有在可选的「施舍模式」中，当用户为支持开发者而主动启动时，才会通过 Google AdMob 展示一段激励视频广告。在这种情况下：\n• 广告由 Google AdMob 投放；始终为非个性化广告，并属于面向一般观众（G）的分级。Vakit 从不弹出应用追踪透明度（ATT）请求，也不共享广告标识符（IDFA）。\n• 打开「支持 Vakit」页面时，广告 SDK 会启动并预加载一则广告；除非你选择观看，否则不会展示任何广告。\n• 施舍模式可以通过 Firebase Remote Config 远程关闭；你也完全可以选择从不使用它。\n\nGoogle AdMob 隐私：support.google.com/admob/answer/6128543",
+        t: "6. 广告",
+        b: "Vakit 不展示任何广告。应用唯一的收入来源是用户的自愿捐赠。",
       },
       {
         t: "7. 捐助（应用内购买）",
@@ -89,8 +89,8 @@ module.exports = {
         b: "Vakit 的所有核心功能均免费。应用不展示广告（可选的「施舍模式」中由用户自己启动的激励视频广告除外）。\n\n希望支持开发者的用户，可以在「支持 Vakit」页面以 ₺10 至 ₺10,000 的不同档位自愿捐助。这些捐助：\n• 通过 Apple 应用内购买（StoreKit 2）处理。\n• 属于消耗型项目；捐助不会解锁额外功能或订阅。\n• 退款申请只能通过 Apple 提交（reportaproblem.apple.com）。\n• 适用 Apple 的付款条款与 App Store 规则。",
       },
       {
-        t: "4. 施舍模式（激励广告）",
-        b: "「施舍模式」是一项可选功能：用户为支持开发者，自愿观看一段短的激励视频广告。广告通过 Google AdMob 投放。使用该功能不是必需的；开发者也可以通过 Firebase Remote Config 远程关闭该功能。",
+        t: "4. 广告",
+        b: "Vakit 不展示任何广告。应用唯一的收入来源是用户的自愿捐赠。",
       },
       {
         t: "5. Apple Watch 配套应用",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. 第三方服务",
-        b: "Vakit 使用以下第三方服务，并受其各自条款约束：\n• Apple iCloud / CloudKit（用户数据同步）\n• Apple MapKit（附近的清真寺、地图）\n• Firebase Crashlytics、Remote Config 与 Cloud Messaging（Google）\n• Google AdMob（仅用于施舍模式）\n• Apple StoreKit 2（捐助）\n• 土耳其宗教事务部（主麻讲道的文本与音频）\n• Adhan 库（礼拜时间计算，开源）\n• SwiftAA（天文计算，开源）\n\n这些服务的使用条款与隐私政策归各自的提供方所有。",
+        b: "Vakit 使用以下第三方服务，并受其各自条款约束：\n• Apple iCloud / CloudKit（用户数据同步）\n• Apple MapKit（附近的清真寺、地图）\n• Firebase Crashlytics、Remote Config 与 Cloud Messaging（Google）\n• Apple StoreKit 2（捐助）\n• 土耳其宗教事务部（主麻讲道的文本与音频）\n• Adhan 库（礼拜时间计算，开源）\n• SwiftAA（天文计算，开源）\n\n这些服务的使用条款与隐私政策归各自的提供方所有。",
       },
       {
         t: "8. 知识产权",
@@ -127,38 +127,6 @@ module.exports = {
       {
         t: "13. 联系方式",
         b: "关于本条款的问题：hakancelikdev@gmail.com\n\n开发者：Hakan Çelik（土耳其）",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — 广告政策",
-      description:
-        "Vakit 符合清真原则的广告政策。我们不展示赌博、酒类、成人、有息借贷或占卜类广告。",
-    },
-    titleBefore: "广告",
-    titleEm: "政策",
-    desc: "上次更新：2026年9月10日 — 版本 1.7.4\n\n在一款伊斯兰应用里，你看到的广告会成为你功修时刻的一部分。正因如此，Vakit 不展示广告。唯一的例外需要你主动选择：想支持应用的用户，可以自己选择观看一段短的激励视频广告。本页说明适用于这些广告的规则。",
-    sections: [
-      {
-        t: "1. 广告出现在哪里",
-        b: "Vakit 在任何页面都不展示横幅广告、插屏广告或开屏广告。唯一的广告是一段短的激励视频，用户可以在「支持 Vakit」页面（「施舍模式」）中自行选择观看，以支持应用。你永远不必使用它，也没有任何功能依赖于它。",
-      },
-      {
-        t: "2. 我们绝不展示的类别",
-        b: "以下类别的广告已在广告网络上屏蔽：\n\n• 赌博、博彩、赌场、体育博彩、扑克\n• 酒类与烟草制品\n• 成人内容、交友约会、色情内容、性用品\n• 任何形式的裸露\n• 有息贷款、发薪日贷款、有息投资\n• 算命、占星、通灵、巫术、塔罗\n• 猪肉及猪肉制品\n• 快速致富骗局、传销（MLM）陷阱\n• 其他宗教的宣教广告",
-      },
-      {
-        t: "3. 技术保障",
-        b: "以下设置在广告网络一侧（Google AdMob）生效：\n\n• 最高内容分级：G（一般观众）。\n• 在 Brand Safety > Block Content 中，上述所有类别均已勾选。\n• URL 与关键词屏蔽列表：包含「casino」「betting」「gambling」「flirt」「dating」「horoscope」「psychic」「tarot」等词语的广告无法通过。\n• 广告始终为非个性化广告；Vakit 从不弹出应用追踪透明度（ATT）请求，也不共享广告标识符（IDFA）。",
-      },
-      {
-        t: "4. 如果你看到不当广告",
-        b: "如果你看到与你的宗教情感相冲突的广告，请附上截图写信至 hakancelikdev@gmail.com。每一条经核实有效的举报都会被加入 AdMob 屏蔽列表。",
-      },
-      {
-        t: "5. 联系方式",
-        b: "问题、举报或类别建议：hakancelikdev@gmail.com\n\n开发者：Hakan Çelik（土耳其）",
       },
     ],
   },

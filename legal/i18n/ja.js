@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. 外部サービス",
-        b: "Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：\n\n• Apple iCloud / CloudKit – 利用者データの同期（ご自身のプライベートなiCloud領域内）。\n• Apple MapKit – 近くのモスク、地図、経路（位置情報はAppleに送信されます）。\n• Firebase Crashlytics（Google）– 身元情報を含まないクラッシュ報告（スタックトレース、端末の機種、iOS/macOSのバージョン）。\n• Firebase Remote Config（Google）– 機能フラグと段階的な公開（端末からデータを読み取りません）。\n• Google AdMob – 任意の「サダカ・モード」でリワード動画広告を表示するためだけに使用します。詳細は次の項をご覧ください。\n• Apple StoreKit 2 – 任意の寄付（アプリ内課金）。支払い情報はAppleが処理し、Vakitがカード情報を目にすることはありません。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）– 祝福の日と新バージョンのお知らせ。お知らせはトピック単位で一斉配信され、個人ごとの配信は行いません。\n• トルコ宗務庁（dinhizmetleri.diyanet.gov.tr）– 金曜の説教の本文と音声。\n• Vakitのサーバー（ドイツ、フランクフルト）– 利用統計とズィクルの一覧。身元情報を含まない利用者コードに結びついています。通読、しおり、目標、読書の記録がここに送信されることはありません。\n\n注：Firebase Analyticsは「使用していません」。広告識別子（IDFA）は収集しません。\n\nGoogleのプライバシーポリシー：policies.google.com/privacy",
+        b: "Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：\n\n• Apple iCloud / CloudKit – 利用者データの同期（ご自身のプライベートなiCloud領域内）。\n• Apple MapKit – 近くのモスク、地図、経路（位置情報はAppleに送信されます）。\n• Firebase Crashlytics（Google）– 身元情報を含まないクラッシュ報告（スタックトレース、端末の機種、iOS/macOSのバージョン）。\n• Firebase Remote Config（Google）– 機能フラグと段階的な公開（端末からデータを読み取りません）。\n• Apple StoreKit 2 – 任意の寄付（アプリ内課金）。支払い情報はAppleが処理し、Vakitがカード情報を目にすることはありません。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）– 祝福の日と新バージョンのお知らせ。お知らせはトピック単位で一斉配信され、個人ごとの配信は行いません。\n• トルコ宗務庁（dinhizmetleri.diyanet.gov.tr）– 金曜の説教の本文と音声。\n• Vakitのサーバー（ドイツ、フランクフルト）– 利用統計とズィクルの一覧。身元情報を含まない利用者コードに結びついています。通読、しおり、目標、読書の記録がここに送信されることはありません。\n\n注：Firebase Analyticsは「使用していません」。広告識別子（IDFA）は収集しません。\n\nGoogleのプライバシーポリシー：policies.google.com/privacy",
       },
       {
-        t: "6. 広告（サダカ・モード）",
-        b: "Vakitは広告を表示しません。任意の「サダカ・モード」で、利用者が開発者を支援するために自ら開始した場合に限り、Google AdMob経由でリワード動画広告が表示されます。その場合：\n• 広告はGoogle AdMobが配信します。常に非パーソナライズ広告で、一般向け（G）に分類されたものです。VakitがApp Tracking Transparency（ATT）の許可を求めることはなく、広告識別子（IDFA）は共有されません。\n• 「Vakitを支える」画面を開くと広告SDKが起動し、広告を1本事前に読み込みます。視聴を選ばない限り、広告は表示されません。\n• サダカ・モードはFirebase Remote Configで遠隔から無効にできます。この機能をまったく使わないことも自由です。\n\nGoogle AdMobのプライバシー：support.google.com/admob/answer/6128543",
+        t: "6. 広告",
+        b: "Vakit は広告を表示しません。アプリの唯一の収入源は、利用者による任意の寄付です。",
       },
       {
         t: "7. 寄付（アプリ内課金）",
@@ -89,8 +89,8 @@ module.exports = {
         b: "Vakitの主要な機能はすべて無料です。広告は表示しません（ただし、任意の「サダカ・モード」で利用者が自ら開始するリワード動画広告を除きます）。\n\n開発者を支援したい利用者は、「Vakitを支える」画面から₺10〜₺10,000の段階で任意の寄付ができます。これらの寄付は：\n• Appleのアプリ内課金（StoreKit 2）で処理されます。\n• 消耗型の商品です。寄付によって追加の機能や定期購読が解放されることはありません。\n• 返金の申請はAppleを通じてのみ行えます（reportaproblem.apple.com）。\n• Appleの支払い条件とApp Storeのルールが適用されます。",
       },
       {
-        t: "4. サダカ・モード（リワード広告）",
-        b: "「サダカ・モード」は、利用者が開発者を支援するために自らの意思で短いリワード動画広告を視聴する任意の機能です。広告はGoogle AdMob経由で配信されます。この機能の利用は必須ではありません。また、開発者がFirebase Remote Configを通じてこの機能を遠隔から無効にすることもあります。",
+        t: "4. 広告",
+        b: "Vakit は広告を表示しません。アプリの唯一の収入源は、利用者による任意の寄付です。",
       },
       {
         t: "5. Apple Watchコンパニオンアプリ",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. 外部サービス",
-        b: "Vakitは次の外部サービスを使用しており、それぞれの規約に従います：\n• Apple iCloud / CloudKit（利用者データの同期）\n• Apple MapKit（近くのモスク、地図）\n• Firebase Crashlytics、Remote Config、Cloud Messaging（Google）\n• Google AdMob（サダカ・モードのみ）\n• Apple StoreKit 2（寄付）\n• トルコ宗務庁（金曜の説教の本文と音声）\n• Adhanライブラリ（礼拝時刻の計算、オープンソース）\n• SwiftAA（天文計算、オープンソース）\n\nこれらのサービスの利用規約とプライバシーポリシーは、それぞれの提供者に帰属します。",
+        b: "Vakitは次の外部サービスを使用しており、それぞれの規約に従います：\n• Apple iCloud / CloudKit（利用者データの同期）\n• Apple MapKit（近くのモスク、地図）\n• Firebase Crashlytics、Remote Config、Cloud Messaging（Google）\n• Apple StoreKit 2（寄付）\n• トルコ宗務庁（金曜の説教の本文と音声）\n• Adhanライブラリ（礼拝時刻の計算、オープンソース）\n• SwiftAA（天文計算、オープンソース）\n\nこれらのサービスの利用規約とプライバシーポリシーは、それぞれの提供者に帰属します。",
       },
       {
         t: "8. 知的財産",
@@ -127,38 +127,6 @@ module.exports = {
       {
         t: "13. お問い合わせ",
         b: "本規約に関するご質問：hakancelikdev@gmail.com\n\n開発者：Hakan Çelik（トルコ）",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — 広告ポリシー",
-      description:
-        "Vakitのハラールに配慮した広告ポリシー。ギャンブル、アルコール、成人向け、利子を伴う金融、占いの広告は表示しません。",
-    },
-    titleBefore: "広告",
-    titleEm: "ポリシー",
-    desc: "最終更新：2026年9月10日 — バージョン1.7.4\n\nイスラームのアプリで目にする広告は、礼拝のひとときの一部になってしまいます。だからVakitは広告を表示しません。唯一の例外は任意のものです。アプリを支援したい利用者は、自らの選択で短いリワード動画広告を視聴できます。このページでは、そうした広告に適用されるルールを説明します。",
-    sections: [
-      {
-        t: "1. 広告が表示される場所",
-        b: "Vakitは、どの画面にもバナー広告、インタースティシャル広告、アプリ起動時の広告を表示しません。唯一の広告は、アプリを支援するために「Vakitを支える」画面（「サダカ・モード」）から利用者が視聴を選べる短いリワード動画です。使う必要はまったくなく、この広告に依存する機能もありません。",
-      },
-      {
-        t: "2. 決して表示しないカテゴリー",
-        b: "次のカテゴリーの広告は、広告ネットワーク上でブロックされています：\n\n• ギャンブル、賭け事、カジノ、スポーツ賭博、ポーカー\n• アルコールとタバコ製品\n• 成人向け、出会い系、性的なコンテンツ、性関連商品\n• あらゆる形の裸体表現\n• 利子付きのローン、消費者向け短期ローン（ペイデイローン）、利子を伴う投資\n• 占い、占星術、霊視、魔術、タロット\n• 豚肉と豚肉製品\n• 一攫千金の話、マルチ商法（MLM）の罠\n• 他宗教の布教広告",
-      },
-      {
-        t: "3. 技術的な安全策",
-        b: "広告ネットワーク側（Google AdMob）では、次の設定を適用しています：\n\n• 最大コンテンツレーティング：G（一般向け）。\n• Brand Safety > Block Contentで、上記のすべてのカテゴリーにチェックを入れています。\n• URLとキーワードの拒否リスト：「casino」「betting」「gambling」「flirt」「dating」「horoscope」「psychic」「tarot」などの語を含む広告は通りません。\n• 広告は常に非パーソナライズ広告です。VakitがApp Tracking Transparency（ATT）の許可を求めることはなく、広告識別子（IDFA）は共有されません。",
-      },
-      {
-        t: "4. 不適切な広告を見かけたら",
-        b: "信仰上の感覚にそぐわない広告を見かけた場合は、スクリーンショットを添えて hakancelikdev@gmail.com までご連絡ください。有効と判断されたご報告はすべて、AdMobの拒否リストに追加されます。",
-      },
-      {
-        t: "5. お問い合わせ",
-        b: "ご質問、ご報告、カテゴリーのご提案：hakancelikdev@gmail.com\n\n開発者：Hakan Çelik（トルコ）",
       },
     ],
   },

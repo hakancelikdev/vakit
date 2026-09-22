@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         t: "5. Üçüncü tərəf xidmətləri",
-        b: "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç biri şəxsi kimliyinizlə bağlı deyil:\n\n• Apple iCloud / CloudKit – İstifadəçi məlumatlarının sinxronizasiyası (şəxsi iCloud sahənizdə).\n• Apple MapKit – Yaxındakı məscidlər, xəritə və marşrut (məkan Apple-a göndərilir).\n• Firebase Crashlytics (Google) – Kimlik məlumatı daşımayan çökmə hesabatları (stack trace, cihaz modeli, iOS/macOS versiyası).\n• Firebase Remote Config (Google) – Funksiya bayraqları və mərhələli yayım (cihazdan məlumat oxumur).\n• Google AdMob – Yalnız könüllü «Sədəqə rejimi»ndə mükafatlı video reklam göstərmək üçün. Ətraflı: aşağıdakı bölmədə.\n• Apple StoreKit 2 – Könüllü ianələr (tətbiqdaxili alış). Ödəniş məlumatlarınızı Apple emal edir; Vakit kart məlumatlarını heç vaxt görmür.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Mübarək gün və versiya elanları. Elanlar mövzu üzrə hamıya birdən göndərilir; şəxsə xüsusi hədəfləmə yoxdur.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Cümə xütbəsinin mətni və səs yazısı.\n• Vakit serveri (Almaniya, Frankfurt) – İstifadə statistikası və zikr siyahınız; kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Xətm, əlfəcin, hədəf və oxuma qeydləriniz bura heç vaxt göndərilmir.\n\nQeyd: Firebase Analytics İSTİFADƏ OLUNMUR; reklam identifikatoru (IDFA) toplanmır.\n\nGoogle-un məxfilik siyasəti: policies.google.com/privacy",
+        b: "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç biri şəxsi kimliyinizlə bağlı deyil:\n\n• Apple iCloud / CloudKit – İstifadəçi məlumatlarının sinxronizasiyası (şəxsi iCloud sahənizdə).\n• Apple MapKit – Yaxındakı məscidlər, xəritə və marşrut (məkan Apple-a göndərilir).\n• Firebase Crashlytics (Google) – Kimlik məlumatı daşımayan çökmə hesabatları (stack trace, cihaz modeli, iOS/macOS versiyası).\n• Firebase Remote Config (Google) – Funksiya bayraqları və mərhələli yayım (cihazdan məlumat oxumur).\n• Apple StoreKit 2 – Könüllü ianələr (tətbiqdaxili alış). Ödəniş məlumatlarınızı Apple emal edir; Vakit kart məlumatlarını heç vaxt görmür.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Mübarək gün və versiya elanları. Elanlar mövzu üzrə hamıya birdən göndərilir; şəxsə xüsusi hədəfləmə yoxdur.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Cümə xütbəsinin mətni və səs yazısı.\n• Vakit serveri (Almaniya, Frankfurt) – İstifadə statistikası və zikr siyahınız; kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Xətm, əlfəcin, hədəf və oxuma qeydləriniz bura heç vaxt göndərilmir.\n\nQeyd: Firebase Analytics İSTİFADƏ OLUNMUR; reklam identifikatoru (IDFA) toplanmır.\n\nGoogle-un məxfilik siyasəti: policies.google.com/privacy",
       },
       {
-        t: "6. Reklam (Sədəqə rejimi)",
-        b: "Vakit reklam göstərmir. Yalnız könüllü «Sədəqə rejimi»ndə, istifadəçi tərtibatçını dəstəkləmək üçün onu özü başladarsa, Google AdMob vasitəsilə mükafatlı video reklam göstərilir. Bu halda:\n• Reklamı Google AdMob təqdim edir; o, həmişə fərdiləşdirilməmişdir və ümumi auditoriya (G) kateqoriyasındadır. Vakit App Tracking Transparency sorğusunu heç vaxt göstərmir, reklam identifikatoru (IDFA) paylaşılmır.\n• Dəstək mərkəzi («Vakit-i Yaşat») açılanda reklam SDK-sı işə düşür və bir reklamı əvvəlcədən yükləyir; siz izləməyi seçməsəniz, reklam göstərilmir.\n• Sədəqə rejimi Firebase Remote Config ilə uzaqdan söndürülə bilər; bu funksiyadan heç istifadə etməməyi də seçə bilərsiniz.\n\nGoogle AdMob məxfiliyi: support.google.com/admob/answer/6128543",
+        t: "6. Reklamlar",
+        b: "Vakit reklam göstərmir. Tətbiqin yeganə gəlir mənbəyi istifadəçilərin könüllü ianələridir.",
       },
       {
         t: "7. İanələr (tətbiqdaxili alış)",
@@ -89,8 +89,8 @@ module.exports = {
         b: "Vakit-in bütün əsas funksiyaları pulsuzdur. Tətbiq reklam göstərmir (istifadəçinin özünün başlatdığı, könüllü «Sədəqə rejimi»ndəki mükafatlı video reklamlar istisna olmaqla).\n\nTərtibatçını dəstəkləmək istəyən istifadəçilər «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilər. Bu ianələr:\n• Apple In-App Purchase (StoreKit 2) ilə emal olunur.\n• İstehlak olunan (consumable) məhsullardır; ianə müqabilində əlavə funksiya və ya abunə açılmır.\n• Geri qaytarma tələbləri yalnız Apple üzərindən edilə bilər (reportaproblem.apple.com).\n• Apple-ın ödəniş şərtləri və App Store qaydaları tətbiq olunur.",
       },
       {
-        t: "4. Sədəqə rejimi (mükafatlı reklam)",
-        b: "«Sədəqə rejimi» istifadəçinin tərtibatçını dəstəkləmək üçün öz istəyi ilə qısa mükafatlı video reklam izlədiyi könüllü funksiyadır. Reklam Google AdMob vasitəsilə təqdim olunur. Bu funksiyadan istifadə məcburi deyil; tərtibatçı onu Firebase Remote Config vasitəsilə uzaqdan da söndürə bilər.",
+        t: "4. Reklamlar",
+        b: "Vakit reklam göstərmir. Tətbiqin yeganə gəlir mənbəyi istifadəçilərin könüllü ianələridir.",
       },
       {
         t: "5. Apple Watch müşayiətçi tətbiqi",
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         t: "7. Üçüncü tərəf xidmətləri",
-        b: "Vakit aşağıdakı üçüncü tərəf xidmətlərindən istifadə edir və onların öz şərtlərinə tabedir:\n• Apple iCloud / CloudKit (istifadəçi məlumatlarının sinxronizasiyası)\n• Apple MapKit (yaxındakı məscidlər, xəritə)\n• Firebase Crashlytics, Remote Config və Cloud Messaging (Google)\n• Google AdMob (yalnız Sədəqə rejimi üçün)\n• Apple StoreKit 2 (ianələr)\n• Diyanet (cümə xütbəsinin mətni və səs yazısı)\n• Adhan kitabxanası (namaz vaxtı hesablaması, açıq mənbə)\n• SwiftAA (astronomik hesablama, açıq mənbə)\n\nBu xidmətlərin istifadə şərtləri və məxfilik siyasətləri onların öz təchizatçılarına aiddir.",
+        b: "Vakit aşağıdakı üçüncü tərəf xidmətlərindən istifadə edir və onların öz şərtlərinə tabedir:\n• Apple iCloud / CloudKit (istifadəçi məlumatlarının sinxronizasiyası)\n• Apple MapKit (yaxındakı məscidlər, xəritə)\n• Firebase Crashlytics, Remote Config və Cloud Messaging (Google)\n• Apple StoreKit 2 (ianələr)\n• Diyanet (cümə xütbəsinin mətni və səs yazısı)\n• Adhan kitabxanası (namaz vaxtı hesablaması, açıq mənbə)\n• SwiftAA (astronomik hesablama, açıq mənbə)\n\nBu xidmətlərin istifadə şərtləri və məxfilik siyasətləri onların öz təchizatçılarına aiddir.",
       },
       {
         t: "8. Əqli mülkiyyət",
@@ -127,38 +127,6 @@ module.exports = {
       {
         t: "13. Əlaqə",
         b: "Şərtlərlə bağlı suallarınız üçün: hakancelikdev@gmail.com\n\nTərtibatçı: Hakan Çelik (Türkiyə)",
-      },
-    ],
-  },
-  "ads-policy": {
-    meta: {
-      title: "Vakit — Reklam Siyasəti",
-      description:
-        "Vakit-in halal prinsiplərinə uyğun reklam siyasəti. Qumar, spirtli içki, yetkinlər üçün məzmun, faizli kredit və ya falçılıq reklamları göstərmirik.",
-    },
-    titleBefore: "Reklam ",
-    titleEm: "Siyasəti",
-    desc: "Son yenilənmə: 10 sentyabr 2026 — Versiya 1.7.4\n\nİslami tətbiqdə gördüyünüz reklam ibadət anınızın bir hissəsinə çevrilir. Buna görə Vakit reklam göstərmir. Yeganə istisna könüllüdür: tətbiqi dəstəkləmək istəyən istifadəçi öz seçimi ilə qısa mükafatlı video reklam izləyə bilər. Bu səhifə həmin reklamlara tətbiq olunan qaydaları izah edir.",
-    sections: [
-      {
-        t: "1. Reklamlar harada görünür",
-        b: "Vakit heç bir ekranda banner, keçid (interstitial) və ya açılış reklamı göstərmir. Yeganə reklam, tətbiqi dəstəkləmək istəyən istifadəçinin Dəstək mərkəzindən («Vakit-i Yaşat», «Sədəqə rejimi») öz seçimi ilə izləyə biləcəyi qısa mükafatlı videodur. Ondan heç vaxt istifadə etməyə məcbur deyilsiniz; heç bir funksiya ondan asılı deyil.",
-      },
-      {
-        t: "2. Heç vaxt göstərmədiyimiz kateqoriyalar",
-        b: "Aşağıdakı kateqoriyalardakı reklamlar reklam şəbəkəsində bloklanıb:\n\n• Qumar, mərc, kazino, idman mərcləri, poker\n• Spirtli içkilər və tütün məmulatları\n• Yetkinlər üçün məzmun, tanışlıq, cinsi məzmun, yetkinlər üçün məhsullar\n• İstənilən formada çılpaqlıq\n• Faizli kreditlər, sürətli istehlak kreditləri, faizli investisiyalar\n• Falçılıq, astrologiya, ekstrasenslik, sehr, tarot\n• Donuz əti və donuz məhsulları\n• Tez varlanma sxemləri, MLM tələləri\n• Başqa dinlərin təbliğat reklamları",
-      },
-      {
-        t: "3. Texniki tədbirlər",
-        b: "Reklam şəbəkəsi tərəfində (Google AdMob) bu ayarlar tətbiq olunur:\n\n• Maksimum məzmun reytinqi: G (ümumi auditoriya).\n• Brand Safety > Block Content panelində yuxarıdakı bütün kateqoriyalar işarələnib.\n• URL və açar söz blok siyahısı: «casino», «betting», «gambling», «flirt», «dating», «horoscope», «psychic», «tarot» kimi terminlər olan reklamlar keçə bilmir.\n• Reklamlar həmişə fərdiləşdirilməmişdir; Vakit App Tracking Transparency sorğusunu heç vaxt göstərmir, reklam identifikatoru (IDFA) paylaşılmır.",
-      },
-      {
-        t: "4. Uyğunsuz reklam görsəniz",
-        b: "Dini həssaslığınıza zidd olan bir reklam görsəniz, ekran görüntüsü ilə birlikdə hakancelikdev@gmail.com ünvanına yazın. Əsaslı hesab edilən hər bildiriş AdMob blok siyahısına əlavə olunur.",
-      },
-      {
-        t: "5. Əlaqə",
-        b: "Suallar, bildirişlər və ya kateqoriya təklifləri üçün: hakancelikdev@gmail.com\n\nTərtibatçı: Hakan Çelik (Türkiyə)",
       },
     ],
   },

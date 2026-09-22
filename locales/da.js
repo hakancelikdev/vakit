@@ -44,7 +44,7 @@ module.exports = {
     downloadCta2: "Hent i App Store", explore: "Udforsk funktionerne →",
     preview: "Forhåndsvis",
     footContact: "Kontakt", footFeedback: "Feedback",
-    footPrivacy: "Privatliv", footTerms: "Vilkår", footAds: "Reklamer", footPress: "Presse",
+    footPrivacy: "Privatliv", footTerms: "Vilkår", footPress: "Presse",
     footSig: "Lavet med omhu · © 2026 Hakan Çelik",
     menuLabel: "Menu", themeLabel: "Slå mørk tilstand til/fra", langLabel: "Sprog", closeLabel: "Luk",
     videoLabel: "Vakits bønneskærm: himlen skifter, efterhånden som dagen går",
@@ -121,7 +121,7 @@ module.exports = {
     { t: "Tællingen i hånden.", d: "En dhikr-tæller og tasbihat efter bønnen; skabeloner, dine egne dhikr og et dagligt mål." },
   ],
   COMPARE: [
-    { f: "Reklamer", o: "Casino- og upassende reklamer lige ved siden af religiøst indhold.", v: "Helt uden reklamer. Eneste undtagelse: vil du støtte Vakit, kan du selv vælge at se en reklame." },
+    { f: "Reklamer", o: "Casino- og upassende reklamer lige ved siden af religiøst indhold.", v: "Helt uden reklamer — heller ikke frivillige: Vakit viser slet ingen reklamer." },
     { f: "Privatliv", o: "Placeringsdata solgt til tredjeparter (omtalt i medierne).", v: "Koordinaterne når aldrig vores servere. Ingen sporing." },
     { f: "Offline", o: "Grundfunktioner kræver internetforbindelse.", v: "Bøn, qibla, Koranens tekst, dhikr – alt virker offline." },
     { f: "Låst skærm", o: "Widgets går i stykker ved iOS-opdateringer.", v: "Live-aktivitet og Dynamic Island; StandBy fra iOS 17." },
@@ -147,7 +147,7 @@ module.exports = {
   FAQ: [
     { q: "Virker den uden internet?", a: "Ja. Bedetiderne beregnes på din telefon ud fra din placering. Koranens tekst, qibla, dhikr og alle grundværktøjer virker helt offline." },
     { q: "Kommer der notifikationer, selv hvis jeg aldrig åbner appen?", a: "Ja. De planlægges lokalt på din enhed, så du får dem, også når appen er lukket. Giver du adgang til placering »Altid«, beregner Vakit stille tiderne igen, når du har rejst." },
-    { q: "Er alt virkelig gratis?", a: "Ja. Hele appen er gratis: intet abonnement, ingen betalingsmur, intet »premium«-niveau, intet er låst. Vil du støtte den, kan du give en donation eller selv vælge at se en reklame; ingen af delene låser noget op." },
+    { q: "Er alt virkelig gratis?", a: "Ja. Hele appen er gratis: intet abonnement, ingen betalingsmur, intet »premium«-niveau, intet er låst. Vil du støtte den, kan du give en donation; den låser ikke noget op, for intet er låst." },
     { q: "Hvor kommer bedetiderne fra?", a: "De hentes ikke fra en server. Vakit beregner dem på din enhed med den metode, du vælger (der er 12), og dine koordinater." },
     { q: "Hvilke sprog findes appen på?", a: "Appens brugerflade findes på 25 sprog: tyrkisk, engelsk, arabisk, tysk, fransk, spansk, italiensk, nederlandsk, portugisisk, dansk, russisk, aserbajdsjansk, albansk, indonesisk, malajisk, kinesisk, japansk, thai, hindi, bengali, urdu, persisk, uigurisk, swahili og fula. Understøttes din enheds sprog, åbner appen automatisk på det; du kan altid skifte i Indstillinger. På arabisk, urdu, persisk og uigurisk kører hele brugerfladen fra højre mod venstre. Oversættelser af indholdet findes dog indtil videre kun på tyrkisk og engelsk: Koranoversættelsen, translitteration og hadithoversættelser findes på de to sprog; ordbetydninger findes kun på engelsk, og nogle hadithsamlinger er kun delvist oversat til tyrkisk. Med arabisk brugerflade åbnes en arabisk tafsir for en del af Koranen; fredagsprædikenen kommer på de sprog, Diyanet udgiver den på (tyrkisk og i nogle uger engelsk og arabisk)." },
     { q: "Hvilke enheder virker den på?", a: "iPhone, iPad, Apple Watch og Mac. På iPad er det den samme app på en større skærm, og dine registreringer er de samme på alle dine enheder via iCloud. Siden version 1.7.0 kører Vakit også på Mac: næste bøn og nedtælling i menulinjen, tastaturgenveje, widgets på skrivebordet og, fra macOS 15, faner i sidepanelet. Bedetider, Koranen, hadith, dhikr og dine ibada-registreringer synkroniseres med din iPhone via den samme iCloud-konto. Da en Mac ikke har et kompas, viser qibla-fanen retningen og afstanden til Kabaen som tekst." },
