@@ -29,6 +29,8 @@ const { validateLocale } = require("./tools/validate.js");
 const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
 // Long-form legal prose: the Turkish + English originals, one module per document.
+const PRESS = require("./press.js");
+
 const LEGAL_COPY = {
   privacy: require("./legal/privacy.js"),
   terms: require("./legal/terms.js"),
@@ -42,6 +44,8 @@ const ALL = Object.keys(LANGS);
 // Every other language: all three documents translated from English, one module
 // per language (legal/i18n/<lang>.js). A missing file is reported by check().
 const LEGAL_ORIGINAL_LANGS = ["tr", "en"];
+// The press kit is written for editors and journalists: Turkish and English only.
+const PRESS_LANGS = ["tr", "en"];
 const LEGAL_I18N = Object.fromEntries(
   LEGAL_LANGS.filter((l) => !LEGAL_ORIGINAL_LANGS.includes(l)).map((l) => {
     const file = path.join(__dirname, "legal", "i18n", `${l}.js`);
@@ -763,6 +767,178 @@ ${sections}
 `;
 }
 
+/* ------------------------------------------------------------- press kit */
+
+/* Press kit exists in Turkish and English only, like the legal pages; it reuses
+   their page frame and adds two blocks of its own — the fact table and the
+   asset list (the only place on the site that links raw media files). */
+const PRESS_STYLE = `      .press-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
+      .press-block h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .press-block p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
+      .press-boiler { margin-bottom: 18px }
+      .press-boiler:last-child { margin-bottom: 0 }
+      .press-boiler span { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px }
+      .press-facts { width: 100%; border-collapse: collapse; font-size: 15px }
+      .press-facts td { padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); line-height: 1.6; vertical-align: top }
+      .press-facts tr:last-child td { border-bottom: 0 }
+      .press-facts td:first-child { width: 38%; color: var(--ink-3); padding-inline-end: 16px }
+      .press-assets { list-style: none; padding: 0; margin: 0 }
+      .press-assets li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px }
+      .press-assets li:last-child { border-bottom: 0 }
+      .press-assets a { color: var(--accent-ink); text-decoration: underline }
+      .press-note { font-size: 13px; color: var(--ink-3); margin-top: 14px; line-height: 1.6 }
+      @media (max-width: 768px) { .press-facts td:first-child { width: 46% } }`;
+
+function pressPage(lang) {
+  const L = LANGS[lang];
+  const doc = PRESS[lang];
+  const file = "press.html";
+  const canonical = SITE.origin + localUrl(lang, file);
+  const home = localUrl(lang);
+  const alternates = PRESS_LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${LANGS[l].htmlLang}" href="${SITE.origin}${localUrl(l, file)}">`
+  ).join("\n    ");
+
+  const facts = doc.facts
+    .map(([k, v]) => `      <tr><td>${esc(k)}</td><td>${esc(String(v))}</td></tr>`)
+    .join("\n");
+  const assets = PRESS.assets
+    .map((a) => `    <li><a href="${a.href}" download>${esc(a[lang])}</a></li>`)
+    .join("\n");
+  const sections = doc.sections
+    .map((s) => `  <div class="press-block"><h3>${esc(s.t)}</h3><p>${esc(s.b)}</p></div>`)
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html ${htmlAttrs(lang)}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${esc(doc.meta.title)}</title>
+    <meta name="description" content="${esc(doc.meta.description)}">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="${esc(SITE.author)}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:title" content="${esc(doc.meta.title)}">
+    <meta property="og:description" content="${esc(doc.meta.description)}">
+    <meta property="og:image" content="${SITE.origin}${ogUrl(lang)}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="${L.ogLocale}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${esc(doc.meta.title)}">
+    <meta name="twitter:description" content="${esc(doc.meta.description)}">
+    <link rel="canonical" href="${canonical}">
+    ${alternates}
+    <link rel="alternate" hreflang="x-default" href="${SITE.origin}${localUrl("en", file)}">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    ${fontHead(lang)}
+    <style>
+${LEGAL_STYLE}
+${PRESS_STYLE}
+    </style>
+    ${THEME_BOOT}
+</head>
+<body>
+
+<nav class="nav">
+  <a href="${home}" class="nav-brand">
+    <img src="/assets/app-icon-32.png" alt="${esc(SITE.appName)}" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">${esc(SITE.appName)}</div>
+  </a>
+  <div class="nav-links">
+    <a href="${home}#showcase">${esc(t(lang, "features"))}</a>
+    <a href="${home}#trust">${esc(t(lang, "trust"))}</a>
+    <a href="${home}#faq">${esc(t(lang, "faq"))}</a>
+  </div>
+  <div class="nav-cta">
+    <div class="nav-lang">
+      <a href="${localUrl("en", file)}" data-lang="en"${lang === "en" ? ' class="on" aria-current="page"' : ' hreflang="en"'}>EN</a>
+      <a href="${localUrl("tr", file)}" data-lang="tr"${lang === "tr" ? ' class="on" aria-current="page"' : ' hreflang="tr"'}>TR</a>
+    </div>
+    <a href="${storeLink(`site-press-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
+  </div>
+  <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
+</nav>
+
+<main class="legal-page">
+  <h1>${doc.title}</h1>
+  <p class="legal-desc">${esc(doc.desc)}</p>
+
+  <div class="press-block">
+    <h3>${esc(doc.oneLiner.t)}</h3>
+    <p>${esc(doc.oneLiner.b)}</p>
+  </div>
+
+  <div class="press-block">
+    <h3>${esc(doc.boiler.t)}</h3>
+    <div class="press-boiler"><span>25</span><p>${esc(doc.boiler.short)}</p></div>
+    <div class="press-boiler"><span>50</span><p>${esc(doc.boiler.medium)}</p></div>
+    <div class="press-boiler"><span>100</span><p>${esc(doc.boiler.long)}</p></div>
+  </div>
+
+  <div class="press-block">
+    <h3>${esc(doc.factsTitle)}</h3>
+    <table class="press-facts">
+${facts}
+    </table>
+  </div>
+
+${sections}
+
+  <div class="press-block">
+    <h3>${esc(doc.assetsTitle)}</h3>
+    <ul class="press-assets">
+${assets}
+    </ul>
+    <p class="press-note">${esc(doc.assetsNote)}</p>
+  </div>
+
+  <div class="press-block">
+    <h3>${esc(doc.contactTitle)}</h3>
+    <p>${esc(doc.contactNote)} <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="${esc(SITE.appName)}" class="foot-mark-img" width="26" height="26">
+    ${esc(SITE.appName)}
+  </div>
+  <div class="foot-links">
+    <a href="${localUrl(lang, "privacy.html")}">${esc(t(lang, "footPrivacy"))}</a>
+    <a href="${localUrl(lang, "terms.html")}">${esc(t(lang, "footTerms"))}</a>
+    <a href="${localUrl(lang, "ads-policy.html")}">${esc(t(lang, "footAds"))}</a>
+    <a href="${SITE.repoUrl}">GitHub</a>
+  </div>
+  <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.nav-lang a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () { localStorage.setItem('preferredLanguage', a.dataset.lang); });
+  });
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      links.classList.toggle('open');
+      toggle.textContent = links.classList.contains('open') ? '\\u00D7' : '\\u2261';
+    });
+  })();
+</script>
+</body>
+</html>
+`;
+}
+
 /* ------------------------------------------------------------ sitemap/robots */
 
 function sitemap() {
@@ -785,11 +961,15 @@ ${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLan
     })
     .join("\n");
 
+  const pressUrl = (l) => SITE.origin + localUrl(l, "press.html");
+  const press = PRESS_LANGS.map((l) => block(pressUrl(l), PRESS_LANGS, pressUrl, "monthly", "0.4")).join("\n");
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${home}
 ${legal}
+${press}
 </urlset>
 `;
 }
@@ -933,6 +1113,14 @@ function check() {
       if (!meta || !meta.title || !meta.description) errors.push(`${src}: ${key} has no <head> title/description`);
     }
   }
+  for (const a of PRESS.assets) {
+    if (!fs.existsSync(path.join(DOCS, a.href.replace(/^\//, "")))) errors.push(`press: missing ${a.href}`);
+  }
+  for (const lang of PRESS_LANGS) {
+    const doc = PRESS[lang];
+    if (!doc || !doc.meta || !doc.meta.title) errors.push(`press.js has no "${lang}" metadata`);
+    else if (doc.facts.length !== PRESS.tr.facts.length) errors.push(`press.js: ${lang} has ${doc.facts.length} facts, tr has ${PRESS.tr.facts.length}`);
+  }
   if (errors.length) throw new Error("Build check failed:\n  " + errors.join("\n  "));
 }
 
@@ -945,6 +1133,8 @@ function main() {
   for (const key of Object.keys(LEGAL)) {
     for (const lang of LEGAL_LANGS) write(path.join(LANGS[lang].dir, LEGAL[key].file), legalPage(key, lang));
   }
+
+  for (const lang of PRESS_LANGS) write(path.join(LANGS[lang].dir, "press.html"), pressPage(lang));
 
   write("sitemap.xml", sitemap());
   write("robots.txt", robots());

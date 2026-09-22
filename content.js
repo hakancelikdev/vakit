@@ -34,7 +34,7 @@ const SITE = {
   // From the Turkish storefront (iTunes lookup API), where effectively all
   // ratings are. Re-check on each release:
   //   curl -s "https://itunes.apple.com/lookup?id=6748356813&country=tr"
-  rating: { value: "4.8", count: "445" },
+  rating: { value: "4.8", count: "467" },
   // Mirrors the shipping iOS release. Bump together with the app.
   appVersion: "1.7.4",
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.

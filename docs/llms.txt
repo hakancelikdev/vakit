@@ -5,7 +5,7 @@
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.4; requires
 iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
-445 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
+467 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 
 ## What makes it different
 
