@@ -41,10 +41,12 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 - **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
 - **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
+- **Playlists** — Line up surahs in your own order, name the list and play it end to end — offline too.
 - **Spoken Translation** — Hear the translation in your device's own voice — alone or after each verse, offline.
 - **Hadith** — Over 36,000 ahadith across seven major collections.
 - **Daily Content** — Verse, hadith and name of the day on one screen; look back over the past week.
 - **Friday Sermon** — For Diyanet-method users: read, listen to and store the khutbah offline.
+- **Friday Guide** — Preparation, ghusl, the khutbah, Surah al-Kahf and salawat — the whole Friday on one page.
 - **Dhikr Counter** — Ring-based progress, presets, and custom dhikr.
 - **Tasbihat** — 33-33-33, or the full post-prayer sequence.
 - **Asma al-Husna** — 99 names of Allah, with transliteration and meaning; add any as dhikr.
