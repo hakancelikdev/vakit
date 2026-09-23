@@ -191,6 +191,7 @@ const SHOWCASE_MORE = [
   { img: "search", label: "Unified Search" },
   { img: "nearby-mosques", label: "Nearby Mosques" },
   { img: "lock-screen-live-activity", label: "Live Activity" },
+  { img: "imsakiye", label: "Imsakiye" },
 ];
 
 // Showcase order. Index 0 is the preview video (the prayer screen's sky); the
