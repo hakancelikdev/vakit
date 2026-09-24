@@ -10,8 +10,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 ## What makes it different
 
 - **Free, with no paywall.** No subscription, no "premium" tier, no locked features.
-- **Completely ad-free.** No screen shows an ad. The one exception is opt-in: a user who
-  wants to support the app can choose to watch an ad.
+- **Completely ad-free.** No screen shows an ad, and there is no opt-in ad either.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 12 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.
@@ -172,4 +171,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-22
+Last updated: 2026-09-24

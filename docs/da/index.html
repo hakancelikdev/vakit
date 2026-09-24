@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -390,7 +390,6 @@
   <div class="nav-links">
     <a href="#showcase">Funktioner</a>
     <a href="#trust">Tillid</a>
-    <a href="#compare">Hvorfor Vakit</a>
     <a href="#reviews">Anmeldelser</a>
     <a href="#faq">FAQ</a>
   </div>
@@ -439,7 +438,7 @@
       <span>Appen til din ibada,</span><br>
       <span>som den</span> <em>bør være.</em>
     </h1>
-    <p class="hero-sub">Appen til din ibada, som den bør være. En stille ledsager til de fem daglige bønner – med Koranen, qibla, dhikr og en kalender, der ærer dine dage. Den træder til side, når du ikke har brug for den, og er der, når du har.</p>
+    <p class="hero-sub">En stille ledsager til de fem daglige bønner – med Koranen, qibla, dhikr og en kalender, der ærer dine dage. Den træder til side, når du ikke har brug for den, og er der, når du har.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-da" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -450,7 +449,7 @@
 
     <div class="hero-proof">
       <div class="proof">
-        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-val">4,8<span class="star"> ★</span></div>
         <div class="proof-lbl">App Store · 467 bedømmelser</div>
       </div>
       <div class="proof">
@@ -462,42 +461,59 @@
         <div class="proof-lbl">Beregningsmetoder</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">Kernefunktioner · offline</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">Sprog i appen</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">København</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Vakits bønneskærm: himlen skifter, efterhånden som dagen går"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">Næste · om</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha</span><span>Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha · Imsak · Solopgang · Dhuhr · Asr · Maghrib · Isha</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="Næste · om">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">København</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">Næste · om</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Imsak</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Solopgang</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Dhuhr</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Asr</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Maghrib</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Isha</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · Alt, intet overflødigt</div>
     <h2 class="sc-h2"><span>En ledsager,</span><br><em>ikke en jagt på din opmærksomhed.</em></h2>
-    <p class="sc-lede">Ti centrale værktøjer, hver især skabt til at føles roligt, i det øjeblik du åbner det. Tryk på et for at se det.</p>
+    <p class="sc-lede">15 centrale værktøjer, hver især skabt til at føles roligt, i det øjeblik du åbner det. Tryk på et for at se det.</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Som himlen.</h3><p>Når hver bedetid begynder, skifter skærmen med himlen – rigtige stjerner og månen på deres sande pladser. Frarådede og frivillige tider er valgfrie.</p></div><span class="sc-tag">Forhåndsvis</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Uden at låse op.</h3><p>Næste bøn på den låste skærm, i en widget, i Dynamic Island og på dit ur. Et stille blik – aldrig noget, der stjæler din opmærksomhed.</p></div><span class="sc-tag">Forhåndsvis</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Alt i én.</h3><p>Koranen, hadith, fredagsprædiken, dhikr, Allahs navne, guider og kalenderen – samlet ét sted. Intet er låst bag betaling.</p></div><span class="sc-tag">Forhåndsvis</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Den rette retning.</h3><p>Vend dig mod qibla, og telefonen vibrerer, med afstanden til Kabaen ved siden af. Dine koordinater når aldrig vores servere.</p></div><span class="sc-tag">Forhåndsvis</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Den rette retning.</h3><p>Vend dig mod qibla, og telefonen vibrerer, med afstanden til Kabaen ved siden af.</p></div><span class="sc-tag">Forhåndsvis</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Din ibada i ringe.</h3><p>Ringe for bøn, Koranen, dhikr, hadith og qada; hvor hurtigt efter hver bedetid du beder, og din khatm – stille fremskridt, ingen skyldfølelse.</p></div><span class="sc-tag">Forhåndsvis</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Qada, indhentet bøn for bøn.</h3><p>Beregn et helt livs manglende bønner pr. bedetid, og indhent dem én ad gangen – med et skøn over, hvornår du er færdig.</p></div><span class="sc-tag">Forhåndsvis</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Koranen, også offline.</h3><p>Læs, lyt, reflektér – Medina- eller Tyrkiet-skrift, følg med ord for ord, tafsir og recitation, der kan downloades.</p></div><span class="sc-tag">Forhåndsvis</span></button>
@@ -517,7 +533,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakits bønneskærm: himlen skifter, efterhånden som dagen går"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/da/prayer-times.webp" alt="Som himlen." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/da/widget.webp" alt="Uden at låse op." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/da/discover.webp" alt="Alt i én." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/da/qibla.webp" alt="Den rette retning." width="390" height="844" loading="lazy">
@@ -613,111 +629,134 @@
       <span>Dine data er</span> <em>betroet os,</em><br>
       <span>ikke en vare.</span>
     </h2>
-    <p class="trust-lede">Din ibada skal aldrig afbrydes. Andre bønneapps er blevet taget i at sælge placeringsdata. Vakit valgte en anden vej: Dine koordinater når aldrig vores servere. Ingen konto. Ingen sporing. Ingen kompromiser. Det er ikke en funktion – det er et princip.</p>
+    <p class="trust-lede">Din ibada skal aldrig afbrydes. Andre bønneapps er blevet taget i at sælge placeringsdata. Vakit valgte en anden vej: Dine koordinater når aldrig vores servere. Ingen konto. Ingen reklamer. Dine data bliver aldrig solgt. Det er ikke en funktion – det er et princip.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>Hent. Åbn. Bed.</h3>
         <p>Ingen tilmelding, intet login, ingen adgangskode, du kan glemme. Vakit virker, så snart du har installeret den.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>Beregnet på din telefon.</h3>
         <p>Bedetiderne beregnes lokalt ud fra din placering med den metode, du vælger. Intet sendes til en server for at blive »slået op«.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>Din præcise placering er ikke vores.</h3>
         <p>Dine koordinater når aldrig vores servere – vi kender kun dit land, din by og dit distrikt. Til din adresse og moskeer i nærheden går placeringen kun til Apple Kort.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>En politik i klart sprog.</h3>
         <p>Brugsdata knyttet til en pseudonym brugerkode – uden navn, e-mail eller telefonnummer. Vores privatlivspolitik viser præcis, hvad der sendes, og den kan læses på et minut.</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">Du ved allerede, hvad der er galt med de andre bønneapps. Her er Vakits svar på hvert punkt, linje for linje.</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Emne</div><div class="compare-cell">Andre apps</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Reklamer</div><div class="compare-cell other">Casino- og upassende reklamer lige ved siden af religiøst indhold.</div><div class="compare-cell vakit">Helt uden reklamer — heller ikke frivillige: Vakit viser slet ingen reklamer.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Offline</div><div class="compare-cell other">Grundfunktioner kræver internetforbindelse.</div><div class="compare-cell vakit">Bøn, qibla, Koranens tekst, dhikr – alt virker offline.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Låst skærm</div><div class="compare-cell other">Widgets går i stykker ved iOS-opdateringer.</div><div class="compare-cell vakit">Live-aktivitet og Dynamic Island; StandBy fra iOS 17.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Præcision</div><div class="compare-cell other">Fejl ved sommertid, få beregningsmetoder.</div><div class="compare-cell vakit">12 metoder, tager højde for tidszoner, opdager rejser.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Enheder</div><div class="compare-cell other">Kun telefonen; ur og computer mangler eller er halvfærdige.</div><div class="compare-cell vakit">iPhone, iPad og Mac via iCloud; Apple Watch synkroniseres gennem iPhone.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other">Forældede brugerflader; tilbageskridt efter hver opdatering.</div><div class="compare-cell vakit">Liquid Glass på iOS 26, kører fra iOS 16.4. Roligt, moderne, hurtigt.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Pris</div><div class="compare-cell other">Betalingsmure, abonnementer, »premium«-niveauer.</div><div class="compare-cell vakit">Gratis. Ingen niveauer, intet mersalg.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51 værktøjer</div>
       <h2><span>Én app,</span><br><em>nok til et helt liv med ibada.</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">Bedetider</h3><div class="f-desc">12 beregningsmetoder, tager højde for tidszoner, opdager, når du rejser.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">Levende himmel</h3><div class="f-desc">Rigtige stjerner og månen på dagbuen – for hvor du er, lige nu.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">Frivillige bedetider</h3><div class="f-desc">Ishraq, duha, awwabin og nattens dele; valgfrit.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">Manuel placering</h3><div class="f-desc">Vælg din placering selv, eller lad den følge dig, når du rejser.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">Bedetider, live-qibla, 13 komplikationer.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Mac-app</h3><div class="f-desc">Nedtælling i menulinjen, tastaturgenveje, iCloud-synkronisering.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">Den samme app på en større skærm; dine registreringer synkroniseres via iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25 sprog</h3><div class="f-desc">Brugerflade fra højre mod venstre på arabisk, urdu, persisk og uigurisk.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">Qibla-kompas</h3><div class="f-desc">Haptisk retningsvisning med afstanden til Kabaen.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">Den Hellige Koran</h3><div class="f-desc">114 suraer. Ord for ord, tafsir, klassisk mushaf; oversættelse på tyrkisk og engelsk.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">Mushaf-skrift</h3><div class="f-desc">Medina- eller Tyrkiet-skrift – sidelayoutet følger med.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">Khatm-status</h3><div class="f-desc">114 suraer, 30 juz; fuldførte khatm og et anslået slutpunkt.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">Offline recitation</h3><div class="f-desc">Vælg recitator og recitationsstil; download suraer eller juz, og lyt offline.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">Afspilningslister</h3><div class="f-desc">Sæt suraerne i din egen rækkefølge, giv listen et navn, og lyt fra ende til anden — også offline.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">Oplæst oversættelse</h3><div class="f-desc">Hør oversættelsen med enhedens egen stemme — alene eller efter hvert vers, offline.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">Hadith</h3><div class="f-desc">Over 36.000 hadither fra syv store samlinger.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">Dagens indhold</h3><div class="f-desc">Dagens vers, hadith og navn på ét skærmbillede; se en uge tilbage.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">Fredagsprædiken</h3><div class="f-desc">For brugere af Diyanet-metoden: læs, lyt til og gem prædikenen offline.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">Fredagsguide</h3><div class="f-desc">Forberedelse, ghusl, khutbaen, sura al-Kahf og salawat — hele fredagen på én side.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">Dhikr-tæller</h3><div class="f-desc">Fremskridt i en ring, skabeloner og egne dhikr.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">Tasbihat</h3><div class="f-desc">33-33-33 eller hele rækkefølgen efter bønnen.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">Allahs 99 navne</h3><div class="f-desc">Asma al-Husna med translitteration og betydning; tilføj et hvilket som helst navn som dhikr.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">Hijri-kalender</h3><div class="f-desc">Gregoriansk + hijri med særlige dage og ramadan.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">Velsignede dage</h3><div class="f-desc">Hellige nætter, eid og deres aftener fra i dag og frem, hver med en guide.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">Imsakiye</h3><div class="f-desc">En hel måneds bedetider på én liste; i ramadanen dagstal og iftar.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">Frarådede tider</h3><div class="f-desc">Markeret på dagbuen sammen med den overlevering, de bygger på.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">Renselsesguide</h3><div class="f-desc">Wudu, ghusl og tayammum trin for trin.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">Bønneguide</h3><div class="f-desc">17 slags bøn; stående, siddende eller med bevægelser.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">Zakat og fitra</h3><div class="f-desc">Beregnere baseret på klassisk fiqh.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">Qada-oversigt</h3><div class="f-desc">Manglende bønner pr. bedetid, manglende fastedage pr. dag.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">Fritagelsesdage</h3><div class="f-desc">Menstruation og barsel; din bønneserie bevares.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">Widgets</h3><div class="f-desc">Hjemmeskærm, låst skærm, StandBy – også på Mac.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">Live-aktivitet</h3><div class="f-desc">Nedtællinger i Dynamic Island og på den låste skærm.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">Kontrolcenter</h3><div class="f-desc">Seks hurtige handlinger (iOS 18+) – qibla, næste bøn og mere.</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">Ibada-sporing</h3><div class="f-desc">Ringe for bøn, Koranen, dhikr, hadith og qada.</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">Bønnedisciplin</h3><div class="f-desc">Hvor længe efter hver bedetids begyndelse du beder – denne måned og i alt.</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">Fajr-alarm</h3><div class="f-desc">Ringer før solopgang, hvis du ikke har bedt fajr, og tier, hvis du har; bryder igennem lydløs på iOS 26.</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">Suhur-alarm</h3><div class="f-desc">Indstilles til ramadanen, hver dag eller de anbefalede fastedage.</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">Påmindelse om hellige dage</h3><div class="f-desc">12 hellige dage: hellige nætter samme aften, de øvrige dagen før.</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">Notifikationer</h3><div class="f-desc">På enheden, lokalt, pålideligt.</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">Adhan-lyde</h3><div class="f-desc">Hver bøn i sin egen makam: saba, uşşak, rast, segah, hicaz.</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Siri-genveje</h3><div class="f-desc">Spørg om næste bøn; markér en bøn, en faste eller qada med stemmen.</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">Samlet søgning</h3><div class="f-desc">Én søgning i alle værktøjer – skriv »Baqara 255« for at gå til verset.</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">Bogmærker</h3><div class="f-desc">Gem vers og hadither.</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">iCloud-synkronisering</h3><div class="f-desc">Dine registreringer bliver i din egen iCloud, på alle enheder.</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">Tafsir</h3><div class="f-desc">Diyanets tafsir på tyrkisk – tryk på et vers for at åbne den, med de vers, den dækker.</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">Delekort</h3><div class="f-desc">Smukke kort med vers, hadither, dhikr og Allahs navne.</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">Faste</h3><div class="f-desc">Ramadan, shawwal og registrering dag for dag.</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">Moskeer i nærheden</h3><div class="f-desc">Find moskeer via Apple Kort, uden at din placering når vores servere; kort, afstand, rutevejledning.</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Støt Vakit</h3><div class="f-desc">Frivillige måder at holde den gratis app i live på.</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">Mørk tilstand</h3><div class="f-desc">Varmt, roligt mørke til de sene timer.</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">Bedetider og qibla<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Bedetider</h4><div class="f-desc">12 beregningsmetoder, tager højde for tidszoner, opdager, når du rejser.</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Qibla-kompas</h4><div class="f-desc">Haptisk retningsvisning med afstanden til Kabaen.</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Levende himmel</h4><div class="f-desc">Rigtige stjerner og månen på dagbuen – for hvor du er, lige nu.</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Fajr-alarm</h4><div class="f-desc">Ringer før solopgang, hvis du ikke har bedt fajr, og tier, hvis du har; bryder igennem lydløs på iOS 26.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Adhan-lyde</h4><div class="f-desc">Hver bøn i sin egen makam: saba, uşşak, rast, segah, hicaz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Frivillige bedetider</h4><div class="f-desc">Ishraq, duha, awwabin og nattens dele; valgfrit.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Frarådede tider</h4><div class="f-desc">Markeret på dagbuen sammen med den overlevering, de bygger på.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Velsignede dage</h4><div class="f-desc">Hellige nætter, eid og deres aftener fra i dag og frem, hver med en guide.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Manuel placering</h4><div class="f-desc">Vælg din placering selv, eller lad den følge dig, når du rejser.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Notifikationer</h4><div class="f-desc">På enheden, lokalt, pålideligt.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Moskeer i nærheden</h4><div class="f-desc">Find moskeer via Apple Kort, uden at din placering når vores servere; kort, afstand, rutevejledning.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Koranen og hadith<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Den Hellige Koran</h4><div class="f-desc">114 suraer. Ord for ord, tafsir, klassisk mushaf; oversættelse på tyrkisk og engelsk.</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadith</h4><div class="f-desc">Over 36.000 hadither fra syv store samlinger.</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Offline recitation</h4><div class="f-desc">Vælg recitator og recitationsstil; download suraer eller juz, og lyt offline.</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsir</h4><div class="f-desc">Diyanets tafsir på tyrkisk – tryk på et vers for at åbne den, med de vers, den dækker.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Khatm-status</h4><div class="f-desc">114 suraer, 30 juz; fuldførte khatm og et anslået slutpunkt.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Mushaf-skrift</h4><div class="f-desc">Medina- eller Tyrkiet-skrift – sidelayoutet følger med.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Afspilningslister</h4><div class="f-desc">Sæt suraerne i din egen rækkefølge, giv listen et navn, og lyt fra ende til anden — også offline.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Oplæst oversættelse</h4><div class="f-desc">Hør oversættelsen med enhedens egen stemme — alene eller efter hvert vers, offline.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Dagens indhold</h4><div class="f-desc">Dagens vers, hadith og navn på ét skærmbillede; se en uge tilbage.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Bogmærker</h4><div class="f-desc">Gem vers og hadither.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Delekort</h4><div class="f-desc">Smukke kort med vers, hadither, dhikr og Allahs navne.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Ibada-sporing og dhikr<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Ibada-sporing</h4><div class="f-desc">Ringe for bøn, Koranen, dhikr, hadith og qada.</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Qada-oversigt</h4><div class="f-desc">Manglende bønner pr. bedetid, manglende fastedage pr. dag.</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Dhikr-tæller</h4><div class="f-desc">Fremskridt i en ring, skabeloner og egne dhikr.</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Bønnedisciplin</h4><div class="f-desc">Hvor længe efter hver bedetids begyndelse du beder – denne måned og i alt.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Faste</h4><div class="f-desc">Ramadan, shawwal og registrering dag for dag.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Suhur-alarm</h4><div class="f-desc">Indstilles til ramadanen, hver dag eller de anbefalede fastedage.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbihat</h4><div class="f-desc">33-33-33 eller hele rækkefølgen efter bønnen.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Allahs 99 navne</h4><div class="f-desc">Asma al-Husna med translitteration og betydning; tilføj et hvilket som helst navn som dhikr.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Fritagelsesdage</h4><div class="f-desc">Menstruation og barsel; din bønneserie bevares.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kalender og guider<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Hijri-kalender</h4><div class="f-desc">Gregoriansk + hijri med særlige dage og ramadan.</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Bønneguide</h4><div class="f-desc">17 slags bøn; stående, siddende eller med bevægelser.</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Fredagsprædiken</h4><div class="f-desc">For brugere af Diyanet-metoden: læs, lyt til og gem prædikenen offline.</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakiye</h4><div class="f-desc">En hel måneds bedetider på én liste; i ramadanen dagstal og iftar.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Fredagsguide</h4><div class="f-desc">Forberedelse, ghusl, khutbaen, sura al-Kahf og salawat — hele fredagen på én side.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Renselsesguide</h4><div class="f-desc">Wudu, ghusl og tayammum trin for trin.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Påmindelse om hellige dage</h4><div class="f-desc">12 hellige dage: hellige nætter samme aften, de øvrige dagen før.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zakat og fitra</h4><div class="f-desc">Beregnere baseret på klassisk fiqh.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Enheder og mere<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Bedetider, live-qibla, 13 komplikationer.</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widgets</h4><div class="f-desc">Hjemmeskærm, låst skærm, StandBy – også på Mac.</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live-aktivitet</h4><div class="f-desc">Nedtællinger i Dynamic Island og på den låste skærm.</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac-app</h4><div class="f-desc">Nedtælling i menulinjen, tastaturgenveje, iCloud-synkronisering.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Den samme app på en større skærm; dine registreringer synkroniseres via iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 sprog</h4><div class="f-desc">Brugerflade fra højre mod venstre på arabisk, urdu, persisk og uigurisk.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud-synkronisering</h4><div class="f-desc">Dine registreringer bliver i din egen iCloud, på alle enheder.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri-genveje</h4><div class="f-desc">Spørg om næste bøn; markér en bøn, en faste eller qada med stemmen.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Kontrolcenter</h4><div class="f-desc">Seks hurtige handlinger (iOS 18+) – qibla, næste bøn og mere.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Samlet søgning</h4><div class="f-desc">Én søgning i alle værktøjer – skriv »Baqara 255« for at gå til verset.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Mørk tilstand</h4><div class="f-desc">Varmt, roligt mørke til de sene timer.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Støt Vakit</h4><div class="f-desc">Frivillige måder at holde den gratis app i live på.</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>Forskellen,</span><br><em>målt.</em></h2>
-    <p class="compare-lede">Du ved allerede, hvad der er galt med de andre bønneapps. Her er Vakits svar på hvert punkt, linje for linje.</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">Emne</div><div class="compare-cell">Andre apps</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Reklamer</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Casino- og upassende reklamer lige ved siden af religiøst indhold.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Helt uden reklamer — heller ikke frivillige: Vakit viser slet ingen reklamer.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Privatliv</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Placeringsdata solgt til tredjeparter (omtalt i medierne).</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Koordinaterne når aldrig vores servere. Ingen sporing.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Offline</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Grundfunktioner kræver internetforbindelse.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Bøn, qibla, Koranens tekst, dhikr – alt virker offline.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Låst skærm</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Widgets går i stykker ved iOS-opdateringer.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Live-aktivitet og Dynamic Island; StandBy fra iOS 17.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Præcision</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Fejl ved sommertid, få beregningsmetoder.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>12 metoder, tager højde for tidszoner, opdager rejser.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Enheder</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Kun telefonen; ur og computer mangler eller er halvfærdige.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>iPhone, iPad og Mac via iCloud; Apple Watch synkroniseres gennem iPhone.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Forældede brugerflader; tilbageskridt efter hver opdatering.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Liquid Glass på iOS 26, kører fra iOS 16.4. Roligt, moderne, hurtigt.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Pris</div><div class="compare-cell other"><span class="cmark no">Nej</span><br><br>Betalingsmure, abonnementer, »premium«-niveauer.</div><div class="compare-cell vakit"><span class="cmark yes">Ja</span><br><br>Gratis. Ingen niveauer, intet mersalg.</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Vis alle 51 værktøjer</button>
   </div>
 </section>
 
@@ -728,7 +767,7 @@
       <h2><span>Varme ord</span><br><em>fra rigtige brugere.</em></h2>
       <div class="t-meta">
         <span>Gennemsnitlig bedømmelse</span>
-        <b>4.8 ★</b>
+        <b>4,8 ★</b>
         <span>ud fra 467 bedømmelser i App Store</span>
       </div>
     </div>
@@ -802,6 +841,15 @@
   </div>
   <div class="foot-sig">Lavet med omhu · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-da" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>Hent i App Store</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "da",

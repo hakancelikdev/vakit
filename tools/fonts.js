@@ -53,7 +53,7 @@ const SCRIPTS = {
 /** Google Fonts stylesheet URL for a script: the brand faces plus its Noto family. */
 function fontHref(script) {
   const extra = SCRIPTS[script].families ? `&family=${SCRIPTS[script].families}` : "";
-  return `https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700${extra}&display=swap`;
+  return `https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500${extra}&display=swap`;
 }
 
 /** Scripts without spaces between words: split headings join with no gap. */

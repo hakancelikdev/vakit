@@ -26,7 +26,7 @@ const path = require("path");
 const C = require("./content.js");
 const { validateLocale } = require("./tools/validate.js");
 
-const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
+const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
 // Long-form legal prose: the Turkish + English originals, one module per document.
 const PRESS = require("./press.js");
@@ -77,14 +77,19 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
-/** Resolve {featureCount} / {ratingCount} placeholders in copy strings. */
+/** Resolve {featureCount} / {ratingCount} / {screenCount} placeholders in copy strings. */
 function t(lang, key) {
   const raw = COPY[lang][key];
   if (raw === undefined) throw new Error(`Missing copy key "${key}" for "${lang}"`);
   return raw
     .replace(/\{featureCount\}/g, String(FEATURES[lang].length))
-    .replace(/\{ratingCount\}/g, SITE.rating.count);
+    .replace(/\{ratingCount\}/g, SITE.rating.count)
+    .replace(/\{screenCount\}/g, String(SHOWCASE[lang].length + showcaseMore(lang).length));
 }
+
+/** A number in the page's own notation ("4,8" in Turkish), always in Latin digits like the rest of the page. */
+const num = (lang, v) =>
+  new Intl.NumberFormat(`${LANGS[lang].htmlLang}-u-nu-latn`, { maximumFractionDigits: 1 }).format(Number(v));
 
 /** JSON embedded in HTML: "<" must never close the script early. */
 const jsonLd = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
@@ -252,17 +257,12 @@ function showcaseList(lang) {
     .join("\n");
 }
 
-/** Slot 0 is the preview video; the rest are screenshots in the page's language. */
+/** Screenshots in the page's language; the preview video plays in the hero instead. */
 function showcaseScreens(lang) {
-  const v = LANGS[lang].video;
   return SHOWCASE[lang]
     .map((item, i) =>
-      i === 0
-        ? `        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-${v}.mp4"` +
-          ` poster="/assets/video/sky-${v}-poster.webp" width="390" height="844"` +
-          ` muted loop playsinline autoplay preload="metadata" aria-label="${esc(t(lang, "videoLabel"))}"></video>`
-        : `        <img class="phone-screenshot" data-i="${i}" src="${shotUrl(lang, item.img)}" alt="${esc(item.t)}"` +
-          ` width="390" height="844" loading="lazy">`
+      `        <img class="phone-screenshot${i === 0 ? " on" : ""}" data-i="${i}" src="${shotUrl(lang, item.img)}" alt="${esc(item.t)}"` +
+      ` width="390" height="844" loading="lazy">`
     )
     .concat(showcaseMore(lang).map((m, k) =>
       `        <img class="phone-screenshot" data-i="${SHOWCASE[lang].length + k}" src="${moreUrl(lang, m.img)}" alt="${esc(m.f.n)}"` +
@@ -310,19 +310,62 @@ ${tabs}
     </div>`;
 }
 
-function featureGrid(lang) {
+/** FEATURE_GROUPS as indexes into FEATURES; every feature in exactly one group. */
+function featureGroupIndexes() {
+  const seen = new Set();
+  const groups = FEATURE_GROUPS.map((names) =>
+    names.map((name) => {
+      const i = FEATURES.en.findIndex((f) => f.n === name);
+      if (i < 0) throw new Error(`FEATURE_GROUPS: no feature named "${name}"`);
+      if (seen.has(i)) throw new Error(`FEATURE_GROUPS: "${name}" is in more than one group`);
+      seen.add(i);
+      return i;
+    }));
+  const missing = FEATURES.en.filter((_, i) => !seen.has(i)).map((f) => f.n);
+  if (missing.length) throw new Error(`FEATURE_GROUPS: not in any group: ${missing.join(", ")}`);
+  return groups;
+}
+
+/**
+ * Features in groups. Until "show all" is tapped, each group shows its first
+ * FEATURE_PREVIEW entries (one fewer where the grid has three columns or one);
+ * the rest are still in the HTML, so crawlers read every feature.
+ */
+function featureGroups(lang) {
   const list = FEATURES[lang];
   const total = pad2(list.length);
-  return list
-    .map(
-      (f, i) =>
-        `        <div class="f-cell">` +
-        `<div class="f-num">${pad2(i + 1)} / ${total}</div>` +
-        // h3, not div: these 45 names are the page's only keyword-bearing headings
-        // (the showcase titles are poetic). Styled exactly as before.
-        `<h3 class="f-name">${esc(f.n)}</h3>` +
-        `<div class="f-desc">${esc(f.d)}</div></div>`
-    )
+  let n = 0;
+  return featureGroupIndexes()
+    .map((idxs, g) => {
+      const cells = idxs
+        .map((i, k) => {
+          const f = list[i];
+          const cls = k >= FEATURE_PREVIEW ? " f-extra" : k === FEATURE_PREVIEW - 1 ? " f-last" : "";
+          n += 1;
+          return (
+            `          <div class="f-cell${cls}">` +
+            `<div class="f-num">${pad2(n)} / ${total}</div>` +
+            // A heading, not a div: these names are the page's keyword-bearing
+            // headings (the showcase titles are poetic).
+            `<h4 class="f-name">${esc(f.n)}</h4>` +
+            `<div class="f-desc">${esc(f.d)}</div></div>`
+          );
+        })
+        .join("\n");
+      return `      <div class="f-group">
+        <h3 class="f-group-title">${esc(t(lang, `fg-${g + 1}`))}<span class="f-group-count">${idxs.length}</span></h3>
+        <div class="f-grid">
+${cells}
+        </div>
+      </div>`;
+    })
+    .join("\n");
+}
+
+/** The six prayer rows, rendered with placeholder times so the band doesn't jump when real ones arrive. */
+function clockRows(lang) {
+  return ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"]
+    .map((k) => `        <div class="clock-row"><span class="clock-name"><span class="dot"></span>${esc(PRAYERS[lang][k])}</span><span class="clock-t">--:--</span></div>`)
     .join("\n");
 }
 
@@ -337,8 +380,8 @@ function compareTable(lang) {
       (r) =>
         `        <div class="compare-row">` +
         `<div class="compare-cell feat">${esc(r.f)}</div>` +
-        `<div class="compare-cell other"><span class="cmark no">${esc(t(lang, "c-no"))}</span><br><br>${esc(r.o)}</div>` +
-        `<div class="compare-cell vakit"><span class="cmark yes">${esc(t(lang, "c-yes"))}</span><br><br>${esc(r.v)}</div></div>`
+        `<div class="compare-cell other">${esc(r.o)}</div>` +
+        `<div class="compare-cell vakit">${esc(r.v)}</div></div>`
     )
     .join("\n");
   return head + "\n" + rows;
@@ -366,13 +409,6 @@ function faqList(lang) {
         `<div class="faq-a"><div class="faq-a-inner">${esc(f.a)}</div></div></div>`
     )
     .join("\n");
-}
-
-function marquee(lang) {
-  const p = PRAYERS[lang];
-  const names = [p.Fajr, p.Sunrise, p.Dhuhr, p.Asr, p.Maghrib, p.Isha];
-  const line = Array(3).fill(names.join(" · ")).join(" · ");
-  return `<span>${esc(line)}</span><span>${esc(line)}</span>`;
 }
 
 const APPLE_LOGO =
@@ -480,7 +516,6 @@ ${jsonLd(faqSchema(lang))}
   <div class="nav-links">
     <a href="#showcase">${esc(t(lang, "features"))}</a>
     <a href="#trust">${esc(t(lang, "trust"))}</a>
-    <a href="#compare">${esc(t(lang, "compare"))}</a>
     <a href="#reviews">${esc(t(lang, "reviews"))}</a>
     <a href="#faq">${esc(t(lang, "faq"))}</a>
   </div>
@@ -511,7 +546,7 @@ ${jsonLd(faqSchema(lang))}
 
     <div class="hero-proof">
       <div class="proof">
-        <div class="proof-val">${SITE.rating.value}<span class="star"> ★</span></div>
+        <div class="proof-val">${num(lang, SITE.rating.value)}<span class="star"> ★</span></div>
         <div class="proof-lbl">${esc(t(lang, "p1"))}</div>
       </div>
       <div class="proof">
@@ -523,30 +558,42 @@ ${jsonLd(faqSchema(lang))}
         <div class="proof-lbl">${esc(t(lang, "p3"))}</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
+        <div class="proof-val">${ALL.length}</div>
         <div class="proof-lbl">${esc(t(lang, "p4"))}</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">${esc(C.CITIES[lang][L.city])}</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-${L.video}.mp4" poster="/assets/video/sky-${L.video}-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="${esc(t(lang, "videoLabel"))}"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">${esc(t(lang, "nextPrayer"))}</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true">${marquee(lang)}</div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="${esc(t(lang, "nextPrayer"))}">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">${esc(C.CITIES[lang][L.city])}</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">${esc(t(lang, "nextPrayer"))}</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+${clockRows(lang)}
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
@@ -591,51 +638,35 @@ ${deviceColumn(lang, "watch")}
     </h2>
     <p class="trust-lede">${esc(t(lang, "trust-lede"))}</p>
     <div class="trust-grid">
-      <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
-        <h3>${esc(t(lang, "t-1a"))}</h3>
-        <p>${esc(t(lang, "t-1b"))}</p>
-      </div>
-      <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
-        <h3>${esc(t(lang, "t-2a"))}</h3>
-        <p>${esc(t(lang, "t-2b"))}</p>
-      </div>
-      <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
-        <h3>${esc(t(lang, "t-3a"))}</h3>
-        <p>${esc(t(lang, "t-3b"))}</p>
-      </div>
-      <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
-        <h3>${esc(t(lang, "t-4a"))}</h3>
-        <p>${esc(t(lang, "t-4b"))}</p>
+${[1, 2, 3, 4].map((i) => `      <div class="trust-cell">
+        <div class="trust-cell-num">${pad2(i)}</div>
+        <h3>${esc(t(lang, `t-${i}a`))}</h3>
+        <p>${esc(t(lang, `t-${i}b`))}</p>
+      </div>`).join("\n")}
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">${esc(t(lang, "c-lede"))}</p>
+      <div class="compare-table" id="compareTable">
+${compareTable(lang)}
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">${esc(t(lang, "f-eye"))}</div>
       <h2><span>${esc(t(lang, "f-h1"))}</span><br><em>${esc(t(lang, "f-h2"))}</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-${featureGrid(lang)}
+    <div class="f-groups is-collapsed" id="featGroups">
+${featureGroups(lang)}
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>${esc(t(lang, "c-h1"))}</span><br><em>${esc(t(lang, "c-h2"))}</em></h2>
-    <p class="compare-lede">${esc(t(lang, "c-lede"))}</p>
-    <div class="compare-table" id="compareTable">
-${compareTable(lang)}
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">${esc(t(lang, "f-all"))}</button>
   </div>
 </section>
 
@@ -646,7 +677,7 @@ ${compareTable(lang)}
       <h2><span>${esc(t(lang, "r-h1"))}</span><br><em>${esc(t(lang, "r-h2"))}</em></h2>
       <div class="t-meta">
         <span>${esc(t(lang, "r-m1"))}</span>
-        <b>${SITE.rating.value} ★</b>
+        <b>${num(lang, SITE.rating.value)} ★</b>
         <span>${esc(t(lang, "r-m2"))}</span>
       </div>
     </div>
@@ -695,6 +726,15 @@ ${faqList(lang)}
   </div>
   <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="${storeLink(`site-dock-${lang}`)}" class="btn-primary">
+    ${APPLE_LOGO}
+    <span>${esc(t(lang, "downloadCta"))}</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">${jsonLd(clockData(lang))}</script>
 <script src="/script.js"></script>
@@ -1118,8 +1158,7 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 ## What makes it different
 
 - **Free, with no paywall.** No subscription, no "premium" tier, no locked features.
-- **Completely ad-free.** No screen shows an ad. The one exception is opt-in: a user who
-  wants to support the app can choose to watch an ad.
+- **Completely ad-free.** No screen shows an ad, and there is no opt-in ad either.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 12 calculation methods — not fetched from a server. Quran, qibla,
   dhikr and the calendar all work with no connection.

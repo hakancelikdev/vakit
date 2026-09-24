@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>:root { --serif: 'Instrument Serif', 'Noto Serif JP', 'Hiragino Mincho ProN', serif; --sans: 'Inter', 'Noto Sans JP', 'Hiragino Sans', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
@@ -391,7 +391,6 @@
   <div class="nav-links">
     <a href="#showcase">機能</a>
     <a href="#trust">預かりもの</a>
-    <a href="#compare">Vakit を選ぶ理由</a>
     <a href="#reviews">レビュー</a>
     <a href="#faq">よくある質問</a>
   </div>
@@ -440,7 +439,7 @@
       <span>礼拝のアプリを、</span><br>
       <span>あるべき</span><em>かたちで。</em>
     </h1>
-    <p class="hero-sub">礼拝のアプリを、あるべきかたちで。1日5回の礼拝に寄り添う静かな相棒——クルアーン、キブラ、ズィクル、そしてあなたの日々を大切にするカレンダーとともに。必要のないときはそっと姿を消し、必要なときにはそばにいます。</p>
+    <p class="hero-sub">1日5回の礼拝に寄り添う静かな相棒——クルアーン、キブラ、ズィクル、そしてあなたの日々を大切にするカレンダーとともに。必要のないときはそっと姿を消し、必要なときにはそばにいます。</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-ja" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -463,42 +462,59 @@
         <div class="proof-lbl">計算方法</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">基本機能 · オフライン</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">表示言語</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">東京</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Vakit の礼拝画面：一日の移ろいとともに空も変わっていきます"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">次の礼拝 · あと</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー · イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー · イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー</span><span>イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー · イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー · イムサーク · 日の出 · ズフル · アスル · マグリブ · イシャー</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="次の礼拝 · あと">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">東京</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">次の礼拝 · あと</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>イムサーク</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>日の出</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>ズフル</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>アスル</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>マグリブ</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>イシャー</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · 必要なものはすべて、余計なものは何も</div>
     <h2 class="sc-h2"><span>寄り添う相棒。</span><br><em>注意を奪う機械ではなく。</em></h2>
-    <p class="sc-lede">10の基本ツール。どれも開いた瞬間に心が落ち着くようにデザインしました。タップしてプレビューできます。</p>
+    <p class="sc-lede">15の基本ツール。どれも開いた瞬間に心が落ち着くようにデザインしました。タップしてプレビューできます。</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>空のように。</h3><p>礼拝の時刻が来るたびに、画面も空とともに移り変わります——本物の星と月が、実際の位置に。忌避時間と任意の礼拝の時間は、お好みで表示できます。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>ロックを解除せずに。</h3><p>次の礼拝が、ロック画面にも、ウィジェットにも、Dynamic Island にも、時計にも。静かにひと目見るだけ——見入らせることはありません。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>すべてがひとつに。</h3><p>クルアーン、ハディース、金曜の説教、ズィクル、美名、手引き、カレンダー——すべてをひとつの場所に。有料の壁の向こうに閉じ込めた機能はありません。</p></div><span class="sc-tag">プレビュー</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>正しい方角。</h3><p>キブラの方を向くとスマートフォンが振動し、カアバまでの距離も表示されます。あなたの座標が私たちのサーバーに届くことはありません。</p></div><span class="sc-tag">プレビュー</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>正しい方角。</h3><p>キブラの方を向くとスマートフォンが振動し、カアバまでの距離も表示されます。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>礼拝の歩みを、リングで。</h3><p>礼拝、クルアーン、ズィクル、ハディース、補いのリング。各礼拝の時刻が来てからどれくらいで礼拝したか、そして通読の進み——穏やかな前進、罪悪感はいりません。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>補うたびに、減っていく。</h3><p>生涯の欠かした礼拝を時刻ごとに計算し、ひとつずつ補えます——いつ終わるかの見込みも。</p></div><span class="sc-tag">プレビュー</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>クルアーンを、オフラインでも。</h3><p>読む、聴く、思いをめぐらす——マディーナかトルコの書体、語ごとの追従表示、タフスィール、ダウンロードできる読誦。</p></div><span class="sc-tag">プレビュー</span></button>
@@ -518,7 +534,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakit の礼拝画面：一日の移ろいとともに空も変わっていきます"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/ja/prayer-times.webp" alt="空のように。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/ja/widget.webp" alt="ロックを解除せずに。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/ja/discover.webp" alt="すべてがひとつに。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/ja/qibla.webp" alt="正しい方角。" width="390" height="844" loading="lazy">
@@ -614,111 +630,134 @@
       <span>あなたのデータは</span><em>大切な預かりもの。</em><br>
       <span>商品ではありません。</span>
     </h2>
-    <p class="trust-lede">礼拝を途切れさせないために。ほかの礼拝アプリでは、位置情報の販売が発覚したこともあります。Vakit は別の道を選びました。あなたの座標が私たちのサーバーに届くことはありません。アカウント不要。追跡なし。妥協なし。これは機能ではなく、原則です。</p>
+    <p class="trust-lede">礼拝を途切れさせないために。ほかの礼拝アプリでは、位置情報の販売が発覚したこともあります。Vakit は別の道を選びました。あなたの座標が私たちのサーバーに届くことはありません。アカウント不要。広告なし。あなたのデータを売ることはありません。これは機能ではなく、原則です。</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>ダウンロード。開く。礼拝する。</h3>
         <p>登録もログインも、忘れてしまうパスワードもありません。インストールしたその瞬間から Vakit は使えます。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>スマートフォンの中で計算。</h3>
         <p>礼拝時刻は、あなたが選んだ方法で、現在地をもとに端末内で計算されます。「問い合わせ」のためにサーバーへ何かが送られることはありません。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>正確な位置は、私たちの手元にありません。</h3>
         <p>あなたの座標は私たちのサーバーに送られません。私たちが知っているのは国・都市・地区だけです。住所と近くのモスクを調べるときに限り、位置情報が Apple マップに送られます。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>わかりやすいポリシー。</h3>
         <p>名前・メールアドレス・電話番号を含まない、仮名のユーザーコードに結びついた利用データ。何が送られるかはプライバシーポリシーにひとつずつ書いてあり、1分で読める短さです。</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">ほかの礼拝アプリの問題点は、もうご存じのはず。Vakit がそのひとつひとつにどう応えるか、一行ずつご覧ください。</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">項目</div><div class="compare-cell">ほかのアプリ</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">広告</div><div class="compare-cell other">宗教的な内容の横に、カジノや不適切な広告。</div><div class="compare-cell vakit">広告は一切ありません。任意のものもありません。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">オフライン</div><div class="compare-cell other">基本機能にインターネット接続が必要。</div><div class="compare-cell vakit">礼拝、キブラ、クルアーンの本文、ズィクル——すべてオフラインで。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">ロック画面</div><div class="compare-cell other">iOS のアップデートのたびにウィジェットが壊れる。</div><div class="compare-cell vakit">ライブアクティビティと Dynamic Island。スタンバイは iOS 17 から。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">正確さ</div><div class="compare-cell other">夏時間のずれ、限られた計算方法。</div><div class="compare-cell vakit">12の方法。タイムゾーンに対応し、移動も検知。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">デバイス</div><div class="compare-cell other">スマートフォンだけ。時計やデスクトップはないか、中途半端。</div><div class="compare-cell vakit">iPhone、iPad、Mac は iCloud で、Apple Watch は iPhone を通じて同期。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">デザイン</div><div class="compare-cell other">古びた画面。アップデートのたびに後退。</div><div class="compare-cell vakit">iOS 26 では Liquid Glass、iOS 16.4 から動作。静かで、モダンで、速い。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">費用</div><div class="compare-cell other">有料の壁、サブスクリプション、「プレミアム」プラン。</div><div class="compare-cell vakit">無料。プランの区別も、追加購入の勧誘もありません。</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51のツール</div>
       <h2><span>ひとつのアプリで、</span><br><em>一生の礼拝に足りる。</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">礼拝時刻</h3><div class="f-desc">12の計算方法。タイムゾーンに対応し、移動も検知します。</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">ライブの星空</h3><div class="f-desc">日の軌道に本物の星と月——いまいる場所の、いまこの瞬間の空。</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">任意の礼拝の時間</h3><div class="f-desc">イシュラーク、ドゥハー、アウワービーン、夜の区分。表示はお好みで。</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">手動の位置設定</h3><div class="f-desc">位置を手で設定するか、移動に合わせて自動で追従させるか。</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">礼拝時刻、ライブのキブラ、13種類のコンプリケーション。</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Mac アプリ</h3><div class="f-desc">メニューバーのカウントダウン、キーボードショートカット、iCloud 同期。</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">同じアプリを大きな画面で。記録は iCloud で同期されます。</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25言語</h3><div class="f-desc">アラビア語、ウルドゥー語、ペルシア語、ウイグル語では右から左の画面に。</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">キブラ・コンパス</h3><div class="f-desc">振動で方角を知らせ、カアバまでの距離も表示。</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">聖クルアーン</h3><div class="f-desc">114章。語ごとの解析、訳とタフスィール（トルコ語・英語）、伝統的なムスハフ。</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">ムスハフの書体</h3><div class="f-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">通読の記録</h3><div class="f-desc">114章、30ジュズ。完了した通読と、読み終える日の見込み。</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">オフラインの読誦</h3><div class="f-desc">読誦者と読誦のスタイルを選び、章やジュズをダウンロードしてオフラインで聴けます。</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">プレイリスト</h3><div class="f-desc">好きな順にスーラを並べ、リストに名前を付けて最初から最後まで再生。オフラインでも聴けます。</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">読み上げ翻訳</h3><div class="f-desc">端末の音声で翻訳を聞く — 単独でも各節の後でも、オフラインで。</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">ハディース</h3><div class="f-desc">7つの主要な集成から36,000を超えるハディース。</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">今日のコンテンツ</h3><div class="f-desc">今日の節、ハディース、御名を1画面で。過去1週間もさかのぼれます。</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">金曜の説教</h3><div class="f-desc">Diyanet の計算方法を使う方に：説教を読む、聴く、オフラインで保存する。</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">金曜日ガイド</h3><div class="f-desc">準備、グスル、フトバ、洞窟章、サラワート — 金曜日のすべてを1ページに。</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">ズィクル・カウンター</h3><div class="f-desc">リングで進み具合を表示。プリセットと自分だけのズィクル。</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">タスビーフ</h3><div class="f-desc">33-33-33、または礼拝後の完全な順序。</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">アッラーの美名99</h3><div class="f-desc">99の美名を、音写と意味とともに。ズィクルとして追加することもできます。</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">ヒジュラ暦</h3><div class="f-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">祝福された日々</h3><div class="f-desc">聖なる夜、祭日とその前夜を今日から順に。それぞれにガイド付き。</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">イムサキーヤ</h3><div class="f-desc">1か月分の礼拝時刻を1つのリストで。ラマダーンには日数と断食明けも。</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">忌避時間</h3><div class="f-desc">日の軌道に示し、その根拠となる伝承も添えて。</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">清めの手引き</h3><div class="f-desc">ウドゥー、グスル、タヤンムムを一歩ずつ。</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">礼拝の手引き</h3><div class="f-desc">17の礼拝。立って、座って、または身振りで。</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">ザカートとフィトラ</h3><div class="f-desc">古典的な法学にもとづく計算。</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">補いの記録</h3><div class="f-desc">欠かした礼拝は時刻ごとに、欠かした断食は日ごとに。</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">お休みの日</h3><div class="f-desc">月経と産後の日。礼拝の連続記録は途切れません。</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">ウィジェット</h3><div class="f-desc">ホーム画面、ロック画面、スタンバイ——Mac でも。</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">ライブアクティビティ</h3><div class="f-desc">Dynamic Island とロック画面でカウントダウン。</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">コントロールセンター</h3><div class="f-desc">6つのクイック操作（iOS 18 以降）——キブラ、次の礼拝など。</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">信仰の記録</h3><div class="f-desc">リング：礼拝、クルアーン、ズィクル、ハディース、補い。</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">礼拝の規律</h3><div class="f-desc">各礼拝の時刻が来てからどれくらいで礼拝したか——今月と全期間。</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">ファジュルのアラーム</h3><div class="f-desc">ファジュルを済ませていなければ日の出前に鳴り、済ませていれば鳴りません。iOS 26 では消音モードでも鳴ります。</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">スフールのアラーム</h3><div class="f-desc">ラマダーン中、毎日、またはスンナの断食の日に設定できます。</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">祝福の日のリマインダー</h3><div class="f-desc">12の祝福の日。聖なる夜はその日の夕方に、ほかは前日にお知らせします。</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">通知</h3><div class="f-desc">端末内で、ローカルに、確実に。</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">アザーンの音</h3><div class="f-desc">礼拝ごとにそれぞれのマカームで：サバー、ウッシャーク、ラースト、セガー、ヒジャーズ。</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Siri ショートカット</h3><div class="f-desc">次の礼拝を声でたずね、礼拝・断食・補いを声で記録できます。</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">まとめて検索</h3><div class="f-desc">ひとつの検索ですべてのツールを——「Baqarah 255」と入力すれば、その節へ。</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">しおり</h3><div class="f-desc">節とハディースを保存。</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">iCloud 同期</h3><div class="f-desc">記録はあなた自身の iCloud に。すべてのデバイスで。</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">タフスィール</h3><div class="f-desc">Diyanet のタフスィール。節をタップすると、その節を含む範囲とともに開きます。</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">共有カード</h3><div class="f-desc">節、ハディース、ズィクル、アッラーの美名を美しいカードに。</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">断食</h3><div class="f-desc">ラマダーン、シャウワール、そして日々の記録。</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">近くのモスク</h3><div class="f-desc">Apple マップで探せます。位置情報は私たちのサーバーに届きません。地図、距離、経路。</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Vakit を支える</h3><div class="f-desc">無料のアプリを続けていくための、任意の支援方法。</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">ダークモード</h3><div class="f-desc">夜遅い時間のための、あたたかく静かなダーク。</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">礼拝時刻とキブラ<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">礼拝時刻</h4><div class="f-desc">12の計算方法。タイムゾーンに対応し、移動も検知します。</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">キブラ・コンパス</h4><div class="f-desc">振動で方角を知らせ、カアバまでの距離も表示。</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">ライブの星空</h4><div class="f-desc">日の軌道に本物の星と月——いまいる場所の、いまこの瞬間の空。</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">ファジュルのアラーム</h4><div class="f-desc">ファジュルを済ませていなければ日の出前に鳴り、済ませていれば鳴りません。iOS 26 では消音モードでも鳴ります。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">アザーンの音</h4><div class="f-desc">礼拝ごとにそれぞれのマカームで：サバー、ウッシャーク、ラースト、セガー、ヒジャーズ。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">任意の礼拝の時間</h4><div class="f-desc">イシュラーク、ドゥハー、アウワービーン、夜の区分。表示はお好みで。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">忌避時間</h4><div class="f-desc">日の軌道に示し、その根拠となる伝承も添えて。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">祝福された日々</h4><div class="f-desc">聖なる夜、祭日とその前夜を今日から順に。それぞれにガイド付き。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">手動の位置設定</h4><div class="f-desc">位置を手で設定するか、移動に合わせて自動で追従させるか。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">通知</h4><div class="f-desc">端末内で、ローカルに、確実に。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">近くのモスク</h4><div class="f-desc">Apple マップで探せます。位置情報は私たちのサーバーに届きません。地図、距離、経路。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">クルアーンとハディース<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">聖クルアーン</h4><div class="f-desc">114章。語ごとの解析、訳とタフスィール（トルコ語・英語）、伝統的なムスハフ。</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">ハディース</h4><div class="f-desc">7つの主要な集成から36,000を超えるハディース。</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">オフラインの読誦</h4><div class="f-desc">読誦者と読誦のスタイルを選び、章やジュズをダウンロードしてオフラインで聴けます。</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">タフスィール</h4><div class="f-desc">Diyanet のタフスィール。節をタップすると、その節を含む範囲とともに開きます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">通読の記録</h4><div class="f-desc">114章、30ジュズ。完了した通読と、読み終える日の見込み。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">ムスハフの書体</h4><div class="f-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">プレイリスト</h4><div class="f-desc">好きな順にスーラを並べ、リストに名前を付けて最初から最後まで再生。オフラインでも聴けます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">読み上げ翻訳</h4><div class="f-desc">端末の音声で翻訳を聞く — 単独でも各節の後でも、オフラインで。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">今日のコンテンツ</h4><div class="f-desc">今日の節、ハディース、御名を1画面で。過去1週間もさかのぼれます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">しおり</h4><div class="f-desc">節とハディースを保存。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">共有カード</h4><div class="f-desc">節、ハディース、ズィクル、アッラーの美名を美しいカードに。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">信仰の記録とズィクル<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">信仰の記録</h4><div class="f-desc">リング：礼拝、クルアーン、ズィクル、ハディース、補い。</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">補いの記録</h4><div class="f-desc">欠かした礼拝は時刻ごとに、欠かした断食は日ごとに。</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">ズィクル・カウンター</h4><div class="f-desc">リングで進み具合を表示。プリセットと自分だけのズィクル。</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">礼拝の規律</h4><div class="f-desc">各礼拝の時刻が来てからどれくらいで礼拝したか——今月と全期間。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">断食</h4><div class="f-desc">ラマダーン、シャウワール、そして日々の記録。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">スフールのアラーム</h4><div class="f-desc">ラマダーン中、毎日、またはスンナの断食の日に設定できます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">タスビーフ</h4><div class="f-desc">33-33-33、または礼拝後の完全な順序。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">アッラーの美名99</h4><div class="f-desc">99の美名を、音写と意味とともに。ズィクルとして追加することもできます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">お休みの日</h4><div class="f-desc">月経と産後の日。礼拝の連続記録は途切れません。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">暦と手引き<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">ヒジュラ暦</h4><div class="f-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">礼拝の手引き</h4><div class="f-desc">17の礼拝。立って、座って、または身振りで。</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">金曜の説教</h4><div class="f-desc">Diyanet の計算方法を使う方に：説教を読む、聴く、オフラインで保存する。</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">イムサキーヤ</h4><div class="f-desc">1か月分の礼拝時刻を1つのリストで。ラマダーンには日数と断食明けも。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">金曜日ガイド</h4><div class="f-desc">準備、グスル、フトバ、洞窟章、サラワート — 金曜日のすべてを1ページに。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">清めの手引き</h4><div class="f-desc">ウドゥー、グスル、タヤンムムを一歩ずつ。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">祝福の日のリマインダー</h4><div class="f-desc">12の祝福の日。聖なる夜はその日の夕方に、ほかは前日にお知らせします。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">ザカートとフィトラ</h4><div class="f-desc">古典的な法学にもとづく計算。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">デバイスとその他<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">礼拝時刻、ライブのキブラ、13種類のコンプリケーション。</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">ウィジェット</h4><div class="f-desc">ホーム画面、ロック画面、スタンバイ——Mac でも。</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">ライブアクティビティ</h4><div class="f-desc">Dynamic Island とロック画面でカウントダウン。</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac アプリ</h4><div class="f-desc">メニューバーのカウントダウン、キーボードショートカット、iCloud 同期。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">同じアプリを大きな画面で。記録は iCloud で同期されます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25言語</h4><div class="f-desc">アラビア語、ウルドゥー語、ペルシア語、ウイグル語では右から左の画面に。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud 同期</h4><div class="f-desc">記録はあなた自身の iCloud に。すべてのデバイスで。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri ショートカット</h4><div class="f-desc">次の礼拝を声でたずね、礼拝・断食・補いを声で記録できます。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">コントロールセンター</h4><div class="f-desc">6つのクイック操作（iOS 18 以降）——キブラ、次の礼拝など。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">まとめて検索</h4><div class="f-desc">ひとつの検索ですべてのツールを——「Baqarah 255」と入力すれば、その節へ。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">ダークモード</h4><div class="f-desc">夜遅い時間のための、あたたかく静かなダーク。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Vakit を支える</h4><div class="f-desc">無料のアプリを続けていくための、任意の支援方法。</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>その違いを、</span><br><em>ひとつずつ比べて。</em></h2>
-    <p class="compare-lede">ほかの礼拝アプリの問題点は、もうご存じのはず。Vakit がそのひとつひとつにどう応えるか、一行ずつご覧ください。</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">項目</div><div class="compare-cell">ほかのアプリ</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">広告</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>宗教的な内容の横に、カジノや不適切な広告。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>広告は一切ありません。任意のものもありません。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">プライバシー</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>位置情報が第三者に売られる（報道済み）。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>座標が私たちのサーバーに届くことはありません。追跡なし。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">オフライン</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>基本機能にインターネット接続が必要。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>礼拝、キブラ、クルアーンの本文、ズィクル——すべてオフラインで。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">ロック画面</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>iOS のアップデートのたびにウィジェットが壊れる。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>ライブアクティビティと Dynamic Island。スタンバイは iOS 17 から。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">正確さ</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>夏時間のずれ、限られた計算方法。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>12の方法。タイムゾーンに対応し、移動も検知。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">デバイス</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>スマートフォンだけ。時計やデスクトップはないか、中途半端。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>iPhone、iPad、Mac は iCloud で、Apple Watch は iPhone を通じて同期。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">デザイン</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>古びた画面。アップデートのたびに後退。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>iOS 26 では Liquid Glass、iOS 16.4 から動作。静かで、モダンで、速い。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">費用</div><div class="compare-cell other"><span class="cmark no">いいえ</span><br><br>有料の壁、サブスクリプション、「プレミアム」プラン。</div><div class="compare-cell vakit"><span class="cmark yes">はい</span><br><br>無料。プランの区別も、追加購入の勧誘もありません。</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">51のツールをすべて表示</button>
   </div>
 </section>
 
@@ -803,6 +842,15 @@
   </div>
   <div class="foot-sig">心を込めて · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-ja" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>App Store からダウンロード</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "ja",

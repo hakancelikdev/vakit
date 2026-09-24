@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -390,7 +390,6 @@
   <div class="nav-links">
     <a href="#showcase">Veçoritë</a>
     <a href="#trust">Amaneti</a>
-    <a href="#compare">Pse Vakit</a>
     <a href="#reviews">Vlerësimet</a>
     <a href="#faq">Pyetje</a>
   </div>
@@ -439,7 +438,7 @@
       <span>Aplikacioni i ibadetit,</span><br>
       <span>ashtu si</span> <em>duhet të jetë.</em>
     </h1>
-    <p class="hero-sub">Aplikacioni i ibadetit, ashtu si duhet të jetë. Një shoqërues i qetë për pesë namazet e ditës — me Kuran, kiblë, dhikër dhe një kalendar që nderon ditët tuaja. I ndërtuar që të mënjanohet kur nuk ju duhet dhe të jetë pranë jush kur ju duhet.</p>
+    <p class="hero-sub">Një shoqërues i qetë për pesë namazet e ditës — me Kuran, kiblë, dhikër dhe një kalendar që nderon ditët tuaja. I ndërtuar që të mënjanohet kur nuk ju duhet dhe të jetë pranë jush kur ju duhet.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-sq" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -450,7 +449,7 @@
 
     <div class="hero-proof">
       <div class="proof">
-        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-val">4,8<span class="star"> ★</span></div>
         <div class="proof-lbl">App Store · 467 vlerësime</div>
       </div>
       <div class="proof">
@@ -462,42 +461,59 @@
         <div class="proof-lbl">Metoda llogaritjeje</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">Veçoritë bazë · pa internet</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">Gjuhë të ndërfaqes</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">Tirana</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Ekrani i namazit në Vakit: qielli ndryshon ndërsa dita ecën"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">Namazi i radhës · pas</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia · Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia · Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia</span><span>Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia · Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia · Imsaku · Lindja e diellit · Dreka · Ikindia · Akshami · Jacia</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="Namazi i radhës · pas">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Tirana</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">Namazi i radhës · pas</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Imsaku</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Lindja e diellit</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Dreka</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Ikindia</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Akshami</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Jacia</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · Gjithçka, asgjë më tepër</div>
     <h2 class="sc-h2"><span>Një shoqërues,</span><br><em>jo një makinë që ju vjedh vëmendjen.</em></h2>
-    <p class="sc-lede">Dhjetë mjete kryesore, secili i menduar t'ju japë qetësi sapo e hapni. Prekni cilindo për ta parë.</p>
+    <p class="sc-lede">20 mjete kryesore, secili i menduar t'ju japë qetësi sapo e hapni. Prekni cilindo për ta parë.</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Si qielli.</h3><p>Me hyrjen e çdo vakti, ekrani ndryshon bashkë me qiellin — yje të vërtetë dhe hëna në vendin e tyre të saktë. Kohët e papëlqyera dhe ato të namazeve nafile janë sipas dëshirës.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Pa e shkyçur.</h3><p>Namazi i radhës në ekranin e kyçjes, në widget, në Dynamic Island dhe në orën tuaj. Një vështrim i qetë — që nuk ju mban mbërthyer.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Të gjitha mjetet, në një vend.</h3><p>Kurani, hadithet, hutbeja e xhumasë, dhikri, esmaja, udhëzuesit dhe kalendari — të gjitha në një vend. Asgjë e mbyllur pas pagesës.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Drejtimi i saktë.</h3><p>Kthehuni nga kibla dhe telefoni dridhet, bashkë me largësinë deri te Qabja. Koordinatat tuaja nuk arrijnë kurrë në serverët tanë.</p></div><span class="sc-tag">Parapamje</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Drejtimi i saktë.</h3><p>Kthehuni nga kibla dhe telefoni dridhet, bashkë me largësinë deri te Qabja.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Ibadeti juaj, në unaza.</h3><p>Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë; sa shpejt faleni pasi hyn vakti, dhe hatmja juaj — përparim i qetë, pa ndjenjë faji.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Kazaja shlyhet ndërsa faleni.</h3><p>Llogaritni namazet kaza të një jete sipas vakteve dhe shlyejini një nga një — me një parashikim se kur do të përfundoni.</p></div><span class="sc-tag">Parapamje</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Kurani, edhe pa internet.</h3><p>Lexoni, dëgjoni, sodisni — kaligrafia e Medinës ose e Turqisë, ndjekje fjalë për fjalë, tefsir dhe lexim që mund të shkarkohet.</p></div><span class="sc-tag">Parapamje</span></button>
@@ -522,7 +538,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Ekrani i namazit në Vakit: qielli ndryshon ndërsa dita ecën"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Si qielli." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Pa e shkyçur." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Të gjitha mjetet, në një vend." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="Drejtimi i saktë." width="390" height="844" loading="lazy">
@@ -623,111 +639,134 @@
       <span>Të dhënat tuaja janë</span> <em>një amanet,</em><br>
       <span>jo një produkt.</span>
     </h2>
-    <p class="trust-lede">Që ibadeti juaj të mos ndërpritet. Aplikacione të tjera namazi janë kapur duke shitur të dhëna vendndodhjeje. Vakit zgjodhi një rrugë tjetër: koordinatat tuaja nuk arrijnë kurrë në serverët tanë. Pa llogari. Pa gjurmim. Pa lëshime. Kjo nuk është një veçori — është një parim.</p>
+    <p class="trust-lede">Që ibadeti juaj të mos ndërpritet. Aplikacione të tjera namazi janë kapur duke shitur të dhëna vendndodhjeje. Vakit zgjodhi një rrugë tjetër: koordinatat tuaja nuk arrijnë kurrë në serverët tanë. Pa llogari. Pa reklama. Të dhënat tuaja nuk shiten kurrë. Kjo nuk është një veçori — është një parim.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>Shkarkojeni. Hapeni. Faluni.</h3>
         <p>Pa regjistrim, pa hyrje, pa fjalëkalim për ta harruar. Vakit fillon të punojë sapo ta instaloni.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>Llogaritet në telefonin tuaj.</h3>
         <p>Kohët e namazit llogariten në vetë pajisjen, sipas vendndodhjes suaj dhe metodës që zgjidhni. Asgjë nuk dërgohet te ndonjë server për t'u «kërkuar».</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>Vendndodhja juaj e saktë nuk është te ne.</h3>
         <p>Koordinatat tuaja nuk dërgohen në serverët tanë; ne dimë vetëm shtetin, qytetin dhe rrethin. Për adresën tuaj dhe xhamitë afër, vendndodhja shkon vetëm te Apple Maps.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>Një politikë e thjeshtë.</h3>
         <p>Të dhëna përdorimi të lidhura me një kod pseudonim përdoruesi — pa emër, email apo telefon. Politika jonë e privatësisë rendit saktësisht çfarë dërgohet, dhe lexohet për një minutë.</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">E dini tashmë çfarë nuk shkon me aplikacionet e tjera të namazit. Ja si u përgjigjet Vakit secilës, rresht për rresht.</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Çështja</div><div class="compare-cell">Aplikacionet e tjera</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Reklamat</div><div class="compare-cell other">Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.</div><div class="compare-cell vakit">Plotësisht pa reklama, as opsionale: Vakit nuk shfaq fare reklama.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Pa internet</div><div class="compare-cell other">Veçoritë bazë kërkojnë lidhje me internetin.</div><div class="compare-cell vakit">Namazi, kibla, teksti i Kuranit, dhikri — të gjitha punojnë pa internet.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Ekrani i kyçjes</div><div class="compare-cell other">Widget-et prishen nga një përditësim i iOS te tjetri.</div><div class="compare-cell vakit">Live Activity dhe Dynamic Island; StandBy nga iOS 17.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Saktësia</div><div class="compare-cell other">Gabime me orën verore, metoda të kufizuara llogaritjeje.</div><div class="compare-cell vakit">12 metoda, sipas zonës kohore, e dallon udhëtimin.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Pajisjet</div><div class="compare-cell other">Vetëm telefoni; ora dhe kompjuteri mungojnë ose janë gjysmake.</div><div class="compare-cell vakit">iPhone, iPad dhe Mac përmes iCloud; Apple Watch sinkronizohet përmes iPhone-it.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Dizajni</div><div class="compare-cell other">Ndërfaqe të vjetruara; kthime prapa pas çdo përditësimi.</div><div class="compare-cell vakit">Liquid Glass në iOS 26, punon që nga iOS 16.4. I qetë, modern, i shpejtë.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Kostoja</div><div class="compare-cell other">Mure pagese, abonime, nivele «premium».</div><div class="compare-cell vakit">Falas. Pa nivele, pa shitje shtesë.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51 mjete</div>
       <h2><span>Një aplikacion,</span><br><em>mjafton për një jetë ibadeti.</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">Kohët e namazit</h3><div class="f-desc">12 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">Qielli i gjallë</h3><div class="f-desc">Yje të vërtetë dhe hëna mbi harkun e ditës — për vendin ku jeni, tani.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">Kohët e namazeve nafile</h3><div class="f-desc">Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">Vendndodhje manuale</h3><div class="f-desc">Zgjidheni vendndodhjen vetë, ose lëreni t'ju ndjekë kur udhëtoni.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">Kohët e namazit, kibla e gjallë, 13 komplikime.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Aplikacioni për Mac</h3><div class="f-desc">Numërim mbrapsht në shiritin e menysë, shkurtore tastiere, sinkronizim me iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">I njëjti aplikacion në ekran më të madh; regjistrimet sinkronizohen me iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25 gjuhë</h3><div class="f-desc">Ndërfaqe nga e djathta në të majtë në arabisht, urdisht, persisht dhe ujgurisht.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">Busulla e kiblës</h3><div class="f-desc">Ju orienton me dridhje dhe tregon largësinë deri te Qabja.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">Kurani Famëlartë</h3><div class="f-desc">114 sure. Fjalë për fjalë, përkthim në turqisht dhe anglisht, tefsir, mus'hafi klasik.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">Kaligrafia e mus'hafit</h3><div class="f-desc">Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">Ndjekja e hatmes</h3><div class="f-desc">114 sure, 30 xhuze; hatmet e përfunduara dhe një datë e parashikuar përfundimi.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">Leximi pa internet</h3><div class="f-desc">Zgjidhni lexuesin dhe stilin e leximit; shkarkoni sure ose xhuze dhe dëgjoni pa internet.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">Listat e luajtjes</h3><div class="f-desc">Rendit suret si të duash, jepi emër listës dhe dëgjoje nga fillimi në fund — edhe pa internet.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">Përkthim i lexuar</h3><div class="f-desc">Dëgjo përkthimin me zërin e pajisjes sate — vetëm ose pas çdo ajeti, pa internet.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">Hadithet</h3><div class="f-desc">Mbi 36 000 hadithe nga shtatë koleksione të mëdha.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">Përmbajtja e ditës</h3><div class="f-desc">Ajeti, hadithi dhe emri i ditës në një ekran; kthehu një javë pas.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">Hutbeja e xhumasë</h3><div class="f-desc">Për përdoruesit e metodës së Diyanet-it: lexoni, dëgjoni dhe ruani hutben pa internet.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">Udhëzuesi i xhumasë</h3><div class="f-desc">Përgatitja, gusli, hutbeja, surja el-Kehf dhe salavatet — e gjithë xhumaja në një faqe.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">Numëruesi i dhikrit</h3><div class="f-desc">Ecuri në formë unaze, dhikër të gatshëm dhe dhikër tuajin.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">Tesbihati</h3><div class="f-desc">33-33-33, ose radha e plotë pas namazit.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">Esmaul-Husna</h3><div class="f-desc">99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">Kalendari hixhri</h3><div class="f-desc">Gregorian dhe hixhri, me ditët e veçanta dhe Ramazanin.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">Ditët e bekuara</h3><div class="f-desc">Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">Imsakija</h3><div class="f-desc">Të gjitha kohët e namazit të një muaji në një listë; në Ramazan numërimi i ditëve dhe iftari.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">Kohët e papëlqyera</h3><div class="f-desc">Të shënuara në harkun e ditës, me transmetimin mbi të cilin mbështeten.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">Udhëzuesi i pastrimit</h3><div class="f-desc">Abdesi, gusuli dhe tejemumi, hap pas hapi.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">Udhëzuesi i namazit</h3><div class="f-desc">17 lloje namazi; në këmbë, ulur ose me shenja.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">Zekati dhe fitrat</h3><div class="f-desc">Llogaritës të mbështetur në fikhun klasik.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">Namazet kaza</h3><div class="f-desc">Namazet kaza sipas vakteve, agjërimet kaza sipas ditëve.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">Ditët me arsye</h3><div class="f-desc">Ditët e menstruacioneve dhe të lehonisë; seria e namazit nuk prishet.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">Widget-et</h3><div class="f-desc">Ekrani kryesor, ekrani i kyçjes, StandBy — edhe në Mac.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">Live Activity</h3><div class="f-desc">Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">Qendra e Kontrollit</h3><div class="f-desc">Gjashtë veprime të shpejta (iOS 18+) — kibla, namazi i radhës e më shumë.</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">Ndjekja e ibadetit</h3><div class="f-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">Disiplina e namazit</h3><div class="f-desc">Sa kohë pas hyrjes së vaktit faleni — këtë muaj dhe gjithë kohës.</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">Alarmi i sabahut</h3><div class="f-desc">Nëse nuk jeni falur, bie para lindjes së diellit; nëse jeni falur, hesht. Në iOS 26 e kapërcen modalitetin e heshtur.</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">Alarmi i syfyrit</h3><div class="f-desc">Vendoset për Ramazanin, për çdo ditë ose për ditët e agjërimeve synet.</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">Kujtesë për ditët e bekuara</h3><div class="f-desc">12 ditë të bekuara: netët e bekuara kujtohen po atë mbrëmje, të tjerat një ditë më parë.</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">Njoftimet</h3><div class="f-desc">Në pajisje, lokale, të besueshme.</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">Zërat e ezanit</h3><div class="f-desc">Çdo namaz në makamin e vet: saba, ushak, rast, segah, hixhaz.</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Shkurtoret e Siri</h3><div class="f-desc">Pyetni për namazin e radhës; shënoni me zë namazin, agjërimin ose kazanë.</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">Kërkim i unifikuar</h3><div class="f-desc">Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">Shënuesit</h3><div class="f-desc">Ruani ajete dhe hadithe.</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">Sinkronizimi me iCloud</h3><div class="f-desc">Regjistrimet tuaja qëndrojnë në iCloud-in tuaj, në çdo pajisje.</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">Tefsiri</h3><div class="f-desc">Tefsiri i Diyanet-it (në turqisht dhe anglisht); prekni një ajet dhe hapet bashkë me grupin e ajeteve që mbulon.</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">Kartela për t'u ndarë</h3><div class="f-desc">Kartela të bukura për ajete, hadithe, dhikër dhe emrat e Allahut.</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">Agjërimi</h3><div class="f-desc">Ramazani, Shevali dhe ndjekja ditë për ditë.</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">Xhamitë afër</h3><div class="f-desc">Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Mbështetni Vakit</h3><div class="f-desc">Mënyra vullnetare për ta mbajtur gjallë aplikacionin falas.</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">Modaliteti i errët</h3><div class="f-desc">Një errësirë e ngrohtë dhe e qetë për orët e vona.</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">Kohët e namazit dhe kibla<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Kohët e namazit</h4><div class="f-desc">12 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni.</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Busulla e kiblës</h4><div class="f-desc">Ju orienton me dridhje dhe tregon largësinë deri te Qabja.</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Qielli i gjallë</h4><div class="f-desc">Yje të vërtetë dhe hëna mbi harkun e ditës — për vendin ku jeni, tani.</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Alarmi i sabahut</h4><div class="f-desc">Nëse nuk jeni falur, bie para lindjes së diellit; nëse jeni falur, hesht. Në iOS 26 e kapërcen modalitetin e heshtur.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Zërat e ezanit</h4><div class="f-desc">Çdo namaz në makamin e vet: saba, ushak, rast, segah, hixhaz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Kohët e namazeve nafile</h4><div class="f-desc">Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Kohët e papëlqyera</h4><div class="f-desc">Të shënuara në harkun e ditës, me transmetimin mbi të cilin mbështeten.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Ditët e bekuara</h4><div class="f-desc">Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Vendndodhje manuale</h4><div class="f-desc">Zgjidheni vendndodhjen vetë, ose lëreni t'ju ndjekë kur udhëtoni.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Njoftimet</h4><div class="f-desc">Në pajisje, lokale, të besueshme.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Xhamitë afër</h4><div class="f-desc">Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kurani dhe hadithet<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Kurani Famëlartë</h4><div class="f-desc">114 sure. Fjalë për fjalë, përkthim në turqisht dhe anglisht, tefsir, mus'hafi klasik.</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadithet</h4><div class="f-desc">Mbi 36 000 hadithe nga shtatë koleksione të mëdha.</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Leximi pa internet</h4><div class="f-desc">Zgjidhni lexuesin dhe stilin e leximit; shkarkoni sure ose xhuze dhe dëgjoni pa internet.</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tefsiri</h4><div class="f-desc">Tefsiri i Diyanet-it (në turqisht dhe anglisht); prekni një ajet dhe hapet bashkë me grupin e ajeteve që mbulon.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Ndjekja e hatmes</h4><div class="f-desc">114 sure, 30 xhuze; hatmet e përfunduara dhe një datë e parashikuar përfundimi.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Kaligrafia e mus'hafit</h4><div class="f-desc">Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Listat e luajtjes</h4><div class="f-desc">Rendit suret si të duash, jepi emër listës dhe dëgjoje nga fillimi në fund — edhe pa internet.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Përkthim i lexuar</h4><div class="f-desc">Dëgjo përkthimin me zërin e pajisjes sate — vetëm ose pas çdo ajeti, pa internet.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Përmbajtja e ditës</h4><div class="f-desc">Ajeti, hadithi dhe emri i ditës në një ekran; kthehu një javë pas.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Shënuesit</h4><div class="f-desc">Ruani ajete dhe hadithe.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Kartela për t'u ndarë</h4><div class="f-desc">Kartela të bukura për ajete, hadithe, dhikër dhe emrat e Allahut.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Ndjekja e ibadetit dhe dhikri<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Ndjekja e ibadetit</h4><div class="f-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Namazet kaza</h4><div class="f-desc">Namazet kaza sipas vakteve, agjërimet kaza sipas ditëve.</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Numëruesi i dhikrit</h4><div class="f-desc">Ecuri në formë unaze, dhikër të gatshëm dhe dhikër tuajin.</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Disiplina e namazit</h4><div class="f-desc">Sa kohë pas hyrjes së vaktit faleni — këtë muaj dhe gjithë kohës.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Agjërimi</h4><div class="f-desc">Ramazani, Shevali dhe ndjekja ditë për ditë.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Alarmi i syfyrit</h4><div class="f-desc">Vendoset për Ramazanin, për çdo ditë ose për ditët e agjërimeve synet.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tesbihati</h4><div class="f-desc">33-33-33, ose radha e plotë pas namazit.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Esmaul-Husna</h4><div class="f-desc">99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Ditët me arsye</h4><div class="f-desc">Ditët e menstruacioneve dhe të lehonisë; seria e namazit nuk prishet.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kalendari dhe udhëzuesit<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Kalendari hixhri</h4><div class="f-desc">Gregorian dhe hixhri, me ditët e veçanta dhe Ramazanin.</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Udhëzuesi i namazit</h4><div class="f-desc">17 lloje namazi; në këmbë, ulur ose me shenja.</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Hutbeja e xhumasë</h4><div class="f-desc">Për përdoruesit e metodës së Diyanet-it: lexoni, dëgjoni dhe ruani hutben pa internet.</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakija</h4><div class="f-desc">Të gjitha kohët e namazit të një muaji në një listë; në Ramazan numërimi i ditëve dhe iftari.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Udhëzuesi i xhumasë</h4><div class="f-desc">Përgatitja, gusli, hutbeja, surja el-Kehf dhe salavatet — e gjithë xhumaja në një faqe.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Udhëzuesi i pastrimit</h4><div class="f-desc">Abdesi, gusuli dhe tejemumi, hap pas hapi.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Kujtesë për ditët e bekuara</h4><div class="f-desc">12 ditë të bekuara: netët e bekuara kujtohen po atë mbrëmje, të tjerat një ditë më parë.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zekati dhe fitrat</h4><div class="f-desc">Llogaritës të mbështetur në fikhun klasik.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Pajisjet dhe më shumë<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Kohët e namazit, kibla e gjallë, 13 komplikime.</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget-et</h4><div class="f-desc">Ekrani kryesor, ekrani i kyçjes, StandBy — edhe në Mac.</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Aplikacioni për Mac</h4><div class="f-desc">Numërim mbrapsht në shiritin e menysë, shkurtore tastiere, sinkronizim me iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">I njëjti aplikacion në ekran më të madh; regjistrimet sinkronizohen me iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 gjuhë</h4><div class="f-desc">Ndërfaqe nga e djathta në të majtë në arabisht, urdisht, persisht dhe ujgurisht.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Sinkronizimi me iCloud</h4><div class="f-desc">Regjistrimet tuaja qëndrojnë në iCloud-in tuaj, në çdo pajisje.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Shkurtoret e Siri</h4><div class="f-desc">Pyetni për namazin e radhës; shënoni me zë namazin, agjërimin ose kazanë.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Qendra e Kontrollit</h4><div class="f-desc">Gjashtë veprime të shpejta (iOS 18+) — kibla, namazi i radhës e më shumë.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Kërkim i unifikuar</h4><div class="f-desc">Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Modaliteti i errët</h4><div class="f-desc">Një errësirë e ngrohtë dhe e qetë për orët e vona.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Mbështetni Vakit</h4><div class="f-desc">Mënyra vullnetare për ta mbajtur gjallë aplikacionin falas.</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>Dallimi,</span><br><em>i matur.</em></h2>
-    <p class="compare-lede">E dini tashmë çfarë nuk shkon me aplikacionet e tjera të namazit. Ja si u përgjigjet Vakit secilës, rresht për rresht.</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">Çështja</div><div class="compare-cell">Aplikacionet e tjera</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Reklamat</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Reklama kazinosh dhe të papërshtatshme, pranë përmbajtjes fetare.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Plotësisht pa reklama, as opsionale: Vakit nuk shfaq fare reklama.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Privatësia</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Të dhëna vendndodhjeje të shitura palëve të treta (u raportua publikisht).</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Koordinatat nuk arrijnë në serverët tanë. Pa gjurmim.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Pa internet</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Veçoritë bazë kërkojnë lidhje me internetin.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Namazi, kibla, teksti i Kuranit, dhikri — të gjitha punojnë pa internet.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Ekrani i kyçjes</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Widget-et prishen nga një përditësim i iOS te tjetri.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Live Activity dhe Dynamic Island; StandBy nga iOS 17.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Saktësia</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Gabime me orën verore, metoda të kufizuara llogaritjeje.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>12 metoda, sipas zonës kohore, e dallon udhëtimin.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Pajisjet</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Vetëm telefoni; ora dhe kompjuteri mungojnë ose janë gjysmake.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>iPhone, iPad dhe Mac përmes iCloud; Apple Watch sinkronizohet përmes iPhone-it.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Dizajni</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Ndërfaqe të vjetruara; kthime prapa pas çdo përditësimi.</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Liquid Glass në iOS 26, punon që nga iOS 16.4. I qetë, modern, i shpejtë.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Kostoja</div><div class="compare-cell other"><span class="cmark no">Jo</span><br><br>Mure pagese, abonime, nivele «premium».</div><div class="compare-cell vakit"><span class="cmark yes">Po</span><br><br>Falas. Pa nivele, pa shitje shtesë.</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Shfaq të gjitha 51 mjetet</button>
   </div>
 </section>
 
@@ -738,7 +777,7 @@
       <h2><span>Fjalë të mira nga</span><br><em>përdorues të vërtetë.</em></h2>
       <div class="t-meta">
         <span>Vlerësimi mesatar</span>
-        <b>4.8 ★</b>
+        <b>4,8 ★</b>
         <span>nga 467 vlerësime në App Store</span>
       </div>
     </div>
@@ -812,6 +851,15 @@
   </div>
   <div class="foot-sig">Bërë me kujdes · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-sq" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>Shkarkojeni nga App Store</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "sq",

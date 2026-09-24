@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-09-22",
+  updated: "2026-09-24",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -198,6 +198,19 @@ const SHOWCASE_MORE = [
 // rest are screenshots. Must match SHOTS in tools/import-media.sh.
 const SHOWCASE_IMG = ["prayer-times", "widget", "discover", "qibla", "profile", "qada", "quran", "prayer-guide", "calendar", "zikirmatik"];
 
+// The feature section, in groups (titles: COPY "fg-1"…"fg-5"). Entries are FEATURES
+// names in English; every feature must sit in exactly one group (build.js checks).
+// Until "show all" is tapped, each group shows its first FEATURE_PREVIEW entries,
+// so put the ones worth seeing first at the top of each group.
+const FEATURE_GROUPS = [
+  ["Prayer Times", "Qibla Compass", "Live Sky", "Fajr Alarm", "Adhan Sounds", "Voluntary Prayer Times", "Karahat Times", "Imsakiye", "Manual Location", "Notifications", "Nearby Mosques"],
+  ["Holy Quran", "Hadith", "Offline Recitation", "Tafsir", "Khatm Tracking", "Mushaf Script", "Playlists", "Spoken Translation", "Daily Content", "Bookmarks", "Share Cards"],
+  ["Worship Tracking", "Qada Tracking", "Dhikr Counter", "Prayer Discipline", "Fasting", "Suhoor Alarm", "Tasbihat", "Asma al-Husna", "Excused Days"],
+  ["Hijri Calendar", "Prayer Guide", "Friday Sermon", "Blessed Days", "Friday Guide", "Purification Guide", "Holy Day Reminders", "Zakat & Fitr"],
+  ["Apple Watch", "Widgets", "Live Activity", "Mac App", "iPad", "25 Languages", "iCloud Sync", "Siri Shortcuts", "Control Center", "Unified Search", "Dark Mode", "Support Vakit"],
+];
+const FEATURE_PREVIEW = 4;
+
 // App Store reviewers, in REVIEWS order. Names are never translated.
 const REVIEWERS = ["Meryem Ebrar", "alpaslanx", "h-seyin", "Keskin2298", "Baalbak9907", "Sswnn21", "Mücahade", "h.ç44", "Çerkezin biri", "Bessey Çelik", "tolgalive", "Murat KAYAHAN"];
 
@@ -205,7 +218,7 @@ const META = {
   tr: {
     title: "Vakit: Namaz Vakitleri, Kıble, Kur'an",
     description:
-      "Namaz vakitlerini takip edin, Kıble yönünü bulun, Kur'an-ı Kerim okuyun. iPhone, iPad, Apple Watch ve Mac; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
+      "Namaz vakitlerini takip et, kıbleyi bul, Kur'an-ı Kerim oku. iPhone, iPad, Apple Watch ve Mac; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi. Ücretsiz, reklamsız, çevrimdışı.",
     keywords:
       "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, kaza namazı takibi, cuma hutbesi, kerahat vakitleri, sahur alarmı, apple watch, ipad, mac uygulaması, ezan sesi, hatim takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, namaz uygulaması",
   },
@@ -220,33 +233,33 @@ const META = {
 
 const COPY = {
   tr: {
-    features: "Özellikler", trust: "Emanet", compare: "Neden Vakit", reviews: "Yorumlar", faq: "SSS", download: "İndir",
+    features: "Özellikler", trust: "Emanet", reviews: "Yorumlar", faq: "SSS", download: "İndir",
     eyebrow: "İbadetin yarıda kesilmesin · Ücretsiz · Reklamsız",
     h1a: "İbadet uygulaması", h1b: "nasıl olmalıysa,", h1c: "öyle.",
-    heroSub: "İbadet uygulaması nasıl olmalıysa, öyle. Beş vakit namaz için sade bir arkadaş — Kur'an, kıble, zikir ve günlerinizi onurlandıran bir takvim ile. İhtiyaç duymadığınızda kenara çekilir; duyduğunuzda yanınızdadır.",
+    heroSub: "Beş vakit namaz için sade bir arkadaş — Kur'an, kıble, zikir ve günlerini onurlandıran bir takvim ile. İhtiyaç duymadığında kenara çekilir; duyduğunda yanındadır.",
     downloadCta: "App Store'dan İndir", watchTour: "Turu başlat →",
-    p1: "App Store · {ratingCount} değerlendirme", p2: "Ücretsiz · abonelik yok", p3: "Hesaplama yöntemi", p4: "Çekirdek özellikler · çevrimdışı",
+    p1: "App Store · {ratingCount} değerlendirme", p2: "Ücretsiz · abonelik yok", p3: "Hesaplama yöntemi", p4: "Arayüz dili",
     nextPrayer: "Sıradaki · içinde",
     "sc-head": "§ 01 · Her şey, fazlası değil",
     "sc-h2a": "Bir arkadaş,", "sc-h2b": "bir dikkat makinesi değil.",
-    "sc-lede": "On temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı. Önizlemek için dokun.",
+    "sc-lede": "{screenCount} temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı. Önizlemek için dokun.",
     "trust-eye": "§ 02 · Emanet",
-    "trust-h1": "Verileriniz", "trust-h2": "bir emanettir,", "trust-h3": "bir ürün değil.",
-    "trust-lede": "İbadetin yarıda kesilmesin. Diğer ibadet uygulamaları konum verilerini satarken yakalandı. Vakit farklı bir yol seçti: koordinatlarınız sunucumuza hiç gelmez. Hesap yok. Takip yok. Taviz yok.",
+    "trust-h1": "Verilerin", "trust-h2": "bir emanettir,", "trust-h3": "bir ürün değil.",
+    "trust-lede": "İbadetin yarıda kesilmesin. Diğer ibadet uygulamaları konum verilerini satarken yakalandı. Vakit farklı bir yol seçti: koordinatların sunucumuza hiç gelmez. Hesap yok. Reklam yok. Verilerin satılmaz.",
     "t-1a": "İndir. Aç. Kıl.",
     "t-1b": "Kayıt yok, giriş yok, unutacağın bir şifre yok. Vakit yüklediğin anda çalışır.",
     "t-2a": "Telefonunda hesaplanır.",
-    "t-2b": "Namaz vakitleri, seçtiğin yönteme göre cihazında yerel olarak hesaplanır. Hiçbir sunucuya 'sorgu' gitmez.",
+    "t-2b": "Namaz vakitleri, seçtiğin yönteme göre cihazında yerel olarak hesaplanır. Vakitler bir sunucudan sorgulanmaz.",
     "t-3a": "Tam konumun bizde değil.",
     "t-3b": "Koordinatların sunucumuza gönderilmez; biz yalnız ülke, il ve ilçeyi biliriz. Adresin ve yakındaki camiler için konum yalnız Apple Haritalar'a gider.",
     "t-4a": "Sade bir politika.",
     "t-4b": "Ad, e-posta ya da telefon içermeyen, takma bir kullanıcı koduna bağlı kullanım verisi. Neyin gönderildiği gizlilik politikasında tek tek yazılı — bir dakikada okunacak kadar kısa.",
     "f-eye": "§ 03 · {featureCount} araç",
     "f-h1": "Tek uygulama,", "f-h2": "bir ömürlük ibadete yeter.",
-    "c-h1": "Fark,", "c-h2": "ölçülmüş.",
+    "fg-1": "Vakitler ve kıble", "fg-2": "Kur'an ve hadis", "fg-3": "İbadet takibi ve zikir", "fg-4": "Takvim ve rehberler", "fg-5": "Cihazlar ve dahası",
+    "f-all": "{featureCount} aracın tümünü gör",
     "c-lede": "Diğer ibadet uygulamalarındaki sorunları biliyorsun. İşte Vakit'in her birine satır satır cevabı.",
     "c-head-f": "Mesele", "c-head-o": "Diğer uygulamalar", "c-head-v": "Vakit",
-    "c-no": "Hayır", "c-yes": "Evet",
     "r-h1": "Gerçek kullanıcılardan", "r-h2": "güzel sözler.",
     "r-m1": "Ortalama puan", "r-m2": "{ratingCount} App Store değerlendirmesinden",
     "r-note": "",
@@ -262,19 +275,19 @@ const COPY = {
     videoLabel: "Vakit'in namaz ekranı: gün ilerledikçe gökyüzü de değişiyor",
   },
   en: {
-    features: "Features", trust: "Trust", compare: "Why Vakit", reviews: "Reviews", faq: "FAQ", download: "Download",
+    features: "Features", trust: "Trust", reviews: "Reviews", faq: "FAQ", download: "Download",
     eyebrow: "Don't let your worship be interrupted · Free · Ad-free",
     h1a: "The worship app,", h1b: "as it", h1c: "should be.",
-    heroSub: "The worship app, as it should be. A quiet companion for the five daily prayers — with Quran, qibla, dhikr, and a calendar that honors your days. Built to disappear when you don't need it. Waiting when you do.",
+    heroSub: "A quiet companion for the five daily prayers — with Quran, qibla, dhikr, and a calendar that honors your days. Built to disappear when you don't need it. Waiting when you do.",
     downloadCta: "Download on the App Store", watchTour: "Take the tour →",
-    p1: "App Store · {ratingCount} ratings", p2: "Free · no subscription", p3: "Calculation methods", p4: "Core features · offline",
+    p1: "App Store · {ratingCount} ratings", p2: "Free · no subscription", p3: "Calculation methods", p4: "Interface languages",
     nextPrayer: "Next · in",
     "sc-head": "§ 01 · Everything, nothing extra",
     "sc-h2a": "A companion,", "sc-h2b": "not an attention machine.",
-    "sc-lede": "Ten core tools, each designed to feel calm the moment you open it. Tap any to preview.",
+    "sc-lede": "{screenCount} core tools, each designed to feel calm the moment you open it. Tap any to preview.",
     "trust-eye": "§ 02 · Emanet — a trust",
     "trust-h1": "Your data is", "trust-h2": "a trust,", "trust-h3": "not a product.",
-    "trust-lede": "Don't let your worship be interrupted. Other prayer apps have been caught selling location data. Vakit went a different way: your coordinates never reach our servers. No account. No tracking. No compromise. This isn't a feature — it's a principle.",
+    "trust-lede": "Don't let your worship be interrupted. Other prayer apps have been caught selling location data. Vakit went a different way: your coordinates never reach our servers. No account. No ads. Your data is never sold. This isn't a feature — it's a principle.",
     "t-1a": "Download. Open. Pray.",
     "t-1b": "No sign-up, no login, no password you'll forget. Vakit starts working the moment you install it.",
     "t-2a": "Calculated on your phone.",
@@ -285,10 +298,10 @@ const COPY = {
     "t-4b": "Usage data tied to a pseudonymous code — no name, email or phone. The privacy policy lists exactly what is sent, and it's short enough to read in a minute.",
     "f-eye": "§ 03 · {featureCount} tools",
     "f-h1": "One app,", "f-h2": "enough for a life of worship.",
-    "c-h1": "The difference,", "c-h2": "measured.",
+    "fg-1": "Prayer times & qibla", "fg-2": "Quran & hadith", "fg-3": "Worship tracking & dhikr", "fg-4": "Calendar & guides", "fg-5": "Devices & more",
+    "f-all": "Show all {featureCount} tools",
     "c-lede": "You already know what's wrong with the other prayer apps. Here's how Vakit answers each one, line by line.",
     "c-head-f": "Matter", "c-head-o": "Other apps", "c-head-v": "Vakit",
-    "c-no": "No", "c-yes": "Yes",
     "r-h1": "Kind words from", "r-h2": "real worshippers.",
     "r-m1": "Average rating", "r-m2": "from {ratingCount} App Store ratings",
     "r-note": "Reviews from the Turkish App Store, translated from Turkish.",
@@ -379,7 +392,7 @@ const FEATURES = {
     { n: "Siri Kısayolları", d: "Sonraki vakti sor; namazı, orucu, kazayı sesle işaretle." },
     { n: "Birleşik Arama", d: "Tek arama, her araç — 'Bakara 255' yaz, âyete git." },
     { n: "Yer İmleri", d: "Ayet ve hadisleri kaydet." },
-    { n: "iCloud Senkron", d: "Kayıtlarınız kendi iCloud alanınızda, her cihazda." },
+    { n: "iCloud Senkron", d: "Kayıtların kendi iCloud alanında, her cihazında." },
     { n: "Tefsir", d: "Diyanet tefsiri; âyete dokun, ilgili âyet aralığıyla açılsın." },
     { n: "Paylaşım Kartları", d: "Ayet, hadis, zikir ve esma için güzel kartlar." },
     { n: "Oruç", d: "Ramazan, Şevval ve günlük takip." },
@@ -442,26 +455,26 @@ const FEATURES = {
   ],
 };
 
-// Ten entries, in SHOWCASE_IMG order: the first is the preview video, the rest
-// pair with assets/screenshots/<shots>/<img>.webp.
+// Ten entries, in SHOWCASE_IMG order, each paired with
+// assets/screenshots/<shots>/<img>.webp. The preview video plays in the hero.
 const SHOWCASE = {
   tr: [
     { t: "Gökyüzü gibi.", d: "Vakit girdikçe ekran da gökyüzüyle birlikte değişir; yıldızlar ve ay gerçek yerlerinde. Kerahat ve nafile vakitleri isteğe bağlı." },
-    { t: "Ekranı açmadan.", d: "Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinizde. Sessiz bir bakış — hiç dikkat çalmadan." },
+    { t: "Ekranı açmadan.", d: "Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinde. Sessiz bir bakış — hiç dikkat çalmadan." },
     { t: "Tüm araçlar, tek yerde.", d: "Kur'an, hadis, Cuma hutbesi, zikir, esma, rehberler ve takvim — tek bir hub'da. Hiçbir özellik paywall arkasında değil." },
-    { t: "Doğru yön.", d: "Kıbleye döndüğünüzde telefon titrer; Kâbe'ye mesafe de yanında. Koordinatlarınız sunucumuza hiç gelmez." },
-    { t: "İbadetinizin halkaları.", d: "Namaz, Kur'an, zikir, hadis ve kaza için halkalar; namazı vakit girdikten ne kadar sonra kıldığınız ve hatim — sakin ilerleme, suçluluk yok." },
-    { t: "Kaza, kıldıkça erir.", d: "Ömür boyu kaza borcunuzu vakit bazlı hesaplayın, kıldıkça düşün; ne zaman biteceği de görünür." },
+    { t: "Doğru yön.", d: "Kıbleye döndüğünde telefon titrer; Kâbe'ye mesafe de yanında." },
+    { t: "İbadetinin halkaları.", d: "Namaz, Kur'an, zikir, hadis ve kaza için halkalar; namazı vakit girdikten ne kadar sonra kıldığın ve hatim — sakin ilerleme, suçluluk yok." },
+    { t: "Kaza, kıldıkça erir.", d: "Ömür boyu kaza borcunu vakit bazlı hesapla, kıldıkça düş; ne zaman biteceği de görünür." },
     { t: "Kur'an, internetsiz de.", d: "Oku, dinle, tefekkür et — Medine ya da Türkiye hattı, kelime kelime takip, tefsir ve indirilebilen tilavet." },
     { t: "On yedi namaz, resimli.", d: "Abdestten tesbihata; ayakta, oturarak ya da îmâ ile — adım adım, kibirsiz, öğretici." },
     { t: "Hatırlayan bir takvim.", d: "Hicri ve Miladi birlikte. Kandil geceleri, Ramazan, bayramlar, arefe; altında ayın ibadet özeti." },
-    { t: "Sayaç elinizde.", d: "Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirleriniz ve günlük hedef." },
+    { t: "Sayaç elinde.", d: "Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirlerin ve günlük hedef." },
   ],
   en: [
     { t: "Like the sky.", d: "As each prayer time enters, the screen changes with the sky — real stars and the moon in their true places. Makruh and voluntary times are optional." },
     { t: "Without unlocking.", d: "The next prayer on your Lock Screen, in a widget, in the Dynamic Island and on your watch. A quiet glance — never a stare." },
     { t: "Every tool, in one place.", d: "Quran, hadith, Friday sermon, dhikr, asma, guides and the calendar — all in one hub. Nothing locked behind a paywall." },
-    { t: "The right direction.", d: "Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside. Your coordinates never reach our servers." },
+    { t: "The right direction.", d: "Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside." },
     { t: "Your worship, in rings.", d: "Rings for prayer, Quran, dhikr, hadith and qada; how soon after each time enters you pray, and your khatm — gentle progress, no guilt." },
     { t: "Qada, cleared as you pray.", d: "Calculate a lifetime of missed prayers by time slot and clear them one by one — with an estimate of when you'll be done." },
     { t: "The Quran, even offline.", d: "Read, listen, reflect — Madinah or Türkiye script, word-by-word follow-along, tafsir and downloadable recitation." },
@@ -474,7 +487,6 @@ const SHOWCASE = {
 const COMPARE = {
   tr: [
     { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Tamamen reklamsız. İsteğe bağlısı da yok: Vakit hiç reklam göstermez." },
-    { f: "Gizlilik", o: "Üçüncü taraflara satılan konum verisi (basına yansıdı).", v: "Koordinatlar sunucumuza gitmez. Takip yok." },
     { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz, kıble, Kur'an metni, zikir — hepsi çevrimdışı." },
     { f: "Kilit Ekranı", o: "Widget'lar iOS güncellemelerinde bozulur.", v: "Live Activity ve Dynamic Island; iOS 17'den itibaren StandBy." },
     { f: "Doğruluk", o: "Yaz/kış saati hataları, sınırlı hesaplama.", v: "12 yöntem, zaman dilimi bilinci, seyahat algılama." },
@@ -484,7 +496,6 @@ const COMPARE = {
   ],
   en: [
     { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "Completely ad-free. Not even optional ones: Vakit shows no ads at all." },
-    { f: "Privacy", o: "Location data sold to third parties (publicly reported).", v: "Coordinates never reach our servers. No tracking." },
     { f: "Offline", o: "Core features require an internet connection.", v: "Prayer, qibla, Quran text, dhikr — all work offline." },
     { f: "Lock Screen", o: "Widgets break between iOS updates.", v: "Live Activity and Dynamic Island; StandBy from iOS 17." },
     { f: "Accuracy", o: "DST errors, limited calculation methods.", v: "12 methods, timezone-aware, travel-detecting." },
@@ -531,20 +542,20 @@ const REVIEWS = {
 // this one array — the two can no longer drift apart.
 const FAQ = {
   tr: [
-    { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumunuza göre telefonunuzda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır." },
-    { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazınızda yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsınız. 'Her Zaman' konum izni verirseniz, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
+    { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumuna göre telefonunda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır." },
+    { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazında yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsın. 'Her Zaman' konum izni verirsen, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
     { q: "Her şey gerçekten ücretsiz mi?", a: "Evet. Uygulamanın tamamı ücretsiz: abonelik, paywall ya da 'premium' yok, hiçbir özellik kilitli değil. Destek olmak isteyen bağış yapabilir; bağış hiçbir şeyin kilidini açmaz — zaten kilitli bir şey yok." },
-    { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazınızda, seçtiğiniz yönteme (12 yöntem mevcut) ve konumunuza göre hesaplar." },
-    { q: "Hangi dillerde kullanılabiliyor?", a: "Uygulamanın arayüzü 25 dilde: Türkçe, İngilizce, Arapça, Almanca, Fransızca, İspanyolca, İtalyanca, Hollandaca, Portekizce, Danca, Rusça, Azerice, Arnavutça, Endonezce, Malayca, Çince, Japonca, Tayca, Hintçe, Bengalce, Urduca, Farsça, Uygurca, Svahili ve Fulahça. Cihazınızın dili destekleniyorsa uygulama kendiliğinden o dilde açılır; istediğiniz zaman Ayarlar'dan değiştirebilirsiniz. Arapça, Urduca, Farsça ve Uygurca'da arayüz baştan sona sağdan sola akar. İçerik çevirileri ise şimdilik yalnız Türkçe ve İngilizce: Kur'an meali, okunuş ve hadis çevirileri bu iki dilde; kelime anlamları yalnız İngilizce, bazı hadis koleksiyonlarının Türkçe çevirisi de kısmi. Arapça arayüzde âyetlerin bir kısmı için Arapça tefsir açılır; Cuma hutbesi Diyanet'in yayımladığı dillerde gelir (Türkçe; yayımlandığı haftalarda İngilizce ve Arapça)." },
-    { q: "Hangi cihazlarda çalışıyor?", a: "iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları, masaüstü widget'ları ve macOS 15'ten itibaren kenar çubuğunda sekmeler. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unuzla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir." },
+    { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazında, seçtiğin yönteme (12 yöntem mevcut) ve konumuna göre hesaplar." },
+    { q: "Hangi dillerde kullanılabiliyor?", a: "Uygulamanın arayüzü 25 dilde: Türkçe, İngilizce, Arapça, Almanca, Fransızca, İspanyolca, İtalyanca, Hollandaca, Portekizce, Danca, Rusça, Azerice, Arnavutça, Endonezce, Malayca, Çince, Japonca, Tayca, Hintçe, Bengalce, Urduca, Farsça, Uygurca, Svahili ve Fulahça. Cihazının dili destekleniyorsa uygulama kendiliğinden o dilde açılır; istediğin zaman Ayarlar'dan değiştirebilirsin. Arapça, Urduca, Farsça ve Uygurca'da arayüz baştan sona sağdan sola akar. İçerik çevirileri ise şimdilik yalnız Türkçe ve İngilizce: Kur'an meali, okunuş ve hadis çevirileri bu iki dilde; kelime anlamları yalnız İngilizce, bazı hadis koleksiyonlarının Türkçe çevirisi de kısmi. Arapça arayüzde âyetlerin bir kısmı için Arapça tefsir açılır; Cuma hutbesi Diyanet'in yayımladığı dillerde gelir (Türkçe; yayımlandığı haftalarda İngilizce ve Arapça)." },
+    { q: "Hangi cihazlarda çalışıyor?", a: "iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları, masaüstü widget'ları ve macOS 15'ten itibaren kenar çubuğunda sekmeler. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir." },
     { q: "Ezan sesini seçebiliyor muyum?", a: "Evet. Ezan seçeneğinde her vakit kendi makamında okunur: sabah saba, öğle uşşak, ikindi rast, akşam segah, yatsı hicaz. İstersen her vakte ayrı bir bildirim sesi de seçebilirsin. Ezanlar uygulamayla birlikte geldiği için çalmaları internet gerektirmez." },
-    { q: "Sabah namazı için alarm var mı?", a: "Evet. Sabah namazını henüz kılmadıysanız güneş doğmadan önce çalan bir alarm kurabilirsiniz; namazı kıldıysanız çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır, önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var." },
-    { q: "Cuma hutbesi nereden geliyor?", a: "Diyanet'in o hafta yayımladığı hutbe uygulamaya düşer; okuyabilir, sesli kaydını dinleyebilir ve çevrimdışı okumak için indirebilirsiniz. Hutbe Diyanet'in yayını olduğu için bu bölüm, hesaplama yöntemi Diyanet olan kullanıcılarda görünür." },
-    { q: "Kur'an özelliğinde neler var?", a: "Tüm 114 sure, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet, sesli meal ve hatim takibi. Metin, meal ve tefsir çevrimdışı; tilavet, indirdiğiniz sure ya da cüzlerde internetsiz çalışır. Meali cihazınızın kendi sesi okur — tek başına ya da her ayette tilavetin ardından; bunun için indirme de internet de gerekmez." },
-    { q: "İbadet takibi nasıl çalışır?", a: "Activity Ring tarzı bir görünüm namazlarınızı, Kur'an okumanızı ve zikirlerinizi kaydeder. Ömür kazanızı vakit bazlı takip edebilir, borcunuzu kıldıkça eritebilirsiniz. Süreklilik ve istatistikler nazikçe gösterilir — suçlandırma yok." },
+    { q: "Sabah namazı için alarm var mı?", a: "Evet. Sabah namazını henüz kılmadıysan güneş doğmadan önce çalan bir alarm kurabilirsin; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır, önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var." },
+    { q: "Cuma hutbesi nereden geliyor?", a: "Diyanet'in o hafta yayımladığı hutbe uygulamaya düşer; okuyabilir, sesli kaydını dinleyebilir ve çevrimdışı okumak için indirebilirsin. Hutbe Diyanet'in yayını olduğu için bu bölüm, hesaplama yöntemi Diyanet olan kullanıcılarda görünür." },
+    { q: "Kur'an özelliğinde neler var?", a: "Tüm 114 sure, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet, sesli meal ve hatim takibi. Metin, meal ve tefsir çevrimdışı; tilavet, indirdiğin sure ya da cüzlerde internetsiz çalışır. Meali cihazının kendi sesi okur — tek başına ya da her ayette tilavetin ardından; bunun için indirme de internet de gerekmez." },
+    { q: "İbadet takibi nasıl çalışır?", a: "Activity Ring tarzı bir görünüm namazlarını, Kur'an okumanı ve zikirlerini kaydeder. Ömür kazanı vakit bazlı takip edebilir, borcunu kıldıkça eritebilirsin. Süreklilik ve istatistikler nazikçe gösterilir — suçlandırma yok." },
     { q: "Hangi widget'lar var?", a: "Namaz vakitleri, geri sayım, günün ayeti, günün esması, Hicri takvim, mübarek günler, ay fazı ve ibadet serileri için 25 widget. Ana ekranda, kilit ekranında ve iOS 17'den itibaren StandBy'da; 20'si Mac masaüstünde de." },
     { q: "Apple Watch uygulaması var mı?", a: "Evet. Apple Watch uygulaması namaz vakitlerini (geri sayım + liste), canlı kıble pusulasını ve 13 komplikasyonu destekler. iPhone ile birlikte çalışır — ayrı kurulum yok." },
-    { q: "Verilerim nerede saklanıyor?", a: "Kayıtlarınızın kendisi — kaza defteri, hatim, yer imi listesi, okuma geçmişi, favori camiler — yalnızca cihazınızda ve sizin özel iCloud alanınızda durur. Sunucuya kullanım istatistikleri gider: işaretlediğiniz namaz, günlük ibadet sayılarınız, kaydettiğiniz âyetin ya da hadisin numarası gibi. Ayrıca zikir listeniz ve uygulama içinde aradığınız kelimeler gider; aradığınızı bulamadığınız yerleri görüp aramayı düzeltebilelim diye. Zekât tutarlarınız ve koordinatlarınız hiçbir zaman gönderilmez; konum olarak yalnız ülke, il ve ilçe gider. Hepsi ad, e-posta ya da telefon içermeyen kalıcı bir kullanıcı koduna bağlıdır — takma kimlik, anonim değil. Ayrıntısı gizlilik politikasında." },
+    { q: "Verilerim nerede saklanıyor?", a: "Kayıtlarının kendisi — kaza defteri, hatim, yer imi listesi, okuma geçmişi, favori camiler — yalnızca cihazında ve senin özel iCloud alanında durur. Sunucuya kullanım istatistikleri gider: işaretlediğin namaz, günlük ibadet sayıların, kaydettiğin âyetin ya da hadisin numarası gibi. Ayrıca zikir listen ve uygulama içinde aradığın kelimeler gider; aradığını bulamadığın yerleri görüp aramayı düzeltebilelim diye. Zekât tutarların ve koordinatların hiçbir zaman gönderilmez; konum olarak yalnız ülke, il ve ilçe gider. Hepsi ad, e-posta ya da telefon içermeyen kalıcı bir kullanıcı koduna bağlıdır — takma kimlik, anonim değil. Ayrıntısı gizlilik politikasında." },
   ],
   en: [
     { q: "Does it work without internet?", a: "Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline." },
@@ -645,7 +656,7 @@ function clockCities(lang) {
 
 const CONTENT = {
   SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, CITIES, CITY_CATALOG, FEATURES, SHOWCASE,
-  SHOWCASE_IMG, SHOWCASE_MORE, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
+  SHOWCASE_IMG, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
 };
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;

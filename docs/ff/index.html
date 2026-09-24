@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -390,7 +390,6 @@
   <div class="nav-links">
     <a href="#showcase">Kuutorɗe</a>
     <a href="#trust">Amaana</a>
-    <a href="#compare">Ko waɗi Vakit</a>
     <a href="#reviews">Miijooji</a>
     <a href="#faq">Naamne</a>
   </div>
@@ -439,7 +438,7 @@
       <span>Jaaɓnirgal dewal,</span><br>
       <span>no foti wonirde,</span> <em>non tigi.</em>
     </h1>
-    <p class="hero-sub">Jaaɓnirgal dewal, no foti wonirde, non tigi. Gonɗiɗo deƴƴuɗo ngam juulɗe jowi ɗe ñalawma — wondude e Alkur'aana, alqibla, jikru e kalandiriye teddinoowo balɗe mon. Ina suuɗoo so haajaaka; ina woni ton so haajaama.</p>
+    <p class="hero-sub">Gonɗiɗo deƴƴuɗo ngam juulɗe jowi ɗe ñalawma — wondude e Alkur'aana, alqibla, jikru e kalandiriye teddinoowo balɗe mon. Ina suuɗoo so haajaaka; ina woni ton so haajaama.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-ff" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -450,7 +449,7 @@
 
     <div class="hero-proof">
       <div class="proof">
-        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-val">4,8<span class="star"> ★</span></div>
         <div class="proof-lbl">App Store · notaaji 467</div>
       </div>
       <div class="proof">
@@ -462,42 +461,59 @@
         <div class="proof-lbl">Laabi hesaabo</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">Kuutorɗe mawɗe · tawa enterneet alaa</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">Ɗemɗe jaaɓnirgal</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">Ndakaaru</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Hello juulde Vakit: kammu ina waylo no ñalawma ina yahra"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">Juulde aroore · ko heddii</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe · Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe · Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe</span><span>Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe · Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe · Imsaak · Puɗal naange · Tisbaar · Takkusaan · Futuro · Geeƴe</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="Juulde aroore · ko heddii">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Ndakaaru</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">Juulde aroore · ko heddii</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Imsaak</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Puɗal naange</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Tisbaar</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Takkusaan</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Futuro</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Geeƴe</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · Kala huunde, alaa ko ɓeydaa</div>
     <h2 class="sc-h2"><span>Gonɗiɗo,</span><br><em>wonaa masiŋ nanngoowo hakkille.</em></h2>
-    <p class="sc-lede">Kuutorɗe sappo mawɗe; gooto kala ina addana deƴƴere tuma nde udditaa. Ñoƴƴee gooto ngam ƴeewde.</p>
+    <p class="sc-lede">Kuutorɗe 20 mawɗe; gooto kala ina addana deƴƴere tuma nde udditaa. Ñoƴƴee gooto ngam ƴeewde.</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Hono kammu.</h3><p>Tuma waktu kala naatata, ecraŋ ngal ina waylo e kammu — koode e lewru e nokkuuji mum goonga. Waktuuji makruuha e nafila ko so on njiɗii.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Tawa udditaaki.</h3><p>Juulde aroore e Ecraŋ Sokaaɗo, e widget, e Dynamic Island e montoor mon. Ndaarol deƴƴungol — ngol nanngataa hakkille mon abadaa.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Kala huunde, e nokku gooto.</h3><p>Alkur'aana, hadiisa, khutba Aljumaa, jikru, inɗe Alla, ɗowirɗe e kalandiriye — fof e nokku gooto. Alaa huunde uddaande ɓaawo njoɓdi.</p></div><span class="sc-tag">Ƴeew</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Bannge peewɗo.</h3><p>Fewtee alqibla, telefoŋ mon ina dilla, goɗɗeendi haa Kaaba ina ɓadii. Koordone mon yottataa sarwoor amen abadaa.</p></div><span class="sc-tag">Ƴeew</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Bannge peewɗo.</h3><p>Fewtee alqibla, telefoŋ mon ina dilla, goɗɗeendi haa Kaaba ina ɓadii.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Dewal mon, e taariiɗe.</h3><p>Taariiɗe ngam juulde, Alkur'aana, jikru, hadiisa e kaadaa; no ɓooyri ɓaawo naatgol waktu njuul-ɗon, e khatma mon — yahrude yeeso e newnude, alaa kersa.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Kaadaa, ina ustoo so njuulaa.</h3><p>Hesaabee juulɗe kaadaa nguurndam mon fof e waktu kala, ittee ɗe gooto gooto — e takko ñalawma nde timmata.</p></div><span class="sc-tag">Ƴeew</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Alkur'aana, hay so enterneet alaa.</h3><p>Jangee, heɗee, miijitee — binndol Madiina walla Turkiya, rewindagol konngol e konngol, tafsiir e tilaawa jippinteendi.</p></div><span class="sc-tag">Ƴeew</span></button>
@@ -522,7 +538,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Hello juulde Vakit: kammu ina waylo no ñalawma ina yahra"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Hono kammu." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Tawa udditaaki." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Kala huunde, e nokku gooto." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="Bannge peewɗo." width="390" height="844" loading="lazy">
@@ -623,111 +639,134 @@
       <span>Keɓe mon</span> <em>ko amaana,</em><br>
       <span>wonaa ko yeeyetee.</span>
     </h2>
-    <p class="trust-lede">Hoto dewal mon taƴ. Jaaɓnirɗe juulde goɗɗe tawaama ina njeeya keɓe nokku yimɓe. Vakit suɓii laawol goɗngol: koordone mon yottataa sarwoor amen abadaa. Konte alaa. Ƴeewndagol alaa. Alaa ko accaa e ɗum. Ɗum wonaa kuutorgal — ko laawol ngol min tabitii e mum.</p>
+    <p class="trust-lede">Hoto dewal mon taƴ. Jaaɓnirɗe juulde goɗɗe tawaama ina njeeya keɓe nokku yimɓe. Vakit suɓii laawol goɗngol: koordone mon yottataa sarwoor amen abadaa. Konte alaa. Publisite alaa. Keɓe mon njeeyetaake haa abada. Ɗum wonaa kuutorgal — ko laawol ngol min tabitii e mum.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>Jippin. Uddit. Juul.</h3>
         <p>Winnditagol alaa, naatgol alaa, finnde nde njejjittoton alaa. Vakit ina fuɗɗa gollude tuma nde njippinton ɗum.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>Hesaabee ko e telefoŋ mon.</h3>
         <p>Waktuuji juulde ina hesaabee e nder telefoŋ mon, gila e nokku mon, e laawol ngol cuɓɗon. Alaa ko neldetee e sarwoor ngam 'yiylaade' ɗum.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>Nokku mon feewɗo wonaa e amen.</h3>
         <p>Koordone mon neldetaake sarwoor amen; min anndi tan leydi, wuro mawngo e diiwaan. Ngam aderes mon e jumaaji ɓadiiɗi, nokku mon ina yahra tan e Apple Maps.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>Politik laaɓtuki.</h3>
         <p>Keɓe kuutorgol jokkondiraaɗe e kod kuutoroowo suuɗiiɗo — alaa heen innde, email walla limoore telefoŋ. Politik suturaa amen ina limta huunde kala ko neldetee, ina raɓɓii no ina jangee e hojomaare wootere.</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">Aɗon anndi caɗeele jaaɓnirɗe juulde goɗɗe. Ɗoo ko jaabawol Vakit e gooto kala, doggol e doggol.</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Ko yewtetee</div><div class="compare-cell">Jaaɓnirɗe goɗɗe</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Publisite</div><div class="compare-cell other">Publisite kaziino e ko haanaani, hollaaɗe sara loowdi diine.</div><div class="compare-cell vakit">Publisite alaa fey. Tan si aɗon njiɗi wallude Vakit, aɗon waawi suɓaade yiyde publisite.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Tawa enterneet alaa</div><div class="compare-cell other">Kuutorɗe mawɗe ina naamnoo enterneet.</div><div class="compare-cell vakit">Juulde, alqibla, binndol Alkur'aana, jikru — fof ina golloo hay so enterneet alaa.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Ecraŋ Sokaaɗo</div><div class="compare-cell other">Widget ina bonna so iOS hesɗitinaama.</div><div class="compare-cell vakit">Live Activity e Dynamic Island; StandBy gila iOS 17.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Peewal</div><div class="compare-cell other">Juumeeje waylugol montoor (waktu ceeɗu), laabi hesaabo seeɗa.</div><div class="compare-cell vakit">Laabi 12, ina fota e waktu leydi kala, ina tawta ɗanngol.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Kaɓirɗe</div><div class="compare-cell other">Telefoŋ tan; montoor e ordinateer ngalaa walla timmaani.</div><div class="compare-cell vakit">iPhone, iPad e Mac e iCloud; Apple Watch ina jotondira rewrude e iPhone.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Mbaydi</div><div class="compare-cell other">Jaaɓnirɗe ɓooyɗe; ko bonata ɓaawo hesɗitinol kala.</div><div class="compare-cell vakit">Liquid Glass e iOS 26, ina golloo gila iOS 16.4. Deƴƴuɗo, kesɗo, yaawɗo.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Coggu</div><div class="compare-cell other">Njoɓdi, abonemaa, daajeeji 'premium'.</div><div class="compare-cell vakit">Meere. Daajol alaa, alaa ko ɓeydaa ngam yeeyeede.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · Kuutorɗe 51</div>
       <h2><span>Jaaɓnirgal gootal,</span><br><em>ina yonii ngam dewal nguurndam fof.</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">Waktuuji juulde</h3><div class="f-desc">Laabi hesaabo 12, ina fota e waktu leydi kala, ina tawta ɗanngol mon.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">Kammu wuuruɗo</h3><div class="f-desc">Koode e lewru goonga e laawol ñalawma — e nokku mon, jooni jooni.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">Waktuuji nafila</h3><div class="f-desc">Ishraaq, Duhaa, Awwaabiin e pecce jemma; so on njiɗii.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">Nokku suɓaaɗo e juuɗe</h3><div class="f-desc">Suɓee nokku mon e juuɗe mon, walla accee mo jokka on e ɗanngol.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">Waktuuji juulde, alqibla wuuruɗo, complication 13.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Jaaɓnirgal Mac</h3><div class="f-desc">Limoore e barre menu, laabi ɓadiiɗi klawiye, jotondiral iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">Jaaɓnirgal gootal ngal e ecraŋ mawngal; winndanɗe mon ina jotondira e iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">Ɗemɗe 25</h3><div class="f-desc">Jaaɓnirgal ina yahra gila ñaamo faade nano e Aarabu, Urdu, Fersi e Uyguur.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">Kompaas alqibla</h3><div class="f-desc">Dillere hollirta bannge, e goɗɗeendi haa Kaaba.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">Alkur'aana</h3><div class="f-desc">Simooje 114. Konngol e konngol, firo, tafsiir, mushaf aadaa.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">Binndol mushaf</h3><div class="f-desc">Binndol Madiina walla Turkiya — mbaydi hello ina jokka ɗum.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">Jokkugol khatma</h3><div class="f-desc">Simooje 114, juzu 30; khatmaaji timmuɗi e takko ñalawma timmugol.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">Tilaawa, hay so enterneet alaa</h3><div class="f-desc">Suɓee janngoowo e mbaydi janngugol; jippinee simoore walla juzu, heɗiton hay so enterneet alaa.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">Doggi jimɗi</h3><div class="f-desc">Fenndu cuuraaji ɗin no muuyɗaa, inniraa doggol ngol, hettinaa gila fuɗɗoode haa timmoode — hay so enternet alaa.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">Firo daaneteengo</h3><div class="f-desc">Heɗo firo e daande masiŋ maa — kanko tan walla caggal kala aaya, tawa alaa internet.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">Hadiisa</h3><div class="f-desc">Hadiisaaji ɓuri 36,000 e nder deftere mawɗe jeeɗiɗi.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">Ko ñalawma addi</h3><div class="f-desc">Aaya, hadiis e innde ñalawma e yaynirde wootere; yiltoo yontere ɓennunde.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">Khutba Aljumaa</h3><div class="f-desc">Ngam ɓeen ɓe kuutortoo laawol Diyanet: jangee, heɗee, danndee khutba ndee ngam heɓde nde hay so enterneet alaa.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">Peewnirgol Aljumaa</h3><div class="f-desc">Heblo, ɓuutol, khudba, suura al-Kahf e salaatu — Aljumaa fof e hello gootol.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">Limoowo jikru</h3><div class="f-desc">Yahrude yeeso e nder taariindi, jikru heɓaaɗi e jikru mon keeriiɗo.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">Tasbiiha</h3><div class="f-desc">33-33-33, walla doggol timmungol ɓaawo juulde.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">Inɗe moƴƴe Alla</h3><div class="f-desc">Inɗe 99 Alla, e janngirde mum e firo mum; aɗon waawi ɓeydude gooto kala e jikru.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">Kalandiriye hijra</h3><div class="f-desc">Miilaadi + Hijra, e ñalɗi keeriiɗi e Ramadaan.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">Ñalɗi barkinaaɗi</h3><div class="f-desc">Jemmaaji barkinaaɗi, juulɗe e jemmaaji adiiɗi ɗe gila hannde, kala e tinndinoore.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">Imsakiye</h3><div class="f-desc">Waktuuji juulde lewru fof e doggol gootol; e Koorka, limoore ñalawma e iftaar.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">Waktuuji makruuha</h3><div class="f-desc">Maandinaaɗi e laawol ñalawma, e hadiisa mo ɗi ƴeewtii.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">Ɗowirde laaɓal</h3><div class="f-desc">Salligi, ghusla e tayammum, daawal e daawal.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">Ɗowirde juulde</h3><div class="f-desc">Sifaaji juulde 17; e darol, e jooɗde walla e maandinirde.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">Jakka &amp; Fitira</h3><div class="f-desc">Limorɗe ƴeewtiiɗe e fiqhu aadaa.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">Jokkugol kaadaa</h3><div class="f-desc">Juulɗe kaadaa e waktu kala, koorka kaadaa e ñalawma kala.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">Balɗe ngonka</h3><div class="f-desc">Balɗe hayɗa e nifaas; jokkondiral juulde mon taƴataa.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">Widget</h3><div class="f-desc">Ecraŋ jaɓɓorgal, Ecraŋ Sokaaɗo, StandBy — e Mac kadi.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">Live Activity</h3><div class="f-desc">Limoore e Dynamic Island e Ecraŋ Sokaaɗo.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">Control Center</h3><div class="f-desc">Golle ɓadiiɗe jeegom (iOS 18+) — Alqibla, juulde aroore, e goɗɗe.</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">Rewindagol dewe</h3><div class="f-desc">Taariiɗe ngam juulde, Alkur'aana, jikru, hadiisa e kaadaa.</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">Ɗoftaare juulde</h3><div class="f-desc">No ɓooyri ɓaawo naatgol waktu kala njuul-ɗon — ndee lewru e sahaa kala.</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">Alaarma Fajiri</h3><div class="f-desc">So on njuulaani Fajiri, ina sonna ado puɗal naange; so on njuulii, ina deƴƴa. E iOS 26 ina sonna hay e mbaydi deƴƴere.</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">Alaarma walsuka</h3><div class="f-desc">Ina teeltee ngam Koorka Ramadaan, kala ñalnde, walla ñalɗi koorka sunna.</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">Siftinde ñalɗi barka</h3><div class="f-desc">Ñalɗi barka 12: jemmaaji barka ina siftinee e kiikiiɗe mum, goɗɗi ɗi ñalnde ado mum.</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">Tintinal</h3><div class="f-desc">E kaɓirgal mon, lokaal, koolnaaɗe.</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">Sawtuuji aadaan</h3><div class="f-desc">Waktu kala e makaamu mum: saba, ussak, rast, segah, hicaz.</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Laabi ɓadiiɗi Siri</h3><div class="f-desc">Naamnee juulde aroore; maandinee juulde, koorka walla kaadaa e daande mon.</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">Yiylo gootal</h3><div class="f-desc">Yiylo gootal, kuutorɗe fof — winndee 'Baqarah 255', ngardon e aaya ndee.</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">Maandorɗe</h3><div class="f-desc">Danndee aayeeje e hadiisaaji.</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">Jotondiral iCloud</h3><div class="f-desc">Winndanɗe mon ina ngoni e iCloud mon keeriiɗo, e kaɓirgal kala.</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">Tafsiir</h3><div class="f-desc">Tafsiir Diyanet; ñoƴƴee aaya, nde udditoo e aayeeje ɗe nde ƴeewti.</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">Karte lollinirɗe</h3><div class="f-desc">Karte yooɗɗe ngam aayeeje, hadiisaaji, jikru e inɗe Alla.</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">Koorka</h3><div class="f-desc">Ramadaan, Shawwaal e jokkugol ñalawma kala.</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">Jumaaji ɓadiiɗi</h3><div class="f-desc">Yiytee jumaaji e Apple Maps, tawa nokku mon yottaaki sarwoor amen; kartal, goɗɗeendi, laawol.</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Wallu Vakit</h3><div class="f-desc">Laabi ɗi njiɗirton ngam wallude jaaɓnirgal meere ngal heddaade.</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">Mbaydi niɓɓiɗndi</h3><div class="f-desc">Niɓɓere ngulɗunde, deƴƴunde ngam jemma.</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">Waktuuji juulde e alqibla<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Waktuuji juulde</h4><div class="f-desc">Laabi hesaabo 12, ina fota e waktu leydi kala, ina tawta ɗanngol mon.</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Kompaas alqibla</h4><div class="f-desc">Dillere hollirta bannge, e goɗɗeendi haa Kaaba.</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Kammu wuuruɗo</h4><div class="f-desc">Koode e lewru goonga e laawol ñalawma — e nokku mon, jooni jooni.</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Alaarma Fajiri</h4><div class="f-desc">So on njuulaani Fajiri, ina sonna ado puɗal naange; so on njuulii, ina deƴƴa. E iOS 26 ina sonna hay e mbaydi deƴƴere.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Sawtuuji aadaan</h4><div class="f-desc">Waktu kala e makaamu mum: saba, ussak, rast, segah, hicaz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Waktuuji nafila</h4><div class="f-desc">Ishraaq, Duhaa, Awwaabiin e pecce jemma; so on njiɗii.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Waktuuji makruuha</h4><div class="f-desc">Maandinaaɗi e laawol ñalawma, e hadiisa mo ɗi ƴeewtii.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Ñalɗi barkinaaɗi</h4><div class="f-desc">Jemmaaji barkinaaɗi, juulɗe e jemmaaji adiiɗi ɗe gila hannde, kala e tinndinoore.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Nokku suɓaaɗo e juuɗe</h4><div class="f-desc">Suɓee nokku mon e juuɗe mon, walla accee mo jokka on e ɗanngol.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Tintinal</h4><div class="f-desc">E kaɓirgal mon, lokaal, koolnaaɗe.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Jumaaji ɓadiiɗi</h4><div class="f-desc">Yiytee jumaaji e Apple Maps, tawa nokku mon yottaaki sarwoor amen; kartal, goɗɗeendi, laawol.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Alkur'aana e hadiisa<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Alkur'aana</h4><div class="f-desc">Simooje 114. Konngol e konngol, firo, tafsiir, mushaf aadaa.</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadiisa</h4><div class="f-desc">Hadiisaaji ɓuri 36,000 e nder deftere mawɗe jeeɗiɗi.</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Tilaawa, hay so enterneet alaa</h4><div class="f-desc">Suɓee janngoowo e mbaydi janngugol; jippinee simoore walla juzu, heɗiton hay so enterneet alaa.</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsiir</h4><div class="f-desc">Tafsiir Diyanet; ñoƴƴee aaya, nde udditoo e aayeeje ɗe nde ƴeewti.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Jokkugol khatma</h4><div class="f-desc">Simooje 114, juzu 30; khatmaaji timmuɗi e takko ñalawma timmugol.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Binndol mushaf</h4><div class="f-desc">Binndol Madiina walla Turkiya — mbaydi hello ina jokka ɗum.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Doggi jimɗi</h4><div class="f-desc">Fenndu cuuraaji ɗin no muuyɗaa, inniraa doggol ngol, hettinaa gila fuɗɗoode haa timmoode — hay so enternet alaa.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Firo daaneteengo</h4><div class="f-desc">Heɗo firo e daande masiŋ maa — kanko tan walla caggal kala aaya, tawa alaa internet.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Ko ñalawma addi</h4><div class="f-desc">Aaya, hadiis e innde ñalawma e yaynirde wootere; yiltoo yontere ɓennunde.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Maandorɗe</h4><div class="f-desc">Danndee aayeeje e hadiisaaji.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Karte lollinirɗe</h4><div class="f-desc">Karte yooɗɗe ngam aayeeje, hadiisaaji, jikru e inɗe Alla.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Rewindagol dewe e jikru<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Rewindagol dewe</h4><div class="f-desc">Taariiɗe ngam juulde, Alkur'aana, jikru, hadiisa e kaadaa.</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Jokkugol kaadaa</h4><div class="f-desc">Juulɗe kaadaa e waktu kala, koorka kaadaa e ñalawma kala.</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Limoowo jikru</h4><div class="f-desc">Yahrude yeeso e nder taariindi, jikru heɓaaɗi e jikru mon keeriiɗo.</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Ɗoftaare juulde</h4><div class="f-desc">No ɓooyri ɓaawo naatgol waktu kala njuul-ɗon — ndee lewru e sahaa kala.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Koorka</h4><div class="f-desc">Ramadaan, Shawwaal e jokkugol ñalawma kala.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Alaarma walsuka</h4><div class="f-desc">Ina teeltee ngam Koorka Ramadaan, kala ñalnde, walla ñalɗi koorka sunna.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbiiha</h4><div class="f-desc">33-33-33, walla doggol timmungol ɓaawo juulde.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Inɗe moƴƴe Alla</h4><div class="f-desc">Inɗe 99 Alla, e janngirde mum e firo mum; aɗon waawi ɓeydude gooto kala e jikru.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Balɗe ngonka</h4><div class="f-desc">Balɗe hayɗa e nifaas; jokkondiral juulde mon taƴataa.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kalandiriye e ɗowirɗe<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Kalandiriye hijra</h4><div class="f-desc">Miilaadi + Hijra, e ñalɗi keeriiɗi e Ramadaan.</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Ɗowirde juulde</h4><div class="f-desc">Sifaaji juulde 17; e darol, e jooɗde walla e maandinirde.</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Khutba Aljumaa</h4><div class="f-desc">Ngam ɓeen ɓe kuutortoo laawol Diyanet: jangee, heɗee, danndee khutba ndee ngam heɓde nde hay so enterneet alaa.</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakiye</h4><div class="f-desc">Waktuuji juulde lewru fof e doggol gootol; e Koorka, limoore ñalawma e iftaar.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Peewnirgol Aljumaa</h4><div class="f-desc">Heblo, ɓuutol, khudba, suura al-Kahf e salaatu — Aljumaa fof e hello gootol.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Ɗowirde laaɓal</h4><div class="f-desc">Salligi, ghusla e tayammum, daawal e daawal.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Siftinde ñalɗi barka</h4><div class="f-desc">Ñalɗi barka 12: jemmaaji barka ina siftinee e kiikiiɗe mum, goɗɗi ɗi ñalnde ado mum.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Jakka &amp; Fitira</h4><div class="f-desc">Limorɗe ƴeewtiiɗe e fiqhu aadaa.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kaɓirɗe e goɗɗe<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Waktuuji juulde, alqibla wuuruɗo, complication 13.</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget</h4><div class="f-desc">Ecraŋ jaɓɓorgal, Ecraŋ Sokaaɗo, StandBy — e Mac kadi.</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Limoore e Dynamic Island e Ecraŋ Sokaaɗo.</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Jaaɓnirgal Mac</h4><div class="f-desc">Limoore e barre menu, laabi ɓadiiɗi klawiye, jotondiral iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Jaaɓnirgal gootal ngal e ecraŋ mawngal; winndanɗe mon ina jotondira e iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">Ɗemɗe 25</h4><div class="f-desc">Jaaɓnirgal ina yahra gila ñaamo faade nano e Aarabu, Urdu, Fersi e Uyguur.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Jotondiral iCloud</h4><div class="f-desc">Winndanɗe mon ina ngoni e iCloud mon keeriiɗo, e kaɓirgal kala.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Laabi ɓadiiɗi Siri</h4><div class="f-desc">Naamnee juulde aroore; maandinee juulde, koorka walla kaadaa e daande mon.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Control Center</h4><div class="f-desc">Golle ɓadiiɗe jeegom (iOS 18+) — Alqibla, juulde aroore, e goɗɗe.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Yiylo gootal</h4><div class="f-desc">Yiylo gootal, kuutorɗe fof — winndee 'Baqarah 255', ngardon e aaya ndee.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Mbaydi niɓɓiɗndi</h4><div class="f-desc">Niɓɓere ngulɗunde, deƴƴunde ngam jemma.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Wallu Vakit</h4><div class="f-desc">Laabi ɗi njiɗirton ngam wallude jaaɓnirgal meere ngal heddaade.</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>Ceerngal ngal,</span><br><em>betaama.</em></h2>
-    <p class="compare-lede">Aɗon anndi caɗeele jaaɓnirɗe juulde goɗɗe. Ɗoo ko jaabawol Vakit e gooto kala, doggol e doggol.</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">Ko yewtetee</div><div class="compare-cell">Jaaɓnirɗe goɗɗe</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Publisite</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Publisite kaziino e ko haanaani, hollaaɗe sara loowdi diine.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Publisite alaa fey. Tan si aɗon njiɗi wallude Vakit, aɗon waawi suɓaade yiyde publisite.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Suturaa</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Keɓe nokku yeeyaaɗe e tataɓe (ina anndaa e jaayndeeji).</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Koordone yottataa sarwoor amen. Ƴeewndagol alaa.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Tawa enterneet alaa</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Kuutorɗe mawɗe ina naamnoo enterneet.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Juulde, alqibla, binndol Alkur'aana, jikru — fof ina golloo hay so enterneet alaa.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Ecraŋ Sokaaɗo</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Widget ina bonna so iOS hesɗitinaama.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Live Activity e Dynamic Island; StandBy gila iOS 17.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Peewal</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Juumeeje waylugol montoor (waktu ceeɗu), laabi hesaabo seeɗa.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Laabi 12, ina fota e waktu leydi kala, ina tawta ɗanngol.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Kaɓirɗe</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Telefoŋ tan; montoor e ordinateer ngalaa walla timmaani.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>iPhone, iPad e Mac e iCloud; Apple Watch ina jotondira rewrude e iPhone.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Mbaydi</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Jaaɓnirɗe ɓooyɗe; ko bonata ɓaawo hesɗitinol kala.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Liquid Glass e iOS 26, ina golloo gila iOS 16.4. Deƴƴuɗo, kesɗo, yaawɗo.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Coggu</div><div class="compare-cell other"><span class="cmark no">Alaa</span><br><br>Njoɓdi, abonemaa, daajeeji 'premium'.</div><div class="compare-cell vakit"><span class="cmark yes">Eey</span><br><br>Meere. Daajol alaa, alaa ko ɓeydaa ngam yeeyeede.</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Hollu kuutorɗe 51 ɗe fof</button>
   </div>
 </section>
 
@@ -738,7 +777,7 @@
       <h2><span>Konngi moƴƴi</span><br><em>iwde e juulooɓe goonga.</em></h2>
       <div class="t-meta">
         <span>Nota hakkundeejo</span>
-        <b>4.8 ★</b>
+        <b>4,8 ★</b>
         <span>gila e notaaji App Store 467</span>
       </div>
     </div>
@@ -812,6 +851,15 @@
   </div>
   <div class="foot-sig">Moƴƴinaa e reentaade · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-ff" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>Jippin e App Store</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "ff",

@@ -42,13 +42,13 @@ Hand-maintained files in `docs/`:
 | File | Purpose |
 |---|---|
 | `styles.css` | All styles (CSS variables for theming, dark mode, responsive, RTL + non-Latin script rules) |
-| `script.js` | Interactivity only: live prayer clock, showcase switching + video, iPad/Mac screen tabs, FAQ accordion, theme, language menu, mobile menu |
+| `script.js` | Interactivity only: live prayer clock, hero preview video, showcase switching, iPad/Mac screen tabs, "show all" features, FAQ accordion, theme, language menu, mobile menu, phone-only download dock |
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
 | `404.html` | Standalone page, not generated |
 
-The hero's live clock fetches times from the public Aladhan API. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
+The live clock (the band under the hero) fetches times from the public Aladhan API. It keeps the last good answer per city in `localStorage` and hides itself if it has no times at all — never a row of `00:00:00`. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
 
 The site loads **no analytics or tracking scripts** (Google Analytics was removed 2026-09-10; `npm test` fails if it comes back). App Store campaign tokens (`storeLink`) are the only acquisition measurement.
 | `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`) |
@@ -69,7 +69,8 @@ Two other things follow from the generator, and both are the point:
 - **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, all three documents + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
 - **iPad, Mac and Apple Watch** (`DEVICES` in `content.js`, the section under the showcase): iPad captures follow the iPhone rule; the Mac and the Watch were captured in Turkish and English only, so every other page shows the English ones. Tab labels and captions reuse `FEATURES`/`SHOWCASE` copy, so the section needs no translations of its own.
 - **More iPhone screens** (`SHOWCASE_MORE`): extra tabs under the showcase list, same phone. `all: true` screens exist in every captured language; the rest only in tr/en, and other pages leave them out rather than mix English into their phone.
-- **Screens switch on tap only** — never by scroll position. Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22). `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
+- **The hero shows the app**: a phone playing the preview video (the prayer screen's sky), next to the headline and the App Store button, which stays above the fold on a 1280×720 screen. The video waits for the page's `load` event and doesn't start by itself under reduced motion or data saving; a tap plays or pauses it (2026-09-24).
+- **Screens switch on tap only** — never by scroll position. Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22; the video has since moved to the hero). `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
 - **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
 
@@ -81,7 +82,9 @@ Two other things follow from the generator, and both are the point:
 3. Bump `SITE.updated` (drives sitemap `lastmod`).
 4. Run `npm run build` and commit the regenerated files.
 
-`{featureCount}` and `{ratingCount}` in copy strings are substituted at build time, so counts stated in prose can't fall out of sync with the lists.
+`{featureCount}`, `{ratingCount}` and `{screenCount}` (showcase tabs on that page) in copy strings are substituted at build time, so counts stated in prose can't fall out of sync with the lists.
+
+**Features are shown in groups** (`FEATURE_GROUPS` in `content.js`, titles `fg-1`…`fg-5`), each showing its first `FEATURE_PREVIEW` entries until "show all" is tapped; every card is in the HTML either way. A new feature goes into `FEATURES` **and** one group — `build.js` fails if a feature is in no group or two.
 
 **Only what is true today — no future (owner's decision, 2026-09-10).** No plans, no "coming", no "we can't promise forever", no future products or promised procedures, on any page including the legal ones. The ad policy once announced a future banner tier, a premium purchase, an in-app report button and quarterly reports; none existed.
 
@@ -101,7 +104,7 @@ GitHub Pages via GitHub Actions. Push to `main` triggers the workflow, which fir
 
 The site describes `VakitApp-Swift`. After every App Store release, check `VakitApp-Swift/CHANGELOG.md` and update `content.js` + `locales/`:
 
-- new user-facing features → `FEATURES`, and `FAQ` if they raise an obvious question
+- new user-facing features → `FEATURES` and a `FEATURE_GROUPS` group, and `FAQ` if they raise an obvious question
 - removed features → delete from `FEATURES`
 - `SITE.appVersion`, `SITE.minOS` (per platform: iOS · watchOS · macOS deployment targets), `SITE.operatingSystem` → match the release
 - platform changes (e.g. Mac support) → `META` descriptions and the `fin-p` copy

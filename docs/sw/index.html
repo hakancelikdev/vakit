@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -390,7 +390,6 @@
   <div class="nav-links">
     <a href="#showcase">Vipengele</a>
     <a href="#trust">Amana</a>
-    <a href="#compare">Kwa nini Vakit</a>
     <a href="#reviews">Maoni</a>
     <a href="#faq">Maswali</a>
   </div>
@@ -439,7 +438,7 @@
       <span>Programu ya ibada,</span><br>
       <span>kama</span> <em>inavyopaswa kuwa.</em>
     </h1>
-    <p class="hero-sub">Programu ya ibada, kama inavyopaswa kuwa. Mwenzi mtulivu wa swala tano za kila siku — pamoja na Qurani, kibla, dhikri, na kalenda inayoheshimu siku zako. Imejengwa kujiweka kando usipoihitaji, na kuwa karibu unapoihitaji.</p>
+    <p class="hero-sub">Mwenzi mtulivu wa swala tano za kila siku — pamoja na Qurani, kibla, dhikri, na kalenda inayoheshimu siku zako. Imejengwa kujiweka kando usipoihitaji, na kuwa karibu unapoihitaji.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-sw" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -462,42 +461,59 @@
         <div class="proof-lbl">Mbinu za kukokotoa</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">Vipengele vya msingi · bila intaneti</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">Lugha za kiolesura</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">Nairobi</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Skrini ya swala ya Vakit: anga hubadilika kadiri siku inavyosonga"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">Inayofuata · baada ya</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha · Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha · Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha</span><span>Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha · Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha · Imsaki · Macheo · Adhuhuri · Alasiri · Magharibi · Isha</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="Inayofuata · baada ya">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Nairobi</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">Inayofuata · baada ya</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Imsaki</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Macheo</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Adhuhuri</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Alasiri</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Magharibi</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Isha</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · Kila kitu, bila ziada</div>
     <h2 class="sc-h2"><span>Mwenzi wa safari,</span><br><em>si mashine ya kukuvuta umakini.</em></h2>
-    <p class="sc-lede">Zana kumi za msingi, kila moja imeundwa ikupe utulivu pale tu unapoifungua. Gusa yoyote uione.</p>
+    <p class="sc-lede">Zana 20 za msingi, kila moja imeundwa ikupe utulivu pale tu unapoifungua. Gusa yoyote uione.</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Kama anga.</h3><p>Kila wakati wa swala unapoingia, skrini hubadilika pamoja na anga — nyota halisi na mwezi mahali pao halisi. Nyakati za makruhu na za swala za sunna ni kwa hiari.</p></div><span class="sc-tag">Onyesho</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Bila kufungua simu.</h3><p>Swala inayofuata kwenye Skrini ya Kufuli, kwenye wijeti, kwenye Dynamic Island na kwenye saa yako. Mtazamo mtulivu — si wa kukodolea macho.</p></div><span class="sc-tag">Onyesho</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Kila zana, mahali pamoja.</h3><p>Qurani, hadithi, khutba ya Ijumaa, dhikri, Asmaul-Husna, miongozo na kalenda — vyote mahali pamoja. Hakuna kilichofungiwa nyuma ya malipo.</p></div><span class="sc-tag">Onyesho</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Mwelekeo sahihi.</h3><p>Geukia kibla na simu yako itatetemeka, pamoja na umbali hadi Al-Kaaba. Viwianishi vyako havifiki kamwe kwenye seva zetu.</p></div><span class="sc-tag">Onyesho</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Mwelekeo sahihi.</h3><p>Geukia kibla na simu yako itatetemeka, pamoja na umbali hadi Al-Kaaba.</p></div><span class="sc-tag">Onyesho</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Ibada yako, kwa pete.</h3><p>Pete za swala, Qurani, dhikri, hadithi na kadhaa; muda unaochukua kuswali baada ya kila wakati kuingia, na hitima yako — maendeleo ya upole, bila hatia.</p></div><span class="sc-tag">Onyesho</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Kadhaa hupungua kadiri unavyoswali.</h3><p>Kokotoa swala zilizokupita maishani kwa kila wakati na uzilipe moja baada ya nyingine — pamoja na makadirio ya lini utamaliza.</p></div><span class="sc-tag">Onyesho</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Qurani, hata bila intaneti.</h3><p>Soma, sikiliza, tafakari — hati ya Madina au ya Uturuki, kufuatilia neno kwa neno, tafsiri na kisomo unachoweza kupakua.</p></div><span class="sc-tag">Onyesho</span></button>
@@ -522,7 +538,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Skrini ya swala ya Vakit: anga hubadilika kadiri siku inavyosonga"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Kama anga." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Bila kufungua simu." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Kila zana, mahali pamoja." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="Mwelekeo sahihi." width="390" height="844" loading="lazy">
@@ -623,111 +639,134 @@
       <span>Data yako ni</span> <em>amana,</em><br>
       <span>si bidhaa.</span>
     </h2>
-    <p class="trust-lede">Ibada yako isikatizwe. Programu nyingine za swala zimewahi kugundulika zikiuza data za mahali watumiaji walipo. Vakit imechagua njia nyingine: viwianishi vyako havifiki kamwe kwenye seva zetu. Hakuna akaunti. Hakuna ufuatiliaji. Hakuna maafikiano. Hiki si kipengele — ni kanuni.</p>
+    <p class="trust-lede">Ibada yako isikatizwe. Programu nyingine za swala zimewahi kugundulika zikiuza data za mahali watumiaji walipo. Vakit imechagua njia nyingine: viwianishi vyako havifiki kamwe kwenye seva zetu. Hakuna akaunti. Hakuna matangazo. Data zako haziuzwi kamwe. Hiki si kipengele — ni kanuni.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>Pakua. Fungua. Swali.</h3>
         <p>Hakuna kujisajili, hakuna kuingia, hakuna nenosiri la kusahau. Vakit inaanza kufanya kazi mara tu unapoisakinisha.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>Inakokotolewa kwenye simu yako.</h3>
         <p>Nyakati za swala zinakokotolewa kwenye kifaa chako kulingana na mahali ulipo, kwa mbinu unayochagua. Hakuna kinachotumwa kwenye seva “kutafutwa”.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>Hatujui mahali ulipo hasa.</h3>
         <p>Viwianishi vyako havifiki kwenye seva zetu — tunajua tu nchi, mji na wilaya yako. Kwa anwani yako na misikiti iliyo karibu, mahali ulipo hupelekwa kwa Apple Maps pekee.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>Sera kwa lugha rahisi.</h3>
         <p>Data za matumizi zilizofungamanishwa na msimbo bandia wa mtumiaji — bila jina, barua pepe wala simu. Sera yetu ya faragha inaorodhesha hasa kile kinachotumwa, na ni fupi, inasomeka kwa dakika moja.</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">Tayari unajua matatizo ya programu nyingine za swala. Hivi ndivyo Vakit inavyojibu kila moja, mstari kwa mstari.</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Suala</div><div class="compare-cell">Programu nyingine</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Matangazo</div><div class="compare-cell other">Matangazo ya kasino na yasiyofaa, kando ya maudhui ya dini.</div><div class="compare-cell vakit">Bila matangazo kabisa. Isipokuwa jambo moja tu: ukitaka kuiunga mkono Vakit, unaweza kuchagua kutazama tangazo.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Bila intaneti</div><div class="compare-cell other">Vipengele vya msingi vinahitaji intaneti.</div><div class="compare-cell vakit">Swala, kibla, maandishi ya Qurani, dhikri — vyote bila intaneti.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Skrini ya Kufuli</div><div class="compare-cell other">Wijeti huharibika kila iOS inaposasishwa.</div><div class="compare-cell vakit">Shughuli Hai na Dynamic Island; StandBy kuanzia iOS 17.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Usahihi</div><div class="compare-cell other">Makosa ya saa za majira ya joto, mbinu chache za kukokotoa.</div><div class="compare-cell vakit">Mbinu 12, huzingatia saa za eneo, hutambua unaposafiri.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Vifaa</div><div class="compare-cell other">Simu pekee; saa na kompyuta hazipo au zimekamilika nusu.</div><div class="compare-cell vakit">iPhone, iPad na Mac kupitia iCloud; Apple Watch husawazishwa kupitia iPhone.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Muundo</div><div class="compare-cell other">Violesura vilivyopitwa na wakati; hurudi nyuma kila sasisho.</div><div class="compare-cell vakit">Liquid Glass kwenye iOS 26, inafanya kazi kuanzia iOS 16.4. Tulivu, ya kisasa, ya haraka.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Gharama</div><div class="compare-cell other">Kuta za malipo, usajili, viwango vya “premium”.</div><div class="compare-cell vakit">Bila malipo. Hakuna viwango, hakuna kushawishiwa kununua zaidi.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · Zana 51</div>
       <h2><span>Programu moja,</span><br><em>inatosha kwa maisha yote ya ibada.</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">Nyakati za Swala</h3><div class="f-desc">Mbinu 12 za kukokotoa, zinazozingatia saa za eneo na kutambua unaposafiri.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">Anga Hai</h3><div class="f-desc">Nyota halisi na mwezi kwenye upinde wa siku — kwa mahali ulipo, sasa hivi.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">Nyakati za Swala za Sunna</h3><div class="f-desc">Ishraki, Dhuha, Awwabin na sehemu za usiku; kwa hiari.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">Mahali kwa Mkono</h3><div class="f-desc">Weka mahali ulipo mwenyewe, au iache ikufuate unaposafiri.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">Nyakati za swala, kibla hai, vipengele 13 vya saa.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Programu ya Mac</h3><div class="f-desc">Hesabu ya muda kwenye upau wa menyu, njia za mkato za kibodi, usawazishaji wa iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">Programu ileile kwenye skrini kubwa; kumbukumbu zako husawazishwa kupitia iCloud.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">Lugha 25</h3><div class="f-desc">Kiolesura cha kulia kwenda kushoto kwa Kiarabu, Kiurdu, Kiajemi na Kiuyghur.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">Dira ya Kibla</h3><div class="f-desc">Mtetemo unaoonyesha mwelekeo, pamoja na umbali hadi Al-Kaaba.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">Qurani Tukufu</h3><div class="f-desc">Sura 114. Neno kwa neno, tarjuma na tafsiri (Kituruki na Kiingereza), Msahafu wa jadi.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">Hati ya Msahafu</h3><div class="f-desc">Hati ya Madina au ya Uturuki — mpangilio wa kurasa nao hubadilika.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">Ufuatiliaji wa Hitima</h3><div class="f-desc">Sura 114, juzuu 30; hitima zilizokamilika na makadirio ya kumaliza.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">Kisomo Bila Intaneti</h3><div class="f-desc">Chagua msomaji na mtindo wa kisomo; pakua sura au juzuu, usikilize bila intaneti.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">Orodha za Kucheza</h3><div class="f-desc">Panga sura kwa mpangilio wako, ipe orodha jina, kisha sikiliza mwanzo hadi mwisho — hata bila intaneti.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">Tafsiri inayosomwa</h3><div class="f-desc">Sikiliza tafsiri kwa sauti ya kifaa chako — peke yake au baada ya kila aya, bila intaneti.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">Hadithi</h3><div class="f-desc">Zaidi ya hadithi 36,000 kutoka mikusanyiko saba mikuu.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">Maudhui ya siku</h3><div class="f-desc">Aya, hadithi na jina la siku kwenye skrini moja; rudi wiki moja nyuma.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">Khutba ya Ijumaa</h3><div class="f-desc">Kwa wanaotumia mbinu ya Diyanet: soma, sikiliza na hifadhi khutba bila intaneti.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">Mwongozo wa Ijumaa</h3><div class="f-desc">Maandalizi, josho, khutba, Surat al-Kahf na swala kwa Mtume — Ijumaa nzima ukurasa mmoja.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">Kihesabu cha Dhikri</h3><div class="f-desc">Maendeleo kwa pete, dhikri zilizoandaliwa, na dhikri zako mwenyewe.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">Tasbihi</h3><div class="f-desc">33-33-33, au mtiririko kamili wa baada ya swala.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">Asmaul-Husna</h3><div class="f-desc">Majina 99 ya Allah, pamoja na unukuzi na maana; lolote linaweza kuongezwa kama dhikri.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">Kalenda ya Hijria</h3><div class="f-desc">Miladi + Hijria, pamoja na siku maalum na Ramadhani.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">Siku zenye baraka</h3><div class="f-desc">Usiku mtukufu, sikukuu na mikesha yake kuanzia leo kwenda mbele, kila moja na mwongozo.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">Imsakiya</h3><div class="f-desc">Nyakati zote za swala za mwezi mzima katika orodha moja; katika Ramadhani hesabu ya siku na futari.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">Nyakati za Makruhu</h3><div class="f-desc">Zimewekwa alama kwenye upinde wa siku, pamoja na riwaya zinazoziegemeza.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">Mwongozo wa Usafi</h3><div class="f-desc">Udhu, josho la janaba na tayamamu hatua kwa hatua.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">Mwongozo wa Swala</h3><div class="f-desc">Aina 17 za swala; kwa kusimama, kukaa au kwa ishara.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">Zaka na Sadaka ya Fitri</h3><div class="f-desc">Vikokotoo vinavyotegemea fiqhi ya kitamaduni.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">Ufuatiliaji wa Kadhaa</h3><div class="f-desc">Swala zilizokupita kwa kila wakati, funga zilizokupita kwa siku.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">Siku za Udhuru</h3><div class="f-desc">Siku za hedhi na nifasi; mfululizo wako wa swala haukatiki.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">Wijeti</h3><div class="f-desc">Skrini ya Nyumbani, Skrini ya Kufuli, StandBy — na kwenye Mac.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">Shughuli Hai</h3><div class="f-desc">Hesabu ya muda kwenye Dynamic Island na Skrini ya Kufuli.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">Kituo cha Udhibiti</h3><div class="f-desc">Vitendo sita vya haraka (iOS 18+) — Kibla, swala inayofuata, na zaidi.</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">Ufuatiliaji wa Ibada</h3><div class="f-desc">Pete za swala, Qurani, dhikri, hadithi na kadhaa.</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">Nidhamu ya Swala</h3><div class="f-desc">Unaswali muda gani baada ya kila wakati kuingia — mwezi huu na muda wote.</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">Kengele ya Alfajiri</h3><div class="f-desc">Inalia kabla ya macheo ikiwa bado hujaswali Alfajiri, na hunyamaza ukishaswali; kwenye iOS 26 inalia hata simu ikiwa kimya.</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">Kengele ya Daku</h3><div class="f-desc">Huwekwa kwa Ramadhani, kila siku, au siku za funga za sunna.</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">Vikumbusho vya Siku za Baraka</h3><div class="f-desc">Siku 12 za baraka: usiku wa baraka hukumbushwa jioni hiyo hiyo, nyingine siku moja kabla.</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">Arifa</h3><div class="f-desc">Hupangwa kwenye kifaa, bila kutegemea seva, za kuaminika.</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">Sauti za Adhana</h3><div class="f-desc">Kila swala kwa makamu yake: saba, ussak, rast, segah, hicaz.</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Njia za Mkato za Siri</h3><div class="f-desc">Uliza swala inayofuata; weka alama ya swala, funga au kadhaa kwa sauti.</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">Utafutaji Mmoja</h3><div class="f-desc">Utafutaji mmoja, kila zana — andika “Baqarah 255” kwenda moja kwa moja kwenye aya.</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">Alamisho</h3><div class="f-desc">Hifadhi aya na hadithi.</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">Usawazishaji wa iCloud</h3><div class="f-desc">Kumbukumbu zako hukaa kwenye iCloud yako mwenyewe, kwenye kila kifaa.</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">Tafsiri</h3><div class="f-desc">Tafsiri ya Diyanet — gusa aya ifunguke, pamoja na wigo wa aya inazozihusu.</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">Kadi za Kushiriki</h3><div class="f-desc">Kadi maridadi za aya, hadithi, dhikri na majina ya Allah.</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">Funga</h3><div class="f-desc">Ramadhani, Shawwal, na ufuatiliaji wa kila siku.</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">Misikiti Iliyo Karibu</h3><div class="f-desc">Tafuta misikiti kupitia Apple Maps, bila mahali ulipo kufika kwenye seva zetu; ramani, umbali, maelekezo.</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Saidia Vakit</h3><div class="f-desc">Njia za hiari za kuiweka hai programu hii isiyo na malipo.</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">Hali ya Giza</h3><div class="f-desc">Giza lenye joto na utulivu kwa saa za usiku.</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">Nyakati za swala na kibla<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Nyakati za Swala</h4><div class="f-desc">Mbinu 12 za kukokotoa, zinazozingatia saa za eneo na kutambua unaposafiri.</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Dira ya Kibla</h4><div class="f-desc">Mtetemo unaoonyesha mwelekeo, pamoja na umbali hadi Al-Kaaba.</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Anga Hai</h4><div class="f-desc">Nyota halisi na mwezi kwenye upinde wa siku — kwa mahali ulipo, sasa hivi.</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Kengele ya Alfajiri</h4><div class="f-desc">Inalia kabla ya macheo ikiwa bado hujaswali Alfajiri, na hunyamaza ukishaswali; kwenye iOS 26 inalia hata simu ikiwa kimya.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Sauti za Adhana</h4><div class="f-desc">Kila swala kwa makamu yake: saba, ussak, rast, segah, hicaz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Nyakati za Swala za Sunna</h4><div class="f-desc">Ishraki, Dhuha, Awwabin na sehemu za usiku; kwa hiari.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Nyakati za Makruhu</h4><div class="f-desc">Zimewekwa alama kwenye upinde wa siku, pamoja na riwaya zinazoziegemeza.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Siku zenye baraka</h4><div class="f-desc">Usiku mtukufu, sikukuu na mikesha yake kuanzia leo kwenda mbele, kila moja na mwongozo.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Mahali kwa Mkono</h4><div class="f-desc">Weka mahali ulipo mwenyewe, au iache ikufuate unaposafiri.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Arifa</h4><div class="f-desc">Hupangwa kwenye kifaa, bila kutegemea seva, za kuaminika.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Misikiti Iliyo Karibu</h4><div class="f-desc">Tafuta misikiti kupitia Apple Maps, bila mahali ulipo kufika kwenye seva zetu; ramani, umbali, maelekezo.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Qurani na hadithi<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Qurani Tukufu</h4><div class="f-desc">Sura 114. Neno kwa neno, tarjuma na tafsiri (Kituruki na Kiingereza), Msahafu wa jadi.</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadithi</h4><div class="f-desc">Zaidi ya hadithi 36,000 kutoka mikusanyiko saba mikuu.</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Kisomo Bila Intaneti</h4><div class="f-desc">Chagua msomaji na mtindo wa kisomo; pakua sura au juzuu, usikilize bila intaneti.</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsiri</h4><div class="f-desc">Tafsiri ya Diyanet — gusa aya ifunguke, pamoja na wigo wa aya inazozihusu.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Ufuatiliaji wa Hitima</h4><div class="f-desc">Sura 114, juzuu 30; hitima zilizokamilika na makadirio ya kumaliza.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Hati ya Msahafu</h4><div class="f-desc">Hati ya Madina au ya Uturuki — mpangilio wa kurasa nao hubadilika.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Orodha za Kucheza</h4><div class="f-desc">Panga sura kwa mpangilio wako, ipe orodha jina, kisha sikiliza mwanzo hadi mwisho — hata bila intaneti.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Tafsiri inayosomwa</h4><div class="f-desc">Sikiliza tafsiri kwa sauti ya kifaa chako — peke yake au baada ya kila aya, bila intaneti.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Maudhui ya siku</h4><div class="f-desc">Aya, hadithi na jina la siku kwenye skrini moja; rudi wiki moja nyuma.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Alamisho</h4><div class="f-desc">Hifadhi aya na hadithi.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Kadi za Kushiriki</h4><div class="f-desc">Kadi maridadi za aya, hadithi, dhikri na majina ya Allah.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Ufuatiliaji wa ibada na dhikri<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Ufuatiliaji wa Ibada</h4><div class="f-desc">Pete za swala, Qurani, dhikri, hadithi na kadhaa.</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Ufuatiliaji wa Kadhaa</h4><div class="f-desc">Swala zilizokupita kwa kila wakati, funga zilizokupita kwa siku.</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Kihesabu cha Dhikri</h4><div class="f-desc">Maendeleo kwa pete, dhikri zilizoandaliwa, na dhikri zako mwenyewe.</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Nidhamu ya Swala</h4><div class="f-desc">Unaswali muda gani baada ya kila wakati kuingia — mwezi huu na muda wote.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Funga</h4><div class="f-desc">Ramadhani, Shawwal, na ufuatiliaji wa kila siku.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Kengele ya Daku</h4><div class="f-desc">Huwekwa kwa Ramadhani, kila siku, au siku za funga za sunna.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbihi</h4><div class="f-desc">33-33-33, au mtiririko kamili wa baada ya swala.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Asmaul-Husna</h4><div class="f-desc">Majina 99 ya Allah, pamoja na unukuzi na maana; lolote linaweza kuongezwa kama dhikri.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Siku za Udhuru</h4><div class="f-desc">Siku za hedhi na nifasi; mfululizo wako wa swala haukatiki.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Kalenda na miongozo<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Kalenda ya Hijria</h4><div class="f-desc">Miladi + Hijria, pamoja na siku maalum na Ramadhani.</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Mwongozo wa Swala</h4><div class="f-desc">Aina 17 za swala; kwa kusimama, kukaa au kwa ishara.</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Khutba ya Ijumaa</h4><div class="f-desc">Kwa wanaotumia mbinu ya Diyanet: soma, sikiliza na hifadhi khutba bila intaneti.</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakiya</h4><div class="f-desc">Nyakati zote za swala za mwezi mzima katika orodha moja; katika Ramadhani hesabu ya siku na futari.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Mwongozo wa Ijumaa</h4><div class="f-desc">Maandalizi, josho, khutba, Surat al-Kahf na swala kwa Mtume — Ijumaa nzima ukurasa mmoja.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Mwongozo wa Usafi</h4><div class="f-desc">Udhu, josho la janaba na tayamamu hatua kwa hatua.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Vikumbusho vya Siku za Baraka</h4><div class="f-desc">Siku 12 za baraka: usiku wa baraka hukumbushwa jioni hiyo hiyo, nyingine siku moja kabla.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zaka na Sadaka ya Fitri</h4><div class="f-desc">Vikokotoo vinavyotegemea fiqhi ya kitamaduni.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Vifaa na zaidi<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Nyakati za swala, kibla hai, vipengele 13 vya saa.</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Wijeti</h4><div class="f-desc">Skrini ya Nyumbani, Skrini ya Kufuli, StandBy — na kwenye Mac.</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Shughuli Hai</h4><div class="f-desc">Hesabu ya muda kwenye Dynamic Island na Skrini ya Kufuli.</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Programu ya Mac</h4><div class="f-desc">Hesabu ya muda kwenye upau wa menyu, njia za mkato za kibodi, usawazishaji wa iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Programu ileile kwenye skrini kubwa; kumbukumbu zako husawazishwa kupitia iCloud.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">Lugha 25</h4><div class="f-desc">Kiolesura cha kulia kwenda kushoto kwa Kiarabu, Kiurdu, Kiajemi na Kiuyghur.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Usawazishaji wa iCloud</h4><div class="f-desc">Kumbukumbu zako hukaa kwenye iCloud yako mwenyewe, kwenye kila kifaa.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Njia za Mkato za Siri</h4><div class="f-desc">Uliza swala inayofuata; weka alama ya swala, funga au kadhaa kwa sauti.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Kituo cha Udhibiti</h4><div class="f-desc">Vitendo sita vya haraka (iOS 18+) — Kibla, swala inayofuata, na zaidi.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Utafutaji Mmoja</h4><div class="f-desc">Utafutaji mmoja, kila zana — andika “Baqarah 255” kwenda moja kwa moja kwenye aya.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Hali ya Giza</h4><div class="f-desc">Giza lenye joto na utulivu kwa saa za usiku.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Saidia Vakit</h4><div class="f-desc">Njia za hiari za kuiweka hai programu hii isiyo na malipo.</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>Tofauti,</span><br><em>iliyopimwa.</em></h2>
-    <p class="compare-lede">Tayari unajua matatizo ya programu nyingine za swala. Hivi ndivyo Vakit inavyojibu kila moja, mstari kwa mstari.</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">Suala</div><div class="compare-cell">Programu nyingine</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Matangazo</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Matangazo ya kasino na yasiyofaa, kando ya maudhui ya dini.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Bila matangazo kabisa. Isipokuwa jambo moja tu: ukitaka kuiunga mkono Vakit, unaweza kuchagua kutazama tangazo.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Faragha</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Data za mahali ulipo huuzwa kwa watu wengine (imeripotiwa hadharani).</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Viwianishi havifiki kwenye seva zetu. Hakuna ufuatiliaji.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Bila intaneti</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Vipengele vya msingi vinahitaji intaneti.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Swala, kibla, maandishi ya Qurani, dhikri — vyote bila intaneti.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Skrini ya Kufuli</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Wijeti huharibika kila iOS inaposasishwa.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Shughuli Hai na Dynamic Island; StandBy kuanzia iOS 17.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Usahihi</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Makosa ya saa za majira ya joto, mbinu chache za kukokotoa.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Mbinu 12, huzingatia saa za eneo, hutambua unaposafiri.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Vifaa</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Simu pekee; saa na kompyuta hazipo au zimekamilika nusu.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>iPhone, iPad na Mac kupitia iCloud; Apple Watch husawazishwa kupitia iPhone.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Muundo</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Violesura vilivyopitwa na wakati; hurudi nyuma kila sasisho.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Liquid Glass kwenye iOS 26, inafanya kazi kuanzia iOS 16.4. Tulivu, ya kisasa, ya haraka.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Gharama</div><div class="compare-cell other"><span class="cmark no">Hapana</span><br><br>Kuta za malipo, usajili, viwango vya “premium”.</div><div class="compare-cell vakit"><span class="cmark yes">Ndiyo</span><br><br>Bila malipo. Hakuna viwango, hakuna kushawishiwa kununua zaidi.</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Onyesha zana zote 51</button>
   </div>
 </section>
 
@@ -812,6 +851,15 @@
   </div>
   <div class="foot-sig">Imetengenezwa kwa uangalifu · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-sw" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>Pakua kwenye App Store</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "sw",

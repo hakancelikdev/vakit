@@ -3,7 +3,7 @@
  * (fails the build) and tools/check-locale.js (translator feedback).
  */
 
-const PLACEHOLDERS = ["{featureCount}", "{ratingCount}"];
+const PLACEHOLDERS = ["{featureCount}", "{ratingCount}", "{screenCount}"];
 const LISTS = { FEATURES: ["n", "d"], SHOWCASE: ["t", "d"], COMPARE: ["f", "o", "v"], REVIEWS: ["t", "b"], FAQ: ["q", "a"] };
 // Copy keys that may legitimately be empty (Turkish has no "translated" note).
 const MAY_BE_EMPTY = new Set(["r-note"]);

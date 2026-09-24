@@ -26,7 +26,7 @@ wrong length, so a feature added to Turkish/English cannot silently skip a langu
 
 ## Rules
 
-- **Keep `{featureCount}` and `{ratingCount}`** exactly as written — they are replaced at build time.
+- **Keep `{featureCount}`, `{ratingCount}` and `{screenCount}`** exactly as written — they are replaced at build time.
 - **Prayer names come from the app**, not from a dictionary:
   `PRAYERS.Fajr` = the app's `prayer_imsak` string (the clock's first time is the start
   of dawn), then `prayer_sunrise`, `prayer_dhuhr`, `prayer_asr`, `prayer_maghrib`,

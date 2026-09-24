@@ -5,9 +5,10 @@
  * the HTML at build time by ../build.js so crawlers that don't run JavaScript
  * can read it. Do not render content here — edit ../content.js and rebuild.
  *
- * What lives here: the live prayer clock, showcase preview switching (and its
- * video), the iPad/Mac screen tabs, the FAQ accordion, theme toggle, the language menu, smooth scrolling
- * and the mobile menu.
+ * What lives here: the live prayer clock, the hero's preview video, showcase
+ * preview switching, the iPad/Mac screen tabs, "show all" features, the FAQ
+ * accordion, theme toggle, the language menu, smooth scrolling, the mobile menu
+ * and the phone-only download dock.
  */
 
 /* The page is served per language, and build.js embeds everything the clock
@@ -66,6 +67,19 @@ function zonedNow(date, timeZone) {
    visitor's own zone picks the date, which is right for their home city. */
 const guessZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
 
+/* The last good answer per city, so a flaky connection still shows today's
+   times on a repeat visit. Browser storage may be missing; it's only a bonus. */
+const STORE_PREFIX = 'vakit-times:';
+function storedTimes(cityId, dateKey) {
+  try {
+    const s = JSON.parse(localStorage.getItem(STORE_PREFIX + cityId));
+    return s && s.date === dateKey ? s.result : null;
+  } catch (e) { return null; }
+}
+function storeTimes(cityId, dateKey, result) {
+  try { localStorage.setItem(STORE_PREFIX + cityId, JSON.stringify({ date: dateKey, result })); } catch (e) { /* private mode */ }
+}
+
 async function fetchPrayerTimes(city) {
   const zone = (cachedTimings[city.id] && cachedTimings[city.id].timezone) || guessZone();
   const d = zonedNow(new Date(), zone);
@@ -87,10 +101,17 @@ async function fetchPrayerTimes(city) {
     };
     cachedTimings[cacheKey] = result;
     cachedTimings[city.id] = { timezone: result.timezone };
+    storeTimes(city.id, dateKey, result);
     return result;
   } catch (e) {
-    return null;
+    return storedTimes(city.id, dateKey);
   }
+}
+
+/* loading → ready, or error (the band hides itself, see styles.css). */
+function setClockState(state) {
+  const band = document.getElementById('clock');
+  if (band) band.dataset.state = state;
 }
 
 function renderCitySelector() {
@@ -107,22 +128,33 @@ function renderCitySelector() {
   });
 }
 
+function markCity(city) {
+  document.querySelectorAll('.city-btn').forEach(b => {
+    b.classList.toggle('on', b.dataset.cityId === city.id);
+  });
+  const loc = document.getElementById('loc');
+  if (loc) loc.textContent = city.name;
+}
+
 async function selectCity(cityId) {
   const city = DATA.cities.find(c => c.id === cityId);
   if (!city) return;
+  const previous = current ? currentCity : null;
   currentCity = city;
-
-  document.querySelectorAll('.city-btn').forEach(b => {
-    b.classList.toggle('on', b.dataset.cityId === cityId);
-  });
-
-  const loc = document.getElementById('loc');
-  if (loc) loc.textContent = city.name;
+  markCity(city);
 
   const data = await fetchPrayerTimes(city);
-  if (data && currentCity.id === cityId) {
+  if (currentCity.id !== cityId) return; // another city was picked meanwhile
+  if (data) {
     current = data;
+    setClockState('ready');
     renderClockTick(new Date());
+  } else if (previous) {
+    // Keep showing the city whose times we have, rather than its times under another name.
+    currentCity = previous;
+    markCity(previous);
+  } else {
+    setClockState('error');
   }
 }
 
@@ -180,30 +212,53 @@ function renderClockTick(now) {
 }
 
 /* ================================================================
+   Hero video — the prayer screen's sky, muted and looping. It starts only
+   after the page has loaded (preload="none" until then), plays while at least
+   a third of it is on screen, and never starts by itself for visitors who ask
+   for reduced motion or data saving. Tapping it pauses or resumes it (and
+   starts it where autoplay is blocked, e.g. iOS Low Power Mode).
+   ================================================================ */
+
+const heroVideo = document.getElementById('heroVideo');
+const quietVideo = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+  !!(navigator.connection && navigator.connection.saveData);
+let pageLoaded = document.readyState === 'complete';
+let videoVisible = false;
+let videoWanted = !quietVideo; // flipped by a tap
+
+function syncVideo() {
+  if (!heroVideo) return;
+  if (pageLoaded && videoVisible && videoWanted) {
+    const p = heroVideo.play();
+    if (p && p.catch) p.catch(() => {});
+  } else {
+    heroVideo.pause();
+  }
+}
+
+function initHeroVideo() {
+  if (!heroVideo) return;
+  if (!pageLoaded) window.addEventListener('load', () => { pageLoaded = true; syncVideo(); }, { once: true });
+  new IntersectionObserver((entries) => {
+    videoVisible = entries[0].isIntersecting;
+    syncVideo();
+  }, { threshold: 0.33 }).observe(heroVideo);
+  heroVideo.addEventListener('click', () => {
+    videoWanted = heroVideo.paused;
+    pageLoaded = true;
+    syncVideo();
+  });
+}
+
+/* ================================================================
    Showcase — markup is static, this only switches the visible screen.
    Screens change only when a list item or a "more screens" tab is tapped;
    they used to follow the scroll position, which on phones swapped the
-   video out as soon as the list passed through the middle of the screen.
-   Slot 0 is a muted, looping preview video: it plays while it is the visible
-   slot and at least a third on screen. Tapping the phone pauses or resumes
-   it (and starts it where autoplay is blocked, e.g. iOS Low Power Mode).
+   screen as soon as the list passed through the middle of the screen.
    ================================================================ */
 
-const showcaseVideo = document.querySelector('#phoneScreen video');
 const mobileShowcase = window.matchMedia('(max-width: 699px)');
 let showcaseIndex = 0;
-let phoneVisible = false;
-let videoPausedByUser = false;
-
-function syncVideo() {
-  if (!showcaseVideo) return;
-  if (showcaseIndex === 0 && phoneVisible && !videoPausedByUser) {
-    const p = showcaseVideo.play();
-    if (p && p.catch) p.catch(() => {});
-  } else {
-    showcaseVideo.pause();
-  }
-}
 
 function showcaseTriggers() {
   return [...document.querySelectorAll('#scList .sc-item, #scMore .sc-chip')];
@@ -226,7 +281,6 @@ function selectShowcase(i) {
     const desc = el?.dataset.desc || (mobileShowcase.matches ? el?.querySelector('p')?.textContent : '') || '';
     caption.textContent = desc;
   }
-  syncVideo();
 }
 
 function initShowcase() {
@@ -235,19 +289,6 @@ function initShowcase() {
 
   triggers.forEach((el, i) => el.addEventListener('click', () => selectShowcase(i)));
   mobileShowcase.addEventListener?.('change', () => selectShowcase(showcaseIndex));
-
-  if (showcaseVideo) {
-    new IntersectionObserver((entries) => {
-      phoneVisible = entries[0].isIntersecting;
-      syncVideo();
-    }, { threshold: 0.33 }).observe(showcaseVideo);
-
-    showcaseVideo.addEventListener('click', () => {
-      videoPausedByUser = !showcaseVideo.paused;
-      if (videoPausedByUser) showcaseVideo.pause();
-      else syncVideo();
-    });
-  }
   selectShowcase(0);
 }
 
@@ -264,6 +305,48 @@ function initDevices() {
       shots.forEach((s, j) => s.classList.toggle('on', i === j));
     }));
   });
+}
+
+/* ================================================================
+   Features — every card is in the HTML; "show all" only unhides the rest
+   ================================================================ */
+
+function initFeatures() {
+  const btn = document.getElementById('featAll');
+  const groups = document.getElementById('featGroups');
+  if (!btn || !groups) return;
+  btn.addEventListener('click', () => {
+    groups.classList.remove('is-collapsed');
+    btn.setAttribute('aria-expanded', 'true');
+    // the button hides itself; move focus to the first newly shown feature
+    groups.querySelector('.f-extra .f-name')?.setAttribute('tabindex', '-1');
+    groups.querySelector('.f-extra .f-name')?.focus({ preventScroll: true });
+  });
+}
+
+/* ================================================================
+   Download dock — phones only (styles.css). Out of the way while the hero's
+   or the closing section's own download button is on screen.
+   ================================================================ */
+
+function initDock() {
+  const dock = document.getElementById('dock');
+  const hero = document.querySelector('.hero-actions');
+  const final = document.querySelector('.final-actions');
+  if (!dock || !hero || !final || !('IntersectionObserver' in window)) return;
+  const onScreen = new Set();
+  let pastHero = false;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) onScreen.add(e.target); else onScreen.delete(e.target);
+      if (e.target === hero) pastHero = !e.isIntersecting && e.boundingClientRect.top < 0;
+    });
+    const show = pastHero && onScreen.size === 0;
+    dock.classList.toggle('show', show);
+    document.body.classList.toggle('dock-on', show);
+  });
+  io.observe(hero);
+  io.observe(final);
 }
 
 /* ================================================================
@@ -395,9 +478,12 @@ function suggestLanguage(menu, remember) {
    ================================================================ */
 
 applyTheme();
+initHeroVideo();
 initShowcase();
 initDevices();
+initFeatures();
 initFAQ();
+initDock();
 initSmoothScrolling();
 initMobileMenu();
 initLangMenu();

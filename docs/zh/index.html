@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>:root { --serif: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', serif; --sans: 'Inter', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
@@ -391,7 +391,6 @@
   <div class="nav-links">
     <a href="#showcase">功能</a>
     <a href="#trust">托付</a>
-    <a href="#compare">为何选择 Vakit</a>
     <a href="#reviews">评价</a>
     <a href="#faq">常见问题</a>
   </div>
@@ -440,7 +439,7 @@
       <span>功修应用，</span><br>
       <span>本该有的</span><em>样子。</em>
     </h1>
-    <p class="hero-sub">功修应用，本该有的样子。一位安静陪伴五番礼拜的伙伴——还有古兰经、朝向、记主，以及一本珍视你每一天的日历。不需要时悄然隐去，需要时一直都在。</p>
+    <p class="hero-sub">一位安静陪伴五番礼拜的伙伴——还有古兰经、朝向、记主，以及一本珍视你每一天的日历。不需要时悄然隐去，需要时一直都在。</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-zh" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -463,42 +462,59 @@
         <div class="proof-lbl">计算方法</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">核心功能 · 离线</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">种界面语言</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">北京</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Vakit 的礼拜页面：天空随着一天的推移而变化"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">下一次 · 还有</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼 · 封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼 · 封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼</span><span>封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼 · 封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼 · 封斋 · 日出 · 晌礼 · 晡礼 · 昏礼 · 宵礼</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="下一次 · 还有">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">北京</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">下一次 · 还有</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>封斋</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>日出</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>晌礼</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>晡礼</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>昏礼</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>宵礼</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · 应有尽有，别无多余</div>
     <h2 class="sc-h2"><span>一位陪伴者，</span><br><em>而不是抢夺注意力的机器。</em></h2>
-    <p class="sc-lede">十个核心工具，每一个都让你一打开便感到平静。轻点任意一个即可预览。</p>
+    <p class="sc-lede">15 个核心工具，每一个都让你一打开便感到平静。轻点任意一个即可预览。</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>如天空一般。</h3><p>每当礼拜时间来临，屏幕也随天空一同变化——真实的星辰与月亮都在它们真实的位置。厌恶时段与副功拜时段可按需显示。</p></div><span class="sc-tag">预览</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>无需解锁。</h3><p>下一次礼拜显示在锁定屏幕、小组件、灵动岛和手表上。安静地瞥一眼即可——绝不让你盯着不放。</p></div><span class="sc-tag">预览</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>一应俱全。</h3><p>古兰经、圣训、主麻讲道、记主、尊名、指南和日历——尽在一处。没有任何功能被锁在付费墙之后。</p></div><span class="sc-tag">预览</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>方向精准。</h3><p>对准朝向时手机就会振动，同时显示到天房的距离。你的坐标从不会传到我们的服务器。</p></div><span class="sc-tag">预览</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>方向精准。</h3><p>对准朝向时手机就会振动，同时显示到天房的距离。</p></div><span class="sc-tag">预览</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>你的功修，化作圆环。</h3><p>礼拜、古兰经、记主、圣训与还补各有圆环；还能看到每次礼拜入时后你多久去礼，以及你的通读进度——温和地进步，没有愧疚。</p></div><span class="sc-tag">预览</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>欠拜，礼一次少一次。</h3><p>按礼拜时段算出一生的欠拜，逐一还补——还能看到预计何时还清。</p></div><span class="sc-tag">预览</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>古兰经，离线也能读。</h3><p>阅读、聆听、沉思——麦地那或土耳其书体、逐词跟读、经注与可下载的诵读。</p></div><span class="sc-tag">预览</span></button>
@@ -518,7 +534,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakit 的礼拜页面：天空随着一天的推移而变化"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/zh/prayer-times.webp" alt="如天空一般。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/zh/widget.webp" alt="无需解锁。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/zh/discover.webp" alt="一应俱全。" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/zh/qibla.webp" alt="方向精准。" width="390" height="844" loading="lazy">
@@ -614,111 +630,134 @@
       <span>你的数据是</span><em>一份托付，</em><br>
       <span>而不是商品。</span>
     </h2>
-    <p class="trust-lede">别让你的功修半途中断。其他礼拜应用曾被曝出售卖用户的位置数据。Vakit 选择了另一条路：你的坐标从不会传到我们的服务器。无需账户。没有追踪。绝不妥协。这不是一项功能，而是一项原则。</p>
+    <p class="trust-lede">别让你的功修半途中断。其他礼拜应用曾被曝出售卖用户的位置数据。Vakit 选择了另一条路：你的坐标从不会传到我们的服务器。无需账户。没有广告。你的数据绝不出售。这不是一项功能，而是一项原则。</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>下载，打开，礼拜。</h3>
         <p>无需注册，无需登录，也没有会忘记的密码。安装后 Vakit 立即可用。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>在你的手机上计算。</h3>
         <p>礼拜时间根据你的位置、按你选择的方法在本地计算，不会把任何信息发送到服务器去“查询”。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>你的精确位置不在我们手里。</h3>
         <p>你的坐标不会发送到我们的服务器——我们只知道你所在的国家、城市和区县。查询你的地址和附近的清真寺时，位置只会发送给 Apple 地图。</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>直白易懂的政策。</h3>
         <p>与一个化名用户代码关联的使用数据——不含姓名、电子邮件或电话。具体发送哪些内容，隐私政策里逐项写明，一分钟就能读完。</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">其他礼拜应用的问题，你早已心知肚明。下面是 Vakit 逐条给出的回答。</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">问题</div><div class="compare-cell">其他应用</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">广告</div><div class="compare-cell other">宗教内容旁出现赌博和不当广告。</div><div class="compare-cell vakit">完全没有广告，连自愿观看的也没有：Vakit 不展示任何广告。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">离线</div><div class="compare-cell other">核心功能需要联网。</div><div class="compare-cell vakit">礼拜、朝向、古兰经经文、记主——全部离线可用。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">锁定屏幕</div><div class="compare-cell other">小组件在 iOS 更新之间频频失灵。</div><div class="compare-cell vakit">实时活动与灵动岛；iOS 17 起支持待机显示。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">准确性</div><div class="compare-cell other">夏令时出错，计算方法有限。</div><div class="compare-cell vakit">12 种方法，自动识别时区，出行时自动感知。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">设备</div><div class="compare-cell other">只有手机版；手表和电脑版缺失或只做了一半。</div><div class="compare-cell vakit">iPhone、iPad 和 Mac 通过 iCloud 同步；Apple Watch 通过 iPhone 同步。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">设计</div><div class="compare-cell other">界面陈旧；每次更新都有倒退。</div><div class="compare-cell vakit">iOS 26 上呈现液态玻璃，iOS 16.4 起即可运行。安静、现代、快速。</div></div>
+        <div class="compare-row"><div class="compare-cell feat">费用</div><div class="compare-cell other">付费墙、订阅、“高级版”等级。</div><div class="compare-cell vakit">免费。没有等级，也没有加购推销。</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51 个工具</div>
       <h2><span>一个应用，</span><br><em>足以陪伴一生的功修。</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">礼拜时间</h3><div class="f-desc">12 种计算方法，自动识别时区，出行时自动感知。</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">实时星空</h3><div class="f-desc">日弧上的真实星辰与月亮——就在你所在之处、此时此刻。</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">副功拜时段</h3><div class="f-desc">伊什拉格、都哈、奥瓦宾以及夜间各时段；可选开启。</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">手动位置</h3><div class="f-desc">手动设置位置，或在出行时让它自动跟随。</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">礼拜时间、实时朝向，13 种复杂功能。</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Mac 应用</h3><div class="f-desc">菜单栏倒计时、键盘快捷键、iCloud 同步。</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">同一个应用，更大的屏幕；你的记录通过 iCloud 同步。</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25 种语言</h3><div class="f-desc">阿拉伯语、乌尔都语、波斯语和维吾尔语采用从右向左的界面。</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">朝向罗盘</h3><div class="f-desc">以触感引导方向，并显示到天房的距离。</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">尊贵的古兰经</h3><div class="f-desc">114 章。逐词解析、译文与经注（土耳其语、英语）、传统经本。</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">经本书体</h3><div class="f-desc">麦地那或土耳其书体——页面排版也随之改变。</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">通读记录</h3><div class="f-desc">114 章、30 卷；已完成的通读与预计完成时间。</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">离线诵读</h3><div class="f-desc">选择诵读者与诵读风格；下载章或卷，离线收听。</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">播放列表</h3><div class="f-desc">按你的顺序排列章节，给列表命名，从头听到尾——离线也能听。</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">语音翻译</h3><div class="f-desc">用设备自带的声音聆听译文——单独或在每节经文之后，无需网络。</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">圣训</h3><div class="f-desc">来自七大圣训集的 36,000 多段圣训。</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">今日内容</h3><div class="f-desc">当日的经文、圣训和尊名同屏显示；可回看过去一周。</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">主麻讲道</h3><div class="f-desc">供使用 Diyanet 计算方法的用户：阅读、收听并离线保存主麻讲道。</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">主麻指南</h3><div class="f-desc">准备、大净、聚礼演讲、山洞章与赞圣——整个主麻日汇于一页。</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">记主计数器</h3><div class="f-desc">圆环式进度、预设记主与自定义记主。</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">拜后赞词</h3><div class="f-desc">33-33-33，或完整的拜后顺序。</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">真主的 99 个尊名</h3><div class="f-desc">每个尊名都附有音译与释义；可添加为记主。</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">希吉来历</h3><div class="f-desc">公历 + 希吉来历，标注特别的日子与斋月。</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">吉庆日</h3><div class="f-desc">从今天起依次列出圣夜、节日及其前夜，每一天都有指南。</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">月度时刻表</h3><div class="f-desc">一个月的全部礼拜时间在一个列表里；斋月中显示天数和开斋。</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">厌恶时段</h3><div class="f-desc">标注在日弧上，并附其所依据的传述。</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">洁净指南</h3><div class="f-desc">逐步讲解小净、大净与土净。</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">礼拜指南</h3><div class="f-desc">17 种礼拜；站立、坐着或以示意动作礼拜。</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">天课与开斋捐</h3><div class="f-desc">依据经典教法的计算器。</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">还补记录</h3><div class="f-desc">按礼拜时段记录欠拜，按天记录欠下的斋戒。</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">有恙的日子</h3><div class="f-desc">经期与产后的日子；礼拜连续记录不会中断。</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">小组件</h3><div class="f-desc">主屏幕、锁定屏幕、待机显示——Mac 上也有。</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">实时活动</h3><div class="f-desc">灵动岛与锁定屏幕上的倒计时。</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">控制中心</h3><div class="f-desc">六个快捷操作（iOS 18+）——朝向、下一次礼拜等。</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">功修记录</h3><div class="f-desc">圆环：礼拜、古兰经、记主、圣训与还补。</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">礼拜自律</h3><div class="f-desc">每次礼拜入时后你多久去礼——本月与全部记录。</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">晨礼闹钟</h3><div class="f-desc">还没礼晨礼时在日出前响起，礼过便不再响；在 iOS 26 上可突破静音模式。</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">封斋饭闹钟</h3><div class="f-desc">可设在斋月期间、每天，或副功斋的日子。</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">吉庆日提醒</h3><div class="f-desc">12 个吉庆日：吉庆之夜当晚提醒，其余提前一天提醒。</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">通知</h3><div class="f-desc">在设备上本地安排，稳定可靠。</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">宣礼声</h3><div class="f-desc">每次礼拜各有自己的调式：saba、ussak、rast、segah、hicaz。</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Siri 快捷指令</h3><div class="f-desc">询问下一次礼拜；用语音标记礼拜、斋戒或还补。</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">统一搜索</h3><div class="f-desc">一次搜索，涵盖所有工具——输入“Baqarah 255”即可跳到该节经文。</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">书签</h3><div class="f-desc">收藏经文与圣训。</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">iCloud 同步</h3><div class="f-desc">你的记录保存在你自己的 iCloud 中，所有设备都能看到。</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">经注</h3><div class="f-desc">Diyanet 经注；轻点一节经文即可打开，并显示它所涵盖的经文范围。</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">分享卡片</h3><div class="f-desc">为经文、圣训、记主和尊名生成精美卡片。</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">封斋</h3><div class="f-desc">斋月、闪瓦鲁月，以及逐日记录。</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">附近的清真寺</h3><div class="f-desc">通过 Apple 地图查找清真寺，你的位置不会传到我们的服务器；地图、距离与路线。</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">支持 Vakit</h3><div class="f-desc">自愿参与的方式，让这款免费应用持续运转。</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">深色模式</h3><div class="f-desc">温暖、宁静的深色，陪你度过深夜时分。</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">礼拜时间与朝向<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">礼拜时间</h4><div class="f-desc">12 种计算方法，自动识别时区，出行时自动感知。</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">朝向罗盘</h4><div class="f-desc">以触感引导方向，并显示到天房的距离。</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">实时星空</h4><div class="f-desc">日弧上的真实星辰与月亮——就在你所在之处、此时此刻。</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">晨礼闹钟</h4><div class="f-desc">还没礼晨礼时在日出前响起，礼过便不再响；在 iOS 26 上可突破静音模式。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">宣礼声</h4><div class="f-desc">每次礼拜各有自己的调式：saba、ussak、rast、segah、hicaz。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">副功拜时段</h4><div class="f-desc">伊什拉格、都哈、奥瓦宾以及夜间各时段；可选开启。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">厌恶时段</h4><div class="f-desc">标注在日弧上，并附其所依据的传述。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">吉庆日</h4><div class="f-desc">从今天起依次列出圣夜、节日及其前夜，每一天都有指南。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">手动位置</h4><div class="f-desc">手动设置位置，或在出行时让它自动跟随。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">通知</h4><div class="f-desc">在设备上本地安排，稳定可靠。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">附近的清真寺</h4><div class="f-desc">通过 Apple 地图查找清真寺，你的位置不会传到我们的服务器；地图、距离与路线。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">古兰经与圣训<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">尊贵的古兰经</h4><div class="f-desc">114 章。逐词解析、译文与经注（土耳其语、英语）、传统经本。</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">圣训</h4><div class="f-desc">来自七大圣训集的 36,000 多段圣训。</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">离线诵读</h4><div class="f-desc">选择诵读者与诵读风格；下载章或卷，离线收听。</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">经注</h4><div class="f-desc">Diyanet 经注；轻点一节经文即可打开，并显示它所涵盖的经文范围。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">通读记录</h4><div class="f-desc">114 章、30 卷；已完成的通读与预计完成时间。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">经本书体</h4><div class="f-desc">麦地那或土耳其书体——页面排版也随之改变。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">播放列表</h4><div class="f-desc">按你的顺序排列章节，给列表命名，从头听到尾——离线也能听。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">语音翻译</h4><div class="f-desc">用设备自带的声音聆听译文——单独或在每节经文之后，无需网络。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">今日内容</h4><div class="f-desc">当日的经文、圣训和尊名同屏显示；可回看过去一周。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">书签</h4><div class="f-desc">收藏经文与圣训。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">分享卡片</h4><div class="f-desc">为经文、圣训、记主和尊名生成精美卡片。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">功修记录与记主<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">功修记录</h4><div class="f-desc">圆环：礼拜、古兰经、记主、圣训与还补。</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">还补记录</h4><div class="f-desc">按礼拜时段记录欠拜，按天记录欠下的斋戒。</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">记主计数器</h4><div class="f-desc">圆环式进度、预设记主与自定义记主。</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">礼拜自律</h4><div class="f-desc">每次礼拜入时后你多久去礼——本月与全部记录。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">封斋</h4><div class="f-desc">斋月、闪瓦鲁月，以及逐日记录。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">封斋饭闹钟</h4><div class="f-desc">可设在斋月期间、每天，或副功斋的日子。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">拜后赞词</h4><div class="f-desc">33-33-33，或完整的拜后顺序。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">真主的 99 个尊名</h4><div class="f-desc">每个尊名都附有音译与释义；可添加为记主。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">有恙的日子</h4><div class="f-desc">经期与产后的日子；礼拜连续记录不会中断。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">日历与指南<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">希吉来历</h4><div class="f-desc">公历 + 希吉来历，标注特别的日子与斋月。</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">礼拜指南</h4><div class="f-desc">17 种礼拜；站立、坐着或以示意动作礼拜。</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">主麻讲道</h4><div class="f-desc">供使用 Diyanet 计算方法的用户：阅读、收听并离线保存主麻讲道。</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">月度时刻表</h4><div class="f-desc">一个月的全部礼拜时间在一个列表里；斋月中显示天数和开斋。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">主麻指南</h4><div class="f-desc">准备、大净、聚礼演讲、山洞章与赞圣——整个主麻日汇于一页。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">洁净指南</h4><div class="f-desc">逐步讲解小净、大净与土净。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">吉庆日提醒</h4><div class="f-desc">12 个吉庆日：吉庆之夜当晚提醒，其余提前一天提醒。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">天课与开斋捐</h4><div class="f-desc">依据经典教法的计算器。</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">设备及更多<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">礼拜时间、实时朝向，13 种复杂功能。</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">小组件</h4><div class="f-desc">主屏幕、锁定屏幕、待机显示——Mac 上也有。</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">实时活动</h4><div class="f-desc">灵动岛与锁定屏幕上的倒计时。</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac 应用</h4><div class="f-desc">菜单栏倒计时、键盘快捷键、iCloud 同步。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">同一个应用，更大的屏幕；你的记录通过 iCloud 同步。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 种语言</h4><div class="f-desc">阿拉伯语、乌尔都语、波斯语和维吾尔语采用从右向左的界面。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud 同步</h4><div class="f-desc">你的记录保存在你自己的 iCloud 中，所有设备都能看到。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri 快捷指令</h4><div class="f-desc">询问下一次礼拜；用语音标记礼拜、斋戒或还补。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">控制中心</h4><div class="f-desc">六个快捷操作（iOS 18+）——朝向、下一次礼拜等。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">统一搜索</h4><div class="f-desc">一次搜索，涵盖所有工具——输入“Baqarah 255”即可跳到该节经文。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">深色模式</h4><div class="f-desc">温暖、宁静的深色，陪你度过深夜时分。</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">支持 Vakit</h4><div class="f-desc">自愿参与的方式，让这款免费应用持续运转。</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>差别，</span><br><em>逐一衡量。</em></h2>
-    <p class="compare-lede">其他礼拜应用的问题，你早已心知肚明。下面是 Vakit 逐条给出的回答。</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">问题</div><div class="compare-cell">其他应用</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">广告</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>宗教内容旁出现赌博和不当广告。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>完全没有广告，连自愿观看的也没有：Vakit 不展示任何广告。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">隐私</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>位置数据被卖给第三方（已被公开报道）。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>坐标不会传到我们的服务器。没有追踪。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">离线</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>核心功能需要联网。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>礼拜、朝向、古兰经经文、记主——全部离线可用。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">锁定屏幕</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>小组件在 iOS 更新之间频频失灵。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>实时活动与灵动岛；iOS 17 起支持待机显示。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">准确性</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>夏令时出错，计算方法有限。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>12 种方法，自动识别时区，出行时自动感知。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">设备</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>只有手机版；手表和电脑版缺失或只做了一半。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>iPhone、iPad 和 Mac 通过 iCloud 同步；Apple Watch 通过 iPhone 同步。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">设计</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>界面陈旧；每次更新都有倒退。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>iOS 26 上呈现液态玻璃，iOS 16.4 起即可运行。安静、现代、快速。</div></div>
-        <div class="compare-row"><div class="compare-cell feat">费用</div><div class="compare-cell other"><span class="cmark no">否</span><br><br>付费墙、订阅、“高级版”等级。</div><div class="compare-cell vakit"><span class="cmark yes">是</span><br><br>免费。没有等级，也没有加购推销。</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">查看全部 51 项工具</button>
   </div>
 </section>
 
@@ -803,6 +842,15 @@
   </div>
   <div class="foot-sig">用心打造 · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-zh" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>在 App Store 下载</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "zh",

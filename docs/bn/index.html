@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500&family=Noto+Sans+Bengali:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+Bengali:wght@400;500&family=Noto+Sans+Bengali:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>:root { --serif: 'Instrument Serif', 'Noto Serif Bengali', serif; --sans: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
@@ -391,7 +391,6 @@
   <div class="nav-links">
     <a href="#showcase">ফিচার</a>
     <a href="#trust">আমানত</a>
-    <a href="#compare">কেন Vakit</a>
     <a href="#reviews">রিভিউ</a>
     <a href="#faq">প্রশ্নোত্তর</a>
   </div>
@@ -440,7 +439,7 @@
       <span>ইবাদতের অ্যাপ,</span><br>
       <span>যেমনটা হওয়া উচিত,</span> <em>ঠিক তেমন।</em>
     </h1>
-    <p class="hero-sub">ইবাদতের অ্যাপ, যেমনটা হওয়া উচিত, ঠিক তেমন। পাঁচ ওয়াক্ত নামাজের এক নীরব সঙ্গী — কুরআন, কিবলা, জিকির আর এমন এক ক্যালেন্ডারসহ, যা আপনার দিনগুলোকে মর্যাদা দেয়। দরকার না থাকলে আড়ালে থাকে; দরকার হলেই পাশে।</p>
+    <p class="hero-sub">পাঁচ ওয়াক্ত নামাজের এক নীরব সঙ্গী — কুরআন, কিবলা, জিকির আর এমন এক ক্যালেন্ডারসহ, যা আপনার দিনগুলোকে মর্যাদা দেয়। দরকার না থাকলে আড়ালে থাকে; দরকার হলেই পাশে।</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-bn" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -463,42 +462,59 @@
         <div class="proof-lbl">হিসাবের পদ্ধতি</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">মূল ফিচার · অফলাইন</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">ইন্টারফেসের ভাষা</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">ঢাকা</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Vakit-এর নামাজের পাতা: দিন গড়ানোর সঙ্গে আকাশও বদলায়"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">পরবর্তী নামাজ · বাকি সময়</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা</span><span>ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা · ইমসাক · সূর্যোদয় · যোহর · আসর · মাগরিব · এশা</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="পরবর্তী নামাজ · বাকি সময়">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">ঢাকা</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">পরবর্তী নামাজ · বাকি সময়</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>ইমসাক</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>সূর্যোদয়</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>যোহর</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>আসর</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>মাগরিব</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>এশা</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · সবকিছু, বাড়তি কিছু নয়</div>
     <h2 class="sc-h2"><span>একজন সঙ্গী,</span><br><em>মনোযোগ কাড়ার যন্ত্র নয়।</em></h2>
-    <p class="sc-lede">দশটি মূল টুল, প্রতিটি এমনভাবে বানানো যে খুললেই মনে প্রশান্তি আসে। দেখতে যেকোনোটিতে ট্যাপ করুন।</p>
+    <p class="sc-lede">15টি মূল টুল, প্রতিটি এমনভাবে বানানো যে খুললেই মনে প্রশান্তি আসে। দেখতে যেকোনোটিতে ট্যাপ করুন।</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>আকাশের মতো।</h3><p>প্রতি ওয়াক্ত শুরু হলে পর্দাও আকাশের সঙ্গে বদলায় — আসল তারা আর চাঁদ ঠিক তাদের জায়গায়। মাকরুহ ও নফল সময় ঐচ্ছিক।</p></div><span class="sc-tag">প্রিভিউ</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>আনলক না করেই।</h3><p>পরবর্তী নামাজ লক স্ক্রিনে, উইজেটে, ডায়নামিক আইল্যান্ডে আর আপনার ঘড়িতে। এক পলকের নীরব দৃষ্টি — কখনো মনোযোগ কেড়ে নেয় না।</p></div><span class="sc-tag">প্রিভিউ</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>সব এক জায়গায়।</h3><p>কুরআন, হাদিস, জুমার খুতবা, জিকির, আসমাউল হুসনা, নির্দেশিকা আর ক্যালেন্ডার — সব এক জায়গায়। কোনো কিছুই পেওয়ালের পেছনে আটকানো নেই।</p></div><span class="sc-tag">প্রিভিউ</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>সঠিক দিক।</h3><p>কিবলার দিকে ফিরলেই ফোন কেঁপে ওঠে, পাশে কাবা পর্যন্ত দূরত্ব। আপনার স্থানাঙ্ক কখনো আমাদের সার্ভারে পৌঁছায় না।</p></div><span class="sc-tag">প্রিভিউ</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>সঠিক দিক।</h3><p>কিবলার দিকে ফিরলেই ফোন কেঁপে ওঠে, পাশে কাবা পর্যন্ত দূরত্ব।</p></div><span class="sc-tag">প্রিভিউ</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>ইবাদতের অগ্রগতি, রিংয়ে।</h3><p>নামাজ, কুরআন, জিকির, হাদিস ও কাজার রিং; প্রতি ওয়াক্ত শুরুর কতক্ষণ পরে নামাজ পড়েন, আর আপনার খতম — কোমল অগ্রগতি, অপরাধবোধ নেই।</p></div><span class="sc-tag">প্রিভিউ</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>কাজা, আদায়ের সঙ্গে সঙ্গে কমে।</h3><p>সারা জীবনের কাজা নামাজ ওয়াক্ত ধরে হিসাব করুন, একে একে আদায় করুন — কবে শেষ হবে তার আনুমানিক হিসাবসহ।</p></div><span class="sc-tag">প্রিভিউ</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>কুরআন, ইন্টারনেট ছাড়াও।</h3><p>পড়ুন, শুনুন, ভাবুন — মদিনা বা তুরস্ক লিপি, শব্দে শব্দে অনুসরণ, তাফসির আর ডাউনলোড করা যায় এমন তিলাওয়াত।</p></div><span class="sc-tag">প্রিভিউ</span></button>
@@ -518,7 +534,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakit-এর নামাজের পাতা: দিন গড়ানোর সঙ্গে আকাশও বদলায়"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/bn/prayer-times.webp" alt="আকাশের মতো।" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/bn/widget.webp" alt="আনলক না করেই।" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/bn/discover.webp" alt="সব এক জায়গায়।" width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/bn/qibla.webp" alt="সঠিক দিক।" width="390" height="844" loading="lazy">
@@ -614,111 +630,134 @@
       <span>আপনার তথ্য</span> <em>একটি আমানত,</em><br>
       <span>বিক্রির পণ্য নয়।</span>
     </h2>
-    <p class="trust-lede">আপনার ইবাদত যেন মাঝপথে থেমে না যায়। অন্য নামাজের অ্যাপ লোকেশনের তথ্য বিক্রি করতে গিয়ে ধরা পড়েছে। Vakit অন্য পথ বেছে নিয়েছে: আপনার স্থানাঙ্ক কখনো আমাদের সার্ভারে পৌঁছায় না। অ্যাকাউন্ট নেই। ট্র্যাকিং নেই। কোনো আপস নেই। এটি কোনো ফিচার নয় — এটি একটি নীতি।</p>
+    <p class="trust-lede">আপনার ইবাদত যেন মাঝপথে থেমে না যায়। অন্য নামাজের অ্যাপ লোকেশনের তথ্য বিক্রি করতে গিয়ে ধরা পড়েছে। Vakit অন্য পথ বেছে নিয়েছে: আপনার স্থানাঙ্ক কখনো আমাদের সার্ভারে পৌঁছায় না। অ্যাকাউন্ট নেই। বিজ্ঞাপন নেই। আপনার তথ্য কখনো বিক্রি হয় না। এটি কোনো ফিচার নয় — এটি একটি নীতি।</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>ডাউনলোড করুন। খুলুন। নামাজ পড়ুন।</h3>
         <p>সাইন-আপ নেই, লগইন নেই, ভুলে যাওয়ার মতো কোনো পাসওয়ার্ড নেই। ইনস্টল করার মুহূর্ত থেকেই Vakit কাজ শুরু করে।</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>হিসাব হয় আপনার ফোনেই।</h3>
         <p>নামাজের সময় আপনার লোকেশন থেকে, আপনার বেছে নেওয়া পদ্ধতিতে, ফোনেই হিসাব করা হয়। 'খুঁজে আনার' জন্য কিছুই কোনো সার্ভারে পাঠানো হয় না।</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>আপনার সঠিক অবস্থান আমাদের কাছে নেই।</h3>
         <p>আপনার স্থানাঙ্ক আমাদের সার্ভারে পাঠানো হয় না — আমরা শুধু দেশ, শহর ও এলাকা জানি। আপনার ঠিকানা আর কাছের মসজিদের জন্য লোকেশন যায় শুধু Apple Maps-এ।</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>সহজ ভাষার নীতি।</h3>
         <p>একটি ছদ্মনামী ব্যবহারকারী কোডের সঙ্গে যুক্ত ব্যবহারের তথ্য — নাম, ইমেইল বা ফোন নম্বর ছাড়াই। কী কী পাঠানো হয়, আমাদের গোপনীয়তা নীতিতে তা একে একে লেখা আছে — এক মিনিটে পড়ে ফেলার মতো ছোট।</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">অন্য নামাজের অ্যাপগুলোর সমস্যা আপনি আগেই জানেন। এখানে প্রতিটির জবাব দিচ্ছে Vakit, লাইন ধরে ধরে।</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">বিষয়</div><div class="compare-cell">অন্য অ্যাপ</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">বিজ্ঞাপন</div><div class="compare-cell other">ধর্মীয় বিষয়ের পাশে ক্যাসিনো ও অশোভন বিজ্ঞাপন।</div><div class="compare-cell vakit">সম্পূর্ণ বিজ্ঞাপনমুক্ত। ঐচ্ছিক বিজ্ঞাপনও নেই: Vakit কোনো বিজ্ঞাপনই দেখায় না।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">অফলাইন</div><div class="compare-cell other">মূল ফিচারের জন্য ইন্টারনেট লাগে।</div><div class="compare-cell vakit">নামাজ, কিবলা, কুরআনের লিখিত পাঠ, জিকির — সবই অফলাইনে চলে।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">লক স্ক্রিন</div><div class="compare-cell other">iOS আপডেট এলেই উইজেট নষ্ট হয়ে যায়।</div><div class="compare-cell vakit">লাইভ অ্যাক্টিভিটি ও ডায়নামিক আইল্যান্ড; iOS 17 থেকে StandBy।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">নির্ভুলতা</div><div class="compare-cell other">ঘড়ি এগোনো-পেছানোর (ডেলাইট সেভিং) ভুল, সীমিত হিসাব পদ্ধতি।</div><div class="compare-cell vakit">12টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">ডিভাইস</div><div class="compare-cell other">শুধু ফোন; ঘড়ি ও ডেস্কটপ নেই, নয়তো আধাআধি বানানো।</div><div class="compare-cell vakit">iPhone, iPad ও Mac iCloud-এ; Apple Watch সিঙ্ক হয় iPhone-এর মাধ্যমে।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">নকশা</div><div class="compare-cell other">পুরোনো ইন্টারফেস; প্রতিটি আপডেটের পর কিছু না কিছু বিগড়ে যায়।</div><div class="compare-cell vakit">iOS 26-এ Liquid Glass, চলে iOS 16.4 থেকে। শান্ত, আধুনিক, দ্রুত।</div></div>
+        <div class="compare-row"><div class="compare-cell feat">খরচ</div><div class="compare-cell other">পেওয়াল, সাবস্ক্রিপশন, 'প্রিমিয়াম' স্তর।</div><div class="compare-cell vakit">বিনামূল্যে। কোনো স্তর নেই, বাড়তি কিছু গছানোর চেষ্টাও নেই।</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51টি টুল</div>
       <h2><span>একটি অ্যাপ,</span><br><em>সারা জীবনের ইবাদতের জন্য যথেষ্ট।</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">নামাজের সময়</h3><div class="f-desc">হিসাবের 12টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">জীবন্ত আকাশ</h3><div class="f-desc">দিনের বৃত্তচাপে আসল তারা আর চাঁদ — আপনি যেখানে আছেন, ঠিক এই মুহূর্তের।</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">নফল নামাজের সময়</h3><div class="f-desc">ইশরাক, চাশত, আউওয়াবিন আর রাতের ভাগগুলো; ঐচ্ছিক।</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">নিজে বাছাই করা লোকেশন</h3><div class="f-desc">লোকেশন নিজে বেছে নিন, অথবা সফরে নিজে থেকেই বদলে যেতে দিন।</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">নামাজের সময়, লাইভ কিবলা, 13টি কমপ্লিকেশন।</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Mac অ্যাপ</h3><div class="f-desc">মেনু বারে কাউন্টডাউন, কিবোর্ড শর্টকাট, iCloud সিঙ্ক।</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">একই অ্যাপ বড় পর্দায়; আপনার রেকর্ড iCloud-এ সিঙ্ক হয়।</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25টি ভাষা</h3><div class="f-desc">আরবি, উর্দু, ফারসি ও উইঘুর ভাষায় ডান থেকে বাঁয়ে চলা ইন্টারফেস।</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">কিবলা কম্পাস</h3><div class="f-desc">কম্পনে দিক নির্দেশ, সঙ্গে কাবা পর্যন্ত দূরত্ব।</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">আল-কুরআন</h3><div class="f-desc">114টি সূরা। শব্দে শব্দে অর্থ, অনুবাদ, তাফসির, প্রচলিত মুসহাফ।</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">মুসহাফের লিপি</h3><div class="f-desc">মদিনা বা তুরস্ক লিপি — পৃষ্ঠার বিন্যাসও সঙ্গে বদলায়।</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">খতমের হিসাব</h3><div class="f-desc">114টি সূরা, 30 পারা; সম্পন্ন খতম আর শেষ হওয়ার আনুমানিক সময়।</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">অফলাইন তিলাওয়াত</h3><div class="f-desc">ক্বারি ও তিলাওয়াতের ধরন বেছে নিন; সূরা বা পারা ডাউনলোড করে ইন্টারনেট ছাড়াই শুনুন।</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">প্লেলিস্ট</h3><div class="f-desc">সূরাগুলো নিজের পছন্দের ক্রমে সাজান, তালিকার নাম দিন, শুরু থেকে শেষ পর্যন্ত শুনুন — অফলাইনেও।</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">কণ্ঠে অনুবাদ</h3><div class="f-desc">অনুবাদ আপনার ডিভাইসের নিজস্ব কণ্ঠে শুনুন — একা বা প্রতিটি আয়াতের পরে, ইন্টারনেট ছাড়াই।</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">হাদিস</h3><div class="f-desc">সাতটি প্রধান গ্রন্থ থেকে 36,000-এর বেশি হাদিস।</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">দিনের বিষয়বস্তু</h3><div class="f-desc">দিনের আয়াত, হাদিস ও আসমা এক পর্দায়; গত এক সপ্তাহ ফিরে দেখুন।</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">জুমার খুতবা</h3><div class="f-desc">যাঁরা Diyanet পদ্ধতি ব্যবহার করেন, তাঁদের জন্য: খুতবা পড়ুন, শুনুন, অফলাইনে রেখে দিন।</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">জুমার গাইড</h3><div class="f-desc">প্রস্তুতি, গোসল, খুতবা, সূরা কাহফ ও দরুদ — পুরো জুমা এক পাতায়।</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">জিকির গণনাকারী</h3><div class="f-desc">রিংয়ে অগ্রগতি, প্রস্তুত জিকির আর নিজের জিকির।</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">তাসবিহাত</h3><div class="f-desc">33-33-33, অথবা নামাজের পরের পূর্ণ ক্রম।</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">আসমাউল হুসনা</h3><div class="f-desc">আল্লাহর 99টি নাম, উচ্চারণ ও অর্থসহ; যেকোনোটি জিকির হিসেবে যোগ করা যায়।</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">হিজরি ক্যালেন্ডার</h3><div class="f-desc">ইংরেজি + হিজরি, বিশেষ দিন আর রমজানসহ।</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">বরকতময় দিন</h3><div class="f-desc">পবিত্র রাত, ঈদ ও তার আগের দিন আজ থেকে সামনে সাজানো; প্রতিটির জন্য নির্দেশিকা।</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">ইমসাকিয়া</h3><div class="f-desc">এক মাসের সব নামাজের সময় এক তালিকায়; রমজানে দিন গণনা ও ইফতার।</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">মাকরুহ সময়</h3><div class="f-desc">দিনের বৃত্তচাপে চিহ্নিত, যে বর্ণনার ভিত্তিতে, সেটিসহ।</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">পবিত্রতার নির্দেশিকা</h3><div class="f-desc">ধাপে ধাপে অজু, গোসল ও তায়াম্মুম।</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">নামাজের নির্দেশিকা</h3><div class="f-desc">17 ধরনের নামাজ; দাঁড়িয়ে, বসে বা ইশারায়।</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">যাকাত ও ফিতরা</h3><div class="f-desc">প্রচলিত ফিকহের ওপর ভিত্তি করা ক্যালকুলেটর।</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">কাজার হিসাব</h3><div class="f-desc">কাজা নামাজ ওয়াক্ত ধরে, কাজা রোজা দিন ধরে।</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">ওজরের দিন</h3><div class="f-desc">হায়েজ ও নিফাসের দিন; নামাজের ধারাবাহিকতা ভাঙে না।</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">উইজেট</h3><div class="f-desc">হোম স্ক্রিন, লক স্ক্রিন, StandBy — Mac-এও।</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">লাইভ অ্যাক্টিভিটি</h3><div class="f-desc">ডায়নামিক আইল্যান্ড ও লক স্ক্রিনে কাউন্টডাউন।</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">কন্ট্রোল সেন্টার</h3><div class="f-desc">ছয়টি দ্রুত কাজ (iOS 18+) — কিবলা, পরবর্তী নামাজ, আরও অনেক কিছু।</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">ইবাদতের হিসাব</h3><div class="f-desc">রিং: নামাজ, কুরআন, জিকির, হাদিস ও কাজা।</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">নামাজের নিয়মানুবর্তিতা</h3><div class="f-desc">প্রতি ওয়াক্ত শুরু হওয়ার কতক্ষণ পরে নামাজ পড়েন — এই মাসে ও শুরু থেকে এ পর্যন্ত।</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">ফজরের অ্যালার্ম</h3><div class="f-desc">ফজর না পড়ে থাকলে সূর্যোদয়ের আগে বাজে, পড়া হলে চুপ থাকে; iOS 26-এ সাইলেন্ট মোড ভেদ করে।</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">সেহরির অ্যালার্ম</h3><div class="f-desc">রমজানে, প্রতিদিন বা সুন্নত রোজার দিনগুলোতে সেট হয়।</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">বরকতময় দিনের রিমাইন্ডার</h3><div class="f-desc">12টি বরকতময় দিন: বরকতময় রাতের কথা সেদিন সন্ধ্যায়, বাকিগুলোর কথা এক দিন আগে মনে করিয়ে দেয়।</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">বিজ্ঞপ্তি</h3><div class="f-desc">ডিভাইসেই, স্থানীয়, নির্ভরযোগ্য।</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">আজানের সুর</h3><div class="f-desc">প্রতি ওয়াক্তের আজান নিজস্ব মাকামে: সাবা, উশশাক, রাস্ত, সেগাহ, হিজাজ।</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Siri শর্টকাট</h3><div class="f-desc">পরবর্তী নামাজের সময় জিজ্ঞেস করুন; নামাজ, রোজা বা কাজা মুখে বলে চিহ্নিত করুন।</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">একীভূত সার্চ</h3><div class="f-desc">এক সার্চ, সব টুল — 'Baqarah 255' লিখে সরাসরি আয়াতে যান।</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">বুকমার্ক</h3><div class="f-desc">আয়াত ও হাদিস সংরক্ষণ করুন।</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">iCloud সিঙ্ক</h3><div class="f-desc">আপনার রেকর্ড থাকে আপনার নিজের iCloud-এ, প্রতিটি ডিভাইসে।</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">তাফসির</h3><div class="f-desc">Diyanet-এর তাফসির — কোনো আয়াতে ট্যাপ করলেই খোলে, যে আয়াতগুলো জুড়ে তার ব্যাখ্যা, সেই পরিসরসহ।</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">শেয়ার কার্ড</h3><div class="f-desc">আয়াত, হাদিস, জিকির ও আল্লাহর নামের জন্য সুন্দর কার্ড।</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">রোজা</h3><div class="f-desc">রমজান, শাওয়াল আর প্রতিদিনের হিসাব।</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">কাছের মসজিদ</h3><div class="f-desc">Apple Maps দিয়ে খুঁজুন, আপনার লোকেশন আমাদের সার্ভারে না পাঠিয়েই; মানচিত্র, দূরত্ব, পথনির্দেশ।</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Vakit-কে সহযোগিতা</h3><div class="f-desc">বিনামূল্যের অ্যাপটি টিকিয়ে রাখার ঐচ্ছিক উপায়।</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">ডার্ক মোড</h3><div class="f-desc">গভীর রাতের জন্য উষ্ণ, শান্ত অন্ধকার।</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">নামাজের সময় ও কিবলা<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">নামাজের সময়</h4><div class="f-desc">হিসাবের 12টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">কিবলা কম্পাস</h4><div class="f-desc">কম্পনে দিক নির্দেশ, সঙ্গে কাবা পর্যন্ত দূরত্ব।</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">জীবন্ত আকাশ</h4><div class="f-desc">দিনের বৃত্তচাপে আসল তারা আর চাঁদ — আপনি যেখানে আছেন, ঠিক এই মুহূর্তের।</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">ফজরের অ্যালার্ম</h4><div class="f-desc">ফজর না পড়ে থাকলে সূর্যোদয়ের আগে বাজে, পড়া হলে চুপ থাকে; iOS 26-এ সাইলেন্ট মোড ভেদ করে।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">আজানের সুর</h4><div class="f-desc">প্রতি ওয়াক্তের আজান নিজস্ব মাকামে: সাবা, উশশাক, রাস্ত, সেগাহ, হিজাজ।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">নফল নামাজের সময়</h4><div class="f-desc">ইশরাক, চাশত, আউওয়াবিন আর রাতের ভাগগুলো; ঐচ্ছিক।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">মাকরুহ সময়</h4><div class="f-desc">দিনের বৃত্তচাপে চিহ্নিত, যে বর্ণনার ভিত্তিতে, সেটিসহ।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">বরকতময় দিন</h4><div class="f-desc">পবিত্র রাত, ঈদ ও তার আগের দিন আজ থেকে সামনে সাজানো; প্রতিটির জন্য নির্দেশিকা।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">নিজে বাছাই করা লোকেশন</h4><div class="f-desc">লোকেশন নিজে বেছে নিন, অথবা সফরে নিজে থেকেই বদলে যেতে দিন।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">বিজ্ঞপ্তি</h4><div class="f-desc">ডিভাইসেই, স্থানীয়, নির্ভরযোগ্য।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">কাছের মসজিদ</h4><div class="f-desc">Apple Maps দিয়ে খুঁজুন, আপনার লোকেশন আমাদের সার্ভারে না পাঠিয়েই; মানচিত্র, দূরত্ব, পথনির্দেশ।</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">কুরআন ও হাদিস<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">আল-কুরআন</h4><div class="f-desc">114টি সূরা। শব্দে শব্দে অর্থ, অনুবাদ, তাফসির, প্রচলিত মুসহাফ।</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">হাদিস</h4><div class="f-desc">সাতটি প্রধান গ্রন্থ থেকে 36,000-এর বেশি হাদিস।</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">অফলাইন তিলাওয়াত</h4><div class="f-desc">ক্বারি ও তিলাওয়াতের ধরন বেছে নিন; সূরা বা পারা ডাউনলোড করে ইন্টারনেট ছাড়াই শুনুন।</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">তাফসির</h4><div class="f-desc">Diyanet-এর তাফসির — কোনো আয়াতে ট্যাপ করলেই খোলে, যে আয়াতগুলো জুড়ে তার ব্যাখ্যা, সেই পরিসরসহ।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">খতমের হিসাব</h4><div class="f-desc">114টি সূরা, 30 পারা; সম্পন্ন খতম আর শেষ হওয়ার আনুমানিক সময়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">মুসহাফের লিপি</h4><div class="f-desc">মদিনা বা তুরস্ক লিপি — পৃষ্ঠার বিন্যাসও সঙ্গে বদলায়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">প্লেলিস্ট</h4><div class="f-desc">সূরাগুলো নিজের পছন্দের ক্রমে সাজান, তালিকার নাম দিন, শুরু থেকে শেষ পর্যন্ত শুনুন — অফলাইনেও।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">কণ্ঠে অনুবাদ</h4><div class="f-desc">অনুবাদ আপনার ডিভাইসের নিজস্ব কণ্ঠে শুনুন — একা বা প্রতিটি আয়াতের পরে, ইন্টারনেট ছাড়াই।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">দিনের বিষয়বস্তু</h4><div class="f-desc">দিনের আয়াত, হাদিস ও আসমা এক পর্দায়; গত এক সপ্তাহ ফিরে দেখুন।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">বুকমার্ক</h4><div class="f-desc">আয়াত ও হাদিস সংরক্ষণ করুন।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">শেয়ার কার্ড</h4><div class="f-desc">আয়াত, হাদিস, জিকির ও আল্লাহর নামের জন্য সুন্দর কার্ড।</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">ইবাদতের হিসাব ও জিকির<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">ইবাদতের হিসাব</h4><div class="f-desc">রিং: নামাজ, কুরআন, জিকির, হাদিস ও কাজা।</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">কাজার হিসাব</h4><div class="f-desc">কাজা নামাজ ওয়াক্ত ধরে, কাজা রোজা দিন ধরে।</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">জিকির গণনাকারী</h4><div class="f-desc">রিংয়ে অগ্রগতি, প্রস্তুত জিকির আর নিজের জিকির।</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">নামাজের নিয়মানুবর্তিতা</h4><div class="f-desc">প্রতি ওয়াক্ত শুরু হওয়ার কতক্ষণ পরে নামাজ পড়েন — এই মাসে ও শুরু থেকে এ পর্যন্ত।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">রোজা</h4><div class="f-desc">রমজান, শাওয়াল আর প্রতিদিনের হিসাব।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">সেহরির অ্যালার্ম</h4><div class="f-desc">রমজানে, প্রতিদিন বা সুন্নত রোজার দিনগুলোতে সেট হয়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">তাসবিহাত</h4><div class="f-desc">33-33-33, অথবা নামাজের পরের পূর্ণ ক্রম।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">আসমাউল হুসনা</h4><div class="f-desc">আল্লাহর 99টি নাম, উচ্চারণ ও অর্থসহ; যেকোনোটি জিকির হিসেবে যোগ করা যায়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">ওজরের দিন</h4><div class="f-desc">হায়েজ ও নিফাসের দিন; নামাজের ধারাবাহিকতা ভাঙে না।</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">ক্যালেন্ডার ও নির্দেশিকা<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">হিজরি ক্যালেন্ডার</h4><div class="f-desc">ইংরেজি + হিজরি, বিশেষ দিন আর রমজানসহ।</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">নামাজের নির্দেশিকা</h4><div class="f-desc">17 ধরনের নামাজ; দাঁড়িয়ে, বসে বা ইশারায়।</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">জুমার খুতবা</h4><div class="f-desc">যাঁরা Diyanet পদ্ধতি ব্যবহার করেন, তাঁদের জন্য: খুতবা পড়ুন, শুনুন, অফলাইনে রেখে দিন।</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">ইমসাকিয়া</h4><div class="f-desc">এক মাসের সব নামাজের সময় এক তালিকায়; রমজানে দিন গণনা ও ইফতার।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">জুমার গাইড</h4><div class="f-desc">প্রস্তুতি, গোসল, খুতবা, সূরা কাহফ ও দরুদ — পুরো জুমা এক পাতায়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">পবিত্রতার নির্দেশিকা</h4><div class="f-desc">ধাপে ধাপে অজু, গোসল ও তায়াম্মুম।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">বরকতময় দিনের রিমাইন্ডার</h4><div class="f-desc">12টি বরকতময় দিন: বরকতময় রাতের কথা সেদিন সন্ধ্যায়, বাকিগুলোর কথা এক দিন আগে মনে করিয়ে দেয়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">যাকাত ও ফিতরা</h4><div class="f-desc">প্রচলিত ফিকহের ওপর ভিত্তি করা ক্যালকুলেটর।</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">ডিভাইস ও আরও অনেক কিছু<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">নামাজের সময়, লাইভ কিবলা, 13টি কমপ্লিকেশন।</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">উইজেট</h4><div class="f-desc">হোম স্ক্রিন, লক স্ক্রিন, StandBy — Mac-এও।</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">লাইভ অ্যাক্টিভিটি</h4><div class="f-desc">ডায়নামিক আইল্যান্ড ও লক স্ক্রিনে কাউন্টডাউন।</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac অ্যাপ</h4><div class="f-desc">মেনু বারে কাউন্টডাউন, কিবোর্ড শর্টকাট, iCloud সিঙ্ক।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">একই অ্যাপ বড় পর্দায়; আপনার রেকর্ড iCloud-এ সিঙ্ক হয়।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25টি ভাষা</h4><div class="f-desc">আরবি, উর্দু, ফারসি ও উইঘুর ভাষায় ডান থেকে বাঁয়ে চলা ইন্টারফেস।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud সিঙ্ক</h4><div class="f-desc">আপনার রেকর্ড থাকে আপনার নিজের iCloud-এ, প্রতিটি ডিভাইসে।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri শর্টকাট</h4><div class="f-desc">পরবর্তী নামাজের সময় জিজ্ঞেস করুন; নামাজ, রোজা বা কাজা মুখে বলে চিহ্নিত করুন।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">কন্ট্রোল সেন্টার</h4><div class="f-desc">ছয়টি দ্রুত কাজ (iOS 18+) — কিবলা, পরবর্তী নামাজ, আরও অনেক কিছু।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">একীভূত সার্চ</h4><div class="f-desc">এক সার্চ, সব টুল — 'Baqarah 255' লিখে সরাসরি আয়াতে যান।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">ডার্ক মোড</h4><div class="f-desc">গভীর রাতের জন্য উষ্ণ, শান্ত অন্ধকার।</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Vakit-কে সহযোগিতা</h4><div class="f-desc">বিনামূল্যের অ্যাপটি টিকিয়ে রাখার ঐচ্ছিক উপায়।</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>পার্থক্যটা,</span><br><em>মেপে দেখানো।</em></h2>
-    <p class="compare-lede">অন্য নামাজের অ্যাপগুলোর সমস্যা আপনি আগেই জানেন। এখানে প্রতিটির জবাব দিচ্ছে Vakit, লাইন ধরে ধরে।</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">বিষয়</div><div class="compare-cell">অন্য অ্যাপ</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">বিজ্ঞাপন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>ধর্মীয় বিষয়ের পাশে ক্যাসিনো ও অশোভন বিজ্ঞাপন।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>সম্পূর্ণ বিজ্ঞাপনমুক্ত। ঐচ্ছিক বিজ্ঞাপনও নেই: Vakit কোনো বিজ্ঞাপনই দেখায় না।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">গোপনীয়তা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>তৃতীয় পক্ষের কাছে বিক্রি হওয়া লোকেশনের তথ্য (সংবাদমাধ্যমে প্রকাশিত)।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>স্থানাঙ্ক আমাদের সার্ভারে যায় না। ট্র্যাকিং নেই।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">অফলাইন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>মূল ফিচারের জন্য ইন্টারনেট লাগে।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>নামাজ, কিবলা, কুরআনের লিখিত পাঠ, জিকির — সবই অফলাইনে চলে।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">লক স্ক্রিন</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>iOS আপডেট এলেই উইজেট নষ্ট হয়ে যায়।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>লাইভ অ্যাক্টিভিটি ও ডায়নামিক আইল্যান্ড; iOS 17 থেকে StandBy।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">নির্ভুলতা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>ঘড়ি এগোনো-পেছানোর (ডেলাইট সেভিং) ভুল, সীমিত হিসাব পদ্ধতি।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>12টি পদ্ধতি, টাইম জোন বোঝে, সফর টের পায়।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">ডিভাইস</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>শুধু ফোন; ঘড়ি ও ডেস্কটপ নেই, নয়তো আধাআধি বানানো।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>iPhone, iPad ও Mac iCloud-এ; Apple Watch সিঙ্ক হয় iPhone-এর মাধ্যমে।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">নকশা</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>পুরোনো ইন্টারফেস; প্রতিটি আপডেটের পর কিছু না কিছু বিগড়ে যায়।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>iOS 26-এ Liquid Glass, চলে iOS 16.4 থেকে। শান্ত, আধুনিক, দ্রুত।</div></div>
-        <div class="compare-row"><div class="compare-cell feat">খরচ</div><div class="compare-cell other"><span class="cmark no">না</span><br><br>পেওয়াল, সাবস্ক্রিপশন, 'প্রিমিয়াম' স্তর।</div><div class="compare-cell vakit"><span class="cmark yes">হ্যাঁ</span><br><br>বিনামূল্যে। কোনো স্তর নেই, বাড়তি কিছু গছানোর চেষ্টাও নেই।</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">সব 51টি টুল দেখুন</button>
   </div>
 </section>
 
@@ -803,6 +842,15 @@
   </div>
   <div class="foot-sig">যত্ন নিয়ে বানানো · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-bn" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>App Store থেকে ডাউনলোড করুন</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "bn",

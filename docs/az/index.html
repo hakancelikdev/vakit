@@ -118,7 +118,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -390,7 +390,6 @@
   <div class="nav-links">
     <a href="#showcase">Xüsusiyyətlər</a>
     <a href="#trust">Əmanət</a>
-    <a href="#compare">Niyə Vakit</a>
     <a href="#reviews">Rəylər</a>
     <a href="#faq">Suallar</a>
   </div>
@@ -439,7 +438,7 @@
       <span>İbadət tətbiqi</span><br>
       <span>necə olmalıdırsa,</span> <em>elə.</em>
     </h1>
-    <p class="hero-sub">İbadət tətbiqi necə olmalıdırsa, elə. Beş vaxt namaz üçün sakit bir yoldaş — Quran, qiblə, zikr və günlərinizə hörmət edən bir təqvimlə. Ehtiyac olmayanda kənara çəkilir; ehtiyac olanda yanınızdadır.</p>
+    <p class="hero-sub">Beş vaxt namaz üçün sakit bir yoldaş — Quran, qiblə, zikr və günlərinizə hörmət edən bir təqvimlə. Ehtiyac olmayanda kənara çəkilir; ehtiyac olanda yanınızdadır.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-hero-az" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
@@ -450,7 +449,7 @@
 
     <div class="hero-proof">
       <div class="proof">
-        <div class="proof-val">4.8<span class="star"> ★</span></div>
+        <div class="proof-val">4,8<span class="star"> ★</span></div>
         <div class="proof-lbl">App Store · 467 qiymət</div>
       </div>
       <div class="proof">
@@ -462,42 +461,59 @@
         <div class="proof-lbl">Hesablama üsulu</div>
       </div>
       <div class="proof">
-        <div class="proof-val">100%</div>
-        <div class="proof-lbl">Əsas funksiyalar · oflayn</div>
+        <div class="proof-val">25</div>
+        <div class="proof-lbl">İnterfeys dili</div>
       </div>
     </div>
   </div>
 
-  <aside class="clock-card">
-    <div class="clock-top">
-      <span class="clock-loc" id="loc">Bakı</span>
-      <span class="clock-date" id="date">—</span>
+  <!-- The app itself, first thing on the page: the prayer screen's sky. It starts
+       after the page has loaded (script.js), so it never competes with the text. -->
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="phone-screen">
+        <video class="phone-video" id="heroVideo" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline preload="none" aria-label="Vakit-in namaz ekranı: gün irəlilədikcə səma da dəyişir"></video>
+      </div>
     </div>
-    <div class="city-selector" id="citySelector"></div>
-    <div class="clock-next-lbl">Növbəti · qalıb</div>
-    <div class="clock-next-name" id="nextName">—</div>
-    <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
-    <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
-    <div class="clock-list" id="clockList"></div>
-  </aside>
+  </div>
 </section>
 
-<!-- ========== MARQUEE ========== -->
-<div class="marquee">
-  <div class="marquee-track" id="marquee" aria-hidden="true"><span>İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa · İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa · İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa</span><span>İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa · İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa · İmsak · Günəş · Zöhr · Əsr · Məğrib · İşa</span></div>
-</div>
+<!-- ========== LIVE CLOCK ========== -->
+<section class="clock" id="clock" data-state="loading" aria-label="Növbəti · qalıb">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">Bakı</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="city-selector" id="citySelector"></div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">Növbəti · qalıb</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>İmsak</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Günəş</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Zöhr</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Əsr</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>Məğrib</span><span class="clock-t">--:--</span></div>
+        <div class="clock-row"><span class="clock-name"><span class="dot"></span>İşa</span><span class="clock-t">--:--</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SHOWCASE ========== -->
 <section class="showcase" id="showcase">
   <div class="sc-copy">
     <div class="sc-head">§ 01 · Hər şey var, artığı yox</div>
     <h2 class="sc-h2"><span>Bir yoldaş,</span><br><em>diqqət tələsi deyil.</em></h2>
-    <p class="sc-lede">On əsas alət; hər biri açıldığı andan rahatlıq versin deyə hazırlanıb. Baxmaq üçün toxunun.</p>
+    <p class="sc-lede">20 əsas alət; hər biri açıldığı andan rahatlıq versin deyə hazırlanıb. Baxmaq üçün toxunun.</p>
     <div class="sc-list" id="scList">
         <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Səma kimi.</h3><p>Namaz vaxtı daxil olduqca ekran da səma ilə birlikdə dəyişir; ulduzlar və ay əsl yerlərində. Kərahət və nafilə vaxtları istəyə bağlıdır.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Ekranı açmadan.</h3><p>Növbəti namaz kilid ekranında, vidjetdə, Dynamic Island-da və saatınızda. Sakit bir baxış — diqqətinizi oğurlamadan.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Bütün alətlər bir yerdə.</h3><p>Quran, hədis, cümə xütbəsi, zikr, Əsmayi-Hüsna, bələdçilər və təqvim — hamısı bir yerdə. Heç bir funksiya ödəniş divarı arxasında deyil.</p></div><span class="sc-tag">Bax</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Doğru istiqamət.</h3><p>Qibləyə döndüyünüzdə telefon titrəyir; Kəbəyə məsafə də yanında. Koordinatlarınız serverimizə heç vaxt gəlmir.</p></div><span class="sc-tag">Bax</span></button>
+        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Doğru istiqamət.</h3><p>Qibləyə döndüyünüzdə telefon titrəyir; Kəbəyə məsafə də yanında.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>İbadətinizin halqaları.</h3><p>Namaz, Quran, zikr, hədis və qəza üçün halqalar; namazı vaxtı daxil olandan nə qədər sonra qıldığınız və xətm — sakit irəliləyiş, günahkarlıq hissi yox.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Qəza, qıldıqca əriyir.</h3><p>Ömürlük qəza borcunuzu vaxt-vaxt hesablayın, qıldıqca azaldın; nə vaxt bitəcəyi də görünür.</p></div><span class="sc-tag">Bax</span></button>
         <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Quran, internetsiz də.</h3><p>Oxuyun, dinləyin, təfəkkür edin — Mədinə və ya Türk xətti, kəlmə-kəlmə izləmə, təfsir və endirilə bilən tilavət.</p></div><span class="sc-tag">Bax</span></button>
@@ -522,7 +538,7 @@
   <div class="sc-phone-wrap">
     <div class="phone">
       <div class="phone-screen" id="phoneScreen">
-        <video class="phone-screenshot phone-video on" data-i="0" src="/assets/video/sky-en.mp4" poster="/assets/video/sky-en-poster.webp" width="390" height="844" muted loop playsinline autoplay preload="metadata" aria-label="Vakit-in namaz ekranı: gün irəlilədikcə səma da dəyişir"></video>
+        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Səma kimi." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Ekranı açmadan." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Bütün alətlər bir yerdə." width="390" height="844" loading="lazy">
         <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="Doğru istiqamət." width="390" height="844" loading="lazy">
@@ -623,111 +639,134 @@
       <span>Məlumatlarınız</span> <em>əmanətdir,</em><br>
       <span>məhsul deyil.</span>
     </h2>
-    <p class="trust-lede">İbadətiniz yarımçıq qalmasın. Başqa namaz tətbiqləri məkan məlumatlarını satarkən yaxalanıb. Vakit başqa yol seçdi: koordinatlarınız serverimizə heç vaxt gəlmir. Hesab yoxdur. İzləmə yoxdur. Güzəşt yoxdur. Bu bir funksiya deyil — prinsipdir.</p>
+    <p class="trust-lede">İbadətiniz yarımçıq qalmasın. Başqa namaz tətbiqləri məkan məlumatlarını satarkən yaxalanıb. Vakit başqa yol seçdi: koordinatlarınız serverimizə heç vaxt gəlmir. Hesab yoxdur. Reklam yoxdur. Məlumatlarınız satılmır. Bu bir funksiya deyil — prinsipdir.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01 / no account</div>
+        <div class="trust-cell-num">01</div>
         <h3>Yüklə. Aç. Qıl.</h3>
         <p>Qeydiyyat yox, giriş yox, unudacağınız parol yox. Vakit quraşdırdığınız anda işləməyə başlayır.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02 / on-device</div>
+        <div class="trust-cell-num">02</div>
         <h3>Telefonunuzda hesablanır.</h3>
         <p>Namaz vaxtları seçdiyiniz üsulla, məkanınıza görə cihazın özündə hesablanır. Heç bir serverə «sorğu» getmir.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03 / no tracking</div>
+        <div class="trust-cell-num">03</div>
         <h3>Dəqiq məkanınız bizdə deyil.</h3>
         <p>Koordinatlarınız serverimizə göndərilmir; biz yalnız ölkəni, şəhəri və rayonu bilirik. Ünvanınız və yaxındakı məscidlər üçün məkan yalnız Apple Xəritələrə gedir.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04 / transparent</div>
+        <div class="trust-cell-num">04</div>
         <h3>Sadə bir siyasət.</h3>
         <p>Ad, e-poçt və ya telefon daşımayan, psevdonim istifadəçi koduna bağlı istifadə məlumatları. Nəyin göndərildiyi məxfilik siyasətimizdə bir-bir yazılıb — bir dəqiqədə oxunacaq qədər qısadır.</p>
+      </div>
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">Başqa ibadət tətbiqlərindəki problemləri bilirsiniz. Budur, Vakit-in hər birinə sətir-sətir cavabı.</p>
+      <div class="compare-table" id="compareTable">
+        <div class="compare-row head"><div class="compare-cell">Məsələ</div><div class="compare-cell">Başqa tətbiqlər</div><div class="compare-cell">Vakit</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Reklam</div><div class="compare-cell other">Dini məzmunun yanında kazino və yersiz reklamlar.</div><div class="compare-cell vakit">Tamamilə reklamsızdır. İstəyə bağlısı da yoxdur: Vakit heç reklam göstərmir.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Oflayn</div><div class="compare-cell other">Əsas funksiyalar internet tələb edir.</div><div class="compare-cell vakit">Namaz, qiblə, Quran mətni, zikr — hamısı oflayn.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Kilid ekranı</div><div class="compare-cell other">Vidjetlər iOS yeniləmələrində xarab olur.</div><div class="compare-cell vakit">Live Activity və Dynamic Island; iOS 17-dən etibarən StandBy.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Dəqiqlik</div><div class="compare-cell other">Yay/qış saatı xətaları, məhdud hesablama.</div><div class="compare-cell vakit">12 üsul, saat qurşağı nəzərə alınır, səfər tanınır.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Cihazlar</div><div class="compare-cell other">Yalnız telefon; saat və masaüstü ya yoxdur, ya yarımçıqdır.</div><div class="compare-cell vakit">iPhone, iPad və Mac iCloud ilə; Apple Watch iPhone vasitəsilə sinxronlaşır.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Dizayn</div><div class="compare-cell other">Köhnə interfeyslər; hər yeniləmədə geriləmə.</div><div class="compare-cell vakit">iOS 26-da Liquid Glass, iOS 16.4-dən etibarən işləyir. Sadə, müasir, sürətli.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Qiymət</div><div class="compare-cell other">Ödəniş divarı, abunə, «premium» səviyyələr.</div><div class="compare-cell vakit">Pulsuz. Səviyyə yox, əlavə satış yox.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== FEATURES GRID ========== -->
+<!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
       <div class="f-eye">§ 03 · 51 alət</div>
       <h2><span>Tək tətbiq</span><br><em>bir ömürlük ibadətə bəs edir.</em></h2>
     </div>
-    <div class="f-grid" id="featGrid">
-        <div class="f-cell"><div class="f-num">01 / 51</div><h3 class="f-name">Namaz vaxtları</h3><div class="f-desc">12 hesablama üsulu, saat qurşağını nəzərə alır, səfəri tanıyır.</div></div>
-        <div class="f-cell"><div class="f-num">02 / 51</div><h3 class="f-name">Canlı səma</h3><div class="f-desc">Gün qövsündə əsl ulduzlar və ay — olduğunuz yerə və saata görə.</div></div>
-        <div class="f-cell"><div class="f-num">03 / 51</div><h3 class="f-name">Nafilə vaxtları</h3><div class="f-desc">İşraq, Duha, Əvvabin və gecənin hissələri; istəyə bağlı.</div></div>
-        <div class="f-cell"><div class="f-num">04 / 51</div><h3 class="f-name">Əl ilə məkan</h3><div class="f-desc">Məkanı əl ilə seçin və ya səfərdə özü yenilənsin.</div></div>
-        <div class="f-cell"><div class="f-num">05 / 51</div><h3 class="f-name">Apple Watch</h3><div class="f-desc">Namaz vaxtları, canlı qiblə, 13 komplikasiya.</div></div>
-        <div class="f-cell"><div class="f-num">06 / 51</div><h3 class="f-name">Mac tətbiqi</h3><div class="f-desc">Menyu zolağında geri sayım, klaviatura qısayolları, iCloud sinxronu.</div></div>
-        <div class="f-cell"><div class="f-num">07 / 51</div><h3 class="f-name">iPad</h3><div class="f-desc">Eyni tətbiq böyük ekranda; qeydləriniz iCloud ilə sinxronlaşır.</div></div>
-        <div class="f-cell"><div class="f-num">08 / 51</div><h3 class="f-name">25 dil</h3><div class="f-desc">Ərəb, urdu, fars və uyğur dillərində sağdan sola interfeys.</div></div>
-        <div class="f-cell"><div class="f-num">09 / 51</div><h3 class="f-name">Qiblə kompası</h3><div class="f-desc">Titrəyişlə istiqamət və Kəbəyə məsafə.</div></div>
-        <div class="f-cell"><div class="f-num">10 / 51</div><h3 class="f-name">Qurani-Kərim</h3><div class="f-desc">114 surə. Kəlmə-kəlmə, məal, təfsir, klassik müshəf.</div></div>
-        <div class="f-cell"><div class="f-num">11 / 51</div><h3 class="f-name">Müshəf xətti</h3><div class="f-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir.</div></div>
-        <div class="f-cell"><div class="f-num">12 / 51</div><h3 class="f-name">Xətm izləmə</h3><div class="f-desc">114 surə, 30 cüz; tamamlanmış xətmlər və bitmə təxmini.</div></div>
-        <div class="f-cell"><div class="f-num">13 / 51</div><h3 class="f-name">Oflayn tilavət</h3><div class="f-desc">Qari və oxuyuş üslubunu seçin; surə və ya cüz endirin, internetsiz dinləyin.</div></div>
-        <div class="f-cell"><div class="f-num">14 / 51</div><h3 class="f-name">Pleylistlər</h3><div class="f-desc">Surələri istədiyin sıraya düz, siyahıya ad ver və başdan sona dinlə — internetsiz də.</div></div>
-        <div class="f-cell"><div class="f-num">15 / 51</div><h3 class="f-name">Səsli tərcümə</h3><div class="f-desc">Tərcüməni cihazın öz səsi ilə dinlə — tək və ya hər ayədən sonra, internetsiz.</div></div>
-        <div class="f-cell"><div class="f-num">16 / 51</div><h3 class="f-name">Hədis</h3><div class="f-desc">Yeddi böyük məcmuədən 36 mindən çox hədis.</div></div>
-        <div class="f-cell"><div class="f-num">17 / 51</div><h3 class="f-name">Günün məzmunu</h3><div class="f-desc">Günün ayəsi, hədisi və əsması bir ekranda; son bir həftəyə qayıt.</div></div>
-        <div class="f-cell"><div class="f-num">18 / 51</div><h3 class="f-name">Cümə xütbəsi</h3><div class="f-desc">Diyanət üsulundan istifadə edənlər üçün: xütbəni oxuyun, dinləyin, oflayn saxlayın.</div></div>
-        <div class="f-cell"><div class="f-num">19 / 51</div><h3 class="f-name">Cümə Bələdçisi</h3><div class="f-desc">Hazırlıq, qüsl, xütbə, Kəhf surəsi və salavat — cümə günü bir səhifədə.</div></div>
-        <div class="f-cell"><div class="f-num">20 / 51</div><h3 class="f-name">Zikr sayğacı</h3><div class="f-desc">Halqa ilə irəliləyiş, hazır zikrlər və öz zikrləriniz.</div></div>
-        <div class="f-cell"><div class="f-num">21 / 51</div><h3 class="f-name">Təsbihat</h3><div class="f-desc">33-33-33 və ya namazdan sonra tam tərtib.</div></div>
-        <div class="f-cell"><div class="f-num">22 / 51</div><h3 class="f-name">Əsmayi-Hüsna</h3><div class="f-desc">Allahın 99 adı, oxunuşu və mənası ilə; zikr kimi əlavə edilə bilər.</div></div>
-        <div class="f-cell"><div class="f-num">23 / 51</div><h3 class="f-name">Hicri təqvim</h3><div class="f-desc">Miladi + hicri, mübarək günlər və Ramazan.</div></div>
-        <div class="f-cell"><div class="f-num">24 / 51</div><h3 class="f-name">Mübarək günlər</h3><div class="f-desc">Qəndillər, bayramlar və ərəfələr bu gündən irəliyə sıralı; hər günə bələdçi.</div></div>
-        <div class="f-cell"><div class="f-num">25 / 51</div><h3 class="f-name">İmsakiyyə</h3><div class="f-desc">Bir ayın bütün vaxtları tək siyahıda; Ramazanda gün sayı və iftar.</div></div>
-        <div class="f-cell"><div class="f-num">26 / 51</div><h3 class="f-name">Kərahət vaxtları</h3><div class="f-desc">Gün qövsündə işarəli, dayandığı rəvayətlə birlikdə.</div></div>
-        <div class="f-cell"><div class="f-num">27 / 51</div><h3 class="f-name">Təmizlik bələdçisi</h3><div class="f-desc">Addım-addım dəstəmaz, qüsl və təyəmmüm.</div></div>
-        <div class="f-cell"><div class="f-num">28 / 51</div><h3 class="f-name">Namaz bələdçisi</h3><div class="f-desc">17 namaz növü; ayaq üstə, oturaraq və ya işarə ilə.</div></div>
-        <div class="f-cell"><div class="f-num">29 / 51</div><h3 class="f-name">Zəkat və fitrə</h3><div class="f-desc">Klassik fiqhə əsaslanan hesablayıcılar.</div></div>
-        <div class="f-cell"><div class="f-num">30 / 51</div><h3 class="f-name">Qəza izləmə</h3><div class="f-desc">Qəza namazını vaxt-vaxt, qəza orucunu gün-gün izləyin.</div></div>
-        <div class="f-cell"><div class="f-num">31 / 51</div><h3 class="f-name">Üzrlü günlər</h3><div class="f-desc">Heyz və nifas günləri; namaz seriyanız qırılmır.</div></div>
-        <div class="f-cell"><div class="f-num">32 / 51</div><h3 class="f-name">Vidjetlər</h3><div class="f-desc">Ana ekran, kilid ekranı, StandBy — Mac-də də.</div></div>
-        <div class="f-cell"><div class="f-num">33 / 51</div><h3 class="f-name">Live Activity</h3><div class="f-desc">Dynamic Island və kilid ekranında geri sayım.</div></div>
-        <div class="f-cell"><div class="f-num">34 / 51</div><h3 class="f-name">İdarəetmə Mərkəzi</h3><div class="f-desc">Altı sürətli əməliyyat (iOS 18+) — qiblə, növbəti namaz və daha çoxu.</div></div>
-        <div class="f-cell"><div class="f-num">35 / 51</div><h3 class="f-name">İbadət izləmə</h3><div class="f-desc">Halqalar: namaz, Quran, zikr, hədis və qəza.</div></div>
-        <div class="f-cell"><div class="f-num">36 / 51</div><h3 class="f-name">Namaz intizamı</h3><div class="f-desc">Hər namazı vaxtı daxil olandan nə qədər sonra qıldığınız — bu ay və bütün dövr.</div></div>
-        <div class="f-cell"><div class="f-num">37 / 51</div><h3 class="f-name">Sübh zəngi</h3><div class="f-desc">Qılmamısınızsa günəş doğmazdan əvvəl çalır, qılmısınızsa susur; iOS 26-da səssiz rejimi keçir.</div></div>
-        <div class="f-cell"><div class="f-num">38 / 51</div><h3 class="f-name">Sahur zəngi</h3><div class="f-desc">Ramazanda, hər gün və ya sünnə oruc günlərində qurulur.</div></div>
-        <div class="f-cell"><div class="f-num">39 / 51</div><h3 class="f-name">Mübarək gün xatırlatmaları</h3><div class="f-desc">12 mübarək gün: mübarək gecələr həmin axşam, digərləri bir gün əvvəl xatırladılır.</div></div>
-        <div class="f-cell"><div class="f-num">40 / 51</div><h3 class="f-name">Bildirişlər</h3><div class="f-desc">Cihazda, yerli, etibarlı.</div></div>
-        <div class="f-cell"><div class="f-num">41 / 51</div><h3 class="f-name">Azan səsləri</h3><div class="f-desc">Hər namaz öz məqamında: saba, üşşaq, rast, segah, hicaz.</div></div>
-        <div class="f-cell"><div class="f-num">42 / 51</div><h3 class="f-name">Siri qısayolları</h3><div class="f-desc">Növbəti namazı soruşun; namazı, orucu, qəzanı səslə qeyd edin.</div></div>
-        <div class="f-cell"><div class="f-num">43 / 51</div><h3 class="f-name">Vahid axtarış</h3><div class="f-desc">Tək axtarış, bütün alətlər — «Bəqərə 255» yazın, ayəyə keçin.</div></div>
-        <div class="f-cell"><div class="f-num">44 / 51</div><h3 class="f-name">Əlfəcinlər</h3><div class="f-desc">Ayə və hədisləri yadda saxlayın.</div></div>
-        <div class="f-cell"><div class="f-num">45 / 51</div><h3 class="f-name">iCloud sinxronu</h3><div class="f-desc">Qeydləriniz öz iCloud sahənizdə, hər cihazda.</div></div>
-        <div class="f-cell"><div class="f-num">46 / 51</div><h3 class="f-name">Təfsir</h3><div class="f-desc">Diyanət təfsiri; ayəyə toxunun, aid olduğu ayə aralığı ilə açılsın.</div></div>
-        <div class="f-cell"><div class="f-num">47 / 51</div><h3 class="f-name">Paylaşım kartları</h3><div class="f-desc">Ayə, hədis, zikr və Əsmayi-Hüsna üçün gözəl kartlar.</div></div>
-        <div class="f-cell"><div class="f-num">48 / 51</div><h3 class="f-name">Oruc</h3><div class="f-desc">Ramazan, Şəvval və gündəlik izləmə.</div></div>
-        <div class="f-cell"><div class="f-num">49 / 51</div><h3 class="f-name">Yaxındakı məscidlər</h3><div class="f-desc">Məkanınız serverimizə getmədən, Apple Xəritələr ilə tapın; xəritə, məsafə, marşrut.</div></div>
-        <div class="f-cell"><div class="f-num">50 / 51</div><h3 class="f-name">Vakit-i yaşat</h3><div class="f-desc">Pulsuz tətbiqi ayaqda saxlamağın könüllü yolları.</div></div>
-        <div class="f-cell"><div class="f-num">51 / 51</div><h3 class="f-name">Tünd rejim</h3><div class="f-desc">Gecə saatları üçün isti, sakit tünd görünüş.</div></div>
+    <div class="f-groups is-collapsed" id="featGroups">
+      <div class="f-group">
+        <h3 class="f-group-title">Namaz vaxtları və qiblə<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Namaz vaxtları</h4><div class="f-desc">12 hesablama üsulu, saat qurşağını nəzərə alır, səfəri tanıyır.</div></div>
+          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Qiblə kompası</h4><div class="f-desc">Titrəyişlə istiqamət və Kəbəyə məsafə.</div></div>
+          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Canlı səma</h4><div class="f-desc">Gün qövsündə əsl ulduzlar və ay — olduğunuz yerə və saata görə.</div></div>
+          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Sübh zəngi</h4><div class="f-desc">Qılmamısınızsa günəş doğmazdan əvvəl çalır, qılmısınızsa susur; iOS 26-da səssiz rejimi keçir.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Azan səsləri</h4><div class="f-desc">Hər namaz öz məqamında: saba, üşşaq, rast, segah, hicaz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Nafilə vaxtları</h4><div class="f-desc">İşraq, Duha, Əvvabin və gecənin hissələri; istəyə bağlı.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Kərahət vaxtları</h4><div class="f-desc">Gün qövsündə işarəli, dayandığı rəvayətlə birlikdə.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Mübarək günlər</h4><div class="f-desc">Qəndillər, bayramlar və ərəfələr bu gündən irəliyə sıralı; hər günə bələdçi.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Əl ilə məkan</h4><div class="f-desc">Məkanı əl ilə seçin və ya səfərdə özü yenilənsin.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Bildirişlər</h4><div class="f-desc">Cihazda, yerli, etibarlı.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Yaxındakı məscidlər</h4><div class="f-desc">Məkanınız serverimizə getmədən, Apple Xəritələr ilə tapın; xəritə, məsafə, marşrut.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Quran və hədis<span class="f-group-count">11</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Qurani-Kərim</h4><div class="f-desc">114 surə. Kəlmə-kəlmə, məal, təfsir, klassik müshəf.</div></div>
+          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hədis</h4><div class="f-desc">Yeddi böyük məcmuədən 36 mindən çox hədis.</div></div>
+          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Oflayn tilavət</h4><div class="f-desc">Qari və oxuyuş üslubunu seçin; surə və ya cüz endirin, internetsiz dinləyin.</div></div>
+          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Təfsir</h4><div class="f-desc">Diyanət təfsiri; ayəyə toxunun, aid olduğu ayə aralığı ilə açılsın.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Xətm izləmə</h4><div class="f-desc">114 surə, 30 cüz; tamamlanmış xətmlər və bitmə təxmini.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Müshəf xətti</h4><div class="f-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Pleylistlər</h4><div class="f-desc">Surələri istədiyin sıraya düz, siyahıya ad ver və başdan sona dinlə — internetsiz də.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Səsli tərcümə</h4><div class="f-desc">Tərcüməni cihazın öz səsi ilə dinlə — tək və ya hər ayədən sonra, internetsiz.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Günün məzmunu</h4><div class="f-desc">Günün ayəsi, hədisi və əsması bir ekranda; son bir həftəyə qayıt.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Əlfəcinlər</h4><div class="f-desc">Ayə və hədisləri yadda saxlayın.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Paylaşım kartları</h4><div class="f-desc">Ayə, hədis, zikr və Əsmayi-Hüsna üçün gözəl kartlar.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">İbadət izləmə və zikr<span class="f-group-count">9</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">İbadət izləmə</h4><div class="f-desc">Halqalar: namaz, Quran, zikr, hədis və qəza.</div></div>
+          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Qəza izləmə</h4><div class="f-desc">Qəza namazını vaxt-vaxt, qəza orucunu gün-gün izləyin.</div></div>
+          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Zikr sayğacı</h4><div class="f-desc">Halqa ilə irəliləyiş, hazır zikrlər və öz zikrləriniz.</div></div>
+          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Namaz intizamı</h4><div class="f-desc">Hər namazı vaxtı daxil olandan nə qədər sonra qıldığınız — bu ay və bütün dövr.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Oruc</h4><div class="f-desc">Ramazan, Şəvval və gündəlik izləmə.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Sahur zəngi</h4><div class="f-desc">Ramazanda, hər gün və ya sünnə oruc günlərində qurulur.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Təsbihat</h4><div class="f-desc">33-33-33 və ya namazdan sonra tam tərtib.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Əsmayi-Hüsna</h4><div class="f-desc">Allahın 99 adı, oxunuşu və mənası ilə; zikr kimi əlavə edilə bilər.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Üzrlü günlər</h4><div class="f-desc">Heyz və nifas günləri; namaz seriyanız qırılmır.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Təqvim və bələdçilər<span class="f-group-count">8</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Hicri təqvim</h4><div class="f-desc">Miladi + hicri, mübarək günlər və Ramazan.</div></div>
+          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Namaz bələdçisi</h4><div class="f-desc">17 namaz növü; ayaq üstə, oturaraq və ya işarə ilə.</div></div>
+          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Cümə xütbəsi</h4><div class="f-desc">Diyanət üsulundan istifadə edənlər üçün: xütbəni oxuyun, dinləyin, oflayn saxlayın.</div></div>
+          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">İmsakiyyə</h4><div class="f-desc">Bir ayın bütün vaxtları tək siyahıda; Ramazanda gün sayı və iftar.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Cümə Bələdçisi</h4><div class="f-desc">Hazırlıq, qüsl, xütbə, Kəhf surəsi və salavat — cümə günü bir səhifədə.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Təmizlik bələdçisi</h4><div class="f-desc">Addım-addım dəstəmaz, qüsl və təyəmmüm.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Mübarək gün xatırlatmaları</h4><div class="f-desc">12 mübarək gün: mübarək gecələr həmin axşam, digərləri bir gün əvvəl xatırladılır.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zəkat və fitrə</h4><div class="f-desc">Klassik fiqhə əsaslanan hesablayıcılar.</div></div>
+        </div>
+      </div>
+      <div class="f-group">
+        <h3 class="f-group-title">Cihazlar və daha çoxu<span class="f-group-count">12</span></h3>
+        <div class="f-grid">
+          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Namaz vaxtları, canlı qiblə, 13 komplikasiya.</div></div>
+          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Vidjetlər</h4><div class="f-desc">Ana ekran, kilid ekranı, StandBy — Mac-də də.</div></div>
+          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Dynamic Island və kilid ekranında geri sayım.</div></div>
+          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac tətbiqi</h4><div class="f-desc">Menyu zolağında geri sayım, klaviatura qısayolları, iCloud sinxronu.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Eyni tətbiq böyük ekranda; qeydləriniz iCloud ilə sinxronlaşır.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 dil</h4><div class="f-desc">Ərəb, urdu, fars və uyğur dillərində sağdan sola interfeys.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud sinxronu</h4><div class="f-desc">Qeydləriniz öz iCloud sahənizdə, hər cihazda.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri qısayolları</h4><div class="f-desc">Növbəti namazı soruşun; namazı, orucu, qəzanı səslə qeyd edin.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">İdarəetmə Mərkəzi</h4><div class="f-desc">Altı sürətli əməliyyat (iOS 18+) — qiblə, növbəti namaz və daha çoxu.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Vahid axtarış</h4><div class="f-desc">Tək axtarış, bütün alətlər — «Bəqərə 255» yazın, ayəyə keçin.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Tünd rejim</h4><div class="f-desc">Gecə saatları üçün isti, sakit tünd görünüş.</div></div>
+          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Vakit-i yaşat</h4><div class="f-desc">Pulsuz tətbiqi ayaqda saxlamağın könüllü yolları.</div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== COMPARE ========== -->
-<section class="compare" id="compare">
-  <div class="compare-inner">
-    <h2><span>Fərq</span><br><em>göz qabağındadır.</em></h2>
-    <p class="compare-lede">Başqa ibadət tətbiqlərindəki problemləri bilirsiniz. Budur, Vakit-in hər birinə sətir-sətir cavabı.</p>
-    <div class="compare-table" id="compareTable">
-        <div class="compare-row head"><div class="compare-cell">Məsələ</div><div class="compare-cell">Başqa tətbiqlər</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Reklam</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Dini məzmunun yanında kazino və yersiz reklamlar.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>Tamamilə reklamsızdır. İstəyə bağlısı da yoxdur: Vakit heç reklam göstərmir.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Məxfilik</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Üçüncü tərəflərə satılan məkan məlumatı (mətbuatda yazıldı).</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>Koordinatlar serverimizə getmir. İzləmə yoxdur.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Oflayn</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Əsas funksiyalar internet tələb edir.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>Namaz, qiblə, Quran mətni, zikr — hamısı oflayn.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Kilid ekranı</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Vidjetlər iOS yeniləmələrində xarab olur.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>Live Activity və Dynamic Island; iOS 17-dən etibarən StandBy.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Dəqiqlik</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Yay/qış saatı xətaları, məhdud hesablama.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>12 üsul, saat qurşağı nəzərə alınır, səfər tanınır.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Cihazlar</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Yalnız telefon; saat və masaüstü ya yoxdur, ya yarımçıqdır.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>iPhone, iPad və Mac iCloud ilə; Apple Watch iPhone vasitəsilə sinxronlaşır.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Dizayn</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Köhnə interfeyslər; hər yeniləmədə geriləmə.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>iOS 26-da Liquid Glass, iOS 16.4-dən etibarən işləyir. Sadə, müasir, sürətli.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Qiymət</div><div class="compare-cell other"><span class="cmark no">Xeyr</span><br><br>Ödəniş divarı, abunə, «premium» səviyyələr.</div><div class="compare-cell vakit"><span class="cmark yes">Bəli</span><br><br>Pulsuz. Səviyyə yox, əlavə satış yox.</div></div>
-    </div>
+    <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Bütün 51 aləti göstər</button>
   </div>
 </section>
 
@@ -738,7 +777,7 @@
       <h2><span>Real istifadəçilərdən</span><br><em>xoş sözlər.</em></h2>
       <div class="t-meta">
         <span>Orta qiymət</span>
-        <b>4.8 ★</b>
+        <b>4,8 ★</b>
         <span>App Store-da 467 qiymət əsasında</span>
       </div>
     </div>
@@ -812,6 +851,15 @@
   </div>
   <div class="foot-sig">Qayğı ilə hazırlanıb · © 2026 Hakan Çelik</div>
 </footer>
+
+<!-- Phones only: a download button that stays in reach on a long page. Hidden
+     while the hero's or the closing section's own button is on screen (script.js). -->
+<div class="dock" id="dock">
+  <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-dock-az" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
+    <span>App Store-dan yükləyin</span>
+  </a>
+</div>
 
 <script id="vakit-data" type="application/json">{
   "lang": "az",

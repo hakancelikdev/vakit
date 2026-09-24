@@ -66,7 +66,7 @@
 /* btn-primary hover: accent-ink is now light, use mid-teal */
 [data-theme="dark"] .btn-primary:hover { background: var(--accent) }
 
-/* --- clock card ------------------------------------------------ */
+/* --- clock band ------------------------------------------------ */
 /* Active row tint — slightly more visible on dark paper */
 [data-theme="dark"] .clock-row.active {
   background: color-mix(in oklch, var(--accent) 16%, var(--paper));
@@ -100,9 +100,6 @@
 [data-theme="dark"] .compare-row.head {
   border-bottom-color: oklch(0.48 0.008 250);
 }
-/* "no" marks — boost contrast */
-[data-theme="dark"] .cmark.no { color: oklch(0.68 0.12 28) }
-[data-theme="dark"] .cmark.no::before { background: oklch(0.72 0.15 28) }
 /* vakit column tint — slightly stronger on dark */
 [data-theme="dark"] .compare-cell.vakit {
   background: color-mix(in oklch, var(--accent) 8%, transparent);
@@ -232,24 +229,25 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 }
 
 /* ---------- hero ---------- */
+/* Text on one side, the app on the other: the phone plays the prayer screen's sky. */
 .hero {
-  padding: 80px 48px 120px;
-  display: grid; grid-template-columns: 1fr 360px; gap: 80px;
-  align-items: start;
-  border-bottom: 1px solid var(--rule-2);
+  padding: 56px 48px 72px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 72px;
+  align-items: center;
   max-width: 1440px; margin: 0 auto;
 }
 .hero-left { max-width: 820px }
+.hero-phone .phone { width: 300px }
 .eyebrow {
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ink-3); margin-bottom: 32px;
+  color: var(--ink-3); margin-bottom: 24px;
   display: flex; align-items: center; gap: 12px;
 }
 .eyebrow::before { content: ""; display: block; flex-shrink: 0; width: 24px; height: 1px; background: var(--ink-3) }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(56px, 9vw, 140px);
-  line-height: 0.94;
+  font-size: clamp(48px, 6.4vw, 104px);
+  line-height: 0.96;
   letter-spacing: -0.025em;
   font-weight: 400;
   color: var(--ink);
@@ -257,11 +255,11 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 }
 .hero h1 em { font-style: italic; color: var(--accent-ink) }
 .hero-sub {
-  font-size: 22px; line-height: 1.45; color: var(--ink-2); max-width: 640px;
+  font-size: 21px; line-height: 1.45; color: var(--ink-2); max-width: 600px;
   font-weight: 300;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
-.hero-actions { display: flex; gap: 16px; align-items: center; margin-bottom: 64px; flex-wrap: wrap }
+.hero-actions { display: flex; gap: 16px; align-items: center; margin-bottom: 48px; flex-wrap: wrap }
 .btn-primary {
   padding: 16px 28px; background: var(--ink); color: var(--bg);
   border-radius: 999px; font-size: 15px; font-weight: 500;
@@ -277,7 +275,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 
 .hero-proof {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--rule); padding-top: 32px; max-width: 720px;
+  border-top: 1px solid var(--rule); padding-top: 28px; max-width: 720px;
 }
 .proof { display: flex; flex-direction: column; gap: 6px }
 .proof-val { font-family: var(--serif); font-size: 34px; color: var(--ink); line-height: 1 }
@@ -285,25 +283,17 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .proof-cur { font-family: var(--sans); font-size: 16px; color: var(--ink-3); font-weight: 400 }
 .proof-lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3) }
 
-/* live clock card in hero */
-.clock-card {
-  padding: 28px 28px 24px;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 20px;
-  position: sticky; top: 100px;
+/* live clock: a band under the hero — next prayer on one side, the day's times on the other */
+.clock { background: var(--bg-2); border-block: 1px solid var(--rule-2) }
+.clock-inner {
+  max-width: 1440px; margin: 0 auto; padding: 32px 48px 36px;
+  display: grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); gap: 20px 56px; align-items: center;
 }
-.clock-top {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding-bottom: 16px; border-bottom: 1px solid var(--rule-2); margin-bottom: 16px;
-}
+.clock-top { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap }
 .clock-loc { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3) }
 .clock-date { font-family: var(--serif); font-size: 16px; color: var(--ink-2) }
 /* city selector */
-.city-selector {
-  display: flex; flex-wrap: wrap; gap: 4px;
-  padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--rule-2);
-}
+.city-selector { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end }
 .city-btn {
   padding: 4px 10px; border-radius: 999px; font-size: 11px;
   font-family: var(--mono); color: var(--ink-3);
@@ -315,45 +305,46 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .city-btn.on { background: var(--accent); color: #fff; border-color: var(--accent) }
 
 .clock-next-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px }
-.clock-next-name { font-family: var(--serif); font-size: 36px; color: var(--ink); line-height: 1.1 }
+.clock-next-name { font-family: var(--serif); font-size: 36px; color: var(--ink); line-height: 1.1; min-height: 1.1em }
 .clock-countdown {
   font-family: var(--mono); font-size: 28px; color: var(--ink); margin-top: 12px;
   letter-spacing: -0.02em; font-weight: 500;
   direction: ltr; text-align: start; unicode-bidi: isolate;
 }
 .clock-countdown .sep { color: var(--ink-3) }
-.clock-bar-wrap { height: 3px; background: var(--rule-2); margin: 20px 0 24px; border-radius: 2px; overflow: hidden }
+.clock-bar-wrap { height: 3px; background: var(--rule); margin-top: 18px; border-radius: 2px; overflow: hidden }
 .clock-bar { height: 100%; background: var(--accent); transition: width 1s linear; border-radius: 2px }
-.clock-list { display: flex; flex-direction: column; gap: 1px; background: var(--rule-2); margin: 0 -28px -24px; padding: 0; border-radius: 0 0 20px 20px; overflow: hidden }
+.clock-list {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px;
+  background: var(--rule-2); border: 1px solid var(--rule-2); border-radius: 16px; overflow: hidden;
+}
 .clock-row {
-  padding: 12px 28px;
-  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 18px;
+  display: flex; flex-direction: column; gap: 8px;
   background: var(--paper);
   font-size: 14px;
 }
+.clock-row .clock-t { font-size: 20px; color: var(--ink) }
+.clock-row.passed .clock-t { color: var(--ink-3) }
 .clock-row.active { background: color-mix(in oklch, var(--accent) 12%, var(--paper)) }
 .clock-row.passed { color: var(--ink-3) }
 .clock-name { display: flex; align-items: center; gap: 10px }
 .clock-name .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule) }
 .clock-row.active .dot { background: var(--accent) }
 .clock-row.passed .dot { background: var(--rule-2) }
-.clock-t { font-family: var(--mono); font-size: 13px; letter-spacing: -0.01em; direction: ltr; unicode-bidi: isolate }
+.clock-t { font-family: var(--mono); font-size: 13px; letter-spacing: -0.01em; direction: ltr; text-align: start; unicode-bidi: isolate }
 
-/* ---------- marquee sub-band ---------- */
-.marquee {
-  border-bottom: 1px solid var(--rule-2);
-  overflow: hidden;
-  padding: 18px 0;
+/* Until the first times arrive: soft placeholders instead of "00:00:00". If they
+   never arrive (no network, API down, nothing cached), script.js hides the band. */
+.clock[data-state="loading"] :is(.clock-next-name, .clock-countdown, .clock-date) {
+  color: transparent; border-radius: 8px; width: fit-content; min-width: 7ch;
+  background: linear-gradient(90deg, var(--rule-2), var(--rule), var(--rule-2)) 0 0 / 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
 }
-.marquee-track {
-  display: flex; gap: 56px; white-space: nowrap; width: max-content;
-  font-family: var(--serif); font-size: 20px; color: var(--ink-3);
-  animation: slide 40s linear infinite; font-style: italic;
-}
-.marquee-track span { display: flex; align-items: center; gap: 56px }
-.marquee-track span::after { content: "\2726"; font-size: 13px; color: var(--accent) }
-@keyframes slide { from { transform: translateX(0) } to { transform: translateX(-50%) } }
-@keyframes slide-rtl { from { transform: translateX(0) } to { transform: translateX(50%) } }
+.clock[data-state="loading"] .clock-countdown .sep { color: transparent }
+.clock[data-state="loading"] .clock-t { color: var(--ink-3) }
+.clock[data-state="error"] { display: none }
+@keyframes shimmer { from { background-position: 100% 0 } to { background-position: -100% 0 } }
 
 /* ---------- section: showcase ---------- */
 .showcase {
@@ -408,7 +399,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .sc-more { margin-top: 28px }
 .sc-caption { margin-top: 14px; font-size: 14px; line-height: 1.5; color: var(--ink-3); max-width: 520px }
 .sc-caption:empty { display: none }
-.phone-video { background: #20263a }
+.phone-video { display: block; width: 100%; height: 100%; object-fit: cover; background: #20263a; cursor: pointer }
 
 /* ---------- iPad + Mac ---------- */
 .devices { padding: 120px 48px; border-bottom: 1px solid var(--rule-2) }
@@ -506,22 +497,38 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .trust-cell-num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase }
 .trust-cell h3 { font-family: var(--serif); font-size: 30px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em }
 .trust-cell p { font-size: 14px; line-height: 1.55; color: var(--ink-3); margin-top: auto }
+.compare { margin-top: 112px }
 
 /* ---------- features grid ---------- */
 .feats { padding: 140px 48px; border-bottom: 1px solid var(--rule-2) }
 .f-inner { max-width: 1280px; margin: 0 auto }
-.f-head { margin-bottom: 72px }
+.f-head { margin-bottom: 64px }
 .f-eye { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px }
 .f-eye::before { content: ""; display: block; flex-shrink: 0; width: 24px; height: 1px; background: var(--ink-3) }
 .f-head h2 { font-family: var(--serif); font-size: 72px; letter-spacing: -0.02em; line-height: 1.02 }
 .f-head h2 em { font-style: italic; color: var(--accent-ink) }
+.f-groups { display: flex; flex-direction: column; gap: 56px }
+.f-group-title {
+  font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
+  display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px;
+}
+.f-group-count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.04em }
+/* Collapsed: each group shows its first few; "show all" opens the rest. */
+.f-groups.is-collapsed .f-extra { display: none }
+.f-all {
+  display: block; margin: 48px auto 0; padding: 14px 26px;
+  border: 1px solid var(--ink); border-radius: 999px; font-size: 15px; font-weight: 500;
+  transition: background .2s, color .2s;
+}
+.f-all:hover { background: var(--ink); color: var(--bg) }
+.f-all[aria-expanded="true"] { display: none }
 .f-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--ink); border-inline-start: 1px solid var(--rule);
 }
 .f-cell {
   border-inline-end: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
-  padding: 28px 24px 32px; min-height: 180px;
+  padding: 24px 24px 28px; min-height: 164px;
   display: flex; flex-direction: column; gap: 12px;
   transition: background .2s;
 }
@@ -530,12 +537,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .f-name { font-family: var(--serif); font-size: 22px; line-height: 1.1; color: var(--ink); font-weight: 400; letter-spacing: -0.01em }
 .f-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; margin-top: auto }
 
-/* ---------- comparison ---------- */
-.compare { padding: 140px 48px; border-bottom: 1px solid var(--rule-2) }
-.compare-inner { max-width: 1280px; margin: 0 auto }
-.compare h2 { font-family: var(--serif); font-size: 80px; letter-spacing: -0.02em; line-height: 1.02; margin-bottom: 24px }
-.compare h2 em { font-style: italic; color: var(--accent-ink) }
-.compare-lede { font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 620px; margin-bottom: 72px; font-weight: 300 }
+/* ---------- comparison (inside the trust section) ---------- */
+.compare-lede { font-family: var(--serif); font-size: 34px; line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); max-width: 760px; margin-bottom: 48px }
 .compare-table { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink) }
 .compare-row {
   display: grid; grid-template-columns: 2fr 3fr 3fr;
@@ -546,16 +549,10 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   border-bottom: 1px solid var(--ink);
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
 }
-.compare-cell { padding: 28px 28px; font-size: 15px; line-height: 1.5 }
-.compare-cell.feat { font-family: var(--serif); font-size: 22px; color: var(--ink); padding-top: 32px }
+.compare-cell { padding: 24px 28px; font-size: 15px; line-height: 1.5 }
+.compare-cell.feat { font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--ink) }
 .compare-cell.other { color: var(--ink-3); border-inline-start: 1px solid var(--rule-2) }
 .compare-cell.vakit { color: var(--ink); border-inline-start: 1px solid var(--rule-2); background: color-mix(in oklch, var(--accent) 4%, transparent) }
-.cmark { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase }
-.cmark.yes { color: var(--accent-ink) }
-.cmark.no { color: oklch(0.55 0.1 28) }
-.cmark::before { content: ""; display: block; width: 8px; height: 8px; border-radius: 50% }
-.cmark.yes::before { background: var(--accent) }
-.cmark.no::before { background: oklch(0.65 0.15 28) }
 
 /* ---------- testimonials ---------- */
 .testimonials { padding: 140px 48px; border-bottom: 1px solid var(--rule-2) }
@@ -619,6 +616,9 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .final p { font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 560px; margin: 0 auto 48px; font-weight: 300 }
 .final-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap }
 
+/* ---------- download dock (phones only) ---------- */
+.dock { display: none }
+
 /* ---------- footer ---------- */
 footer {
   padding: 60px 48px 40px; border-top: 1px solid var(--rule);
@@ -638,33 +638,32 @@ footer {
 /* Right-to-left pages (ar, fa, ur, ug). Layout mirrors through flex/grid and
    logical properties above; what's left is motion and the few things that
    must stay left-to-right (clock digits). */
-[dir="rtl"] .marquee-track { animation-name: slide-rtl }
 /* Numbers read left to right ("01 / 45", "02:14:37") but sit on the right. */
-[dir="rtl"] :is(.f-num, .clock-countdown) { text-align: right }
+[dir="rtl"] :is(.f-num, .clock-countdown, .clock-t) { text-align: right }
 
 /* Scripts without italics or case: italics are faked (slanted glyphs), and
    tracking breaks joined letters (Arabic) or looks wrong (CJK, Indic, Thai).
    The accent colour alone carries the emphasis. */
-html:not(.script-latin):not(.script-cyrillic) em,
-html:not(.script-latin):not(.script-cyrillic) .marquee-track { font-style: normal }
+html:not(.script-latin):not(.script-cyrillic) em { font-style: normal }
 html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !important }
 
 /* Tall scripts: the Latin display line-heights (0.94–1.02) clip marks above and
    below the line. :where() keeps these at base specificity so the per-script
    rules below (Urdu) win. */
 :where(html:not(.script-latin):not(.script-cyrillic)) :is(.hero h1, .trust h2, .final h2) { line-height: 1.2 }
-:where(html:not(.script-latin):not(.script-cyrillic)) :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2) { line-height: 1.25 }
-:where(html:not(.script-latin):not(.script-cyrillic)) :is(.hero-sub, .sc-lede, .trust-lede, .compare-lede, .faq-a-inner, .final p) { line-height: 1.7 }
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.sc-h2, .f-head h2, .t-head h2, .faq h2) { line-height: 1.25 }
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.compare-lede, .f-group-title) { line-height: 1.5 }
+:where(html:not(.script-latin):not(.script-cyrillic)) :is(.hero-sub, .sc-lede, .trust-lede, .faq-a-inner, .final p) { line-height: 1.7 }
 
 /* Nastaliq (Urdu) needs far more vertical room than any other script, and
    reads large at display sizes. */
 .script-urdu :is(.hero h1, .trust h2, .final h2) { line-height: 2.15; font-size: clamp(34px, 5vw, 76px) }
-.script-urdu :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2) { line-height: 2.1; font-size: clamp(30px, 4vw, 56px) }
-.script-urdu :is(.sc-body h3, .trust-cell h3, .f-name, .t-title, .faq-q, .compare-cell.feat, .clock-next-name) { line-height: 2 }
+.script-urdu :is(.sc-h2, .f-head h2, .t-head h2, .faq h2) { line-height: 2.1; font-size: clamp(30px, 4vw, 56px) }
+.script-urdu :is(.sc-body h3, .trust-cell h3, .f-name, .f-group-title, .compare-lede, .t-title, .faq-q, .compare-cell.feat, .clock-next-name) { line-height: 2 }
 
 /* CJK: a calmer size for dense glyphs, and break headings between phrases
    rather than between any two characters. */
-:is(.script-chinese, .script-japanese) .hero h1 { font-size: clamp(34px, 7vw, 112px) }
+:is(.script-chinese, .script-japanese) .hero h1 { font-size: clamp(34px, 5.4vw, 88px) }
 :is(.script-chinese, .script-japanese) :is(h1, h2, h3) { word-break: auto-phrase }
 
 /* ==========================================================================
@@ -673,20 +672,26 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
 
 @media (max-width: 1200px) {
   .hero { gap: 48px }
+  .hero-phone .phone { width: 260px }
   .sc-h2, .f-head h2, .t-head h2 { font-size: 56px }
-  .compare h2, .faq h2 { font-size: 60px }
+  .faq h2 { font-size: 60px }
   .trust-grid { grid-template-columns: repeat(2, 1fr) }
   .f-grid { grid-template-columns: repeat(3, 1fr) }
+  /* three columns: three per group, so the preview row stays full */
+  .f-groups.is-collapsed .f-last { display: none }
   .t-grid { columns: 2 }
+  .clock-inner { grid-template-columns: minmax(0, 1fr); gap: 16px }
+  .city-selector { justify-content: flex-start }
 }
 
 @media (max-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr;
-    padding: 60px 32px 80px;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 48px 32px 64px;
+    gap: 40px;
   }
-  .clock-card { position: static }
+  .hero-phone .phone { width: 220px }
+  .clock-inner { padding: 28px 32px 32px }
   .showcase {
     grid-template-columns: 1fr;
     padding: 80px 32px;
@@ -727,14 +732,21 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .lang-menu summary { width: 34px; padding: 0; justify-content: center }
   .lang-list { position: fixed; top: 64px; inset-inline: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)) }
 
-  .hero { padding: 40px 20px 60px }
+  /* Phones: text and button first, then the app, then the numbers. */
+  .hero { padding: 36px 20px 48px; grid-template-columns: minmax(0, 1fr); gap: 0 }
+  .hero-left { display: contents }
   .hero h1 { font-size: 48px; line-height: 1 }
-  .hero-sub { font-size: 18px; margin-bottom: 32px }
-  .hero-proof { grid-template-columns: repeat(2, 1fr); gap: 20px }
-  .hero-actions { margin-bottom: 40px }
+  .hero-sub { font-size: 18px; margin-bottom: 28px }
+  .hero-actions { margin-bottom: 36px }
+  .hero-phone { order: 1; margin-bottom: 40px }
+  .hero-phone .phone { width: 220px }
+  .hero-proof { order: 2; grid-template-columns: repeat(2, 1fr); gap: 20px }
 
-  .marquee-track { font-size: 16px; gap: 32px }
-  .marquee-track span { gap: 32px }
+  .clock-inner { padding: 24px 20px 28px }
+  .clock-list { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+  .clock-row { padding: 12px 14px; gap: 4px }
+  .clock-row .clock-t { font-size: 17px }
+  .clock-next-name { font-size: 30px }
 
   .showcase { padding: 60px 20px; gap: 32px }
   .sc-h2 { font-size: 40px }
@@ -752,12 +764,17 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .trust-cell { min-height: auto; padding: 28px 24px }
 
   .feats { padding: 80px 20px }
+  .f-head { margin-bottom: 40px }
   .f-head h2 { font-size: 40px }
+  .f-groups { gap: 40px }
+  .f-group-title { font-size: 24px; margin-bottom: 12px }
   .f-grid { grid-template-columns: repeat(2, 1fr) }
+  .f-groups.is-collapsed .f-last { display: flex }
+  .f-cell { min-height: 0; padding: 18px 16px 20px; gap: 8px }
+  .f-name { font-size: 19px }
 
-  .compare { padding: 80px 20px }
-  .compare h2 { font-size: 44px }
-  .compare-lede { margin-bottom: 40px }
+  .compare { margin-top: 72px }
+  .compare-lede { font-size: 26px; margin-bottom: 28px }
   .compare-table { overflow-x: auto; -webkit-overflow-scrolling: touch }
   .compare-row { min-width: 640px }
 
@@ -766,7 +783,15 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .t-head h2 { font-size: 40px }
   .t-meta { text-align: start }
   .t-note { margin: -32px 0 32px }
-  .t-grid { columns: 1 }
+  /* Reviews: one swipeable row instead of a 4,000 px column. */
+  .t-grid {
+    columns: auto; display: flex; gap: 12px;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin-inline: -20px; padding: 0 20px 8px; scroll-padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .t-grid::-webkit-scrollbar { display: none }
+  .t-card { flex: 0 0 min(84%, 340px); margin-bottom: 0; scroll-snap-align: start }
 
   .faq { padding: 80px 20px }
   .faq h2 { font-size: 44px }
@@ -777,14 +802,29 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .final p { font-size: 16px }
 
   footer {
-    padding: 40px 20px; flex-direction: column; text-align: center;
+    padding: 40px 20px 104px; flex-direction: column; text-align: center;
     gap: 20px;
   }
+
+  .dock {
+    display: flex; justify-content: center;
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 60;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    background: color-mix(in oklch, var(--bg) 88%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--rule-2);
+    transform: translateY(110%); visibility: hidden;
+    transition: transform .3s ease, visibility 0s linear .3s;
+  }
+  .dock .btn-primary { width: 100%; max-width: 420px; justify-content: center; padding: 14px 24px }
+  .dock.show { transform: none; visibility: visible; transition: transform .3s ease }
+  /* the language suggestion sits above the dock while it is out */
+  .dock-on .lang-suggest { bottom: calc(84px + env(safe-area-inset-bottom)) }
   .foot-links { flex-wrap: wrap; justify-content: center; gap: 16px }
 
   :where(html:not(.script-latin):not(.script-cyrillic)) .hero h1 { line-height: 1.25 }
   .script-urdu .hero h1 { font-size: 32px; line-height: 2.2 }
-  .script-urdu :is(.sc-h2, .f-head h2, .compare h2, .t-head h2, .faq h2, .trust h2, .final h2) { font-size: 28px }
+  .script-urdu :is(.sc-h2, .f-head h2, .t-head h2, .faq h2, .trust h2, .final h2) { font-size: 28px }
 }
 
 /* Portrait iPad (744–1024 px): keep the showcase list and its phone side by side,
@@ -833,14 +873,17 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
   .clock-countdown { font-size: 22px }
   .clock-next-name { font-size: 28px }
   .f-grid { grid-template-columns: 1fr }
+  /* one column: three per group */
+  .f-groups.is-collapsed .f-last { display: none }
   .sc-h2 { font-size: 32px }
   .trust h2 { font-size: 32px }
   .trust-cell h3 { font-size: 24px }
-  .compare h2 { font-size: 36px }
+  .compare-lede { font-size: 23px }
   .faq h2 { font-size: 36px }
   .script-urdu .hero h1 { font-size: 30px }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none }
+  .clock[data-state="loading"] * { animation: none !important }
+  .dock, .dock.show { transition: none }
 }

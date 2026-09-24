@@ -36,7 +36,7 @@ for (const lang of LANGS) {
   });
 
   test(`${lang}: beklenen kampanya token'ları sayfada`, () => {
-    for (const slot of ["site-nav", "site-hero", "site-final"]) {
+    for (const slot of ["site-nav", "site-hero", "site-final", "site-dock"]) {
       assert.ok(page.includes(`ct=${slot}-${lang}`), `${slot}-${lang} yok`);
     }
   });
@@ -93,7 +93,33 @@ for (const lang of LANGS) {
       assert.ok(fs.existsSync(path.join("docs", m[1])), `${m[1]} yok`);
     }
   });
+
+  test(`${lang}: ilk ekranda uygulama var — video ve App Store düğmesi hero içinde`, () => {
+    const hero = page.slice(page.indexOf('<section class="hero">'), page.indexOf("<!-- ========== LIVE CLOCK"));
+    assert.ok(hero.includes('id="heroVideo"'), "hero videosu yok");
+    assert.ok(hero.includes('preload="none"'), "video sayfa yüklenmeden inmeye başlar");
+    assert.ok(!/\sautoplay[\s>]/.test(hero), "autoplay: video sayfa yüklenmeden başlar");
+    assert.ok(hero.includes(`ct=site-hero-${lang}`), "hero düğmesi yok");
+  });
+
+  test(`${lang}: sayfada çevrilmemiş İngilizce etiket ya da yer tutucu kalmadı`, () => {
+    assert.ok(!/\d\d \/ (no account|on-device|no tracking|transparent)/.test(page), "Emanet kartlarında İngilizce etiket");
+    assert.ok(!/\{(featureCount|ratingCount|screenCount)\}/.test(page), "çözülmemiş yer tutucu");
+  });
+
+  test(`${lang}: özellik gruplarında her özellik tam bir kez`, () => {
+    const names = [...page.matchAll(/<h4 class="f-name">([^<]*)<\/h4>/g)].map((m) => m[1]);
+    assert.strictEqual(names.length, C.FEATURES[lang].length);
+    assert.strictEqual(new Set(names).size, names.length, "aynı özellik iki kez");
+  });
 }
+
+// "Takip yok" dendiği halde kullanım verisi takma bir koda bağlı olarak sunucuya gidiyor
+// (gizlilik politikası §1). Sayfa bunu iddia etmemeli (2026-09-24).
+test("tr/en: \"takip yok\" iddiası yok", () => {
+  assert.ok(!/takip yok/i.test(TR), "tr");
+  assert.ok(!/no tracking/i.test(html("en")), "en");
+});
 
 test("JSON-LD linkinde ct YOK — yapısal veriye kampanya token'ı girmez", () => {
   // Arama motorundan gelen her tıklama tek bir sahte kampanyaya yazılırsa kanal ayrımı bozulur.
