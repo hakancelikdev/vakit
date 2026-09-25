@@ -327,6 +327,7 @@ ul { list-style: none }
   max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter);
   display: flex; justify-content: flex-end; gap: 12px;
 }
+.g-controls[hidden] { display: none }
 .g-btn {
   width: 44px; height: 44px; border-radius: 50%;
   display: grid; place-items: center;
@@ -338,50 +339,42 @@ ul { list-style: none }
 .g-btn:disabled { opacity: .35; cursor: default }
 [dir="rtl"] .g-btn svg { transform: scaleX(-1) }
 
-/* ---------- iPad · Mac · Apple Watch ---------- */
-.devices { padding: 0 var(--gutter) var(--section) }
-.dv-inner {
-  max-width: calc(var(--wrap) - 2 * var(--gutter)); margin: 0 auto;
-  background: var(--bg-2); border-radius: var(--radius-tile); padding: 56px 48px 52px;
-  display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.25fr) minmax(0, 0.42fr); gap: 0 44px;
-  align-items: start;
-}
-.dv-eye { grid-column: 1 / -1; font-size: 19px; font-weight: 600; color: var(--accent-ink); margin-bottom: 40px }
-/* Frame, name, description and tabs share rows across the three devices. */
-.dv-col { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0 }
-.dv-frame { position: relative; margin-bottom: 28px; align-self: end }
+/* ---------- iPad · Mac · Apple Watch: one gallery per device ---------- */
+.devices { padding-bottom: var(--section) }
+.dv-row { margin-top: 48px }
+.dv-row + .dv-row { margin-top: 72px }
+.dv-row .gallery { margin-top: 28px }
+.dv-name { font-size: clamp(26px, 2.6vw, 34px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15 }
+.dv-desc { font-size: var(--t-lede); line-height: 1.42; color: var(--ink-2); max-width: 640px; margin-top: 8px }
+/* Item widths per device; the screens keep their own aspect ratios. */
+.dv-ipad .g-item { width: 340px }
+.dv-mac .g-item { width: 540px }
+.dv-watch .g-item { width: 190px }
+/* The menu bar extra hangs above the first Mac window. */
+.dv-mac .g-track { padding-top: 64px }
+.dv-mac .gallery { margin-top: 0 }
+.dv-frame { position: relative }
 .dv-screen { position: relative; overflow: hidden }
-.dv-shot { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .4s }
-.dv-shot.on { opacity: 1 }
+.dv-screen img { display: block; width: 100%; height: 100% }
 .dv-frame.ipad {
   padding: 3.4%; border-radius: 30px; background: #1d1d1f;
-  box-shadow: inset 0 0 0 1.5px #3a3a3c, var(--shadow);
+  box-shadow: inset 0 0 0 1.5px #3a3a3c, 0 22px 44px -26px rgb(0 0 0 / .35);
 }
 .ipad .dv-screen { aspect-ratio: 3 / 4; border-radius: 18px; background: #20263a }
-.ipad .dv-shot { object-fit: cover }
-.mac .dv-screen { aspect-ratio: 1200 / 914; filter: drop-shadow(0 22px 30px rgb(0 0 0 / .28)) }
-.mac .dv-shot { object-fit: contain }
+.ipad .dv-screen img { object-fit: cover }
+.mac .dv-screen { aspect-ratio: 1200 / 914; filter: drop-shadow(0 18px 24px rgb(0 0 0 / .25)) }
+.mac .dv-screen img { object-fit: contain }
 .mac-menubar {
   /* physical right, also on RTL pages: the Mac window is LTR and menu bar extras sit on the right */
-  position: absolute; top: -5%; right: -4%; width: 27%; height: auto;
+  position: absolute; top: -6%; right: -3%; width: 27%; height: auto;
   filter: drop-shadow(0 16px 28px rgb(0 0 0 / .35));
 }
 .dv-frame.watch {
   padding: 8%; border-radius: 30% / 25%; background: #1d1d1f;
-  box-shadow: inset 0 0 0 1.5px #3a3a3c, var(--shadow);
+  box-shadow: inset 0 0 0 1.5px #3a3a3c, 0 22px 44px -26px rgb(0 0 0 / .35);
 }
 .watch .dv-screen { aspect-ratio: 396 / 484; border-radius: 22% / 18%; background: #000 }
-.watch .dv-shot { object-fit: cover }
-.dv-name { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 6px }
-.dv-desc { font-size: 15px; line-height: 1.45; color: var(--ink-3); max-width: 440px; margin-bottom: 18px }
-.dv-tabs { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; align-content: flex-start }
-.dv-tab {
-  min-height: 34px; padding: 6px 13px; border-radius: 999px;
-  font-size: 13px; color: var(--ink-2); background: var(--bg-3);
-  transition: background .15s, color .15s;
-}
-.dv-tab:hover { color: var(--ink) }
-.dv-tab.on { background: var(--on-accent-bg); color: var(--on-accent-fg) }
+.watch .dv-screen img { object-fit: cover }
 
 /* ---------- emanet / trust: the one dark section ---------- */
 .trust {
@@ -554,12 +547,6 @@ html.script-urdu { --font: "Noto Nastaliq Urdu", -apple-system, "Segoe UI", syst
   .hero-proof { grid-template-columns: repeat(2, auto) }
   .clock-inner { grid-template-columns: minmax(0, 1fr); gap: 16px }
   .city-selector { justify-content: flex-start }
-  .dv-inner { grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: 40px 36px; padding: 44px 36px }
-  .dv-watch {
-    grid-column: 1 / -1; grid-row: auto;
-    grid-template-columns: 160px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 32px;
-  }
-  .dv-watch .dv-frame { grid-row: 1 / span 3; margin-bottom: 0; align-self: start }
   .trust-grid { grid-template-columns: repeat(2, 1fr) }
   .f-list { grid-template-columns: repeat(2, minmax(0, 1fr)) }
   /* two columns: two per group until "show all" */
@@ -614,14 +601,13 @@ html.script-urdu { --font: "Noto Nastaliq Urdu", -apple-system, "Segoe UI", syst
   .g-item { width: 64vw; max-width: 250px }
   .g-controls { display: none }
 
-  .devices { padding-bottom: var(--section) }
-  .dv-inner { grid-template-columns: minmax(0, 1fr); gap: 48px; padding: 36px 20px }
-  .dv-eye { margin-bottom: 0 }
-  .dv-col { display: block }
-  .dv-ipad .dv-frame { width: min(100%, 300px) }
-  .dv-watch { display: grid; grid-template-columns: minmax(0, 1fr) }
-  .dv-watch .dv-frame { width: 170px; margin-bottom: 28px; grid-row: auto }
-  .mac-menubar { width: 32%; top: -8%; right: -2% }
+  .dv-row { margin-top: 36px }
+  .dv-row + .dv-row { margin-top: 56px }
+  .dv-row .gallery { margin-top: 20px }
+  .dv-ipad .g-item { width: 70vw; max-width: 300px }
+  .dv-mac .g-item { width: 84vw; max-width: 460px }
+  .dv-watch .g-item { width: 42vw; max-width: 180px }
+  .dv-mac .g-track { padding-top: 44px }
 
   .trust-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 40px }
   .trust-cell { padding: 24px 22px }

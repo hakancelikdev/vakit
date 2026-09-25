@@ -508,7 +508,7 @@
     <h2 class="sec-title"><span>Een metgezel,</span> <em>geen aandachtsvreter.</em></h2>
     <p class="sec-lede">15 kernfuncties, elk zo ontworpen dat het rustig aanvoelt zodra je het opent.</p>
   </div>
-  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Een metgezel, geen aandachtsvreter.">
+  <div class="gallery" tabindex="0" role="region" aria-label="Een metgezel, geen aandachtsvreter.">
     <ul class="g-track">
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/nl/prayer-times.webp" alt="Zoals de hemel." width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -594,72 +594,131 @@
   </div>
 </section>
 
-<!-- ========== IPAD + MAC ========== -->
+<!-- ========== IPAD · MAC · APPLE WATCH: one gallery per device ========== -->
 <section class="devices" id="devices">
-  <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac · Apple Watch</div>
-    <div class="dv-col dv-ipad">
-      <div class="dv-frame ipad">
-        <div class="dv-screen">
-          <img class="dv-shot on" src="/assets/screenshots/nl/ipad/prayer-times.webp" alt="iPad · Gebedstijden" width="900" height="1200" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/nl/ipad/discover.webp" alt="iPad · Alles in één" width="900" height="1200" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/nl/ipad/quran.webp" alt="iPad · De Heilige Koran" width="900" height="1200" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/nl/ipad/hadith.webp" alt="iPad · Hadith" width="900" height="1200" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/nl/ipad/accounting.webp" alt="iPad · Ibada bijhouden" width="900" height="1200" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/nl/ipad/prayer-guide.webp" alt="iPad · Gebedsgids" width="900" height="1200" loading="lazy">
-        </div>
-      </div>
-      <h3 class="dv-name">iPad</h3>
-      <p class="dv-desc">Dezelfde app op een groter scherm; je gegevens synchroniseren via iCloud.</p>
-      <div class="dv-tabs" role="group" aria-label="iPad">
-        <button class="dv-tab on" aria-pressed="true">Gebedstijden</button>
-        <button class="dv-tab" aria-pressed="false">Alles in één</button>
-        <button class="dv-tab" aria-pressed="false">De Heilige Koran</button>
-        <button class="dv-tab" aria-pressed="false">Hadith</button>
-        <button class="dv-tab" aria-pressed="false">Ibada bijhouden</button>
-        <button class="dv-tab" aria-pressed="false">Gebedsgids</button>
-      </div>
-    </div>
-    <div class="dv-col dv-mac">
-      <div class="dv-frame mac">
-        <div class="dv-screen">
-          <img class="dv-shot on" src="/assets/screenshots/en/mac/prayer-times.webp" alt="Mac-app · Gebedstijden" width="1200" height="914" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/mac/discover.webp" alt="Mac-app · Alles in één" width="1200" height="914" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/mac/calendar.webp" alt="Mac-app · Hidjri-kalender" width="1200" height="914" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Mac-app · Dhikr-teller" width="1200" height="914" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/mac/prayer-guide.webp" alt="Mac-app · Reinigingsgids" width="1200" height="914" loading="lazy">
-        </div>
-        <img class="mac-menubar" src="/assets/screenshots/en/mac/menu-bar.webp" alt="" width="360" height="389" loading="lazy">
-      </div>
-      <h3 class="dv-name">Mac-app</h3>
-      <p class="dv-desc">Aftelling in de menubalk, toetscombinaties, iCloud-sync.</p>
-      <div class="dv-tabs" role="group" aria-label="Mac-app">
-        <button class="dv-tab on" aria-pressed="true">Gebedstijden</button>
-        <button class="dv-tab" aria-pressed="false">Alles in één</button>
-        <button class="dv-tab" aria-pressed="false">Hidjri-kalender</button>
-        <button class="dv-tab" aria-pressed="false">Dhikr-teller</button>
-        <button class="dv-tab" aria-pressed="false">Reinigingsgids</button>
-      </div>
-    </div>
-    <div class="dv-col dv-watch">
-      <div class="dv-frame watch">
-        <div class="dv-screen">
-          <img class="dv-shot on" src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Gebedstijden" width="396" height="484" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Qibla-kompas" width="396" height="484" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Dhikr-teller" width="396" height="484" loading="lazy">
-          <img class="dv-shot" src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widgets" width="396" height="484" loading="lazy">
-        </div>
-      </div>
-      <h3 class="dv-name">Apple Watch</h3>
-      <p class="dv-desc">Gebedstijden, live qibla, 13 complicaties.</p>
-      <div class="dv-tabs" role="group" aria-label="Apple Watch">
-        <button class="dv-tab on" aria-pressed="true">Gebedstijden</button>
-        <button class="dv-tab" aria-pressed="false">Qibla-kompas</button>
-        <button class="dv-tab" aria-pressed="false">Dhikr-teller</button>
-        <button class="dv-tab" aria-pressed="false">Widgets</button>
-      </div>
-    </div>
+  <div class="sec-head">
+    <p class="sec-eye">iPad · Mac · Apple Watch</p>
   </div>
+<div class="dv-row dv-ipad">
+  <div class="sec-head">
+    <h3 class="dv-name">iPad</h3>
+    <p class="dv-desc">Dezelfde app op een groter scherm; je gegevens synchroniseren via iCloud.</p>
+  </div>
+  <div class="gallery" tabindex="0" role="region" aria-label="iPad">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/prayer-times.webp" alt="iPad · Gebedstijden" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Gebedstijden</h4>
+          <p class="g-desc">12 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/discover.webp" alt="iPad · Alles in één" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Alles in één</h4>
+          <p class="g-desc">Koran, hadith, vrijdagpreek, dhikr, de 99 namen, gidsen en de kalender – alles op één plek. Niets zit achter een betaalmuur.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/quran.webp" alt="iPad · De Heilige Koran" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">De Heilige Koran</h4>
+          <p class="g-desc">114 soera's. Woord voor woord, tafsir, klassieke moeshaf; vertaling in het Turks en Engels.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/hadith.webp" alt="iPad · Hadith" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Hadith</h4>
+          <p class="g-desc">Meer dan 36.000 hadiths uit zeven grote verzamelingen.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/accounting.webp" alt="iPad · Ibada bijhouden" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Ibada bijhouden</h4>
+          <p class="g-desc">Ringen voor gebed, Koran, dhikr, hadith en qada.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame ipad"><div class="dv-screen"><img src="/assets/screenshots/nl/ipad/prayer-guide.webp" alt="iPad · Gebedsgids" width="900" height="1200" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Gebedsgids</h4>
+          <p class="g-desc">17 soorten gebed; staand, zittend of met gebaren.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+<div class="dv-row dv-mac">
+  <div class="sec-head">
+    <h3 class="dv-name">Mac-app</h3>
+    <p class="dv-desc">Aftelling in de menubalk, toetscombinaties, iCloud-sync.</p>
+  </div>
+  <div class="gallery" tabindex="0" role="region" aria-label="Mac-app">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/prayer-times.webp" alt="Mac-app · Gebedstijden" width="1200" height="914" loading="lazy" decoding="async"></div><img class="mac-menubar" src="/assets/screenshots/en/mac/menu-bar.webp" alt="" width="360" height="389" loading="lazy" decoding="async"></div>
+          <h4 class="g-title">Gebedstijden</h4>
+          <p class="g-desc">12 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/discover.webp" alt="Mac-app · Alles in één" width="1200" height="914" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Alles in één</h4>
+          <p class="g-desc">Koran, hadith, vrijdagpreek, dhikr, de 99 namen, gidsen en de kalender – alles op één plek. Niets zit achter een betaalmuur.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/calendar.webp" alt="Mac-app · Hidjri-kalender" width="1200" height="914" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Hidjri-kalender</h4>
+          <p class="g-desc">Gregoriaans + Hidjri, met bijzondere dagen en ramadan.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Mac-app · Dhikr-teller" width="1200" height="914" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Dhikr-teller</h4>
+          <p class="g-desc">Voortgang in een ring, sjablonen en eigen dhikr.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/prayer-guide.webp" alt="Mac-app · Reinigingsgids" width="1200" height="914" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Reinigingsgids</h4>
+          <p class="g-desc">Stap voor stap: wassing, ghoesl en tayammoem.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+<div class="dv-row dv-watch">
+  <div class="sec-head">
+    <h3 class="dv-name">Apple Watch</h3>
+    <p class="dv-desc">Gebedstijden, live qibla, 13 complicaties.</p>
+  </div>
+  <div class="gallery" tabindex="0" role="region" aria-label="Apple Watch">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="dv-frame watch"><div class="dv-screen"><img src="/assets/screenshots/en/watch/prayer-dial.webp" alt="Apple Watch · Gebedstijden" width="396" height="484" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Gebedstijden</h4>
+          <p class="g-desc">12 berekeningsmethoden, houdt rekening met tijdzones, merkt het als je reist.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame watch"><div class="dv-screen"><img src="/assets/screenshots/en/watch/qibla.webp" alt="Apple Watch · Qibla-kompas" width="396" height="484" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Qibla-kompas</h4>
+          <p class="g-desc">Haptische richting met de afstand tot de Kaäba.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame watch"><div class="dv-screen"><img src="/assets/screenshots/en/watch/dhikr.webp" alt="Apple Watch · Dhikr-teller" width="396" height="484" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Dhikr-teller</h4>
+          <p class="g-desc">Voortgang in een ring, sjablonen en eigen dhikr.</p>
+        </li>
+        <li class="g-item">
+          <div class="dv-frame watch"><div class="dv-screen"><img src="/assets/screenshots/en/watch/complications.webp" alt="Apple Watch · Widgets" width="396" height="484" loading="lazy" decoding="async"></div></div>
+          <h4 class="g-title">Widgets</h4>
+          <p class="g-desc">Beginscherm, toegangsscherm, StandBy – ook op de Mac.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
 </section>
 
 <!-- ========== TRUST / EMANET ========== -->

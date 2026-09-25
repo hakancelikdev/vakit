@@ -256,35 +256,50 @@ function galleryItems(lang) {
     .join("\n");
 }
 
-/** One device column of the iPad/Mac section: the screens, their tabs, and the caption. */
-function deviceColumn(lang, device) {
+/** The round arrow buttons under a gallery (pointer shortcut; script.js wires them). */
+function galleryControls() {
+  return `  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled>${CHEVRON("prev")}</button>
+    <button class="g-btn g-next" tabindex="-1">${CHEVRON("next")}</button>
+  </div>`;
+}
+
+/**
+ * One device of the iPad · Mac · Apple Watch section: its name and line, then
+ * every captured screen side by side — the same gallery as the iPhone's.
+ * Labels and descriptions reuse FEATURES/SHOWCASE copy (deviceCopy).
+ */
+function deviceRow(lang, device) {
   const D = DEVICES[device];
   const cap = deviceCopy(lang, D.caption);
   const size = { ipad: 'width="900" height="1200"', mac: 'width="1200" height="914"', watch: 'width="396" height="484"' }[device];
-  const shots = D.shots
-    .map((s, i) =>
-      `          <img class="dv-shot${i === 0 ? " on" : ""}" src="${deviceUrl(lang, device, s.img)}"` +
-      ` alt="${esc(`${cap.n} · ${deviceCopy(lang, s.label).n}`)}" ${size} loading="lazy">`)
+  const items = D.shots
+    .map((s, i) => {
+      const label = deviceCopy(lang, s.label);
+      // The Mac's menu bar extra sits over the first window, as it does on a desktop.
+      const menuBar = device === "mac" && i === 0
+        ? `<img class="mac-menubar" src="${deviceUrl(lang, "mac", "menu-bar")}" alt="" width="360" height="389" loading="lazy" decoding="async">`
+        : "";
+      return `        <li class="g-item">
+          <div class="dv-frame ${device}"><div class="dv-screen"><img src="${deviceUrl(lang, device, s.img)}" alt="${esc(`${cap.n} · ${label.n}`)}" ${size} loading="lazy" decoding="async"></div>${menuBar}</div>
+          <h4 class="g-title">${esc(label.n)}</h4>
+          <p class="g-desc">${esc(label.d)}</p>
+        </li>`;
+    })
     .join("\n");
-  const tabs = D.shots
-    .map((s, i) =>
-      `        <button class="dv-tab${i === 0 ? " on" : ""}" aria-pressed="${i === 0}">${esc(deviceCopy(lang, s.label).n)}</button>`)
-    .join("\n");
-  const menuBar = device === "mac"
-    ? `\n        <img class="mac-menubar" src="${deviceUrl(lang, "mac", "menu-bar")}" alt="" width="360" height="389" loading="lazy">`
-    : "";
-  return `    <div class="dv-col dv-${device}">
-      <div class="dv-frame ${device}">
-        <div class="dv-screen">
-${shots}
-        </div>${menuBar}
-      </div>
-      <h3 class="dv-name">${esc(cap.n)}</h3>
-      <p class="dv-desc">${esc(cap.d)}</p>
-      <div class="dv-tabs" role="group" aria-label="${esc(cap.n)}">
-${tabs}
-      </div>
-    </div>`;
+  return `<div class="dv-row dv-${device}">
+  <div class="sec-head">
+    <h3 class="dv-name">${esc(cap.n)}</h3>
+    <p class="dv-desc">${esc(cap.d)}</p>
+  </div>
+  <div class="gallery" tabindex="0" role="region" aria-label="${esc(cap.n)}">
+    <ul class="g-track">
+${items}
+    </ul>
+  </div>
+${galleryControls()}
+</div>`;
 }
 
 /** FEATURE_GROUPS as indexes into FEATURES; every feature in exactly one group. */
@@ -589,26 +604,22 @@ ${clockRows(lang)}
     <h2 class="sec-title"><span>${esc(t(lang, "sc-h2a"))}</span>${gap}<em>${esc(t(lang, "sc-h2b"))}</em></h2>
     <p class="sec-lede">${esc(t(lang, "sc-lede"))}</p>
   </div>
-  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="${esc(t(lang, "sc-h2a") + gap + t(lang, "sc-h2b"))}">
+  <div class="gallery" tabindex="0" role="region" aria-label="${esc(t(lang, "sc-h2a") + gap + t(lang, "sc-h2b"))}">
     <ul class="g-track">
 ${galleryItems(lang)}
     </ul>
   </div>
-  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
-  <div class="g-controls" aria-hidden="true">
-    <button class="g-btn g-prev" tabindex="-1" disabled>${CHEVRON("prev")}</button>
-    <button class="g-btn g-next" tabindex="-1">${CHEVRON("next")}</button>
-  </div>
+${galleryControls()}
 </section>
 
-<!-- ========== IPAD + MAC ========== -->
+<!-- ========== IPAD · MAC · APPLE WATCH: one gallery per device ========== -->
 <section class="devices" id="devices">
-  <div class="dv-inner">
-    <div class="dv-eye">iPad · Mac · Apple Watch</div>
-${deviceColumn(lang, "ipad")}
-${deviceColumn(lang, "mac")}
-${deviceColumn(lang, "watch")}
+  <div class="sec-head">
+    <p class="sec-eye">iPad · Mac · Apple Watch</p>
   </div>
+${deviceRow(lang, "ipad")}
+${deviceRow(lang, "mac")}
+${deviceRow(lang, "watch")}
 </section>
 
 <!-- ========== TRUST / EMANET ========== -->

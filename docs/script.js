@@ -6,7 +6,7 @@
  * can read it. Do not render content here — edit ../content.js and rebuild.
  *
  * What lives here: the live prayer clock, the hero's preview video, the
- * showcase gallery's buttons, the iPad/Mac screen tabs, "show all" features, the FAQ
+ * galleries' arrow buttons (iPhone, iPad, Mac, Watch), "show all" features, the FAQ
  * accordion, theme toggle, the language menu, smooth scrolling, the mobile menu
  * and the phone-only download dock.
  */
@@ -251,17 +251,18 @@ function initHeroVideo() {
 }
 
 /* ================================================================
-   Showcase gallery — every screen is in the HTML, side by side; the page
-   never switches screens for the visitor. Swipe, trackpad and arrow keys
-   scroll it natively; the two round buttons are a shortcut for a mouse,
-   one screenful per click. They disable at either end.
+   Galleries — the iPhone showcase and one per device (iPad, Mac, Watch).
+   Every screen is in the HTML, side by side; the page never switches
+   screens for the visitor. Swipe, trackpad and arrow keys scroll them
+   natively; the round buttons after each gallery are a shortcut for a
+   mouse, one screenful per click, disabled at either end.
    ================================================================ */
 
-function initGallery() {
-  const gallery = document.getElementById('gallery');
-  const prev = document.querySelector('.g-prev');
-  const next = document.querySelector('.g-next');
-  if (!gallery || !prev || !next) return;
+function initGallery(gallery) {
+  const controls = gallery.nextElementSibling;
+  if (!controls || !controls.classList.contains('g-controls')) return;
+  const prev = controls.querySelector('.g-prev');
+  const next = controls.querySelector('.g-next');
   const rtl = getComputedStyle(gallery).direction === 'rtl';
 
   // In RTL, scrollLeft runs from 0 to negative values in current browsers.
@@ -270,6 +271,8 @@ function initGallery() {
     const max = gallery.scrollWidth - gallery.clientWidth - 2;
     prev.disabled = pos <= 2;
     next.disabled = pos >= max;
+    // Nothing to scroll (everything fits): no buttons at all.
+    controls.hidden = max <= 2;
   };
   const step = (dir) => {
     const item = gallery.querySelector('.g-item');
@@ -286,19 +289,8 @@ function initGallery() {
   update();
 }
 
-/* ================================================================
-   iPad + Mac — each device's tabs switch its own screen
-   ================================================================ */
-
-function initDevices() {
-  document.querySelectorAll('.dv-col').forEach(col => {
-    const tabs = col.querySelectorAll('.dv-tab');
-    const shots = col.querySelectorAll('.dv-shot');
-    tabs.forEach((tab, i) => tab.addEventListener('click', () => {
-      tabs.forEach((t, j) => { t.classList.toggle('on', i === j); t.setAttribute('aria-pressed', String(i === j)); });
-      shots.forEach((s, j) => s.classList.toggle('on', i === j));
-    }));
-  });
+function initGalleries() {
+  document.querySelectorAll('.gallery').forEach(initGallery);
 }
 
 /* ================================================================
@@ -482,8 +474,7 @@ function suggestLanguage(menu, remember) {
 
 applyTheme();
 initHeroVideo();
-initGallery();
-initDevices();
+initGalleries();
 initFeatures();
 initFAQ();
 initDock();
