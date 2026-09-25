@@ -510,7 +510,7 @@ ${jsonLd(faqSchema(lang))}
 <!-- ========== NAV ========== -->
 <nav class="nav">
   <div class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="${esc(SITE.appName)}" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">${esc(SITE.appName)}</div>
   </div>
   <div class="nav-links">
@@ -526,6 +526,8 @@ ${jsonLd(faqSchema(lang))}
   </div>
   <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
 </nav>
+
+<main>
 
 <!-- ========== HERO ========== -->
 <section class="hero">
@@ -649,7 +651,7 @@ ${[1, 2, 3, 4].map((i) => `      <div class="trust-cell">
          privacy is its first answer, the rest follow. -->
     <div class="compare" id="compare">
       <p class="compare-lede">${esc(t(lang, "c-lede"))}</p>
-      <div class="compare-table" id="compareTable">
+      <div class="compare-table" id="compareTable" tabindex="0" role="region" aria-label="${esc(t(lang, "c-lede"))}">
 ${compareTable(lang)}
       </div>
     </div>
@@ -681,7 +683,7 @@ ${featureGroups(lang)}
         <span>${esc(t(lang, "r-m2"))}</span>
       </div>
     </div>
-${note ? `    <p class="t-note">${esc(note)}</p>\n` : ""}    <div class="t-grid" id="testGrid">
+${note ? `    <p class="t-note">${esc(note)}</p>\n` : ""}    <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="${esc(t(lang, "r-h1") + (gap || " ") + t(lang, "r-h2"))}">
 ${reviewGrid(lang)}
     </div>
   </div>
@@ -699,7 +701,7 @@ ${faqList(lang)}
 
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
-  <div class="final-mark"><img src="/assets/app-icon.png" alt="${esc(SITE.appName)}" width="88" height="88"></div>
+  <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="${esc(SITE.appName)}" width="88" height="88" loading="lazy" decoding="async"></div>
   <h2><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
   <p>${esc(t(lang, "fin-p"))}</p>
   <div class="final-actions">
@@ -711,9 +713,11 @@ ${faqList(lang)}
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="${esc(SITE.appName)}" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     ${esc(SITE.appName)}
   </div>
   <div class="foot-links">
@@ -729,12 +733,12 @@ ${faqList(lang)}
 
 <!-- Phones only: a download button that stays in reach on a long page. Hidden
      while the hero's or the closing section's own button is on screen (script.js). -->
-<div class="dock" id="dock">
+<aside class="dock" id="dock" aria-label="${esc(t(lang, "download"))}">
   <a href="${storeLink(`site-dock-${lang}`)}" class="btn-primary">
     ${APPLE_LOGO}
     <span>${esc(t(lang, "downloadCta"))}</span>
   </a>
-</div>
+</aside>
 
 <script id="vakit-data" type="application/json">${jsonLd(clockData(lang))}</script>
 <script src="/script.js"></script>
@@ -754,7 +758,7 @@ const LEGAL_STYLE = `      .legal-page { padding: 120px 48px 80px; max-width: 86
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -787,7 +791,7 @@ function legalPage(key, lang) {
   const currentLang = isOriginal ? "" : `<a class="on" aria-current="page">${esc(lang.toUpperCase())}</a>\n      `;
 
   const sections = doc.sections
-    .map((s) => `  <div class="legal-card"><h3>${esc(s.t)}</h3><p>${esc(s.b)}</p></div>`)
+    .map((s) => `  <div class="legal-card"><h2>${esc(s.t)}</h2><p>${esc(s.b)}</p></div>`)
     .join("\n");
 
   return `<!DOCTYPE html>
@@ -829,7 +833,7 @@ ${LEGAL_STYLE}
 
 <nav class="nav">
   <a href="${home}" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="${esc(SITE.appName)}" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">${esc(SITE.appName)}</div>
   </a>
   <div class="nav-links">
@@ -858,7 +862,7 @@ ${sections}
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="${esc(SITE.appName)}" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     ${esc(SITE.appName)}
   </div>
   <div class="foot-links">
@@ -896,7 +900,7 @@ ${sections}
    their page frame and adds two blocks of its own — the fact table and the
    asset list (the only place on the site that links raw media files). */
 const PRESS_STYLE = `      .press-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .press-block h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .press-block h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .press-block p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .press-boiler { margin-bottom: 18px }
       .press-boiler:last-child { margin-bottom: 0 }
@@ -930,7 +934,7 @@ function pressPage(lang) {
     .map((a) => `    <li><a href="${a.href}" download>${esc(a[lang])}</a></li>`)
     .join("\n");
   const sections = doc.sections
-    .map((s) => `  <div class="press-block"><h3>${esc(s.t)}</h3><p>${esc(s.b)}</p></div>`)
+    .map((s) => `  <div class="press-block"><h2>${esc(s.t)}</h2><p>${esc(s.b)}</p></div>`)
     .join("\n");
 
   return `<!DOCTYPE html>
@@ -973,7 +977,7 @@ ${PRESS_STYLE}
 
 <nav class="nav">
   <a href="${home}" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="${esc(SITE.appName)}" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">${esc(SITE.appName)}</div>
   </a>
   <div class="nav-links">
@@ -996,12 +1000,12 @@ ${PRESS_STYLE}
   <p class="legal-desc">${esc(doc.desc)}</p>
 
   <div class="press-block">
-    <h3>${esc(doc.oneLiner.t)}</h3>
+    <h2>${esc(doc.oneLiner.t)}</h2>
     <p>${esc(doc.oneLiner.b)}</p>
   </div>
 
   <div class="press-block">
-    <h3>${esc(doc.videoTitle)}</h3>
+    <h2>${esc(doc.videoTitle)}</h2>
     <video class="press-video" controls preload="none" playsinline
            poster="/assets/video/walkthrough-poster.jpg">
       <source src="/assets/video/walkthrough.mp4" type="video/mp4">
@@ -1010,14 +1014,14 @@ ${PRESS_STYLE}
   </div>
 
   <div class="press-block">
-    <h3>${esc(doc.boiler.t)}</h3>
+    <h2>${esc(doc.boiler.t)}</h2>
     <div class="press-boiler"><span>25</span><p>${esc(doc.boiler.short)}</p></div>
     <div class="press-boiler"><span>50</span><p>${esc(doc.boiler.medium)}</p></div>
     <div class="press-boiler"><span>100</span><p>${esc(doc.boiler.long)}</p></div>
   </div>
 
   <div class="press-block">
-    <h3>${esc(doc.factsTitle)}</h3>
+    <h2>${esc(doc.factsTitle)}</h2>
     <table class="press-facts">
 ${facts}
     </table>
@@ -1041,7 +1045,7 @@ ${assets}
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="${esc(SITE.appName)}" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     ${esc(SITE.appName)}
   </div>
   <div class="foot-links">

@@ -37,7 +37,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -45,7 +45,7 @@
       :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
       @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
       .press-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .press-block h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .press-block h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .press-block p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .press-boiler { margin-bottom: 18px }
       .press-boiler:last-child { margin-bottom: 0 }
@@ -76,7 +76,7 @@
 
 <nav class="nav">
   <a href="/en/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -99,12 +99,12 @@
   <p class="legal-desc">Everything needed to write about Vakit: boilerplate you can paste, a fact sheet and images. Every statement here is true of the version live on the App Store. If something is missing, write and you will have it the same day.</p>
 
   <div class="press-block">
-    <h3>One line</h3>
+    <h2>One line</h2>
     <p>Vakit is a prayer-times and worship app that computes the times on the device and carries the Qur'an, the hadith and your worship records with it — no ads, no account.</p>
   </div>
 
   <div class="press-block">
-    <h3>Walkthrough</h3>
+    <h2>Walkthrough</h2>
     <video class="press-video" controls preload="none" playsinline
            poster="/assets/video/walkthrough-poster.jpg">
       <source src="/assets/video/walkthrough.mp4" type="video/mp4">
@@ -113,14 +113,14 @@
   </div>
 
   <div class="press-block">
-    <h3>Boilerplate</h3>
+    <h2>Boilerplate</h2>
     <div class="press-boiler"><span>25</span><p>Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. Times are computed on the device and the core features work without a network.</p></div>
     <div class="press-boiler"><span>50</span><p>Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. It computes the times on the device with 12 calculation methods, Diyanet's among them, and ships the Qur'an, 36,000+ hadith and illustrated prayer guides inside the app, so the core works without a network. It is free, shows no advertising at all and asks for no account; its only income is optional donations.</p></div>
     <div class="press-boiler"><span>100</span><p>Vakit is a prayer-times and worship app written by a single developer for iPhone, iPad, Apple Watch and Mac. Prayer times are computed on the device with 12 methods, including the Turkish Diyanet's own. The Qur'an with word-by-word translation and recitation, 36,000+ hadith, the 99 Names, a dhikr counter, a make-up prayer ledger and illustrated prayer guides all ship inside the app, so the core works without a network. It supports Home and Lock Screen widgets, a live countdown in the Dynamic Island, Control Center controls, Apple Watch complications and a Mac menu bar item. The app speaks 25 languages, collects no identity data, requires no account and sells nothing.</p></div>
   </div>
 
   <div class="press-block">
-    <h3>Fact sheet</h3>
+    <h2>Fact sheet</h2>
     <table class="press-facts">
       <tr><td>App</td><td>Vakit: Prayer Times Widget</td></tr>
       <tr><td>Developer</td><td>Hakan Çelik — independent, Turkey</td></tr>
@@ -129,25 +129,25 @@
       <tr><td>Languages</td><td>25</td></tr>
       <tr><td>Price</td><td>Free and ad-free. Its only income is optional donations from users</td></tr>
       <tr><td>First release</td><td>16 August 2025</td></tr>
-      <tr><td>Current version</td><td>1.7.4</td></tr>
-      <tr><td>App Store rating</td><td>4.8 / 467 (Turkish storefront)</td></tr>
+      <tr><td>Current version</td><td>1.7.5</td></tr>
+      <tr><td>App Store rating</td><td>4.8 / 473 (Turkish storefront)</td></tr>
       <tr><td>App Store ID</td><td>6748356813</td></tr>
       <tr><td>Privacy</td><td>No account, no identity data; anonymous usage statistics only</td></tr>
     </table>
   </div>
 
-  <div class="press-block"><h3>What sets it apart</h3><p>• Times are computed on the device — the Turkish Diyanet method is implemented as its own calculator and measured against the authority's published calendar.
+  <div class="press-block"><h2>What sets it apart</h2><p>• Times are computed on the device — the Turkish Diyanet method is implemented as its own calculator and measured against the authority's published calendar.
 • The sky is part of the app: the sun and the moon are placed astronomically and the palette moves through seven stages, from first light to deep night; the same palette continues in the widgets, on the Lock Screen and on Apple Watch.
 • Worship records stay with the person: make-up prayers and fasts, hatim progress, dhikr and goals live on the device and in the user's own iCloud.
 • Advertising is the norm in this category; Vakit shows none at all. The app's only source of income is optional donations from users.</p></div>
-  <div class="press-block"><h3>Feature highlights</h3><p>• Prayer times, a Qibla compass, karahat and nafl windows, and a suhoor alarm that sounds through silent mode and Focus
+  <div class="press-block"><h2>Feature highlights</h2><p>• Prayer times, a Qibla compass, karahat and nafl windows, and a suhoor alarm that sounds through silent mode and Focus
 • Imsakiye: a whole month of prayer times in one table, the way printed calendars show them
 • The Qur'an: two mushaf scripts, word-by-word translation, eight reciters, your own playlists, offline download
 • 36,000+ hadith across seven collections, the 99 Names, a dhikr counter and the post-prayer tasbihat
 • Ledgers for missed prayers and fasts, worship goals, hatim tracking and an accounting screen
 • Step-by-step guides for Fridays and the holy days, plus Diyanet's weekly sermon
 • 25 widgets, Dynamic Island and Live Activity, six Control Center controls, 13 Apple Watch complications, a Mac menu bar item</p></div>
-  <div class="press-block"><h3>Developer</h3><p>Vakit is written solo by Hakan Çelik — no funding, no subscription. The goal is a calmer daily practice: the right time, a fast launch, an interface that does not shout, and data that is never sold.</p></div>
+  <div class="press-block"><h2>Developer</h2><p>Vakit is written solo by Hakan Çelik — no funding, no subscription. The goal is a calmer daily practice: the right time, a fast launch, an interface that does not shout, and data that is never sold.</p></div>
 
   <div class="press-block">
     <h3>Images and video</h3>
@@ -171,7 +171,7 @@
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

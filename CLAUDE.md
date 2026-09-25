@@ -46,7 +46,7 @@ Hand-maintained files in `docs/`:
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
-| `404.html` | Standalone page, not generated |
+| `404.html` | Standalone page, not generated. Its App Store link is written by hand, so it must carry `pt` and `ct` like `storeLink()` (`npm test` checks) |
 
 The live clock (the band under the hero) fetches times from the public Aladhan API. It keeps the last good answer per city in `localStorage` and hides itself if it has no times at all — never a row of `00:00:00`. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
 
@@ -70,6 +70,7 @@ Two other things follow from the generator, and both are the point:
 - **iPad, Mac and Apple Watch** (`DEVICES` in `content.js`, the section under the showcase): iPad captures follow the iPhone rule; the Mac and the Watch were captured in Turkish and English only, so every other page shows the English ones. Tab labels and captions reuse `FEATURES`/`SHOWCASE` copy, so the section needs no translations of its own.
 - **More iPhone screens** (`SHOWCASE_MORE`): extra tabs under the showcase list, same phone. `all: true` screens exist in every captured language; the rest only in tr/en, and other pages leave them out rather than mix English into their phone.
 - **The hero shows the app**: a phone playing the preview video (the prayer screen's sky), next to the headline and the App Store button, which stays above the fold on a 1280×720 screen. The video waits for the page's `load` event and doesn't start by itself under reduced motion or data saving; a tap plays or pauses it (2026-09-24).
+- **Download dock** (phones only): a fixed App Store button while neither the hero's nor the closing section's button is on screen. Never in iPhone Safari — the `apple-itunes-app` meta already shows Apple's Smart App Banner there, which also opens the app when it's installed.
 - **Screens switch on tap only** — never by scroll position. Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22; the video has since moved to the hero). `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
 - **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
@@ -94,7 +95,7 @@ Two other things follow from the generator, and both are the point:
 
 ### CSS theming
 
-All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Dark mode is driven by `data-theme` on `<html>`. `<html>` also carries `dir="rtl"` for Arabic-script pages and a `script-<name>` class; non-Latin scripts drop italics and letter-spacing (they break joined letters) and get taller line-heights. Use logical properties (`inline-start`, `text-align: start`) for anything directional.
+All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Text on a filled accent (selected chips and tabs) uses `--on-accent-bg`/`--on-accent-fg`: `--accent` itself is too light for white text (3.3:1). Small `--ink-3` text needs 4.5:1, so sections on a darker surface (`.clock`, dark `.t-card`) redefine `--ink-3` locally. Dark mode is driven by `data-theme` on `<html>`. `<html>` also carries `dir="rtl"` for Arabic-script pages and a `script-<name>` class; non-Latin scripts drop italics and letter-spacing (they break joined letters) and get taller line-heights. Use logical properties (`inline-start`, `text-align: start`) for anything directional.
 
 ## Deployment
 

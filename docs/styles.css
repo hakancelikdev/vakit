@@ -18,6 +18,10 @@
   --gold-ink: #B48A2E;
   --paper: oklch(0.99 0.003 80);
   --star: #E9C46A;
+  /* Selected chips and tabs: text on a filled accent. --accent itself is too light
+     for white text (3.3:1); these pairs clear 4.5:1 in both themes. */
+  --on-accent-bg: #1F7368;
+  --on-accent-fg: #fff;
 
   /* Prayer-time colors (from AppColors.Prayer) */
   --p-fajr: #6B4F9E;
@@ -50,6 +54,8 @@
 
   /* brand — accent-ink too dark on dark bg, lighten */
   --accent-ink: #5CC8B9;
+  --on-accent-bg: #5CC8B9;
+  --on-accent-fg: #0f1a1c;
   --gold-ink: #E9C46A;
 
   /* prayer — isha #264653 invisible on dark bg */
@@ -111,6 +117,7 @@
 [data-theme="dark"] .t-card {
   background: oklch(0.25 0.01 250);
   border-color: oklch(0.34 0.008 250);
+  --ink-3: oklch(0.7 0.008 80); /* 11 px author line needs 4.5:1 on the lifted card */
 }
 
 /* --- faq ------------------------------------------------------- */
@@ -284,7 +291,9 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .proof-lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3) }
 
 /* live clock: a band under the hero — next prayer on one side, the day's times on the other */
-.clock { background: var(--bg-2); border-block: 1px solid var(--rule-2) }
+.clock { background: var(--bg-2); border-block: 1px solid var(--rule-2); --ink-3: oklch(0.5 0.008 250) }
+/* --bg-2 is darker than --bg: the muted grey needs more contrast here (4.5:1 for 11 px labels) */
+[data-theme="dark"] .clock { --ink-3: oklch(0.7 0.008 80) }
 .clock-inner {
   max-width: 1440px; margin: 0 auto; padding: 32px 48px 36px;
   display: grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); gap: 20px 56px; align-items: center;
@@ -302,7 +311,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   background: none;
 }
 .city-btn:hover { color: var(--ink-2); border-color: var(--rule) }
-.city-btn.on { background: var(--accent); color: #fff; border-color: var(--accent) }
+.city-btn.on { background: var(--on-accent-bg); color: var(--on-accent-fg); border-color: var(--on-accent-bg) }
 
 .clock-next-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px }
 .clock-next-name { font-family: var(--serif); font-size: 36px; color: var(--ink); line-height: 1.1; min-height: 1.1em }
@@ -367,7 +376,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .sc-item:last-child { border-bottom: 1px solid var(--rule-2) }
 .sc-item.on { padding: 28px 0 }
 .sc-num { font-family: var(--mono); font-size: 12px; color: var(--ink-3); padding-top: 6px }
-.sc-item.on .sc-num { color: var(--accent) }
+.sc-item.on .sc-num { color: var(--accent-ink) }
 .sc-body h3 { font-family: var(--serif); font-size: 24px; line-height: 1.2; color: var(--ink); font-weight: 400; margin-bottom: 8px; letter-spacing: -0.01em }
 .sc-body p { font-size: 14px; color: var(--ink-3); line-height: 1.5; max-height: 0; overflow: hidden; transition: max-height .4s, margin .4s, opacity .4s; opacity: 0 }
 .sc-item.on .sc-body p { max-height: 220px; margin-top: 6px; opacity: 1 }
@@ -464,7 +473,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   transition: all .15s; cursor: pointer;
 }
 .dv-tab:hover { color: var(--ink-2); border-color: var(--rule) }
-.dv-tab.on { background: var(--accent); color: #fff; border-color: var(--accent) }
+.dv-tab.on { background: var(--on-accent-bg); color: var(--on-accent-fg); border-color: var(--on-accent-bg) }
 
 /* ---------- emanet / trust ---------- */
 .trust {
@@ -494,7 +503,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   display: flex; flex-direction: column; gap: 14px;
   min-height: 260px;
 }
-.trust-cell-num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase }
+.trust-cell-num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--accent-ink); text-transform: uppercase }
 .trust-cell h3 { font-family: var(--serif); font-size: 30px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em }
 .trust-cell p { font-size: 14px; line-height: 1.55; color: var(--ink-3); margin-top: auto }
 .compare { margin-top: 112px }
@@ -859,10 +868,10 @@ html:not(.script-latin):not(.script-cyrillic) body * { letter-spacing: 0 !import
     display: block; width: auto; padding: 6px 12px;
     border: 1px solid var(--rule-2); border-radius: 999px;
   }
-  .sc-item.on { background: var(--accent); border-color: var(--accent) }
+  .sc-item.on { background: var(--on-accent-bg); border-color: var(--on-accent-bg) }
   .sc-num, .sc-tag, .sc-body p { display: none }
   .sc-body h3 { font-family: var(--mono); font-size: 12px; line-height: 1.5; letter-spacing: 0; margin: 0; color: var(--ink-3) }
-  .sc-item.on .sc-body h3 { color: #fff }
+  .sc-item.on .sc-body h3 { color: var(--on-accent-fg) }
   .mac-menubar { width: 32%; top: -8%; right: -2% }
 }
 

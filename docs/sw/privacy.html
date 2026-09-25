@@ -60,7 +60,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -82,7 +82,7 @@
 
 <nav class="nav">
   <a href="/sw/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -107,7 +107,7 @@
   <p class="legal-desc">Ilisasishwa mwisho: 10 Septemba 2026 — Toleo 1.7.4
 
 Vakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi taarifa zinazoweza kukutambulisha binafsi (jina, barua pepe, simu, picha, anwani za mawasiliano). Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa kikamilifu ndani ya kifaa chako. Maendeleo yako ya hitima, alamisho, malengo na misikiti uipendayo hubaki ndani ya kifaa chako na husawazishwa tu ndani ya akaunti yako mwenyewe ya Apple iCloud — hayatumwi kamwe kwenye seva zetu. Orodha yako ya dhikri ndiyo tofauti: hutumwa kwenye seva zetu pamoja na takwimu za matumizi ili tuweze kuboresha programu (ona sehemu ya 1). Kila kinachotumwa kwenye seva zetu kimeunganishwa na msimbo wa kudumu wa mtumiaji usio na taarifa zozote za utambulisho.</p>
-  <div class="legal-card"><h3>1. Data Tunazokusanya</h3><p>Data AMBAZO HATUKUSANYI:
+  <div class="legal-card"><h2>1. Data Tunazokusanya</h2><p>Data AMBAZO HATUKUSANYI:
 • Jina, barua pepe, simu, picha, maikrofoni, kamera, anwani za mawasiliano
 • Viwianishi vya GPS (latitudo/longitudo) – havitumwi kamwe kwenye seva zetu
 • Taarifa za kuingia kwenye akaunti (Vakit haina mfumo wa akaunti)
@@ -131,7 +131,7 @@ Data zinazotumwa kwenye seva zetu — zimeunganishwa na msimbo wa kudumu wa mtum
 • Ripoti za kuanguka kwa programu (kupitia Firebase Crashlytics, hazina data binafsi)
 
 Kwa kuwa msimbo huu wa mtumiaji husawazishwa kupitia iCloud Keychain, vifaa vyenye Apple ID moja huhesabiwa kama mtumiaji mmoja na msimbo hubaki hata ukifuta na kusakinisha programu upya. Msimbo hauna data yoyote ya utambulisho; data yako haiuzwi kamwe wala haitumiki kwa matangazo.</p></div>
-  <div class="legal-card"><h3>2. Jinsi Tunavyotumia Data Yako</h3><p>• Kukokotoa Nyakati za Swala – Mahali huchakatwa ndani ya kifaa chako na nyakati hukokotolewa bila mtandao kwa maktaba ya Adhan.
+  <div class="legal-card"><h2>2. Jinsi Tunavyotumia Data Yako</h2><p>• Kukokotoa Nyakati za Swala – Mahali huchakatwa ndani ya kifaa chako na nyakati hukokotolewa bila mtandao kwa maktaba ya Adhan.
 • Mwelekeo wa Kibla – Mahali na mwelekeo wa dira huunganishwa ndani ya kifaa.
 • Jina la Mahali – Ili kuonyesha jina la mahali ulipo, viwianishi vyako hutumwa kwa huduma ya majina ya mahali ya Apple; si kwa seva za Vakit.
 • Vikumbusho vya Ibada – Arifa za ndani hupangwa ndani ya kifaa na iOS na macOS.
@@ -140,7 +140,7 @@ Kwa kuwa msimbo huu wa mtumiaji husawazishwa kupitia iCloud Keychain, vifaa vyen
 • Misikiti Iliyo Karibu – Mahali ulipo hutumwa kwa Apple MapKit (kutafuta misikiti, umbali, maelekezo); si kwa seva za Vakit.
 • Data ya Mtumiaji (dhikri, hitima, alamisho) – Huhifadhiwa ndani ya kifaa kwa Core Data na husawazishwa ndani ya nafasi yako binafsi ya Apple iCloud. Kati ya hizi, ni orodha ya dhikri pekee inayotumwa pia kwenye seva ya Vakit (ona sehemu ya 1).
 • Uendelezaji na Uboreshaji – Takwimu za matumizi (bila viwianishi vya GPS) hutumika kufuatilia utendaji na kugundua hitilafu.</p></div>
-  <div class="legal-card"><h3>3. Usawazishaji wa iCloud (CloudKit)</h3><p>Vakit husawazisha kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) kati ya vifaa vyako kupitia CloudKit ya Apple. Data hii:
+  <div class="legal-card"><h2>3. Usawazishaji wa iCloud (CloudKit)</h2><p>Vakit husawazisha kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) kati ya vifaa vyako kupitia CloudKit ya Apple. Data hii:
 • Hukaa tu katika hifadhidata binafsi ya Apple ID yako mwenyewe.
 • Husimbwa kwa njia fiche kwenye miundombinu ya Apple; sisi, wafanyakazi wa Apple na watu wa tatu hatuwezi kuifikia.
 • Husawazishwa kiotomatiki kati ya iPhone, iPad, Mac na Apple Watch.
@@ -148,7 +148,7 @@ Kwa kuwa msimbo huu wa mtumiaji husawazishwa kupitia iCloud Keychain, vifaa vyen
 • Huondolewa kwenye vifaa vyako vyote unapotumia “Futa Akaunti” au kuondoa data ya Vakit kutoka iCloud.
 
 Maelezo: apple.com/legal/privacy</p></div>
-  <div class="legal-card"><h3>4. Data ya Apple Watch na Mac</h3><p>Vakit ina programu shirikishi kwenye watchOS 9+. Kwenye Watch:
+  <div class="legal-card"><h2>4. Data ya Apple Watch na Mac</h2><p>Vakit ina programu shirikishi kwenye watchOS 9+. Kwenye Watch:
 • Ruhusa ya mahali hutolewa kwenye Watch kivyake; ikiwa Vakit imesakinishwa kwenye iPhone, mahali hupokelewa kupitia WatchConnectivity, vinginevyo GPS ya Watch hutumika.
 • Kihisi cha dira huchakatwa ndani ya kifaa kwa ajili ya kibla; hakitumwi kamwe kwenye seva.
 • Hatusomi data ya Afya (HealthKit), shughuli wala mapigo ya moyo.
@@ -159,7 +159,7 @@ Kwenye Mac (macOS 13+):
 • Mac haina kifaa cha dira, kwa hiyo hakuna dira ya kibla ya moja kwa moja; mwelekeo na umbali hukokotolewa kutoka mahali ulipo na kuonyeshwa kwa maandishi.
 • Taarifa za mahali kwenye Mac hutoka kwenye huduma za mahali zinazotegemea Wi-Fi badala ya GPS, na vilevile hazitumwi kamwe kwenye seva zetu.
 • Ruhusa ya arifa na mipangilio ya arifa ni ya kila kifaa; kuzibadilisha kwenye Mac hakuathiri iPhone yako.</p></div>
-  <div class="legal-card"><h3>5. Huduma za Watu wa Tatu</h3><p>Vakit hutumia huduma zifuatazo kwa malengo maalum. Hakuna hata moja inayohusishwa na utambulisho wako binafsi:
+  <div class="legal-card"><h2>5. Huduma za Watu wa Tatu</h2><p>Vakit hutumia huduma zifuatazo kwa malengo maalum. Hakuna hata moja inayohusishwa na utambulisho wako binafsi:
 
 • Apple iCloud / CloudKit – Usawazishaji wa data ya mtumiaji (katika nafasi yako binafsi ya iCloud).
 • Apple MapKit – Misikiti iliyo karibu, ramani na maelekezo (mahali hutumwa kwa Apple).
@@ -173,17 +173,17 @@ Kwenye Mac (macOS 13+):
 Kumbuka: Firebase Analytics HAITUMIKI; kitambulisho cha matangazo (IDFA) hakikusanywi.
 
 Sera ya faragha ya Google: policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. Matangazo</h3><p>Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.</p></div>
-  <div class="legal-card"><h3>7. Michango (Manunuzi Ndani ya Programu)</h3><p>Vakit ni bure. Ili kumsaidia msanidi, unaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:
+  <div class="legal-card"><h2>6. Matangazo</h2><p>Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.</p></div>
+  <div class="legal-card"><h2>7. Michango (Manunuzi Ndani ya Programu)</h2><p>Vakit ni bure. Ili kumsaidia msanidi, unaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:
 • Huchakatwa na Apple StoreKit 2; maelezo ya malipo (kadi, IBAN, Apple Pay) hutumwa kwa Apple pekee.
 • Vakit haioni wala haihifadhi kamwe njia yako ya malipo au taarifa zako za kifedha.
 • Marejesho ya fedha yanaweza kuombwa kupitia Apple pekee (reportaproblem.apple.com).</p></div>
-  <div class="legal-card"><h3>8. Muda wa Kuhifadhi Data</h3><p>• Data ya ndani ya kifaa – Huhifadhiwa hadi utakapofuta programu.
+  <div class="legal-card"><h2>8. Muda wa Kuhifadhi Data</h2><p>• Data ya ndani ya kifaa – Huhifadhiwa hadi utakapofuta programu.
 • Data ya iCloud – Huhifadhiwa hadi utakapoondoa sehemu ya Vakit kutoka iCloud au kuzima Apple ID yako.
 • Takwimu za matumizi kwenye seva – Huhifadhiwa kwa siku 180 (takriban miezi 6), kisha hufutwa kiotomatiki. Maandishi ya utafutaji hufuata ratiba hiyohiyo.
 • Ripoti za kuanguka kwa programu (Crashlytics) – Huhifadhiwa kwa siku 90, kisha hufutwa.
 • Kumbukumbu za seva (logs) – Huzungushwa ndani ya siku 30.</p></div>
-  <div class="legal-card"><h3>9. Haki Zako (KVKK / GDPR)</h3><p>Chini ya KVKK ya Uturuki na GDPR ya Umoja wa Ulaya una haki ya:
+  <div class="legal-card"><h2>9. Haki Zako (KVKK / GDPR)</h2><p>Chini ya KVKK ya Uturuki na GDPR ya Umoja wa Ulaya una haki ya:
 • Kujua ni data zipi zinazokusanywa kukuhusu
 • Kupinga uchakataji wa data (ondoa ruhusa za Mahali, Arifa au Mwendo katika Settings → Vakit kwenye iOS, au System Settings → Vakit kwenye Mac)
 • Kuomba data yako ifutwe: Mipangilio → Futa Akaunti huondoa kila kitu kilicho ndani ya kifaa chako na katika iCloud. Ili takwimu za matumizi zilizo kwenye seva yetu zifutwe, andika kwa hakancelikdev@gmail.com; ombi lako hutekelezwa ndani ya siku 30 kwa kuchelewa zaidi.
@@ -191,10 +191,10 @@ Sera ya faragha ya Google: policies.google.com/privacy</p></div>
 • Kuwasilisha malalamiko kwa mamlaka ya KVKK
 
 Tuma maombi kwa hakancelikdev@gmail.com; tunajibu ndani ya siku 30 kwa kuchelewa zaidi.</p></div>
-  <div class="legal-card"><h3>10. Faragha ya Watoto</h3><p>Vakit inatolewa katika App Store kwa kiwango cha umri 4+, lakini hatukusanyi kwa makusudi data binafsi kutoka kwa watumiaji walio chini ya miaka 13. Ukiamini kuwa mtoto aliye chini ya miaka 13 ametoa data, tafadhali andika kwa hakancelikdev@gmail.com nasi tutafuta data husika mara moja.</p></div>
-  <div class="legal-card"><h3>11. Usalama</h3><p>Data zote za ndani hubaki kwenye kifaa chako, zikilindwa na sandbox ya iOS/macOS na usimbaji fiche wa kifaa. Data ya iCloud husimbwa kwa njia fiche kwenye miundombinu ya Apple. Data inayotumwa kwenye seva yetu husafirishwa kwa HTTPS/TLS na kuhifadhiwa katika hifadhidata iliyosimbwa kwa njia fiche; haina taarifa zozote za utambulisho. Vakit pia hufanya ugunduzi wa jailbreak, debugger na injection kwa ulinzi wa ziada wakati wa shughuli nyeti.</p></div>
-  <div class="legal-card"><h3>12. Mabadiliko ya Sera</h3><p>Sera hii inaweza kusasishwa kadri programu inavyoendelea kukua. Kwa mabadiliko muhimu, tarehe ya “Ilisasishwa mwisho” kwenye ukurasa huu husasishwa na taarifa huonyeshwa ndani ya programu. Tunapendekeza upitie sera hii mara kwa mara.</p></div>
-  <div class="legal-card"><h3>13. Mawasiliano</h3><p>Kwa maswali, maombi au maoni kuhusu faragha: hakancelikdev@gmail.com
+  <div class="legal-card"><h2>10. Faragha ya Watoto</h2><p>Vakit inatolewa katika App Store kwa kiwango cha umri 4+, lakini hatukusanyi kwa makusudi data binafsi kutoka kwa watumiaji walio chini ya miaka 13. Ukiamini kuwa mtoto aliye chini ya miaka 13 ametoa data, tafadhali andika kwa hakancelikdev@gmail.com nasi tutafuta data husika mara moja.</p></div>
+  <div class="legal-card"><h2>11. Usalama</h2><p>Data zote za ndani hubaki kwenye kifaa chako, zikilindwa na sandbox ya iOS/macOS na usimbaji fiche wa kifaa. Data ya iCloud husimbwa kwa njia fiche kwenye miundombinu ya Apple. Data inayotumwa kwenye seva yetu husafirishwa kwa HTTPS/TLS na kuhifadhiwa katika hifadhidata iliyosimbwa kwa njia fiche; haina taarifa zozote za utambulisho. Vakit pia hufanya ugunduzi wa jailbreak, debugger na injection kwa ulinzi wa ziada wakati wa shughuli nyeti.</p></div>
+  <div class="legal-card"><h2>12. Mabadiliko ya Sera</h2><p>Sera hii inaweza kusasishwa kadri programu inavyoendelea kukua. Kwa mabadiliko muhimu, tarehe ya “Ilisasishwa mwisho” kwenye ukurasa huu husasishwa na taarifa huonyeshwa ndani ya programu. Tunapendekeza upitie sera hii mara kwa mara.</p></div>
+  <div class="legal-card"><h2>13. Mawasiliano</h2><p>Kwa maswali, maombi au maoni kuhusu faragha: hakancelikdev@gmail.com
 
 Mdhibiti wa Data: Hakan Çelik (Uturuki)</p></div>
   <div class="legal-contact">
@@ -204,7 +204,7 @@ Mdhibiti wa Data: Hakan Çelik (Uturuki)</p></div>
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

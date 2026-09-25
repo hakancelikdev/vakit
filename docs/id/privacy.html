@@ -60,7 +60,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -82,7 +82,7 @@
 
 <nav class="nav">
   <a href="/id/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -107,7 +107,7 @@
   <p class="legal-desc">Terakhir diperbarui: 10 September 2026 — Versi 1.7.4
 
 Vakit menghormati privasimu. Kamu tidak perlu membuat akun, dan kami tidak mengumpulkan informasi identitas pribadi (nama, email, nomor telepon, foto, kontak). Jadwal salat, arah kiblat, dan pengingat dihitung sepenuhnya di perangkatmu. Perkembangan khatam, penanda, target, dan masjid favoritmu tetap di perangkat dan hanya tersinkron di dalam akun Apple iCloud milikmu sendiri — tidak pernah dikirim ke server kami. Daftar zikirmu adalah pengecualian: daftar ini dikirim ke server kami bersama statistik penggunaan agar kami bisa memperbaiki aplikasi (lihat bagian 1). Semua yang dikirim ke server kami terhubung ke kode pengguna tetap yang tidak memuat informasi identitas apa pun.</p>
-  <div class="legal-card"><h3>1. Data yang kami kumpulkan</h3><p>Data yang TIDAK kami kumpulkan:
+  <div class="legal-card"><h2>1. Data yang kami kumpulkan</h2><p>Data yang TIDAK kami kumpulkan:
 • Nama, email, nomor telepon, foto, mikrofon, kamera, kontak
 • Koordinat GPS (lintang/bujur) – tidak pernah dikirim ke server kami
 • Kredensial akun (Vakit tidak punya sistem akun)
@@ -131,7 +131,7 @@ Data yang dikirim ke server kami — terhubung ke kode pengguna tetap yang tidak
 • Laporan kerusakan (lewat Firebase Crashlytics, tidak memuat data pribadi)
 
 Karena kode pengguna ini tersinkron lewat Rantai Kunci iCloud, perangkat dengan Apple ID yang sama dihitung sebagai satu pengguna, dan kodenya tetap ada meski aplikasi dihapus lalu dipasang ulang. Kode ini tidak memuat data identitas; datamu tidak pernah dijual atau dipakai untuk iklan.</p></div>
-  <div class="legal-card"><h3>2. Cara kami memakai datamu</h3><p>• Perhitungan jadwal salat – Lokasi diproses secara lokal di perangkatmu dan dihitung secara offline dengan pustaka Adhan.
+  <div class="legal-card"><h2>2. Cara kami memakai datamu</h2><p>• Perhitungan jadwal salat – Lokasi diproses secara lokal di perangkatmu dan dihitung secara offline dengan pustaka Adhan.
 • Arah kiblat – Lokasi dan arah kompas digabungkan di perangkat.
 • Nama tempat – Untuk menampilkan nama tempatmu berada, koordinatmu dikirim ke layanan nama tempat milik Apple; tidak dikirim ke server Vakit.
 • Pengingat ibadah – Notifikasi lokal dijadwalkan di perangkat oleh iOS dan macOS.
@@ -140,7 +140,7 @@ Karena kode pengguna ini tersinkron lewat Rantai Kunci iCloud, perangkat dengan 
 • Masjid terdekat – Lokasimu dikirim ke Apple MapKit (pencarian masjid, jarak, rute); tidak dikirim ke server Vakit.
 • Data pengguna (zikir, khatam, penanda) – Disimpan secara lokal dengan Core Data dan tersinkron di ruang Apple iCloud pribadimu. Dari semua itu, hanya daftar zikir yang juga dikirim ke server Vakit (lihat bagian 1).
 • Pengembangan dan perbaikan – Statistik penggunaan (tanpa koordinat GPS) dipakai untuk memantau performa dan menemukan bug.</p></div>
-  <div class="legal-card"><h3>3. Sinkronisasi iCloud (CloudKit)</h3><p>Vakit menyinkronkan catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) antarperangkatmu lewat CloudKit milik Apple. Data ini:
+  <div class="legal-card"><h2>3. Sinkronisasi iCloud (CloudKit)</h2><p>Vakit menyinkronkan catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) antarperangkatmu lewat CloudKit milik Apple. Data ini:
 • Hanya berada di basis data pribadi (private database) Apple ID-mu sendiri.
 • Terenkripsi di infrastruktur Apple; kami, karyawan Apple, maupun pihak ketiga tidak bisa mengaksesnya.
 • Tersinkron otomatis antara iPhone, iPad, Mac, dan Apple Watch.
@@ -148,7 +148,7 @@ Karena kode pengguna ini tersinkron lewat Rantai Kunci iCloud, perangkat dengan 
 • Dihapus dari semua perangkatmu saat kamu memakai “Hapus akun” atau menghapus data Vakit dari iCloud.
 
 Detail: apple.com/legal/privacy</p></div>
-  <div class="legal-card"><h3>4. Data Apple Watch dan Mac</h3><p>Vakit menyertakan aplikasi pendamping untuk watchOS 9+. Di Apple Watch:
+  <div class="legal-card"><h2>4. Data Apple Watch dan Mac</h2><p>Vakit menyertakan aplikasi pendamping untuk watchOS 9+. Di Apple Watch:
 • Izin lokasi diberikan tersendiri di jam; jika Vakit terpasang di iPhone, lokasi diterima dari iPhone lewat WatchConnectivity, jika tidak, GPS jam yang dipakai.
 • Sensor kompas diproses di perangkat untuk kiblat; tidak pernah dikirim ke server.
 • Kami tidak membaca data Kesehatan (HealthKit), aktivitas, atau detak jantung.
@@ -159,7 +159,7 @@ Di Mac (macOS 13+):
 • Mac tidak punya perangkat keras kompas, jadi tidak ada kompas kiblat langsung; arah dan jarak dihitung dari lokasimu dan ditampilkan sebagai teks.
 • Lokasi di Mac berasal dari layanan lokasi berbasis Wi-Fi, bukan GPS, dan juga tidak pernah dikirim ke server kami.
 • Izin dan pengaturan notifikasi berlaku per perangkat; perubahan di Mac tidak memengaruhi iPhone-mu.</p></div>
-  <div class="legal-card"><h3>5. Layanan pihak ketiga</h3><p>Vakit memakai layanan berikut untuk tujuan terbatas. Tidak satu pun terhubung ke identitas pribadimu:
+  <div class="legal-card"><h2>5. Layanan pihak ketiga</h2><p>Vakit memakai layanan berikut untuk tujuan terbatas. Tidak satu pun terhubung ke identitas pribadimu:
 
 • Apple iCloud / CloudKit – Sinkronisasi data pengguna (di ruang iCloud pribadimu).
 • Apple MapKit – Masjid terdekat, peta, dan rute (lokasi dikirim ke Apple).
@@ -173,17 +173,17 @@ Di Mac (macOS 13+):
 Catatan: Firebase Analytics TIDAK dipakai; ID iklan (IDFA) tidak dikumpulkan.
 
 Kebijakan privasi Google: policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. Iklan</h3><p>Vakit tidak menampilkan iklan. Satu-satunya sumber pemasukan aplikasi adalah donasi sukarela dari pengguna.</p></div>
-  <div class="legal-card"><h3>7. Donasi (pembelian dalam aplikasi)</h3><p>Vakit gratis. Untuk mendukung pengembang, kamu bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Transaksi ini:
+  <div class="legal-card"><h2>6. Iklan</h2><p>Vakit tidak menampilkan iklan. Satu-satunya sumber pemasukan aplikasi adalah donasi sukarela dari pengguna.</p></div>
+  <div class="legal-card"><h2>7. Donasi (pembelian dalam aplikasi)</h2><p>Vakit gratis. Untuk mendukung pengembang, kamu bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Transaksi ini:
 • Diproses oleh Apple StoreKit 2; data pembayaran (kartu, IBAN, Apple Pay) hanya dikirim ke Apple.
 • Vakit tidak pernah melihat atau menyimpan metode pembayaran maupun data keuanganmu.
 • Pengembalian dana hanya bisa diajukan lewat Apple (reportaproblem.apple.com).</p></div>
-  <div class="legal-card"><h3>8. Masa penyimpanan data</h3><p>• Data lokal di perangkat – Disimpan sampai kamu menghapus aplikasi.
+  <div class="legal-card"><h2>8. Masa penyimpanan data</h2><p>• Data lokal di perangkat – Disimpan sampai kamu menghapus aplikasi.
 • Data iCloud – Disimpan sampai kamu menghapus data Vakit dari iCloud atau menonaktifkan Apple ID-mu.
 • Statistik penggunaan di server – Disimpan selama 180 hari (sekitar 6 bulan), lalu dihapus otomatis. Teks kueri pencarian juga mengikuti jangka waktu ini.
 • Laporan kerusakan (Crashlytics) – Disimpan selama 90 hari, lalu dihapus.
 • Log server – Dirotasi dalam 30 hari.</p></div>
-  <div class="legal-card"><h3>9. Hak-hakmu (KVKK / GDPR)</h3><p>Berdasarkan KVKK Turki dan GDPR Uni Eropa, kamu berhak:
+  <div class="legal-card"><h2>9. Hak-hakmu (KVKK / GDPR)</h2><p>Berdasarkan KVKK Turki dan GDPR Uni Eropa, kamu berhak:
 • Mengetahui data apa saja yang dikumpulkan tentangmu
 • Menolak pemrosesan data (cabut izin Lokasi, Notifikasi, atau Gerak di Pengaturan → Vakit pada iOS, atau Pengaturan Sistem → Vakit pada Mac)
 • Meminta penghapusan datamu: Pengaturan → Hapus akun menghapus semua datamu di perangkat dan di iCloud. Untuk menghapus statistik penggunaan di server kami, cukup kirim email ke hakancelikdev@gmail.com; permintaanmu dipenuhi paling lambat dalam 30 hari.
@@ -191,10 +191,10 @@ Kebijakan privasi Google: policies.google.com/privacy</p></div>
 • Mengajukan pengaduan ke otoritas KVKK
 
 Kirim permintaanmu ke hakancelikdev@gmail.com; kami menjawab paling lambat dalam 30 hari.</p></div>
-  <div class="legal-card"><h3>10. Privasi anak</h3><p>Vakit tersedia di App Store dengan rating usia 4+, tetapi kami tidak dengan sengaja mengumpulkan data pribadi dari pengguna di bawah 13 tahun. Jika menurutmu ada anak di bawah 13 tahun yang memberikan data, silakan tulis ke hakancelikdev@gmail.com dan data terkait akan segera kami hapus.</p></div>
-  <div class="legal-card"><h3>11. Keamanan</h3><p>Semua data lokal tetap di perangkatmu, dilindungi sandbox iOS/macOS dan enkripsi perangkat. Data iCloud terenkripsi di infrastruktur Apple. Data yang dikirim ke server kami ditransmisikan lewat HTTPS/TLS dan disimpan di basis data terenkripsi; data ini tidak memuat informasi identitas. Vakit juga mendeteksi jailbreak, debugger, dan injeksi sebagai perlindungan tambahan saat operasi yang sensitif.</p></div>
-  <div class="legal-card"><h3>12. Perubahan kebijakan</h3><p>Kebijakan ini dapat diperbarui seiring perkembangan aplikasi. Untuk perubahan yang penting, tanggal “Terakhir diperbarui” di halaman ini diperbarui dan pemberitahuan ditampilkan di dalam aplikasi. Kami menyarankan kamu meninjau kebijakan ini secara berkala.</p></div>
-  <div class="legal-card"><h3>13. Kontak</h3><p>Untuk pertanyaan, permintaan, atau masukan soal privasi: hakancelikdev@gmail.com
+  <div class="legal-card"><h2>10. Privasi anak</h2><p>Vakit tersedia di App Store dengan rating usia 4+, tetapi kami tidak dengan sengaja mengumpulkan data pribadi dari pengguna di bawah 13 tahun. Jika menurutmu ada anak di bawah 13 tahun yang memberikan data, silakan tulis ke hakancelikdev@gmail.com dan data terkait akan segera kami hapus.</p></div>
+  <div class="legal-card"><h2>11. Keamanan</h2><p>Semua data lokal tetap di perangkatmu, dilindungi sandbox iOS/macOS dan enkripsi perangkat. Data iCloud terenkripsi di infrastruktur Apple. Data yang dikirim ke server kami ditransmisikan lewat HTTPS/TLS dan disimpan di basis data terenkripsi; data ini tidak memuat informasi identitas. Vakit juga mendeteksi jailbreak, debugger, dan injeksi sebagai perlindungan tambahan saat operasi yang sensitif.</p></div>
+  <div class="legal-card"><h2>12. Perubahan kebijakan</h2><p>Kebijakan ini dapat diperbarui seiring perkembangan aplikasi. Untuk perubahan yang penting, tanggal “Terakhir diperbarui” di halaman ini diperbarui dan pemberitahuan ditampilkan di dalam aplikasi. Kami menyarankan kamu meninjau kebijakan ini secara berkala.</p></div>
+  <div class="legal-card"><h2>13. Kontak</h2><p>Untuk pertanyaan, permintaan, atau masukan soal privasi: hakancelikdev@gmail.com
 
 Pengendali Data: Hakan Çelik (Turki)</p></div>
   <div class="legal-contact">
@@ -204,7 +204,7 @@ Pengendali Data: Hakan Çelik (Turki)</p></div>
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

@@ -60,7 +60,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -82,7 +82,7 @@
 
 <nav class="nav">
   <a href="/az/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -107,7 +107,7 @@
   <p class="legal-desc">Son yenilənmə: 10 sentyabr 2026 — Versiya 1.7.4
 
 Vakit məxfiliyinizə hörmət edir. Hesab tələb olunmur və şəxsiyyətinizi müəyyən edən məlumatları (ad, e-poçt, telefon, şəkillər, kontaktlar) toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar tamamilə cihazınızda hesablanır. Xətm irəliləyişiniz, əlfəcinləriniz, hədəfləriniz və sevimli məscidləriniz cihazınızda qalır və yalnız öz Apple iCloud hesabınız daxilində sinxronlaşır — heç vaxt serverlərimizə göndərilmir. Zikr siyahınız bunun istisnasıdır: tətbiqi yaxşılaşdıra bilməyimiz üçün istifadə statistikası ilə birlikdə serverlərimizə göndərilir (ətraflı: 1-ci bölmə). Serverlərimizə göndərilən hər şey kimlik məlumatı daşımayan daimi istifadəçi koduna bağlıdır.</p>
-  <div class="legal-card"><h3>1. Topladığımız məlumatlar</h3><p>TOPLAMADIĞIMIZ məlumatlar:
+  <div class="legal-card"><h2>1. Topladığımız məlumatlar</h2><p>TOPLAMADIĞIMIZ məlumatlar:
 • Ad, e-poçt, telefon, şəkillər, mikrofon, kamera, kontaktlar
 • GPS koordinatları (enlik/uzunluq) – serverlərimizə heç vaxt göndərilmir
 • Hesab məlumatları (Vakit-in öz hesab sistemi yoxdur)
@@ -131,7 +131,7 @@ Serverlərimizə göndərilən məlumatlar — kimlik məlumatı daşımayan dai
 • Çökmə hesabatları (Firebase Crashlytics vasitəsilə, şəxsi məlumat daşımır)
 
 Bu istifadəçi kodu iCloud açar zənciri ilə sinxronlaşdığı üçün eyni Apple ID-yə bağlı cihazlarınız bir istifadəçi sayılır və tətbiqi silib yenidən quraşdırdıqda kod saxlanılır. Kod heç bir kimlik məlumatı daşımır; məlumatlarınız satılmır və reklam üçün istifadə olunmur.</p></div>
-  <div class="legal-card"><h3>2. Məlumatlarınızı necə istifadə edirik</h3><p>• Namaz vaxtının hesablanması – Məkan cihazınızda yerli olaraq, Adhan kitabxanası ilə oflayn emal olunur.
+  <div class="legal-card"><h2>2. Məlumatlarınızı necə istifadə edirik</h2><p>• Namaz vaxtının hesablanması – Məkan cihazınızda yerli olaraq, Adhan kitabxanası ilə oflayn emal olunur.
 • Qiblə istiqaməti – Məkan və kompas istiqaməti cihazda birləşdirilir.
 • Məkan adı – Olduğunuz yerin adını göstərmək üçün koordinatlarınız Apple-ın məkan adı xidmətinə göndərilir; Vakit serverinə göndərilmir.
 • İbadət xatırlatmaları – Yerli bildirişlər iOS və macOS tərəfindən cihazda planlanır.
@@ -140,7 +140,7 @@ Bu istifadəçi kodu iCloud açar zənciri ilə sinxronlaşdığı üçün eyni 
 • Yaxındakı məscidlər – Məkanınız Apple MapKit-ə göndərilir (məscid axtarışı, məsafə, marşrut); Vakit serverlərinə göndərilmir.
 • İstifadəçi məlumatları (zikr, xətm, əlfəcinlər) – Cihazınızda Core Data ilə saxlanılır və şəxsi Apple iCloud sahənizdə sinxronlaşır. Bunlardan yalnız zikr siyahısı əlavə olaraq Vakit serverinə də göndərilir (bax: 1-ci bölmə).
 • İnkişaf və təkmilləşdirmə – İstifadə statistikası (GPS koordinatları olmadan) performansı izləmək və xətaları aşkarlamaq üçün istifadə olunur.</p></div>
-  <div class="legal-card"><h3>3. iCloud sinxronizasiyası (CloudKit)</h3><p>Vakit ibadət qeydlərinizi (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) Apple-ın CloudKit infrastrukturu vasitəsilə cihazlarınız arasında sinxronlaşdırır. Bu məlumatlar:
+  <div class="legal-card"><h2>3. iCloud sinxronizasiyası (CloudKit)</h2><p>Vakit ibadət qeydlərinizi (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) Apple-ın CloudKit infrastrukturu vasitəsilə cihazlarınız arasında sinxronlaşdırır. Bu məlumatlar:
 • Yalnız öz Apple ID-nizə məxsus şəxsi bazada (private database) saxlanılır.
 • Apple infrastrukturunda şifrələnir; nə biz, nə Apple işçiləri, nə də üçüncü tərəflər bu məlumatlara baxa bilər.
 • iPhone, iPad, Mac və Apple Watch arasında avtomatik sinxronlaşır.
@@ -148,7 +148,7 @@ Bu istifadəçi kodu iCloud açar zənciri ilə sinxronlaşdığı üçün eyni 
 • «Hesabı sil» funksiyasından istifadə etdikdə və ya Vakit məlumatlarını iCloud-dan sildikdə bütün cihazlarınızdan silinir.
 
 Ətraflı: apple.com/legal/privacy</p></div>
-  <div class="legal-card"><h3>4. Apple Watch və Mac məlumatları</h3><p>Vakit watchOS 9+ üçün müşayiətçi tətbiq təqdim edir. Saatda:
+  <div class="legal-card"><h2>4. Apple Watch və Mac məlumatları</h2><p>Vakit watchOS 9+ üçün müşayiətçi tətbiq təqdim edir. Saatda:
 • Məkan icazəsi saatda ayrıca verilir; iPhone-da Vakit quraşdırılıbsa, məkan WatchConnectivity ilə iPhone-dan alınır, əks halda saatın GPS-i istifadə olunur.
 • Kompas sensoru qiblə üçün cihazda emal olunur; heç vaxt serverə göndərilmir.
 • Sağlamlıq (HealthKit), aktivlik və ya ürək döyüntüsü məlumatlarını oxumuruq.
@@ -159,7 +159,7 @@ Mac-də (macOS 13+):
 • Mac-də kompas aparatı olmadığı üçün canlı qiblə kompası yoxdur; istiqamət və məsafə məkanınıza görə hesablanır və mətnlə göstərilir.
 • Mac-də məkan GPS əvəzinə Wi-Fi əsaslı məkan xidmətindən gəlir və yenə serverlərimizə göndərilmir.
 • Bildiriş icazəsi və bildiriş ayarları hər cihazda ayrıdır; Mac-də etdiyiniz dəyişiklik iPhone-unuza təsir etmir.</p></div>
-  <div class="legal-card"><h3>5. Üçüncü tərəf xidmətləri</h3><p>Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç biri şəxsi kimliyinizlə bağlı deyil:
+  <div class="legal-card"><h2>5. Üçüncü tərəf xidmətləri</h2><p>Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç biri şəxsi kimliyinizlə bağlı deyil:
 
 • Apple iCloud / CloudKit – İstifadəçi məlumatlarının sinxronizasiyası (şəxsi iCloud sahənizdə).
 • Apple MapKit – Yaxındakı məscidlər, xəritə və marşrut (məkan Apple-a göndərilir).
@@ -173,17 +173,17 @@ Mac-də (macOS 13+):
 Qeyd: Firebase Analytics İSTİFADƏ OLUNMUR; reklam identifikatoru (IDFA) toplanmır.
 
 Google-un məxfilik siyasəti: policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. Reklamlar</h3><p>Vakit reklam göstərmir. Tətbiqin yeganə gəlir mənbəyi istifadəçilərin könüllü ianələridir.</p></div>
-  <div class="legal-card"><h3>7. İanələr (tətbiqdaxili alış)</h3><p>Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilərsiniz. Bu əməliyyatlar:
+  <div class="legal-card"><h2>6. Reklamlar</h2><p>Vakit reklam göstərmir. Tətbiqin yeganə gəlir mənbəyi istifadəçilərin könüllü ianələridir.</p></div>
+  <div class="legal-card"><h2>7. İanələr (tətbiqdaxili alış)</h2><p>Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilərsiniz. Bu əməliyyatlar:
 • Apple StoreKit 2 ilə emal olunur; ödəniş məlumatlarınız (kart, IBAN, Apple Pay) yalnız Apple-a ötürülür.
 • Vakit ödəniş üsulunuzu və ya maliyyə məlumatlarınızı heç vaxt görmür və saxlamır.
 • İanələrin geri qaytarılması yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).</p></div>
-  <div class="legal-card"><h3>8. Məlumatların saxlanma müddəti</h3><p>• Cihazdakı yerli məlumatlar – Tətbiqi silənə qədər saxlanılır.
+  <div class="legal-card"><h2>8. Məlumatların saxlanma müddəti</h2><p>• Cihazdakı yerli məlumatlar – Tətbiqi silənə qədər saxlanılır.
 • iCloud məlumatları – Vakit məlumatlarını iCloud-dan silənə və ya Apple ID-nizi deaktiv edənə qədər saxlanılır.
 • Serverdəki istifadə statistikası – 180 gün (təxminən 6 ay) saxlanılır, sonra avtomatik silinir. Axtarış sorğularının mətnləri də bu müddətə tabedir.
 • Çökmə hesabatları (Crashlytics) – 90 gün saxlanılır, sonra silinir.
 • Server logları – 30 gün ərzində rotasiya olunur.</p></div>
-  <div class="legal-card"><h3>9. Hüquqlarınız (KVKK / GDPR)</h3><p>Türkiyənin KVKK qanunu və Aİ-nin GDPR qaydaları çərçivəsində aşağıdakı hüquqlara maliksiniz:
+  <div class="legal-card"><h2>9. Hüquqlarınız (KVKK / GDPR)</h2><p>Türkiyənin KVKK qanunu və Aİ-nin GDPR qaydaları çərçivəsində aşağıdakı hüquqlara maliksiniz:
 • Haqqınızda hansı məlumatların toplandığını öyrənmək hüququ
 • Məlumatların emalına etiraz etmək hüququ (iOS-da Ayarlar → Vakit, Mac-də Sistem Ayarları → Vakit bölməsindən məkan, bildiriş və hərəkət icazələrini ləğv edə bilərsiniz)
 • Məlumatlarınızın silinməsini tələb etmək hüququ: Ayarlar → Hesabı sil cihazınızdakı və iCloud-dakı bütün məlumatlarınızı silir. Serverimizdəki istifadə statistikasının silinməsi üçün hakancelikdev@gmail.com ünvanına yazmağınız kifayətdir; müraciətiniz ən geci 30 gün ərzində yerinə yetirilir.
@@ -191,10 +191,10 @@ Google-un məxfilik siyasəti: policies.google.com/privacy</p></div>
 • KVKK qurumuna müraciət etmək hüququ
 
 Müraciətlərinizi hakancelikdev@gmail.com ünvanına göndərə bilərsiniz; ən geci 30 gün ərzində cavab veririk.</p></div>
-  <div class="legal-card"><h3>10. Uşaqların məxfiliyi</h3><p>Vakit App Store-da 4+ yaş kateqoriyasında təqdim olunur, lakin 13 yaşdan kiçik istifadəçilərdən bilərəkdən şəxsi məlumat toplamırıq. 13 yaşdan kiçik bir uşağın məlumat verdiyini düşünürsünüzsə, hakancelikdev@gmail.com ünvanına yazın; müvafiq məlumatlar dərhal silinəcək.</p></div>
-  <div class="legal-card"><h3>11. Təhlükəsizlik</h3><p>Bütün yerli məlumatlar cihazınızda qalır və iOS/macOS sandbox-u və cihaz şifrələməsi ilə qorunur. iCloud məlumatları Apple infrastrukturunda şifrələnir. Serverimizə göndərilən məlumatlar HTTPS/TLS ilə ötürülür və şifrələnmiş verilənlər bazasında saxlanılır; kimlik məlumatı daşımır. Vakit həmçinin həssas əməliyyatlar zamanı əlavə qoruma üçün jailbreak, debugger və inyeksiya aşkarlanması aparır.</p></div>
-  <div class="legal-card"><h3>12. Siyasətdəki dəyişikliklər</h3><p>Bu siyasət tətbiq inkişaf etdikcə yenilənə bilər. Əhəmiyyətli dəyişikliklərdə bu səhifədəki «Son yenilənmə» tarixi təzələnir və tətbiq daxilində bildiriş göstərilir. Siyasəti vaxtaşırı nəzərdən keçirməyinizi tövsiyə edirik.</p></div>
-  <div class="legal-card"><h3>13. Əlaqə</h3><p>Məxfiliklə bağlı suallar, müraciətlər və ya rəylər üçün: hakancelikdev@gmail.com
+  <div class="legal-card"><h2>10. Uşaqların məxfiliyi</h2><p>Vakit App Store-da 4+ yaş kateqoriyasında təqdim olunur, lakin 13 yaşdan kiçik istifadəçilərdən bilərəkdən şəxsi məlumat toplamırıq. 13 yaşdan kiçik bir uşağın məlumat verdiyini düşünürsünüzsə, hakancelikdev@gmail.com ünvanına yazın; müvafiq məlumatlar dərhal silinəcək.</p></div>
+  <div class="legal-card"><h2>11. Təhlükəsizlik</h2><p>Bütün yerli məlumatlar cihazınızda qalır və iOS/macOS sandbox-u və cihaz şifrələməsi ilə qorunur. iCloud məlumatları Apple infrastrukturunda şifrələnir. Serverimizə göndərilən məlumatlar HTTPS/TLS ilə ötürülür və şifrələnmiş verilənlər bazasında saxlanılır; kimlik məlumatı daşımır. Vakit həmçinin həssas əməliyyatlar zamanı əlavə qoruma üçün jailbreak, debugger və inyeksiya aşkarlanması aparır.</p></div>
+  <div class="legal-card"><h2>12. Siyasətdəki dəyişikliklər</h2><p>Bu siyasət tətbiq inkişaf etdikcə yenilənə bilər. Əhəmiyyətli dəyişikliklərdə bu səhifədəki «Son yenilənmə» tarixi təzələnir və tətbiq daxilində bildiriş göstərilir. Siyasəti vaxtaşırı nəzərdən keçirməyinizi tövsiyə edirik.</p></div>
+  <div class="legal-card"><h2>13. Əlaqə</h2><p>Məxfiliklə bağlı suallar, müraciətlər və ya rəylər üçün: hakancelikdev@gmail.com
 
 Məlumat nəzarətçisi: Hakan Çelik (Türkiyə)</p></div>
   <div class="legal-contact">
@@ -204,7 +204,7 @@ Məlumat nəzarətçisi: Hakan Çelik (Türkiyə)</p></div>
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

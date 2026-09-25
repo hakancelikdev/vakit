@@ -37,7 +37,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -45,7 +45,7 @@
       :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
       @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }
       .press-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .press-block h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .press-block h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .press-block p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .press-boiler { margin-bottom: 18px }
       .press-boiler:last-child { margin-bottom: 0 }
@@ -76,7 +76,7 @@
 
 <nav class="nav">
   <a href="/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -99,12 +99,12 @@
   <p class="legal-desc">Vakit hakkında yazacaklar için hazır metinler, künye ve görseller. Buradaki her cümle App Store'da yayında olan sürüm için doğrudur; başka bir şeye ihtiyacın olursa yaz, aynı gün dönerim.</p>
 
   <div class="press-block">
-    <h3>Tek cümle</h3>
+    <h2>Tek cümle</h2>
     <p>Vakit; namaz vakitlerini cihazda hesaplayan, Kur'an'ı, hadisi ve ibadet defterini yanında taşıyan, reklamsız ve hesapsız bir ibadet uygulamasıdır.</p>
   </div>
 
   <div class="press-block">
-    <h3>Tanıtım turu</h3>
+    <h2>Tanıtım turu</h2>
     <video class="press-video" controls preload="none" playsinline
            poster="/assets/video/walkthrough-poster.jpg">
       <source src="/assets/video/walkthrough.mp4" type="video/mp4">
@@ -113,14 +113,14 @@
   </div>
 
   <div class="press-block">
-    <h3>Hazır tanıtım metni</h3>
+    <h2>Hazır tanıtım metni</h2>
     <div class="press-boiler"><span>25</span><p>Vakit, iPhone, iPad, Apple Watch ve Mac için namaz vakitleri ve ibadet uygulamasıdır. Vakitler cihazda hesaplanır, çekirdek özellikler internetsiz çalışır.</p></div>
     <div class="press-boiler"><span>50</span><p>Vakit, iPhone, iPad, Apple Watch ve Mac için bir namaz vakitleri ve ibadet uygulamasıdır. Diyanet dahil 12 hesaplama yöntemiyle vakitleri cihazın kendisinde hesaplar; Kur'an-ı Kerim, 36.000'den fazla hadis ve illüstrasyonlu namaz rehberi uygulamanın içinde geldiği için çekirdek özellikler internetsiz çalışır. Ücretsizdir, hiç reklam göstermez ve hesap açmanızı istemez; tek gelir kaynağı isteğe bağlı bağışlardır.</p></div>
     <div class="press-boiler"><span>100</span><p>Vakit, tek bir geliştiricinin yazdığı, iPhone, iPad, Apple Watch ve Mac için çalışan bir namaz vakitleri ve ibadet uygulamasıdır. Vakitler Diyanet dahil 12 yöntemle cihazda hesaplanır; Kur'an-ı Kerim (kelime kelime meal ve tilavetle), 36.000'den fazla hadis, Esmâ-ül Hüsnâ, zikirmatik, kaza defteri ve illüstrasyonlu namaz rehberi uygulamayla birlikte gelir, bu yüzden çekirdek özellikler internetsiz çalışır. Kilit ekranı ve ana ekran widget'ları, Dynamic Island'da canlı geri sayım, Denetim Merkezi kısayolları, Apple Watch komplikasyonları ve Mac menü çubuğu desteklenir. Uygulama 25 dilde konuşur; kimlik bilgisi toplamaz, hesap açtırmaz, veri satmaz.</p></div>
   </div>
 
   <div class="press-block">
-    <h3>Künye</h3>
+    <h2>Künye</h2>
     <table class="press-facts">
       <tr><td>Uygulama</td><td>Vakit — Namaz Vakitleri, Ezan</td></tr>
       <tr><td>Geliştirici</td><td>Hakan Çelik — bağımsız, Türkiye</td></tr>
@@ -129,25 +129,25 @@
       <tr><td>Diller</td><td>25</td></tr>
       <tr><td>Fiyat</td><td>Ücretsiz ve reklamsız. Tek gelir kaynağı kullanıcıların isteğe bağlı bağışları</td></tr>
       <tr><td>İlk yayın</td><td>16 Ağustos 2025</td></tr>
-      <tr><td>Güncel sürüm</td><td>1.7.4</td></tr>
-      <tr><td>App Store puanı</td><td>4.8 / 467 (Türkiye mağazası)</td></tr>
+      <tr><td>Güncel sürüm</td><td>1.7.5</td></tr>
+      <tr><td>App Store puanı</td><td>4.8 / 473 (Türkiye mağazası)</td></tr>
       <tr><td>App Store kimliği</td><td>6748356813</td></tr>
       <tr><td>Gizlilik</td><td>Hesap yok, kimlik bilgisi yok; yalnız anonim kullanım istatistiği</td></tr>
     </table>
   </div>
 
-  <div class="press-block"><h3>Vakit'i ayıran ne</h3><p>• Vakitler cihazda hesaplanır — Türkiye için Diyanet'in kendi yöntemi ayrı bir hesaplayıcıyla yazıldı, resmî takvimle karşılaştırılarak ölçülür.
+  <div class="press-block"><h2>Vakit'i ayıran ne</h2><p>• Vakitler cihazda hesaplanır — Türkiye için Diyanet'in kendi yöntemi ayrı bir hesaplayıcıyla yazıldı, resmî takvimle karşılaştırılarak ölçülür.
 • Gökyüzü uygulamanın içinde: güneş ve ayın konumu astronomik olarak hesaplanır, ekranın rengi ilk ışıktan derin geceye yedi durakta değişir; aynı palet widget'larda, kilit ekranında ve Apple Watch'ta sürer.
 • İbadet defteri kullanıcının kendisinde kalır: kaza namazı ve orucu, hatim, zikir, hedefler yalnız cihazda ve kullanıcının kendi iCloud alanında durur.
 • Reklam kategorinin kuralıdır; Vakit hiç reklam göstermez. Uygulamanın tek gelir kaynağı kullanıcıların isteğe bağlı bağışlarıdır.</p></div>
-  <div class="press-block"><h3>Öne çıkan özellikler</h3><p>• Namaz vakitleri, kıble pusulası, kerahat ve nafile aralıkları, sahur alarmı (sessiz ve odak modunu deler)
+  <div class="press-block"><h2>Öne çıkan özellikler</h2><p>• Namaz vakitleri, kıble pusulası, kerahat ve nafile aralıkları, sahur alarmı (sessiz ve odak modunu deler)
 • İmsakiye: bir ayın bütün vakitleri tek tabloda, basılı takvimlerdeki gibi
 • Kur'an-ı Kerim: iki mushaf hattı, kelime kelime meal, sekiz kâri, kendi çalma listeniz, çevrimdışı indirme
 • 36.000+ hadis (7 koleksiyon), Esmâ-ül Hüsnâ, zikirmatik ve namaz tesbihatı
 • Kaza namazı ve kaza orucu defteri, ibadet hedefleri, hatim takibi, muhasebe ekranı
 • Cuma ve mübarek günler için adım adım rehberler; Diyanet'in haftalık hutbesi
 • 25 widget, Dynamic Island ve Live Activity, 6 Denetim Merkezi kısayolu, 13 Apple Watch komplikasyonu, Mac menü çubuğu</p></div>
-  <div class="press-block"><h3>Geliştirici</h3><p>Vakit'i Hakan Çelik tek başına yazıyor; yatırım almadı, abonelik satmıyor. Uygulamanın amacı günlük ibadeti kolaylaştırmak: doğru vakit, hızlı açılış, kullanıcıyı bunaltmayan bir arayüz ve satılmayan bir veri.</p></div>
+  <div class="press-block"><h2>Geliştirici</h2><p>Vakit'i Hakan Çelik tek başına yazıyor; yatırım almadı, abonelik satmıyor. Uygulamanın amacı günlük ibadeti kolaylaştırmak: doğru vakit, hızlı açılış, kullanıcıyı bunaltmayan bir arayüz ve satılmayan bir veri.</p></div>
 
   <div class="press-block">
     <h3>Görseller ve video</h3>
@@ -171,7 +171,7 @@
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

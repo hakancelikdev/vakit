@@ -1,11 +1,11 @@
 # Vakit: Prayer Times, Qibla, Quran
 
-> Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking. Free, ad-free, offline.
+> Free, ad-free, offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
-Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.4; requires
+Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.5; requires
 iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
-467 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
+473 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 
 ## What makes it different
 
@@ -99,7 +99,7 @@ They're not fetched from a server. Vakit calculates them on your device using th
 
 ### Which languages is it available in?
 
-The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only for now: the Quran translation, transliteration and hadith translations come in those two languages; word meanings are English only, and some hadith collections are only partly translated into Turkish. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon comes in the languages Diyanet publishes it in (Turkish, and in some weeks English and Arabic).
+The app's interface is in 25 languages: Turkish, English, Arabic, German, French, Spanish, Italian, Dutch, Portuguese, Danish, Russian, Azerbaijani, Albanian, Indonesian, Malay, Chinese, Japanese, Thai, Hindi, Bengali, Urdu, Persian, Uyghur, Swahili and Fula. If your device language is supported, the app opens in it automatically; you can change it in Settings at any time. In Arabic, Urdu, Persian and Uyghur the whole interface runs right to left. Content translations, however, are in Turkish and English only: the Quran translation, transliteration and hadith translations come in those two languages; word meanings are English only, and some hadith collections are only partly translated into Turkish. With the Arabic interface, an Arabic tafsir opens for part of the Quran; the Friday sermon comes in the languages Diyanet publishes it in (Turkish, and in some weeks English and Arabic).
 
 ### Which devices does it run on?
 
@@ -171,4 +171,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25

@@ -114,6 +114,33 @@ for (const lang of LANGS) {
   });
 }
 
+test("tr/en: gelecek iması yok (\"şimdilik\", \"for now\")", () => {
+  assert.ok(!/şimdilik/i.test(TR), "tr");
+  assert.ok(!/\bfor now\b/i.test(html("en")), "en");
+});
+
+for (const lang of LANGS) {
+  const page = html(lang);
+  test(`${lang}: sayfa içindeki görseller hafif (1 MB'lık simge geri gelmesin)`, () => {
+    for (const m of page.matchAll(/<img [^>]*src="(\/assets\/[^"]+)"/g)) {
+      const kb = fs.statSync(path.join("docs", m[1])).size / 1024;
+      assert.ok(kb < 150, `${m[1]} ${Math.round(kb)} KB`);
+    }
+  });
+  test(`${lang}: <main> var, telefonda kayan bölgeler klavyeyle erişilebilir`, () => {
+    assert.strictEqual((page.match(/<main>/g) || []).length, 1);
+    for (const id of ["compareTable", "testGrid"]) assert.ok(new RegExp(`id="${id}" tabindex="0" role="region" aria-label="[^"]+"`).test(page), id);
+  });
+}
+
+test("404 sayfasındaki App Store linki kampanyalı", () => {
+  const p = fs.readFileSync(path.join("docs", "404.html"), "utf8");
+  const m = p.match(/href="(https:\/\/apps\.apple\.com[^"]+)"/);
+  assert.ok(m, "App Store linki yok");
+  const url = new URL(m[1].replace(/&amp;/g, "&"));
+  assert.ok(url.searchParams.get("pt") && url.searchParams.get("ct"), "pt/ct eksik");
+});
+
 // "Takip yok" dendiği halde kullanım verisi takma bir koda bağlı olarak sunucuya gidiyor
 // (gizlilik politikası §1). Sayfa bunu iddia etmemeli (2026-09-24).
 test("tr/en: \"takip yok\" iddiası yok", () => {

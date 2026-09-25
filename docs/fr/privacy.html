@@ -60,7 +60,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -82,7 +82,7 @@
 
 <nav class="nav">
   <a href="/fr/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -107,7 +107,7 @@
   <p class="legal-desc">Dernière mise à jour : 10 septembre 2026 — Version 1.7.4
 
 Vakit respecte ta vie privée. Aucun compte n'est nécessaire et nous ne collectons aucune information permettant de t'identifier personnellement (nom, e-mail, téléphone, photos, contacts). Les horaires de prière, la direction de la Qibla et les rappels sont calculés entièrement sur ton appareil. Ta progression de khatm, tes signets, tes objectifs et tes mosquées favorites restent sur ton appareil et se synchronisent uniquement dans ton propre compte Apple iCloud — ils ne sont jamais envoyés à nos serveurs. Ta liste de dhikr fait exception : elle est envoyée à nos serveurs avec les statistiques d'utilisation afin que nous puissions améliorer l'app (voir la section 1). Tout ce qui est envoyé à nos serveurs est rattaché à un code utilisateur permanent qui ne contient aucune information identifiante.</p>
-  <div class="legal-card"><h3>1. Données que nous collectons</h3><p>Données que nous NE collectons PAS :
+  <div class="legal-card"><h2>1. Données que nous collectons</h2><p>Données que nous NE collectons PAS :
 • Nom, e-mail, téléphone, photos, micro, caméra, contacts
 • Coordonnées GPS (latitude/longitude) – jamais envoyées à nos serveurs
 • Identifiants de compte (Vakit n'a pas de système de comptes)
@@ -131,7 +131,7 @@ Données envoyées à nos serveurs — rattachées à un code utilisateur perman
 • Rapports de plantage (via Firebase Crashlytics, sans donnée personnelle)
 
 Comme ce code utilisateur se synchronise via le trousseau iCloud, les appareils associés au même identifiant Apple comptent comme un seul utilisateur, et le code est conservé si tu supprimes puis réinstalles l'app. Le code ne contient aucune donnée d'identité ; tes données ne sont jamais vendues ni utilisées à des fins publicitaires.</p></div>
-  <div class="legal-card"><h3>2. Comment nous utilisons tes données</h3><p>• Calcul des horaires de prière – La localisation est traitée localement sur ton appareil et le calcul se fait hors ligne avec la bibliothèque Adhan.
+  <div class="legal-card"><h2>2. Comment nous utilisons tes données</h2><p>• Calcul des horaires de prière – La localisation est traitée localement sur ton appareil et le calcul se fait hors ligne avec la bibliothèque Adhan.
 • Direction de la Qibla – La localisation et le cap de la boussole sont combinés sur l'appareil.
 • Nom du lieu – Pour afficher le nom de l'endroit où tu te trouves, tes coordonnées sont envoyées au service de noms de lieux d'Apple ; pas aux serveurs de Vakit.
 • Rappels d'adoration – Les notifications locales sont programmées sur l'appareil par iOS et macOS.
@@ -140,7 +140,7 @@ Comme ce code utilisateur se synchronise via le trousseau iCloud, les appareils 
 • Mosquées à proximité – Ta localisation est envoyée à Apple MapKit (recherche de mosquées, distance, itinéraire) ; pas aux serveurs de Vakit.
 • Données utilisateur (dhikr, khatm, signets) – Stockées localement avec Core Data et synchronisées dans ton espace Apple iCloud privé. Parmi elles, seule la liste de dhikr est également envoyée au serveur de Vakit (voir la section 1).
 • Développement et amélioration – Les statistiques d'utilisation (sans coordonnées GPS) servent à suivre les performances et à détecter les bugs.</p></div>
-  <div class="legal-card"><h3>3. Synchronisation iCloud (CloudKit)</h3><p>Vakit synchronise tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) entre tes appareils via CloudKit d'Apple. Ces données :
+  <div class="legal-card"><h2>3. Synchronisation iCloud (CloudKit)</h2><p>Vakit synchronise tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) entre tes appareils via CloudKit d'Apple. Ces données :
 • Résident uniquement dans la base de données privée de ton propre identifiant Apple.
 • Sont chiffrées sur l'infrastructure d'Apple ; ni nous, ni les employés d'Apple, ni des tiers ne peuvent y accéder.
 • Se synchronisent automatiquement entre iPhone, iPad, Mac et Apple Watch.
@@ -148,7 +148,7 @@ Comme ce code utilisateur se synchronise via le trousseau iCloud, les appareils 
 • Sont supprimées de tous tes appareils lorsque tu utilises « Supprimer le compte » ou que tu retires les données de Vakit d'iCloud.
 
 Détails : apple.com/legal/privacy</p></div>
-  <div class="legal-card"><h3>4. Données sur Apple Watch et Mac</h3><p>Vakit comprend une app compagnon pour watchOS 9+. Sur la montre :
+  <div class="legal-card"><h2>4. Données sur Apple Watch et Mac</h2><p>Vakit comprend une app compagnon pour watchOS 9+. Sur la montre :
 • L'autorisation de localisation s'accorde séparément sur la montre ; si Vakit est installée sur l'iPhone, la position est reçue via WatchConnectivity, sinon le GPS de la montre est utilisé.
 • Le capteur de boussole est traité sur l'appareil pour la Qibla ; il n'est jamais envoyé à un serveur.
 • Nous ne lisons ni les données de santé (HealthKit), ni l'activité, ni la fréquence cardiaque.
@@ -159,7 +159,7 @@ Sur le Mac (macOS 13+) :
 • Les Mac n'ont pas de boussole matérielle, il n'y a donc pas de boussole Qibla en direct ; la direction et la distance sont calculées à partir de ta position et affichées sous forme de texte.
 • Sur Mac, la position provient des services de localisation basés sur le Wi-Fi plutôt que du GPS, et n'est pas non plus envoyée à nos serveurs.
 • L'autorisation et les réglages des notifications sont propres à chaque appareil ; les modifier sur le Mac n'affecte pas ton iPhone.</p></div>
-  <div class="legal-card"><h3>5. Services tiers</h3><p>Vakit utilise les services suivants à des fins limitées. Aucun n'est lié à ton identité personnelle :
+  <div class="legal-card"><h2>5. Services tiers</h2><p>Vakit utilise les services suivants à des fins limitées. Aucun n'est lié à ton identité personnelle :
 
 • Apple iCloud / CloudKit – Synchronisation des données utilisateur (dans ton espace iCloud privé).
 • Apple MapKit – Mosquées à proximité, carte et itinéraires (la position est envoyée à Apple).
@@ -173,17 +173,17 @@ Sur le Mac (macOS 13+) :
 Remarque : Firebase Analytics n'est PAS utilisé ; l'identifiant publicitaire (IDFA) n'est pas collecté.
 
 Politique de confidentialité de Google : policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. Publicité</h3><p>Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.</p></div>
-  <div class="legal-card"><h3>7. Dons (achats intégrés)</h3><p>Vakit est gratuite. Pour soutenir le développeur, tu peux faire des dons facultatifs, par paliers de 10 ₺ à 10 000 ₺, depuis l'écran « Faire vivre Vakit ». Ces transactions :
+  <div class="legal-card"><h2>6. Publicité</h2><p>Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.</p></div>
+  <div class="legal-card"><h2>7. Dons (achats intégrés)</h2><p>Vakit est gratuite. Pour soutenir le développeur, tu peux faire des dons facultatifs, par paliers de 10 ₺ à 10 000 ₺, depuis l'écran « Faire vivre Vakit ». Ces transactions :
 • Sont traitées par Apple StoreKit 2 ; les données de paiement (carte, IBAN, Apple Pay) ne sont transmises qu'à Apple.
 • Vakit ne voit ni ne conserve ton moyen de paiement ni tes données financières.
 • Les remboursements ne peuvent être demandés qu'auprès d'Apple (reportaproblem.apple.com).</p></div>
-  <div class="legal-card"><h3>8. Durée de conservation</h3><p>• Données locales de l'appareil – Conservées jusqu'à la suppression de l'app.
+  <div class="legal-card"><h2>8. Durée de conservation</h2><p>• Données locales de l'appareil – Conservées jusqu'à la suppression de l'app.
 • Données iCloud – Conservées jusqu'à ce que tu retires Vakit d'iCloud ou que tu désactives ton identifiant Apple.
 • Statistiques d'utilisation sur le serveur – Conservées 180 jours (environ 6 mois), puis supprimées automatiquement. Les textes des recherches suivent la même règle.
 • Rapports de plantage (Crashlytics) – Conservés 90 jours, puis supprimés.
 • Journaux du serveur – Renouvelés par rotation sous 30 jours.</p></div>
-  <div class="legal-card"><h3>9. Tes droits (KVKK / RGPD)</h3><p>En vertu de la loi turque KVKK et du RGPD de l'Union européenne, tu as le droit :
+  <div class="legal-card"><h2>9. Tes droits (KVKK / RGPD)</h2><p>En vertu de la loi turque KVKK et du RGPD de l'Union européenne, tu as le droit :
 • de savoir quelles données sont collectées à ton sujet
 • de t'opposer au traitement des données (retire les autorisations de localisation, de notifications ou de mouvement dans Réglages → Vakit sur iOS, ou dans Réglages Système → Vakit sur Mac)
 • de demander la suppression de tes données : Réglages → Supprimer le compte efface tout ce qui se trouve sur ton appareil et dans iCloud. Pour faire supprimer les statistiques d'utilisation de notre serveur, écris à hakancelikdev@gmail.com ; ta demande est traitée sous 30 jours au plus tard.
@@ -191,10 +191,10 @@ Politique de confidentialité de Google : policies.google.com/privacy</p></div>
 • de déposer une réclamation auprès de l'autorité KVKK
 
 Envoie tes demandes à hakancelikdev@gmail.com ; nous répondons sous 30 jours au plus tard.</p></div>
-  <div class="legal-card"><h3>10. Confidentialité des enfants</h3><p>Vakit est proposée sur l'App Store avec la classification 4+, mais nous ne collectons pas sciemment de données personnelles auprès d'utilisateurs de moins de 13 ans. Si tu penses qu'un enfant de moins de 13 ans a fourni des données, écris à hakancelikdev@gmail.com et nous supprimerons immédiatement les données concernées.</p></div>
-  <div class="legal-card"><h3>11. Sécurité</h3><p>Toutes les données locales restent sur ton appareil, protégées par le bac à sable (sandbox) d'iOS/macOS et le chiffrement de l'appareil. Les données iCloud sont chiffrées sur l'infrastructure d'Apple. Les données envoyées à notre serveur transitent en HTTPS/TLS et sont stockées dans une base de données chiffrée ; elles ne contiennent aucune information d'identité. Vakit détecte en outre le jailbreak, les débogueurs et l'injection de code afin de mieux protéger les opérations sensibles.</p></div>
-  <div class="legal-card"><h3>12. Modifications de la politique</h3><p>Cette politique peut être mise à jour à mesure que l'app évolue. En cas de modification importante, la date de « Dernière mise à jour » de cette page est actualisée et un avis est affiché dans l'app. Nous te recommandons de consulter cette politique régulièrement.</p></div>
-  <div class="legal-card"><h3>13. Contact</h3><p>Pour toute question, demande ou remarque concernant la confidentialité : hakancelikdev@gmail.com
+  <div class="legal-card"><h2>10. Confidentialité des enfants</h2><p>Vakit est proposée sur l'App Store avec la classification 4+, mais nous ne collectons pas sciemment de données personnelles auprès d'utilisateurs de moins de 13 ans. Si tu penses qu'un enfant de moins de 13 ans a fourni des données, écris à hakancelikdev@gmail.com et nous supprimerons immédiatement les données concernées.</p></div>
+  <div class="legal-card"><h2>11. Sécurité</h2><p>Toutes les données locales restent sur ton appareil, protégées par le bac à sable (sandbox) d'iOS/macOS et le chiffrement de l'appareil. Les données iCloud sont chiffrées sur l'infrastructure d'Apple. Les données envoyées à notre serveur transitent en HTTPS/TLS et sont stockées dans une base de données chiffrée ; elles ne contiennent aucune information d'identité. Vakit détecte en outre le jailbreak, les débogueurs et l'injection de code afin de mieux protéger les opérations sensibles.</p></div>
+  <div class="legal-card"><h2>12. Modifications de la politique</h2><p>Cette politique peut être mise à jour à mesure que l'app évolue. En cas de modification importante, la date de « Dernière mise à jour » de cette page est actualisée et un avis est affiché dans l'app. Nous te recommandons de consulter cette politique régulièrement.</p></div>
+  <div class="legal-card"><h2>13. Contact</h2><p>Pour toute question, demande ou remarque concernant la confidentialité : hakancelikdev@gmail.com
 
 Responsable du traitement : Hakan Çelik (Turquie)</p></div>
   <div class="legal-contact">
@@ -204,7 +204,7 @@ Responsable du traitement : Hakan Çelik (Turquie)</p></div>
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

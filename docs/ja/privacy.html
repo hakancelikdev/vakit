@@ -61,7 +61,7 @@
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
       .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
       .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h3 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
@@ -83,7 +83,7 @@
 
 <nav class="nav">
   <a href="/ja/" class="nav-brand">
-    <img src="/assets/app-icon-32.png" alt="Vakit" class="nav-mark-img" width="28" height="28">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
     <div class="nav-brand-text">Vakit</div>
   </a>
   <div class="nav-links">
@@ -108,7 +108,7 @@
   <p class="legal-desc">最終更新：2026年9月10日 — バージョン1.7.4
 
 Vakitはプライバシーを尊重します。アカウントは不要で、個人を特定できる情報（氏名、メールアドレス、電話番号、写真、連絡先）は収集しません。礼拝時刻、キブラの方角、リマインダーはすべて端末内で計算されます。通読の進み具合、しおり、目標、お気に入りのモスクは端末に残り、ご自身のApple iCloudアカウント内でのみ同期されます。当方のサーバーに送信されることはありません。ただしズィクルの一覧は例外で、アプリを改善するため、利用統計とあわせて当方のサーバーに送信されます（第1項参照）。当方のサーバーに送信されるものはすべて、身元情報を含まない継続的な利用者コードに結びついています。</p>
-  <div class="legal-card"><h3>1. 収集するデータ</h3><p>収集「しない」データ：
+  <div class="legal-card"><h2>1. 収集するデータ</h2><p>収集「しない」データ：
 • 氏名、メールアドレス、電話番号、写真、マイク、カメラ、連絡先
 • GPS座標（緯度・経度）– 当方のサーバーに送信されることは一切ありません
 • アカウント情報（Vakitには独自のアカウントの仕組みがありません）
@@ -132,7 +132,7 @@ Vakitはプライバシーを尊重します。アカウントは不要で、個
 • クラッシュ報告（Firebase Crashlytics経由、個人データを含みません）
 
 この利用者コードはiCloudキーチェーンで同期されるため、同じApple IDの端末はひとりの利用者として数えられ、アプリを削除して再インストールしてもコードは保持されます。コードに身元情報は含まれません。データを販売したり、広告に利用したりすることは決してありません。</p></div>
-  <div class="legal-card"><h3>2. データの利用方法</h3><p>• 礼拝時刻の計算 – 位置情報は端末内で処理され、Adhanライブラリを使ってオフラインで計算されます。
+  <div class="legal-card"><h2>2. データの利用方法</h2><p>• 礼拝時刻の計算 – 位置情報は端末内で処理され、Adhanライブラリを使ってオフラインで計算されます。
 • キブラの方角 – 位置情報とコンパスの方位を端末内で組み合わせます。
 • 地名 – 現在地の名前を表示するため、座標がAppleの地名サービスに送信されます。Vakitのサーバーには送信されません。
 • 行いのリマインダー – ローカル通知はiOSとmacOSが端末内で予約します。
@@ -141,7 +141,7 @@ Vakitはプライバシーを尊重します。アカウントは不要で、個
 • 近くのモスク – 位置情報はApple MapKitに送信されます（モスクの検索、距離、経路）。Vakitのサーバーには送信されません。
 • 利用者データ（ズィクル、通読、しおり）– Core Dataで端末に保存され、ご自身のプライベートなApple iCloud領域内で同期されます。このうちズィクルの一覧だけは、Vakitのサーバーにも送信されます（第1項参照）。
 • 開発と改善 – 利用統計（GPS座標を含みません）は、動作状況の把握と不具合の発見に使われます。</p></div>
-  <div class="legal-card"><h3>3. iCloud同期（CloudKit）</h3><p>Vakitは行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）を、AppleのCloudKitを通じて端末間で同期します。このデータは：
+  <div class="legal-card"><h2>3. iCloud同期（CloudKit）</h2><p>Vakitは行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）を、AppleのCloudKitを通じて端末間で同期します。このデータは：
 • ご自身のApple IDのプライベートデータベースにのみ保存されます。
 • Appleの基盤上で暗号化され、当方、Appleの従業員、第三者のいずれもアクセスできません。
 • iPhone、iPad、Mac、Apple Watchの間で自動的に同期されます。
@@ -149,7 +149,7 @@ Vakitはプライバシーを尊重します。アカウントは不要で、個
 • 「アカウントを削除」を使うか、iCloudからVakitのデータを削除すると、すべての端末から削除されます。
 
 詳細：apple.com/legal/privacy</p></div>
-  <div class="legal-card"><h3>4. Apple WatchとMacのデータ</h3><p>VakitはwatchOS 9以降で動くコンパニオンアプリを提供しています。Apple Watchでは：
+  <div class="legal-card"><h2>4. Apple WatchとMacのデータ</h2><p>VakitはwatchOS 9以降で動くコンパニオンアプリを提供しています。Apple Watchでは：
 • 位置情報の許可はApple Watchで別途与えます。iPhoneにVakitがインストールされていればWatchConnectivity経由で位置情報を受け取り、そうでなければApple WatchのGPSを使います。
 • コンパスのセンサーはキブラのために端末内で処理され、サーバーに送信されることはありません。
 • ヘルスケア（HealthKit）、アクティビティ、心拍数のデータは読み取りません。
@@ -160,7 +160,7 @@ Mac（macOS 13以降）では：
 • Macにはコンパスのハードウェアがないため、リアルタイムのキブラ・コンパスはありません。方角と距離は位置情報から計算し、文字で表示します。
 • Macの位置情報はGPSではなくWi-Fiベースの位置情報サービスから取得され、こちらも当方のサーバーに送信されることはありません。
 • 通知の許可と通知設定は端末ごとです。Macで変更してもiPhoneには影響しません。</p></div>
-  <div class="legal-card"><h3>5. 外部サービス</h3><p>Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：
+  <div class="legal-card"><h2>5. 外部サービス</h2><p>Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：
 
 • Apple iCloud / CloudKit – 利用者データの同期（ご自身のプライベートなiCloud領域内）。
 • Apple MapKit – 近くのモスク、地図、経路（位置情報はAppleに送信されます）。
@@ -174,17 +174,17 @@ Mac（macOS 13以降）では：
 注：Firebase Analyticsは「使用していません」。広告識別子（IDFA）は収集しません。
 
 Googleのプライバシーポリシー：policies.google.com/privacy</p></div>
-  <div class="legal-card"><h3>6. 広告</h3><p>Vakit は広告を表示しません。アプリの唯一の収入源は、利用者による任意の寄付です。</p></div>
-  <div class="legal-card"><h3>7. 寄付（アプリ内課金）</h3><p>Vakitは無料です。開発者を支援するために、「Vakitを支える」画面から₺10〜₺10,000の段階で任意の寄付ができます。これらの取引は：
+  <div class="legal-card"><h2>6. 広告</h2><p>Vakit は広告を表示しません。アプリの唯一の収入源は、利用者による任意の寄付です。</p></div>
+  <div class="legal-card"><h2>7. 寄付（アプリ内課金）</h2><p>Vakitは無料です。開発者を支援するために、「Vakitを支える」画面から₺10〜₺10,000の段階で任意の寄付ができます。これらの取引は：
 • Apple StoreKit 2で処理されます。支払い情報（カード、IBAN、Apple Pay）はAppleにのみ送信されます。
 • Vakitが支払い方法や金融情報を目にしたり保存したりすることはありません。
 • 返金はAppleを通じてのみ申請できます（reportaproblem.apple.com）。</p></div>
-  <div class="legal-card"><h3>8. データの保存期間</h3><p>• 端末内のデータ – アプリを削除するまで保存されます。
+  <div class="legal-card"><h2>8. データの保存期間</h2><p>• 端末内のデータ – アプリを削除するまで保存されます。
 • iCloudのデータ – iCloudからVakitのデータを削除するか、Apple IDを無効にするまで保存されます。
 • サーバー上の利用統計 – 180日間（約6か月）保存し、その後自動的に削除します。検索語の文字列にも同じ期間が適用されます。
 • クラッシュ報告（Crashlytics）– 90日間保存し、その後削除します。
 • サーバーのログ – 30日以内にローテーションされます。</p></div>
-  <div class="legal-card"><h3>9. 利用者の権利（KVKK / GDPR）</h3><p>トルコのKVKKおよびEUのGDPRに基づき、次の権利があります：
+  <div class="legal-card"><h2>9. 利用者の権利（KVKK / GDPR）</h2><p>トルコのKVKKおよびEUのGDPRに基づき、次の権利があります：
 • どのデータが収集されているかを知る権利
 • データの処理に異議を述べる権利（iOSでは設定 → Vakit、Macではシステム設定 → Vakit から、位置情報・通知・モーションの許可を取り消せます）
 • データの削除を求める権利：設定 → アカウントを削除 で、端末内とiCloud上のすべてのデータが削除されます。当方のサーバー上の利用統計の削除を希望する場合は、hakancelikdev@gmail.com までご連絡ください。遅くとも30日以内に対応します。
@@ -192,10 +192,10 @@ Googleのプライバシーポリシー：policies.google.com/privacy</p></div>
 • KVKK当局に苦情を申し立てる権利
 
 ご請求は hakancelikdev@gmail.com までお送りください。遅くとも30日以内にお返事します。</p></div>
-  <div class="legal-card"><h3>10. 子どものプライバシー</h3><p>VakitはApp Storeで4+の年齢区分で提供されていますが、13歳未満の利用者から故意に個人データを収集することはありません。13歳未満の子どもがデータを提供したと思われる場合は、hakancelikdev@gmail.com までご連絡ください。該当するデータを直ちに削除します。</p></div>
-  <div class="legal-card"><h3>11. セキュリティ</h3><p>端末内のデータはすべて端末に留まり、iOS/macOSのサンドボックスと端末の暗号化によって保護されます。iCloudのデータはAppleの基盤上で暗号化されます。当方のサーバーに送信されるデータはHTTPS/TLSで送信され、暗号化されたデータベースに保存されます。身元情報は含まれません。さらにVakitは、重要な処理の際の追加の保護として、脱獄、デバッガ、インジェクションの検知を行っています。</p></div>
-  <div class="legal-card"><h3>12. ポリシーの変更</h3><p>本ポリシーは、アプリの変化に応じて更新されることがあります。重要な変更がある場合は、このページの「最終更新」日を更新し、アプリ内でお知らせを表示します。本ポリシーを定期的にご確認いただくことをおすすめします。</p></div>
-  <div class="legal-card"><h3>13. お問い合わせ</h3><p>プライバシーに関するご質問、ご請求、ご意見：hakancelikdev@gmail.com
+  <div class="legal-card"><h2>10. 子どものプライバシー</h2><p>VakitはApp Storeで4+の年齢区分で提供されていますが、13歳未満の利用者から故意に個人データを収集することはありません。13歳未満の子どもがデータを提供したと思われる場合は、hakancelikdev@gmail.com までご連絡ください。該当するデータを直ちに削除します。</p></div>
+  <div class="legal-card"><h2>11. セキュリティ</h2><p>端末内のデータはすべて端末に留まり、iOS/macOSのサンドボックスと端末の暗号化によって保護されます。iCloudのデータはAppleの基盤上で暗号化されます。当方のサーバーに送信されるデータはHTTPS/TLSで送信され、暗号化されたデータベースに保存されます。身元情報は含まれません。さらにVakitは、重要な処理の際の追加の保護として、脱獄、デバッガ、インジェクションの検知を行っています。</p></div>
+  <div class="legal-card"><h2>12. ポリシーの変更</h2><p>本ポリシーは、アプリの変化に応じて更新されることがあります。重要な変更がある場合は、このページの「最終更新」日を更新し、アプリ内でお知らせを表示します。本ポリシーを定期的にご確認いただくことをおすすめします。</p></div>
+  <div class="legal-card"><h2>13. お問い合わせ</h2><p>プライバシーに関するご質問、ご請求、ご意見：hakancelikdev@gmail.com
 
 データ管理者：Hakan Çelik（トルコ）</p></div>
   <div class="legal-contact">
@@ -205,7 +205,7 @@ Googleのプライバシーポリシー：policies.google.com/privacy</p></div>
 
 <footer>
   <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="Vakit" class="foot-mark-img" width="26" height="26">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
     Vakit
   </div>
   <div class="foot-links">

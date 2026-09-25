@@ -326,11 +326,20 @@ function initFeatures() {
 
 /* ================================================================
    Download dock — phones only (styles.css). Out of the way while the hero's
-   or the closing section's own download button is on screen.
+   or the closing section's own download button is on screen. Not in iPhone
+   Safari: the apple-itunes-app meta already gives it Apple's own banner, which
+   also opens the app when it's installed — two download bars would be one too many.
    ================================================================ */
+
+/* Safari on iPhone/iPad, not an in-app browser or another engine's shell. */
+const isIOSSafari = () => {
+  const ua = navigator.userAgent;
+  return /iP(hone|od|ad)/.test(ua) && /Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\/|FBAN|FBAV|Instagram|Line\//.test(ua);
+};
 
 function initDock() {
   const dock = document.getElementById('dock');
+  if (dock && isIOSSafari()) { dock.remove(); return; }
   const hero = document.querySelector('.hero-actions');
   const final = document.querySelector('.final-actions');
   if (!dock || !hero || !final || !('IntersectionObserver' in window)) return;
@@ -451,8 +460,9 @@ function suggestLanguage(menu, remember) {
   }
   if (!link) return;
 
-  const bar = document.createElement('div');
+  const bar = document.createElement('aside');
   bar.className = 'lang-suggest';
+  bar.setAttribute('aria-label', menu.querySelector('summary')?.getAttribute('aria-label') || '');
   const globe = menu.querySelector('summary svg');
   if (globe) bar.appendChild(globe.cloneNode(true));
 
