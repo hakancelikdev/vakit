@@ -431,12 +431,12 @@
 <!-- ========== HERO ========== -->
 <section class="hero">
   <div class="hero-left">
-    <div class="eyebrow">Gratuit · Sans publicité · Hors ligne · Sans compte</div>
+    <div class="eyebrow">Que rien n'interrompe ta pratique</div>
     <!-- The headline is the manifesto's question answered in one line; tapping it
          opens the manifesto, as the same sentence does in the app's Support Center. -->
     <h1><a class="h1-link" href="/fr/manifesto.html">
       <span>L'app pour ta pratique,</span><br>
-      <span>telle qu'elle</span> <em>devrait être.</em><span class="h1-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span><span class="vh"> — Le manifeste de Vakit</span>
+      <span>telle qu'elle</span> <em>devrait être.</em><span class="h1-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
     </a></h1>
     <p class="hero-sub">Un compagnon discret pour les cinq prières quotidiennes, avec le Coran, la Qibla, le dhikr et un calendrier qui honore tes jours. Elle s'efface quand tu n'en as pas besoin, et reste là quand tu en as besoin.</p>
     <div class="hero-actions">
@@ -446,15 +446,18 @@
       </a>
       <a href="#showcase" class="btn-ghost">Faire le tour →</a>
     </div>
+    <!-- The four promises, as small print under the button. -->
+    <ul class="hero-pillars">
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Gratuit</li>
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sans publicité</li>
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Hors ligne</li>
+      <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sans compte</li>
+    </ul>
 
     <div class="hero-proof">
       <div class="proof">
         <div class="proof-val">4,8<span class="star"> ★</span></div>
         <div class="proof-lbl">App Store · 473 notes</div>
-      </div>
-      <div class="proof">
-        <div class="proof-val">0 <span class="proof-cur">€</span></div>
-        <div class="proof-lbl">Gratuit · sans abonnement</div>
       </div>
       <div class="proof">
         <div class="proof-val">12</div>
@@ -760,13 +763,13 @@
       <p class="compare-lede">Tu sais déjà ce qui ne va pas avec les autres apps de prière. Voici comment Vakit y répond, point par point.</p>
       <div class="compare-table" id="compareTable" tabindex="0" role="region" aria-label="Tu sais déjà ce qui ne va pas avec les autres apps de prière. Voici comment Vakit y répond, point par point.">
         <div class="compare-row head"><div class="compare-cell">Sujet</div><div class="compare-cell">Autres apps</div><div class="compare-cell">Vakit</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Publicité</div><div class="compare-cell other">Publicités de casino et inappropriées, affichées à côté de contenus religieux.</div><div class="compare-cell vakit">Entièrement sans publicité, pas même facultative : Vakit n'affiche aucune publicité.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Hors ligne</div><div class="compare-cell other">Les fonctions essentielles exigent une connexion Internet.</div><div class="compare-cell vakit">Prière, Qibla, texte du Coran, dhikr : tout fonctionne hors ligne.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Écran verrouillé</div><div class="compare-cell other">Les widgets cassent au fil des mises à jour d'iOS.</div><div class="compare-cell vakit">Activité en direct et Dynamic Island ; En veille à partir d'iOS 17.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Précision</div><div class="compare-cell other">Erreurs au changement d'heure, peu de méthodes de calcul.</div><div class="compare-cell vakit">12 méthodes, fuseaux horaires pris en compte, détection des voyages.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Appareils</div><div class="compare-cell other">Téléphone seulement ; montre et ordinateur absents ou bâclés.</div><div class="compare-cell vakit">iPhone, iPad et Mac via iCloud ; l'Apple Watch se synchronise par l'iPhone.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other">Interfaces datées ; régressions à chaque mise à jour.</div><div class="compare-cell vakit">Liquid Glass sur iOS 26, fonctionne dès iOS 16.4. Sobre, moderne, rapide.</div></div>
-        <div class="compare-row"><div class="compare-cell feat">Coût</div><div class="compare-cell other">Paywalls, abonnements, niveaux « premium ».</div><div class="compare-cell vakit">Gratuit. Ni niveaux, ni vente forcée.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Publicité</div><div class="compare-cell other" data-label="Autres apps">Publicités de casino et inappropriées, affichées à côté de contenus religieux.</div><div class="compare-cell vakit" data-label="Vakit">Entièrement sans publicité, pas même facultative : Vakit n'affiche aucune publicité.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Hors ligne</div><div class="compare-cell other" data-label="Autres apps">Les fonctions essentielles exigent une connexion Internet.</div><div class="compare-cell vakit" data-label="Vakit">Prière, Qibla, texte du Coran, dhikr : tout fonctionne hors ligne.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Écran verrouillé</div><div class="compare-cell other" data-label="Autres apps">Les widgets cassent au fil des mises à jour d'iOS.</div><div class="compare-cell vakit" data-label="Vakit">Activité en direct et Dynamic Island ; En veille à partir d'iOS 17.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Précision</div><div class="compare-cell other" data-label="Autres apps">Erreurs au changement d'heure, peu de méthodes de calcul.</div><div class="compare-cell vakit" data-label="Vakit">12 méthodes, fuseaux horaires pris en compte, détection des voyages.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Appareils</div><div class="compare-cell other" data-label="Autres apps">Téléphone seulement ; montre et ordinateur absents ou bâclés.</div><div class="compare-cell vakit" data-label="Vakit">iPhone, iPad et Mac via iCloud ; l'Apple Watch se synchronise par l'iPhone.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Design</div><div class="compare-cell other" data-label="Autres apps">Interfaces datées ; régressions à chaque mise à jour.</div><div class="compare-cell vakit" data-label="Vakit">Liquid Glass sur iOS 26, fonctionne dès iOS 16.4. Sobre, moderne, rapide.</div></div>
+        <div class="compare-row"><div class="compare-cell feat">Coût</div><div class="compare-cell other" data-label="Autres apps">Paywalls, abonnements, niveaux « premium ».</div><div class="compare-cell vakit" data-label="Vakit">Gratuit. Ni niveaux, ni vente forcée.</div></div>
       </div>
     </div>
   </div>

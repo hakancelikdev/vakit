@@ -10,11 +10,12 @@ module.exports = {
 
   COPY: {
     features: "功能", trust: "托付", reviews: "评价", faq: "常见问题", download: "下载",
-    eyebrow: "免费 · 无广告 · 离线可用 · 无需账户",
+    eyebrow: "别让你的功修半途中断",
+    pillars: "免费 · 无广告 · 离线可用 · 无需账户",
     h1a: "功修应用，", h1b: "本该有的", h1c: "样子。",
     heroSub: "一位安静陪伴五番礼拜的伙伴——还有古兰经、朝向、记主，以及一本珍视你每一天的日历。不需要时悄然隐去，需要时一直都在。",
     downloadCta: "在 App Store 下载", watchTour: "开始导览 →",
-    p1: "App Store · {ratingCount} 个评分", p2: "免费 · 无需订阅", p3: "计算方法", p4: "种界面语言",
+    p1: "App Store · {ratingCount} 个评分", p3: "计算方法", p4: "种界面语言",
     nextPrayer: "下一次 · 还有",
     "sc-head": "应有尽有，别无多余",
     "sc-h2a": "一位陪伴者，", "sc-h2b": "而不是抢夺注意力的机器。",
