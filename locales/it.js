@@ -92,7 +92,7 @@ module.exports = {
     { n: "Attività in tempo reale", d: "Conto alla rovescia nella Dynamic Island e nella schermata di blocco." },
     { n: "Centro di Controllo", d: "Sei azioni rapide (iOS 18+): Qibla, prossima preghiera e altro." },
     { n: "Monitoraggio dell'adorazione", d: "Anelli per preghiera, Corano, dhikr, hadith e qada." },
-    { n: "Puntualità nella preghiera", d: "Quanto tempo dopo l'ingresso di ogni preghiera preghi: questo mese e da sempre." },
+    { n: "Puntualità nella preghiera", d: "Quanto tempo dopo l'ingresso di ogni preghiera preghi: negli ultimi 30 giorni e da sempre." },
     { n: "Sveglia del Fajr", d: "Suona prima del sorgere del sole se non hai pregato il Fajr, tace se l'hai fatto; su iOS 26 suona anche in modalità silenziosa." },
     { n: "Sveglia del suhur", d: "Si imposta per il Ramadan, per ogni giorno o per i giorni di digiuno raccomandati." },
     { n: "Promemoria dei giorni sacri", d: "12 giorni sacri: le notti sacre la sera stessa, gli altri il giorno prima." },

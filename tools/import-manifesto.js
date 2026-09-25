@@ -4,9 +4,10 @@
  *
  * The manifesto is the app's own text (VakitApp/app → ManifestoView.swift,
  * strings in vakit/Infrastructure/Localization/<lang>.lproj/Localizable.strings),
- * translated into all 25 app languages. The site shows it as it is in the app,
- * so it is imported, never retyped: run this after the manifesto changes in the app,
- * then `npm run build` and commit manifesto.js with the regenerated pages.
+ * translated into all 25 app languages. The site shows it as it is in the app
+ * (the app's wording wins — owner's decision, 2026-09-26), so it is imported,
+ * never retyped: run this after the manifesto changes in the app, then
+ * `npm run build` and commit manifesto.js with the regenerated pages.
  *
  * Usage: node tools/import-manifesto.js [path/to/app]   (default: ../app, then ../VakitApp-Swift)
  */

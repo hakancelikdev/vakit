@@ -92,7 +92,7 @@ module.exports = {
     { n: "Live Activity", d: "Dynamic Island və kilid ekranında geri sayım." },
     { n: "İdarəetmə Mərkəzi", d: "Altı sürətli əməliyyat (iOS 18+) — qiblə, növbəti namaz və daha çoxu." },
     { n: "İbadət izləmə", d: "Halqalar: namaz, Quran, zikr, hədis və qəza." },
-    { n: "Namaz intizamı", d: "Hər namazı vaxtı daxil olandan nə qədər sonra qıldığınız — bu ay və bütün dövr." },
+    { n: "Namaz intizamı", d: "Hər namazı vaxtı daxil olandan nə qədər sonra qıldığınız — son 30 gün və bütün dövr." },
     { n: "Sübh zəngi", d: "Qılmamısınızsa günəş doğmazdan əvvəl çalır, qılmısınızsa susur; iOS 26-da səssiz rejimi keçir." },
     { n: "Sahur zəngi", d: "Ramazanda, hər gün və ya sünnə oruc günlərində qurulur." },
     { n: "Mübarək gün xatırlatmaları", d: "12 mübarək gün: mübarək gecələr həmin axşam, digərləri bir gün əvvəl xatırladılır." },

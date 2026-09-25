@@ -92,7 +92,7 @@ module.exports = {
     { n: "Live-aktivitet", d: "Nedtællinger i Dynamic Island og på den låste skærm." },
     { n: "Kontrolcenter", d: "Seks hurtige handlinger (iOS 18+) – qibla, næste bøn og mere." },
     { n: "Ibada-sporing", d: "Ringe for bøn, Koranen, dhikr, hadith og qada." },
-    { n: "Bønnedisciplin", d: "Hvor længe efter hver bedetids begyndelse du beder – denne måned og i alt." },
+    { n: "Bønnedisciplin", d: "Hvor længe efter hver bedetids begyndelse du beder – de seneste 30 dage og i alt." },
     { n: "Fajr-alarm", d: "Ringer før solopgang, hvis du ikke har bedt fajr, og tier, hvis du har; bryder igennem lydløs på iOS 26." },
     { n: "Suhur-alarm", d: "Indstilles til ramadanen, hver dag eller de anbefalede fastedage." },
     { n: "Påmindelse om hellige dage", d: "12 hellige dage: hellige nætter samme aften, de øvrige dagen før." },

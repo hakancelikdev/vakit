@@ -92,7 +92,7 @@ module.exports = {
     { n: "Actividad en vivo", d: "Cuenta atrás en la Dynamic Island y en la pantalla bloqueada." },
     { n: "Centro de control", d: "Seis acciones rápidas (iOS 18+): alquibla, próxima oración y más." },
     { n: "Seguimiento de la adoración", d: "Anillos para la oración, el Corán, el dhikr, los hadices y las oraciones pendientes." },
-    { n: "Disciplina en la oración", d: "Cuánto tardas en rezar desde que entra cada tiempo: este mes y desde siempre." },
+    { n: "Disciplina en la oración", d: "Cuánto tardas en rezar desde que entra cada tiempo: los últimos 30 días y desde siempre." },
     { n: "Alarma del Fajr", d: "Suena antes de la salida del sol si no has rezado el Fajr y calla si ya lo has hecho; en iOS 26 suena aunque estés en modo silencio." },
     { n: "Alarma del suhur", d: "Se programa para Ramadán, para todos los días o para los días de ayuno recomendados." },
     { n: "Recordatorio de días sagrados", d: "12 días sagrados: las noches sagradas, esa misma tarde; los demás, la víspera." },

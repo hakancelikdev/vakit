@@ -62,7 +62,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 - **Live Activity** — Dynamic Island and lock-screen countdowns.
 - **Control Center** — Six quick actions (iOS 18+) — Qibla, next prayer, more.
 - **Worship Tracking** — Rings for prayer, Quran, dhikr, hadith and qada.
-- **Prayer Discipline** — How long after each prayer enters you pray — this month and all time.
+- **Prayer Discipline** — How long after each prayer enters you pray — the last 30 days and all time.
 - **Fajr Alarm** — Rings before sunrise if you haven't prayed Fajr, stays quiet if you have; breaks silent mode on iOS 26.
 - **Suhoor Alarm** — Set for Ramadan, every day, or the recommended fasting days.
 - **Holy Day Reminders** — 12 holy days: holy nights that evening, the rest the day before.

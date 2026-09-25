@@ -92,7 +92,7 @@ module.exports = {
     { n: "Aktiviti Langsung", d: "Kiraan detik di Dynamic Island dan Skrin Kunci." },
     { n: "Pusat Kawalan", d: "Enam tindakan pantas (iOS 18+) — kiblat, solat seterusnya dan banyak lagi." },
     { n: "Catatan Ibadah", d: "Gelang untuk solat, Al-Quran, zikir, hadis dan qada." },
-    { n: "Disiplin Solat", d: "Berapa lama selepas masuk waktu anda solat — bulan ini dan sepanjang masa." },
+    { n: "Disiplin Solat", d: "Berapa lama selepas masuk waktu anda solat — 30 hari terakhir dan sepanjang masa." },
     { n: "Penggera Subuh", d: "Berbunyi sebelum matahari terbit jika anda belum solat Subuh, senyap jika sudah; menembusi mod senyap pada iOS 26." },
     { n: "Penggera Sahur", d: "Ditetapkan untuk Ramadan, setiap hari atau hari-hari puasa sunat." },
     { n: "Peringatan Hari Mulia", d: "12 hari mulia: malam-malam mulia diingatkan pada malam itu, yang lain sehari sebelumnya." },

@@ -92,7 +92,7 @@ module.exports = {
     { n: "Activité en direct", d: "Décomptes dans la Dynamic Island et sur l'écran verrouillé." },
     { n: "Centre de contrôle", d: "Six actions rapides (iOS 18+)\u00a0: Qibla, prochaine prière, et plus encore." },
     { n: "Suivi de la pratique", d: "Des anneaux pour la prière, le Coran, le dhikr, les hadiths et les qada." },
-    { n: "Régularité de la prière", d: "Combien de temps après l'entrée de chaque prière tu pries, ce mois-ci et depuis le début." },
+    { n: "Régularité de la prière", d: "Combien de temps après l'entrée de chaque prière tu pries, sur les 30 derniers jours et depuis le début." },
     { n: "Alarme du Fajr", d: "Sonne avant le lever du soleil si tu n'as pas prié le Fajr, reste muette si c'est fait\u00a0; passe outre le mode Silencieux sur iOS 26." },
     { n: "Alarme du souhour", d: "Réglée pour le Ramadan, pour chaque jour ou pour les jours de jeûne recommandés." },
     { n: "Rappels des jours bénis", d: "12 jours bénis\u00a0: les nuits bénies le soir même, les autres la veille." },

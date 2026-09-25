@@ -92,7 +92,7 @@ module.exports = {
     { n: "Live-Aktivität", d: "Countdowns in der Dynamic Island und auf dem Sperrbildschirm." },
     { n: "Kontrollzentrum", d: "Sechs Schnellaktionen (iOS 18+) – Qibla, nächstes Gebet und mehr." },
     { n: "Ibada-Tracking", d: "Ringe für Gebet, Koran, Dhikr, Hadith und Qada." },
-    { n: "Gebetsdisziplin", d: "Wie lange nach Beginn jeder Gebetszeit du betest – dieser Monat und insgesamt." },
+    { n: "Gebetsdisziplin", d: "Wie lange nach Beginn jeder Gebetszeit du betest – die letzten 30 Tage und insgesamt." },
     { n: "Fajr-Wecker", d: "Klingelt vor Sonnenaufgang, wenn du Fajr noch nicht gebetet hast, und bleibt sonst still; durchbricht unter iOS 26 den Stummmodus." },
     { n: "Suhur-Wecker", d: "Für den Ramadan, jeden Tag oder die empfohlenen Fastentage." },
     { n: "Erinnerung an gesegnete Tage", d: "12 gesegnete Tage: heilige Nächte am selben Abend, die übrigen am Tag davor." },

@@ -92,7 +92,7 @@ module.exports = {
     { n: "Live Activity", d: "Limoore e Dynamic Island e Ecraŋ Sokaaɗo." },
     { n: "Control Center", d: "Golle ɓadiiɗe jeegom (iOS 18+) — Alqibla, juulde aroore, e goɗɗe." },
     { n: "Rewindagol dewe", d: "Taariiɗe ngam juulde, Alkur'aana, jikru, hadiisa e kaadaa." },
-    { n: "Ɗoftaare juulde", d: "No ɓooyri ɓaawo naatgol waktu kala njuul-ɗon — ndee lewru e sahaa kala." },
+    { n: "Ɗoftaare juulde", d: "No ɓooyri ɓaawo naatgol waktu kala njuul-ɗon — balɗe 30 ɓennuɗe e sahaa kala." },
     { n: "Alaarma Fajiri", d: "So on njuulaani Fajiri, ina sonna ado puɗal naange; so on njuulii, ina deƴƴa. E iOS 26 ina sonna hay e mbaydi deƴƴere." },
     { n: "Alaarma walsuka", d: "Ina teeltee ngam Koorka Ramadaan, kala ñalnde, walla ñalɗi koorka sunna." },
     { n: "Siftinde ñalɗi barka", d: "Ñalɗi barka 12: jemmaaji barka ina siftinee e kiikiiɗe mum, goɗɗi ɗi ñalnde ado mum." },

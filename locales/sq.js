@@ -93,7 +93,7 @@ module.exports = {
     { n: "Live Activity", d: "Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes." },
     { n: "Qendra e Kontrollit", d: "Gjashtë veprime të shpejta (iOS 18+) — kibla, namazi i radhës e më shumë." },
     { n: "Ndjekja e ibadetit", d: "Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë." },
-    { n: "Disiplina e namazit", d: "Sa kohë pas hyrjes së vaktit faleni — këtë muaj dhe gjithë kohës." },
+    { n: "Disiplina e namazit", d: "Sa kohë pas hyrjes së vaktit faleni — 30 ditët e fundit dhe gjithë kohës." },
     { n: "Alarmi i sabahut", d: "Nëse nuk jeni falur, bie para lindjes së diellit; nëse jeni falur, hesht. Në iOS 26 e kapërcen modalitetin e heshtur." },
     { n: "Alarmi i syfyrit", d: "Vendoset për Ramazanin, për çdo ditë ose për ditët e agjërimeve synet." },
     { n: "Kujtesë për ditët e bekuara", d: "12 ditë të bekuara: netët e bekuara kujtohen po atë mbrëmje, të tjerat një ditë më parë." },

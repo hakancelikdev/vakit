@@ -92,7 +92,7 @@ module.exports = {
     { n: "Live activiteit", d: "Aftellingen in het Dynamic Island en op het toegangsscherm." },
     { n: "Bedieningspaneel", d: "Zes snelle acties (iOS 18+) – qibla, volgend gebed en meer." },
     { n: "Ibada bijhouden", d: "Ringen voor gebed, Koran, dhikr, hadith en qada." },
-    { n: "Gebedsdiscipline", d: "Hoe lang na het begin van elke gebedstijd je bidt – deze maand en altijd." },
+    { n: "Gebedsdiscipline", d: "Hoe lang na het begin van elke gebedstijd je bidt – de laatste 30 dagen en altijd." },
     { n: "Fajr-wekker", d: "Gaat vóór zonsopgang af als je Fajr nog niet hebt gebeden, en blijft stil als je dat wel hebt; breekt op iOS 26 door de stille modus heen." },
     { n: "Suhur-wekker", d: "Voor de ramadan, elke dag of de aanbevolen vastendagen." },
     { n: "Herinnering aan gezegende dagen", d: "12 gezegende dagen: heilige nachten dezelfde avond, de rest de dag ervoor." },

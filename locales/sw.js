@@ -96,7 +96,7 @@ module.exports = {
     { n: "Shughuli Hai", d: "Hesabu ya muda kwenye Dynamic Island na Skrini ya Kufuli." },
     { n: "Kituo cha Udhibiti", d: "Vitendo sita vya haraka (iOS 18+) — Kibla, swala inayofuata, na zaidi." },
     { n: "Ufuatiliaji wa Ibada", d: "Pete za swala, Qurani, dhikri, hadithi na kadhaa." },
-    { n: "Nidhamu ya Swala", d: "Unaswali muda gani baada ya kila wakati kuingia — mwezi huu na muda wote." },
+    { n: "Nidhamu ya Swala", d: "Unaswali muda gani baada ya kila wakati kuingia — siku 30 zilizopita na muda wote." },
     { n: "Kengele ya Alfajiri", d: "Inalia kabla ya macheo ikiwa bado hujaswali Alfajiri, na hunyamaza ukishaswali; kwenye iOS 26 inalia hata simu ikiwa kimya." },
     { n: "Kengele ya Daku", d: "Huwekwa kwa Ramadhani, kila siku, au siku za funga za sunna." },
     { n: "Vikumbusho vya Siku za Baraka", d: "Siku 12 za baraka: usiku wa baraka hukumbushwa jioni hiyo hiyo, nyingine siku moja kabla." },
