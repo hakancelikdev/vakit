@@ -4,13 +4,13 @@ module.exports = {
   META: {
     title: "Vakit: Hora da oração, Salat",
     description:
-      "Gratuito, sem anúncios, offline. Acompanha os horários de oração, encontra a Qibla e lê o Alcorão. iPhone, iPad, Apple Watch e Mac; 25 idiomas, 12 métodos de cálculo, Atividades Ao Vivo, widgets no ecrã bloqueado, sermão de sexta-feira e registo das orações em atraso.",
+      "Gratuito, sem anúncios, offline, sem conta. Acompanha os horários de oração, encontra a Qibla e lê o Alcorão. iPhone, iPad, Apple Watch e Mac; 25 idiomas, 12 métodos de cálculo, Atividades Ao Vivo, widgets no ecrã bloqueado, sermão de sexta-feira e registo das orações em atraso.",
     keywords:
       "horários de oração, hora da oração, qibla, alcorão, quran, app muçulmana, islão, salat, namaz, azan, adhan, azkar, dhikr, dua, hadith, tasbih, calendário hégira, ramadão, mesquita, orações em atraso",
   },
   COPY: {
     features: "Funcionalidades", trust: "Confiança", reviews: "Avaliações", faq: "Perguntas", download: "Descarregar",
-    eyebrow: "Que nada interrompa a tua adoração · Gratuito · Sem anúncios",
+    eyebrow: "Gratuito · Sem anúncios · Offline · Sem conta",
     h1a: "A app de adoração,", h1b: "como", h1c: "deve ser.",
     heroSub: "Uma companhia discreta para as cinco orações diárias — com Alcorão, Qibla, dhikr e um calendário que honra os teus dias. Feita para desaparecer quando não precisas dela e para estar lá quando precisas.",
     downloadCta: "Descarregar na App Store", watchTour: "Fazer a visita →",
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Avaliações da App Store da Turquia, traduzidas do turco.",
     "q-h1": "Respostas honestas", "q-h2": "a perguntas honestas.",
     "fin-h1": "Que nada interrompa", "fin-h2": "a tua adoração.",
-    "fin-p": "Gratuito. Sem conta. Funciona offline. iPhone, iPad, Apple Watch e Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratuito. Sem anúncios. Sem conta. Funciona offline. iPhone, iPad, Apple Watch e Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Descarregar na App Store", explore: "Explorar funcionalidades →",
     footContact: "Contacto", footFeedback: "Sugestões",
     footPrivacy: "Privacidade", footTerms: "Termos", footPress: "Imprensa",

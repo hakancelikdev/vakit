@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Bedetider & Widget",
     description:
-      "Gratis, uden reklamer, offline. Følg bedetiderne, find qibla, læs Koranen. iPhone, iPad, Apple Watch og Mac; 25 sprog, 12 beregningsmetoder, live-aktiviteter, widgets til låst skærm, fredagsprædiken, qada-oversigt.",
+      "Gratis, uden reklamer, offline, ingen konto. Følg bedetiderne, find qibla, læs Koranen. iPhone, iPad, Apple Watch og Mac; 25 sprog, 12 beregningsmetoder, live-aktiviteter, widgets til låst skærm, fredagsprædiken, qada-oversigt.",
     keywords:
       "bønnetider, bedetider, namaz, namaz vakitleri, qibla, koran app, islam app, muslim app, salah, ezan, adhan, athan, azan, dhikr tæller, hadith, ramadan, faste, moské, iftar, hijri kalender",
   },
   COPY: {
     features: "Funktioner", trust: "Tillid", reviews: "Anmeldelser", faq: "FAQ", download: "Hent",
-    eyebrow: "Så din ibada aldrig bliver afbrudt · Gratis · Uden reklamer",
+    eyebrow: "Gratis · Uden reklamer · Offline · Ingen konto",
     h1a: "Appen til din ibada,", h1b: "som den", h1c: "bør være.",
     heroSub: "En stille ledsager til de fem daglige bønner – med Koranen, qibla, dhikr og en kalender, der ærer dine dage. Den træder til side, når du ikke har brug for den, og er der, når du har.",
     downloadCta: "Hent i App Store", watchTour: "Tag rundturen →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Anmeldelser fra den tyrkiske App Store, oversat fra tyrkisk.",
     "q-h1": "Ærlige svar", "q-h2": "på ærlige spørgsmål.",
     "fin-h1": "Så din ibada", "fin-h2": "aldrig bliver afbrudt.",
-    "fin-p": "Gratis. Ingen konto. Virker offline. iPhone, iPad, Apple Watch og Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Uden reklamer. Ingen konto. Virker offline. iPhone, iPad, Apple Watch og Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Hent i App Store", explore: "Udforsk funktionerne →",
     footContact: "Kontakt", footFeedback: "Feedback",
     footPrivacy: "Privatliv", footTerms: "Vilkår", footPress: "Presse",

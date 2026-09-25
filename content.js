@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-09-25",
+  updated: "2026-09-26",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -218,14 +218,14 @@ const META = {
   tr: {
     title: "Vakit: Namaz Vakitleri, Kıble, Kur'an",
     description:
-      "Ücretsiz, reklamsız, çevrimdışı. Namaz vakitlerini takip et, kıbleyi bul, Kur'an-ı Kerim oku. iPhone, iPad, Apple Watch ve Mac; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi.",
+      "Ücretsiz, reklamsız, internetsiz, hesap gerektirmez. Namaz vakitlerini takip et, kıbleyi bul, Kur'an-ı Kerim oku. iPhone, iPad, Apple Watch ve Mac; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi.",
     keywords:
       "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, kaza namazı takibi, cuma hutbesi, kerahat vakitleri, sahur alarmı, apple watch, ipad, mac uygulaması, ezan sesi, hatim takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, namaz uygulaması",
   },
   en: {
     title: "Vakit: Prayer Times, Qibla, Quran",
     description:
-      "Free, ad-free, offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.",
+      "Free, ad-free, offline, no account. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.",
     keywords:
       "prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, ipad prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app",
   },
@@ -234,7 +234,7 @@ const META = {
 const COPY = {
   tr: {
     features: "Özellikler", trust: "Emanet", reviews: "Yorumlar", faq: "SSS", download: "İndir",
-    eyebrow: "İbadetin yarıda kesilmesin · Ücretsiz · Reklamsız",
+    eyebrow: "Ücretsiz · Reklamsız · İnternetsiz · Hesap gerektirmez",
     h1a: "İbadet uygulaması", h1b: "nasıl olmalıysa,", h1c: "öyle.",
     heroSub: "Beş vakit namaz için sade bir arkadaş — Kur'an, kıble, zikir ve günlerini onurlandıran bir takvim ile. İhtiyaç duymadığında kenara çekilir; duyduğunda yanındadır.",
     downloadCta: "App Store'dan İndir", watchTour: "Turu başlat →",
@@ -265,7 +265,7 @@ const COPY = {
     "r-note": "",
     "q-h1": "Dürüst sorulara", "q-h2": "dürüst cevaplar.",
     "fin-h1": "İbadetin yarıda", "fin-h2": "kesilmesin.",
-    "fin-p": "Ücretsiz. Hesap yok. Çevrimdışı çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Ücretsiz. Reklamsız. Hesap yok. İnternetsiz çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "App Store'dan İndir", explore: "Özellikleri keşfet →",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
     footPrivacy: "Gizlilik", footTerms: "Şartlar", footPress: "Basın",
@@ -275,7 +275,7 @@ const COPY = {
   },
   en: {
     features: "Features", trust: "Trust", reviews: "Reviews", faq: "FAQ", download: "Download",
-    eyebrow: "Don't let your worship be interrupted · Free · Ad-free",
+    eyebrow: "Free · Ad-free · Offline · No account",
     h1a: "The worship app,", h1b: "as it", h1c: "should be.",
     heroSub: "A quiet companion for the five daily prayers — with Quran, qibla, dhikr, and a calendar that honors your days. Built to disappear when you don't need it. Waiting when you do.",
     downloadCta: "Download on the App Store", watchTour: "Take the tour →",
@@ -306,7 +306,7 @@ const COPY = {
     "r-note": "Reviews from the Turkish App Store, translated from Turkish.",
     "q-h1": "Honest answers", "q-h2": "to honest questions.",
     "fin-h1": "Don't let your worship", "fin-h2": "be interrupted.",
-    "fin-p": "Free. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Free. Ad-free. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Download on the App Store", explore: "Explore features →",
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Terms", footPress: "Press",

@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Gebetszeiten & Widget",
     description:
-      "Kostenlos, werbefrei, offline. Gebetszeiten verfolgen, die Qibla finden, den Koran lesen. iPhone, iPad, Apple Watch und Mac; 25 Sprachen, 12 Berechnungsmethoden, Live-Aktivitäten, Widgets für den Sperrbildschirm, Freitagspredigt, Qada-Buch.",
+      "Kostenlos, werbefrei, offline, ohne Konto. Gebetszeiten verfolgen, die Qibla finden, den Koran lesen. iPhone, iPad, Apple Watch und Mac; 25 Sprachen, 12 Berechnungsmethoden, Live-Aktivitäten, Widgets für den Sperrbildschirm, Freitagspredigt, Qada-Buch.",
     keywords:
       "gebetszeiten, namaz vakitleri, qibla, koran app, islam app, muslim app, gebets app, ezan, adhan, azan, gebetszeiten widget, dhikr zähler, hadith, ramadan, fasten, moschee, hidschri kalender, apple watch gebetszeiten, namaz, dua",
   },
   COPY: {
     features: "Funktionen", trust: "Vertrauen", reviews: "Bewertungen", faq: "FAQ", download: "Laden",
-    eyebrow: "Damit deine Ibada nie unterbrochen wird · Kostenlos · Werbefrei",
+    eyebrow: "Kostenlos · Werbefrei · Offline · Ohne Konto",
     h1a: "Die App für deine Ibada,", h1b: "so, wie sie", h1c: "sein sollte.",
     heroSub: "Ein stiller Begleiter für die fünf täglichen Gebete – mit Koran, Qibla, Dhikr und einem Kalender, der deine Tage würdigt. Er tritt zurück, wenn du ihn nicht brauchst, und ist da, wenn du ihn brauchst.",
     downloadCta: "Laden im App Store", watchTour: "Tour starten →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Bewertungen aus dem türkischen App Store, aus dem Türkischen übersetzt.",
     "q-h1": "Ehrliche Antworten", "q-h2": "auf ehrliche Fragen.",
     "fin-h1": "Damit deine Ibada", "fin-h2": "nie unterbrochen wird.",
-    "fin-p": "Kostenlos. Kein Konto. Funktioniert offline. iPhone, iPad, Apple Watch und Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Kostenlos. Werbefrei. Kein Konto. Funktioniert offline. iPhone, iPad, Apple Watch und Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Laden im App Store", explore: "Funktionen entdecken →",
     footContact: "Kontakt", footFeedback: "Feedback",
     footPrivacy: "Datenschutz", footTerms: "Nutzungsbedingungen", footPress: "Presse",

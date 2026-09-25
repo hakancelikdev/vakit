@@ -4,13 +4,13 @@ module.exports = {
   META: {
     title: "Vakit: Kohët e namazit, Kibla, Kurani",
     description:
-      "Falas, pa reklama, pa internet. Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch dhe Mac; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza.",
+      "Falas, pa reklama, pa internet, pa llogari. Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch dhe Mac; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza.",
     keywords:
       "kohët e namazit, takvimi, vaktet e namazit, kibla, drejtimi i kiblës, kurani, aplikacion islam, mysliman, namaz, ezan, dhikër, tesbih, hadith, kalendari hixhri, ramazan, syfyr, iftar, xhami, namazet kaza, esmaul husna",
   },
   COPY: {
     features: "Veçoritë", trust: "Amaneti", reviews: "Vlerësimet", faq: "Pyetje", download: "Shkarko",
-    eyebrow: "Që ibadeti juaj të mos ndërpritet · Falas · Pa reklama",
+    eyebrow: "Falas · Pa reklama · Pa internet · Pa llogari",
     h1a: "Aplikacioni i ibadetit,", h1b: "ashtu si", h1c: "duhet të jetë.",
     heroSub: "Një shoqërues i qetë për pesë namazet e ditës — me Kuran, kiblë, dhikër dhe një kalendar që nderon ditët tuaja. I ndërtuar që të mënjanohet kur nuk ju duhet dhe të jetë pranë jush kur ju duhet.",
     downloadCta: "Shkarkojeni nga App Store", watchTour: "Nisni turin →",
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Vlerësime nga App Store i Turqisë, të përkthyera nga turqishtja.",
     "q-h1": "Përgjigje të sinqerta", "q-h2": "për pyetje të sinqerta.",
     "fin-h1": "Që ibadeti juaj", "fin-h2": "të mos ndërpritet.",
-    "fin-p": "Falas. Pa llogari. Punon pa internet. iPhone, iPad, Apple Watch dhe Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Falas. Pa reklama. Pa llogari. Punon pa internet. iPhone, iPad, Apple Watch dhe Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Shkarkojeni nga App Store", explore: "Zbuloni veçoritë →",
     footContact: "Kontakt", footFeedback: "Komente",
     footPrivacy: "Privatësia", footTerms: "Kushtet", footPress: "Shtypi",

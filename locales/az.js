@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Namaz vaxtları, Qiblə, Quran",
     description:
-      "Pulsuz, reklamsız, oflayn. Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch və Mac; 25 dil, 12 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə.",
+      "Pulsuz, reklamsız, oflayn, hesab tələb etmir. Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch və Mac; 25 dil, 12 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə.",
     keywords:
       "namaz vaxtları, namaz vaxti, azan vaxtı, qiblə, qiblə istiqaməti, quran, quran oxu, zikr, təsbeh, zikr sayğacı, qəza namazı, hicri təqvim, ramazan, imsakiyyə, iftar, sahur, oruc, cümə xütbəsi, dəstəmaz, namaz qılmaq qaydası, məscid",
   },
   COPY: {
     features: "Xüsusiyyətlər", trust: "Əmanət", reviews: "Rəylər", faq: "Suallar", download: "Yüklə",
-    eyebrow: "İbadətiniz yarımçıq qalmasın · Pulsuz · Reklamsız",
+    eyebrow: "Pulsuz · Reklamsız · Oflayn · Hesab tələb etmir",
     h1a: "İbadət tətbiqi", h1b: "necə olmalıdırsa,", h1c: "elə.",
     heroSub: "Beş vaxt namaz üçün sakit bir yoldaş — Quran, qiblə, zikr və günlərinizə hörmət edən bir təqvimlə. Ehtiyac olmayanda kənara çəkilir; ehtiyac olanda yanınızdadır.",
     downloadCta: "App Store-dan yükləyin", watchTour: "Tura başla →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Rəylər Türkiyə App Store-undandır, türk dilindən tərcümə olunub.",
     "q-h1": "Səmimi suallara", "q-h2": "səmimi cavablar.",
     "fin-h1": "İbadətiniz yarımçıq", "fin-h2": "qalmasın.",
-    "fin-p": "Pulsuz. Hesab yoxdur. Oflayn işləyir. iPhone, iPad, Apple Watch və Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Pulsuz. Reklamsız. Hesab yoxdur. Oflayn işləyir. iPhone, iPad, Apple Watch və Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "App Store-dan yükləyin", explore: "Xüsusiyyətləri kəşf et →",
     footContact: "Əlaqə", footFeedback: "Rəy bildir",
     footPrivacy: "Məxfilik", footTerms: "Şərtlər", footPress: "Mətbuat",

@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Jadwal Sholat & Adzan",
     description:
-      "Gratis, tanpa iklan, offline. Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, dan Mac; 25 bahasa, 12 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada.",
+      "Gratis, tanpa iklan, offline, tanpa akun. Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, dan Mac; 25 bahasa, 12 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada.",
     keywords:
       "jadwal sholat, jadwal salat, waktu sholat, adzan, azan, arah kiblat, kompas kiblat, al quran, alquran offline, murottal, yasin, tasbih digital, dzikir, doa, hadis, puasa, imsakiyah, kalender hijriah, widget sholat, aplikasi muslim",
   },
   COPY: {
     features: "Fitur", trust: "Amanah", reviews: "Ulasan", faq: "Tanya Jawab", download: "Unduh",
-    eyebrow: "Jangan biarkan ibadahmu terputus · Gratis · Tanpa iklan",
+    eyebrow: "Gratis · Tanpa iklan · Offline · Tanpa akun",
     h1a: "Aplikasi ibadah,", h1b: "sebagaimana", h1c: "mestinya.",
     heroSub: "Teman yang tenang untuk salat lima waktu — dengan Al-Qur'an, kiblat, zikir, dan kalender yang memuliakan hari-harimu. Menepi saat tidak kamu perlukan. Hadir saat kamu butuh.",
     downloadCta: "Unduh di App Store", watchTour: "Mulai tur →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Ulasan dari App Store Turki, diterjemahkan dari bahasa Turki.",
     "q-h1": "Jawaban jujur", "q-h2": "untuk pertanyaan jujur.",
     "fin-h1": "Jangan biarkan ibadahmu", "fin-h2": "terputus.",
-    "fin-p": "Gratis. Tanpa akun. Bisa offline. iPhone, iPad, Apple Watch, dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Tanpa iklan. Tanpa akun. Bisa offline. iPhone, iPad, Apple Watch, dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Unduh di App Store", explore: "Jelajahi fitur →",
     footContact: "Kontak", footFeedback: "Masukan",
     footPrivacy: "Privasi", footTerms: "Ketentuan", footPress: "Pers",

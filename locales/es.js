@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Hora de oración, Salat",
     description:
-      "Gratis, sin anuncios y sin conexión. Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch y Mac; 25 idiomas, 12 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes.",
+      "Gratis, sin anuncios, sin conexión y sin cuenta. Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch y Mac; 25 idiomas, 12 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes.",
     keywords:
       "horarios de oración, hora de oración, alquibla, qibla, Corán, quran, app musulmana, islam, salat, namaz, adhán, athan, azkar, dhikr, dua, hadiz, tasbih, calendario hégira, Ramadán, mezquita, oraciones pendientes",
   },
   COPY: {
     features: "Funciones", trust: "Confianza", reviews: "Opiniones", faq: "Preguntas", download: "Descargar",
-    eyebrow: "Que nada interrumpa tu adoración · Gratis · Sin anuncios",
+    eyebrow: "Gratis · Sin anuncios · Sin conexión · Sin cuenta",
     h1a: "La app de adoración,", h1b: "tal como", h1c: "debe ser.",
     heroSub: "Una compañera discreta para las cinco oraciones diarias, con Corán, alquibla, dhikr y un calendario que honra tus días. Pensada para desaparecer cuando no la necesitas y para estar ahí cuando sí.",
     downloadCta: "Descárgalo en el App Store", watchTour: "Hacer el recorrido →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Opiniones del App Store de Turquía, traducidas del turco.",
     "q-h1": "Respuestas sinceras", "q-h2": "a preguntas sinceras.",
     "fin-h1": "Que nada interrumpa", "fin-h2": "tu adoración.",
-    "fin-p": "Gratis. Sin cuenta. Funciona sin conexión. iPhone, iPad, Apple Watch y Mac, con iOS 16.4+, watchOS 9+ y macOS 13+.",
+    "fin-p": "Gratis. Sin anuncios. Sin cuenta. Funciona sin conexión. iPhone, iPad, Apple Watch y Mac, con iOS 16.4+, watchOS 9+ y macOS 13+.",
     downloadCta2: "Descárgalo en el App Store", explore: "Explorar funciones →",
     footContact: "Contacto", footFeedback: "Comentarios",
     footPrivacy: "Privacidad", footTerms: "Condiciones", footPress: "Prensa",

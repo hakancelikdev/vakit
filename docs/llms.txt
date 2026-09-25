@@ -1,6 +1,6 @@
 # Vakit: Prayer Times, Qibla, Quran
 
-> Free, ad-free, offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
+> Free, ad-free, offline, no account. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac, built by Hakan Çelik. Current release: 1.7.5; requires
@@ -137,6 +137,22 @@ Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla com
 
 Your records themselves — qada ledger, khatm, bookmark list, reading history, favourite mosques — stay on your device and in your own private iCloud. What reaches the server is usage statistics: the prayer you mark, your daily worship counts, the number of an ayah or hadith you save. Your dhikr list and the words you search for inside the app go too — so we can see where search failed you and fix it. Your zakat amounts and coordinates are never sent; for location, only country, city and district go. All of it is tied to a persistent user code with no name, email or phone — a pseudonym, not anonymous. Details are in the privacy policy.
 
+## The Vakit Manifesto
+
+The ten principles the app is built on, in the app's own words
+(https://vakit.hakancelik.dev/en/manifesto.html, in every interface language):
+
+- **It should work without internet.** Not everyone is online all the time. Prayer times, qibla, Qur'an, hadith and dhikr all work fully offline.
+- **There should be no ads.** Worship asks for stillness. No ad ever appears on your screen on its own.
+- **No feature should sit behind a payment.** Worship is everyone's right. There is no locked feature, no privileged tier, no trial period.
+- **Everyone should be able to use it.** Someone who cannot read, sees poorly or cannot see at all should use it with ease: screen reader, large type, high contrast, content you can listen to.
+- **It should be correct.** A prayer time cannot be "about right". All 12 calculation methods are verified against official calendars; we are still working to close the last minute of difference. Every text carrying a ruling rests on an official source and names it.
+- **It should work anywhere in the world.** In the north where the sun does not set for days, at the equator, on a journey — it still gives the right time. "We have no users there" is not a reason.
+- **It should not ask who you are.** No account is required; your name, e-mail and phone are never asked. Your worship records stay in your own iCloud space and are never sold.
+- **It should not overwhelm you.** No flood of notifications, no streak pressure, no badge race. It steps aside when you don't need it.
+- **It should speak everyone's language.** It speaks 25 languages, right-to-left ones included. Muslims are everywhere; so should the app be.
+- **It should stand on its users' support.** Large or small, everyone's contribution keeps this service going.
+
 ## Pages
 
 The home page exists in every interface language:
@@ -171,4 +187,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26

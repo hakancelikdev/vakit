@@ -3,14 +3,14 @@ module.exports = {
   META: {
     title: "Vakit: Nyakati za Swala, Kibla, Qurani",
     description:
-      "Bila malipo, bila matangazo, bila intaneti. Fuatilia nyakati za swala, pata Kibla, soma Qurani. iPhone, iPad, Apple Watch na Mac; lugha 25, mbinu 12 za kukokotoa, Shughuli Hai, wijeti za Skrini ya Kufuli, khutba ya Ijumaa, ufuatiliaji wa kadhaa.",
+      "Bila malipo, bila matangazo, bila intaneti, bila akaunti. Fuatilia nyakati za swala, pata Kibla, soma Qurani. iPhone, iPad, Apple Watch na Mac; lugha 25, mbinu 12 za kukokotoa, Shughuli Hai, wijeti za Skrini ya Kufuli, khutba ya Ijumaa, ufuatiliaji wa kadhaa.",
     keywords:
       "nyakati za swala, ratiba ya swala, kibla, qurani, adhana, muislamu, uislamu, programu ya kiislamu, hadithi, dhikri, tasbihi, ramadhani, funga, daku, msikiti, zaka, kalenda ya hijria, swala za kadhaa, prayer times, qibla",
   },
 
   COPY: {
     features: "Vipengele", trust: "Amana", reviews: "Maoni", faq: "Maswali", download: "Pakua",
-    eyebrow: "Ibada yako isikatizwe · Bila malipo · Bila matangazo",
+    eyebrow: "Bila malipo · Bila matangazo · Bila intaneti · Bila akaunti",
     h1a: "Programu ya ibada,", h1b: "kama", h1c: "inavyopaswa kuwa.",
     heroSub: "Mwenzi mtulivu wa swala tano za kila siku — pamoja na Qurani, kibla, dhikri, na kalenda inayoheshimu siku zako. Imejengwa kujiweka kando usipoihitaji, na kuwa karibu unapoihitaji.",
     downloadCta: "Pakua kwenye App Store", watchTour: "Anza ziara →",
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Maoni kutoka App Store ya Uturuki, yametafsiriwa kutoka Kituruki.",
     "q-h1": "Majibu ya kweli", "q-h2": "kwa maswali ya kweli.",
     "fin-h1": "Ibada yako", "fin-h2": "isikatizwe.",
-    "fin-p": "Bila malipo. Hakuna akaunti. Inafanya kazi bila intaneti. iPhone, iPad, Apple Watch na Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Bila malipo. Bila matangazo. Hakuna akaunti. Inafanya kazi bila intaneti. iPhone, iPad, Apple Watch na Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Pakua kwenye App Store", explore: "Gundua vipengele →",
     footContact: "Mawasiliano", footFeedback: "Maoni yako",
     footPrivacy: "Faragha", footTerms: "Masharti", footPress: "Habari",

@@ -28,6 +28,9 @@ const { validateLocale } = require("./tools/validate.js");
 
 const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
 
+// The Vakit Manifesto — the app's own text in all 25 languages (tools/import-manifesto.js).
+const MANIFESTO_RAW = require("./manifesto.js");
+
 // Long-form legal prose: the Turkish + English originals, one module per document.
 const PRESS = require("./press.js");
 
@@ -85,6 +88,14 @@ function t(lang, key) {
     .replace(/\{featureCount\}/g, String(FEATURES[lang].length))
     .replace(/\{ratingCount\}/g, SITE.rating.count)
     .replace(/\{screenCount\}/g, String(SHOWCASE[lang].length + showcaseMore(lang).length));
+}
+
+/** The manifesto in one language, with its language count filled in. */
+function manifesto(lang) {
+  const M = MANIFESTO_RAW[lang];
+  if (!M) throw new Error(`manifesto.js has no "${lang}" — run tools/import-manifesto.js`);
+  const fill = (x) => x.replace(/\{languageCount\}/g, String(ALL.length));
+  return { title: fill(M.title), intro: fill(M.intro), principles: M.principles.map((p) => ({ ...p, title: fill(p.title), body: fill(p.body) })) };
 }
 
 /** A number in the page's own notation ("4,8" in Turkish), always in Latin digits like the rest of the page. */
@@ -224,11 +235,11 @@ const GLOBE =
   '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg>';
 
 /** Language picker: plain links, so crawlers can reach every language from every page. */
-function langMenu(lang) {
+function langMenu(lang, file = "") {
   const items = ALL.map((l) => {
     const L = LANGS[l];
     const attrs = l === lang ? ' aria-current="page"' : ` hreflang="${L.htmlLang}"`;
-    return `<li><a href="${L.path}" data-lang="${l}" lang="${L.htmlLang}" dir="${L.rtl ? "rtl" : "ltr"}"${attrs}>${esc(L.name)}</a></li>`;
+    return `<li><a href="${L.path}${file}" data-lang="${l}" lang="${L.htmlLang}" dir="${L.rtl ? "rtl" : "ltr"}"${attrs}>${esc(L.name)}</a></li>`;
   }).join("\n        ");
   return `<details class="lang-menu" data-close-label="${esc(t(lang, "closeLabel"))}">
       <summary aria-label="${esc(t(lang, "langLabel"))}">${GLOBE}<span>${esc(LANGS[lang].name)}</span></summary>
@@ -418,6 +429,158 @@ const SUN = '<svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill=
 const MOON = '<svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
 const CHEVRON = (dir) => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${dir === "prev" ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"}"/></svg>`;
 
+/** Footer of the home and manifesto pages. */
+function siteFooter(lang) {
+  const legal = legalLang(lang);
+  return `<footer>
+  <div class="foot-brand">
+    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
+    ${esc(SITE.appName)}
+  </div>
+  <div class="foot-links">
+    <a href="${localUrl(lang, "manifesto.html")}">${esc(manifesto(lang).title)}</a>
+    <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
+    <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
+    <a href="${localUrl(pressLang(lang), "press.html")}"${pressLang(lang) !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPress"))}</a>
+    <a href="${SITE.repoUrl}">GitHub</a>
+    <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
+    <a href="${SITE.feedbackUrl}" target="_blank" rel="noopener">${esc(t(lang, "footFeedback"))}</a>
+  </div>
+  <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
+</footer>`;
+}
+
+/* Manifesto icons, one per principle, after the SF Symbols the app uses. */
+const MF_ICONS = {
+  offline: ICON('<path d="M2.5 9.2a14 14 0 0 1 19 0"/><path d="M5.6 12.6a9.4 9.4 0 0 1 12.8 0"/><path d="M8.8 16a5 5 0 0 1 6.4 0"/><circle cx="12" cy="19.3" r=".6"/><path d="M3.5 3.5l17 17"/>'),
+  noAds: ICON('<path d="M12 2.8l7.5 3v5.7c0 4.6-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5.1-7.5-9.7V5.8z"/><path d="M4 4l16 16"/>'),
+  noPaywall: ICON('<rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 7.7-1.6"/><path d="M12 14.5v2"/>'),
+  accessible: ICON('<circle cx="12" cy="4.6" r="1.7"/><path d="M5 8.6l7 1.4 7-1.4"/><path d="M12 10v4.6l-3 6"/><path d="M12 14.6l3 6"/>'),
+  correct: ICON('<path d="M12 2.8l2.2 1.6 2.7-.1.8 2.6 2.2 1.6-.8 2.6.8 2.6-2.2 1.6-.8 2.6-2.7-.1L12 21.2l-2.2-1.6-2.7.1-.8-2.6-2.2-1.6.8-2.6-.8-2.6 2.2-1.6.8-2.6 2.7.1z"/><path d="M8.7 12.1l2.2 2.2 4.4-4.5"/>'),
+  worldwide: ICON('<circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/>'),
+  privacy: ICON('<path d="M12 2.8l7.5 3v5.7c0 4.6-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5.1-7.5-9.7V5.8z"/><rect x="9.3" y="11" width="5.4" height="4.6" rx="1"/><path d="M10.4 11V9.8a1.6 1.6 0 0 1 3.2 0V11"/>'),
+  calm: ICON('<path d="M6.3 16.5h11.4l-1.7-2.3V10a4 4 0 0 0-8 0v4.2z"/><path d="M10.2 19.2a2 2 0 0 0 3.6 0"/><path d="M4 4l16 16"/>'),
+  languages: ICON('<path d="M4 4.5h9.5A1.5 1.5 0 0 1 15 6v5a1.5 1.5 0 0 1-1.5 1.5H8.8L6 15v-2.5H4A1.5 1.5 0 0 1 2.5 11V6A1.5 1.5 0 0 1 4 4.5z"/><path d="M17.5 8.5H20A1.5 1.5 0 0 1 21.5 10v5a1.5 1.5 0 0 1-1.5 1.5h-1.5V19l-2.8-2.5H11"/>'),
+  together: ICON('<path d="M12 20s-7.5-4.4-7.5-10.1A4.2 4.2 0 0 1 12 7.4a4.2 4.2 0 0 1 7.5 2.5C19.5 15.6 12 20 12 20z"/>'),
+};
+
+/**
+ * The Vakit Manifesto: the app's ten principles, one page per language. The text is
+ * the app's own (manifesto.js, imported by tools/import-manifesto.js), shown as is.
+ */
+function manifestoPage(lang) {
+  const L = LANGS[lang];
+  const M = manifesto(lang);
+  const file = "manifesto.html";
+  const canonical = SITE.origin + localUrl(lang, file);
+  const ogImage = SITE.origin + ogUrl(lang);
+  const gap = joinsWithoutSpace(L.script) ? "" : " ";
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: M.title,
+    description: M.intro,
+    url: canonical,
+    inLanguage: L.htmlLang,
+    isPartOf: { "@type": "WebSite", name: SITE.appName, url: SITE.origin + L.path },
+  };
+  const items = M.principles
+    .map((p) => `    <li class="mf-item">
+      <span class="mf-icon">${MF_ICONS[p.id]}</span>
+      <div class="mf-text">
+        <h2>${esc(p.title)}</h2>
+        <p>${esc(p.body)}</p>
+      </div>
+    </li>`)
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html ${htmlAttrs(lang)}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ${THEME_BOOT}
+    <title>${esc(M.title)}</title>
+    <meta name="description" content="${esc(M.intro)}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:title" content="${esc(M.title)}">
+    <meta property="og:description" content="${esc(M.intro)}">
+    <meta property="og:image" content="${ogImage}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="${esc(SITE.appName)}">
+    <meta property="og:locale" content="${L.ogLocale}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${esc(M.title)}">
+    <meta name="twitter:description" content="${esc(M.intro)}">
+    <meta name="twitter:image" content="${ogImage}">
+    <meta name="theme-color" content="${SITE.themeColor}">
+    <meta name="apple-itunes-app" content="app-id=${SITE.appStoreId}">
+    <link rel="canonical" href="${canonical}">
+    ${hreflangLinks((l) => SITE.origin + localUrl(l, file))}
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+${jsonLd(schema)}
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="${L.path}">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">${esc(SITE.appName)}</div>
+  </a>
+  <div class="nav-links">
+    <a href="${L.path}#showcase">${esc(t(lang, "features"))}</a>
+    <a href="${L.path}#trust">${esc(t(lang, "trust"))}</a>
+    <a href="${L.path}#reviews">${esc(t(lang, "reviews"))}</a>
+    <a href="${L.path}#faq">${esc(t(lang, "faq"))}</a>
+  </div>
+  <div class="nav-cta">
+    <button class="nav-theme" id="themeToggle" aria-label="${esc(t(lang, "themeLabel"))}">${SUN}${MOON}</button>
+    ${langMenu(lang, file)}
+    <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
+  </div>
+  <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
+</nav>
+
+<main class="mf">
+  <header class="mf-head">
+    <p class="sec-eye">${esc(t(lang, "h1a"))}${gap}${esc(t(lang, "h1b"))}${gap}${esc(t(lang, "h1c"))}</p>
+    <h1 class="mf-title">${esc(M.title)}</h1>
+    <p class="mf-intro">${esc(M.intro)}</p>
+  </header>
+  <ol class="mf-list">
+${items}
+  </ol>
+
+  <section class="final mf-final" id="download">
+    <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="${esc(SITE.appName)}" width="88" height="88" loading="lazy" decoding="async"></div>
+    <h2 class="sec-title"><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
+    <p>${esc(t(lang, "fin-p"))}</p>
+    <div class="final-actions">
+      <a href="${storeLink(`site-manifesto-${lang}`)}" class="btn-primary">
+        ${APPLE_LOGO}
+        <span>${esc(t(lang, "downloadCta2"))}</span>
+      </a>
+      <a href="${L.path}#showcase" class="btn-ghost">${esc(t(lang, "explore"))}</a>
+    </div>
+  </section>
+</main>
+
+${siteFooter(lang)}
+
+<script src="/script.js"></script>
+</body>
+</html>
+`;
+}
+
 /* -------------------------------------------------------------------- page */
 
 function page(lang) {
@@ -425,7 +588,6 @@ function page(lang) {
   const m = META[lang];
   const canonical = SITE.origin + L.path;
   const ogImage = SITE.origin + ogUrl(lang);
-  const legal = legalLang(lang);
   const note = t(lang, "r-note");
   // Split headings join with a space — except in Chinese and Japanese, which don't space words.
   const gap = joinsWithoutSpace(L.script) ? "" : " ";
@@ -533,10 +695,12 @@ ${jsonLd(faqSchema(lang))}
 <section class="hero">
   <div class="hero-left">
     <div class="eyebrow">${esc(t(lang, "eyebrow"))}</div>
-    <h1>
+    <!-- The headline is the manifesto's question answered in one line; tapping it
+         opens the manifesto, as the same sentence does in the app's Support Center. -->
+    <h1><a class="h1-link" href="${localUrl(lang, "manifesto.html")}">
       <span>${esc(t(lang, "h1a"))}</span><br>
-      <span>${esc(t(lang, "h1b"))}</span>${gap}<em>${esc(t(lang, "h1c"))}</em>
-    </h1>
+      <span>${esc(t(lang, "h1b"))}</span>${gap}<em>${esc(t(lang, "h1c"))}</em><span class="h1-go" aria-hidden="true">${CHEVRON("next")}</span><span class="vh"> — ${esc(manifesto(lang).title)}</span>
+    </a></h1>
     <p class="hero-sub">${esc(t(lang, "heroSub"))}</p>
     <div class="hero-actions">
       <a href="${storeLink(`site-hero-${lang}`)}" class="btn-primary">
@@ -706,21 +870,7 @@ ${faqList(lang)}
 
 </main>
 
-<footer>
-  <div class="foot-brand">
-    <img src="/assets/app-icon-24.png" alt="" class="foot-mark-img" width="26" height="26">
-    ${esc(SITE.appName)}
-  </div>
-  <div class="foot-links">
-    <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
-    <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
-    <a href="${localUrl(pressLang(lang), "press.html")}"${pressLang(lang) !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPress"))}</a>
-    <a href="${SITE.repoUrl}">GitHub</a>
-    <a href="mailto:${SITE.email}">${esc(t(lang, "footContact"))}</a>
-    <a href="${SITE.feedbackUrl}" target="_blank" rel="noopener">${esc(t(lang, "footFeedback"))}</a>
-  </div>
-  <div class="foot-sig">${esc(t(lang, "footSig"))}</div>
-</footer>
+${siteFooter(lang)}
 
 <!-- Phones only: a download button that stays in reach on a long page. Hidden
      while the hero's or the closing section's own button is on screen (script.js). -->
@@ -1083,6 +1233,9 @@ ${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLan
     })
     .join("\n");
 
+  const mfUrl = (l) => SITE.origin + localUrl(l, "manifesto.html");
+  const mf = ALL.map((l) => block(mfUrl(l), ALL, mfUrl, "monthly", "0.6")).join("\n");
+
   const pressUrl = (l) => SITE.origin + localUrl(l, "press.html");
   const press = PRESS_LANGS.map((l) => block(pressUrl(l), PRESS_LANGS, pressUrl, "monthly", "0.4")).join("\n");
 
@@ -1090,6 +1243,7 @@ ${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLan
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${home}
+${mf}
 ${legal}
 ${press}
 </urlset>
@@ -1169,6 +1323,13 @@ ${feats}
 ## Frequently asked questions
 
 ${faqs}
+
+## The Vakit Manifesto
+
+The ten principles the app is built on, in the app's own words
+(${SITE.origin}${localUrl("en", "manifesto.html")}, in every interface language):
+
+${manifesto("en").principles.map((p) => `- **${p.title}.** ${p.body}`).join("\n")}
 
 ## Pages
 
@@ -1258,6 +1419,7 @@ function main() {
 
   console.log("Building Vakit landing page...");
   for (const lang of ALL) write(path.join(LANGS[lang].dir, "index.html"), page(lang));
+  for (const lang of ALL) write(path.join(LANGS[lang].dir, "manifesto.html"), manifestoPage(lang));
 
   for (const key of Object.keys(LEGAL)) {
     for (const lang of LEGAL_LANGS) write(path.join(LANGS[lang].dir, LEGAL[key].file), legalPage(key, lang));

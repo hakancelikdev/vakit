@@ -26,12 +26,12 @@ module.exports = {
     desc: "Vakit hakkında yazacaklar için hazır metinler, künye ve görseller. Buradaki her cümle App Store'da yayında olan sürüm için doğrudur; başka bir şeye ihtiyacın olursa yaz, aynı gün dönerim.",
     oneLiner: {
       t: "Tek cümle",
-      b: "Vakit; namaz vakitlerini cihazda hesaplayan, Kur'an'ı, hadisi ve ibadet defterini yanında taşıyan, reklamsız ve hesapsız bir ibadet uygulamasıdır.",
+      b: "Vakit; namaz vakitlerini cihazda hesaplayan, Kur'an'ı, hadisi ve ibadet defterini yanında taşıyan, ücretsiz, reklamsız, hesap gerektirmeyen ve internetsiz de çalışan bir ibadet uygulamasıdır.",
     },
     boiler: {
       t: "Hazır tanıtım metni",
       short:
-        "Vakit, iPhone, iPad, Apple Watch ve Mac için namaz vakitleri ve ibadet uygulamasıdır. Vakitler cihazda hesaplanır, çekirdek özellikler internetsiz çalışır.",
+        "Vakit, iPhone, iPad, Apple Watch ve Mac için namaz vakitleri ve ibadet uygulamasıdır. Vakitler cihazda hesaplanır, çekirdek özellikler internetsiz çalışır. Ücretsizdir, reklam göstermez, hesap açmayı gerektirmez.",
       medium:
         "Vakit, iPhone, iPad, Apple Watch ve Mac için bir namaz vakitleri ve ibadet uygulamasıdır. Diyanet dahil 12 hesaplama yöntemiyle vakitleri cihazın kendisinde hesaplar; Kur'an-ı Kerim, 36.000'den fazla hadis ve illüstrasyonlu namaz rehberi uygulamanın içinde geldiği için çekirdek özellikler internetsiz çalışır. Ücretsizdir, hiç reklam göstermez ve hesap açmanızı istemez; tek gelir kaynağı isteğe bağlı bağışlardır.",
       long:
@@ -83,12 +83,12 @@ module.exports = {
     desc: "Everything needed to write about Vakit: boilerplate you can paste, a fact sheet and images. Every statement here is true of the version live on the App Store. If something is missing, write and you will have it the same day.",
     oneLiner: {
       t: "One line",
-      b: "Vakit is a prayer-times and worship app that computes the times on the device and carries the Qur'an, the hadith and your worship records with it — no ads, no account.",
+      b: "Vakit is a prayer-times and worship app that computes the times on the device and carries the Qur'an, the hadith and your worship records with it — free, ad-free, offline-capable, no account.",
     },
     boiler: {
       t: "Boilerplate",
       short:
-        "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. Times are computed on the device and the core features work without a network.",
+        "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. Times are computed on the device and the core features work without a network. It is free, shows no ads and needs no account.",
       medium:
         "Vakit is a prayer-times and worship app for iPhone, iPad, Apple Watch and Mac. It computes the times on the device with 12 calculation methods, Diyanet's among them, and ships the Qur'an, 36,000+ hadith and illustrated prayer guides inside the app, so the core works without a network. It is free, shows no advertising at all and asks for no account; its only income is optional donations.",
       long:

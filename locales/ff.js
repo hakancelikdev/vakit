@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Waktuuji juulde, Alqibla, Alkur'aana",
     description:
-      "Meere, publisite alaa, ina golloo hay so enterneet alaa. Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch e Mac; ɗemɗe 25, laabi hesaabo 12, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa.",
+      "Meere, publisite alaa, ina golloo hay so enterneet alaa, konte alaa. Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch e Mac; ɗemɗe 25, laabi hesaabo 12, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa.",
     keywords:
       "waktuuji juulde, juulde, alqibla, Alkur'aana, hadiisa, jikru, aadaan, koorka, Ramadaan, kalandiriye hijra, jumaa, prayer times, qibla, quran, islamic app, muslim app, Pulaar",
   },
   COPY: {
     features: "Kuutorɗe", trust: "Amaana", reviews: "Miijooji", faq: "Naamne", download: "Jippin",
-    eyebrow: "Hoto dewal mon taƴ · Meere · Publisite alaa",
+    eyebrow: "Meere · Publisite alaa · Enterneet alaa · Konte alaa",
     h1a: "Jaaɓnirgal dewal,", h1b: "no foti wonirde,", h1c: "non tigi.",
     heroSub: "Gonɗiɗo deƴƴuɗo ngam juulɗe jowi ɗe ñalawma — wondude e Alkur'aana, alqibla, jikru e kalandiriye teddinoowo balɗe mon. Ina suuɗoo so haajaaka; ina woni ton so haajaama.",
     downloadCta: "Jippin e App Store", watchTour: "Fuɗɗo yiylaade →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Miijooji ɗii iwii ko e App Store Turkiya, ɗi firaa ko gila e Turkeere.",
     "q-h1": "Jaabawuuji goonga", "q-h2": "e naamne goonga.",
     "fin-h1": "Hoto dewal mon", "fin-h2": "taƴ.",
-    "fin-p": "Meere. Konte alaa. Ina golloo hay so enterneet alaa. iPhone, iPad, Apple Watch e Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Meere. Publisite alaa. Konte alaa. Ina golloo hay so enterneet alaa. iPhone, iPad, Apple Watch e Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Jippin e App Store", explore: "Yiy kuutorɗe →",
     footContact: "Jokkondiral", footFeedback: "Miijo mon",
     footPrivacy: "Suturaa", footTerms: "Sarɗiiji", footPress: "Jaaynde",

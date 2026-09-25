@@ -481,8 +481,11 @@ initDock();
 initSmoothScrolling();
 initMobileMenu();
 initLangMenu();
-renderCitySelector();
-selectCity(currentCity.id);
-setInterval(() => renderClockTick(new Date()), 1000);
+// Only the home page has the clock (the manifesto page shares this script).
+if (document.getElementById('clock')) {
+  renderCitySelector();
+  selectCity(currentCity.id);
+  setInterval(() => renderClockTick(new Date()), 1000);
+}
 
 document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);

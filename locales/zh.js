@@ -3,14 +3,14 @@ module.exports = {
   META: {
     title: "Vakit: 礼拜时间·古兰经·朝向",
     description:
-      "免费、无广告、离线可用。查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch 和 Mac；25 种语言、12 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。",
+      "免费、无广告、离线可用、无需账户。查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch 和 Mac；25 种语言、12 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。",
     keywords:
       "礼拜时间, 穆斯林, 伊斯兰, 朝向, 古兰经, 圣训, 宣礼, 记主, 念珠, 斋月, 封斋, 开斋, 主麻, 希吉来历, 小净, 天课, 清真寺, 还补礼拜, 礼拜提醒, Apple Watch 礼拜时间",
   },
 
   COPY: {
     features: "功能", trust: "托付", reviews: "评价", faq: "常见问题", download: "下载",
-    eyebrow: "别让你的功修半途中断 · 免费 · 无广告",
+    eyebrow: "免费 · 无广告 · 离线可用 · 无需账户",
     h1a: "功修应用，", h1b: "本该有的", h1c: "样子。",
     heroSub: "一位安静陪伴五番礼拜的伙伴——还有古兰经、朝向、记主，以及一本珍视你每一天的日历。不需要时悄然隐去，需要时一直都在。",
     downloadCta: "在 App Store 下载", watchTour: "开始导览 →",
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "评价来自土耳其 App Store，由土耳其语翻译而来。",
     "q-h1": "诚实的问题，", "q-h2": "诚实的回答。",
     "fin-h1": "别让你的功修", "fin-h2": "半途中断。",
-    "fin-p": "免费。无需账户。离线可用。支持 iPhone、iPad、Apple Watch 和 Mac——iOS 16.4+、watchOS 9+、macOS 13+。",
+    "fin-p": "免费。无广告。无需账户。离线可用。支持 iPhone、iPad、Apple Watch 和 Mac——iOS 16.4+、watchOS 9+、macOS 13+。",
     downloadCta2: "在 App Store 下载", explore: "探索功能 →",
     footContact: "联系", footFeedback: "反馈",
     footPrivacy: "隐私", footTerms: "条款", footPress: "媒体",

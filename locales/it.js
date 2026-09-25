@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Ora di preghiera, Salat",
     description:
-      "Gratuita, senza pubblicità, offline. Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 12 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate.",
+      "Gratuita, senza pubblicità, offline, senza account. Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 12 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate.",
     keywords:
       "orari di preghiera, preghiera islamica, qibla, corano, quran, app musulmana, islam, salat, namaz, adhan, azan, azkar, dhikr, dua, hadith, tasbih, calendario hegiriano, ramadan, digiuno, moschea",
   },
   COPY: {
     features: "Funzioni", trust: "Fiducia", reviews: "Recensioni", faq: "Domande", download: "Scarica",
-    eyebrow: "Che nulla interrompa la tua adorazione · Gratis · Senza pubblicità",
+    eyebrow: "Gratis · Senza pubblicità · Offline · Senza account",
     h1a: "L'app per l'adorazione,", h1b: "come", h1c: "dev'essere.",
     heroSub: "Una compagna discreta per le cinque preghiere quotidiane, con Corano, Qibla, dhikr e un calendario che dà valore ai tuoi giorni. Fatta per sparire quando non ti serve, e per esserci quando ti serve.",
     downloadCta: "Scarica su App Store", watchTour: "Fai il tour →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Recensioni dell'App Store turco, tradotte dal turco.",
     "q-h1": "Risposte sincere", "q-h2": "a domande sincere.",
     "fin-h1": "Che nulla interrompa", "fin-h2": "la tua adorazione.",
-    "fin-p": "Gratis. Nessun account. Funziona offline. iPhone, iPad, Apple Watch e Mac: iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Senza pubblicità. Nessun account. Funziona offline. iPhone, iPad, Apple Watch e Mac: iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Scarica su App Store", explore: "Scopri le funzioni →",
     footContact: "Contatti", footFeedback: "Suggerimenti",
     footPrivacy: "Privacy", footTerms: "Termini", footPress: "Stampa",

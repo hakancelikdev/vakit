@@ -141,6 +141,27 @@ test("hiçbir sayfa Google Fonts yüklemiyor", () => {
   for (const p of pages) assert.ok(!/fonts\.(googleapis|gstatic)\.com/.test(fs.readFileSync(p, "utf8")), p);
 });
 
+// Manifesto: uygulamanın kendi metni (tools/import-manifesto.js), her dilde ayrı sayfa.
+const MF = require("./manifesto.js");
+for (const lang of LANGS) {
+  test(`${lang}: manifesto sayfası var, 10 ilkenin hepsi ve kampanyalı App Store linki`, () => {
+    const p = fs.readFileSync(path.join("docs", C.LANGS[lang].dir, "manifesto.html"), "utf8");
+    assert.strictEqual((p.match(/<li class="mf-item">/g) || []).length, MF[lang].principles.length);
+    assert.strictEqual(MF[lang].principles.length, 10);
+    assert.ok(!p.includes("{languageCount}") && !/%\d?\$?d/.test(p), "doldurulmamış dil sayısı");
+    assert.ok(p.includes(`ct=site-manifesto-${lang}`), "manifesto App Store linki");
+  });
+  test(`${lang}: ana sayfanın başlığı manifestoya açılıyor`, () => {
+    const page = html(lang);
+    const h1 = page.slice(page.indexOf("<h1>"), page.indexOf("</h1>"));
+    assert.ok(h1.includes(`href="${C.LANGS[lang].path}manifesto.html"`), "h1 manifestoya bağlı değil");
+  });
+}
+test("manifesto sayfaları site haritasında", () => {
+  const sm = fs.readFileSync(path.join("docs", "sitemap.xml"), "utf8");
+  for (const lang of LANGS) assert.ok(sm.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}manifesto.html</loc>`), lang);
+});
+
 test("404 sayfasındaki App Store linki kampanyalı", () => {
   const p = fs.readFileSync(path.join("docs", "404.html"), "utf8");
   const m = p.match(/href="(https:\/\/apps\.apple\.com[^"]+)"/);

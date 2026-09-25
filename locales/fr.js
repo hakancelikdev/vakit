@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Heure de prière, Salat",
     description:
-      "Gratuit, sans publicité, hors ligne. Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch et Mac\u00a0; 25 langues, 12 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada.",
+      "Gratuit, sans publicité, hors ligne, sans compte. Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch et Mac\u00a0; 25 langues, 12 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada.",
     keywords:
       "horaires de prière, heure de prière, salat, qibla, coran, application musulmane, muslim, adhan, athan, adan, azkar, dhikr, tasbih, dua, hadith, ramadan, mosquée, namaz vakitleri, calendrier hégirien",
   },
   COPY: {
     features: "Fonctionnalités", trust: "Confiance", reviews: "Avis", faq: "FAQ", download: "Télécharger",
-    eyebrow: "Que rien n'interrompe ta pratique · Gratuit · Sans publicité",
+    eyebrow: "Gratuit · Sans publicité · Hors ligne · Sans compte",
     h1a: "L'app pour ta pratique,", h1b: "telle qu'elle", h1c: "devrait être.",
     heroSub: "Un compagnon discret pour les cinq prières quotidiennes, avec le Coran, la Qibla, le dhikr et un calendrier qui honore tes jours. Elle s'efface quand tu n'en as pas besoin, et reste là quand tu en as besoin.",
     downloadCta: "Télécharger dans l'App Store", watchTour: "Faire le tour →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Avis publiés sur l'App Store turc, traduits du turc.",
     "q-h1": "Des réponses honnêtes", "q-h2": "à des questions honnêtes.",
     "fin-h1": "Que rien n'interrompe", "fin-h2": "ta pratique.",
-    "fin-p": "Gratuit. Sans compte. Fonctionne hors ligne. iPhone, iPad, Apple Watch et Mac, avec iOS 16.4+, watchOS 9+ et macOS 13+.",
+    "fin-p": "Gratuit. Sans publicité. Sans compte. Fonctionne hors ligne. iPhone, iPad, Apple Watch et Mac, avec iOS 16.4+, watchOS 9+ et macOS 13+.",
     downloadCta2: "Télécharger dans l'App Store", explore: "Découvrir les fonctionnalités →",
     footContact: "Contact", footFeedback: "Suggestions",
     footPrivacy: "Confidentialité", footTerms: "Conditions", footPress: "Presse",

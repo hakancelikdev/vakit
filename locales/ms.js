@@ -3,13 +3,13 @@ module.exports = {
   META: {
     title: "Vakit: Waktu Solat & Azan",
     description:
-      "Percuma, tanpa iklan, luar talian. Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch dan Mac; 25 bahasa, 12 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada.",
+      "Percuma, tanpa iklan, luar talian, tanpa akaun. Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch dan Mac; 25 bahasa, 12 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada.",
     keywords:
       "waktu solat, jadual solat, azan, arah kiblat, kompas kiblat, qiblat finder, al quran, quran offline, yasin, surah, tasbih digital, zikir, doa, azkar, hadis, puasa, imsak, kalendar hijrah, widget solat, aplikasi muslim malaysia",
   },
   COPY: {
     features: "Ciri", trust: "Amanah", reviews: "Ulasan", faq: "Soalan Lazim", download: "Muat Turun",
-    eyebrow: "Jangan biarkan ibadah anda terputus · Percuma · Tanpa iklan",
+    eyebrow: "Percuma · Tanpa iklan · Luar talian · Tanpa akaun",
     h1a: "Aplikasi ibadah,", h1b: "sebagaimana", h1c: "sepatutnya.",
     heroSub: "Teman yang tenang untuk solat lima waktu — dengan Al-Quran, kiblat, zikir dan kalendar yang memuliakan hari-hari anda. Mengundur diri apabila tidak diperlukan. Sedia menanti apabila anda memerlukannya.",
     downloadCta: "Muat turun di App Store", watchTour: "Mulakan lawatan →",
@@ -40,7 +40,7 @@ module.exports = {
     "r-note": "Ulasan daripada App Store Turki, diterjemahkan daripada bahasa Turki.",
     "q-h1": "Jawapan jujur", "q-h2": "untuk soalan jujur.",
     "fin-h1": "Jangan biarkan ibadah anda", "fin-h2": "terputus.",
-    "fin-p": "Percuma. Tiada akaun. Berfungsi luar talian. iPhone, iPad, Apple Watch dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Percuma. Tanpa iklan. Tiada akaun. Berfungsi luar talian. iPhone, iPad, Apple Watch dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Muat turun di App Store", explore: "Terokai ciri →",
     footContact: "Hubungi", footFeedback: "Maklum Balas",
     footPrivacy: "Privasi", footTerms: "Terma", footPress: "Media",
