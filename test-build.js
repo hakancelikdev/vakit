@@ -133,6 +133,14 @@ for (const lang of LANGS) {
   });
 }
 
+// Web fontları Google'a istek atar (ziyaretçinin IP adresi); sayfa sistem fontunu kullanır.
+test("hiçbir sayfa Google Fonts yüklemiyor", () => {
+  const pages = [];
+  const walk = (d) => { for (const f of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, f.name); if (f.isDirectory()) { if (f.name !== "assets") walk(p); } else if (f.name.endsWith(".html")) pages.push(p); } };
+  walk("docs");
+  for (const p of pages) assert.ok(!/fonts\.(googleapis|gstatic)\.com/.test(fs.readFileSync(p, "utf8")), p);
+});
+
 test("404 sayfasındaki App Store linki kampanyalı", () => {
   const p = fs.readFileSync(path.join("docs", "404.html"), "utf8");
   const m = p.match(/href="(https:\/\/apps\.apple\.com[^"]+)"/);

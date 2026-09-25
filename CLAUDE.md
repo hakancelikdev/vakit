@@ -17,7 +17,7 @@ node tools/check-locale.js de    # check one translation against English, even b
 node tools/make-og.js            # regenerate link-preview cards (docs/assets/og/<lang>.jpg) — needs Google Chrome
 ```
 
-**Link-preview cards** (`og:image`, 1200×630) are rendered per language from the page's own hero copy and that language's prayer-screen screenshot. Re-run `make-og.js` after changing `h1a/h1b/h1c`/`eyebrow` or re-importing screenshots; `build.js` fails if a card is missing.
+**Link-preview cards** (`og:image`, 1200×630) are rendered per language from the page's own hero copy and that language's prayer-screen screenshot. They are the one place web fonts are still used (Instrument Serif + Noto, `tools/fonts.js`) — the pages themselves use the system font. Re-run `make-og.js` after changing `h1a/h1b/h1c`/`eyebrow` or re-importing screenshots; `build.js` fails if a card is missing.
 
 CI re-runs the build on a clean checkout and fails the deploy if the committed `docs/` doesn't match, so always commit the regenerated files alongside the `content.js` / `locales/` change.
 
@@ -42,7 +42,7 @@ Hand-maintained files in `docs/`:
 | File | Purpose |
 |---|---|
 | `styles.css` | All styles (CSS variables for theming, dark mode, responsive, RTL + non-Latin script rules) |
-| `script.js` | Interactivity only: live prayer clock, hero preview video, showcase switching, iPad/Mac screen tabs, "show all" features, FAQ accordion, theme, language menu, mobile menu, phone-only download dock |
+| `script.js` | Interactivity only: live prayer clock, hero preview video, the showcase gallery's arrow buttons, iPad/Mac screen tabs, "show all" features, FAQ accordion, theme, language menu, mobile menu, phone-only download dock |
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
@@ -64,14 +64,14 @@ Two other things follow from the generator, and both are the point:
 
 ### Languages
 
-`LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → web fonts in `build.js` `SCRIPTS`), screenshot and video source, the clock's home city and the currency next to the "0" price. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
+`LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → typography rules in `styles.css`; `tools/fonts.js` `SCRIPTS` for the link-preview cards), screenshot and video source, the clock's home city and the currency next to the "0" price. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
 
 - **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, all three documents + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
 - **iPad, Mac and Apple Watch** (`DEVICES` in `content.js`, the section under the showcase): iPad captures follow the iPhone rule; the Mac and the Watch were captured in Turkish and English only, so every other page shows the English ones. Tab labels and captions reuse `FEATURES`/`SHOWCASE` copy, so the section needs no translations of its own.
-- **More iPhone screens** (`SHOWCASE_MORE`): extra tabs under the showcase list, same phone. `all: true` screens exist in every captured language; the rest only in tr/en, and other pages leave them out rather than mix English into their phone.
+- **The showcase is a gallery** (2026-09-25): every iPhone screen — `SHOWCASE`, then `SHOWCASE_MORE` — in its own phone, side by side, each with its title and description; it scrolls sideways (swipe, trackpad, arrow keys, or the two round buttons). **More iPhone screens** (`SHOWCASE_MORE`) are labelled with `FEATURES` copy. `all: true` screens exist in every captured language; the rest only in tr/en, and other pages leave them out rather than mix English into their phone.
 - **The hero shows the app**: a phone playing the preview video (the prayer screen's sky), next to the headline and the App Store button, which stays above the fold on a 1280×720 screen. The video waits for the page's `load` event and doesn't start by itself under reduced motion or data saving; a tap plays or pauses it (2026-09-24).
 - **Download dock** (phones only): a fixed App Store button while neither the hero's nor the closing section's button is on screen. Never in iPhone Safari — the `apple-itunes-app` meta already shows Apple's Smart App Banner there, which also opens the app when it's installed.
-- **Screens switch on tap only** — never by scroll position. Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22; the video has since moved to the hero). `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
+- **The page never swaps a screen on its own.** Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22); the video now plays in the hero and the showcase shows every screen at once. The iPad/Mac/Watch screens change on tap only. `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
 - **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
 
@@ -93,9 +93,19 @@ Two other things follow from the generator, and both are the point:
 
 **The feature list is a factual claim.** Every entry in `FEATURES` must correspond to something that ships in the current app. When a feature is removed from the app, remove it here in the same release — in every language. The site once advertised "Zikir Halkası" for months after it had been deleted from the app.
 
+### Design language
+
+Apple's product pages, applied to this app (redesign 2026-09-25):
+
+- **One typeface — the system font** (SF Pro on Apple devices, Segoe/Roboto/Noto elsewhere). No web fonts: nothing is fetched from Google (the site's privacy promise), and the system covers all 25 scripts. `npm test` fails if a page loads Google Fonts again.
+- **Hierarchy from size and weight.** Section titles are two-tone: `<span>` in ink, `<em>` in secondary grey on its own line. The hero's `<em>` carries the brand gradient. No italics, no uppercase labels, no running numbers.
+- **Colour means "tap here" or "this is the app".** `--on-accent-*` for buttons and selected chips, `--accent-ink` for links and section eyebrows.
+- **Surfaces, not rules**: rounded tiles (`--bg-2`, `--radius-tile`) instead of hairline grids. The trust section is the one dark section.
+- **Touch targets** of at least 34–48 px; every phone mockup has a real bezel.
+
 ### CSS theming
 
-All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Text on a filled accent (selected chips and tabs) uses `--on-accent-bg`/`--on-accent-fg`: `--accent` itself is too light for white text (3.3:1). Small `--ink-3` text needs 4.5:1, so sections on a darker surface (`.clock`, dark `.t-card`) redefine `--ink-3` locally. Dark mode is driven by `data-theme` on `<html>`. `<html>` also carries `dir="rtl"` for Arabic-script pages and a `script-<name>` class; non-Latin scripts drop italics and letter-spacing (they break joined letters) and get taller line-heights. Use logical properties (`inline-start`, `text-align: start`) for anything directional.
+All colors, spacing, typography and effects are CSS custom properties at the top of `styles.css`. Text on a filled accent (selected chips and tabs) uses `--on-accent-bg`/`--on-accent-fg`: `--accent` itself is too light for white text (3.3:1). Small `--ink-3` text needs 4.5:1, so sections on a darker surface (`.clock`, dark `.t-card`) redefine `--ink-3` locally. Dark mode is driven by `data-theme` on `<html>`. `<html>` also carries `dir="rtl"` for Arabic-script pages and a `script-<name>` class; non-Latin scripts drop letter-spacing (it breaks joined letters) and get taller line-heights; Urdu prefers Nastaliq where the device has it. Use logical properties (`inline-start`, `text-align: start`) for anything directional.
 
 ## Deployment
 

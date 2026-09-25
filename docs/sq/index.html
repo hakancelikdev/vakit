@@ -114,11 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -394,7 +390,7 @@
     <a href="#faq">Pyetje</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Aktivizo ose çaktivizo modalitetin e errët">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Aktivizo ose çaktivizo modalitetin e errët"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Mbyll">
       <summary aria-label="Gjuha"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Shqip</span></summary>
       <ul class="lang-list">
@@ -505,63 +501,121 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Gjithçka, asgjë më tepër</div>
-    <h2 class="sc-h2"><span>Një shoqërues,</span><br><em>jo një makinë që ju vjedh vëmendjen.</em></h2>
-    <p class="sc-lede">20 mjete kryesore, secili i menduar t'ju japë qetësi sapo e hapni. Prekni cilindo për ta parë.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Si qielli.</h3><p>Me hyrjen e çdo vakti, ekrani ndryshon bashkë me qiellin — yje të vërtetë dhe hëna në vendin e tyre të saktë. Kohët e papëlqyera dhe ato të namazeve nafile janë sipas dëshirës.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Pa e shkyçur.</h3><p>Namazi i radhës në ekranin e kyçjes, në widget, në Dynamic Island dhe në orën tuaj. Një vështrim i qetë — që nuk ju mban mbërthyer.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Të gjitha mjetet, në një vend.</h3><p>Kurani, hadithet, hutbeja e xhumasë, dhikri, esmaja, udhëzuesit dhe kalendari — të gjitha në një vend. Asgjë e mbyllur pas pagesës.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Drejtimi i saktë.</h3><p>Kthehuni nga kibla dhe telefoni dridhet, bashkë me largësinë deri te Qabja.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Ibadeti juaj, në unaza.</h3><p>Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë; sa shpejt faleni pasi hyn vakti, dhe hatmja juaj — përparim i qetë, pa ndjenjë faji.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Kazaja shlyhet ndërsa faleni.</h3><p>Llogaritni namazet kaza të një jete sipas vakteve dhe shlyejini një nga një — me një parashikim se kur do të përfundoni.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Kurani, edhe pa internet.</h3><p>Lexoni, dëgjoni, sodisni — kaligrafia e Medinës ose e Turqisë, ndjekje fjalë për fjalë, tefsir dhe lexim që mund të shkarkohet.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Shtatëmbëdhjetë namaze, të ilustruara.</h3><p>Nga abdesi te tesbihati; në këmbë, ulur ose me shenja — hap pas hapi, të shpjeguara pa ton përbuzës.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Një kalendar që kujton.</h3><p>Hixhri dhe gregorian bashkë. Netët e bekuara, Ramazani, bajramet dhe arefeja — me përmbledhjen e ibadetit të muajit poshtë.</p></div><span class="sc-tag">Parapamje</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Numërimi, në dorën tuaj.</h3><p>Numëruesi i dhikrit dhe tesbihati pas namazit; dhikër të gatshëm, dhikri juaj dhe një synim ditor.</p></div><span class="sc-tag">Parapamje</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.">Kohët e namazeve nafile</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.">Kaligrafia e mus'hafit</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.">Esmaul-Husna</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, ose radha e plotë pas namazit.">Tesbihati</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.">Ndjekja e ibadetit</button>
-      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Mbi 36 000 hadithe nga shtatë koleksione të mëdha.">Hadithet</button>
-      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.">Kërkim i unifikuar</button>
-      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.">Xhamitë afër</button>
-      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.">Live Activity</button>
-      <button class="dv-tab sc-chip" data-index="19" aria-pressed="false" data-desc="Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.">Ditët e bekuara</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Gjithçka, asgjë më tepër</p>
+    <h2 class="sec-title"><span>Një shoqërues,</span> <em>jo një makinë që ju vjedh vëmendjen.</em></h2>
+    <p class="sec-lede">20 mjete kryesore, secili i menduar t'ju japë qetësi sapo e hapni.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Si qielli." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Pa e shkyçur." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Të gjitha mjetet, në një vend." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="Drejtimi i saktë." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/en/profile.webp" alt="Ibadeti juaj, në unaza." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/en/qada.webp" alt="Kazaja shlyhet ndërsa faleni." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/en/quran.webp" alt="Kurani, edhe pa internet." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="Shtatëmbëdhjetë namaze, të ilustruara." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="Një kalendar që kujton." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="Numërimi, në dorën tuaj." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Kohët e namazeve nafile" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Kaligrafia e mus'hafit" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Esmaul-Husna" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Tesbihati" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="Ndjekja e ibadetit" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hadithet" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Kërkim i unifikuar" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Xhamitë afër" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="19" src="/assets/screenshots/en/more/imsakiye.webp" alt="Ditët e bekuara" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Një shoqërues, jo një makinë që ju vjedh vëmendjen.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-times.webp" alt="Si qielli." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Si qielli.</h3>
+          <p class="g-desc">Me hyrjen e çdo vakti, ekrani ndryshon bashkë me qiellin — yje të vërtetë dhe hëna në vendin e tyre të saktë. Kohët e papëlqyera dhe ato të namazeve nafile janë sipas dëshirës.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/widget.webp" alt="Pa e shkyçur." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Pa e shkyçur.</h3>
+          <p class="g-desc">Namazi i radhës në ekranin e kyçjes, në widget, në Dynamic Island dhe në orën tuaj. Një vështrim i qetë — që nuk ju mban mbërthyer.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/discover.webp" alt="Të gjitha mjetet, në një vend." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Të gjitha mjetet, në një vend.</h3>
+          <p class="g-desc">Kurani, hadithet, hutbeja e xhumasë, dhikri, esmaja, udhëzuesit dhe kalendari — të gjitha në një vend. Asgjë e mbyllur pas pagesës.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qibla.webp" alt="Drejtimi i saktë." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Drejtimi i saktë.</h3>
+          <p class="g-desc">Kthehuni nga kibla dhe telefoni dridhet, bashkë me largësinë deri te Qabja.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/profile.webp" alt="Ibadeti juaj, në unaza." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Ibadeti juaj, në unaza.</h3>
+          <p class="g-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë; sa shpejt faleni pasi hyn vakti, dhe hatmja juaj — përparim i qetë, pa ndjenjë faji.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qada.webp" alt="Kazaja shlyhet ndërsa faleni." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kazaja shlyhet ndërsa faleni.</h3>
+          <p class="g-desc">Llogaritni namazet kaza të një jete sipas vakteve dhe shlyejini një nga një — me një parashikim se kur do të përfundoni.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/quran.webp" alt="Kurani, edhe pa internet." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kurani, edhe pa internet.</h3>
+          <p class="g-desc">Lexoni, dëgjoni, sodisni — kaligrafia e Medinës ose e Turqisë, ndjekje fjalë për fjalë, tefsir dhe lexim që mund të shkarkohet.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-guide.webp" alt="Shtatëmbëdhjetë namaze, të ilustruara." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Shtatëmbëdhjetë namaze, të ilustruara.</h3>
+          <p class="g-desc">Nga abdesi te tesbihati; në këmbë, ulur ose me shenja — hap pas hapi, të shpjeguara pa ton përbuzës.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/calendar.webp" alt="Një kalendar që kujton." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Një kalendar që kujton.</h3>
+          <p class="g-desc">Hixhri dhe gregorian bashkë. Netët e bekuara, Ramazani, bajramet dhe arefeja — me përmbledhjen e ibadetit të muajit poshtë.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/zikirmatik.webp" alt="Numërimi, në dorën tuaj." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Numërimi, në dorën tuaj.</h3>
+          <p class="g-desc">Numëruesi i dhikrit dhe tesbihati pas namazit; dhikër të gatshëm, dhikri juaj dhe një synim ditor.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Kohët e namazeve nafile" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kohët e namazeve nafile</h3>
+          <p class="g-desc">Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/mushaf.webp" alt="Kaligrafia e mus'hafit" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kaligrafia e mus'hafit</h3>
+          <p class="g-desc">Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Esmaul-Husna" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Esmaul-Husna</h3>
+          <p class="g-desc">99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/tesbihat.webp" alt="Tesbihati" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tesbihati</h3>
+          <p class="g-desc">33-33-33, ose radha e plotë pas namazit.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/accounting-year.webp" alt="Ndjekja e ibadetit" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Ndjekja e ibadetit</h3>
+          <p class="g-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/hadith.webp" alt="Hadithet" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Hadithet</h3>
+          <p class="g-desc">Mbi 36 000 hadithe nga shtatë koleksione të mëdha.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/search.webp" alt="Kërkim i unifikuar" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kërkim i unifikuar</h3>
+          <p class="g-desc">Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Xhamitë afër" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Xhamitë afër</h3>
+          <p class="g-desc">Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Live Activity</h3>
+          <p class="g-desc">Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/imsakiye.webp" alt="Ditët e bekuara" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Ditët e bekuara</h3>
+          <p class="g-desc">Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -636,30 +690,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Amaneti — diçka që ju besohet</div>
-    <h2>
-      <span>Të dhënat tuaja janë</span> <em>një amanet,</em><br>
-      <span>jo një produkt.</span>
+    <p class="sec-eye">Amaneti — diçka që ju besohet</p>
+    <h2 class="sec-title">
+      <span>Të dhënat tuaja janë</span> <span>një amanet,</span> <em>jo një produkt.</em>
     </h2>
     <p class="trust-lede">Aplikacione të tjera namazi janë kapur duke shitur të dhëna vendndodhjeje. Vakit zgjodhi një rrugë tjetër: koordinatat tuaja nuk arrijnë kurrë në serverët tanë. Pa llogari. Pa reklama. Të dhënat tuaja nuk shiten kurrë. Kjo nuk është një veçori — është një parim.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>Shkarkojeni. Hapeni. Faluni.</h3>
         <p>Pa regjistrim, pa hyrje, pa fjalëkalim për ta harruar. Vakit fillon të punojë sapo ta instaloni.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Llogaritet në telefonin tuaj.</h3>
         <p>Kohët e namazit llogariten në vetë pajisjen, sipas vendndodhjes suaj dhe metodës që zgjidhni. Asgjë nuk dërgohet te ndonjë server për t'u «kërkuar».</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>Vendndodhja juaj e saktë nuk është te ne.</h3>
         <p>Koordinatat tuaja nuk dërgohen në serverët tanë; ne dimë vetëm shtetin, qytetin dhe rrethin. Për adresën tuaj dhe xhamitë afër, vendndodhja shkon vetëm te Apple Maps.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Një politikë e thjeshtë.</h3>
         <p>Të dhëna përdorimi të lidhura me një kod pseudonim përdoruesi — pa emër, email apo telefon. Politika jonë e privatësisë rendit saktësisht çfarë dërgohet, dhe lexohet për një minutë.</p>
       </div>
@@ -687,85 +740,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 mjete</div>
-      <h2><span>Një aplikacion,</span><br><em>mjafton për një jetë ibadeti.</em></h2>
+      <p class="sec-eye">51 mjete</p>
+      <h2 class="sec-title"><span>Një aplikacion,</span> <em>mjafton për një jetë ibadeti.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Kohët e namazit dhe kibla<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Kohët e namazit</h4><div class="f-desc">12 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Busulla e kiblës</h4><div class="f-desc">Ju orienton me dridhje dhe tregon largësinë deri te Qabja.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Qielli i gjallë</h4><div class="f-desc">Yje të vërtetë dhe hëna mbi harkun e ditës — për vendin ku jeni, tani.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Alarmi i sabahut</h4><div class="f-desc">Nëse nuk jeni falur, bie para lindjes së diellit; nëse jeni falur, hesht. Në iOS 26 e kapërcen modalitetin e heshtur.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Zërat e ezanit</h4><div class="f-desc">Çdo namaz në makamin e vet: saba, ushak, rast, segah, hixhaz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Kohët e namazeve nafile</h4><div class="f-desc">Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Kohët e papëlqyera</h4><div class="f-desc">Të shënuara në harkun e ditës, me transmetimin mbi të cilin mbështeten.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Ditët e bekuara</h4><div class="f-desc">Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Vendndodhje manuale</h4><div class="f-desc">Zgjidheni vendndodhjen vetë, ose lëreni t'ju ndjekë kur udhëtoni.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Njoftimet</h4><div class="f-desc">Në pajisje, lokale, të besueshme.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Xhamitë afër</h4><div class="f-desc">Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Kohët e namazit</h4><p class="f-desc">12 metoda llogaritjeje, sipas zonës kohore, e dallon kur udhëtoni.</p></li>
+          <li class="f-cell"><h4 class="f-name">Busulla e kiblës</h4><p class="f-desc">Ju orienton me dridhje dhe tregon largësinë deri te Qabja.</p></li>
+          <li class="f-cell"><h4 class="f-name">Qielli i gjallë</h4><p class="f-desc">Yje të vërtetë dhe hëna mbi harkun e ditës — për vendin ku jeni, tani.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Alarmi i sabahut</h4><p class="f-desc">Nëse nuk jeni falur, bie para lindjes së diellit; nëse jeni falur, hesht. Në iOS 26 e kapërcen modalitetin e heshtur.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zërat e ezanit</h4><p class="f-desc">Çdo namaz në makamin e vet: saba, ushak, rast, segah, hixhaz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kohët e namazeve nafile</h4><p class="f-desc">Ishraku, duhaja, evvabini dhe pjesët e natës; sipas dëshirës.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kohët e papëlqyera</h4><p class="f-desc">Të shënuara në harkun e ditës, me transmetimin mbi të cilin mbështeten.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Ditët e bekuara</h4><p class="f-desc">Netët e mira, bajramet dhe pragjet e tyre nga sot e tutje, secila me udhëzues.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Vendndodhje manuale</h4><p class="f-desc">Zgjidheni vendndodhjen vetë, ose lëreni t'ju ndjekë kur udhëtoni.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Njoftimet</h4><p class="f-desc">Në pajisje, lokale, të besueshme.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Xhamitë afër</h4><p class="f-desc">Gjejini me Apple Maps, pa arritur vendndodhja juaj në serverët tanë; hartë, largësi, udhëzime rruge.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Kurani dhe hadithet<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Kurani Famëlartë</h4><div class="f-desc">114 sure. Fjalë për fjalë, përkthim në turqisht dhe anglisht, tefsir, mus'hafi klasik.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadithet</h4><div class="f-desc">Mbi 36 000 hadithe nga shtatë koleksione të mëdha.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Leximi pa internet</h4><div class="f-desc">Zgjidhni lexuesin dhe stilin e leximit; shkarkoni sure ose xhuze dhe dëgjoni pa internet.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tefsiri</h4><div class="f-desc">Tefsiri i Diyanet-it (në turqisht dhe anglisht); prekni një ajet dhe hapet bashkë me grupin e ajeteve që mbulon.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Ndjekja e hatmes</h4><div class="f-desc">114 sure, 30 xhuze; hatmet e përfunduara dhe një datë e parashikuar përfundimi.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Kaligrafia e mus'hafit</h4><div class="f-desc">Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Listat e luajtjes</h4><div class="f-desc">Rendit suret si të duash, jepi emër listës dhe dëgjoje nga fillimi në fund — edhe pa internet.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Përkthim i lexuar</h4><div class="f-desc">Dëgjo përkthimin me zërin e pajisjes sate — vetëm ose pas çdo ajeti, pa internet.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Përmbajtja e ditës</h4><div class="f-desc">Ajeti, hadithi dhe emri i ditës në një ekran; kthehu një javë pas.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Shënuesit</h4><div class="f-desc">Ruani ajete dhe hadithe.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Kartela për t'u ndarë</h4><div class="f-desc">Kartela të bukura për ajete, hadithe, dhikër dhe emrat e Allahut.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Kurani Famëlartë</h4><p class="f-desc">114 sure. Fjalë për fjalë, përkthim në turqisht dhe anglisht, tefsir, mus'hafi klasik.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hadithet</h4><p class="f-desc">Mbi 36 000 hadithe nga shtatë koleksione të mëdha.</p></li>
+          <li class="f-cell"><h4 class="f-name">Leximi pa internet</h4><p class="f-desc">Zgjidhni lexuesin dhe stilin e leximit; shkarkoni sure ose xhuze dhe dëgjoni pa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tefsiri</h4><p class="f-desc">Tefsiri i Diyanet-it (në turqisht dhe anglisht); prekni një ajet dhe hapet bashkë me grupin e ajeteve që mbulon.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Ndjekja e hatmes</h4><p class="f-desc">114 sure, 30 xhuze; hatmet e përfunduara dhe një datë e parashikuar përfundimi.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kaligrafia e mus'hafit</h4><p class="f-desc">Kaligrafia e Medinës ose e Turqisë — ndryshon edhe faqosja.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Listat e luajtjes</h4><p class="f-desc">Rendit suret si të duash, jepi emër listës dhe dëgjoje nga fillimi në fund — edhe pa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Përkthim i lexuar</h4><p class="f-desc">Dëgjo përkthimin me zërin e pajisjes sate — vetëm ose pas çdo ajeti, pa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Përmbajtja e ditës</h4><p class="f-desc">Ajeti, hadithi dhe emri i ditës në një ekran; kthehu një javë pas.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Shënuesit</h4><p class="f-desc">Ruani ajete dhe hadithe.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kartela për t'u ndarë</h4><p class="f-desc">Kartela të bukura për ajete, hadithe, dhikër dhe emrat e Allahut.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Ndjekja e ibadetit dhe dhikri<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Ndjekja e ibadetit</h4><div class="f-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Namazet kaza</h4><div class="f-desc">Namazet kaza sipas vakteve, agjërimet kaza sipas ditëve.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Numëruesi i dhikrit</h4><div class="f-desc">Ecuri në formë unaze, dhikër të gatshëm dhe dhikër tuajin.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Disiplina e namazit</h4><div class="f-desc">Sa kohë pas hyrjes së vaktit faleni — këtë muaj dhe gjithë kohës.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Agjërimi</h4><div class="f-desc">Ramazani, Shevali dhe ndjekja ditë për ditë.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Alarmi i syfyrit</h4><div class="f-desc">Vendoset për Ramazanin, për çdo ditë ose për ditët e agjërimeve synet.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tesbihati</h4><div class="f-desc">33-33-33, ose radha e plotë pas namazit.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Esmaul-Husna</h4><div class="f-desc">99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Ditët me arsye</h4><div class="f-desc">Ditët e menstruacioneve dhe të lehonisë; seria e namazit nuk prishet.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Ndjekja e ibadetit</h4><p class="f-desc">Unaza për namazin, Kuranin, dhikrin, hadithin dhe kazanë.</p></li>
+          <li class="f-cell"><h4 class="f-name">Namazet kaza</h4><p class="f-desc">Namazet kaza sipas vakteve, agjërimet kaza sipas ditëve.</p></li>
+          <li class="f-cell"><h4 class="f-name">Numëruesi i dhikrit</h4><p class="f-desc">Ecuri në formë unaze, dhikër të gatshëm dhe dhikër tuajin.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Disiplina e namazit</h4><p class="f-desc">Sa kohë pas hyrjes së vaktit faleni — këtë muaj dhe gjithë kohës.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Agjërimi</h4><p class="f-desc">Ramazani, Shevali dhe ndjekja ditë për ditë.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Alarmi i syfyrit</h4><p class="f-desc">Vendoset për Ramazanin, për çdo ditë ose për ditët e agjërimeve synet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tesbihati</h4><p class="f-desc">33-33-33, ose radha e plotë pas namazit.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Esmaul-Husna</h4><p class="f-desc">99 emrat e bukur të Allahut, me transliterimin dhe kuptimin e tyre; secili mund të shtohet si dhikër.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Ditët me arsye</h4><p class="f-desc">Ditët e menstruacioneve dhe të lehonisë; seria e namazit nuk prishet.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Kalendari dhe udhëzuesit<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Kalendari hixhri</h4><div class="f-desc">Gregorian dhe hixhri, me ditët e veçanta dhe Ramazanin.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Udhëzuesi i namazit</h4><div class="f-desc">17 lloje namazi; në këmbë, ulur ose me shenja.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Hutbeja e xhumasë</h4><div class="f-desc">Për përdoruesit e metodës së Diyanet-it: lexoni, dëgjoni dhe ruani hutben pa internet.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakija</h4><div class="f-desc">Të gjitha kohët e namazit të një muaji në një listë; në Ramazan numërimi i ditëve dhe iftari.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Udhëzuesi i xhumasë</h4><div class="f-desc">Përgatitja, gusli, hutbeja, surja el-Kehf dhe salavatet — e gjithë xhumaja në një faqe.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Udhëzuesi i pastrimit</h4><div class="f-desc">Abdesi, gusuli dhe tejemumi, hap pas hapi.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Kujtesë për ditët e bekuara</h4><div class="f-desc">12 ditë të bekuara: netët e bekuara kujtohen po atë mbrëmje, të tjerat një ditë më parë.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zekati dhe fitrat</h4><div class="f-desc">Llogaritës të mbështetur në fikhun klasik.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Kalendari hixhri</h4><p class="f-desc">Gregorian dhe hixhri, me ditët e veçanta dhe Ramazanin.</p></li>
+          <li class="f-cell"><h4 class="f-name">Udhëzuesi i namazit</h4><p class="f-desc">17 lloje namazi; në këmbë, ulur ose me shenja.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hutbeja e xhumasë</h4><p class="f-desc">Për përdoruesit e metodës së Diyanet-it: lexoni, dëgjoni dhe ruani hutben pa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Imsakija</h4><p class="f-desc">Të gjitha kohët e namazit të një muaji në një listë; në Ramazan numërimi i ditëve dhe iftari.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Udhëzuesi i xhumasë</h4><p class="f-desc">Përgatitja, gusli, hutbeja, surja el-Kehf dhe salavatet — e gjithë xhumaja në një faqe.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Udhëzuesi i pastrimit</h4><p class="f-desc">Abdesi, gusuli dhe tejemumi, hap pas hapi.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kujtesë për ditët e bekuara</h4><p class="f-desc">12 ditë të bekuara: netët e bekuara kujtohen po atë mbrëmje, të tjerat një ditë më parë.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zekati dhe fitrat</h4><p class="f-desc">Llogaritës të mbështetur në fikhun klasik.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Pajisjet dhe më shumë<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Kohët e namazit, kibla e gjallë, 13 komplikime.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget-et</h4><div class="f-desc">Ekrani kryesor, ekrani i kyçjes, StandBy — edhe në Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Aplikacioni për Mac</h4><div class="f-desc">Numërim mbrapsht në shiritin e menysë, shkurtore tastiere, sinkronizim me iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">I njëjti aplikacion në ekran më të madh; regjistrimet sinkronizohen me iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 gjuhë</h4><div class="f-desc">Ndërfaqe nga e djathta në të majtë në arabisht, urdisht, persisht dhe ujgurisht.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Sinkronizimi me iCloud</h4><div class="f-desc">Regjistrimet tuaja qëndrojnë në iCloud-in tuaj, në çdo pajisje.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Shkurtoret e Siri</h4><div class="f-desc">Pyetni për namazin e radhës; shënoni me zë namazin, agjërimin ose kazanë.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Qendra e Kontrollit</h4><div class="f-desc">Gjashtë veprime të shpejta (iOS 18+) — kibla, namazi i radhës e më shumë.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Kërkim i unifikuar</h4><div class="f-desc">Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Modaliteti i errët</h4><div class="f-desc">Një errësirë e ngrohtë dhe e qetë për orët e vona.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Mbështetni Vakit</h4><div class="f-desc">Mënyra vullnetare për ta mbajtur gjallë aplikacionin falas.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Kohët e namazit, kibla e gjallë, 13 komplikime.</p></li>
+          <li class="f-cell"><h4 class="f-name">Widget-et</h4><p class="f-desc">Ekrani kryesor, ekrani i kyçjes, StandBy — edhe në Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Activity</h4><p class="f-desc">Numërim mbrapsht në Dynamic Island dhe në ekranin e kyçjes.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Aplikacioni për Mac</h4><p class="f-desc">Numërim mbrapsht në shiritin e menysë, shkurtore tastiere, sinkronizim me iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">I njëjti aplikacion në ekran më të madh; regjistrimet sinkronizohen me iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 gjuhë</h4><p class="f-desc">Ndërfaqe nga e djathta në të majtë në arabisht, urdisht, persisht dhe ujgurisht.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sinkronizimi me iCloud</h4><p class="f-desc">Regjistrimet tuaja qëndrojnë në iCloud-in tuaj, në çdo pajisje.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Shkurtoret e Siri</h4><p class="f-desc">Pyetni për namazin e radhës; shënoni me zë namazin, agjërimin ose kazanë.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Qendra e Kontrollit</h4><p class="f-desc">Gjashtë veprime të shpejta (iOS 18+) — kibla, namazi i radhës e më shumë.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kërkim i unifikuar</h4><p class="f-desc">Një kërkim për çdo mjet — shkruani «El-Bekare 255» dhe shkoni drejt te ajeti.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Modaliteti i errët</h4><p class="f-desc">Një errësirë e ngrohtë dhe e qetë për orët e vona.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mbështetni Vakit</h4><p class="f-desc">Mënyra vullnetare për ta mbajtur gjallë aplikacionin falas.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Shfaq të gjitha 51 mjetet</button>
@@ -776,27 +829,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Fjalë të mira nga</span><br><em>përdorues të vërtetë.</em></h2>
+      <h2 class="sec-title"><span>Fjalë të mira nga</span> <em>përdorues të vërtetë.</em></h2>
       <div class="t-meta">
         <span>Vlerësimi mesatar</span>
-        <b>4,8 ★</b>
+        <b>4,8 <span class="star" aria-hidden="true">★</span></b>
         <span>nga 473 vlerësime në App Store</span>
       </div>
     </div>
     <p class="t-note">Vlerësime nga App Store i Turqisë, të përkthyera nga turqishtja.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Fjalë të mira nga përdorues të vërtetë.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Aplikacion 10/10.</div><p class="t-body">Qoftë për kohët e namazit të shfaqura me ato grafika të mrekullueshme në widget, qoftë për faktin që është pa reklama dhe ka një ndërfaqe shumë të pastër — 10/10. Jam vërtet shumë i kënaqur, ua rekomandoj të gjithëve.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">I mrekullueshëm.</div><p class="t-body">Aplikacioni më i pastër dhe më i përdorshëm që mund të gjeni. Pa reklama, ndërfaqja shumë e thjeshtë dhe elegante. Pjesa e gjetjes së kiblës punon vërtet shumë saktë dhe bukur. Edhe përmbajtjet e tjera janë shumë të bukura.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">I thjeshtë dhe i dobishëm.</div><p class="t-body">Është në një nivel më të lartë se shumica e aplikacioneve të tjera, e lojërave dhe e rrjeteve sociale. Faleminderit për mundin tuaj, është bërë një punë e shkëlqyer. Jam dikush që përpiqet ta jetojë fenë më me plan, dhe ky aplikacion m'u bë krah i djathtë.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">I përsosur.</div><p class="t-body">Të lumtë dora atij që e bëri. Pa reklama. Është dhënë mund serioz. Duket që është bërë vetëm për hir të kënaqësisë së Allahut. Faleminderit.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Një aplikacion i rrallë.</div><p class="t-body">Allahu qoftë i kënaqur me ju. Kohët e namazit kaq të rregulluara, hadithet të dhëna me kujdes me tekstin arab, përkthimin turqisht dhe shkallën e vërtetësisë — e megjithatë pa reklama. Një aplikacion i tillë është i rrallë. Shkarkojeni, ka shumë gjasa të mbetet përgjithmonë në telefonin tuaj.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Pikërisht ajo që duhej.</div><p class="t-body">Allahu qoftë i kënaqur me atë që e mendoi dhe e realizoi. Shpjegues, pa reklama dhe i qartë.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Me përditësimin e fundit është bërë i shkëlqyer.</div><p class="t-body">I thjeshtë, estetik, i dobishëm, i shpejtë — ç'të them tjetër. Të lumtë dora, mundi dhe zemra.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Allahu qoftë i kënaqur.</div><p class="t-body">Isha lodhur nga ndërfaqet plot reklama, që kërkojnë vazhdimisht para dhe janë të papërdorshme. Vakit është vërtet i mrekullueshëm: punon kudo, pa internet, pa reklama. Kurani, hadithet, numëruesi i dhikrit, ndjekja e namazit — nuk më duhet asnjë aplikacion tjetër.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">I fshiva të tjerët.</div><p class="t-body">Allahu qoftë i kënaqur me atë që e bëri. Ju lumtë duart. Më ka qenë shumë i dobishëm.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Më i miri.</div><p class="t-body">Nuk kam parë më të mirë se ky. Një aplikacion që duhet të jetë në çdo telefon. Allahu qoftë i kënaqur me vëllanë që e zhvilloi.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Vërtet i dobishëm.</div><p class="t-body">Aplikacioni është shumë i dobishëm dhe praktik. Duhet të jetë në telefonin e çdo myslimani. Allahu qoftë i kënaqur me atë që e zhvilloi.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Allahu qoftë i kënaqur.</div><p class="t-body">Vëlla, shumë faleminderit që e bëre falas një aplikacion kaq të vlefshëm. Allahu të dhëntë sipas zemrës, inshallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Aplikacion 10/10.</div><p class="t-body">Qoftë për kohët e namazit të shfaqura me ato grafika të mrekullueshme në widget, qoftë për faktin që është pa reklama dhe ka një ndërfaqe shumë të pastër — 10/10. Jam vërtet shumë i kënaqur, ua rekomandoj të gjithëve.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">I mrekullueshëm.</div><p class="t-body">Aplikacioni më i pastër dhe më i përdorshëm që mund të gjeni. Pa reklama, ndërfaqja shumë e thjeshtë dhe elegante. Pjesa e gjetjes së kiblës punon vërtet shumë saktë dhe bukur. Edhe përmbajtjet e tjera janë shumë të bukura.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">I thjeshtë dhe i dobishëm.</div><p class="t-body">Është në një nivel më të lartë se shumica e aplikacioneve të tjera, e lojërave dhe e rrjeteve sociale. Faleminderit për mundin tuaj, është bërë një punë e shkëlqyer. Jam dikush që përpiqet ta jetojë fenë më me plan, dhe ky aplikacion m'u bë krah i djathtë.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">I përsosur.</div><p class="t-body">Të lumtë dora atij që e bëri. Pa reklama. Është dhënë mund serioz. Duket që është bërë vetëm për hir të kënaqësisë së Allahut. Faleminderit.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Një aplikacion i rrallë.</div><p class="t-body">Allahu qoftë i kënaqur me ju. Kohët e namazit kaq të rregulluara, hadithet të dhëna me kujdes me tekstin arab, përkthimin turqisht dhe shkallën e vërtetësisë — e megjithatë pa reklama. Një aplikacion i tillë është i rrallë. Shkarkojeni, ka shumë gjasa të mbetet përgjithmonë në telefonin tuaj.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Pikërisht ajo që duhej.</div><p class="t-body">Allahu qoftë i kënaqur me atë që e mendoi dhe e realizoi. Shpjegues, pa reklama dhe i qartë.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Me përditësimin e fundit është bërë i shkëlqyer.</div><p class="t-body">I thjeshtë, estetik, i dobishëm, i shpejtë — ç'të them tjetër. Të lumtë dora, mundi dhe zemra.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Allahu qoftë i kënaqur.</div><p class="t-body">Isha lodhur nga ndërfaqet plot reklama, që kërkojnë vazhdimisht para dhe janë të papërdorshme. Vakit është vërtet i mrekullueshëm: punon kudo, pa internet, pa reklama. Kurani, hadithet, numëruesi i dhikrit, ndjekja e namazit — nuk më duhet asnjë aplikacion tjetër.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">I fshiva të tjerët.</div><p class="t-body">Allahu qoftë i kënaqur me atë që e bëri. Ju lumtë duart. Më ka qenë shumë i dobishëm.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Më i miri.</div><p class="t-body">Nuk kam parë më të mirë se ky. Një aplikacion që duhet të jetë në çdo telefon. Allahu qoftë i kënaqur me vëllanë që e zhvilloi.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Vërtet i dobishëm.</div><p class="t-body">Aplikacioni është shumë i dobishëm dhe praktik. Duhet të jetë në telefonin e çdo myslimani. Allahu qoftë i kënaqur me atë që e zhvilloi.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Allahu qoftë i kënaqur.</div><p class="t-body">Vëlla, shumë faleminderit që e bëre falas një aplikacion kaq të vlefshëm. Allahu të dhëntë sipas zemrës, inshallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -804,7 +857,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Përgjigje të sinqerta</span><br><em>për pyetje të sinqerta.</em></h2>
+    <h2 class="sec-title"><span>Përgjigje të sinqerta</span> <em>për pyetje të sinqerta.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">A punon pa internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Po. Kohët e namazit llogariten në telefonin tuaj sipas vendndodhjes suaj. Teksti i Kuranit, kibla, dhikri dhe të gjitha mjetet bazë punojnë plotësisht pa internet.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">A vijnë njoftimet edhe nëse nuk e hap kurrë aplikacionin?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Po. Ato planifikohen lokalisht në pajisjen tuaj, kështu që i merrni edhe kur aplikacioni është i mbyllur. Nëse jepni leje vendndodhjeje «Gjithmonë», Vakit i rillogarit kohët në heshtje pasi udhëtoni.</div></div></div>
@@ -827,7 +880,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>Që ibadeti juaj</span> <em>të mos ndërpritet.</em></h2>
+  <h2 class="sec-title"><span>Që ibadeti juaj</span> <em>të mos ndërpritet.</em></h2>
   <p>Falas. Pa llogari. Punon pa internet. iPhone, iPad, Apple Watch dhe Mac — iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-sq" class="btn-primary">

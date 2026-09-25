@@ -114,11 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -394,7 +390,7 @@
     <a href="#faq">Domande</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Attiva o disattiva la modalità scura">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Attiva o disattiva la modalità scura"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Chiudi">
       <summary aria-label="Lingua"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Italiano</span></summary>
       <ul class="lang-list">
@@ -505,53 +501,96 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Tutto, niente di superfluo</div>
-    <h2 class="sc-h2"><span>Una compagna,</span><br><em>non una macchina per catturare l'attenzione.</em></h2>
-    <p class="sc-lede">15 strumenti essenziali, ognuno pensato per trasmettere calma appena lo apri. Tocca per un'anteprima.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Come il cielo.</h3><p>A ogni ingresso di un tempo di preghiera lo schermo cambia insieme al cielo: stelle vere e la luna al loro posto reale. I tempi makruh e quelli delle preghiere volontarie sono facoltativi.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Senza sbloccare.</h3><p>La prossima preghiera sulla schermata di blocco, in un widget, nella Dynamic Island e sull'orologio. Uno sguardo sereno, mai una distrazione.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Tutto in un solo posto.</h3><p>Corano, hadith, sermone del venerdì, dhikr, i 99 nomi, guide e calendario: tutto riunito in un unico posto. Nessuna funzione bloccata a pagamento.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>La direzione giusta.</h3><p>Rivolgiti verso la Qibla e il telefono vibra, con la distanza dalla Kaaba sempre in vista.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>La tua adorazione, in anelli.</h3><p>Anelli per preghiera, Corano, dhikr, hadith e qada; quanto presto preghi dopo l'ingresso di ogni tempo, e il tuo khatm. Progressi sereni, senza sensi di colpa.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Le preghiere mancate, recuperate una a una.</h3><p>Calcola le preghiere mancate di una vita per ciascun tempo e recuperale una alla volta, con una stima di quando avrai finito.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Il Corano, anche offline.</h3><p>Leggi, ascolta, rifletti: grafia di Medina o di Turchia, lettura guidata parola per parola, tafsir e recitazione scaricabile.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Diciassette preghiere, illustrate.</h3><p>Dall'abluzione al tasbih; in piedi, da seduti o a gesti. Passo dopo passo, spiegate senza condiscendenza.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Un calendario che ricorda.</h3><p>Hegiriano e gregoriano insieme. Notti sacre, Ramadan, gli Eid e la loro vigilia, con il riepilogo mensile dell'adorazione subito sotto.</p></div><span class="sc-tag">Anteprima</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Il conto, sempre a portata di mano.</h3><p>Contatore di dhikr e tasbihat dopo la preghiera; dhikr predefiniti, i tuoi dhikr e un obiettivo giornaliero.</p></div><span class="sc-tag">Anteprima</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraq, Duha, Awwabin e le parti della notte; facoltative.">Preghiere volontarie</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Grafia di Medina o di Turchia; anche l'impaginazione cambia.">Grafia del mushaf</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="I 99 nomi di Allah, con traslitterazione e significato; puoi aggiungerli come dhikr.">Asma al-Husna</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, oppure la sequenza completa dopo la preghiera.">Tasbihat</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Anelli per preghiera, Corano, dhikr, hadith e qada.">Monitoraggio dell'adorazione</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Tutto, niente di superfluo</p>
+    <h2 class="sec-title"><span>Una compagna,</span> <em>non una macchina per catturare l'attenzione.</em></h2>
+    <p class="sec-lede">15 strumenti essenziali, ognuno pensato per trasmettere calma appena lo apri.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/it/prayer-times.webp" alt="Come il cielo." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/it/widget.webp" alt="Senza sbloccare." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/it/discover.webp" alt="Tutto in un solo posto." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/it/qibla.webp" alt="La direzione giusta." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/it/profile.webp" alt="La tua adorazione, in anelli." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/it/qada.webp" alt="Le preghiere mancate, recuperate una a una." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/it/quran.webp" alt="Il Corano, anche offline." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/it/prayer-guide.webp" alt="Diciassette preghiere, illustrate." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/it/calendar.webp" alt="Un calendario che ricorda." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/it/zikirmatik.webp" alt="Il conto, sempre a portata di mano." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/it/more/prayer-nafile.webp" alt="Preghiere volontarie" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/it/more/mushaf.webp" alt="Grafia del mushaf" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/it/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/it/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/it/more/accounting-year.webp" alt="Monitoraggio dell'adorazione" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Una compagna, non una macchina per catturare l'attenzione.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/prayer-times.webp" alt="Come il cielo." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Come il cielo.</h3>
+          <p class="g-desc">A ogni ingresso di un tempo di preghiera lo schermo cambia insieme al cielo: stelle vere e la luna al loro posto reale. I tempi makruh e quelli delle preghiere volontarie sono facoltativi.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/widget.webp" alt="Senza sbloccare." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Senza sbloccare.</h3>
+          <p class="g-desc">La prossima preghiera sulla schermata di blocco, in un widget, nella Dynamic Island e sull'orologio. Uno sguardo sereno, mai una distrazione.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/discover.webp" alt="Tutto in un solo posto." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tutto in un solo posto.</h3>
+          <p class="g-desc">Corano, hadith, sermone del venerdì, dhikr, i 99 nomi, guide e calendario: tutto riunito in un unico posto. Nessuna funzione bloccata a pagamento.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/qibla.webp" alt="La direzione giusta." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">La direzione giusta.</h3>
+          <p class="g-desc">Rivolgiti verso la Qibla e il telefono vibra, con la distanza dalla Kaaba sempre in vista.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/profile.webp" alt="La tua adorazione, in anelli." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">La tua adorazione, in anelli.</h3>
+          <p class="g-desc">Anelli per preghiera, Corano, dhikr, hadith e qada; quanto presto preghi dopo l'ingresso di ogni tempo, e il tuo khatm. Progressi sereni, senza sensi di colpa.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/qada.webp" alt="Le preghiere mancate, recuperate una a una." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Le preghiere mancate, recuperate una a una.</h3>
+          <p class="g-desc">Calcola le preghiere mancate di una vita per ciascun tempo e recuperale una alla volta, con una stima di quando avrai finito.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/quran.webp" alt="Il Corano, anche offline." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Il Corano, anche offline.</h3>
+          <p class="g-desc">Leggi, ascolta, rifletti: grafia di Medina o di Turchia, lettura guidata parola per parola, tafsir e recitazione scaricabile.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/prayer-guide.webp" alt="Diciassette preghiere, illustrate." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Diciassette preghiere, illustrate.</h3>
+          <p class="g-desc">Dall'abluzione al tasbih; in piedi, da seduti o a gesti. Passo dopo passo, spiegate senza condiscendenza.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/calendar.webp" alt="Un calendario che ricorda." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Un calendario che ricorda.</h3>
+          <p class="g-desc">Hegiriano e gregoriano insieme. Notti sacre, Ramadan, gli Eid e la loro vigilia, con il riepilogo mensile dell'adorazione subito sotto.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/zikirmatik.webp" alt="Il conto, sempre a portata di mano." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Il conto, sempre a portata di mano.</h3>
+          <p class="g-desc">Contatore di dhikr e tasbihat dopo la preghiera; dhikr predefiniti, i tuoi dhikr e un obiettivo giornaliero.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/more/prayer-nafile.webp" alt="Preghiere volontarie" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Preghiere volontarie</h3>
+          <p class="g-desc">Ishraq, Duha, Awwabin e le parti della notte; facoltative.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/more/mushaf.webp" alt="Grafia del mushaf" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Grafia del mushaf</h3>
+          <p class="g-desc">Grafia di Medina o di Turchia; anche l'impaginazione cambia.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Asma al-Husna</h3>
+          <p class="g-desc">I 99 nomi di Allah, con traslitterazione e significato; puoi aggiungerli come dhikr.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tasbihat</h3>
+          <p class="g-desc">33-33-33, oppure la sequenza completa dopo la preghiera.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/it/more/accounting-year.webp" alt="Monitoraggio dell'adorazione" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Monitoraggio dell'adorazione</h3>
+          <p class="g-desc">Anelli per preghiera, Corano, dhikr, hadith e qada.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -626,30 +665,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Emanet — un bene affidato</div>
-    <h2>
-      <span>I tuoi dati sono</span> <em>un bene affidato,</em><br>
-      <span>non un prodotto.</span>
+    <p class="sec-eye">Emanet — un bene affidato</p>
+    <h2 class="sec-title">
+      <span>I tuoi dati sono</span> <span>un bene affidato,</span> <em>non un prodotto.</em>
     </h2>
     <p class="trust-lede">Altre app di preghiera sono state scoperte a vendere i dati di posizione. Vakit ha scelto un'altra strada: le tue coordinate non arrivano mai ai nostri server. Nessun account. Nessuna pubblicità. I tuoi dati non vengono mai venduti. Non è una funzione: è un principio.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>Scarica. Apri. Prega.</h3>
         <p>Niente registrazione, niente accesso, nessuna password da dimenticare. Vakit funziona dal momento in cui la installi.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Calcolato sul tuo telefono.</h3>
         <p>Gli orari di preghiera vengono calcolati sul dispositivo a partire dalla tua posizione, con il metodo che scegli. Nulla viene inviato a un server per essere «consultato».</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>La tua posizione esatta non è nostra.</h3>
         <p>Le tue coordinate non arrivano mai ai nostri server: conosciamo solo paese, città e comune. Per il tuo indirizzo e le moschee vicine, la posizione va solo a Mappe di Apple.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Un'informativa chiara.</h3>
         <p>Dati d'uso legati a un codice pseudonimo, senza nome, email o telefono. La nostra informativa sulla privacy elenca esattamente cosa viene inviato, e si legge in un minuto.</p>
       </div>
@@ -677,85 +715,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 strumenti</div>
-      <h2><span>Una sola app,</span><br><em>per una vita intera di adorazione.</em></h2>
+      <p class="sec-eye">51 strumenti</p>
+      <h2 class="sec-title"><span>Una sola app,</span> <em>per una vita intera di adorazione.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Orari di preghiera e Qibla<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Orari di preghiera</h4><div class="f-desc">12 metodi di calcolo, attenti al fuso orario e ai tuoi viaggi.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Bussola Qibla</h4><div class="f-desc">Ti guida con la vibrazione e mostra la distanza dalla Kaaba.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Cielo dal vivo</h4><div class="f-desc">Stelle vere e la luna sull'arco del giorno, per il luogo e l'ora in cui sei.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Sveglia del Fajr</h4><div class="f-desc">Suona prima del sorgere del sole se non hai pregato il Fajr, tace se l'hai fatto; su iOS 26 suona anche in modalità silenziosa.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Suoni dell'adhan</h4><div class="f-desc">Ogni preghiera nel suo maqam: saba, ussak, rast, segah, hicaz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Preghiere volontarie</h4><div class="f-desc">Ishraq, Duha, Awwabin e le parti della notte; facoltative.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Tempi makruh</h4><div class="f-desc">Segnati sull'arco del giorno, con la narrazione su cui si basano.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Giorni benedetti</h4><div class="f-desc">Notti sacre, feste e le loro vigilie da oggi in avanti, ognuna con una guida.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Posizione manuale</h4><div class="f-desc">Imposta la posizione a mano, o lascia che ti segua quando viaggi.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Notifiche</h4><div class="f-desc">Sul dispositivo, locali, affidabili.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Moschee vicine</h4><div class="f-desc">Trovale con Mappe di Apple, senza che la tua posizione arrivi ai nostri server; mappa, distanza, indicazioni.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Orari di preghiera</h4><p class="f-desc">12 metodi di calcolo, attenti al fuso orario e ai tuoi viaggi.</p></li>
+          <li class="f-cell"><h4 class="f-name">Bussola Qibla</h4><p class="f-desc">Ti guida con la vibrazione e mostra la distanza dalla Kaaba.</p></li>
+          <li class="f-cell"><h4 class="f-name">Cielo dal vivo</h4><p class="f-desc">Stelle vere e la luna sull'arco del giorno, per il luogo e l'ora in cui sei.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sveglia del Fajr</h4><p class="f-desc">Suona prima del sorgere del sole se non hai pregato il Fajr, tace se l'hai fatto; su iOS 26 suona anche in modalità silenziosa.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Suoni dell'adhan</h4><p class="f-desc">Ogni preghiera nel suo maqam: saba, ussak, rast, segah, hicaz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Preghiere volontarie</h4><p class="f-desc">Ishraq, Duha, Awwabin e le parti della notte; facoltative.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tempi makruh</h4><p class="f-desc">Segnati sull'arco del giorno, con la narrazione su cui si basano.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Giorni benedetti</h4><p class="f-desc">Notti sacre, feste e le loro vigilie da oggi in avanti, ognuna con una guida.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Posizione manuale</h4><p class="f-desc">Imposta la posizione a mano, o lascia che ti segua quando viaggi.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Notifiche</h4><p class="f-desc">Sul dispositivo, locali, affidabili.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Moschee vicine</h4><p class="f-desc">Trovale con Mappe di Apple, senza che la tua posizione arrivi ai nostri server; mappa, distanza, indicazioni.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Corano e hadith<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Il Sacro Corano</h4><div class="f-desc">114 sure. Parola per parola, traduzione in turco e inglese, tafsir, mushaf classico.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadith</h4><div class="f-desc">Oltre 36.000 hadith da sette grandi raccolte.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Recitazione offline</h4><div class="f-desc">Scegli recitatore e stile; scarica sure o juz e ascolta senza internet.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsir</h4><div class="f-desc">Il tafsir di Diyanet (in turco e inglese): tocca un versetto per aprirlo, con i versetti che commenta.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Monitoraggio del khatm</h4><div class="f-desc">114 sure, 30 juz; khatm completati e una data di fine stimata.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Grafia del mushaf</h4><div class="f-desc">Grafia di Medina o di Turchia; anche l'impaginazione cambia.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Playlist</h4><div class="f-desc">Metti le sure nel tuo ordine, dai un nome alla lista e ascoltala dall'inizio alla fine, anche offline.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Traduzione letta</h4><div class="f-desc">Ascolta la traduzione con la voce del tuo dispositivo, da sola o dopo ogni versetto, offline.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Contenuto del giorno</h4><div class="f-desc">Versetto, hadith e nome del giorno in una schermata; rivedi l'ultima settimana.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Segnalibri</h4><div class="f-desc">Salva versetti e hadith.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Schede da condividere</h4><div class="f-desc">Belle schede per versetti, hadith, dhikr e i nomi di Allah.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Il Sacro Corano</h4><p class="f-desc">114 sure. Parola per parola, traduzione in turco e inglese, tafsir, mushaf classico.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hadith</h4><p class="f-desc">Oltre 36.000 hadith da sette grandi raccolte.</p></li>
+          <li class="f-cell"><h4 class="f-name">Recitazione offline</h4><p class="f-desc">Scegli recitatore e stile; scarica sure o juz e ascolta senza internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tafsir</h4><p class="f-desc">Il tafsir di Diyanet (in turco e inglese): tocca un versetto per aprirlo, con i versetti che commenta.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Monitoraggio del khatm</h4><p class="f-desc">114 sure, 30 juz; khatm completati e una data di fine stimata.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Grafia del mushaf</h4><p class="f-desc">Grafia di Medina o di Turchia; anche l'impaginazione cambia.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Playlist</h4><p class="f-desc">Metti le sure nel tuo ordine, dai un nome alla lista e ascoltala dall'inizio alla fine, anche offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Traduzione letta</h4><p class="f-desc">Ascolta la traduzione con la voce del tuo dispositivo, da sola o dopo ogni versetto, offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Contenuto del giorno</h4><p class="f-desc">Versetto, hadith e nome del giorno in una schermata; rivedi l'ultima settimana.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Segnalibri</h4><p class="f-desc">Salva versetti e hadith.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Schede da condividere</h4><p class="f-desc">Belle schede per versetti, hadith, dhikr e i nomi di Allah.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Monitoraggio dell'adorazione e dhikr<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Monitoraggio dell'adorazione</h4><div class="f-desc">Anelli per preghiera, Corano, dhikr, hadith e qada.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Preghiere mancate</h4><div class="f-desc">Le preghiere di qada per ciascun tempo, i digiuni mancati giorno per giorno.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Contatore di dhikr</h4><div class="f-desc">Avanzamento ad anello, dhikr predefiniti e personalizzati.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Puntualità nella preghiera</h4><div class="f-desc">Quanto tempo dopo l'ingresso di ogni preghiera preghi: questo mese e da sempre.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Digiuno</h4><div class="f-desc">Ramadan, Shawwal e monitoraggio giorno per giorno.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Sveglia del suhur</h4><div class="f-desc">Si imposta per il Ramadan, per ogni giorno o per i giorni di digiuno raccomandati.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbihat</h4><div class="f-desc">33-33-33, oppure la sequenza completa dopo la preghiera.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Asma al-Husna</h4><div class="f-desc">I 99 nomi di Allah, con traslitterazione e significato; puoi aggiungerli come dhikr.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Giorni di esenzione</h4><div class="f-desc">Giorni di mestruazioni e di puerperio; la tua serie di preghiere resta intatta.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Monitoraggio dell'adorazione</h4><p class="f-desc">Anelli per preghiera, Corano, dhikr, hadith e qada.</p></li>
+          <li class="f-cell"><h4 class="f-name">Preghiere mancate</h4><p class="f-desc">Le preghiere di qada per ciascun tempo, i digiuni mancati giorno per giorno.</p></li>
+          <li class="f-cell"><h4 class="f-name">Contatore di dhikr</h4><p class="f-desc">Avanzamento ad anello, dhikr predefiniti e personalizzati.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Puntualità nella preghiera</h4><p class="f-desc">Quanto tempo dopo l'ingresso di ogni preghiera preghi: questo mese e da sempre.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Digiuno</h4><p class="f-desc">Ramadan, Shawwal e monitoraggio giorno per giorno.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sveglia del suhur</h4><p class="f-desc">Si imposta per il Ramadan, per ogni giorno o per i giorni di digiuno raccomandati.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tasbihat</h4><p class="f-desc">33-33-33, oppure la sequenza completa dopo la preghiera.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Asma al-Husna</h4><p class="f-desc">I 99 nomi di Allah, con traslitterazione e significato; puoi aggiungerli come dhikr.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Giorni di esenzione</h4><p class="f-desc">Giorni di mestruazioni e di puerperio; la tua serie di preghiere resta intatta.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Calendario e guide<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Calendario hegiriano</h4><div class="f-desc">Gregoriano e hegiriano, con i giorni speciali e il Ramadan.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Guida alla preghiera</h4><div class="f-desc">17 tipi di preghiera; in piedi, da seduti o a gesti.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Sermone del venerdì</h4><div class="f-desc">Per chi usa il metodo Diyanet: leggi, ascolta e conserva offline il sermone.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakiye</h4><div class="f-desc">Tutti gli orari di un mese in un'unica lista; in Ramadan conteggio dei giorni e iftar.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Guida del venerdì</h4><div class="f-desc">Preparazione, ghusl, il sermone, la sura al-Kahf e le salawat: tutto il venerdì in una pagina.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Guida alla purificazione</h4><div class="f-desc">Abluzione, ghusl e tayammum, passo dopo passo.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Promemoria dei giorni sacri</h4><div class="f-desc">12 giorni sacri: le notti sacre la sera stessa, gli altri il giorno prima.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zakat e fitra</h4><div class="f-desc">Calcolatori fondati sul fiqh classico.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Calendario hegiriano</h4><p class="f-desc">Gregoriano e hegiriano, con i giorni speciali e il Ramadan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Guida alla preghiera</h4><p class="f-desc">17 tipi di preghiera; in piedi, da seduti o a gesti.</p></li>
+          <li class="f-cell"><h4 class="f-name">Sermone del venerdì</h4><p class="f-desc">Per chi usa il metodo Diyanet: leggi, ascolta e conserva offline il sermone.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Imsakiye</h4><p class="f-desc">Tutti gli orari di un mese in un'unica lista; in Ramadan conteggio dei giorni e iftar.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Guida del venerdì</h4><p class="f-desc">Preparazione, ghusl, il sermone, la sura al-Kahf e le salawat: tutto il venerdì in una pagina.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Guida alla purificazione</h4><p class="f-desc">Abluzione, ghusl e tayammum, passo dopo passo.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Promemoria dei giorni sacri</h4><p class="f-desc">12 giorni sacri: le notti sacre la sera stessa, gli altri il giorno prima.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zakat e fitra</h4><p class="f-desc">Calcolatori fondati sul fiqh classico.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Dispositivi e altro<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Orari di preghiera, Qibla dal vivo, 13 complicazioni.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget</h4><div class="f-desc">Schermata Home, schermata di blocco, StandBy, e anche su Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Attività in tempo reale</h4><div class="f-desc">Conto alla rovescia nella Dynamic Island e nella schermata di blocco.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">App per Mac</h4><div class="f-desc">Conto alla rovescia nella barra dei menu, scorciatoie da tastiera, sincronizzazione iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">La stessa app su uno schermo più grande; i tuoi dati si sincronizzano con iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 lingue</h4><div class="f-desc">Interfaccia da destra a sinistra in arabo, urdu, persiano e uiguro.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Sincronizzazione iCloud</h4><div class="f-desc">I tuoi dati restano nel tuo iCloud, su ogni dispositivo.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Comandi rapidi di Siri</h4><div class="f-desc">Chiedi la prossima preghiera; segna a voce una preghiera, un digiuno o una qada.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Centro di Controllo</h4><div class="f-desc">Sei azioni rapide (iOS 18+): Qibla, prossima preghiera e altro.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Ricerca unificata</h4><div class="f-desc">Una ricerca, tutti gli strumenti: scrivi «Al-Baqara 255» e vai dritto al versetto.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Modalità scura</h4><div class="f-desc">Un buio caldo e quieto per le ore tarde.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Sostieni Vakit</h4><div class="f-desc">Modi facoltativi per mantenere viva l'app gratuita.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Orari di preghiera, Qibla dal vivo, 13 complicazioni.</p></li>
+          <li class="f-cell"><h4 class="f-name">Widget</h4><p class="f-desc">Schermata Home, schermata di blocco, StandBy, e anche su Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">Attività in tempo reale</h4><p class="f-desc">Conto alla rovescia nella Dynamic Island e nella schermata di blocco.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">App per Mac</h4><p class="f-desc">Conto alla rovescia nella barra dei menu, scorciatoie da tastiera, sincronizzazione iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">La stessa app su uno schermo più grande; i tuoi dati si sincronizzano con iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 lingue</h4><p class="f-desc">Interfaccia da destra a sinistra in arabo, urdu, persiano e uiguro.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sincronizzazione iCloud</h4><p class="f-desc">I tuoi dati restano nel tuo iCloud, su ogni dispositivo.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Comandi rapidi di Siri</h4><p class="f-desc">Chiedi la prossima preghiera; segna a voce una preghiera, un digiuno o una qada.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Centro di Controllo</h4><p class="f-desc">Sei azioni rapide (iOS 18+): Qibla, prossima preghiera e altro.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Ricerca unificata</h4><p class="f-desc">Una ricerca, tutti gli strumenti: scrivi «Al-Baqara 255» e vai dritto al versetto.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Modalità scura</h4><p class="f-desc">Un buio caldo e quieto per le ore tarde.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sostieni Vakit</h4><p class="f-desc">Modi facoltativi per mantenere viva l'app gratuita.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Mostra tutti i 51 strumenti</button>
@@ -766,27 +804,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Belle parole da</span><br><em>utenti reali.</em></h2>
+      <h2 class="sec-title"><span>Belle parole da</span> <em>utenti reali.</em></h2>
       <div class="t-meta">
         <span>Valutazione media</span>
-        <b>4,8 ★</b>
+        <b>4,8 <span class="star" aria-hidden="true">★</span></b>
         <span>su 473 valutazioni dell'App Store</span>
       </div>
     </div>
     <p class="t-note">Recensioni dell'App Store turco, tradotte dal turco.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Belle parole da utenti reali.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Un'app da 10/10.</div><p class="t-body">Che si tratti degli orari di preghiera mostrati con quelle bellissime grafiche del widget, o del fatto che non ha pubblicità e ha un'interfaccia pulitissima: 10/10. Sono davvero molto soddisfatto e la consiglio a tutti.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Fantastica.</div><p class="t-body">L'app più pulita e pratica che si possa trovare. Niente pubblicità, un'interfaccia semplice ed elegante. La ricerca della Qibla funziona davvero con grande precisione. Anche il resto dei contenuti è molto bello.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Semplice e pratica.</div><p class="t-body">È a un livello più alto della maggior parte delle altre app, dei giochi e dei social. Grazie per il vostro impegno, è un lavoro splendido. Cerco di vivere la mia fede in modo più ordinato, e questa app è diventata il mio braccio destro.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Impeccabile.</div><p class="t-body">Benedette le mani di chi l'ha fatta. Niente pubblicità. C'è un impegno serio dietro. Si vede che è fatta solo per il compiacimento di Allah. Grazie.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Un'app rara.</div><p class="t-body">Che Allah sia soddisfatto di voi. Orari di preghiera così ben organizzati, e hadith riportati con cura, con il testo arabo, la traduzione turca e il grado di autenticità, eppure senza pubblicità: un'app così è rara. Scaricatela, probabilmente vi resterà sul telefono per sempre.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Esattamente ciò che serviva.</div><p class="t-body">Che Allah benedica chi l'ha pensata e realizzata. Chiara, senza pubblicità e diretta.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Con l'ultimo aggiornamento è diventata splendida.</div><p class="t-body">Semplice, elegante, pratica, veloce: che altro dire? Benedette le tue mani, il tuo impegno e il tuo cuore.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Ero stanco di interfacce piene di pubblicità, che chiedono soldi di continuo e sono scomode da usare. Vakit è davvero fantastica: funziona ovunque, senza internet, senza pubblicità. Corano, hadith, contatore di dhikr, monitoraggio delle preghiere: non mi serve nessun'altra app.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Ho cancellato le altre.</div><p class="t-body">Che Allah sia soddisfatto di chi l'ha fatta. Benedette le vostre mani. Mi è stata utilissima.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">La migliore.</div><p class="t-body">Non ho mai visto niente di meglio. Un'app che dovrebbe esserci su ogni telefono. Che Allah sia soddisfatto del fratello che l'ha sviluppata.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Davvero utile.</div><p class="t-body">L'app è utilissima e pratica. Dovrebbe esserci sul telefono di ogni musulmano. Che Allah sia soddisfatto di chi l'ha sviluppata.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Fratello, grazie di cuore per aver reso gratuita un'app così preziosa. Che Allah ti conceda ciò che il tuo cuore desidera, in sha Allah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Un'app da 10/10.</div><p class="t-body">Che si tratti degli orari di preghiera mostrati con quelle bellissime grafiche del widget, o del fatto che non ha pubblicità e ha un'interfaccia pulitissima: 10/10. Sono davvero molto soddisfatto e la consiglio a tutti.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Fantastica.</div><p class="t-body">L'app più pulita e pratica che si possa trovare. Niente pubblicità, un'interfaccia semplice ed elegante. La ricerca della Qibla funziona davvero con grande precisione. Anche il resto dei contenuti è molto bello.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Semplice e pratica.</div><p class="t-body">È a un livello più alto della maggior parte delle altre app, dei giochi e dei social. Grazie per il vostro impegno, è un lavoro splendido. Cerco di vivere la mia fede in modo più ordinato, e questa app è diventata il mio braccio destro.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Impeccabile.</div><p class="t-body">Benedette le mani di chi l'ha fatta. Niente pubblicità. C'è un impegno serio dietro. Si vede che è fatta solo per il compiacimento di Allah. Grazie.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Un'app rara.</div><p class="t-body">Che Allah sia soddisfatto di voi. Orari di preghiera così ben organizzati, e hadith riportati con cura, con il testo arabo, la traduzione turca e il grado di autenticità, eppure senza pubblicità: un'app così è rara. Scaricatela, probabilmente vi resterà sul telefono per sempre.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Esattamente ciò che serviva.</div><p class="t-body">Che Allah benedica chi l'ha pensata e realizzata. Chiara, senza pubblicità e diretta.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Con l'ultimo aggiornamento è diventata splendida.</div><p class="t-body">Semplice, elegante, pratica, veloce: che altro dire? Benedette le tue mani, il tuo impegno e il tuo cuore.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Ero stanco di interfacce piene di pubblicità, che chiedono soldi di continuo e sono scomode da usare. Vakit è davvero fantastica: funziona ovunque, senza internet, senza pubblicità. Corano, hadith, contatore di dhikr, monitoraggio delle preghiere: non mi serve nessun'altra app.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Ho cancellato le altre.</div><p class="t-body">Che Allah sia soddisfatto di chi l'ha fatta. Benedette le vostre mani. Mi è stata utilissima.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">La migliore.</div><p class="t-body">Non ho mai visto niente di meglio. Un'app che dovrebbe esserci su ogni telefono. Che Allah sia soddisfatto del fratello che l'ha sviluppata.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Davvero utile.</div><p class="t-body">L'app è utilissima e pratica. Dovrebbe esserci sul telefono di ogni musulmano. Che Allah sia soddisfatto di chi l'ha sviluppata.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Che Allah sia soddisfatto.</div><p class="t-body">Fratello, grazie di cuore per aver reso gratuita un'app così preziosa. Che Allah ti conceda ciò che il tuo cuore desidera, in sha Allah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -794,7 +832,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Risposte sincere</span><br><em>a domande sincere.</em></h2>
+    <h2 class="sec-title"><span>Risposte sincere</span> <em>a domande sincere.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">Funziona senza internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Gli orari di preghiera vengono calcolati sul telefono a partire dalla tua posizione. Il testo del Corano, la Qibla, il dhikr e tutti gli strumenti principali funzionano completamente offline.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Le notifiche arrivano anche se non apro mai l'app?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Vengono programmate localmente sul dispositivo, quindi le ricevi anche ad app chiusa. Se concedi l'accesso alla posizione «Sempre», Vakit ricalcola gli orari in silenzio dopo un viaggio.</div></div></div>
@@ -817,7 +855,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>Che nulla interrompa</span> <em>la tua adorazione.</em></h2>
+  <h2 class="sec-title"><span>Che nulla interrompa</span> <em>la tua adorazione.</em></h2>
   <p>Gratis. Nessun account. Funziona offline. iPhone, iPad, Apple Watch e Mac: iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-it" class="btn-primary">

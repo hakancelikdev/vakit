@@ -114,11 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -394,7 +390,7 @@
     <a href="#faq">SSS</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Koyu modu aç/kapat">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Koyu modu aç/kapat"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Kapat">
       <summary aria-label="Dil"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Türkçe</span></summary>
       <ul class="lang-list">
@@ -505,63 +501,121 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Her şey, fazlası değil</div>
-    <h2 class="sc-h2"><span>Bir arkadaş,</span><br><em>bir dikkat makinesi değil.</em></h2>
-    <p class="sc-lede">20 temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı. Önizlemek için dokun.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Gökyüzü gibi.</h3><p>Vakit girdikçe ekran da gökyüzüyle birlikte değişir; yıldızlar ve ay gerçek yerlerinde. Kerahat ve nafile vakitleri isteğe bağlı.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Ekranı açmadan.</h3><p>Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinde. Sessiz bir bakış — hiç dikkat çalmadan.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Tüm araçlar, tek yerde.</h3><p>Kur'an, hadis, Cuma hutbesi, zikir, esma, rehberler ve takvim — tek bir hub'da. Hiçbir özellik paywall arkasında değil.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Doğru yön.</h3><p>Kıbleye döndüğünde telefon titrer; Kâbe'ye mesafe de yanında.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>İbadetinin halkaları.</h3><p>Namaz, Kur'an, zikir, hadis ve kaza için halkalar; namazı vakit girdikten ne kadar sonra kıldığın ve hatim — sakin ilerleme, suçluluk yok.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Kaza, kıldıkça erir.</h3><p>Ömür boyu kaza borcunu vakit bazlı hesapla, kıldıkça düş; ne zaman biteceği de görünür.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Kur'an, internetsiz de.</h3><p>Oku, dinle, tefekkür et — Medine ya da Türkiye hattı, kelime kelime takip, tefsir ve indirilebilen tilavet.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>On yedi namaz, resimli.</h3><p>Abdestten tesbihata; ayakta, oturarak ya da îmâ ile — adım adım, kibirsiz, öğretici.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Hatırlayan bir takvim.</h3><p>Hicri ve Miladi birlikte. Kandil geceleri, Ramazan, bayramlar, arefe; altında ayın ibadet özeti.</p></div><span class="sc-tag">Önizle</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Sayaç elinde.</h3><p>Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirlerin ve günlük hedef.</p></div><span class="sc-tag">Önizle</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı.">Nafile Vakitleri</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Medine ya da Türkiye hattı; sayfa düzeni de değişir.">Mushaf Hattı</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="Allah'ın 99 ismi, okunuşu ve anlamıyla; zikir olarak eklenebilir.">Esmaü'l Hüsna</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 ya da namaz sonrası tam tertip.">Tesbihat</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Halkalar: namaz, Kur'an, zikir, hadis ve kaza.">İbadet Takibi</button>
-      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Yedi büyük koleksiyondan 36 binden fazla hadis.">Hadis</button>
-      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="Tek arama, her araç — 'Bakara 255' yaz, âyete git.">Birleşik Arama</button>
-      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Konumun sunucumuza gitmeden, Apple Haritalar ile bul; harita, mesafe, yol tarifi.">Yakın Camiler</button>
-      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Dynamic Island ve kilit ekranı geri sayım.">Live Activity</button>
-      <button class="dv-tab sc-chip" data-index="19" aria-pressed="false" data-desc="Bir ayın tüm vakitleri tek listede; Ramazan'da gün sayısı ve iftar.">İmsakiye</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Her şey, fazlası değil</p>
+    <h2 class="sec-title"><span>Bir arkadaş,</span> <em>bir dikkat makinesi değil.</em></h2>
+    <p class="sec-lede">20 temel araç, her biri açılır açılmaz huzur hissettirecek şekilde tasarlandı.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/tr/prayer-times.webp" alt="Gökyüzü gibi." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/tr/widget.webp" alt="Ekranı açmadan." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/tr/discover.webp" alt="Tüm araçlar, tek yerde." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/tr/qibla.webp" alt="Doğru yön." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/tr/profile.webp" alt="İbadetinin halkaları." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/tr/qada.webp" alt="Kaza, kıldıkça erir." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/tr/quran.webp" alt="Kur'an, internetsiz de." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/tr/prayer-guide.webp" alt="On yedi namaz, resimli." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/tr/calendar.webp" alt="Hatırlayan bir takvim." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/tr/zikirmatik.webp" alt="Sayaç elinde." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/tr/more/prayer-nafile.webp" alt="Nafile Vakitleri" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/tr/more/mushaf.webp" alt="Mushaf Hattı" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/tr/more/esma-ul-husna.webp" alt="Esmaü'l Hüsna" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/tr/more/tesbihat.webp" alt="Tesbihat" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/tr/more/accounting-year.webp" alt="İbadet Takibi" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/tr/more/hadith.webp" alt="Hadis" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/tr/more/search.webp" alt="Birleşik Arama" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/tr/more/nearby-mosques.webp" alt="Yakın Camiler" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/tr/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="19" src="/assets/screenshots/tr/more/imsakiye.webp" alt="İmsakiye" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Bir arkadaş, bir dikkat makinesi değil.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/prayer-times.webp" alt="Gökyüzü gibi." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Gökyüzü gibi.</h3>
+          <p class="g-desc">Vakit girdikçe ekran da gökyüzüyle birlikte değişir; yıldızlar ve ay gerçek yerlerinde. Kerahat ve nafile vakitleri isteğe bağlı.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/widget.webp" alt="Ekranı açmadan." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Ekranı açmadan.</h3>
+          <p class="g-desc">Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinde. Sessiz bir bakış — hiç dikkat çalmadan.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/discover.webp" alt="Tüm araçlar, tek yerde." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tüm araçlar, tek yerde.</h3>
+          <p class="g-desc">Kur'an, hadis, Cuma hutbesi, zikir, esma, rehberler ve takvim — tek bir hub'da. Hiçbir özellik paywall arkasında değil.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/qibla.webp" alt="Doğru yön." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Doğru yön.</h3>
+          <p class="g-desc">Kıbleye döndüğünde telefon titrer; Kâbe'ye mesafe de yanında.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/profile.webp" alt="İbadetinin halkaları." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">İbadetinin halkaları.</h3>
+          <p class="g-desc">Namaz, Kur'an, zikir, hadis ve kaza için halkalar; namazı vakit girdikten ne kadar sonra kıldığın ve hatim — sakin ilerleme, suçluluk yok.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/qada.webp" alt="Kaza, kıldıkça erir." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kaza, kıldıkça erir.</h3>
+          <p class="g-desc">Ömür boyu kaza borcunu vakit bazlı hesapla, kıldıkça düş; ne zaman biteceği de görünür.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/quran.webp" alt="Kur'an, internetsiz de." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kur'an, internetsiz de.</h3>
+          <p class="g-desc">Oku, dinle, tefekkür et — Medine ya da Türkiye hattı, kelime kelime takip, tefsir ve indirilebilen tilavet.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/prayer-guide.webp" alt="On yedi namaz, resimli." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">On yedi namaz, resimli.</h3>
+          <p class="g-desc">Abdestten tesbihata; ayakta, oturarak ya da îmâ ile — adım adım, kibirsiz, öğretici.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/calendar.webp" alt="Hatırlayan bir takvim." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Hatırlayan bir takvim.</h3>
+          <p class="g-desc">Hicri ve Miladi birlikte. Kandil geceleri, Ramazan, bayramlar, arefe; altında ayın ibadet özeti.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/zikirmatik.webp" alt="Sayaç elinde." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Sayaç elinde.</h3>
+          <p class="g-desc">Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirlerin ve günlük hedef.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/prayer-nafile.webp" alt="Nafile Vakitleri" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Nafile Vakitleri</h3>
+          <p class="g-desc">İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/mushaf.webp" alt="Mushaf Hattı" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Mushaf Hattı</h3>
+          <p class="g-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/esma-ul-husna.webp" alt="Esmaü'l Hüsna" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Esmaü'l Hüsna</h3>
+          <p class="g-desc">Allah'ın 99 ismi, okunuşu ve anlamıyla; zikir olarak eklenebilir.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/tesbihat.webp" alt="Tesbihat" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tesbihat</h3>
+          <p class="g-desc">33-33-33 ya da namaz sonrası tam tertip.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/accounting-year.webp" alt="İbadet Takibi" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">İbadet Takibi</h3>
+          <p class="g-desc">Halkalar: namaz, Kur'an, zikir, hadis ve kaza.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/hadith.webp" alt="Hadis" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Hadis</h3>
+          <p class="g-desc">Yedi büyük koleksiyondan 36 binden fazla hadis.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/search.webp" alt="Birleşik Arama" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Birleşik Arama</h3>
+          <p class="g-desc">Tek arama, her araç — 'Bakara 255' yaz, âyete git.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/nearby-mosques.webp" alt="Yakın Camiler" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Yakın Camiler</h3>
+          <p class="g-desc">Konumun sunucumuza gitmeden, Apple Haritalar ile bul; harita, mesafe, yol tarifi.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Live Activity</h3>
+          <p class="g-desc">Dynamic Island ve kilit ekranı geri sayım.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/imsakiye.webp" alt="İmsakiye" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">İmsakiye</h3>
+          <p class="g-desc">Bir ayın tüm vakitleri tek listede; Ramazan'da gün sayısı ve iftar.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -636,30 +690,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Emanet</div>
-    <h2>
-      <span>Verilerin</span> <em>bir emanettir,</em><br>
-      <span>bir ürün değil.</span>
+    <p class="sec-eye">Emanet</p>
+    <h2 class="sec-title">
+      <span>Verilerin</span> <span>bir emanettir,</span> <em>bir ürün değil.</em>
     </h2>
     <p class="trust-lede">Diğer ibadet uygulamaları konum verilerini satarken yakalandı. Vakit farklı bir yol seçti: koordinatların sunucumuza hiç gelmez. Hesap yok. Reklam yok. Verilerin satılmaz.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>İndir. Aç. Kıl.</h3>
         <p>Kayıt yok, giriş yok, unutacağın bir şifre yok. Vakit yüklediğin anda çalışır.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Telefonunda hesaplanır.</h3>
         <p>Namaz vakitleri, seçtiğin yönteme göre cihazında yerel olarak hesaplanır. Vakitler bir sunucudan sorgulanmaz.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>Tam konumun bizde değil.</h3>
         <p>Koordinatların sunucumuza gönderilmez; biz yalnız ülke, il ve ilçeyi biliriz. Adresin ve yakındaki camiler için konum yalnız Apple Haritalar'a gider.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Sade bir politika.</h3>
         <p>Ad, e-posta ya da telefon içermeyen, takma bir kullanıcı koduna bağlı kullanım verisi. Neyin gönderildiği gizlilik politikasında tek tek yazılı — bir dakikada okunacak kadar kısa.</p>
       </div>
@@ -687,85 +740,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 araç</div>
-      <h2><span>Tek uygulama,</span><br><em>bir ömürlük ibadete yeter.</em></h2>
+      <p class="sec-eye">51 araç</p>
+      <h2 class="sec-title"><span>Tek uygulama,</span> <em>bir ömürlük ibadete yeter.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Vakitler ve kıble<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Namaz Vakitleri</h4><div class="f-desc">12 hesaplama yöntemi, zaman dilimine duyarlı, seyahat algılayan.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Kıble Pusulası</h4><div class="f-desc">Haptik yönlendirme, Kâbe'ye mesafe bilgisi.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Canlı Gökyüzü</h4><div class="f-desc">Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Sabah Alarmı</h4><div class="f-desc">Kılmadıysan güneş doğmadan çalar, kıldıysan susar; iOS 26'da sessiz modu deler.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Ezan Sesleri</h4><div class="f-desc">Her vakit kendi makamında: saba, uşşak, rast, segah, hicaz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Nafile Vakitleri</h4><div class="f-desc">İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Kerahat Vakitleri</h4><div class="f-desc">Gün yayında işaretli, dayandığı rivayetle birlikte.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">İmsakiye</h4><div class="f-desc">Bir ayın tüm vakitleri tek listede; Ramazan'da gün sayısı ve iftar.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Manuel Konum</h4><div class="f-desc">Konumu elle seç ya da seyahatte kendiliğinden güncellensin.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Bildirimler</h4><div class="f-desc">Cihazda, yerel, güvenilir.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Yakın Camiler</h4><div class="f-desc">Konumun sunucumuza gitmeden, Apple Haritalar ile bul; harita, mesafe, yol tarifi.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Namaz Vakitleri</h4><p class="f-desc">12 hesaplama yöntemi, zaman dilimine duyarlı, seyahat algılayan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Kıble Pusulası</h4><p class="f-desc">Haptik yönlendirme, Kâbe'ye mesafe bilgisi.</p></li>
+          <li class="f-cell"><h4 class="f-name">Canlı Gökyüzü</h4><p class="f-desc">Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sabah Alarmı</h4><p class="f-desc">Kılmadıysan güneş doğmadan çalar, kıldıysan susar; iOS 26'da sessiz modu deler.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Ezan Sesleri</h4><p class="f-desc">Her vakit kendi makamında: saba, uşşak, rast, segah, hicaz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Nafile Vakitleri</h4><p class="f-desc">İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kerahat Vakitleri</h4><p class="f-desc">Gün yayında işaretli, dayandığı rivayetle birlikte.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">İmsakiye</h4><p class="f-desc">Bir ayın tüm vakitleri tek listede; Ramazan'da gün sayısı ve iftar.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Manuel Konum</h4><p class="f-desc">Konumu elle seç ya da seyahatte kendiliğinden güncellensin.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Bildirimler</h4><p class="f-desc">Cihazda, yerel, güvenilir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Yakın Camiler</h4><p class="f-desc">Konumun sunucumuza gitmeden, Apple Haritalar ile bul; harita, mesafe, yol tarifi.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Kur'an ve hadis<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Kur'an-ı Kerim</h4><div class="f-desc">114 sure. Kelime kelime, meal, tefsir, klasik Mushaf.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadis</h4><div class="f-desc">Yedi büyük koleksiyondan 36 binden fazla hadis.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Çevrimdışı Tilavet</h4><div class="f-desc">Hafız ve okuyuş üslubunu seç; sure ya da cüz indir, internetsiz dinle.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tefsir</h4><div class="f-desc">Diyanet tefsiri; âyete dokun, ilgili âyet aralığıyla açılsın.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Hatim Takibi</h4><div class="f-desc">114 sure, 30 cüz; tamamlanan hatimler ve bitiş tahmini.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Mushaf Hattı</h4><div class="f-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Çalma Listeleri</h4><div class="f-desc">Sûreleri istediğin sıraya diz, listene ad ver, baştan sona dinle; indirip internetsiz de çal.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Sesli Meal</h4><div class="f-desc">Meali cihazın kendi sesiyle dinle; tilavetle birlikte ya da tek başına, internetsiz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Günün İçeriği</h4><div class="f-desc">Günün ayeti, hadisi ve esması tek ekranda; son bir haftaya geri dön.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Yer İmleri</h4><div class="f-desc">Ayet ve hadisleri kaydet.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Paylaşım Kartları</h4><div class="f-desc">Ayet, hadis, zikir ve esma için güzel kartlar.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Kur'an-ı Kerim</h4><p class="f-desc">114 sure. Kelime kelime, meal, tefsir, klasik Mushaf.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hadis</h4><p class="f-desc">Yedi büyük koleksiyondan 36 binden fazla hadis.</p></li>
+          <li class="f-cell"><h4 class="f-name">Çevrimdışı Tilavet</h4><p class="f-desc">Hafız ve okuyuş üslubunu seç; sure ya da cüz indir, internetsiz dinle.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tefsir</h4><p class="f-desc">Diyanet tefsiri; âyete dokun, ilgili âyet aralığıyla açılsın.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Hatim Takibi</h4><p class="f-desc">114 sure, 30 cüz; tamamlanan hatimler ve bitiş tahmini.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mushaf Hattı</h4><p class="f-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Çalma Listeleri</h4><p class="f-desc">Sûreleri istediğin sıraya diz, listene ad ver, baştan sona dinle; indirip internetsiz de çal.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sesli Meal</h4><p class="f-desc">Meali cihazın kendi sesiyle dinle; tilavetle birlikte ya da tek başına, internetsiz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Günün İçeriği</h4><p class="f-desc">Günün ayeti, hadisi ve esması tek ekranda; son bir haftaya geri dön.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Yer İmleri</h4><p class="f-desc">Ayet ve hadisleri kaydet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Paylaşım Kartları</h4><p class="f-desc">Ayet, hadis, zikir ve esma için güzel kartlar.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">İbadet takibi ve zikir<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">İbadet Takibi</h4><div class="f-desc">Halkalar: namaz, Kur'an, zikir, hadis ve kaza.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Kaza Takibi</h4><div class="f-desc">Kaza namazını vakit bazlı, kaza orucunu gün bazlı takip et.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Zikirmatik</h4><div class="f-desc">Halka ilerleme, hazır zikirler ve özel zikirler.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Namaz Disiplini</h4><div class="f-desc">Her vakti girdikten ne kadar sonra kıldığın — bu ay ve tüm zamanlar.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Oruç</h4><div class="f-desc">Ramazan, Şevval ve günlük takip.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Sahur Alarmı</h4><div class="f-desc">Ramazan'da, her gün ya da sünnet oruç günlerinde kurulur.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tesbihat</h4><div class="f-desc">33-33-33 ya da namaz sonrası tam tertip.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Esmaü'l Hüsna</h4><div class="f-desc">Allah'ın 99 ismi, okunuşu ve anlamıyla; zikir olarak eklenebilir.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Mazeret Günleri</h4><div class="f-desc">Hayız ve lohusalık günleri; namaz serisi kırılmaz.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">İbadet Takibi</h4><p class="f-desc">Halkalar: namaz, Kur'an, zikir, hadis ve kaza.</p></li>
+          <li class="f-cell"><h4 class="f-name">Kaza Takibi</h4><p class="f-desc">Kaza namazını vakit bazlı, kaza orucunu gün bazlı takip et.</p></li>
+          <li class="f-cell"><h4 class="f-name">Zikirmatik</h4><p class="f-desc">Halka ilerleme, hazır zikirler ve özel zikirler.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Namaz Disiplini</h4><p class="f-desc">Her vakti girdikten ne kadar sonra kıldığın — bu ay ve tüm zamanlar.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Oruç</h4><p class="f-desc">Ramazan, Şevval ve günlük takip.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sahur Alarmı</h4><p class="f-desc">Ramazan'da, her gün ya da sünnet oruç günlerinde kurulur.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tesbihat</h4><p class="f-desc">33-33-33 ya da namaz sonrası tam tertip.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Esmaü'l Hüsna</h4><p class="f-desc">Allah'ın 99 ismi, okunuşu ve anlamıyla; zikir olarak eklenebilir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mazeret Günleri</h4><p class="f-desc">Hayız ve lohusalık günleri; namaz serisi kırılmaz.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Takvim ve rehberler<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Hicri Takvim</h4><div class="f-desc">Miladi + Hicri, özel günler ve Ramazan.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Namaz Rehberi</h4><div class="f-desc">17 namaz türü; ayakta, oturarak ya da îmâ ile.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Cuma Hutbesi</h4><div class="f-desc">Diyanet yöntemini kullananlar için: hutbeyi oku, dinle, çevrimdışı sakla.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Mübarek Günler</h4><div class="f-desc">Kandiller, bayramlar ve arefeler bugünden ileriye sıralı; her güne rehber.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Cuma Rehberi</h4><div class="f-desc">Hazırlık, gusül, hutbe, Kehf sûresi ve salât ü selâm — cuma günü tek sayfada.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Temizlik Rehberi</h4><div class="f-desc">Adım adım abdest, gusül ve teyemmüm.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Mübarek Gün Hatırlatma</h4><div class="f-desc">12 mübarek gün: kandiller o akşam, diğerleri bir gün önce hatırlatılır.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zekât &amp; Fitre</h4><div class="f-desc">Klasik fıkha dayanan hesaplayıcılar.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Hicri Takvim</h4><p class="f-desc">Miladi + Hicri, özel günler ve Ramazan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Namaz Rehberi</h4><p class="f-desc">17 namaz türü; ayakta, oturarak ya da îmâ ile.</p></li>
+          <li class="f-cell"><h4 class="f-name">Cuma Hutbesi</h4><p class="f-desc">Diyanet yöntemini kullananlar için: hutbeyi oku, dinle, çevrimdışı sakla.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mübarek Günler</h4><p class="f-desc">Kandiller, bayramlar ve arefeler bugünden ileriye sıralı; her güne rehber.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Cuma Rehberi</h4><p class="f-desc">Hazırlık, gusül, hutbe, Kehf sûresi ve salât ü selâm — cuma günü tek sayfada.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Temizlik Rehberi</h4><p class="f-desc">Adım adım abdest, gusül ve teyemmüm.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mübarek Gün Hatırlatma</h4><p class="f-desc">12 mübarek gün: kandiller o akşam, diğerleri bir gün önce hatırlatılır.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zekât &amp; Fitre</h4><p class="f-desc">Klasik fıkha dayanan hesaplayıcılar.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Cihazlar ve dahası<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Namaz vakitleri, canlı kıble, 13 komplikasyon.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget'lar</h4><div class="f-desc">Ana ekran, kilit ekranı, StandBy — Mac'te de.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Dynamic Island ve kilit ekranı geri sayım.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac Uygulaması</h4><div class="f-desc">Menü çubuğunda geri sayım, klavye kısayolları, iCloud senkron.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Aynı uygulama büyük ekranda; kayıtların iCloud ile senkron.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 Dil</h4><div class="f-desc">Arapça, Urduca, Farsça ve Uygurca'da sağdan sola arayüz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud Senkron</h4><div class="f-desc">Kayıtların kendi iCloud alanında, her cihazında.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri Kısayolları</h4><div class="f-desc">Sonraki vakti sor; namazı, orucu, kazayı sesle işaretle.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Control Center</h4><div class="f-desc">Altı hızlı eylem (iOS 18+) — Kıble, sonraki vakit, dahası.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Birleşik Arama</h4><div class="f-desc">Tek arama, her araç — 'Bakara 255' yaz, âyete git.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Karanlık Mod</h4><div class="f-desc">Geç saatler için sıcak, sakin karanlık.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Vakit'e Destek</h4><div class="f-desc">Ücretsiz uygulamayı ayakta tutmanın opt-in yolları.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Namaz vakitleri, canlı kıble, 13 komplikasyon.</p></li>
+          <li class="f-cell"><h4 class="f-name">Widget'lar</h4><p class="f-desc">Ana ekran, kilit ekranı, StandBy — Mac'te de.</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Activity</h4><p class="f-desc">Dynamic Island ve kilit ekranı geri sayım.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mac Uygulaması</h4><p class="f-desc">Menü çubuğunda geri sayım, klavye kısayolları, iCloud senkron.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">Aynı uygulama büyük ekranda; kayıtların iCloud ile senkron.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 Dil</h4><p class="f-desc">Arapça, Urduca, Farsça ve Uygurca'da sağdan sola arayüz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iCloud Senkron</h4><p class="f-desc">Kayıtların kendi iCloud alanında, her cihazında.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Siri Kısayolları</h4><p class="f-desc">Sonraki vakti sor; namazı, orucu, kazayı sesle işaretle.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Control Center</h4><p class="f-desc">Altı hızlı eylem (iOS 18+) — Kıble, sonraki vakit, dahası.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Birleşik Arama</h4><p class="f-desc">Tek arama, her araç — 'Bakara 255' yaz, âyete git.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Karanlık Mod</h4><p class="f-desc">Geç saatler için sıcak, sakin karanlık.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Vakit'e Destek</h4><p class="f-desc">Ücretsiz uygulamayı ayakta tutmanın opt-in yolları.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">51 aracın tümünü gör</button>
@@ -776,26 +829,26 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Gerçek kullanıcılardan</span><br><em>güzel sözler.</em></h2>
+      <h2 class="sec-title"><span>Gerçek kullanıcılardan</span> <em>güzel sözler.</em></h2>
       <div class="t-meta">
         <span>Ortalama puan</span>
-        <b>4,8 ★</b>
+        <b>4,8 <span class="star" aria-hidden="true">★</span></b>
         <span>473 App Store değerlendirmesinden</span>
       </div>
     </div>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Gerçek kullanıcılardan güzel sözler.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">10/10 bir uygulama.</div><p class="t-body">Gerek widget'daki harika grafik görselleriyle gösterilen namaz vakitleri olsun, gerek uygulamanın reklamsız oluşu ve çok temiz bir arayüze sahip olması olsun 10/10. Gerçekten çok memnun kaldım, herkese tavsiye ederim.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Harika.</div><p class="t-body">Bulabileceğiniz en temiz ve kullanışlı uygulama. Reklam yok, arayüz çok sade ve şık. Kıble bulma kısmı gerçekten çok doğru ve güzel çalışıyor. Diğer içerikleri de çok hoş olmuş.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Sade ve kullanışlı.</div><p class="t-body">Başka uygulamaların, oyunların, sosyal medya uygulamalarının çoğundan daha iyi bir seviyede. Teşekkür ederim çabalarınız için, harika bir iş olmuş. Dinimi daha planlı yaşamaya çalışan biriyim ve elim ayağım oldu bu uygulama.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Kusursuz.</div><p class="t-body">Yapanın eline sağlık. Reklam yok. Ciddi emek verilmiş. Belliki sadece Allah rızası için. Sağolun.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Nadir bir uygulama.</div><p class="t-body">Allah sizden razı olsun. Gerek namaz vakitlerinin bu şekilde derli toplu olması, gerekse hadislerin hassasiyet gözetilerek Arapçaları, Türkçeleri ve sıhhat dereceleriyle verilmesi ama reklam gösterilmemesi — böyle bir uygulama nadirdir. İndirin, muhtemelen kalıcı uygulamanız olacaktır.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">İsteklerin tam karşılığı.</div><p class="t-body">Kim düşünüp yapabildiyse Allah razı olsun. Açıklayıcı, reklamsız ve net.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Son güncellemeyle muazzam olmuş.</div><p class="t-body">Basit, estetik, kullanışlı, hızlı — ne diyeyim. Eline emeğine gönlüne sağlık.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Allah razı olsun.</div><p class="t-body">Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım. Vakit gerçekten harika; her yerde çalışması, internetsiz olması, reklamsız olması harika. Kuran, hadis, zikirmatik, namaz takibi — başka uygulamaya ihtiyacım yok.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Diğerlerini sildim.</div><p class="t-body">Allah yapandan razı olsun. Elinize sağlık. Çok faydalı oldu.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">En iyisi.</div><p class="t-body">Bundan daha iyisini görmedim. Her telefonda olması gereken bir uygulama. Geliştiren arkadaştan Allah razı olsun.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Gerçekten faydalı.</div><p class="t-body">Uygulama çok faydalı ve pratik. Her Müslümanın telefonunda olması gereken bir uygulama. Geliştirenden Allah razı olsun.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Allah razı olsun.</div><p class="t-body">Kardeşim, böylesine değerli bir uygulamayı ücretsiz yaptığın için çok teşekkürler. Allah gönlüne göre versin inşallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">10/10 bir uygulama.</div><p class="t-body">Gerek widget'daki harika grafik görselleriyle gösterilen namaz vakitleri olsun, gerek uygulamanın reklamsız oluşu ve çok temiz bir arayüze sahip olması olsun 10/10. Gerçekten çok memnun kaldım, herkese tavsiye ederim.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Harika.</div><p class="t-body">Bulabileceğiniz en temiz ve kullanışlı uygulama. Reklam yok, arayüz çok sade ve şık. Kıble bulma kısmı gerçekten çok doğru ve güzel çalışıyor. Diğer içerikleri de çok hoş olmuş.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Sade ve kullanışlı.</div><p class="t-body">Başka uygulamaların, oyunların, sosyal medya uygulamalarının çoğundan daha iyi bir seviyede. Teşekkür ederim çabalarınız için, harika bir iş olmuş. Dinimi daha planlı yaşamaya çalışan biriyim ve elim ayağım oldu bu uygulama.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Kusursuz.</div><p class="t-body">Yapanın eline sağlık. Reklam yok. Ciddi emek verilmiş. Belliki sadece Allah rızası için. Sağolun.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Nadir bir uygulama.</div><p class="t-body">Allah sizden razı olsun. Gerek namaz vakitlerinin bu şekilde derli toplu olması, gerekse hadislerin hassasiyet gözetilerek Arapçaları, Türkçeleri ve sıhhat dereceleriyle verilmesi ama reklam gösterilmemesi — böyle bir uygulama nadirdir. İndirin, muhtemelen kalıcı uygulamanız olacaktır.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">İsteklerin tam karşılığı.</div><p class="t-body">Kim düşünüp yapabildiyse Allah razı olsun. Açıklayıcı, reklamsız ve net.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Son güncellemeyle muazzam olmuş.</div><p class="t-body">Basit, estetik, kullanışlı, hızlı — ne diyeyim. Eline emeğine gönlüne sağlık.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Allah razı olsun.</div><p class="t-body">Reklamlı, sürekli para isteyen kullanışsız arayüzlerden bıkmıştım. Vakit gerçekten harika; her yerde çalışması, internetsiz olması, reklamsız olması harika. Kuran, hadis, zikirmatik, namaz takibi — başka uygulamaya ihtiyacım yok.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Diğerlerini sildim.</div><p class="t-body">Allah yapandan razı olsun. Elinize sağlık. Çok faydalı oldu.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">En iyisi.</div><p class="t-body">Bundan daha iyisini görmedim. Her telefonda olması gereken bir uygulama. Geliştiren arkadaştan Allah razı olsun.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Gerçekten faydalı.</div><p class="t-body">Uygulama çok faydalı ve pratik. Her Müslümanın telefonunda olması gereken bir uygulama. Geliştirenden Allah razı olsun.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Allah razı olsun.</div><p class="t-body">Kardeşim, böylesine değerli bir uygulamayı ücretsiz yaptığın için çok teşekkürler. Allah gönlüne göre versin inşallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -803,7 +856,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Dürüst sorulara</span><br><em>dürüst cevaplar.</em></h2>
+    <h2 class="sec-title"><span>Dürüst sorulara</span> <em>dürüst cevaplar.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">İnternet bağlantısı olmadan çalışır mı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Namaz vakitleri konumuna göre telefonunda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Uygulamayı açmasam bile bildirimler gelir mi?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Bildirimler cihazında yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsın. 'Her Zaman' konum izni verirsen, seyahat sonrası vakitler sessizce yeniden hesaplanır.</div></div></div>
@@ -826,7 +879,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>İbadetin yarıda</span> <em>kesilmesin.</em></h2>
+  <h2 class="sec-title"><span>İbadetin yarıda</span> <em>kesilmesin.</em></h2>
   <p>Ücretsiz. Hesap yok. Çevrimdışı çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-tr" class="btn-primary">

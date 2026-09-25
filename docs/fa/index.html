@@ -114,12 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>:root { --serif: 'Instrument Serif', 'Noto Naskh Arabic', 'Geeza Pro', serif; --sans: 'Inter', 'Noto Sans Arabic', 'Geeza Pro', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -395,7 +390,7 @@
     <a href="#faq">پرسش‌های رایج</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="روشن/خاموش کردن حالت تیره">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="روشن/خاموش کردن حالت تیره"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="بستن">
       <summary aria-label="زبان"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>فارسی</span></summary>
       <ul class="lang-list">
@@ -506,63 +501,121 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · همه‌چیز، نه بیشتر</div>
-    <h2 class="sc-h2"><span>یک همراه،</span><br><em>نه ماشینی برای ربودن توجه.</em></h2>
-    <p class="sc-lede">20 ابزار اصلی، هر کدام طوری طراحی شده که از همان لحظهٔ باز شدن آرامش بدهد. برای پیش‌نمایش روی هر کدام بزنید.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>مثل آسمان.</h3><p>با ورود هر وقت نماز، صفحه همراه آسمان تغییر می‌کند — ستارگان واقعی و ماه در جای درستشان. اوقات کراهت و نافله اختیاری است.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>بدون باز کردن قفل.</h3><p>نماز بعدی روی صفحهٔ قفل، در ویجت، در Dynamic Island و روی ساعتتان. نگاهی آرام و گذرا — نه خیره ماندن.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>همهٔ ابزارها، یک‌جا.</h3><p>قرآن، حدیث، خطبهٔ جمعه، ذکر، اسماء الحسنی، راهنماها و تقویم — همه در یک جا. هیچ چیز پشت دیوار پرداخت قفل نیست.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>جهت درست.</h3><p>رو به قبله که بایستید، گوشی می‌لرزد؛ فاصله تا کعبه هم کنارش است.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>عبادتتان، در حلقه‌ها.</h3><p>حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا؛ اینکه هر نماز را چه مدت پس از ورود وقتش می‌خوانید، و ختمتان — پیشرفتی آرام، بدون احساس گناه.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>قضا، با هر نماز کمتر.</h3><p>نمازهای قضای یک عمر را به تفکیک وقت حساب کنید و یکی‌یکی ادا کنید — با تخمینی از زمان پایانش.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>قرآن، حتی بی‌اینترنت.</h3><p>بخوانید، گوش دهید، تدبر کنید — مصحف مدینه یا ترکیه، همراهی کلمه به کلمه، تفسیر و تلاوت قابل دانلود.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>هفده نماز، مصوّر.</h3><p>از وضو تا تسبیحات؛ ایستاده، نشسته یا با اشاره — گام به گام، با آموزشی فروتنانه.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>تقویمی که به یاد می‌آورد.</h3><p>قمری و میلادی کنار هم. شب‌های مبارک، رمضان، عیدها و روز پیش از آن‌ها — و خلاصهٔ عبادت ماه در پایین.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>شمارش، در دست شما.</h3><p>شمارشگر ذکر و تسبیحات پس از نماز؛ اذکار آماده، ذکرهای خودتان و هدف روزانه.</p></div><span class="sc-tag">پیش‌نمایش</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="اشراق، چاشت، اوابین و بخش‌های شب؛ اختیاری.">اوقات نافله</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="مصحف مدینه یا مصحف ترکیه — چینش صفحه هم با آن تغییر می‌کند.">رسم مصحف</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 نام خداوند، با تلفظ و معنا؛ هر کدام را می‌توانید به‌عنوان ذکر اضافه کنید.">اسماء الحسنی</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33، یا ترتیب کامل پس از نماز.">تسبیحات</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا.">پیگیری عبادت</button>
-      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="بیش از 36,000 حدیث از هفت مجموعهٔ بزرگ.">حدیث</button>
-      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="یک جست‌وجو برای همهٔ ابزارها — بنویسید «بقره 255» و به آیه بروید.">جست‌وجوی یکپارچه</button>
-      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="با نقشه‌های Apple پیدا کنید، بی‌آنکه موقعیتتان به سرورهای ما برسد؛ نقشه، فاصله و مسیریابی.">مسجدهای نزدیک</button>
-      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="شمارش معکوس در Dynamic Island و صفحهٔ قفل.">فعالیت زنده</button>
-      <button class="dv-tab sc-chip" data-index="19" aria-pressed="false" data-desc="شب‌های مبارک، عیدها و شب‌های پیش از آن‌ها از امروز به بعد، هر یک با راهنما.">روزهای مبارک</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">همه‌چیز، نه بیشتر</p>
+    <h2 class="sec-title"><span>یک همراه،</span> <em>نه ماشینی برای ربودن توجه.</em></h2>
+    <p class="sec-lede">20 ابزار اصلی، هر کدام طوری طراحی شده که از همان لحظهٔ باز شدن آرامش بدهد.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="مثل آسمان." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="بدون باز کردن قفل." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="همهٔ ابزارها، یک‌جا." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="جهت درست." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/en/profile.webp" alt="عبادتتان، در حلقه‌ها." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/en/qada.webp" alt="قضا، با هر نماز کمتر." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/en/quran.webp" alt="قرآن، حتی بی‌اینترنت." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="هفده نماز، مصوّر." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="تقویمی که به یاد می‌آورد." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="شمارش، در دست شما." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="اوقات نافله" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="رسم مصحف" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="اسماء الحسنی" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="تسبیحات" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="پیگیری عبادت" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="حدیث" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="جست‌وجوی یکپارچه" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="مسجدهای نزدیک" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="فعالیت زنده" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="19" src="/assets/screenshots/en/more/imsakiye.webp" alt="روزهای مبارک" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="یک همراه، نه ماشینی برای ربودن توجه.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-times.webp" alt="مثل آسمان." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">مثل آسمان.</h3>
+          <p class="g-desc">با ورود هر وقت نماز، صفحه همراه آسمان تغییر می‌کند — ستارگان واقعی و ماه در جای درستشان. اوقات کراهت و نافله اختیاری است.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/widget.webp" alt="بدون باز کردن قفل." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">بدون باز کردن قفل.</h3>
+          <p class="g-desc">نماز بعدی روی صفحهٔ قفل، در ویجت، در Dynamic Island و روی ساعتتان. نگاهی آرام و گذرا — نه خیره ماندن.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/discover.webp" alt="همهٔ ابزارها، یک‌جا." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">همهٔ ابزارها، یک‌جا.</h3>
+          <p class="g-desc">قرآن، حدیث، خطبهٔ جمعه، ذکر، اسماء الحسنی، راهنماها و تقویم — همه در یک جا. هیچ چیز پشت دیوار پرداخت قفل نیست.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qibla.webp" alt="جهت درست." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">جهت درست.</h3>
+          <p class="g-desc">رو به قبله که بایستید، گوشی می‌لرزد؛ فاصله تا کعبه هم کنارش است.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/profile.webp" alt="عبادتتان، در حلقه‌ها." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">عبادتتان، در حلقه‌ها.</h3>
+          <p class="g-desc">حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا؛ اینکه هر نماز را چه مدت پس از ورود وقتش می‌خوانید، و ختمتان — پیشرفتی آرام، بدون احساس گناه.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qada.webp" alt="قضا، با هر نماز کمتر." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">قضا، با هر نماز کمتر.</h3>
+          <p class="g-desc">نمازهای قضای یک عمر را به تفکیک وقت حساب کنید و یکی‌یکی ادا کنید — با تخمینی از زمان پایانش.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/quran.webp" alt="قرآن، حتی بی‌اینترنت." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">قرآن، حتی بی‌اینترنت.</h3>
+          <p class="g-desc">بخوانید، گوش دهید، تدبر کنید — مصحف مدینه یا ترکیه، همراهی کلمه به کلمه، تفسیر و تلاوت قابل دانلود.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-guide.webp" alt="هفده نماز، مصوّر." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">هفده نماز، مصوّر.</h3>
+          <p class="g-desc">از وضو تا تسبیحات؛ ایستاده، نشسته یا با اشاره — گام به گام، با آموزشی فروتنانه.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/calendar.webp" alt="تقویمی که به یاد می‌آورد." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">تقویمی که به یاد می‌آورد.</h3>
+          <p class="g-desc">قمری و میلادی کنار هم. شب‌های مبارک، رمضان، عیدها و روز پیش از آن‌ها — و خلاصهٔ عبادت ماه در پایین.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/zikirmatik.webp" alt="شمارش، در دست شما." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">شمارش، در دست شما.</h3>
+          <p class="g-desc">شمارشگر ذکر و تسبیحات پس از نماز؛ اذکار آماده، ذکرهای خودتان و هدف روزانه.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/prayer-nafile.webp" alt="اوقات نافله" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">اوقات نافله</h3>
+          <p class="g-desc">اشراق، چاشت، اوابین و بخش‌های شب؛ اختیاری.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/mushaf.webp" alt="رسم مصحف" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">رسم مصحف</h3>
+          <p class="g-desc">مصحف مدینه یا مصحف ترکیه — چینش صفحه هم با آن تغییر می‌کند.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="اسماء الحسنی" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">اسماء الحسنی</h3>
+          <p class="g-desc">99 نام خداوند، با تلفظ و معنا؛ هر کدام را می‌توانید به‌عنوان ذکر اضافه کنید.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/tesbihat.webp" alt="تسبیحات" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">تسبیحات</h3>
+          <p class="g-desc">33-33-33، یا ترتیب کامل پس از نماز.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/accounting-year.webp" alt="پیگیری عبادت" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">پیگیری عبادت</h3>
+          <p class="g-desc">حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/hadith.webp" alt="حدیث" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">حدیث</h3>
+          <p class="g-desc">بیش از 36,000 حدیث از هفت مجموعهٔ بزرگ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/search.webp" alt="جست‌وجوی یکپارچه" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">جست‌وجوی یکپارچه</h3>
+          <p class="g-desc">یک جست‌وجو برای همهٔ ابزارها — بنویسید «بقره 255» و به آیه بروید.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/nearby-mosques.webp" alt="مسجدهای نزدیک" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">مسجدهای نزدیک</h3>
+          <p class="g-desc">با نقشه‌های Apple پیدا کنید، بی‌آنکه موقعیتتان به سرورهای ما برسد؛ نقشه، فاصله و مسیریابی.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="فعالیت زنده" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">فعالیت زنده</h3>
+          <p class="g-desc">شمارش معکوس در Dynamic Island و صفحهٔ قفل.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/imsakiye.webp" alt="روزهای مبارک" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">روزهای مبارک</h3>
+          <p class="g-desc">شب‌های مبارک، عیدها و شب‌های پیش از آن‌ها از امروز به بعد، هر یک با راهنما.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -637,30 +690,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · امانت</div>
-    <h2>
-      <span>داده‌های شما</span> <em>امانت است،</em><br>
-      <span>نه کالا.</span>
+    <p class="sec-eye">امانت</p>
+    <h2 class="sec-title">
+      <span>داده‌های شما</span> <span>امانت است،</span> <em>نه کالا.</em>
     </h2>
     <p class="trust-lede">مشخص شده که برخی برنامه‌های نماز دادهٔ مکانی کاربرانشان را می‌فروختند. Vakit راه دیگری برگزید: مختصات شما هرگز به سرورهای ما نمی‌رسد. نه حساب کاربری. نه تبلیغ. داده‌هایتان هرگز فروخته نمی‌شود. این یک ویژگی نیست — یک اصل است.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>دانلود کنید. باز کنید. نماز بخوانید.</h3>
         <p>نه ثبت‌نام، نه ورود، نه رمزی که فراموشش کنید. Vakit از همان لحظهٔ نصب کار می‌کند.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>روی گوشی خودتان محاسبه می‌شود.</h3>
         <p>اوقات نماز بر اساس موقعیت شما و با روشی که انتخاب می‌کنید، روی خود دستگاه محاسبه می‌شود. چیزی برای «استعلام» به هیچ سروری فرستاده نمی‌شود.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>موقعیت دقیقتان پیش ما نیست.</h3>
         <p>مختصات شما به سرورهای ما فرستاده نمی‌شود؛ ما فقط کشور، شهر و منطقه را می‌دانیم. برای نشانی شما و مسجدهای نزدیک، موقعیت فقط به نقشه‌های Apple می‌رود.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>سیاستی به زبان ساده.</h3>
         <p>داده‌های استفاده‌ای که به یک کد کاربری مستعار وابسته است — بدون نام، ایمیل یا شمارهٔ تلفن. آنچه فرستاده می‌شود یک‌به‌یک در سیاست حریم خصوصی ما آمده است و آن‌قدر کوتاه است که در یک دقیقه خوانده شود.</p>
       </div>
@@ -688,85 +740,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 ابزار</div>
-      <h2><span>یک برنامه،</span><br><em>برای یک عمر عبادت کافی است.</em></h2>
+      <p class="sec-eye">51 ابزار</p>
+      <h2 class="sec-title"><span>یک برنامه،</span> <em>برای یک عمر عبادت کافی است.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">اوقات نماز و قبله<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">اوقات نماز</h4><div class="f-desc">12 روش محاسبه، آگاه از منطقهٔ زمانی، با تشخیص سفر.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">قطب‌نمای قبله</h4><div class="f-desc">لرزش راهنما، همراه با فاصله تا کعبه.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">آسمان زنده</h4><div class="f-desc">ستارگان واقعی و ماه روی کمان روز — برای همان جایی که هستید، همین حالا.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">زنگ نماز صبح</h4><div class="f-desc">اگر نماز صبح را نخوانده باشید پیش از طلوع آفتاب زنگ می‌زند و اگر خوانده باشید ساکت می‌ماند؛ در iOS 26 از حالت بی‌صدا عبور می‌کند.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">صداهای اذان</h4><div class="f-desc">هر نماز در مقام خودش: صبا، عشاق، راست، سه‌گاه، حجاز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">اوقات نافله</h4><div class="f-desc">اشراق، چاشت، اوابین و بخش‌های شب؛ اختیاری.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">اوقات کراهت</h4><div class="f-desc">روی کمان روز علامت خورده، همراه با روایتی که پشتوانهٔ آن است.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">روزهای مبارک</h4><div class="f-desc">شب‌های مبارک، عیدها و شب‌های پیش از آن‌ها از امروز به بعد، هر یک با راهنما.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">انتخاب دستی مکان</h4><div class="f-desc">مکان را خودتان انتخاب کنید، یا بگذارید در سفر همراهتان به‌روز شود.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">اعلان‌ها</h4><div class="f-desc">روی دستگاه، محلی، قابل اعتماد.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">مسجدهای نزدیک</h4><div class="f-desc">با نقشه‌های Apple پیدا کنید، بی‌آنکه موقعیتتان به سرورهای ما برسد؛ نقشه، فاصله و مسیریابی.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">اوقات نماز</h4><p class="f-desc">12 روش محاسبه، آگاه از منطقهٔ زمانی، با تشخیص سفر.</p></li>
+          <li class="f-cell"><h4 class="f-name">قطب‌نمای قبله</h4><p class="f-desc">لرزش راهنما، همراه با فاصله تا کعبه.</p></li>
+          <li class="f-cell"><h4 class="f-name">آسمان زنده</h4><p class="f-desc">ستارگان واقعی و ماه روی کمان روز — برای همان جایی که هستید، همین حالا.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">زنگ نماز صبح</h4><p class="f-desc">اگر نماز صبح را نخوانده باشید پیش از طلوع آفتاب زنگ می‌زند و اگر خوانده باشید ساکت می‌ماند؛ در iOS 26 از حالت بی‌صدا عبور می‌کند.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">صداهای اذان</h4><p class="f-desc">هر نماز در مقام خودش: صبا، عشاق، راست، سه‌گاه، حجاز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">اوقات نافله</h4><p class="f-desc">اشراق، چاشت، اوابین و بخش‌های شب؛ اختیاری.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">اوقات کراهت</h4><p class="f-desc">روی کمان روز علامت خورده، همراه با روایتی که پشتوانهٔ آن است.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">روزهای مبارک</h4><p class="f-desc">شب‌های مبارک، عیدها و شب‌های پیش از آن‌ها از امروز به بعد، هر یک با راهنما.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">انتخاب دستی مکان</h4><p class="f-desc">مکان را خودتان انتخاب کنید، یا بگذارید در سفر همراهتان به‌روز شود.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">اعلان‌ها</h4><p class="f-desc">روی دستگاه، محلی، قابل اعتماد.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مسجدهای نزدیک</h4><p class="f-desc">با نقشه‌های Apple پیدا کنید، بی‌آنکه موقعیتتان به سرورهای ما برسد؛ نقشه، فاصله و مسیریابی.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">قرآن و حدیث<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">قرآن کریم</h4><div class="f-desc">114 سوره. کلمه به کلمه، ترجمه و تفسیر به ترکی و انگلیسی، مصحف سنتی.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">حدیث</h4><div class="f-desc">بیش از 36,000 حدیث از هفت مجموعهٔ بزرگ.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">تلاوت آفلاین</h4><div class="f-desc">قاری و سبک تلاوت را انتخاب کنید؛ سوره یا جزء را دانلود کنید و بدون اینترنت گوش دهید.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">تفسیر</h4><div class="f-desc">تفسیر دیانت؛ روی آیه بزنید تا همراه با محدودهٔ آیه‌هایی که در بر می‌گیرد باز شود.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">پیگیری ختم</h4><div class="f-desc">114 سوره، 30 جزء؛ ختم‌های کامل‌شده و زمان تقریبی پایان.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">رسم مصحف</h4><div class="f-desc">مصحف مدینه یا مصحف ترکیه — چینش صفحه هم با آن تغییر می‌کند.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">فهرست‌های پخش</h4><div class="f-desc">سوره‌ها را به ترتیب دلخواه بچین، به فهرست نام بده و از آغاز تا پایان گوش کن — بدون اینترنت هم.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">ترجمهٔ گفتاری</h4><div class="f-desc">ترجمه را با صدای خود دستگاه بشنوید — تنها یا پس از هر آیه، بدون اینترنت.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">محتوای روز</h4><div class="f-desc">آیه، حدیث و اسم روز در یک صفحه؛ به یک هفتهٔ گذشته برگردید.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">نشان‌ها</h4><div class="f-desc">آیه‌ها و حدیث‌ها را ذخیره کنید.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">کارت‌های اشتراک‌گذاری</h4><div class="f-desc">کارت‌های زیبا برای آیه‌ها، حدیث‌ها، ذکرها و اسماء الحسنی.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">قرآن کریم</h4><p class="f-desc">114 سوره. کلمه به کلمه، ترجمه و تفسیر به ترکی و انگلیسی، مصحف سنتی.</p></li>
+          <li class="f-cell"><h4 class="f-name">حدیث</h4><p class="f-desc">بیش از 36,000 حدیث از هفت مجموعهٔ بزرگ.</p></li>
+          <li class="f-cell"><h4 class="f-name">تلاوت آفلاین</h4><p class="f-desc">قاری و سبک تلاوت را انتخاب کنید؛ سوره یا جزء را دانلود کنید و بدون اینترنت گوش دهید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">تفسیر</h4><p class="f-desc">تفسیر دیانت؛ روی آیه بزنید تا همراه با محدودهٔ آیه‌هایی که در بر می‌گیرد باز شود.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">پیگیری ختم</h4><p class="f-desc">114 سوره، 30 جزء؛ ختم‌های کامل‌شده و زمان تقریبی پایان.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">رسم مصحف</h4><p class="f-desc">مصحف مدینه یا مصحف ترکیه — چینش صفحه هم با آن تغییر می‌کند.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">فهرست‌های پخش</h4><p class="f-desc">سوره‌ها را به ترتیب دلخواه بچین، به فهرست نام بده و از آغاز تا پایان گوش کن — بدون اینترنت هم.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ترجمهٔ گفتاری</h4><p class="f-desc">ترجمه را با صدای خود دستگاه بشنوید — تنها یا پس از هر آیه، بدون اینترنت.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">محتوای روز</h4><p class="f-desc">آیه، حدیث و اسم روز در یک صفحه؛ به یک هفتهٔ گذشته برگردید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">نشان‌ها</h4><p class="f-desc">آیه‌ها و حدیث‌ها را ذخیره کنید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">کارت‌های اشتراک‌گذاری</h4><p class="f-desc">کارت‌های زیبا برای آیه‌ها، حدیث‌ها، ذکرها و اسماء الحسنی.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">پیگیری عبادت و ذکر<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">پیگیری عبادت</h4><div class="f-desc">حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">پیگیری قضا</h4><div class="f-desc">نمازهای قضا به تفکیک وقت، روزه‌های قضا روز به روز.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">شمارشگر ذکر</h4><div class="f-desc">پیشرفت حلقه‌ای، اذکار آماده و ذکرهای دلخواه.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">انضباط نماز</h4><div class="f-desc">هر نماز را چه مدت پس از ورود وقتش می‌خوانید — این ماه و از ابتدا.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">روزه</h4><div class="f-desc">رمضان، شوال و پیگیری روز به روز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">زنگ سحری</h4><div class="f-desc">برای رمضان، هر روز یا روزهای روزهٔ مستحب تنظیم می‌شود.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">تسبیحات</h4><div class="f-desc">33-33-33، یا ترتیب کامل پس از نماز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">اسماء الحسنی</h4><div class="f-desc">99 نام خداوند، با تلفظ و معنا؛ هر کدام را می‌توانید به‌عنوان ذکر اضافه کنید.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">روزهای عذر</h4><div class="f-desc">روزهای حیض و نفاس؛ پیوستگی نمازتان نمی‌شکند.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">پیگیری عبادت</h4><p class="f-desc">حلقه‌هایی برای نماز، قرآن، ذکر، حدیث و قضا.</p></li>
+          <li class="f-cell"><h4 class="f-name">پیگیری قضا</h4><p class="f-desc">نمازهای قضا به تفکیک وقت، روزه‌های قضا روز به روز.</p></li>
+          <li class="f-cell"><h4 class="f-name">شمارشگر ذکر</h4><p class="f-desc">پیشرفت حلقه‌ای، اذکار آماده و ذکرهای دلخواه.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">انضباط نماز</h4><p class="f-desc">هر نماز را چه مدت پس از ورود وقتش می‌خوانید — این ماه و از ابتدا.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">روزه</h4><p class="f-desc">رمضان، شوال و پیگیری روز به روز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">زنگ سحری</h4><p class="f-desc">برای رمضان، هر روز یا روزهای روزهٔ مستحب تنظیم می‌شود.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">تسبیحات</h4><p class="f-desc">33-33-33، یا ترتیب کامل پس از نماز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">اسماء الحسنی</h4><p class="f-desc">99 نام خداوند، با تلفظ و معنا؛ هر کدام را می‌توانید به‌عنوان ذکر اضافه کنید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">روزهای عذر</h4><p class="f-desc">روزهای حیض و نفاس؛ پیوستگی نمازتان نمی‌شکند.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">تقویم و راهنماها<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">تقویم هجری قمری</h4><div class="f-desc">میلادی و قمری کنار هم، با مناسبت‌ها و رمضان.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">راهنمای نماز</h4><div class="f-desc">17 نوع نماز؛ ایستاده، نشسته یا با اشاره.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">خطبهٔ جمعه</h4><div class="f-desc">برای کاربران روش دیانت: خطبه را بخوانید، گوش دهید و آفلاین نگه دارید.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">امساکیه</h4><div class="f-desc">همهٔ اوقات یک ماه در یک فهرست؛ در رمضان شمارهٔ روز و افطار.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">راهنمای جمعه</h4><div class="f-desc">آمادگی، غسل، خطبه، سورهٔ کهف و صلوات — همهٔ جمعه در یک صفحه.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">راهنمای طهارت</h4><div class="f-desc">وضو، غسل و تیمم، گام به گام.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">یادآوری روزهای مبارک</h4><div class="f-desc">12 روز مبارک: شب‌های مبارک همان شب، بقیه یک روز پیش از آن یادآوری می‌شوند.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">زکات و زکات فطر</h4><div class="f-desc">ماشین‌حساب‌هایی بر پایهٔ احکام فقهی کلاسیک.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">تقویم هجری قمری</h4><p class="f-desc">میلادی و قمری کنار هم، با مناسبت‌ها و رمضان.</p></li>
+          <li class="f-cell"><h4 class="f-name">راهنمای نماز</h4><p class="f-desc">17 نوع نماز؛ ایستاده، نشسته یا با اشاره.</p></li>
+          <li class="f-cell"><h4 class="f-name">خطبهٔ جمعه</h4><p class="f-desc">برای کاربران روش دیانت: خطبه را بخوانید، گوش دهید و آفلاین نگه دارید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">امساکیه</h4><p class="f-desc">همهٔ اوقات یک ماه در یک فهرست؛ در رمضان شمارهٔ روز و افطار.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">راهنمای جمعه</h4><p class="f-desc">آمادگی، غسل، خطبه، سورهٔ کهف و صلوات — همهٔ جمعه در یک صفحه.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">راهنمای طهارت</h4><p class="f-desc">وضو، غسل و تیمم، گام به گام.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">یادآوری روزهای مبارک</h4><p class="f-desc">12 روز مبارک: شب‌های مبارک همان شب، بقیه یک روز پیش از آن یادآوری می‌شوند.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">زکات و زکات فطر</h4><p class="f-desc">ماشین‌حساب‌هایی بر پایهٔ احکام فقهی کلاسیک.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">دستگاه‌ها و بیشتر<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">اوقات نماز، قبلهٔ زنده و 13 افزونه.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">ویجت‌ها</h4><div class="f-desc">صفحهٔ اصلی، صفحهٔ قفل، StandBy — و روی Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">فعالیت زنده</h4><div class="f-desc">شمارش معکوس در Dynamic Island و صفحهٔ قفل.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">برنامهٔ Mac</h4><div class="f-desc">شمارش معکوس در نوار منو، میان‌برهای صفحه‌کلید، همگام‌سازی iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">همان برنامه روی صفحه‌ای بزرگ‌تر؛ سوابق شما با iCloud همگام می‌شود.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 زبان</h4><div class="f-desc">رابط راست‌به‌چپ در عربی، اردو، فارسی و اویغوری.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">همگام‌سازی iCloud</h4><div class="f-desc">سوابق شما در iCloud خودتان می‌ماند، روی همهٔ دستگاه‌ها.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">میان‌برهای Siri</h4><div class="f-desc">نماز بعدی را بپرسید؛ نماز، روزه و قضا را با صدا علامت بزنید.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">مرکز کنترل</h4><div class="f-desc">شش میان‌بر سریع (iOS 18+) — قبله، نماز بعدی و بیشتر.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">جست‌وجوی یکپارچه</h4><div class="f-desc">یک جست‌وجو برای همهٔ ابزارها — بنویسید «بقره 255» و به آیه بروید.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">حالت تیره</h4><div class="f-desc">تیرگی گرم و آرام برای ساعات دیروقت.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">حمایت از Vakit</h4><div class="f-desc">راه‌های اختیاری برای زنده نگه داشتن این برنامهٔ رایگان.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">اوقات نماز، قبلهٔ زنده و 13 افزونه.</p></li>
+          <li class="f-cell"><h4 class="f-name">ویجت‌ها</h4><p class="f-desc">صفحهٔ اصلی، صفحهٔ قفل، StandBy — و روی Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">فعالیت زنده</h4><p class="f-desc">شمارش معکوس در Dynamic Island و صفحهٔ قفل.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">برنامهٔ Mac</h4><p class="f-desc">شمارش معکوس در نوار منو، میان‌برهای صفحه‌کلید، همگام‌سازی iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">همان برنامه روی صفحه‌ای بزرگ‌تر؛ سوابق شما با iCloud همگام می‌شود.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 زبان</h4><p class="f-desc">رابط راست‌به‌چپ در عربی، اردو، فارسی و اویغوری.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">همگام‌سازی iCloud</h4><p class="f-desc">سوابق شما در iCloud خودتان می‌ماند، روی همهٔ دستگاه‌ها.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">میان‌برهای Siri</h4><p class="f-desc">نماز بعدی را بپرسید؛ نماز، روزه و قضا را با صدا علامت بزنید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مرکز کنترل</h4><p class="f-desc">شش میان‌بر سریع (iOS 18+) — قبله، نماز بعدی و بیشتر.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">جست‌وجوی یکپارچه</h4><p class="f-desc">یک جست‌وجو برای همهٔ ابزارها — بنویسید «بقره 255» و به آیه بروید.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">حالت تیره</h4><p class="f-desc">تیرگی گرم و آرام برای ساعات دیروقت.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">حمایت از Vakit</h4><p class="f-desc">راه‌های اختیاری برای زنده نگه داشتن این برنامهٔ رایگان.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">نمایش همهٔ 51 ابزار</button>
@@ -777,27 +829,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>سخنان نیک</span><br><em>از نمازگزاران واقعی.</em></h2>
+      <h2 class="sec-title"><span>سخنان نیک</span> <em>از نمازگزاران واقعی.</em></h2>
       <div class="t-meta">
         <span>میانگین امتیاز</span>
-        <b>4.8 ★</b>
+        <b>4.8 <span class="star" aria-hidden="true">★</span></b>
         <span>از 473 امتیاز در App Store</span>
       </div>
     </div>
     <p class="t-note">این نظرها از App Store ترکیه است و از ترکی ترجمه شده‌اند.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="سخنان نیک از نمازگزاران واقعی.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">برنامه‌ای 10 از 10.</div><p class="t-body">چه اوقات نماز که با گرافیک زیبای ویجت نشان داده می‌شود، چه بی‌تبلیغ بودن برنامه و رابط بسیار تمیزش — 10 از 10. واقعاً راضی‌ام و به همه توصیه‌اش می‌کنم.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">عالی.</div><p class="t-body">تمیزترین و کاربردی‌ترین برنامه‌ای که می‌توانید پیدا کنید. تبلیغ ندارد، رابطش بسیار ساده و شیک است. بخش قبله‌یاب واقعاً دقیق است و خیلی خوب کار می‌کند. بقیهٔ محتوایش هم خیلی قشنگ شده.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ساده و کاربردی.</div><p class="t-body">از بیشتر برنامه‌ها، بازی‌ها و شبکه‌های اجتماعی دیگر در سطح بالاتری است. برای زحماتتان ممنونم، کار فوق‌العاده‌ای شده. من کسی هستم که سعی می‌کند دینش را با برنامه‌ریزی بیشتری زندگی کند و این برنامه دست راستم شده.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">بی‌نقص.</div><p class="t-body">دست سازنده‌اش درد نکند. تبلیغ ندارد. زحمت جدی‌ای برایش کشیده شده. پیداست که فقط برای رضای خدا ساخته شده. ممنون.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">برنامه‌ای کمیاب.</div><p class="t-body">خدا از شما راضی باشد. هم اوقات نماز این‌قدر مرتب و منظم است، هم حدیث‌ها با دقت و همراه با متن عربی، ترجمهٔ ترکی و درجهٔ صحتشان آمده، و با این همه تبلیغی نشان داده نمی‌شود — چنین برنامه‌ای کمیاب است. دانلودش کنید؛ احتمالاً برای همیشه روی گوشی‌تان می‌ماند.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">دقیقاً همان چیزی که می‌خواستیم.</div><p class="t-body">خدا از هر کس که به فکرش رسید و ساختش راضی باشد. روشن، بدون تبلیغ و سرراست.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">با آخرین به‌روزرسانی فوق‌العاده شده.</div><p class="t-body">ساده، زیبا، کاربردی، سریع — چه بگویم. دستتان درد نکند؛ زحمتتان قبول و دلتان شاد.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">خدا از شما راضی باشد.</div><p class="t-body">از رابط‌های پر از تبلیغ و ناکارآمد که مدام پول می‌خواستند خسته شده بودم. Vakit واقعاً عالی است؛ همه‌جا کار می‌کند، بدون اینترنت و بدون تبلیغ. قرآن، حدیث، ذکرشمار، پیگیری نماز — به برنامهٔ دیگری نیاز ندارم.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">بقیه را پاک کردم.</div><p class="t-body">خدا از سازنده‌اش راضی باشد. دستتان درد نکند. خیلی مفید بود.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">بهترین.</div><p class="t-body">بهتر از این ندیده‌ام. برنامه‌ای که باید روی هر گوشی باشد. خدا از برادری که ساختش راضی باشد.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">واقعاً مفید.</div><p class="t-body">برنامه بسیار مفید و کاربردی است. برنامه‌ای که باید روی گوشی هر مسلمانی باشد. خدا از سازنده‌اش راضی باشد.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">خدا از تو راضی باشد.</div><p class="t-body">برادر، خیلی ممنون که چنین برنامهٔ ارزشمندی را رایگان ساختی. ان‌شاءالله خدا مطابق نیت دلت به تو عطا کند.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">برنامه‌ای 10 از 10.</div><p class="t-body">چه اوقات نماز که با گرافیک زیبای ویجت نشان داده می‌شود، چه بی‌تبلیغ بودن برنامه و رابط بسیار تمیزش — 10 از 10. واقعاً راضی‌ام و به همه توصیه‌اش می‌کنم.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">عالی.</div><p class="t-body">تمیزترین و کاربردی‌ترین برنامه‌ای که می‌توانید پیدا کنید. تبلیغ ندارد، رابطش بسیار ساده و شیک است. بخش قبله‌یاب واقعاً دقیق است و خیلی خوب کار می‌کند. بقیهٔ محتوایش هم خیلی قشنگ شده.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ساده و کاربردی.</div><p class="t-body">از بیشتر برنامه‌ها، بازی‌ها و شبکه‌های اجتماعی دیگر در سطح بالاتری است. برای زحماتتان ممنونم، کار فوق‌العاده‌ای شده. من کسی هستم که سعی می‌کند دینش را با برنامه‌ریزی بیشتری زندگی کند و این برنامه دست راستم شده.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">بی‌نقص.</div><p class="t-body">دست سازنده‌اش درد نکند. تبلیغ ندارد. زحمت جدی‌ای برایش کشیده شده. پیداست که فقط برای رضای خدا ساخته شده. ممنون.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">برنامه‌ای کمیاب.</div><p class="t-body">خدا از شما راضی باشد. هم اوقات نماز این‌قدر مرتب و منظم است، هم حدیث‌ها با دقت و همراه با متن عربی، ترجمهٔ ترکی و درجهٔ صحتشان آمده، و با این همه تبلیغی نشان داده نمی‌شود — چنین برنامه‌ای کمیاب است. دانلودش کنید؛ احتمالاً برای همیشه روی گوشی‌تان می‌ماند.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">دقیقاً همان چیزی که می‌خواستیم.</div><p class="t-body">خدا از هر کس که به فکرش رسید و ساختش راضی باشد. روشن، بدون تبلیغ و سرراست.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">با آخرین به‌روزرسانی فوق‌العاده شده.</div><p class="t-body">ساده، زیبا، کاربردی، سریع — چه بگویم. دستتان درد نکند؛ زحمتتان قبول و دلتان شاد.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">خدا از شما راضی باشد.</div><p class="t-body">از رابط‌های پر از تبلیغ و ناکارآمد که مدام پول می‌خواستند خسته شده بودم. Vakit واقعاً عالی است؛ همه‌جا کار می‌کند، بدون اینترنت و بدون تبلیغ. قرآن، حدیث، ذکرشمار، پیگیری نماز — به برنامهٔ دیگری نیاز ندارم.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">بقیه را پاک کردم.</div><p class="t-body">خدا از سازنده‌اش راضی باشد. دستتان درد نکند. خیلی مفید بود.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">بهترین.</div><p class="t-body">بهتر از این ندیده‌ام. برنامه‌ای که باید روی هر گوشی باشد. خدا از برادری که ساختش راضی باشد.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">واقعاً مفید.</div><p class="t-body">برنامه بسیار مفید و کاربردی است. برنامه‌ای که باید روی گوشی هر مسلمانی باشد. خدا از سازنده‌اش راضی باشد.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">خدا از تو راضی باشد.</div><p class="t-body">برادر، خیلی ممنون که چنین برنامهٔ ارزشمندی را رایگان ساختی. ان‌شاءالله خدا مطابق نیت دلت به تو عطا کند.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -805,7 +857,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>پاسخ‌های صادقانه</span><br><em>به پرسش‌های صادقانه.</em></h2>
+    <h2 class="sec-title"><span>پاسخ‌های صادقانه</span> <em>به پرسش‌های صادقانه.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">بدون اینترنت کار می‌کند؟<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">بله. اوقات نماز بر اساس موقعیت شما روی گوشی‌تان محاسبه می‌شود. متن قرآن، قبله، ذکر و همهٔ ابزارهای اصلی کاملاً آفلاین کار می‌کنند.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">اگر برنامه را باز نکنم، اعلان‌ها می‌رسند؟<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">بله. اعلان‌ها به‌صورت محلی روی دستگاه شما زمان‌بندی می‌شوند و حتی وقتی برنامه بسته است به دستتان می‌رسند. اگر دسترسی مکان «همیشه» را بدهید، Vakit پس از سفر بی‌صدا اوقات را دوباره محاسبه می‌کند.</div></div></div>
@@ -828,7 +880,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>نگذارید عبادتتان</span> <em>نیمه‌کاره بماند.</em></h2>
+  <h2 class="sec-title"><span>نگذارید عبادتتان</span> <em>نیمه‌کاره بماند.</em></h2>
   <p>رایگان. بدون حساب کاربری. آفلاین کار می‌کند. iPhone، iPad، Apple Watch و Mac — iOS 16.4+، watchOS 9+، macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-fa" class="btn-primary">

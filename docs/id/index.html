@@ -114,11 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -394,7 +390,7 @@
     <a href="#faq">Tanya Jawab</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Nyalakan/matikan mode gelap">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Nyalakan/matikan mode gelap"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Tutup">
       <summary aria-label="Bahasa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Bahasa Indonesia</span></summary>
       <ul class="lang-list">
@@ -505,53 +501,96 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Semua yang perlu, tanpa yang berlebih</div>
-    <h2 class="sc-h2"><span>Seorang teman,</span><br><em>bukan mesin perebut perhatian.</em></h2>
-    <p class="sc-lede">15 alat utama, masing-masing dirancang agar terasa tenang begitu dibuka. Ketuk mana saja untuk melihat.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Seperti langit.</h3><p>Setiap kali waktu salat masuk, layar ikut berubah bersama langit — bintang dan bulan sungguhan di posisi sebenarnya. Waktu makruh dan salat sunah bersifat opsional.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Tanpa membuka kunci.</h3><p>Salat berikutnya di Layar Terkunci, di widget, di Dynamic Island, dan di jam tanganmu. Cukup dilirik sekilas — tak pernah menyita perhatian.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Semua dalam satu.</h3><p>Al-Qur'an, hadis, khotbah Jumat, zikir, Asmaul Husna, panduan, dan kalender — semua di satu tempat. Tak ada yang dikunci di balik pembayaran.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Arah yang tepat.</h3><p>Menghadap kiblat, ponselmu bergetar, lengkap dengan jarak ke Ka'bah.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Ibadahmu dalam cincin.</h3><p>Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada; seberapa cepat kamu salat setelah waktunya masuk, serta khatammu — kemajuan yang lembut, tanpa rasa bersalah.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Utang salat, lunas satu per satu.</h3><p>Hitung utang salat seumur hidup per waktu dan lunasi satu demi satu — lengkap dengan perkiraan kapan selesai.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Al-Qur'an, juga offline.</h3><p>Baca, dengarkan, renungkan — rasm Madinah atau Turki, sorotan kata per kata, tafsir, dan murottal yang bisa diunduh.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Panduan bergambar untuk 17 salat.</h3><p>Dari wudu hingga tasbih; berdiri, duduk, atau dengan isyarat — langkah demi langkah, tanpa menggurui.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Kalender yang tak lupa.</h3><p>Hijriah dan Masehi berdampingan. Malam-malam mulia, Ramadan, hari raya dan malam sebelumnya — dengan ringkasan ibadah sebulan di bawahnya.</p></div><span class="sc-tag">Pratinjau</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Hitungan di genggaman.</h3><p>Penghitung zikir dan tasbih setelah salat; zikir siap pakai, zikir buatanmu, dan target harian.</p></div><span class="sc-tag">Pratinjau</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional.">Waktu Salat Sunah</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Rasm Madinah atau Turki — tata letak halamannya ikut berubah.">Rasm Mushaf</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 nama Allah, dengan transliterasi dan maknanya; bisa ditambahkan sebagai zikir.">Asmaul Husna</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, atau urutan lengkap setelah salat.">Tasbih</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada.">Catatan Ibadah</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Semua yang perlu, tanpa yang berlebih</p>
+    <h2 class="sec-title"><span>Seorang teman,</span> <em>bukan mesin perebut perhatian.</em></h2>
+    <p class="sec-lede">15 alat utama, masing-masing dirancang agar terasa tenang begitu dibuka.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/id/prayer-times.webp" alt="Seperti langit." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/id/widget.webp" alt="Tanpa membuka kunci." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/id/discover.webp" alt="Semua dalam satu." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/id/qibla.webp" alt="Arah yang tepat." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/id/profile.webp" alt="Ibadahmu dalam cincin." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/id/qada.webp" alt="Utang salat, lunas satu per satu." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/id/quran.webp" alt="Al-Qur'an, juga offline." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/id/prayer-guide.webp" alt="Panduan bergambar untuk 17 salat." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/id/calendar.webp" alt="Kalender yang tak lupa." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/id/zikirmatik.webp" alt="Hitungan di genggaman." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/id/more/prayer-nafile.webp" alt="Waktu Salat Sunah" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/id/more/mushaf.webp" alt="Rasm Mushaf" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/id/more/esma-ul-husna.webp" alt="Asmaul Husna" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/id/more/tesbihat.webp" alt="Tasbih" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/id/more/accounting-year.webp" alt="Catatan Ibadah" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Seorang teman, bukan mesin perebut perhatian.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/prayer-times.webp" alt="Seperti langit." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Seperti langit.</h3>
+          <p class="g-desc">Setiap kali waktu salat masuk, layar ikut berubah bersama langit — bintang dan bulan sungguhan di posisi sebenarnya. Waktu makruh dan salat sunah bersifat opsional.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/widget.webp" alt="Tanpa membuka kunci." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tanpa membuka kunci.</h3>
+          <p class="g-desc">Salat berikutnya di Layar Terkunci, di widget, di Dynamic Island, dan di jam tanganmu. Cukup dilirik sekilas — tak pernah menyita perhatian.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/discover.webp" alt="Semua dalam satu." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Semua dalam satu.</h3>
+          <p class="g-desc">Al-Qur'an, hadis, khotbah Jumat, zikir, Asmaul Husna, panduan, dan kalender — semua di satu tempat. Tak ada yang dikunci di balik pembayaran.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/qibla.webp" alt="Arah yang tepat." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Arah yang tepat.</h3>
+          <p class="g-desc">Menghadap kiblat, ponselmu bergetar, lengkap dengan jarak ke Ka'bah.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/profile.webp" alt="Ibadahmu dalam cincin." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Ibadahmu dalam cincin.</h3>
+          <p class="g-desc">Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada; seberapa cepat kamu salat setelah waktunya masuk, serta khatammu — kemajuan yang lembut, tanpa rasa bersalah.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/qada.webp" alt="Utang salat, lunas satu per satu." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Utang salat, lunas satu per satu.</h3>
+          <p class="g-desc">Hitung utang salat seumur hidup per waktu dan lunasi satu demi satu — lengkap dengan perkiraan kapan selesai.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/quran.webp" alt="Al-Qur'an, juga offline." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Al-Qur'an, juga offline.</h3>
+          <p class="g-desc">Baca, dengarkan, renungkan — rasm Madinah atau Turki, sorotan kata per kata, tafsir, dan murottal yang bisa diunduh.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/prayer-guide.webp" alt="Panduan bergambar untuk 17 salat." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Panduan bergambar untuk 17 salat.</h3>
+          <p class="g-desc">Dari wudu hingga tasbih; berdiri, duduk, atau dengan isyarat — langkah demi langkah, tanpa menggurui.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/calendar.webp" alt="Kalender yang tak lupa." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Kalender yang tak lupa.</h3>
+          <p class="g-desc">Hijriah dan Masehi berdampingan. Malam-malam mulia, Ramadan, hari raya dan malam sebelumnya — dengan ringkasan ibadah sebulan di bawahnya.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/zikirmatik.webp" alt="Hitungan di genggaman." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Hitungan di genggaman.</h3>
+          <p class="g-desc">Penghitung zikir dan tasbih setelah salat; zikir siap pakai, zikir buatanmu, dan target harian.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/prayer-nafile.webp" alt="Waktu Salat Sunah" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Waktu Salat Sunah</h3>
+          <p class="g-desc">Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/mushaf.webp" alt="Rasm Mushaf" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Rasm Mushaf</h3>
+          <p class="g-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/esma-ul-husna.webp" alt="Asmaul Husna" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Asmaul Husna</h3>
+          <p class="g-desc">99 nama Allah, dengan transliterasi dan maknanya; bisa ditambahkan sebagai zikir.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/tesbihat.webp" alt="Tasbih" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tasbih</h3>
+          <p class="g-desc">33-33-33, atau urutan lengkap setelah salat.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/accounting-year.webp" alt="Catatan Ibadah" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Catatan Ibadah</h3>
+          <p class="g-desc">Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -626,30 +665,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Amanah</div>
-    <h2>
-      <span>Datamu adalah</span> <em>amanah,</em><br>
-      <span>bukan barang dagangan.</span>
+    <p class="sec-eye">Amanah</p>
+    <h2 class="sec-title">
+      <span>Datamu adalah</span> <span>amanah,</span> <em>bukan barang dagangan.</em>
     </h2>
     <p class="trust-lede">Aplikasi salat lain pernah ketahuan menjual data lokasi. Vakit memilih jalan lain: koordinatmu tidak pernah sampai ke server kami. Tanpa akun. Tanpa iklan. Datamu tidak pernah dijual. Ini bukan fitur — ini prinsip.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>Unduh. Buka. Salat.</h3>
         <p>Tanpa daftar, tanpa login, tanpa kata sandi yang bakal kamu lupakan. Vakit langsung bekerja begitu dipasang.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Dihitung di ponselmu.</h3>
         <p>Jadwal salat dihitung langsung di perangkat berdasarkan lokasimu, dengan metode pilihanmu. Tidak ada yang dikirim ke server untuk ‘dicarikan’.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>Lokasi tepatmu tidak ada pada kami.</h3>
         <p>Koordinatmu tidak pernah sampai ke server kami — kami hanya tahu negara, kota, dan kecamatanmu. Untuk alamat dan masjid terdekat, lokasi hanya dikirim ke Apple Maps.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Kebijakan yang mudah dipahami.</h3>
         <p>Data penggunaan yang terikat pada kode samaran — tanpa nama, email, atau nomor telepon. Kebijakan privasi kami mencantumkan persis apa saja yang dikirim, dan cukup pendek untuk dibaca dalam semenit.</p>
       </div>
@@ -677,85 +715,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 alat</div>
-      <h2><span>Satu aplikasi,</span><br><em>cukup untuk ibadah seumur hidup.</em></h2>
+      <p class="sec-eye">51 alat</p>
+      <h2 class="sec-title"><span>Satu aplikasi,</span> <em>cukup untuk ibadah seumur hidup.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Jadwal salat &amp; kiblat<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Jadwal Salat</h4><div class="f-desc">12 metode perhitungan, mengikuti zona waktu, mendeteksi perjalanan.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Kompas Kiblat</h4><div class="f-desc">Getaran penunjuk arah, lengkap dengan jarak ke Ka'bah.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Langit Hidup</h4><div class="f-desc">Bintang dan bulan sungguhan di busur hari — sesuai tempatmu, saat ini juga.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Alarm Subuh</h4><div class="f-desc">Berbunyi sebelum matahari terbit jika kamu belum salat Subuh, diam jika sudah; menembus mode senyap di iOS 26.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Suara Azan</h4><div class="f-desc">Setiap waktu salat dengan maqamnya sendiri: saba, ussak, rast, segah, hicaz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Waktu Salat Sunah</h4><div class="f-desc">Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Waktu Makruh</h4><div class="f-desc">Ditandai di busur hari, lengkap dengan riwayat yang mendasarinya.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Hari-hari Mulia</h4><div class="f-desc">Malam-malam mulia, hari raya dan malam sebelumnya dari hari ini ke depan, masing-masing dengan panduan.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Lokasi Manual</h4><div class="f-desc">Atur lokasi sendiri, atau biarkan ia mengikutimu saat bepergian.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Notifikasi</h4><div class="f-desc">Di perangkat, lokal, bisa diandalkan.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Masjid Terdekat</h4><div class="f-desc">Temukan masjid lewat Apple Maps, tanpa lokasimu sampai ke server kami; peta, jarak, petunjuk arah.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Jadwal Salat</h4><p class="f-desc">12 metode perhitungan, mengikuti zona waktu, mendeteksi perjalanan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Kompas Kiblat</h4><p class="f-desc">Getaran penunjuk arah, lengkap dengan jarak ke Ka'bah.</p></li>
+          <li class="f-cell"><h4 class="f-name">Langit Hidup</h4><p class="f-desc">Bintang dan bulan sungguhan di busur hari — sesuai tempatmu, saat ini juga.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Alarm Subuh</h4><p class="f-desc">Berbunyi sebelum matahari terbit jika kamu belum salat Subuh, diam jika sudah; menembus mode senyap di iOS 26.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Suara Azan</h4><p class="f-desc">Setiap waktu salat dengan maqamnya sendiri: saba, ussak, rast, segah, hicaz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Waktu Salat Sunah</h4><p class="f-desc">Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Waktu Makruh</h4><p class="f-desc">Ditandai di busur hari, lengkap dengan riwayat yang mendasarinya.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Hari-hari Mulia</h4><p class="f-desc">Malam-malam mulia, hari raya dan malam sebelumnya dari hari ini ke depan, masing-masing dengan panduan.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Lokasi Manual</h4><p class="f-desc">Atur lokasi sendiri, atau biarkan ia mengikutimu saat bepergian.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Notifikasi</h4><p class="f-desc">Di perangkat, lokal, bisa diandalkan.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Masjid Terdekat</h4><p class="f-desc">Temukan masjid lewat Apple Maps, tanpa lokasimu sampai ke server kami; peta, jarak, petunjuk arah.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Al-Qur'an &amp; hadis<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Al-Qur'an</h4><div class="f-desc">114 surah. Kata per kata, terjemahan, tafsir, mushaf klasik.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadis</h4><div class="f-desc">Lebih dari 36.000 hadis dari tujuh kitab besar.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Murottal Offline</h4><div class="f-desc">Pilih qari dan gaya bacaan; unduh surah atau juz, dengarkan tanpa internet.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsir</h4><div class="f-desc">Tafsir Diyanet; ketuk ayat untuk membukanya, lengkap dengan rentang ayat yang dicakupnya.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Catatan Khatam</h4><div class="f-desc">114 surah, 30 juz; khatam yang sudah selesai dan perkiraan kapan khatam.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Rasm Mushaf</h4><div class="f-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Daftar Putar</h4><div class="f-desc">Susun surah sesuai urutanmu, beri nama daftarnya, lalu dengarkan dari awal sampai akhir — juga offline.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Terjemahan Bersuara</h4><div class="f-desc">Dengarkan terjemahan dengan suara perangkatmu sendiri — sendiri atau setelah tiap ayat, tanpa internet.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Konten Hari Ini</h4><div class="f-desc">Ayat, hadis, dan nama hari ini dalam satu layar; tinjau kembali sepekan terakhir.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Penanda</h4><div class="f-desc">Simpan ayat dan hadis.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Kartu Berbagi</h4><div class="f-desc">Kartu indah untuk ayat, hadis, zikir, dan Asmaul Husna.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Al-Qur'an</h4><p class="f-desc">114 surah. Kata per kata, terjemahan, tafsir, mushaf klasik.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hadis</h4><p class="f-desc">Lebih dari 36.000 hadis dari tujuh kitab besar.</p></li>
+          <li class="f-cell"><h4 class="f-name">Murottal Offline</h4><p class="f-desc">Pilih qari dan gaya bacaan; unduh surah atau juz, dengarkan tanpa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tafsir</h4><p class="f-desc">Tafsir Diyanet; ketuk ayat untuk membukanya, lengkap dengan rentang ayat yang dicakupnya.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Catatan Khatam</h4><p class="f-desc">114 surah, 30 juz; khatam yang sudah selesai dan perkiraan kapan khatam.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Rasm Mushaf</h4><p class="f-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Daftar Putar</h4><p class="f-desc">Susun surah sesuai urutanmu, beri nama daftarnya, lalu dengarkan dari awal sampai akhir — juga offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Terjemahan Bersuara</h4><p class="f-desc">Dengarkan terjemahan dengan suara perangkatmu sendiri — sendiri atau setelah tiap ayat, tanpa internet.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Konten Hari Ini</h4><p class="f-desc">Ayat, hadis, dan nama hari ini dalam satu layar; tinjau kembali sepekan terakhir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Penanda</h4><p class="f-desc">Simpan ayat dan hadis.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Kartu Berbagi</h4><p class="f-desc">Kartu indah untuk ayat, hadis, zikir, dan Asmaul Husna.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Catatan ibadah &amp; zikir<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Catatan Ibadah</h4><div class="f-desc">Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Catatan Kada</h4><div class="f-desc">Salat tertinggal per waktu, puasa tertinggal per hari.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Penghitung Zikir</h4><div class="f-desc">Kemajuan berbentuk cincin, zikir siap pakai, dan zikir buatanmu.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Disiplin Salat</h4><div class="f-desc">Berapa lama setelah waktunya masuk kamu salat — bulan ini dan sepanjang waktu.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Puasa</h4><div class="f-desc">Ramadan, Syawal, dan catatan harian.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Alarm Sahur</h4><div class="f-desc">Diatur untuk Ramadan, setiap hari, atau hari-hari puasa sunah.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbih</h4><div class="f-desc">33-33-33, atau urutan lengkap setelah salat.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Asmaul Husna</h4><div class="f-desc">99 nama Allah, dengan transliterasi dan maknanya; bisa ditambahkan sebagai zikir.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Hari Uzur</h4><div class="f-desc">Hari haid dan nifas; runtun salatmu tetap utuh.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Catatan Ibadah</h4><p class="f-desc">Cincin untuk salat, Al-Qur'an, zikir, hadis, dan kada.</p></li>
+          <li class="f-cell"><h4 class="f-name">Catatan Kada</h4><p class="f-desc">Salat tertinggal per waktu, puasa tertinggal per hari.</p></li>
+          <li class="f-cell"><h4 class="f-name">Penghitung Zikir</h4><p class="f-desc">Kemajuan berbentuk cincin, zikir siap pakai, dan zikir buatanmu.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Disiplin Salat</h4><p class="f-desc">Berapa lama setelah waktunya masuk kamu salat — bulan ini dan sepanjang waktu.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Puasa</h4><p class="f-desc">Ramadan, Syawal, dan catatan harian.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Alarm Sahur</h4><p class="f-desc">Diatur untuk Ramadan, setiap hari, atau hari-hari puasa sunah.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tasbih</h4><p class="f-desc">33-33-33, atau urutan lengkap setelah salat.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Asmaul Husna</h4><p class="f-desc">99 nama Allah, dengan transliterasi dan maknanya; bisa ditambahkan sebagai zikir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Hari Uzur</h4><p class="f-desc">Hari haid dan nifas; runtun salatmu tetap utuh.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Kalender &amp; panduan<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Kalender Hijriah</h4><div class="f-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Panduan Salat</h4><div class="f-desc">17 jenis salat; berdiri, duduk, atau dengan isyarat.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Khotbah Jumat</h4><div class="f-desc">Bagi pengguna metode Diyanet: baca, dengarkan, dan simpan khotbahnya untuk dibaca offline.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Imsakiyah</h4><div class="f-desc">Semua waktu salat satu bulan dalam satu daftar; di Ramadan, hitungan hari dan berbuka.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Panduan Jumat</h4><div class="f-desc">Persiapan, mandi, khotbah, Surah Al-Kahf, dan selawat — seluruh hari Jumat dalam satu halaman.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Panduan Bersuci</h4><div class="f-desc">Wudu, mandi wajib, dan tayamum langkah demi langkah.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Pengingat Hari Mulia</h4><div class="f-desc">12 hari mulia: malam-malam mulia diingatkan malam itu juga, sisanya sehari sebelumnya.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zakat &amp; Fitrah</h4><div class="f-desc">Kalkulator yang berpijak pada fikih klasik.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Kalender Hijriah</h4><p class="f-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Panduan Salat</h4><p class="f-desc">17 jenis salat; berdiri, duduk, atau dengan isyarat.</p></li>
+          <li class="f-cell"><h4 class="f-name">Khotbah Jumat</h4><p class="f-desc">Bagi pengguna metode Diyanet: baca, dengarkan, dan simpan khotbahnya untuk dibaca offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Imsakiyah</h4><p class="f-desc">Semua waktu salat satu bulan dalam satu daftar; di Ramadan, hitungan hari dan berbuka.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Panduan Jumat</h4><p class="f-desc">Persiapan, mandi, khotbah, Surah Al-Kahf, dan selawat — seluruh hari Jumat dalam satu halaman.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Panduan Bersuci</h4><p class="f-desc">Wudu, mandi wajib, dan tayamum langkah demi langkah.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Pengingat Hari Mulia</h4><p class="f-desc">12 hari mulia: malam-malam mulia diingatkan malam itu juga, sisanya sehari sebelumnya.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zakat &amp; Fitrah</h4><p class="f-desc">Kalkulator yang berpijak pada fikih klasik.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Perangkat &amp; lainnya<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Jadwal salat, kiblat langsung, 13 komplikasi.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widget</h4><div class="f-desc">Layar Utama, Layar Terkunci, StandBy — juga di Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Aktivitas Langsung</h4><div class="f-desc">Hitung mundur di Dynamic Island dan Layar Terkunci.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Aplikasi Mac</h4><div class="f-desc">Hitung mundur di bilah menu, pintasan keyboard, sinkronisasi iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">Aplikasi yang sama di layar yang lebih besar; catatanmu tersinkron lewat iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 Bahasa</h4><div class="f-desc">Antarmuka kanan-ke-kiri dalam bahasa Arab, Urdu, Persia, dan Uighur.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Sinkronisasi iCloud</h4><div class="f-desc">Catatanmu tetap di iCloud milikmu sendiri, di setiap perangkat.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Pintasan Siri</h4><div class="f-desc">Tanyakan salat berikutnya; tandai salat, puasa, atau kada lewat suara.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Pusat Kontrol</h4><div class="f-desc">Enam tindakan cepat (iOS 18+) — kiblat, salat berikutnya, dan lainnya.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Pencarian Terpadu</h4><div class="f-desc">Satu pencarian untuk semua alat — ketik ‘Al-Baqarah 255’ dan langsung ke ayatnya.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Mode Gelap</h4><div class="f-desc">Gelap yang hangat dan tenang untuk larut malam.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Dukung Vakit</h4><div class="f-desc">Cara sukarela untuk menjaga aplikasi gratis ini tetap hidup.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Jadwal salat, kiblat langsung, 13 komplikasi.</p></li>
+          <li class="f-cell"><h4 class="f-name">Widget</h4><p class="f-desc">Layar Utama, Layar Terkunci, StandBy — juga di Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">Aktivitas Langsung</h4><p class="f-desc">Hitung mundur di Dynamic Island dan Layar Terkunci.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Aplikasi Mac</h4><p class="f-desc">Hitung mundur di bilah menu, pintasan keyboard, sinkronisasi iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">Aplikasi yang sama di layar yang lebih besar; catatanmu tersinkron lewat iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 Bahasa</h4><p class="f-desc">Antarmuka kanan-ke-kiri dalam bahasa Arab, Urdu, Persia, dan Uighur.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Sinkronisasi iCloud</h4><p class="f-desc">Catatanmu tetap di iCloud milikmu sendiri, di setiap perangkat.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Pintasan Siri</h4><p class="f-desc">Tanyakan salat berikutnya; tandai salat, puasa, atau kada lewat suara.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Pusat Kontrol</h4><p class="f-desc">Enam tindakan cepat (iOS 18+) — kiblat, salat berikutnya, dan lainnya.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Pencarian Terpadu</h4><p class="f-desc">Satu pencarian untuk semua alat — ketik ‘Al-Baqarah 255’ dan langsung ke ayatnya.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mode Gelap</h4><p class="f-desc">Gelap yang hangat dan tenang untuk larut malam.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Dukung Vakit</h4><p class="f-desc">Cara sukarela untuk menjaga aplikasi gratis ini tetap hidup.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Lihat semua 51 alat</button>
@@ -766,27 +804,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Kata-kata baik dari</span><br><em>pengguna sungguhan.</em></h2>
+      <h2 class="sec-title"><span>Kata-kata baik dari</span> <em>pengguna sungguhan.</em></h2>
       <div class="t-meta">
         <span>Rating rata-rata</span>
-        <b>4,8 ★</b>
+        <b>4,8 <span class="star" aria-hidden="true">★</span></b>
         <span>dari 473 rating App Store</span>
       </div>
     </div>
     <p class="t-note">Ulasan dari App Store Turki, diterjemahkan dari bahasa Turki.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Kata-kata baik dari pengguna sungguhan.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Aplikasi 10/10.</div><p class="t-body">Entah jadwal salatnya yang tampil dengan grafik widget yang indah, entah karena tanpa iklan dan antarmukanya sangat bersih — 10/10. Saya benar-benar puas, saya rekomendasikan ke semua orang.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Luar biasa.</div><p class="t-body">Aplikasi paling bersih dan praktis yang bisa kamu temukan. Tanpa iklan, antarmukanya sangat sederhana dan elegan. Pencari kiblatnya benar-benar akurat dan bekerja dengan baik. Konten lainnya juga bagus sekali.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Sederhana dan praktis.</div><p class="t-body">Kualitasnya di atas kebanyakan aplikasi, gim, dan media sosial lain. Terima kasih atas usahanya, hasilnya luar biasa. Saya sedang berusaha menjalani agama saya dengan lebih teratur, dan aplikasi ini sudah jadi tangan kanan saya.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Sempurna.</div><p class="t-body">Salut untuk pembuatnya. Tanpa iklan. Digarap dengan sungguh-sungguh. Jelas dibuat semata-mata karena Allah. Terima kasih.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Aplikasi yang langka.</div><p class="t-body">Semoga Allah meridai Anda. Jadwal salatnya tertata rapi, hadisnya disajikan dengan cermat lengkap dengan teks Arab, terjemahan Turki, dan derajat kesahihannya — tapi tanpa iklan. Aplikasi seperti ini langka. Unduh saja, kemungkinan besar akan jadi aplikasi tetap di ponselmu.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Persis yang dibutuhkan.</div><p class="t-body">Semoga Allah meridai siapa pun yang terpikir dan mampu membuatnya. Jelas, tanpa iklan, dan langsung ke intinya.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Pembaruan terakhir membuatnya luar biasa.</div><p class="t-body">Sederhana, estetis, praktis, cepat — mau bilang apa lagi. Semoga Allah memberkahi tangan, jerih payah, dan hati Anda.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Semoga Allah meridai.</div><p class="t-body">Saya sudah bosan dengan antarmuka penuh iklan, yang terus minta uang dan tidak praktis. Vakit benar-benar hebat; bisa dipakai di mana saja, tanpa internet, tanpa iklan. Al-Qur'an, hadis, penghitung zikir, catatan salat — saya tidak butuh aplikasi lain.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Yang lain sudah saya hapus.</div><p class="t-body">Semoga Allah meridai pembuatnya. Terima kasih banyak. Sangat bermanfaat.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Yang terbaik.</div><p class="t-body">Saya belum pernah melihat yang lebih baik dari ini. Aplikasi yang wajib ada di setiap ponsel. Semoga Allah meridai pengembangnya.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Benar-benar bermanfaat.</div><p class="t-body">Aplikasinya sangat bermanfaat dan praktis. Aplikasi yang semestinya ada di ponsel setiap Muslim. Semoga Allah meridai pengembangnya.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Semoga Allah meridai.</div><p class="t-body">Saudaraku, terima kasih banyak sudah membuat aplikasi seberharga ini secara gratis. Semoga Allah mengabulkan keinginan hatimu, insyaallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Aplikasi 10/10.</div><p class="t-body">Entah jadwal salatnya yang tampil dengan grafik widget yang indah, entah karena tanpa iklan dan antarmukanya sangat bersih — 10/10. Saya benar-benar puas, saya rekomendasikan ke semua orang.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Luar biasa.</div><p class="t-body">Aplikasi paling bersih dan praktis yang bisa kamu temukan. Tanpa iklan, antarmukanya sangat sederhana dan elegan. Pencari kiblatnya benar-benar akurat dan bekerja dengan baik. Konten lainnya juga bagus sekali.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Sederhana dan praktis.</div><p class="t-body">Kualitasnya di atas kebanyakan aplikasi, gim, dan media sosial lain. Terima kasih atas usahanya, hasilnya luar biasa. Saya sedang berusaha menjalani agama saya dengan lebih teratur, dan aplikasi ini sudah jadi tangan kanan saya.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Sempurna.</div><p class="t-body">Salut untuk pembuatnya. Tanpa iklan. Digarap dengan sungguh-sungguh. Jelas dibuat semata-mata karena Allah. Terima kasih.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Aplikasi yang langka.</div><p class="t-body">Semoga Allah meridai Anda. Jadwal salatnya tertata rapi, hadisnya disajikan dengan cermat lengkap dengan teks Arab, terjemahan Turki, dan derajat kesahihannya — tapi tanpa iklan. Aplikasi seperti ini langka. Unduh saja, kemungkinan besar akan jadi aplikasi tetap di ponselmu.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Persis yang dibutuhkan.</div><p class="t-body">Semoga Allah meridai siapa pun yang terpikir dan mampu membuatnya. Jelas, tanpa iklan, dan langsung ke intinya.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Pembaruan terakhir membuatnya luar biasa.</div><p class="t-body">Sederhana, estetis, praktis, cepat — mau bilang apa lagi. Semoga Allah memberkahi tangan, jerih payah, dan hati Anda.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Semoga Allah meridai.</div><p class="t-body">Saya sudah bosan dengan antarmuka penuh iklan, yang terus minta uang dan tidak praktis. Vakit benar-benar hebat; bisa dipakai di mana saja, tanpa internet, tanpa iklan. Al-Qur'an, hadis, penghitung zikir, catatan salat — saya tidak butuh aplikasi lain.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Yang lain sudah saya hapus.</div><p class="t-body">Semoga Allah meridai pembuatnya. Terima kasih banyak. Sangat bermanfaat.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Yang terbaik.</div><p class="t-body">Saya belum pernah melihat yang lebih baik dari ini. Aplikasi yang wajib ada di setiap ponsel. Semoga Allah meridai pengembangnya.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Benar-benar bermanfaat.</div><p class="t-body">Aplikasinya sangat bermanfaat dan praktis. Aplikasi yang semestinya ada di ponsel setiap Muslim. Semoga Allah meridai pengembangnya.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Semoga Allah meridai.</div><p class="t-body">Saudaraku, terima kasih banyak sudah membuat aplikasi seberharga ini secara gratis. Semoga Allah mengabulkan keinginan hatimu, insyaallah.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -794,7 +832,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Jawaban jujur</span><br><em>untuk pertanyaan jujur.</em></h2>
+    <h2 class="sec-title"><span>Jawaban jujur</span> <em>untuk pertanyaan jujur.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">Apakah bisa dipakai tanpa internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bisa. Jadwal salat dihitung di ponselmu berdasarkan lokasimu. Teks Al-Qur'an, kiblat, zikir, dan semua alat utama bekerja sepenuhnya offline.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah notifikasi tetap datang meski aplikasi tidak pernah dibuka?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ya. Notifikasi dijadwalkan secara lokal di perangkat, jadi tetap datang meski aplikasi ditutup. Jika kamu memberi izin lokasi ‘Selalu’, Vakit akan menghitung ulang jadwal secara diam-diam setelah kamu bepergian.</div></div></div>
@@ -817,7 +855,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>Jangan biarkan ibadahmu</span> <em>terputus.</em></h2>
+  <h2 class="sec-title"><span>Jangan biarkan ibadahmu</span> <em>terputus.</em></h2>
   <p>Gratis. Tanpa akun. Bisa offline. iPhone, iPad, Apple Watch, dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-id" class="btn-primary">

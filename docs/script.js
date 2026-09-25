@@ -5,8 +5,8 @@
  * the HTML at build time by ../build.js so crawlers that don't run JavaScript
  * can read it. Do not render content here — edit ../content.js and rebuild.
  *
- * What lives here: the live prayer clock, the hero's preview video, showcase
- * preview switching, the iPad/Mac screen tabs, "show all" features, the FAQ
+ * What lives here: the live prayer clock, the hero's preview video, the
+ * showcase gallery's buttons, the iPad/Mac screen tabs, "show all" features, the FAQ
  * accordion, theme toggle, the language menu, smooth scrolling, the mobile menu
  * and the phone-only download dock.
  */
@@ -251,45 +251,39 @@ function initHeroVideo() {
 }
 
 /* ================================================================
-   Showcase — markup is static, this only switches the visible screen.
-   Screens change only when a list item or a "more screens" tab is tapped;
-   they used to follow the scroll position, which on phones swapped the
-   screen as soon as the list passed through the middle of the screen.
+   Showcase gallery — every screen is in the HTML, side by side; the page
+   never switches screens for the visitor. Swipe, trackpad and arrow keys
+   scroll it natively; the two round buttons are a shortcut for a mouse,
+   one screenful per click. They disable at either end.
    ================================================================ */
 
-const mobileShowcase = window.matchMedia('(max-width: 699px)');
-let showcaseIndex = 0;
+function initGallery() {
+  const gallery = document.getElementById('gallery');
+  const prev = document.querySelector('.g-prev');
+  const next = document.querySelector('.g-next');
+  if (!gallery || !prev || !next) return;
+  const rtl = getComputedStyle(gallery).direction === 'rtl';
 
-function showcaseTriggers() {
-  return [...document.querySelectorAll('#scList .sc-item, #scMore .sc-chip')];
-}
-
-function selectShowcase(i) {
-  showcaseIndex = i;
-  showcaseTriggers().forEach((el, j) => {
-    el.classList.toggle('on', i === j);
-    if (el.classList.contains('sc-chip')) el.setAttribute('aria-pressed', String(i === j));
-  });
-  document.querySelectorAll('#phoneScreen .phone-screenshot').forEach((el, j) => el.classList.toggle('on', i === j));
-
-  // One line under the tabs: on phones for every screen (the list is reduced to
-  // tabs there), on wider screens only for the extra tabs, whose description
-  // has nowhere else to go.
-  const caption = document.getElementById('scCaption');
-  if (caption) {
-    const el = showcaseTriggers()[i];
-    const desc = el?.dataset.desc || (mobileShowcase.matches ? el?.querySelector('p')?.textContent : '') || '';
-    caption.textContent = desc;
-  }
-}
-
-function initShowcase() {
-  const triggers = showcaseTriggers();
-  if (!triggers.length) return;
-
-  triggers.forEach((el, i) => el.addEventListener('click', () => selectShowcase(i)));
-  mobileShowcase.addEventListener?.('change', () => selectShowcase(showcaseIndex));
-  selectShowcase(0);
+  // In RTL, scrollLeft runs from 0 to negative values in current browsers.
+  const update = () => {
+    const pos = Math.abs(gallery.scrollLeft);
+    const max = gallery.scrollWidth - gallery.clientWidth - 2;
+    prev.disabled = pos <= 2;
+    next.disabled = pos >= max;
+  };
+  const step = (dir) => {
+    const item = gallery.querySelector('.g-item');
+    const gap = parseFloat(getComputedStyle(gallery.querySelector('.g-track')).columnGap) || 0;
+    const width = item ? item.getBoundingClientRect().width + gap : 300;
+    const perView = Math.max(1, Math.floor(gallery.clientWidth / width) - 1);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    gallery.scrollBy({ left: dir * (rtl ? -1 : 1) * width * perView, behavior: reduce ? 'auto' : 'smooth' });
+  };
+  prev.addEventListener('click', () => step(-1));
+  next.addEventListener('click', () => step(1));
+  gallery.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 }
 
 /* ================================================================
@@ -381,8 +375,7 @@ let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-
 
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', theme);
-  const btn = document.getElementById('themeToggle');
-  if (btn) btn.textContent = theme === 'dark' ? '☾' : '☀';
+  // The button shows a sun or a moon by CSS ([data-theme]); nothing to swap here.
 }
 
 function toggleTheme() {
@@ -489,7 +482,7 @@ function suggestLanguage(menu, remember) {
 
 applyTheme();
 initHeroVideo();
-initShowcase();
+initGallery();
 initDevices();
 initFeatures();
 initFAQ();

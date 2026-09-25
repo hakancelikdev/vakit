@@ -114,11 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -394,7 +390,7 @@
     <a href="#faq">FAQ</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Toggle dark mode">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Toggle dark mode"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Close">
       <summary aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>English</span></summary>
       <ul class="lang-list">
@@ -505,63 +501,121 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Everything, nothing extra</div>
-    <h2 class="sc-h2"><span>A companion,</span><br><em>not an attention machine.</em></h2>
-    <p class="sc-lede">20 core tools, each designed to feel calm the moment you open it. Tap any to preview.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Like the sky.</h3><p>As each prayer time enters, the screen changes with the sky — real stars and the moon in their true places. Makruh and voluntary times are optional.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Without unlocking.</h3><p>The next prayer on your Lock Screen, in a widget, in the Dynamic Island and on your watch. A quiet glance — never a stare.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Every tool, in one place.</h3><p>Quran, hadith, Friday sermon, dhikr, asma, guides and the calendar — all in one hub. Nothing locked behind a paywall.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>The right direction.</h3><p>Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Your worship, in rings.</h3><p>Rings for prayer, Quran, dhikr, hadith and qada; how soon after each time enters you pray, and your khatm — gentle progress, no guilt.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Qada, cleared as you pray.</h3><p>Calculate a lifetime of missed prayers by time slot and clear them one by one — with an estimate of when you'll be done.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>The Quran, even offline.</h3><p>Read, listen, reflect — Madinah or Türkiye script, word-by-word follow-along, tafsir and downloadable recitation.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Seventeen prayers, illustrated.</h3><p>From wudu to tasbih; standing, seated or by gesture — step by step, taught without condescension.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>A calendar that remembers.</h3><p>Hijri and Gregorian together. Holy nights, Ramadan, the Eids and the eve before — with the month's worship summary below.</p></div><span class="sc-tag">Preview</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>The count, in hand.</h3><p>A dhikr counter and the post-prayer tasbihat; presets, your own dhikr and a daily goal.</p></div><span class="sc-tag">Preview</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ishraq, Duha, Awwabin and the parts of the night; optional.">Voluntary Prayer Times</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Madinah or Türkiye script — page layout follows too.">Mushaf Script</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 names of Allah, with transliteration and meaning; add any as dhikr.">Asma al-Husna</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33, or the full post-prayer sequence.">Tasbihat</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Rings for prayer, Quran, dhikr, hadith and qada.">Worship Tracking</button>
-      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="Over 36,000 ahadith across seven major collections.">Hadith</button>
-      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="One search, every tool — type 'Baqarah 255' to jump to the ayah.">Unified Search</button>
-      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.">Nearby Mosques</button>
-      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Dynamic Island and lock-screen countdowns.">Live Activity</button>
-      <button class="dv-tab sc-chip" data-index="19" aria-pressed="false" data-desc="A whole month of prayer times in one list; Ramadan day count and iftar.">Imsakiye</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Everything, nothing extra</p>
+    <h2 class="sec-title"><span>A companion,</span> <em>not an attention machine.</em></h2>
+    <p class="sec-lede">20 core tools, each designed to feel calm the moment you open it.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="Like the sky." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="Without unlocking." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="Every tool, in one place." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="The right direction." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/en/profile.webp" alt="Your worship, in rings." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/en/qada.webp" alt="Qada, cleared as you pray." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/en/quran.webp" alt="The Quran, even offline." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="Seventeen prayers, illustrated." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="A calendar that remembers." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="The count, in hand." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Voluntary Prayer Times" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="Mushaf Script" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="Worship Tracking" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="Hadith" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="Unified Search" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Nearby Mosques" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="19" src="/assets/screenshots/en/more/imsakiye.webp" alt="Imsakiye" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="A companion, not an attention machine.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-times.webp" alt="Like the sky." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Like the sky.</h3>
+          <p class="g-desc">As each prayer time enters, the screen changes with the sky — real stars and the moon in their true places. Makruh and voluntary times are optional.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/widget.webp" alt="Without unlocking." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Without unlocking.</h3>
+          <p class="g-desc">The next prayer on your Lock Screen, in a widget, in the Dynamic Island and on your watch. A quiet glance — never a stare.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/discover.webp" alt="Every tool, in one place." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Every tool, in one place.</h3>
+          <p class="g-desc">Quran, hadith, Friday sermon, dhikr, asma, guides and the calendar — all in one hub. Nothing locked behind a paywall.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qibla.webp" alt="The right direction." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">The right direction.</h3>
+          <p class="g-desc">Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/profile.webp" alt="Your worship, in rings." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Your worship, in rings.</h3>
+          <p class="g-desc">Rings for prayer, Quran, dhikr, hadith and qada; how soon after each time enters you pray, and your khatm — gentle progress, no guilt.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qada.webp" alt="Qada, cleared as you pray." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Qada, cleared as you pray.</h3>
+          <p class="g-desc">Calculate a lifetime of missed prayers by time slot and clear them one by one — with an estimate of when you'll be done.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/quran.webp" alt="The Quran, even offline." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">The Quran, even offline.</h3>
+          <p class="g-desc">Read, listen, reflect — Madinah or Türkiye script, word-by-word follow-along, tafsir and downloadable recitation.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-guide.webp" alt="Seventeen prayers, illustrated." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Seventeen prayers, illustrated.</h3>
+          <p class="g-desc">From wudu to tasbih; standing, seated or by gesture — step by step, taught without condescension.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/calendar.webp" alt="A calendar that remembers." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">A calendar that remembers.</h3>
+          <p class="g-desc">Hijri and Gregorian together. Holy nights, Ramadan, the Eids and the eve before — with the month's worship summary below.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/zikirmatik.webp" alt="The count, in hand." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">The count, in hand.</h3>
+          <p class="g-desc">A dhikr counter and the post-prayer tasbihat; presets, your own dhikr and a daily goal.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/prayer-nafile.webp" alt="Voluntary Prayer Times" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Voluntary Prayer Times</h3>
+          <p class="g-desc">Ishraq, Duha, Awwabin and the parts of the night; optional.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/mushaf.webp" alt="Mushaf Script" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Mushaf Script</h3>
+          <p class="g-desc">Madinah or Türkiye script — page layout follows too.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Asma al-Husna" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Asma al-Husna</h3>
+          <p class="g-desc">99 names of Allah, with transliteration and meaning; add any as dhikr.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/tesbihat.webp" alt="Tasbihat" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Tasbihat</h3>
+          <p class="g-desc">33-33-33, or the full post-prayer sequence.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/accounting-year.webp" alt="Worship Tracking" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Worship Tracking</h3>
+          <p class="g-desc">Rings for prayer, Quran, dhikr, hadith and qada.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/hadith.webp" alt="Hadith" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Hadith</h3>
+          <p class="g-desc">Over 36,000 ahadith across seven major collections.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/search.webp" alt="Unified Search" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Unified Search</h3>
+          <p class="g-desc">One search, every tool — type 'Baqarah 255' to jump to the ayah.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/nearby-mosques.webp" alt="Nearby Mosques" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Nearby Mosques</h3>
+          <p class="g-desc">Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="Live Activity" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Live Activity</h3>
+          <p class="g-desc">Dynamic Island and lock-screen countdowns.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/imsakiye.webp" alt="Imsakiye" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Imsakiye</h3>
+          <p class="g-desc">A whole month of prayer times in one list; Ramadan day count and iftar.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -636,30 +690,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Emanet — a trust</div>
-    <h2>
-      <span>Your data is</span> <em>a trust,</em><br>
-      <span>not a product.</span>
+    <p class="sec-eye">Emanet — a trust</p>
+    <h2 class="sec-title">
+      <span>Your data is</span> <span>a trust,</span> <em>not a product.</em>
     </h2>
     <p class="trust-lede">Other prayer apps have been caught selling location data. Vakit went a different way: your coordinates never reach our servers. No account. No ads. Your data is never sold. This isn't a feature — it's a principle.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>Download. Open. Pray.</h3>
         <p>No sign-up, no login, no password you'll forget. Vakit starts working the moment you install it.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Calculated on your phone.</h3>
         <p>Prayer times are computed locally from your location, using the method you choose. Nothing is sent to a server to be 'looked up'.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>Your exact location isn't ours.</h3>
         <p>Your coordinates never reach our servers — we only know your country, city and district. For your address and nearby mosques, location goes to Apple Maps only.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Plain-language policy.</h3>
         <p>Usage data tied to a pseudonymous code — no name, email or phone. The privacy policy lists exactly what is sent, and it's short enough to read in a minute.</p>
       </div>
@@ -687,85 +740,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 tools</div>
-      <h2><span>One app,</span><br><em>enough for a life of worship.</em></h2>
+      <p class="sec-eye">51 tools</p>
+      <h2 class="sec-title"><span>One app,</span> <em>enough for a life of worship.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Prayer times &amp; qibla<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Prayer Times</h4><div class="f-desc">12 calculation methods, timezone-aware, travel-detecting.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Qibla Compass</h4><div class="f-desc">Haptic bearing with distance to the Ka'bah.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Live Sky</h4><div class="f-desc">Real stars and the moon on the day arc — for where you are, right now.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Fajr Alarm</h4><div class="f-desc">Rings before sunrise if you haven't prayed Fajr, stays quiet if you have; breaks silent mode on iOS 26.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Adhan Sounds</h4><div class="f-desc">Each prayer in its own makam: saba, ussak, rast, segah, hicaz.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Voluntary Prayer Times</h4><div class="f-desc">Ishraq, Duha, Awwabin and the parts of the night; optional.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Karahat Times</h4><div class="f-desc">Marked on the day arc, with the narration behind them.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Imsakiye</h4><div class="f-desc">A whole month of prayer times in one list; Ramadan day count and iftar.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Manual Location</h4><div class="f-desc">Set your location by hand, or let it follow you as you travel.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Notifications</h4><div class="f-desc">On-device, local, dependable.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Nearby Mosques</h4><div class="f-desc">Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Prayer Times</h4><p class="f-desc">12 calculation methods, timezone-aware, travel-detecting.</p></li>
+          <li class="f-cell"><h4 class="f-name">Qibla Compass</h4><p class="f-desc">Haptic bearing with distance to the Ka'bah.</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Sky</h4><p class="f-desc">Real stars and the moon on the day arc — for where you are, right now.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Fajr Alarm</h4><p class="f-desc">Rings before sunrise if you haven't prayed Fajr, stays quiet if you have; breaks silent mode on iOS 26.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Adhan Sounds</h4><p class="f-desc">Each prayer in its own makam: saba, ussak, rast, segah, hicaz.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Voluntary Prayer Times</h4><p class="f-desc">Ishraq, Duha, Awwabin and the parts of the night; optional.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Karahat Times</h4><p class="f-desc">Marked on the day arc, with the narration behind them.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Imsakiye</h4><p class="f-desc">A whole month of prayer times in one list; Ramadan day count and iftar.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Manual Location</h4><p class="f-desc">Set your location by hand, or let it follow you as you travel.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Notifications</h4><p class="f-desc">On-device, local, dependable.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Nearby Mosques</h4><p class="f-desc">Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Quran &amp; hadith<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Holy Quran</h4><div class="f-desc">114 surahs. Word-by-word, translation, tafsir, classical Mushaf.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Hadith</h4><div class="f-desc">Over 36,000 ahadith across seven major collections.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Offline Recitation</h4><div class="f-desc">Pick a reciter and style; download surahs or juz and listen offline.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Tafsir</h4><div class="f-desc">Diyanet commentary — tap an ayah to open it, with the range it covers.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Khatm Tracking</h4><div class="f-desc">114 surahs, 30 juz; completed khatms and an estimated finish.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Mushaf Script</h4><div class="f-desc">Madinah or Türkiye script — page layout follows too.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Playlists</h4><div class="f-desc">Line up surahs in your own order, name the list and play it end to end — offline too.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Spoken Translation</h4><div class="f-desc">Hear the translation in your device's own voice — alone or after each verse, offline.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Daily Content</h4><div class="f-desc">Verse, hadith and name of the day on one screen; look back over the past week.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Bookmarks</h4><div class="f-desc">Save ayat and hadith.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Share Cards</h4><div class="f-desc">Beautiful cards for ayat, hadith, dhikr and the names of Allah.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Holy Quran</h4><p class="f-desc">114 surahs. Word-by-word, translation, tafsir, classical Mushaf.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hadith</h4><p class="f-desc">Over 36,000 ahadith across seven major collections.</p></li>
+          <li class="f-cell"><h4 class="f-name">Offline Recitation</h4><p class="f-desc">Pick a reciter and style; download surahs or juz and listen offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tafsir</h4><p class="f-desc">Diyanet commentary — tap an ayah to open it, with the range it covers.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Khatm Tracking</h4><p class="f-desc">114 surahs, 30 juz; completed khatms and an estimated finish.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mushaf Script</h4><p class="f-desc">Madinah or Türkiye script — page layout follows too.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Playlists</h4><p class="f-desc">Line up surahs in your own order, name the list and play it end to end — offline too.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Spoken Translation</h4><p class="f-desc">Hear the translation in your device's own voice — alone or after each verse, offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Daily Content</h4><p class="f-desc">Verse, hadith and name of the day on one screen; look back over the past week.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Bookmarks</h4><p class="f-desc">Save ayat and hadith.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Share Cards</h4><p class="f-desc">Beautiful cards for ayat, hadith, dhikr and the names of Allah.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Worship tracking &amp; dhikr<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Worship Tracking</h4><div class="f-desc">Rings for prayer, Quran, dhikr, hadith and qada.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Qada Tracking</h4><div class="f-desc">Missed prayers by time slot, missed fasts by day.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Dhikr Counter</h4><div class="f-desc">Ring-based progress, presets, and custom dhikr.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Prayer Discipline</h4><div class="f-desc">How long after each prayer enters you pray — this month and all time.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Fasting</h4><div class="f-desc">Ramadan, Shawwal, and day-by-day tracking.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Suhoor Alarm</h4><div class="f-desc">Set for Ramadan, every day, or the recommended fasting days.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Tasbihat</h4><div class="f-desc">33-33-33, or the full post-prayer sequence.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">Asma al-Husna</h4><div class="f-desc">99 names of Allah, with transliteration and meaning; add any as dhikr.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Excused Days</h4><div class="f-desc">Menstruation and postpartum days; your prayer streak holds.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Worship Tracking</h4><p class="f-desc">Rings for prayer, Quran, dhikr, hadith and qada.</p></li>
+          <li class="f-cell"><h4 class="f-name">Qada Tracking</h4><p class="f-desc">Missed prayers by time slot, missed fasts by day.</p></li>
+          <li class="f-cell"><h4 class="f-name">Dhikr Counter</h4><p class="f-desc">Ring-based progress, presets, and custom dhikr.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Prayer Discipline</h4><p class="f-desc">How long after each prayer enters you pray — this month and all time.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Fasting</h4><p class="f-desc">Ramadan, Shawwal, and day-by-day tracking.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Suhoor Alarm</h4><p class="f-desc">Set for Ramadan, every day, or the recommended fasting days.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Tasbihat</h4><p class="f-desc">33-33-33, or the full post-prayer sequence.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Asma al-Husna</h4><p class="f-desc">99 names of Allah, with transliteration and meaning; add any as dhikr.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Excused Days</h4><p class="f-desc">Menstruation and postpartum days; your prayer streak holds.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Calendar &amp; guides<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Hijri Calendar</h4><div class="f-desc">Gregorian + Hijri, with special days and Ramadan.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Prayer Guide</h4><div class="f-desc">17 prayer types; standing, seated or by gesture.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Friday Sermon</h4><div class="f-desc">For Diyanet-method users: read, listen to and store the khutbah offline.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Blessed Days</h4><div class="f-desc">Holy nights, Eids and their eves from today onward, each with a guide.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Friday Guide</h4><div class="f-desc">Preparation, ghusl, the khutbah, Surah al-Kahf and salawat — the whole Friday on one page.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Purification Guide</h4><div class="f-desc">Step-by-step wudu, ghusl and tayammum.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Holy Day Reminders</h4><div class="f-desc">12 holy days: holy nights that evening, the rest the day before.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Zakat &amp; Fitr</h4><div class="f-desc">Calculators grounded in classical rulings.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Hijri Calendar</h4><p class="f-desc">Gregorian + Hijri, with special days and Ramadan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Prayer Guide</h4><p class="f-desc">17 prayer types; standing, seated or by gesture.</p></li>
+          <li class="f-cell"><h4 class="f-name">Friday Sermon</h4><p class="f-desc">For Diyanet-method users: read, listen to and store the khutbah offline.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Blessed Days</h4><p class="f-desc">Holy nights, Eids and their eves from today onward, each with a guide.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Friday Guide</h4><p class="f-desc">Preparation, ghusl, the khutbah, Surah al-Kahf and salawat — the whole Friday on one page.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Purification Guide</h4><p class="f-desc">Step-by-step wudu, ghusl and tayammum.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Holy Day Reminders</h4><p class="f-desc">12 holy days: holy nights that evening, the rest the day before.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Zakat &amp; Fitr</h4><p class="f-desc">Calculators grounded in classical rulings.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Devices &amp; more<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Prayer times, live qibla, 13 complications.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Widgets</h4><div class="f-desc">Home Screen, lock screen, StandBy — and on Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Dynamic Island and lock-screen countdowns.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac App</h4><div class="f-desc">Menu bar countdown, keyboard shortcuts, iCloud sync.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">The same app on a bigger screen; your records sync over iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 Languages</h4><div class="f-desc">Right-to-left interface in Arabic, Urdu, Persian and Uyghur.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud Sync</h4><div class="f-desc">Your records stay in your own iCloud, on every device.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri Shortcuts</h4><div class="f-desc">Ask for the next prayer; mark a prayer, fast or qada by voice.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Control Center</h4><div class="f-desc">Six quick actions (iOS 18+) — Qibla, next prayer, more.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Unified Search</h4><div class="f-desc">One search, every tool — type 'Baqarah 255' to jump to the ayah.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Dark Mode</h4><div class="f-desc">Warm, quiet dark for the late hours.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Support Vakit</h4><div class="f-desc">Opt-in ways to keep the free app alive.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Prayer times, live qibla, 13 complications.</p></li>
+          <li class="f-cell"><h4 class="f-name">Widgets</h4><p class="f-desc">Home Screen, lock screen, StandBy — and on Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Activity</h4><p class="f-desc">Dynamic Island and lock-screen countdowns.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mac App</h4><p class="f-desc">Menu bar countdown, keyboard shortcuts, iCloud sync.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">The same app on a bigger screen; your records sync over iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 Languages</h4><p class="f-desc">Right-to-left interface in Arabic, Urdu, Persian and Uyghur.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iCloud Sync</h4><p class="f-desc">Your records stay in your own iCloud, on every device.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Siri Shortcuts</h4><p class="f-desc">Ask for the next prayer; mark a prayer, fast or qada by voice.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Control Center</h4><p class="f-desc">Six quick actions (iOS 18+) — Qibla, next prayer, more.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Unified Search</h4><p class="f-desc">One search, every tool — type 'Baqarah 255' to jump to the ayah.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Dark Mode</h4><p class="f-desc">Warm, quiet dark for the late hours.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Support Vakit</h4><p class="f-desc">Opt-in ways to keep the free app alive.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Show all 51 tools</button>
@@ -776,27 +829,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Kind words from</span><br><em>real worshippers.</em></h2>
+      <h2 class="sec-title"><span>Kind words from</span> <em>real worshippers.</em></h2>
       <div class="t-meta">
         <span>Average rating</span>
-        <b>4.8 ★</b>
+        <b>4.8 <span class="star" aria-hidden="true">★</span></b>
         <span>from 473 App Store ratings</span>
       </div>
     </div>
     <p class="t-note">Reviews from the Turkish App Store, translated from Turkish.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Kind words from real worshippers.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">A 10/10 app.</div><p class="t-body">Whether it's the prayer times shown with those beautiful widget graphics, or the fact that it has no ads and such a clean interface — 10/10. I'm genuinely delighted with it and recommend it to everyone.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Wonderful.</div><p class="t-body">The cleanest, most usable app you can find. No ads, a clean and elegant interface. The qibla finder works really accurately. The rest of the features are lovely too.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Simple and useful.</div><p class="t-body">It's at a higher level than most other apps, games and social media apps. Thank you for your effort — wonderful work. I'm someone trying to live my faith more deliberately, and this app has become my right hand.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Flawless.</div><p class="t-body">Hats off to the developer. No ads. Serious effort put in. Clearly built for the sake of Allah alone. Thank you.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">A rare app.</div><p class="t-body">May God be pleased with you. Prayer times this well organised, and hadiths given carefully with their Arabic, Turkish and authenticity grading — yet no ads. An app like this is rare. Download it; it will probably stay on your phone for good.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Exactly what was needed.</div><p class="t-body">May God bless whoever thought of this. Explanatory, ad-free and to the point.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">The latest update made it superb.</div><p class="t-body">Simple, elegant, useful, fast — what more can I say. Bless your hands, your effort and your heart.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">May God be pleased.</div><p class="t-body">I was tired of ad-filled, paywalled, unusable interfaces. Vakit is truly wonderful — works everywhere, offline, ad-free. Quran, hadith, dhikr, prayer tracking — I barely need any other app.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">I deleted the others.</div><p class="t-body">May God be pleased with whoever made this. Bless your hands. It has been so useful.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">The best one.</div><p class="t-body">I haven't seen anything better than this — an app that should be on every phone. God bless the developer.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Truly useful.</div><p class="t-body">The app is extremely useful and practical. It should be on every Muslim's phone. God bless the developer.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">May God be pleased.</div><p class="t-body">Brother, thank you so much for making an app this valuable free of charge. May God grant you your heart's wishes.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">A 10/10 app.</div><p class="t-body">Whether it's the prayer times shown with those beautiful widget graphics, or the fact that it has no ads and such a clean interface — 10/10. I'm genuinely delighted with it and recommend it to everyone.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Wonderful.</div><p class="t-body">The cleanest, most usable app you can find. No ads, a clean and elegant interface. The qibla finder works really accurately. The rest of the features are lovely too.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Simple and useful.</div><p class="t-body">It's at a higher level than most other apps, games and social media apps. Thank you for your effort — wonderful work. I'm someone trying to live my faith more deliberately, and this app has become my right hand.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Flawless.</div><p class="t-body">Hats off to the developer. No ads. Serious effort put in. Clearly built for the sake of Allah alone. Thank you.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">A rare app.</div><p class="t-body">May God be pleased with you. Prayer times this well organised, and hadiths given carefully with their Arabic, Turkish and authenticity grading — yet no ads. An app like this is rare. Download it; it will probably stay on your phone for good.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Exactly what was needed.</div><p class="t-body">May God bless whoever thought of this. Explanatory, ad-free and to the point.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">The latest update made it superb.</div><p class="t-body">Simple, elegant, useful, fast — what more can I say. Bless your hands, your effort and your heart.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">May God be pleased.</div><p class="t-body">I was tired of ad-filled, paywalled, unusable interfaces. Vakit is truly wonderful — works everywhere, offline, ad-free. Quran, hadith, dhikr, prayer tracking — I barely need any other app.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">I deleted the others.</div><p class="t-body">May God be pleased with whoever made this. Bless your hands. It has been so useful.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">The best one.</div><p class="t-body">I haven't seen anything better than this — an app that should be on every phone. God bless the developer.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Truly useful.</div><p class="t-body">The app is extremely useful and practical. It should be on every Muslim's phone. God bless the developer.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">May God be pleased.</div><p class="t-body">Brother, thank you so much for making an app this valuable free of charge. May God grant you your heart's wishes.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -804,7 +857,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Honest answers</span><br><em>to honest questions.</em></h2>
+    <h2 class="sec-title"><span>Honest answers</span> <em>to honest questions.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">Does it work without internet?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Will notifications arrive if I never open the app?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel.</div></div></div>
@@ -827,7 +880,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>Don't let your worship</span> <em>be interrupted.</em></h2>
+  <h2 class="sec-title"><span>Don't let your worship</span> <em>be interrupted.</em></h2>
   <p>Free. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-en" class="btn-primary">

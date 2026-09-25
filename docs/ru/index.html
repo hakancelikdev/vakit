@@ -114,12 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <style>:root { --serif: 'Instrument Serif', 'Noto Serif', Georgia, serif }</style>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -395,7 +390,7 @@
     <a href="#faq">Вопросы</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="Переключить тёмный режим">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="Переключить тёмный режим"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="Закрыть">
       <summary aria-label="Язык"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>Русский</span></summary>
       <ul class="lang-list">
@@ -506,53 +501,96 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · Всё нужное, ничего лишнего</div>
-    <h2 class="sc-h2"><span>Спутник,</span><br><em>а не ловушка для внимания.</em></h2>
-    <p class="sc-lede">15 главных инструментов, и каждый устроен так, чтобы с первой секунды было спокойно. Коснитесь любого, чтобы посмотреть.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>Как небо.</h3><p>С наступлением каждого времени намаза экран меняется вместе с небом — настоящие звёзды и луна на своих местах. Нежелательное время и добровольные молитвы — по желанию.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>Не разблокируя.</h3><p>Следующий намаз — на экране блокировки, в виджете, в Dynamic Island и на часах. Беглый взгляд — и ничего, что отвлекает.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>Всё в одном.</h3><p>Коран, хадисы, пятничная проповедь, зикр, 99 имён Аллаха, руководства и календарь — в одном месте. Ничего не спрятано за платным доступом.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>Точное направление.</h3><p>Повернитесь к кибле — телефон отзовётся вибрацией, а рядом будет расстояние до Каабы.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>Прогресс в кольцах.</h3><p>Кольца для намаза, Корана, зикра, хадисов и када; через сколько после наступления времени вы молитесь и ваш хатм — мягкий прогресс, без чувства вины.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>Долг тает с каждым намазом.</h3><p>Рассчитайте пропущенные за всю жизнь намазы по каждому времени и восполняйте их один за другим — с прогнозом, когда закончите.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>Коран — и без интернета.</h3><p>Читайте, слушайте, размышляйте — мединское или турецкое письмо, подсветка слово за словом, тафсир и чтение, которое можно скачать.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>Семнадцать намазов в иллюстрациях.</h3><p>От вуду до тасбиха; стоя, сидя или жестами — шаг за шагом, без назидательного тона.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>Календарь, который помнит.</h3><p>Хиджра и григорианский календарь вместе. Благословенные ночи, Рамадан, праздники Ид и их канун — а ниже итог ибадата за месяц.</p></div><span class="sc-tag">Посмотреть</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>Счёт всегда под рукой.</h3><p>Счётчик зикра и тасбихат после намаза; готовые зикры, ваши собственные и цель на день.</p></div><span class="sc-tag">Посмотреть</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="Ишрак, духа, аввабин и части ночи — по желанию.">Время добровольных молитв</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="Мединское или турецкое — вместе с ним меняется и разметка страниц.">Письмо мусхафа</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="С транслитерацией и значением; любое имя можно добавить как зикр.">99 имён Аллаха</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 или полный порядок после намаза.">Тасбихат</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="Кольца для намаза, Корана, зикра, хадисов и када.">Учёт ибадатов</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">Всё нужное, ничего лишнего</p>
+    <h2 class="sec-title"><span>Спутник,</span> <em>а не ловушка для внимания.</em></h2>
+    <p class="sec-lede">15 главных инструментов, и каждый устроен так, чтобы с первой секунды было спокойно.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/ru/prayer-times.webp" alt="Как небо." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/ru/widget.webp" alt="Не разблокируя." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/ru/discover.webp" alt="Всё в одном." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/ru/qibla.webp" alt="Точное направление." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/ru/profile.webp" alt="Прогресс в кольцах." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/ru/qada.webp" alt="Долг тает с каждым намазом." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/ru/quran.webp" alt="Коран — и без интернета." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/ru/prayer-guide.webp" alt="Семнадцать намазов в иллюстрациях." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/ru/calendar.webp" alt="Календарь, который помнит." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/ru/zikirmatik.webp" alt="Счёт всегда под рукой." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/ru/more/prayer-nafile.webp" alt="Время добровольных молитв" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/ru/more/mushaf.webp" alt="Письмо мусхафа" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/ru/more/esma-ul-husna.webp" alt="99 имён Аллаха" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/ru/more/tesbihat.webp" alt="Тасбихат" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/ru/more/accounting-year.webp" alt="Учёт ибадатов" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Спутник, а не ловушка для внимания.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/prayer-times.webp" alt="Как небо." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Как небо.</h3>
+          <p class="g-desc">С наступлением каждого времени намаза экран меняется вместе с небом — настоящие звёзды и луна на своих местах. Нежелательное время и добровольные молитвы — по желанию.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/widget.webp" alt="Не разблокируя." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Не разблокируя.</h3>
+          <p class="g-desc">Следующий намаз — на экране блокировки, в виджете, в Dynamic Island и на часах. Беглый взгляд — и ничего, что отвлекает.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/discover.webp" alt="Всё в одном." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Всё в одном.</h3>
+          <p class="g-desc">Коран, хадисы, пятничная проповедь, зикр, 99 имён Аллаха, руководства и календарь — в одном месте. Ничего не спрятано за платным доступом.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/qibla.webp" alt="Точное направление." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Точное направление.</h3>
+          <p class="g-desc">Повернитесь к кибле — телефон отзовётся вибрацией, а рядом будет расстояние до Каабы.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/profile.webp" alt="Прогресс в кольцах." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Прогресс в кольцах.</h3>
+          <p class="g-desc">Кольца для намаза, Корана, зикра, хадисов и када; через сколько после наступления времени вы молитесь и ваш хатм — мягкий прогресс, без чувства вины.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/qada.webp" alt="Долг тает с каждым намазом." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Долг тает с каждым намазом.</h3>
+          <p class="g-desc">Рассчитайте пропущенные за всю жизнь намазы по каждому времени и восполняйте их один за другим — с прогнозом, когда закончите.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/quran.webp" alt="Коран — и без интернета." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Коран — и без интернета.</h3>
+          <p class="g-desc">Читайте, слушайте, размышляйте — мединское или турецкое письмо, подсветка слово за словом, тафсир и чтение, которое можно скачать.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/prayer-guide.webp" alt="Семнадцать намазов в иллюстрациях." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Семнадцать намазов в иллюстрациях.</h3>
+          <p class="g-desc">От вуду до тасбиха; стоя, сидя или жестами — шаг за шагом, без назидательного тона.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/calendar.webp" alt="Календарь, который помнит." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Календарь, который помнит.</h3>
+          <p class="g-desc">Хиджра и григорианский календарь вместе. Благословенные ночи, Рамадан, праздники Ид и их канун — а ниже итог ибадата за месяц.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/zikirmatik.webp" alt="Счёт всегда под рукой." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Счёт всегда под рукой.</h3>
+          <p class="g-desc">Счётчик зикра и тасбихат после намаза; готовые зикры, ваши собственные и цель на день.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/more/prayer-nafile.webp" alt="Время добровольных молитв" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Время добровольных молитв</h3>
+          <p class="g-desc">Ишрак, духа, аввабин и части ночи — по желанию.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/more/mushaf.webp" alt="Письмо мусхафа" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Письмо мусхафа</h3>
+          <p class="g-desc">Мединское или турецкое — вместе с ним меняется и разметка страниц.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/more/esma-ul-husna.webp" alt="99 имён Аллаха" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">99 имён Аллаха</h3>
+          <p class="g-desc">С транслитерацией и значением; любое имя можно добавить как зикр.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/more/tesbihat.webp" alt="Тасбихат" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Тасбихат</h3>
+          <p class="g-desc">33-33-33 или полный порядок после намаза.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ru/more/accounting-year.webp" alt="Учёт ибадатов" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">Учёт ибадатов</h3>
+          <p class="g-desc">Кольца для намаза, Корана, зикра, хадисов и када.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -627,30 +665,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · Аманат — то, что доверено</div>
-    <h2>
-      <span>Ваши данные —</span> <em>аманат,</em><br>
-      <span>а не товар.</span>
+    <p class="sec-eye">Аманат — то, что доверено</p>
+    <h2 class="sec-title">
+      <span>Ваши данные —</span> <span>аманат,</span> <em>а не товар.</em>
     </h2>
     <p class="trust-lede">Другие приложения для намаза уже попадались на продаже данных о местоположении. Vakit выбрал иной путь: ваши координаты никогда не попадают на наши серверы. Без аккаунта. Без рекламы. Ваши данные никогда не продаются. Это не функция — это принцип.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>Скачайте. Откройте. Молитесь.</h3>
         <p>Ни регистрации, ни входа, ни пароля, который вы забудете. Vakit работает сразу после установки.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>Считается на вашем телефоне.</h3>
         <p>Время намаза рассчитывается прямо на устройстве — по вашему местоположению и выбранному методу. Ничего не отправляется на сервер, чтобы его там «уточнили».</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>Точное местоположение — не у нас.</h3>
         <p>Ваши координаты не попадают на наши серверы — мы знаем только страну, город и район. Для адреса и мечетей рядом местоположение передаётся только в Apple Карты.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>Политика простыми словами.</h3>
         <p>Данные об использовании привязаны к псевдонимному коду — без имени, e-mail и телефона. В политике конфиденциальности точно перечислено, что отправляется, и её можно прочитать за минуту.</p>
       </div>
@@ -678,85 +715,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 инструментов</div>
-      <h2><span>Одного приложения</span><br><em>хватит на целую жизнь ибадата.</em></h2>
+      <p class="sec-eye">51 инструментов</p>
+      <h2 class="sec-title"><span>Одного приложения</span> <em>хватит на целую жизнь ибадата.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">Время намаза и кибла<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">Время намаза</h4><div class="f-desc">12 методов расчёта, учёт часового пояса и поездок.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">Компас киблы</h4><div class="f-desc">Вибрация при точном направлении и расстояние до Каабы.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">Живое небо</h4><div class="f-desc">Настоящие звёзды и луна на дуге дня — там, где вы, и прямо сейчас.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">Будильник на фаджр</h4><div class="f-desc">Звонит до восхода, если вы ещё не совершили фаджр, и молчит, если совершили; в iOS 26 срабатывает даже в бесшумном режиме.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">Звуки азана</h4><div class="f-desc">Каждый намаз — в своём макаме: саба, ушшак, раст, сегях, хиджаз.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">Время добровольных молитв</h4><div class="f-desc">Ишрак, духа, аввабин и части ночи — по желанию.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">Нежелательное время</h4><div class="f-desc">Отмечено на дуге дня — вместе с преданием, на котором основано.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">Благословенные дни</h4><div class="f-desc">Священные ночи, праздники и их кануны с сегодняшнего дня вперёд, к каждому — путеводитель.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">Геопозиция вручную</h4><div class="f-desc">Задайте место вручную или позвольте ему следовать за вами в поездках.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">Уведомления</h4><div class="f-desc">На устройстве, локально, надёжно.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">Мечети рядом</h4><div class="f-desc">Найдите мечеть через Apple Карты — ваше местоположение не попадает на наши серверы; карта, расстояние, маршрут.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Время намаза</h4><p class="f-desc">12 методов расчёта, учёт часового пояса и поездок.</p></li>
+          <li class="f-cell"><h4 class="f-name">Компас киблы</h4><p class="f-desc">Вибрация при точном направлении и расстояние до Каабы.</p></li>
+          <li class="f-cell"><h4 class="f-name">Живое небо</h4><p class="f-desc">Настоящие звёзды и луна на дуге дня — там, где вы, и прямо сейчас.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Будильник на фаджр</h4><p class="f-desc">Звонит до восхода, если вы ещё не совершили фаджр, и молчит, если совершили; в iOS 26 срабатывает даже в бесшумном режиме.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Звуки азана</h4><p class="f-desc">Каждый намаз — в своём макаме: саба, ушшак, раст, сегях, хиджаз.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Время добровольных молитв</h4><p class="f-desc">Ишрак, духа, аввабин и части ночи — по желанию.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Нежелательное время</h4><p class="f-desc">Отмечено на дуге дня — вместе с преданием, на котором основано.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Благословенные дни</h4><p class="f-desc">Священные ночи, праздники и их кануны с сегодняшнего дня вперёд, к каждому — путеводитель.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Геопозиция вручную</h4><p class="f-desc">Задайте место вручную или позвольте ему следовать за вами в поездках.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Уведомления</h4><p class="f-desc">На устройстве, локально, надёжно.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Мечети рядом</h4><p class="f-desc">Найдите мечеть через Apple Карты — ваше местоположение не попадает на наши серверы; карта, расстояние, маршрут.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Коран и хадисы<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">Священный Коран</h4><div class="f-desc">114 сур. Пословный разбор, перевод, тафсир, классический мусхаф.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">Хадисы</h4><div class="f-desc">Более 36 000 хадисов из семи главных сборников.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">Чтение Корана офлайн</h4><div class="f-desc">Выберите чтеца и манеру чтения; скачайте суры или джузы и слушайте без интернета.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">Тафсир</h4><div class="f-desc">Толкование Диянет — коснитесь аята, и оно откроется вместе с диапазоном аятов, к которому относится.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">Учёт хатма</h4><div class="f-desc">114 сур, 30 джузов; завершённые хатмы и прогноз окончания.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">Письмо мусхафа</h4><div class="f-desc">Мединское или турецкое — вместе с ним меняется и разметка страниц.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">Плейлисты</h4><div class="f-desc">Расставьте суры в своём порядке, назовите список и слушайте от начала до конца — и без интернета.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">Озвученный перевод</h4><div class="f-desc">Слушайте перевод голосом вашего устройства — отдельно или после каждого аята, офлайн.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">Содержание дня</h4><div class="f-desc">Аят, хадис и имя дня на одном экране; можно вернуться на неделю назад.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">Закладки</h4><div class="f-desc">Сохраняйте аяты и хадисы.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">Карточки для отправки</h4><div class="f-desc">Красивые карточки с аятами, хадисами, зикрами и именами Аллаха.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Священный Коран</h4><p class="f-desc">114 сур. Пословный разбор, перевод, тафсир, классический мусхаф.</p></li>
+          <li class="f-cell"><h4 class="f-name">Хадисы</h4><p class="f-desc">Более 36 000 хадисов из семи главных сборников.</p></li>
+          <li class="f-cell"><h4 class="f-name">Чтение Корана офлайн</h4><p class="f-desc">Выберите чтеца и манеру чтения; скачайте суры или джузы и слушайте без интернета.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Тафсир</h4><p class="f-desc">Толкование Диянет — коснитесь аята, и оно откроется вместе с диапазоном аятов, к которому относится.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Учёт хатма</h4><p class="f-desc">114 сур, 30 джузов; завершённые хатмы и прогноз окончания.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Письмо мусхафа</h4><p class="f-desc">Мединское или турецкое — вместе с ним меняется и разметка страниц.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Плейлисты</h4><p class="f-desc">Расставьте суры в своём порядке, назовите список и слушайте от начала до конца — и без интернета.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Озвученный перевод</h4><p class="f-desc">Слушайте перевод голосом вашего устройства — отдельно или после каждого аята, офлайн.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Содержание дня</h4><p class="f-desc">Аят, хадис и имя дня на одном экране; можно вернуться на неделю назад.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Закладки</h4><p class="f-desc">Сохраняйте аяты и хадисы.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Карточки для отправки</h4><p class="f-desc">Красивые карточки с аятами, хадисами, зикрами и именами Аллаха.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Учёт ибадатов и зикр<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">Учёт ибадатов</h4><div class="f-desc">Кольца для намаза, Корана, зикра, хадисов и када.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">Учёт када</h4><div class="f-desc">Пропущенные намазы — по каждому времени, пропущенные посты — по дням.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">Счётчик зикра</h4><div class="f-desc">Прогресс по кольцу, готовые и собственные зикры.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">Дисциплина намаза</h4><div class="f-desc">Через сколько после наступления времени вы молитесь — за этот месяц и за всё время.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">Пост</h4><div class="f-desc">Рамадан, Шавваль и учёт по дням.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">Будильник сухура</h4><div class="f-desc">На Рамадан, на каждый день или на дни желательного поста.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">Тасбихат</h4><div class="f-desc">33-33-33 или полный порядок после намаза.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">99 имён Аллаха</h4><div class="f-desc">С транслитерацией и значением; любое имя можно добавить как зикр.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">Дни освобождения</h4><div class="f-desc">Дни менструации и послеродового периода; серия намазов не прерывается.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Учёт ибадатов</h4><p class="f-desc">Кольца для намаза, Корана, зикра, хадисов и када.</p></li>
+          <li class="f-cell"><h4 class="f-name">Учёт када</h4><p class="f-desc">Пропущенные намазы — по каждому времени, пропущенные посты — по дням.</p></li>
+          <li class="f-cell"><h4 class="f-name">Счётчик зикра</h4><p class="f-desc">Прогресс по кольцу, готовые и собственные зикры.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Дисциплина намаза</h4><p class="f-desc">Через сколько после наступления времени вы молитесь — за этот месяц и за всё время.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Пост</h4><p class="f-desc">Рамадан, Шавваль и учёт по дням.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Будильник сухура</h4><p class="f-desc">На Рамадан, на каждый день или на дни желательного поста.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Тасбихат</h4><p class="f-desc">33-33-33 или полный порядок после намаза.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">99 имён Аллаха</h4><p class="f-desc">С транслитерацией и значением; любое имя можно добавить как зикр.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Дни освобождения</h4><p class="f-desc">Дни менструации и послеродового периода; серия намазов не прерывается.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Календарь и руководства<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">Календарь по хиджре</h4><div class="f-desc">Григорианский и хиджры вместе — с особыми днями и Рамаданом.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">Руководство по молитве</h4><div class="f-desc">17 видов намаза; стоя, сидя или жестами.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">Пятничная проповедь</h4><div class="f-desc">Для тех, кто выбрал метод Диянет: читайте, слушайте и сохраняйте хутбу для чтения без интернета.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">Имсакия</h4><div class="f-desc">Все времена намаза за месяц в одном списке; в Рамадан — счётчик дней и ифтар.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">Пятничный путеводитель</h4><div class="f-desc">Подготовка, гусль, хутба, сура «аль-Кахф» и салават — вся пятница на одной странице.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">Руководство по очищению</h4><div class="f-desc">Вуду, гусль и таяммум шаг за шагом.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">Напоминания о святых днях</h4><div class="f-desc">12 святых дней: о благословенных ночах — в тот же вечер, об остальных — накануне.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">Закят и фитр</h4><div class="f-desc">Калькуляторы на основе классического фикха.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Календарь по хиджре</h4><p class="f-desc">Григорианский и хиджры вместе — с особыми днями и Рамаданом.</p></li>
+          <li class="f-cell"><h4 class="f-name">Руководство по молитве</h4><p class="f-desc">17 видов намаза; стоя, сидя или жестами.</p></li>
+          <li class="f-cell"><h4 class="f-name">Пятничная проповедь</h4><p class="f-desc">Для тех, кто выбрал метод Диянет: читайте, слушайте и сохраняйте хутбу для чтения без интернета.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Имсакия</h4><p class="f-desc">Все времена намаза за месяц в одном списке; в Рамадан — счётчик дней и ифтар.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Пятничный путеводитель</h4><p class="f-desc">Подготовка, гусль, хутба, сура «аль-Кахф» и салават — вся пятница на одной странице.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Руководство по очищению</h4><p class="f-desc">Вуду, гусль и таяммум шаг за шагом.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Напоминания о святых днях</h4><p class="f-desc">12 святых дней: о благословенных ночах — в тот же вечер, об остальных — накануне.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Закят и фитр</h4><p class="f-desc">Калькуляторы на основе классического фикха.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">Устройства и не только<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">Время намаза, кибла в реальном времени, 13 расширений.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">Виджеты</h4><div class="f-desc">Экран «Домой», экран блокировки, режим ожидания — и на Mac.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">Отсчёт в Dynamic Island и на экране блокировки.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Приложение для Mac</h4><div class="f-desc">Отсчёт в строке меню, сочетания клавиш, синхронизация через iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">То же приложение на большом экране; записи синхронизируются через iCloud.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 языков</h4><div class="f-desc">Интерфейс справа налево на арабском, урду, персидском и уйгурском.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">Синхронизация с iCloud</h4><div class="f-desc">Ваши записи хранятся в вашем собственном iCloud, на каждом устройстве.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Быстрые команды Siri</h4><div class="f-desc">Спросите о следующем намазе; отметьте намаз, пост или када голосом.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">Пункт управления</h4><div class="f-desc">Шесть быстрых действий (iOS 18+) — кибла, следующий намаз и другое.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">Единый поиск</h4><div class="f-desc">Один поиск по всем разделам — наберите «Аль-Бакара 255», и откроется аят.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">Тёмная тема</h4><div class="f-desc">Тёплая, спокойная темнота для поздних часов.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Поддержите Vakit</h4><div class="f-desc">Добровольные способы помочь бесплатному приложению жить.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">Время намаза, кибла в реальном времени, 13 расширений.</p></li>
+          <li class="f-cell"><h4 class="f-name">Виджеты</h4><p class="f-desc">Экран «Домой», экран блокировки, режим ожидания — и на Mac.</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Activity</h4><p class="f-desc">Отсчёт в Dynamic Island и на экране блокировки.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Приложение для Mac</h4><p class="f-desc">Отсчёт в строке меню, сочетания клавиш, синхронизация через iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">То же приложение на большом экране; записи синхронизируются через iCloud.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 языков</h4><p class="f-desc">Интерфейс справа налево на арабском, урду, персидском и уйгурском.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Синхронизация с iCloud</h4><p class="f-desc">Ваши записи хранятся в вашем собственном iCloud, на каждом устройстве.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Быстрые команды Siri</h4><p class="f-desc">Спросите о следующем намазе; отметьте намаз, пост или када голосом.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Пункт управления</h4><p class="f-desc">Шесть быстрых действий (iOS 18+) — кибла, следующий намаз и другое.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Единый поиск</h4><p class="f-desc">Один поиск по всем разделам — наберите «Аль-Бакара 255», и откроется аят.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Тёмная тема</h4><p class="f-desc">Тёплая, спокойная темнота для поздних часов.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Поддержите Vakit</h4><p class="f-desc">Добровольные способы помочь бесплатному приложению жить.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">Показать все инструменты (51)</button>
@@ -767,27 +804,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>Добрые слова</span><br><em>от настоящих пользователей.</em></h2>
+      <h2 class="sec-title"><span>Добрые слова</span> <em>от настоящих пользователей.</em></h2>
       <div class="t-meta">
         <span>Средняя оценка</span>
-        <b>4,8 ★</b>
+        <b>4,8 <span class="star" aria-hidden="true">★</span></b>
         <span>всего оценок в App Store: 473</span>
       </div>
     </div>
     <p class="t-note">Отзывы из турецкого App Store, переведены с турецкого.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="Добрые слова от настоящих пользователей.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Приложение на 10 из 10.</div><p class="t-body">И время намаза с прекрасной графикой в виджете, и то, что нет рекламы, и очень чистый интерфейс — 10 из 10. Я правда очень доволен, всем советую.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Прекрасно.</div><p class="t-body">Самое чистое и удобное приложение, какое только можно найти. Рекламы нет, интерфейс очень простой и стильный. Поиск киблы работает по-настоящему точно и хорошо. Остальное содержимое тоже очень приятное.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Просто и удобно.</div><p class="t-body">Уровень выше, чем у большинства других приложений, игр и соцсетей. Спасибо за ваши старания, работа замечательная. Я стараюсь жить своей верой более осознанно, и это приложение стало моей правой рукой.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Безупречно.</div><p class="t-body">Спасибо тому, кто это сделал. Рекламы нет. Вложен серьёзный труд. Видно, что только ради довольства Аллаха. Спасибо вам.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Редкое приложение.</div><p class="t-body">Да будет доволен вами Аллах. И время намаза так аккуратно собрано, и хадисы даны бережно — с арабским текстом, турецким переводом и степенью достоверности, — а рекламы нет. Такое приложение — редкость. Скачайте, скорее всего, оно останется у вас навсегда.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Именно то, что нужно.</div><p class="t-body">Да будет доволен Аллах тем, кто это придумал и сумел сделать. Понятно, без рекламы и по делу.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">С последним обновлением — просто потрясающе.</div><p class="t-body">Просто, красиво, удобно, быстро — что ещё сказать. Благослови Аллах ваши руки, ваш труд и ваше сердце.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Да будет доволен Аллах.</div><p class="t-body">Я устал от интерфейсов с рекламой, постоянными просьбами заплатить и неудобством. Vakit по-настоящему прекрасен: работает везде, без интернета, без рекламы. Коран, хадисы, счётчик зикра, учёт намазов — другое приложение мне не нужно.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Остальные я удалил.</div><p class="t-body">Да будет доволен Аллах тем, кто это сделал. Спасибо вам. Очень пригодилось.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Лучшее.</div><p class="t-body">Лучше этого я не видел. Это приложение должно быть на каждом телефоне. Да будет доволен Аллах разработчиком.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Действительно полезно.</div><p class="t-body">Приложение очень полезное и практичное. Оно должно быть в телефоне у каждого мусульманина. Да будет доволен Аллах разработчиком.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">Да будет доволен Аллах.</div><p class="t-body">Брат, огромное спасибо, что сделал такое ценное приложение бесплатным. Пусть Аллах исполнит желания твоего сердца, иншаАллах.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Приложение на 10 из 10.</div><p class="t-body">И время намаза с прекрасной графикой в виджете, и то, что нет рекламы, и очень чистый интерфейс — 10 из 10. Я правда очень доволен, всем советую.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Прекрасно.</div><p class="t-body">Самое чистое и удобное приложение, какое только можно найти. Рекламы нет, интерфейс очень простой и стильный. Поиск киблы работает по-настоящему точно и хорошо. Остальное содержимое тоже очень приятное.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Просто и удобно.</div><p class="t-body">Уровень выше, чем у большинства других приложений, игр и соцсетей. Спасибо за ваши старания, работа замечательная. Я стараюсь жить своей верой более осознанно, и это приложение стало моей правой рукой.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Безупречно.</div><p class="t-body">Спасибо тому, кто это сделал. Рекламы нет. Вложен серьёзный труд. Видно, что только ради довольства Аллаха. Спасибо вам.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Редкое приложение.</div><p class="t-body">Да будет доволен вами Аллах. И время намаза так аккуратно собрано, и хадисы даны бережно — с арабским текстом, турецким переводом и степенью достоверности, — а рекламы нет. Такое приложение — редкость. Скачайте, скорее всего, оно останется у вас навсегда.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Именно то, что нужно.</div><p class="t-body">Да будет доволен Аллах тем, кто это придумал и сумел сделать. Понятно, без рекламы и по делу.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">С последним обновлением — просто потрясающе.</div><p class="t-body">Просто, красиво, удобно, быстро — что ещё сказать. Благослови Аллах ваши руки, ваш труд и ваше сердце.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Да будет доволен Аллах.</div><p class="t-body">Я устал от интерфейсов с рекламой, постоянными просьбами заплатить и неудобством. Vakit по-настоящему прекрасен: работает везде, без интернета, без рекламы. Коран, хадисы, счётчик зикра, учёт намазов — другое приложение мне не нужно.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Остальные я удалил.</div><p class="t-body">Да будет доволен Аллах тем, кто это сделал. Спасибо вам. Очень пригодилось.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Лучшее.</div><p class="t-body">Лучше этого я не видел. Это приложение должно быть на каждом телефоне. Да будет доволен Аллах разработчиком.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Действительно полезно.</div><p class="t-body">Приложение очень полезное и практичное. Оно должно быть в телефоне у каждого мусульманина. Да будет доволен Аллах разработчиком.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">Да будет доволен Аллах.</div><p class="t-body">Брат, огромное спасибо, что сделал такое ценное приложение бесплатным. Пусть Аллах исполнит желания твоего сердца, иншаАллах.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -795,7 +832,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>Честные ответы</span><br><em>на честные вопросы.</em></h2>
+    <h2 class="sec-title"><span>Честные ответы</span> <em>на честные вопросы.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">Работает ли приложение без интернета?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Да. Время намаза рассчитывается на вашем телефоне по местоположению. Текст Корана, кибла, зикр и все основные инструменты полностью работают офлайн.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Придут ли уведомления, если я не открываю приложение?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Да. Они планируются локально на устройстве, поэтому приходят даже при закрытом приложении. Если разрешить доступ к геопозиции «Всегда», после поездки Vakit незаметно пересчитает время.</div></div></div>
@@ -818,7 +855,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>Пусть ваш ибадат</span> <em>не прерывается.</em></h2>
+  <h2 class="sec-title"><span>Пусть ваш ибадат</span> <em>не прерывается.</em></h2>
   <p>Бесплатно. Без аккаунта. Работает без интернета. iPhone, iPad, Apple Watch и Mac — iOS 16.4+, watchOS 9+, macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-ru" class="btn-primary">

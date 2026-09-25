@@ -114,12 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>:root { --serif: 'Instrument Serif', 'Noto Serif Thai', serif; --sans: 'Inter', 'Noto Sans Thai', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -395,7 +390,7 @@
     <a href="#faq">คำถามที่พบบ่อย</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="สลับโหมดมืด">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="สลับโหมดมืด"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="ปิด">
       <summary aria-label="ภาษา"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>ไทย</span></summary>
       <ul class="lang-list">
@@ -506,53 +501,96 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · ครบทุกอย่าง ไม่มีส่วนเกิน</div>
-    <h2 class="sc-h2"><span>เพื่อนร่วมทาง</span><br><em>ไม่ใช่เครื่องแย่งความสนใจ</em></h2>
-    <p class="sc-lede">เครื่องมือหลัก 15 อย่าง แต่ละอย่างออกแบบให้รู้สึกสงบตั้งแต่วินาทีที่เปิด แตะเพื่อดูตัวอย่าง</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>ดั่งท้องฟ้า</h3><p>ทุกครั้งที่เข้าเวลาละหมาด หน้าจอก็เปลี่ยนไปพร้อมกับท้องฟ้า ดวงดาวและดวงจันทร์อยู่ในตำแหน่งจริง ช่วงมักรูฮฺและเวลาละหมาดสุนัตเลือกเปิดได้</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>ไม่ต้องปลดล็อก</h3><p>ละหมาดถัดไปบนหน้าจอล็อก ในวิดเจ็ต ใน Dynamic Island และบนนาฬิกา แค่ชำเลืองมองอย่างเงียบ ๆ ไม่ต้องจ้อง</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>ครบในที่เดียว</h3><p>อัลกุรอาน หะดีษ คุฏบะฮฺวันศุกร์ ซิกิร พระนาม คู่มือ และปฏิทิน รวมไว้ในที่เดียว ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังการจ่ายเงิน</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>ทิศที่ถูกต้อง</h3><p>หันไปทางกิบลัตแล้วโทรศัพท์จะสั่น พร้อมบอกระยะทางถึงกะอฺบะฮฺ</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>อิบาดะฮฺของคุณ ในรูปวงแหวน</h3><p>วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้ ดูได้ว่าคุณละหมาดหลังเข้าเวลานานเท่าใด และความคืบหน้าคอตัม ก้าวหน้าอย่างอ่อนโยน ไม่มีความรู้สึกผิด</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>ละหมาดที่ขาด ลดลงทุกครั้งที่ชดใช้</h3><p>คำนวณละหมาดที่ขาดตลอดชีวิตแยกตามเวลา แล้วทยอยชดใช้ทีละเวลา พร้อมประมาณว่าจะครบเมื่อใด</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>อัลกุรอาน แม้ไม่มีเน็ต</h3><p>อ่าน ฟัง ใคร่ครวญ อักขรวิธีมะดีนะฮฺหรือตุรกี ไล่ตามทีละคำ ตัฟซีร และเสียงอ่านที่ดาวน์โหลดได้</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>ละหมาด 17 แบบ พร้อมภาพประกอบ</h3><p>ตั้งแต่น้ำละหมาดถึงตัสบีหฺ ทั้งยืน นั่ง หรือใช้ท่าทาง ทีละขั้นตอน สอนอย่างเข้าใจ ไม่ดูแคลน</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>ปฏิทินที่ไม่ลืมวันสำคัญ</h3><p>ฮิจเราะฮฺและสากลคู่กัน คืนอันประเสริฐ รอมฎอน วันอีดทั้งสอง และวันก่อนอีด พร้อมสรุปอิบาดะฮฺของเดือนอยู่ด้านล่าง</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>จำนวนนับอยู่ในมือ</h3><p>ตัวนับซิกิรและตัสบีหฺหลังละหมาด ซิกิรสำเร็จรูป ซิกิรของคุณเอง และเป้าหมายรายวัน</p></div><span class="sc-tag">ดูตัวอย่าง</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="อิชร็อก ฎุฮา เอาวาบีน และช่วงต่าง ๆ ของกลางคืน เลือกเปิดได้">เวลาละหมาดสุนัต</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="แบบมะดีนะฮฺหรือแบบตุรกี การจัดหน้าก็เปลี่ยนตาม">อักขรวิธีมุศหัฟ</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="99 พระนามของอัลลอฮฺ พร้อมคำถอดเสียงและความหมาย เพิ่มเป็นซิกิรได้">พระนามอันวิจิตร 99</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33 หรือลำดับเต็มหลังละหมาด">ตัสบีหฺ</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้">ติดตามอิบาดะฮฺ</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">ครบทุกอย่าง ไม่มีส่วนเกิน</p>
+    <h2 class="sec-title"><span>เพื่อนร่วมทาง</span> <em>ไม่ใช่เครื่องแย่งความสนใจ</em></h2>
+    <p class="sec-lede">เครื่องมือหลัก 15 อย่าง แต่ละอย่างออกแบบให้รู้สึกสงบตั้งแต่วินาทีที่เปิด</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/th/prayer-times.webp" alt="ดั่งท้องฟ้า" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/th/widget.webp" alt="ไม่ต้องปลดล็อก" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/th/discover.webp" alt="ครบในที่เดียว" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/th/qibla.webp" alt="ทิศที่ถูกต้อง" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/th/profile.webp" alt="อิบาดะฮฺของคุณ ในรูปวงแหวน" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/th/qada.webp" alt="ละหมาดที่ขาด ลดลงทุกครั้งที่ชดใช้" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/th/quran.webp" alt="อัลกุรอาน แม้ไม่มีเน็ต" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/th/prayer-guide.webp" alt="ละหมาด 17 แบบ พร้อมภาพประกอบ" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/th/calendar.webp" alt="ปฏิทินที่ไม่ลืมวันสำคัญ" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/th/zikirmatik.webp" alt="จำนวนนับอยู่ในมือ" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/th/more/prayer-nafile.webp" alt="เวลาละหมาดสุนัต" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/th/more/mushaf.webp" alt="อักขรวิธีมุศหัฟ" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/th/more/esma-ul-husna.webp" alt="พระนามอันวิจิตร 99" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/th/more/tesbihat.webp" alt="ตัสบีหฺ" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/th/more/accounting-year.webp" alt="ติดตามอิบาดะฮฺ" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="เพื่อนร่วมทาง ไม่ใช่เครื่องแย่งความสนใจ">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/prayer-times.webp" alt="ดั่งท้องฟ้า" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ดั่งท้องฟ้า</h3>
+          <p class="g-desc">ทุกครั้งที่เข้าเวลาละหมาด หน้าจอก็เปลี่ยนไปพร้อมกับท้องฟ้า ดวงดาวและดวงจันทร์อยู่ในตำแหน่งจริง ช่วงมักรูฮฺและเวลาละหมาดสุนัตเลือกเปิดได้</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/widget.webp" alt="ไม่ต้องปลดล็อก" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ไม่ต้องปลดล็อก</h3>
+          <p class="g-desc">ละหมาดถัดไปบนหน้าจอล็อก ในวิดเจ็ต ใน Dynamic Island และบนนาฬิกา แค่ชำเลืองมองอย่างเงียบ ๆ ไม่ต้องจ้อง</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/discover.webp" alt="ครบในที่เดียว" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ครบในที่เดียว</h3>
+          <p class="g-desc">อัลกุรอาน หะดีษ คุฏบะฮฺวันศุกร์ ซิกิร พระนาม คู่มือ และปฏิทิน รวมไว้ในที่เดียว ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังการจ่ายเงิน</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/qibla.webp" alt="ทิศที่ถูกต้อง" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ทิศที่ถูกต้อง</h3>
+          <p class="g-desc">หันไปทางกิบลัตแล้วโทรศัพท์จะสั่น พร้อมบอกระยะทางถึงกะอฺบะฮฺ</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/profile.webp" alt="อิบาดะฮฺของคุณ ในรูปวงแหวน" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">อิบาดะฮฺของคุณ ในรูปวงแหวน</h3>
+          <p class="g-desc">วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้ ดูได้ว่าคุณละหมาดหลังเข้าเวลานานเท่าใด และความคืบหน้าคอตัม ก้าวหน้าอย่างอ่อนโยน ไม่มีความรู้สึกผิด</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/qada.webp" alt="ละหมาดที่ขาด ลดลงทุกครั้งที่ชดใช้" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ละหมาดที่ขาด ลดลงทุกครั้งที่ชดใช้</h3>
+          <p class="g-desc">คำนวณละหมาดที่ขาดตลอดชีวิตแยกตามเวลา แล้วทยอยชดใช้ทีละเวลา พร้อมประมาณว่าจะครบเมื่อใด</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/quran.webp" alt="อัลกุรอาน แม้ไม่มีเน็ต" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">อัลกุรอาน แม้ไม่มีเน็ต</h3>
+          <p class="g-desc">อ่าน ฟัง ใคร่ครวญ อักขรวิธีมะดีนะฮฺหรือตุรกี ไล่ตามทีละคำ ตัฟซีร และเสียงอ่านที่ดาวน์โหลดได้</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/prayer-guide.webp" alt="ละหมาด 17 แบบ พร้อมภาพประกอบ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ละหมาด 17 แบบ พร้อมภาพประกอบ</h3>
+          <p class="g-desc">ตั้งแต่น้ำละหมาดถึงตัสบีหฺ ทั้งยืน นั่ง หรือใช้ท่าทาง ทีละขั้นตอน สอนอย่างเข้าใจ ไม่ดูแคลน</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/calendar.webp" alt="ปฏิทินที่ไม่ลืมวันสำคัญ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ปฏิทินที่ไม่ลืมวันสำคัญ</h3>
+          <p class="g-desc">ฮิจเราะฮฺและสากลคู่กัน คืนอันประเสริฐ รอมฎอน วันอีดทั้งสอง และวันก่อนอีด พร้อมสรุปอิบาดะฮฺของเดือนอยู่ด้านล่าง</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/zikirmatik.webp" alt="จำนวนนับอยู่ในมือ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">จำนวนนับอยู่ในมือ</h3>
+          <p class="g-desc">ตัวนับซิกิรและตัสบีหฺหลังละหมาด ซิกิรสำเร็จรูป ซิกิรของคุณเอง และเป้าหมายรายวัน</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/more/prayer-nafile.webp" alt="เวลาละหมาดสุนัต" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">เวลาละหมาดสุนัต</h3>
+          <p class="g-desc">อิชร็อก ฎุฮา เอาวาบีน และช่วงต่าง ๆ ของกลางคืน เลือกเปิดได้</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/more/mushaf.webp" alt="อักขรวิธีมุศหัฟ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">อักขรวิธีมุศหัฟ</h3>
+          <p class="g-desc">แบบมะดีนะฮฺหรือแบบตุรกี การจัดหน้าก็เปลี่ยนตาม</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/more/esma-ul-husna.webp" alt="พระนามอันวิจิตร 99" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">พระนามอันวิจิตร 99</h3>
+          <p class="g-desc">99 พระนามของอัลลอฮฺ พร้อมคำถอดเสียงและความหมาย เพิ่มเป็นซิกิรได้</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/more/tesbihat.webp" alt="ตัสบีหฺ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ตัสบีหฺ</h3>
+          <p class="g-desc">33-33-33 หรือลำดับเต็มหลังละหมาด</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/th/more/accounting-year.webp" alt="ติดตามอิบาดะฮฺ" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ติดตามอิบาดะฮฺ</h3>
+          <p class="g-desc">วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -627,30 +665,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · อะมานะฮฺ สิ่งที่ได้รับฝากไว้</div>
-    <h2>
-      <span>ข้อมูลของคุณคือ</span> <em>อะมานะฮฺ</em><br>
-      <span>ไม่ใช่สินค้า</span>
+    <p class="sec-eye">อะมานะฮฺ สิ่งที่ได้รับฝากไว้</p>
+    <h2 class="sec-title">
+      <span>ข้อมูลของคุณคือ</span> <span>อะมานะฮฺ</span> <em>ไม่ใช่สินค้า</em>
     </h2>
     <p class="trust-lede">แอปละหมาดอื่นเคยถูกเปิดโปงว่าขายข้อมูลตำแหน่งของผู้ใช้ Vakit เลือกอีกทางหนึ่ง: พิกัดของคุณไม่เคยไปถึงเซิร์ฟเวอร์ของเรา ไม่ต้องมีบัญชี ไม่มีโฆษณา ข้อมูลของคุณไม่เคยถูกขาย นี่ไม่ใช่ฟีเจอร์ แต่เป็นหลักการ</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>ดาวน์โหลด เปิด ละหมาด</h3>
         <p>ไม่ต้องสมัคร ไม่ต้องล็อกอิน ไม่มีรหัสผ่านให้ต้องจำ Vakit ใช้งานได้ทันทีที่ติดตั้ง</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>คำนวณบนโทรศัพท์ของคุณ</h3>
         <p>เวลาละหมาดคำนวณบนเครื่องจากตำแหน่งของคุณ ด้วยวิธีที่คุณเลือก ไม่มีข้อมูลใดถูกส่งไปยังเซิร์ฟเวอร์เพื่อ “ค้นหา”</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>ตำแหน่งที่แน่นอนของคุณไม่ได้อยู่กับเรา</h3>
         <p>พิกัดของคุณไม่ถูกส่งไปยังเซิร์ฟเวอร์ของเรา เรารู้เพียงประเทศ จังหวัด และอำเภอ สำหรับที่อยู่ของคุณและมัสยิดใกล้เคียง ตำแหน่งจะถูกส่งไปที่แผนที่ของ Apple เท่านั้น</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>นโยบายที่อ่านเข้าใจง่าย</h3>
         <p>ข้อมูลการใช้งานที่ผูกกับรหัสนามแฝง ไม่มีชื่อ อีเมล หรือเบอร์โทรศัพท์ นโยบายความเป็นส่วนตัวของเราระบุไว้ชัดเจนว่าส่งอะไรบ้าง และสั้นพอจะอ่านจบในหนึ่งนาที</p>
       </div>
@@ -678,85 +715,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · เครื่องมือ 51 อย่าง</div>
-      <h2><span>แอปเดียว</span><br><em>เพียงพอสำหรับอิบาดะฮฺตลอดชีวิต</em></h2>
+      <p class="sec-eye">เครื่องมือ 51 อย่าง</p>
+      <h2 class="sec-title"><span>แอปเดียว</span> <em>เพียงพอสำหรับอิบาดะฮฺตลอดชีวิต</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">เวลาละหมาดและกิบลัต<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">เวลาละหมาด</h4><div class="f-desc">วิธีคำนวณ 12 แบบ รองรับเขตเวลา และตรวจจับการเดินทาง</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">เข็มทิศกิบลัต</h4><div class="f-desc">สั่นบอกทิศ พร้อมระยะทางถึงกะอฺบะฮฺ</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">ท้องฟ้าสด</h4><div class="f-desc">ดวงดาวและดวงจันทร์จริงบนเส้นโค้งของวัน ตามตำแหน่งและเวลาของคุณในขณะนี้</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">ปลุกละหมาดซุบฮิ</h4><div class="f-desc">ถ้ายังไม่ได้ละหมาดซุบฮิ จะดังก่อนตะวันขึ้น ถ้าละหมาดแล้วจะเงียบ บน iOS 26 ดังแม้อยู่ในโหมดเงียบ</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">เสียงอะซาน</h4><div class="f-desc">แต่ละเวลามีมะกอมของตัวเอง: saba, ussak, rast, segah, hicaz</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">เวลาละหมาดสุนัต</h4><div class="f-desc">อิชร็อก ฎุฮา เอาวาบีน และช่วงต่าง ๆ ของกลางคืน เลือกเปิดได้</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">ช่วงมักรูฮฺ</h4><div class="f-desc">ทำเครื่องหมายไว้บนเส้นโค้งของวัน พร้อมรายงานที่เป็นหลักฐาน</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">วันอันประเสริฐ</h4><div class="f-desc">คืนอันประเสริฐ วันอีดและคืนก่อนหน้า เรียงจากวันนี้ไป พร้อมคู่มือทุกวัน</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">กำหนดตำแหน่งเอง</h4><div class="f-desc">ตั้งตำแหน่งเอง หรือให้ตำแหน่งติดตามคุณไปขณะเดินทาง</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">การแจ้งเตือน</h4><div class="f-desc">ตั้งไว้บนเครื่อง ทำงานในเครื่อง เชื่อถือได้</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">มัสยิดใกล้ฉัน</h4><div class="f-desc">ค้นหาผ่านแผนที่ของ Apple โดยตำแหน่งของคุณไม่ถึงเซิร์ฟเวอร์ของเรา แผนที่ ระยะทาง เส้นทาง</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">เวลาละหมาด</h4><p class="f-desc">วิธีคำนวณ 12 แบบ รองรับเขตเวลา และตรวจจับการเดินทาง</p></li>
+          <li class="f-cell"><h4 class="f-name">เข็มทิศกิบลัต</h4><p class="f-desc">สั่นบอกทิศ พร้อมระยะทางถึงกะอฺบะฮฺ</p></li>
+          <li class="f-cell"><h4 class="f-name">ท้องฟ้าสด</h4><p class="f-desc">ดวงดาวและดวงจันทร์จริงบนเส้นโค้งของวัน ตามตำแหน่งและเวลาของคุณในขณะนี้</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ปลุกละหมาดซุบฮิ</h4><p class="f-desc">ถ้ายังไม่ได้ละหมาดซุบฮิ จะดังก่อนตะวันขึ้น ถ้าละหมาดแล้วจะเงียบ บน iOS 26 ดังแม้อยู่ในโหมดเงียบ</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">เสียงอะซาน</h4><p class="f-desc">แต่ละเวลามีมะกอมของตัวเอง: saba, ussak, rast, segah, hicaz</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">เวลาละหมาดสุนัต</h4><p class="f-desc">อิชร็อก ฎุฮา เอาวาบีน และช่วงต่าง ๆ ของกลางคืน เลือกเปิดได้</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ช่วงมักรูฮฺ</h4><p class="f-desc">ทำเครื่องหมายไว้บนเส้นโค้งของวัน พร้อมรายงานที่เป็นหลักฐาน</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">วันอันประเสริฐ</h4><p class="f-desc">คืนอันประเสริฐ วันอีดและคืนก่อนหน้า เรียงจากวันนี้ไป พร้อมคู่มือทุกวัน</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">กำหนดตำแหน่งเอง</h4><p class="f-desc">ตั้งตำแหน่งเอง หรือให้ตำแหน่งติดตามคุณไปขณะเดินทาง</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">การแจ้งเตือน</h4><p class="f-desc">ตั้งไว้บนเครื่อง ทำงานในเครื่อง เชื่อถือได้</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">มัสยิดใกล้ฉัน</h4><p class="f-desc">ค้นหาผ่านแผนที่ของ Apple โดยตำแหน่งของคุณไม่ถึงเซิร์ฟเวอร์ของเรา แผนที่ ระยะทาง เส้นทาง</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">อัลกุรอานและหะดีษ<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">อัลกุรอาน</h4><div class="f-desc">114 ซูเราะฮฺ วิเคราะห์ทีละคำ คำแปลและตัฟซีร (ตุรกี/อังกฤษ) มุศหัฟแบบดั้งเดิม</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">หะดีษ</h4><div class="f-desc">หะดีษมากกว่า 36,000 บทจาก 7 ตำราสำคัญ</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">ฟังการอ่านแบบออฟไลน์</h4><div class="f-desc">เลือกผู้อ่านและรูปแบบการอ่าน ดาวน์โหลดซูเราะฮฺหรือญุซอ์ แล้วฟังได้โดยไม่ต้องใช้เน็ต</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">ตัฟซีร</h4><div class="f-desc">ตัฟซีรของ Diyanet แตะอายะฮฺเพื่อเปิด พร้อมช่วงอายะฮฺที่ครอบคลุม</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">บันทึกคอตัม</h4><div class="f-desc">114 ซูเราะฮฺ 30 ญุซอ์ คอตัมที่อ่านจบแล้ว และวันที่คาดว่าจะจบ</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">อักขรวิธีมุศหัฟ</h4><div class="f-desc">แบบมะดีนะฮฺหรือแบบตุรกี การจัดหน้าก็เปลี่ยนตาม</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">เพลย์ลิสต์</h4><div class="f-desc">จัดลำดับซูเราะฮ์ตามใจคุณ ตั้งชื่อรายการ แล้วฟังตั้งแต่ต้นจนจบ — ฟังออฟไลน์ได้ด้วย</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">คำแปลแบบเสียงอ่าน</h4><div class="f-desc">ฟังคำแปลด้วยเสียงของอุปกรณ์คุณ — อ่านอย่างเดียวหรือหลังทุกอายะฮ์ โดยไม่ต้องใช้อินเทอร์เน็ต</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">เนื้อหาประจำวัน</h4><div class="f-desc">อายะฮ์ หะดีษ และพระนามประจำวันในหน้าจอเดียว ย้อนดูได้หนึ่งสัปดาห์</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">ที่คั่น</h4><div class="f-desc">บันทึกอายะฮฺและหะดีษ</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">การ์ดแชร์</h4><div class="f-desc">การ์ดสวย ๆ สำหรับอายะฮฺ หะดีษ ซิกิร และพระนามของอัลลอฮฺ</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">อัลกุรอาน</h4><p class="f-desc">114 ซูเราะฮฺ วิเคราะห์ทีละคำ คำแปลและตัฟซีร (ตุรกี/อังกฤษ) มุศหัฟแบบดั้งเดิม</p></li>
+          <li class="f-cell"><h4 class="f-name">หะดีษ</h4><p class="f-desc">หะดีษมากกว่า 36,000 บทจาก 7 ตำราสำคัญ</p></li>
+          <li class="f-cell"><h4 class="f-name">ฟังการอ่านแบบออฟไลน์</h4><p class="f-desc">เลือกผู้อ่านและรูปแบบการอ่าน ดาวน์โหลดซูเราะฮฺหรือญุซอ์ แล้วฟังได้โดยไม่ต้องใช้เน็ต</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ตัฟซีร</h4><p class="f-desc">ตัฟซีรของ Diyanet แตะอายะฮฺเพื่อเปิด พร้อมช่วงอายะฮฺที่ครอบคลุม</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">บันทึกคอตัม</h4><p class="f-desc">114 ซูเราะฮฺ 30 ญุซอ์ คอตัมที่อ่านจบแล้ว และวันที่คาดว่าจะจบ</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">อักขรวิธีมุศหัฟ</h4><p class="f-desc">แบบมะดีนะฮฺหรือแบบตุรกี การจัดหน้าก็เปลี่ยนตาม</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">เพลย์ลิสต์</h4><p class="f-desc">จัดลำดับซูเราะฮ์ตามใจคุณ ตั้งชื่อรายการ แล้วฟังตั้งแต่ต้นจนจบ — ฟังออฟไลน์ได้ด้วย</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">คำแปลแบบเสียงอ่าน</h4><p class="f-desc">ฟังคำแปลด้วยเสียงของอุปกรณ์คุณ — อ่านอย่างเดียวหรือหลังทุกอายะฮ์ โดยไม่ต้องใช้อินเทอร์เน็ต</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">เนื้อหาประจำวัน</h4><p class="f-desc">อายะฮ์ หะดีษ และพระนามประจำวันในหน้าจอเดียว ย้อนดูได้หนึ่งสัปดาห์</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ที่คั่น</h4><p class="f-desc">บันทึกอายะฮฺและหะดีษ</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">การ์ดแชร์</h4><p class="f-desc">การ์ดสวย ๆ สำหรับอายะฮฺ หะดีษ ซิกิร และพระนามของอัลลอฮฺ</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">ติดตามอิบาดะฮฺและซิกิร<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">ติดตามอิบาดะฮฺ</h4><div class="f-desc">วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">บันทึกการชดใช้</h4><div class="f-desc">ละหมาดที่ขาดแยกตามเวลา การถือศีลอดที่ขาดแยกตามวัน</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">ตัวนับซิกิร</h4><div class="f-desc">แสดงความคืบหน้าเป็นวงแหวน มีซิกิรสำเร็จรูปและซิกิรที่ตั้งเอง</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">วินัยการละหมาด</h4><div class="f-desc">คุณละหมาดหลังเข้าเวลานานเท่าใด เดือนนี้และตลอดทั้งหมด</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">ถือศีลอด</h4><div class="f-desc">รอมฎอน เชาวาล และบันทึกรายวัน</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">ปลุกซาโฮร์</h4><div class="f-desc">ตั้งได้สำหรับรอมฎอน ทุกวัน หรือวันถือศีลอดสุนัต</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">ตัสบีหฺ</h4><div class="f-desc">33-33-33 หรือลำดับเต็มหลังละหมาด</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">พระนามอันวิจิตร 99</h4><div class="f-desc">99 พระนามของอัลลอฮฺ พร้อมคำถอดเสียงและความหมาย เพิ่มเป็นซิกิรได้</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">วันพัก</h4><div class="f-desc">วันมีประจำเดือนและหลังคลอด ความต่อเนื่องการละหมาดไม่ขาด</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">ติดตามอิบาดะฮฺ</h4><p class="f-desc">วงแหวนสำหรับละหมาด อัลกุรอาน ซิกิร หะดีษ และการชดใช้</p></li>
+          <li class="f-cell"><h4 class="f-name">บันทึกการชดใช้</h4><p class="f-desc">ละหมาดที่ขาดแยกตามเวลา การถือศีลอดที่ขาดแยกตามวัน</p></li>
+          <li class="f-cell"><h4 class="f-name">ตัวนับซิกิร</h4><p class="f-desc">แสดงความคืบหน้าเป็นวงแหวน มีซิกิรสำเร็จรูปและซิกิรที่ตั้งเอง</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">วินัยการละหมาด</h4><p class="f-desc">คุณละหมาดหลังเข้าเวลานานเท่าใด เดือนนี้และตลอดทั้งหมด</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ถือศีลอด</h4><p class="f-desc">รอมฎอน เชาวาล และบันทึกรายวัน</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ปลุกซาโฮร์</h4><p class="f-desc">ตั้งได้สำหรับรอมฎอน ทุกวัน หรือวันถือศีลอดสุนัต</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ตัสบีหฺ</h4><p class="f-desc">33-33-33 หรือลำดับเต็มหลังละหมาด</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">พระนามอันวิจิตร 99</h4><p class="f-desc">99 พระนามของอัลลอฮฺ พร้อมคำถอดเสียงและความหมาย เพิ่มเป็นซิกิรได้</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">วันพัก</h4><p class="f-desc">วันมีประจำเดือนและหลังคลอด ความต่อเนื่องการละหมาดไม่ขาด</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">ปฏิทินและคู่มือ<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">ปฏิทินฮิจเราะฮฺ</h4><div class="f-desc">สากล + ฮิจเราะฮฺ พร้อมวันสำคัญและรอมฎอน</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">คู่มือละหมาด</h4><div class="f-desc">ละหมาด 17 แบบ ทั้งยืน นั่ง หรือใช้ท่าทาง</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">คุฏบะฮฺวันศุกร์</h4><div class="f-desc">สำหรับผู้ใช้วิธีคำนวณแบบ Diyanet: อ่าน ฟัง และเก็บคุฏบะฮฺไว้อ่านออฟไลน์</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">อิมซากียะห์</h4><div class="f-desc">เวลาละหมาดทั้งเดือนในรายการเดียว ในรอมฎอนมีตัวนับวันและเวลาละศีลอด</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">คู่มือวันศุกร์</h4><div class="f-desc">การเตรียมตัว ฆุสล์ คุฏบะฮ์ ซูเราะฮ์อัลกะฮ์ฟ์ และเศาะละวาต — ทั้งวันศุกร์ในหน้าเดียว</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">คู่มือการชำระล้าง</h4><div class="f-desc">น้ำละหมาด อาบน้ำญะนาบะฮฺ และตะยัมมุม ทีละขั้นตอน</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">เตือนวันอันจำเริญ</h4><div class="f-desc">วันอันจำเริญ 12 วัน: คืนสำคัญเตือนในเย็นวันนั้น วันอื่นเตือนล่วงหน้าหนึ่งวัน</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">ซะกาตและฟิฏเราะฮฺ</h4><div class="f-desc">เครื่องคำนวณตามหลักนิติศาสตร์ดั้งเดิม</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">ปฏิทินฮิจเราะฮฺ</h4><p class="f-desc">สากล + ฮิจเราะฮฺ พร้อมวันสำคัญและรอมฎอน</p></li>
+          <li class="f-cell"><h4 class="f-name">คู่มือละหมาด</h4><p class="f-desc">ละหมาด 17 แบบ ทั้งยืน นั่ง หรือใช้ท่าทาง</p></li>
+          <li class="f-cell"><h4 class="f-name">คุฏบะฮฺวันศุกร์</h4><p class="f-desc">สำหรับผู้ใช้วิธีคำนวณแบบ Diyanet: อ่าน ฟัง และเก็บคุฏบะฮฺไว้อ่านออฟไลน์</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">อิมซากียะห์</h4><p class="f-desc">เวลาละหมาดทั้งเดือนในรายการเดียว ในรอมฎอนมีตัวนับวันและเวลาละศีลอด</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">คู่มือวันศุกร์</h4><p class="f-desc">การเตรียมตัว ฆุสล์ คุฏบะฮ์ ซูเราะฮ์อัลกะฮ์ฟ์ และเศาะละวาต — ทั้งวันศุกร์ในหน้าเดียว</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">คู่มือการชำระล้าง</h4><p class="f-desc">น้ำละหมาด อาบน้ำญะนาบะฮฺ และตะยัมมุม ทีละขั้นตอน</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">เตือนวันอันจำเริญ</h4><p class="f-desc">วันอันจำเริญ 12 วัน: คืนสำคัญเตือนในเย็นวันนั้น วันอื่นเตือนล่วงหน้าหนึ่งวัน</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ซะกาตและฟิฏเราะฮฺ</h4><p class="f-desc">เครื่องคำนวณตามหลักนิติศาสตร์ดั้งเดิม</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">อุปกรณ์และอื่น ๆ<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">เวลาละหมาด กิบลัตแบบสด และส่วนเสริมหน้าปัด 13 แบบ</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">วิดเจ็ต</h4><div class="f-desc">หน้าจอโฮม หน้าจอล็อก StandBy และบน Mac ด้วย</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">Live Activity</h4><div class="f-desc">นับถอยหลังใน Dynamic Island และบนหน้าจอล็อก</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">แอปบน Mac</h4><div class="f-desc">นับถอยหลังในแถบเมนู คีย์ลัด และซิงก์ iCloud</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">แอปเดียวกันบนจอที่ใหญ่กว่า บันทึกของคุณซิงก์ผ่าน iCloud</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 ภาษา</h4><div class="f-desc">อินเทอร์เฟซจากขวาไปซ้ายในภาษาอาหรับ อูรดู เปอร์เซีย และอุยกูร์</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">ซิงก์ iCloud</h4><div class="f-desc">บันทึกของคุณอยู่ใน iCloud ของคุณเอง บนทุกอุปกรณ์</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">คำสั่งลัด Siri</h4><div class="f-desc">ถามละหมาดถัดไป บันทึกละหมาด การถือศีลอด หรือการชดใช้ด้วยเสียง</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">ศูนย์ควบคุม</h4><div class="f-desc">การทำงานด่วน 6 แบบ (iOS 18+) ทั้งกิบลัต ละหมาดถัดไป และอื่น ๆ</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">ค้นหารวม</h4><div class="f-desc">ค้นครั้งเดียว ครบทุกเครื่องมือ พิมพ์ “Baqarah 255” เพื่อไปยังอายะฮฺนั้น</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">โหมดมืด</h4><div class="f-desc">ความมืดที่อบอุ่นและสงบ สำหรับยามดึก</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">สนับสนุน Vakit</h4><div class="f-desc">ช่องทางที่คุณเลือกเองได้ เพื่อให้แอปฟรีนี้อยู่ต่อไป</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">เวลาละหมาด กิบลัตแบบสด และส่วนเสริมหน้าปัด 13 แบบ</p></li>
+          <li class="f-cell"><h4 class="f-name">วิดเจ็ต</h4><p class="f-desc">หน้าจอโฮม หน้าจอล็อก StandBy และบน Mac ด้วย</p></li>
+          <li class="f-cell"><h4 class="f-name">Live Activity</h4><p class="f-desc">นับถอยหลังใน Dynamic Island และบนหน้าจอล็อก</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">แอปบน Mac</h4><p class="f-desc">นับถอยหลังในแถบเมนู คีย์ลัด และซิงก์ iCloud</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">แอปเดียวกันบนจอที่ใหญ่กว่า บันทึกของคุณซิงก์ผ่าน iCloud</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 ภาษา</h4><p class="f-desc">อินเทอร์เฟซจากขวาไปซ้ายในภาษาอาหรับ อูรดู เปอร์เซีย และอุยกูร์</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ซิงก์ iCloud</h4><p class="f-desc">บันทึกของคุณอยู่ใน iCloud ของคุณเอง บนทุกอุปกรณ์</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">คำสั่งลัด Siri</h4><p class="f-desc">ถามละหมาดถัดไป บันทึกละหมาด การถือศีลอด หรือการชดใช้ด้วยเสียง</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ศูนย์ควบคุม</h4><p class="f-desc">การทำงานด่วน 6 แบบ (iOS 18+) ทั้งกิบลัต ละหมาดถัดไป และอื่น ๆ</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ค้นหารวม</h4><p class="f-desc">ค้นครั้งเดียว ครบทุกเครื่องมือ พิมพ์ “Baqarah 255” เพื่อไปยังอายะฮฺนั้น</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">โหมดมืด</h4><p class="f-desc">ความมืดที่อบอุ่นและสงบ สำหรับยามดึก</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">สนับสนุน Vakit</h4><p class="f-desc">ช่องทางที่คุณเลือกเองได้ เพื่อให้แอปฟรีนี้อยู่ต่อไป</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">ดูเครื่องมือทั้งหมด 51 อย่าง</button>
@@ -767,27 +804,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>คำพูดดี ๆ จาก</span><br><em>ผู้ใช้ที่ละหมาดจริง</em></h2>
+      <h2 class="sec-title"><span>คำพูดดี ๆ จาก</span> <em>ผู้ใช้ที่ละหมาดจริง</em></h2>
       <div class="t-meta">
         <span>คะแนนเฉลี่ย</span>
-        <b>4.8 ★</b>
+        <b>4.8 <span class="star" aria-hidden="true">★</span></b>
         <span>จาก 473 คะแนนใน App Store</span>
       </div>
     </div>
     <p class="t-note">รีวิวจาก App Store ประเทศตุรกี แปลจากภาษาตุรกี</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="คำพูดดี ๆ จาก ผู้ใช้ที่ละหมาดจริง">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">แอป 10/10</div><p class="t-body">ไม่ว่าจะเป็นเวลาละหมาดที่แสดงด้วยกราฟิกสวย ๆ ในวิดเจ็ต หรือการที่แอปไม่มีโฆษณาและหน้าตาสะอาดตามาก ให้ 10/10 เลย พอใจมากจริง ๆ แนะนำให้ทุกคน</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ยอดเยี่ยม</div><p class="t-body">แอปที่สะอาดตาและใช้งานง่ายที่สุดที่คุณจะหาได้ ไม่มีโฆษณา หน้าตาเรียบง่ายและสวยงาม ส่วนหาทิศกิบลัตแม่นยำและทำงานดีมาก เนื้อหาอื่น ๆ ก็ทำออกมาได้ดีมาก</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">เรียบง่ายและใช้งานได้จริง</div><p class="t-body">อยู่ในระดับที่ดีกว่าแอป เกม และโซเชียลมีเดียส่วนใหญ่ ขอบคุณสำหรับความทุ่มเท ทำออกมาได้ยอดเยี่ยมมาก ผมเป็นคนที่พยายามใช้ชีวิตตามศาสนาอย่างมีแบบแผนมากขึ้น และแอปนี้กลายเป็นมือขวาของผมไปแล้ว</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ไร้ที่ติ</div><p class="t-body">ขอบคุณผู้สร้างมาก ไม่มีโฆษณา ทุ่มเทอย่างจริงจัง เห็นได้ชัดว่าทำเพื่อความพอพระทัยของอัลลอฮฺเท่านั้น ขอบคุณครับ</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">แอปที่หาได้ยาก</div><p class="t-body">ขออัลลอฮฺทรงพอพระทัยในตัวคุณ ทั้งเวลาละหมาดที่จัดไว้อย่างเป็นระเบียบแบบนี้ ทั้งหะดีษที่ให้มาอย่างพิถีพิถัน พร้อมภาษาอาหรับ ภาษาตุรกี และระดับความถูกต้อง แต่กลับไม่มีโฆษณา แอปแบบนี้หาได้ยาก ดาวน์โหลดเถอะ น่าจะเป็นแอปที่คุณเก็บไว้ตลอดไป</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ตรงกับที่ต้องการทุกอย่าง</div><p class="t-body">ใครก็ตามที่คิดและทำสิ่งนี้ขึ้นมา ขออัลลอฮฺทรงพอพระทัย อธิบายชัดเจน ไม่มีโฆษณา และตรงประเด็น</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">อัปเดตล่าสุดทำให้ยอดเยี่ยมมาก</div><p class="t-body">เรียบง่าย สวยงาม ใช้งานได้จริง รวดเร็ว จะให้พูดอะไรอีก ขอความจำเริญแด่มือ ความทุ่มเท และหัวใจของคุณ</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ขออัลลอฮฺทรงพอพระทัย</div><p class="t-body">ผมเบื่อหน่ายกับหน้าตาใช้งานยากที่เต็มไปด้วยโฆษณาและขอเงินอยู่ตลอด Vakit ยอดเยี่ยมจริง ๆ ใช้ได้ทุกที่ ไม่ต้องใช้เน็ต ไม่มีโฆษณา อัลกุรอาน หะดีษ ตัวนับซิกิร บันทึกการละหมาด ผมไม่ต้องใช้แอปอื่นแล้ว</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ลบแอปอื่นทิ้งหมดแล้ว</div><p class="t-body">ขออัลลอฮฺทรงพอพระทัยผู้สร้าง ขอบคุณมาก มีประโยชน์มากจริง ๆ</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ดีที่สุด</div><p class="t-body">ไม่เคยเห็นแอปไหนดีกว่านี้ เป็นแอปที่ควรมีในโทรศัพท์ทุกเครื่อง ขออัลลอฮฺทรงพอพระทัยพี่น้องผู้พัฒนา</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">มีประโยชน์จริง ๆ</div><p class="t-body">แอปนี้มีประโยชน์และใช้งานสะดวกมาก เป็นแอปที่มุสลิมทุกคนควรมีในโทรศัพท์ ขออัลลอฮฺทรงพอพระทัยผู้พัฒนา</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ขออัลลอฮฺทรงพอพระทัย</div><p class="t-body">พี่น้อง ขอบคุณมากที่ทำแอปที่มีคุณค่าขนาดนี้ให้ใช้ฟรี อินชาอัลลอฮฺ ขอให้อัลลอฮฺประทานสิ่งที่ใจคุณปรารถนา</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">แอป 10/10</div><p class="t-body">ไม่ว่าจะเป็นเวลาละหมาดที่แสดงด้วยกราฟิกสวย ๆ ในวิดเจ็ต หรือการที่แอปไม่มีโฆษณาและหน้าตาสะอาดตามาก ให้ 10/10 เลย พอใจมากจริง ๆ แนะนำให้ทุกคน</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ยอดเยี่ยม</div><p class="t-body">แอปที่สะอาดตาและใช้งานง่ายที่สุดที่คุณจะหาได้ ไม่มีโฆษณา หน้าตาเรียบง่ายและสวยงาม ส่วนหาทิศกิบลัตแม่นยำและทำงานดีมาก เนื้อหาอื่น ๆ ก็ทำออกมาได้ดีมาก</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">เรียบง่ายและใช้งานได้จริง</div><p class="t-body">อยู่ในระดับที่ดีกว่าแอป เกม และโซเชียลมีเดียส่วนใหญ่ ขอบคุณสำหรับความทุ่มเท ทำออกมาได้ยอดเยี่ยมมาก ผมเป็นคนที่พยายามใช้ชีวิตตามศาสนาอย่างมีแบบแผนมากขึ้น และแอปนี้กลายเป็นมือขวาของผมไปแล้ว</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ไร้ที่ติ</div><p class="t-body">ขอบคุณผู้สร้างมาก ไม่มีโฆษณา ทุ่มเทอย่างจริงจัง เห็นได้ชัดว่าทำเพื่อความพอพระทัยของอัลลอฮฺเท่านั้น ขอบคุณครับ</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">แอปที่หาได้ยาก</div><p class="t-body">ขออัลลอฮฺทรงพอพระทัยในตัวคุณ ทั้งเวลาละหมาดที่จัดไว้อย่างเป็นระเบียบแบบนี้ ทั้งหะดีษที่ให้มาอย่างพิถีพิถัน พร้อมภาษาอาหรับ ภาษาตุรกี และระดับความถูกต้อง แต่กลับไม่มีโฆษณา แอปแบบนี้หาได้ยาก ดาวน์โหลดเถอะ น่าจะเป็นแอปที่คุณเก็บไว้ตลอดไป</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ตรงกับที่ต้องการทุกอย่าง</div><p class="t-body">ใครก็ตามที่คิดและทำสิ่งนี้ขึ้นมา ขออัลลอฮฺทรงพอพระทัย อธิบายชัดเจน ไม่มีโฆษณา และตรงประเด็น</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">อัปเดตล่าสุดทำให้ยอดเยี่ยมมาก</div><p class="t-body">เรียบง่าย สวยงาม ใช้งานได้จริง รวดเร็ว จะให้พูดอะไรอีก ขอความจำเริญแด่มือ ความทุ่มเท และหัวใจของคุณ</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ขออัลลอฮฺทรงพอพระทัย</div><p class="t-body">ผมเบื่อหน่ายกับหน้าตาใช้งานยากที่เต็มไปด้วยโฆษณาและขอเงินอยู่ตลอด Vakit ยอดเยี่ยมจริง ๆ ใช้ได้ทุกที่ ไม่ต้องใช้เน็ต ไม่มีโฆษณา อัลกุรอาน หะดีษ ตัวนับซิกิร บันทึกการละหมาด ผมไม่ต้องใช้แอปอื่นแล้ว</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ลบแอปอื่นทิ้งหมดแล้ว</div><p class="t-body">ขออัลลอฮฺทรงพอพระทัยผู้สร้าง ขอบคุณมาก มีประโยชน์มากจริง ๆ</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ดีที่สุด</div><p class="t-body">ไม่เคยเห็นแอปไหนดีกว่านี้ เป็นแอปที่ควรมีในโทรศัพท์ทุกเครื่อง ขออัลลอฮฺทรงพอพระทัยพี่น้องผู้พัฒนา</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">มีประโยชน์จริง ๆ</div><p class="t-body">แอปนี้มีประโยชน์และใช้งานสะดวกมาก เป็นแอปที่มุสลิมทุกคนควรมีในโทรศัพท์ ขออัลลอฮฺทรงพอพระทัยผู้พัฒนา</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ขออัลลอฮฺทรงพอพระทัย</div><p class="t-body">พี่น้อง ขอบคุณมากที่ทำแอปที่มีคุณค่าขนาดนี้ให้ใช้ฟรี อินชาอัลลอฮฺ ขอให้อัลลอฮฺประทานสิ่งที่ใจคุณปรารถนา</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -795,7 +832,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>คำตอบตรงไปตรงมา</span><br><em>สำหรับคำถามตรงไปตรงมา</em></h2>
+    <h2 class="sec-title"><span>คำตอบตรงไปตรงมา</span> <em>สำหรับคำถามตรงไปตรงมา</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">ใช้ได้โดยไม่มีอินเทอร์เน็ตไหม<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">ได้ เวลาละหมาดคำนวณบนโทรศัพท์จากตำแหน่งของคุณ ตัวบทอัลกุรอาน กิบลัต ซิกิร และเครื่องมือหลักทั้งหมดใช้ออฟไลน์ได้เต็มที่</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">ถ้าไม่เปิดแอปเลย จะยังได้รับการแจ้งเตือนไหม<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">ได้ การแจ้งเตือนตั้งไว้บนเครื่อง จึงได้รับแม้แอปปิดอยู่ หากคุณอนุญาตตำแหน่งแบบ “ตลอดเวลา” Vakit จะคำนวณใหม่อย่างเงียบ ๆ หลังคุณเดินทาง</div></div></div>
@@ -818,7 +855,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>อย่าให้อิบาดะฮฺของคุณ</span> <em>ต้องสะดุด</em></h2>
+  <h2 class="sec-title"><span>อย่าให้อิบาดะฮฺของคุณ</span> <em>ต้องสะดุด</em></h2>
   <p>ฟรี ไม่ต้องมีบัญชี ใช้ออฟไลน์ได้ iPhone, iPad, Apple Watch และ Mac: iOS 16.4+, watchOS 9+, macOS 13+</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-th" class="btn-primary">

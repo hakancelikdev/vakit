@@ -114,12 +114,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>:root { --serif: 'Instrument Serif', 'Noto Naskh Arabic', 'Geeza Pro', serif; --sans: 'Inter', 'Noto Sans Arabic', 'Geeza Pro', system-ui, sans-serif }</style>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -395,7 +390,7 @@
     <a href="#faq">كۆپ سورالغان سوئاللار</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="قاراڭغۇ ھالەتنى ئالماشتۇرۇش">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="قاراڭغۇ ھالەتنى ئالماشتۇرۇش"><svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     <details class="lang-menu" data-close-label="تاقاش">
       <summary aria-label="تىل"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><span>ئۇيغۇرچە</span></summary>
       <ul class="lang-list">
@@ -506,63 +501,121 @@
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">§ 01 · ھەممىسى بار، ئارتۇقى يوق</div>
-    <h2 class="sc-h2"><span>بىر ھەمراھ،</span><br><em>دىققەت ئوغرىلايدىغان ماشىنا ئەمەس.</em></h2>
-    <p class="sc-lede">20 ئاساسىي قورال، ھەر بىرى ئېچىلىشى بىلەنلا خاتىرجەملىك ھېس قىلدۇرىدىغان قىلىپ لايىھەلەنگەن. ئالدىن كۆرۈش ئۈچۈن خالىغان بىرىنى چېكىڭ.</p>
-    <div class="sc-list" id="scList">
-        <button class="sc-item on" data-index="0"><span class="sc-num">01</span><div class="sc-body"><h3>ئاسماندەك.</h3><p>ھەر ناماز ۋاقتى كىرگەندە ئېكران ئاسمان بىلەن بىللە ئۆزگىرىدۇ — ھەقىقىي يۇلتۇزلار ۋە ئاي ئۆز ئورنىدا. مەكرۇھ ۋە نەپلە ۋاقىتلار ئىختىيارىي.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="1"><span class="sc-num">02</span><div class="sc-body"><h3>قۇلۇپنى ئاچمايلا.</h3><p>كېيىنكى ناماز قۇلۇپ ئېكرانىدا، ۋىجېتتا، Dynamic Island دا ۋە سائىتىڭىزدە. تىنچ بىر قاراش — دىققىتىڭىزنى ئوغرىلىماي.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="2"><span class="sc-num">03</span><div class="sc-body"><h3>ھەممە قورال بىر يەردە.</h3><p>قۇرئان، ھەدىس، جۈمە خۇتبىسى، زىكىر، ئەسمائۇل ھۈسنا، يېتەكچىلەر ۋە كالېندار — ھەممىسى بىر يەردە. ھېچقانداق ئىقتىدار ھەق تۆلەش تېمى ئارقىسىغا قۇلۇپلانمىغان.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="3"><span class="sc-num">04</span><div class="sc-body"><h3>توغرا يۆنىلىش.</h3><p>قىبلىگە يۈزلەنگىنىڭىزدە تېلېفون تىترەيدۇ، كەبىگىچە بولغان ئارىلىقمۇ يېنىدا.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="4"><span class="sc-num">05</span><div class="sc-body"><h3>ئىبادىتىڭىز، ھالقىلاردا.</h3><p>ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا ئۈچۈن ھالقىلار؛ ھەر ۋاقىت كىرگەندىن قانچىلىك كېيىن ناماز ئوقۇيدىغانلىقىڭىز ۋە خەتمىڭىز — تىنچ ئىلگىرىلەش، گۇناھ تۇيغۇسى يوق.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="5"><span class="sc-num">06</span><div class="sc-body"><h3>قازا، ئوقۇغانسېرى ئازىيىدۇ.</h3><p>ئۆمۈر بويى قازا بولغان نامازلارنى ۋاقىت بويىچە ھېسابلاڭ ۋە بىر-بىرلەپ ئادا قىلىڭ — قاچان تۈگەيدىغانلىقىمۇ كۆرۈنىدۇ.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="6"><span class="sc-num">07</span><div class="sc-body"><h3>قۇرئان، تورسىزمۇ.</h3><p>ئوقۇڭ، ئاڭلاڭ، تەپەككۇر قىلىڭ — مەدىنە ياكى تۈركىيە خېتى، سۆزمۇ سۆز ئەگىشىش، تەپسىر ۋە چۈشۈرگىلى بولىدىغان تىلاۋەت.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="7"><span class="sc-num">08</span><div class="sc-body"><h3>ئون يەتتە ناماز، رەسىملىك.</h3><p>تاھارەتتىن تەسبىھاتقىچە؛ ئۆرە تۇرۇپ، ئولتۇرۇپ ياكى ئىشارەت بىلەن — قەدەممۇ قەدەم، كەمتەرلىك بىلەن ئۆگىتىلىدۇ.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="8"><span class="sc-num">09</span><div class="sc-body"><h3>ئېسىدە تۇتىدىغان كالېندار.</h3><p>ھىجرىيە ۋە مىلادىيە بىللە. مۇبارەك كېچىلەر، رامىزان، ھېيتلار ۋە ھارپا كۈنى — ئاستىدا ئاينىڭ ئىبادەت خۇلاسىسى.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-        <button class="sc-item" data-index="9"><span class="sc-num">10</span><div class="sc-body"><h3>سان قولىڭىزدا.</h3><p>زىكىر ساناقچى ۋە نامازدىن كېيىنكى تەسبىھات؛ تەييار زىكىرلەر، ئۆزىڭىزنىڭ زىكىرلىرى ۋە كۈندىلىك نىشان.</p></div><span class="sc-tag">ئالدىن كۆرۈش</span></button>
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-      <button class="dv-tab sc-chip" data-index="10" aria-pressed="false" data-desc="ئىشراق، چاشتا، ئەۋۋابىن ۋە كېچىنىڭ بۆلەكلىرى؛ ئىختىيارىي.">نەپلە ناماز ۋاقىتلىرى</button>
-      <button class="dv-tab sc-chip" data-index="11" aria-pressed="false" data-desc="مەدىنە ياكى تۈركىيە خېتى — بەت ئورۇنلاشتۇرۇلۇشىمۇ ماس ئۆزگىرىدۇ.">مۇسھەپ خېتى</button>
-      <button class="dv-tab sc-chip" data-index="12" aria-pressed="false" data-desc="ئاللاھنىڭ 99 ئىسمى، ئوقۇلۇشى ۋە مەنىسى بىلەن؛ خالىغىنىنى زىكىر سۈپىتىدە قوشالايسىز.">ئەسمائۇل ھۈسنا</button>
-      <button class="dv-tab sc-chip" data-index="13" aria-pressed="false" data-desc="33-33-33، ياكى نامازدىن كېيىنكى تولۇق تەرتىپ.">تەسبىھات</button>
-      <button class="dv-tab sc-chip" data-index="14" aria-pressed="false" data-desc="ھالقىلار: ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا.">ئىبادەت ئىزلاش</button>
-      <button class="dv-tab sc-chip" data-index="15" aria-pressed="false" data-desc="يەتتە چوڭ توپلامدىن 36 مىڭدىن ئارتۇق ھەدىس.">ھەدىس</button>
-      <button class="dv-tab sc-chip" data-index="16" aria-pressed="false" data-desc="بىرلا ئىزدەش، ھەممە قورال — «بەقەرە 255» نى يېزىپ ئايەتكە بېرىڭ.">بىرلەشكەن ئىزدەش</button>
-      <button class="dv-tab sc-chip" data-index="17" aria-pressed="false" data-desc="ئورنىڭىز مۇلازىمېتىرىمىزغا يەتمەي، Apple Maps ئارقىلىق تېپىڭ؛ خەرىتە، ئارىلىق ۋە يول كۆرسىتىش.">يېقىندىكى مەسچىتلەر</button>
-      <button class="dv-tab sc-chip" data-index="18" aria-pressed="false" data-desc="Dynamic Island ۋە قۇلۇپ ئېكرانىدا قالغان ۋاقىت.">جانلىق پائالىيەت</button>
-      <button class="dv-tab sc-chip" data-index="19" aria-pressed="false" data-desc="مۇبارەك كېچىلەر، ھېيتلار ۋە ئارىپىلىرى بۈگۈندىن باشلاپ تەرتىپلىك؛ ھەر كۈنگە يېتەكچى.">مۇبارەك كۈنلەر</button>
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">ھەممىسى بار، ئارتۇقى يوق</p>
+    <h2 class="sec-title"><span>بىر ھەمراھ،</span> <em>دىققەت ئوغرىلايدىغان ماشىنا ئەمەس.</em></h2>
+    <p class="sec-lede">20 ئاساسىي قورال، ھەر بىرى ئېچىلىشى بىلەنلا خاتىرجەملىك ھېس قىلدۇرىدىغان قىلىپ لايىھەلەنگەن.</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-        <img class="phone-screenshot on" data-i="0" src="/assets/screenshots/en/prayer-times.webp" alt="ئاسماندەك." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="1" src="/assets/screenshots/en/widget.webp" alt="قۇلۇپنى ئاچمايلا." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="2" src="/assets/screenshots/en/discover.webp" alt="ھەممە قورال بىر يەردە." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="3" src="/assets/screenshots/en/qibla.webp" alt="توغرا يۆنىلىش." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="4" src="/assets/screenshots/en/profile.webp" alt="ئىبادىتىڭىز، ھالقىلاردا." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="5" src="/assets/screenshots/en/qada.webp" alt="قازا، ئوقۇغانسېرى ئازىيىدۇ." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="6" src="/assets/screenshots/en/quran.webp" alt="قۇرئان، تورسىزمۇ." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="7" src="/assets/screenshots/en/prayer-guide.webp" alt="ئون يەتتە ناماز، رەسىملىك." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="8" src="/assets/screenshots/en/calendar.webp" alt="ئېسىدە تۇتىدىغان كالېندار." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="9" src="/assets/screenshots/en/zikirmatik.webp" alt="سان قولىڭىزدا." width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="10" src="/assets/screenshots/en/more/prayer-nafile.webp" alt="نەپلە ناماز ۋاقىتلىرى" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="11" src="/assets/screenshots/en/more/mushaf.webp" alt="مۇسھەپ خېتى" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="12" src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="ئەسمائۇل ھۈسنا" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="13" src="/assets/screenshots/en/more/tesbihat.webp" alt="تەسبىھات" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="14" src="/assets/screenshots/en/more/accounting-year.webp" alt="ئىبادەت ئىزلاش" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="15" src="/assets/screenshots/en/more/hadith.webp" alt="ھەدىس" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="16" src="/assets/screenshots/en/more/search.webp" alt="بىرلەشكەن ئىزدەش" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="17" src="/assets/screenshots/en/more/nearby-mosques.webp" alt="يېقىندىكى مەسچىتلەر" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="18" src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="جانلىق پائالىيەت" width="390" height="844" loading="lazy">
-        <img class="phone-screenshot" data-i="19" src="/assets/screenshots/en/more/imsakiye.webp" alt="مۇبارەك كۈنلەر" width="390" height="844" loading="lazy">
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="بىر ھەمراھ، دىققەت ئوغرىلايدىغان ماشىنا ئەمەس.">
+    <ul class="g-track">
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-times.webp" alt="ئاسماندەك." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئاسماندەك.</h3>
+          <p class="g-desc">ھەر ناماز ۋاقتى كىرگەندە ئېكران ئاسمان بىلەن بىللە ئۆزگىرىدۇ — ھەقىقىي يۇلتۇزلار ۋە ئاي ئۆز ئورنىدا. مەكرۇھ ۋە نەپلە ۋاقىتلار ئىختىيارىي.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/widget.webp" alt="قۇلۇپنى ئاچمايلا." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">قۇلۇپنى ئاچمايلا.</h3>
+          <p class="g-desc">كېيىنكى ناماز قۇلۇپ ئېكرانىدا، ۋىجېتتا، Dynamic Island دا ۋە سائىتىڭىزدە. تىنچ بىر قاراش — دىققىتىڭىزنى ئوغرىلىماي.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/discover.webp" alt="ھەممە قورال بىر يەردە." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ھەممە قورال بىر يەردە.</h3>
+          <p class="g-desc">قۇرئان، ھەدىس، جۈمە خۇتبىسى، زىكىر، ئەسمائۇل ھۈسنا، يېتەكچىلەر ۋە كالېندار — ھەممىسى بىر يەردە. ھېچقانداق ئىقتىدار ھەق تۆلەش تېمى ئارقىسىغا قۇلۇپلانمىغان.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qibla.webp" alt="توغرا يۆنىلىش." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">توغرا يۆنىلىش.</h3>
+          <p class="g-desc">قىبلىگە يۈزلەنگىنىڭىزدە تېلېفون تىترەيدۇ، كەبىگىچە بولغان ئارىلىقمۇ يېنىدا.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/profile.webp" alt="ئىبادىتىڭىز، ھالقىلاردا." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئىبادىتىڭىز، ھالقىلاردا.</h3>
+          <p class="g-desc">ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا ئۈچۈن ھالقىلار؛ ھەر ۋاقىت كىرگەندىن قانچىلىك كېيىن ناماز ئوقۇيدىغانلىقىڭىز ۋە خەتمىڭىز — تىنچ ئىلگىرىلەش، گۇناھ تۇيغۇسى يوق.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/qada.webp" alt="قازا، ئوقۇغانسېرى ئازىيىدۇ." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">قازا، ئوقۇغانسېرى ئازىيىدۇ.</h3>
+          <p class="g-desc">ئۆمۈر بويى قازا بولغان نامازلارنى ۋاقىت بويىچە ھېسابلاڭ ۋە بىر-بىرلەپ ئادا قىلىڭ — قاچان تۈگەيدىغانلىقىمۇ كۆرۈنىدۇ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/quran.webp" alt="قۇرئان، تورسىزمۇ." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">قۇرئان، تورسىزمۇ.</h3>
+          <p class="g-desc">ئوقۇڭ، ئاڭلاڭ، تەپەككۇر قىلىڭ — مەدىنە ياكى تۈركىيە خېتى، سۆزمۇ سۆز ئەگىشىش، تەپسىر ۋە چۈشۈرگىلى بولىدىغان تىلاۋەت.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/prayer-guide.webp" alt="ئون يەتتە ناماز، رەسىملىك." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئون يەتتە ناماز، رەسىملىك.</h3>
+          <p class="g-desc">تاھارەتتىن تەسبىھاتقىچە؛ ئۆرە تۇرۇپ، ئولتۇرۇپ ياكى ئىشارەت بىلەن — قەدەممۇ قەدەم، كەمتەرلىك بىلەن ئۆگىتىلىدۇ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/calendar.webp" alt="ئېسىدە تۇتىدىغان كالېندار." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئېسىدە تۇتىدىغان كالېندار.</h3>
+          <p class="g-desc">ھىجرىيە ۋە مىلادىيە بىللە. مۇبارەك كېچىلەر، رامىزان، ھېيتلار ۋە ھارپا كۈنى — ئاستىدا ئاينىڭ ئىبادەت خۇلاسىسى.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/zikirmatik.webp" alt="سان قولىڭىزدا." width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">سان قولىڭىزدا.</h3>
+          <p class="g-desc">زىكىر ساناقچى ۋە نامازدىن كېيىنكى تەسبىھات؛ تەييار زىكىرلەر، ئۆزىڭىزنىڭ زىكىرلىرى ۋە كۈندىلىك نىشان.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/prayer-nafile.webp" alt="نەپلە ناماز ۋاقىتلىرى" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">نەپلە ناماز ۋاقىتلىرى</h3>
+          <p class="g-desc">ئىشراق، چاشتا، ئەۋۋابىن ۋە كېچىنىڭ بۆلەكلىرى؛ ئىختىيارىي.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/mushaf.webp" alt="مۇسھەپ خېتى" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">مۇسھەپ خېتى</h3>
+          <p class="g-desc">مەدىنە ياكى تۈركىيە خېتى — بەت ئورۇنلاشتۇرۇلۇشىمۇ ماس ئۆزگىرىدۇ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="ئەسمائۇل ھۈسنا" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئەسمائۇل ھۈسنا</h3>
+          <p class="g-desc">ئاللاھنىڭ 99 ئىسمى، ئوقۇلۇشى ۋە مەنىسى بىلەن؛ خالىغىنىنى زىكىر سۈپىتىدە قوشالايسىز.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/tesbihat.webp" alt="تەسبىھات" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">تەسبىھات</h3>
+          <p class="g-desc">33-33-33، ياكى نامازدىن كېيىنكى تولۇق تەرتىپ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/accounting-year.webp" alt="ئىبادەت ئىزلاش" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ئىبادەت ئىزلاش</h3>
+          <p class="g-desc">ھالقىلار: ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/hadith.webp" alt="ھەدىس" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">ھەدىس</h3>
+          <p class="g-desc">يەتتە چوڭ توپلامدىن 36 مىڭدىن ئارتۇق ھەدىس.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/search.webp" alt="بىرلەشكەن ئىزدەش" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">بىرلەشكەن ئىزدەش</h3>
+          <p class="g-desc">بىرلا ئىزدەش، ھەممە قورال — «بەقەرە 255» نى يېزىپ ئايەتكە بېرىڭ.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/nearby-mosques.webp" alt="يېقىندىكى مەسچىتلەر" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">يېقىندىكى مەسچىتلەر</h3>
+          <p class="g-desc">ئورنىڭىز مۇلازىمېتىرىمىزغا يەتمەي، Apple Maps ئارقىلىق تېپىڭ؛ خەرىتە، ئارىلىق ۋە يول كۆرسىتىش.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/lock-screen-live-activity.webp" alt="جانلىق پائالىيەت" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">جانلىق پائالىيەت</h3>
+          <p class="g-desc">Dynamic Island ۋە قۇلۇپ ئېكرانىدا قالغان ۋاقىت.</p>
+        </li>
+        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/imsakiye.webp" alt="مۇبارەك كۈنلەر" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">مۇبارەك كۈنلەر</h3>
+          <p class="g-desc">مۇبارەك كېچىلەر، ھېيتلار ۋە ئارىپىلىرى بۈگۈندىن باشلاپ تەرتىپلىك؛ ھەر كۈنگە يېتەكچى.</p>
+        </li>
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="g-btn g-next" tabindex="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 </section>
 
@@ -637,30 +690,29 @@
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">§ 02 · ئامانەت</div>
-    <h2>
-      <span>سانلىق مەلۇماتىڭىز</span> <em>ئامانەت،</em><br>
-      <span>مال ئەمەس.</span>
+    <p class="sec-eye">ئامانەت</p>
+    <h2 class="sec-title">
+      <span>سانلىق مەلۇماتىڭىز</span> <span>ئامانەت،</span> <em>مال ئەمەس.</em>
     </h2>
     <p class="trust-lede">باشقا بەزى ناماز ئەپلىرىنىڭ ئىشلەتكۈچىلەرنىڭ ئورۇن ئۇچۇرىنى ساتقانلىقى ئاشكارىلاندى. Vakit باشقا يولنى تاللىدى: كوئوردىناتىڭىز مۇلازىمېتىرىمىزغا ھەرگىز يەتمەيدۇ. ھېسابات يوق. ئېلان يوق. ئۇچۇرلىرىڭىز ھەرگىز سېتىلمايدۇ. بۇ بىر ئىقتىدار ئەمەس — بىر پرىنسىپ.</p>
     <div class="trust-grid">
       <div class="trust-cell">
-        <div class="trust-cell-num">01</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></div>
         <h3>چۈشۈرۈڭ. ئېچىڭ. ناماز ئوقۇڭ.</h3>
         <p>تىزىملىتىش يوق، كىرىش يوق، ئۇنتۇپ قالىدىغان پارول يوق. Vakit قاچىلىنىشى بىلەنلا ئىشلەشكە باشلايدۇ.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">02</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/></svg></div>
         <h3>تېلېفونىڭىزدا ھېسابلىنىدۇ.</h3>
         <p>ناماز ۋاقىتلىرى ئورنىڭىزغا ئاساسەن، سىز تاللىغان ئۇسۇل بويىچە ئۈسكۈنىڭىزدە ھېسابلىنىدۇ. ھېچنېمە «سوراش» ئۈچۈن مۇلازىمېتىرغا ئەۋەتىلمەيدۇ.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">03</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div>
         <h3>ئېنىق ئورنىڭىز بىزدە ئەمەس.</h3>
         <p>كوئوردىناتىڭىز مۇلازىمېتىرىمىزغا ئەۋەتىلمەيدۇ — بىز پەقەت دۆلەت، شەھەر ۋە ناھىيىنىلا بىلىمىز. ئادرېسىڭىز ۋە يېقىندىكى مەسچىتلەر ئۈچۈن ئورۇن پەقەت Apple Maps قا بارىدۇ.</p>
       </div>
       <div class="trust-cell">
-        <div class="trust-cell-num">04</div>
+        <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/></svg></div>
         <h3>ئاددىي تىلدىكى سىياسەت.</h3>
         <p>ئىسىم، ئېلخەت ياكى تېلېفون نومۇرى يوق، ساختا ئىشلەتكۈچى كودىغا باغلانغان ئىشلىتىش سانلىق مەلۇماتلىرى. نېمىلەرنىڭ ئەۋەتىلىدىغانلىقى مەخپىيەتلىك سىياسىتىمىزدە بىرمۇبىر يېزىلغان — بىر مىنۇتتا ئوقۇپ بولغىلى بولىدىغان دەرىجىدە قىسقا.</p>
       </div>
@@ -688,85 +740,85 @@
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">§ 03 · 51 قورال</div>
-      <h2><span>بىرلا ئەپ،</span><br><em>بىر ئۆمۈرلۈك ئىبادەتكە يېتىدۇ.</em></h2>
+      <p class="sec-eye">51 قورال</p>
+      <h2 class="sec-title"><span>بىرلا ئەپ،</span> <em>بىر ئۆمۈرلۈك ئىبادەتكە يېتىدۇ.</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
       <div class="f-group">
         <h3 class="f-group-title">ناماز ۋاقىتلىرى ۋە قىبلە<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">01 / 51</div><h4 class="f-name">ناماز ۋاقىتلىرى</h4><div class="f-desc">12 خىل ھېسابلاش ئۇسۇلى، ۋاقىت رايونىغا ماس، سەپەرنى بايقايدۇ.</div></div>
-          <div class="f-cell"><div class="f-num">02 / 51</div><h4 class="f-name">قىبلە كومپاسى</h4><div class="f-desc">تىترەش ئارقىلىق يېتەكلەيدۇ، كەبىگىچە بولغان ئارىلىق بىلەن.</div></div>
-          <div class="f-cell"><div class="f-num">03 / 51</div><h4 class="f-name">جانلىق ئاسمان</h4><div class="f-desc">كۈن يېيىدا ھەقىقىي يۇلتۇزلار ۋە ئاي — سىز تۇرغان يەر ئۈچۈن، دەل ھازىر.</div></div>
-          <div class="f-cell f-last"><div class="f-num">04 / 51</div><h4 class="f-name">بامدات ئويغاتقۇچىسى</h4><div class="f-desc">بامداتنى ئوقۇمىغان بولسىڭىز كۈن چىقىشتىن ئىلگىرى جىرىڭلايدۇ، ئوقۇغان بولسىڭىز جىم تۇرىدۇ؛ iOS 26 دا ئۈنسىز ھالەتنى بۆسۈپ ئۆتىدۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">05 / 51</div><h4 class="f-name">ئەزان ئاۋازلىرى</h4><div class="f-desc">ھەر ناماز ئەزانى ئۆز مەقامىدا: سابا، ئۇششاق، راست، سەگاھ، ھىجاز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">06 / 51</div><h4 class="f-name">نەپلە ناماز ۋاقىتلىرى</h4><div class="f-desc">ئىشراق، چاشتا، ئەۋۋابىن ۋە كېچىنىڭ بۆلەكلىرى؛ ئىختىيارىي.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">07 / 51</div><h4 class="f-name">مەكرۇھ ۋاقىتلار</h4><div class="f-desc">كۈن يېيىدا بەلگىلەنگەن، ئاساس بولغان رىۋايەت بىلەن بىللە.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">08 / 51</div><h4 class="f-name">مۇبارەك كۈنلەر</h4><div class="f-desc">مۇبارەك كېچىلەر، ھېيتلار ۋە ئارىپىلىرى بۈگۈندىن باشلاپ تەرتىپلىك؛ ھەر كۈنگە يېتەكچى.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">09 / 51</div><h4 class="f-name">قولدا ئورۇن تاللاش</h4><div class="f-desc">ئورنىڭىزنى ئۆزىڭىز تاللاڭ، ياكى سەپەردە ئۆزلۈكىدىن يېڭىلانسۇن.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">10 / 51</div><h4 class="f-name">ئۇقتۇرۇشلار</h4><div class="f-desc">ئۈسكۈنىدە، يەرلىك، ئىشەنچلىك.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">11 / 51</div><h4 class="f-name">يېقىندىكى مەسچىتلەر</h4><div class="f-desc">ئورنىڭىز مۇلازىمېتىرىمىزغا يەتمەي، Apple Maps ئارقىلىق تېپىڭ؛ خەرىتە، ئارىلىق ۋە يول كۆرسىتىش.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">ناماز ۋاقىتلىرى</h4><p class="f-desc">12 خىل ھېسابلاش ئۇسۇلى، ۋاقىت رايونىغا ماس، سەپەرنى بايقايدۇ.</p></li>
+          <li class="f-cell"><h4 class="f-name">قىبلە كومپاسى</h4><p class="f-desc">تىترەش ئارقىلىق يېتەكلەيدۇ، كەبىگىچە بولغان ئارىلىق بىلەن.</p></li>
+          <li class="f-cell"><h4 class="f-name">جانلىق ئاسمان</h4><p class="f-desc">كۈن يېيىدا ھەقىقىي يۇلتۇزلار ۋە ئاي — سىز تۇرغان يەر ئۈچۈن، دەل ھازىر.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">بامدات ئويغاتقۇچىسى</h4><p class="f-desc">بامداتنى ئوقۇمىغان بولسىڭىز كۈن چىقىشتىن ئىلگىرى جىرىڭلايدۇ، ئوقۇغان بولسىڭىز جىم تۇرىدۇ؛ iOS 26 دا ئۈنسىز ھالەتنى بۆسۈپ ئۆتىدۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئەزان ئاۋازلىرى</h4><p class="f-desc">ھەر ناماز ئەزانى ئۆز مەقامىدا: سابا، ئۇششاق، راست، سەگاھ، ھىجاز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">نەپلە ناماز ۋاقىتلىرى</h4><p class="f-desc">ئىشراق، چاشتا، ئەۋۋابىن ۋە كېچىنىڭ بۆلەكلىرى؛ ئىختىيارىي.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مەكرۇھ ۋاقىتلار</h4><p class="f-desc">كۈن يېيىدا بەلگىلەنگەن، ئاساس بولغان رىۋايەت بىلەن بىللە.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مۇبارەك كۈنلەر</h4><p class="f-desc">مۇبارەك كېچىلەر، ھېيتلار ۋە ئارىپىلىرى بۈگۈندىن باشلاپ تەرتىپلىك؛ ھەر كۈنگە يېتەكچى.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">قولدا ئورۇن تاللاش</h4><p class="f-desc">ئورنىڭىزنى ئۆزىڭىز تاللاڭ، ياكى سەپەردە ئۆزلۈكىدىن يېڭىلانسۇن.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئۇقتۇرۇشلار</h4><p class="f-desc">ئۈسكۈنىدە، يەرلىك، ئىشەنچلىك.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">يېقىندىكى مەسچىتلەر</h4><p class="f-desc">ئورنىڭىز مۇلازىمېتىرىمىزغا يەتمەي، Apple Maps ئارقىلىق تېپىڭ؛ خەرىتە، ئارىلىق ۋە يول كۆرسىتىش.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">قۇرئان ۋە ھەدىس<span class="f-group-count">11</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">12 / 51</div><h4 class="f-name">قۇرئان كەرىم</h4><div class="f-desc">114 سۈرە. سۆزمۇ سۆز، تۈركچە ۋە ئىنگلىزچە تەرجىمە ۋە تەپسىر، كلاسسىك مۇسھەپ.</div></div>
-          <div class="f-cell"><div class="f-num">13 / 51</div><h4 class="f-name">ھەدىس</h4><div class="f-desc">يەتتە چوڭ توپلامدىن 36 مىڭدىن ئارتۇق ھەدىس.</div></div>
-          <div class="f-cell"><div class="f-num">14 / 51</div><h4 class="f-name">تورسىز تىلاۋەت</h4><div class="f-desc">قارى ۋە تىلاۋەت ئۇسلۇبىنى تاللاڭ؛ سۈرە ياكى پارەنى چۈشۈرۈپ، تورسىز ئاڭلاڭ.</div></div>
-          <div class="f-cell f-last"><div class="f-num">15 / 51</div><h4 class="f-name">تەپسىر</h4><div class="f-desc">دىيانەت تەپسىرى؛ ئايەتنى چېكىڭ، مۇناسىۋەتلىك ئايەت دائىرىسى بىلەن ئېچىلسۇن.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">16 / 51</div><h4 class="f-name">خەتمە ئىزلاش</h4><div class="f-desc">114 سۈرە، 30 پارە؛ تاماملانغان خەتمىلەر ۋە ئاخىرلىشىش مۆلچەرى.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">17 / 51</div><h4 class="f-name">مۇسھەپ خېتى</h4><div class="f-desc">مەدىنە ياكى تۈركىيە خېتى — بەت ئورۇنلاشتۇرۇلۇشىمۇ ماس ئۆزگىرىدۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">18 / 51</div><h4 class="f-name">قويۇش تىزىملىكى</h4><div class="f-desc">سۈرىلەرنى ئۆزىڭىز خالىغان تەرتىپتە تىزىڭ، تىزىملىككە ئىسىم قويۇڭ ۋە باشتىن ئاخىرغىچە ئاڭلاڭ — تورسىز بولسىمۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">19 / 51</div><h4 class="f-name">ئاۋازلىق تەرجىمە</h4><div class="f-desc">تەرجىمىنى ئۈسكۈنىڭىزنىڭ ئۆز ئاۋازىدا ئاڭلاڭ — يالغۇز ياكى ھەر ئايەتتىن كېيىن، ئىنتېرنېتسىز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">20 / 51</div><h4 class="f-name">كۈننىڭ مەزمۇنى</h4><div class="f-desc">كۈننىڭ ئايىتى، ھەدىسى ۋە ئىسمى بىر ئېكراندا؛ ئالدىنقى بىر ھەپتىگە قايتىڭ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">21 / 51</div><h4 class="f-name">خەتكۈچلەر</h4><div class="f-desc">ئايەت ۋە ھەدىسلەرنى ساقلاڭ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">22 / 51</div><h4 class="f-name">ھەمبەھىرلەش كارتىلىرى</h4><div class="f-desc">ئايەت، ھەدىس، زىكىر ۋە ئەسمائۇل ھۈسنا ئۈچۈن چىرايلىق كارتىلار.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">قۇرئان كەرىم</h4><p class="f-desc">114 سۈرە. سۆزمۇ سۆز، تۈركچە ۋە ئىنگلىزچە تەرجىمە ۋە تەپسىر، كلاسسىك مۇسھەپ.</p></li>
+          <li class="f-cell"><h4 class="f-name">ھەدىس</h4><p class="f-desc">يەتتە چوڭ توپلامدىن 36 مىڭدىن ئارتۇق ھەدىس.</p></li>
+          <li class="f-cell"><h4 class="f-name">تورسىز تىلاۋەت</h4><p class="f-desc">قارى ۋە تىلاۋەت ئۇسلۇبىنى تاللاڭ؛ سۈرە ياكى پارەنى چۈشۈرۈپ، تورسىز ئاڭلاڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">تەپسىر</h4><p class="f-desc">دىيانەت تەپسىرى؛ ئايەتنى چېكىڭ، مۇناسىۋەتلىك ئايەت دائىرىسى بىلەن ئېچىلسۇن.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">خەتمە ئىزلاش</h4><p class="f-desc">114 سۈرە، 30 پارە؛ تاماملانغان خەتمىلەر ۋە ئاخىرلىشىش مۆلچەرى.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مۇسھەپ خېتى</h4><p class="f-desc">مەدىنە ياكى تۈركىيە خېتى — بەت ئورۇنلاشتۇرۇلۇشىمۇ ماس ئۆزگىرىدۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">قويۇش تىزىملىكى</h4><p class="f-desc">سۈرىلەرنى ئۆزىڭىز خالىغان تەرتىپتە تىزىڭ، تىزىملىككە ئىسىم قويۇڭ ۋە باشتىن ئاخىرغىچە ئاڭلاڭ — تورسىز بولسىمۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئاۋازلىق تەرجىمە</h4><p class="f-desc">تەرجىمىنى ئۈسكۈنىڭىزنىڭ ئۆز ئاۋازىدا ئاڭلاڭ — يالغۇز ياكى ھەر ئايەتتىن كېيىن، ئىنتېرنېتسىز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">كۈننىڭ مەزمۇنى</h4><p class="f-desc">كۈننىڭ ئايىتى، ھەدىسى ۋە ئىسمى بىر ئېكراندا؛ ئالدىنقى بىر ھەپتىگە قايتىڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">خەتكۈچلەر</h4><p class="f-desc">ئايەت ۋە ھەدىسلەرنى ساقلاڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ھەمبەھىرلەش كارتىلىرى</h4><p class="f-desc">ئايەت، ھەدىس، زىكىر ۋە ئەسمائۇل ھۈسنا ئۈچۈن چىرايلىق كارتىلار.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">ئىبادەت ئىزلاش ۋە زىكىر<span class="f-group-count">9</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">23 / 51</div><h4 class="f-name">ئىبادەت ئىزلاش</h4><div class="f-desc">ھالقىلار: ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا.</div></div>
-          <div class="f-cell"><div class="f-num">24 / 51</div><h4 class="f-name">قازا ئىزلاش</h4><div class="f-desc">قازا نامازلارنى ۋاقىت بويىچە، قازا روزىلارنى كۈن بويىچە ئىزلاڭ.</div></div>
-          <div class="f-cell"><div class="f-num">25 / 51</div><h4 class="f-name">زىكىر ساناقچى</h4><div class="f-desc">ھالقىلىق ئىلگىرىلەش، تەييار زىكىرلەر ۋە ئۆزىڭىزنىڭ زىكىرلىرى.</div></div>
-          <div class="f-cell f-last"><div class="f-num">26 / 51</div><h4 class="f-name">ناماز ئىنتىزامى</h4><div class="f-desc">ھەر ۋاقىت كىرگەندىن قانچىلىك كېيىن ناماز ئوقۇيدىغانلىقىڭىز — بۇ ئاي ۋە بارلىق ۋاقىت.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">27 / 51</div><h4 class="f-name">روزا</h4><div class="f-desc">رامىزان، شەۋۋال ۋە كۈنمۇ كۈن ئىزلاش.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">28 / 51</div><h4 class="f-name">سەھەرلىك ئويغاتقۇچىسى</h4><div class="f-desc">رامىزاندا، ھەر كۈنى ياكى سۈننەت روزا كۈنلىرىدە تەڭشىلىدۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">29 / 51</div><h4 class="f-name">تەسبىھات</h4><div class="f-desc">33-33-33، ياكى نامازدىن كېيىنكى تولۇق تەرتىپ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">30 / 51</div><h4 class="f-name">ئەسمائۇل ھۈسنا</h4><div class="f-desc">ئاللاھنىڭ 99 ئىسمى، ئوقۇلۇشى ۋە مەنىسى بىلەن؛ خالىغىنىنى زىكىر سۈپىتىدە قوشالايسىز.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">31 / 51</div><h4 class="f-name">ئۆزۈر كۈنلىرى</h4><div class="f-desc">ھەيز ۋە نىفاس كۈنلىرى؛ ناماز ئۇدالىقىڭىز ئۈزۈلمەيدۇ.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">ئىبادەت ئىزلاش</h4><p class="f-desc">ھالقىلار: ناماز، قۇرئان، زىكىر، ھەدىس ۋە قازا.</p></li>
+          <li class="f-cell"><h4 class="f-name">قازا ئىزلاش</h4><p class="f-desc">قازا نامازلارنى ۋاقىت بويىچە، قازا روزىلارنى كۈن بويىچە ئىزلاڭ.</p></li>
+          <li class="f-cell"><h4 class="f-name">زىكىر ساناقچى</h4><p class="f-desc">ھالقىلىق ئىلگىرىلەش، تەييار زىكىرلەر ۋە ئۆزىڭىزنىڭ زىكىرلىرى.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ناماز ئىنتىزامى</h4><p class="f-desc">ھەر ۋاقىت كىرگەندىن قانچىلىك كېيىن ناماز ئوقۇيدىغانلىقىڭىز — بۇ ئاي ۋە بارلىق ۋاقىت.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">روزا</h4><p class="f-desc">رامىزان، شەۋۋال ۋە كۈنمۇ كۈن ئىزلاش.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">سەھەرلىك ئويغاتقۇچىسى</h4><p class="f-desc">رامىزاندا، ھەر كۈنى ياكى سۈننەت روزا كۈنلىرىدە تەڭشىلىدۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">تەسبىھات</h4><p class="f-desc">33-33-33، ياكى نامازدىن كېيىنكى تولۇق تەرتىپ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئەسمائۇل ھۈسنا</h4><p class="f-desc">ئاللاھنىڭ 99 ئىسمى، ئوقۇلۇشى ۋە مەنىسى بىلەن؛ خالىغىنىنى زىكىر سۈپىتىدە قوشالايسىز.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئۆزۈر كۈنلىرى</h4><p class="f-desc">ھەيز ۋە نىفاس كۈنلىرى؛ ناماز ئۇدالىقىڭىز ئۈزۈلمەيدۇ.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">كالېندار ۋە يېتەكچىلەر<span class="f-group-count">8</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">32 / 51</div><h4 class="f-name">ھىجرىيە كالېندارى</h4><div class="f-desc">مىلادىيە ۋە ھىجرىيە بىللە، مۇبارەك كۈنلەر ۋە رامىزان بىلەن.</div></div>
-          <div class="f-cell"><div class="f-num">33 / 51</div><h4 class="f-name">ناماز يېتەكچىسى</h4><div class="f-desc">17 خىل ناماز؛ ئۆرە تۇرۇپ، ئولتۇرۇپ ياكى ئىشارەت بىلەن.</div></div>
-          <div class="f-cell"><div class="f-num">34 / 51</div><h4 class="f-name">جۈمە خۇتبىسى</h4><div class="f-desc">دىيانەت ئۇسۇلىنى ئىشلىتىدىغانلار ئۈچۈن: خۇتبىنى ئوقۇڭ، ئاڭلاڭ، تورسىز ساقلاڭ.</div></div>
-          <div class="f-cell f-last"><div class="f-num">35 / 51</div><h4 class="f-name">ئىمساكىيە</h4><div class="f-desc">بىر ئاينىڭ بارلىق ناماز ۋاقىتلىرى بىر تىزىملىكتە؛ رامىزاندا كۈن سانى ۋە ئىپتار.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">36 / 51</div><h4 class="f-name">جۈمە يوليۇرۇقى</h4><div class="f-desc">تەييارلىق، غۇسۇل، خۇتبە، كەھف سۈرىسى ۋە سالاۋات — جۈمە كۈنى بىر بەتتە.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">37 / 51</div><h4 class="f-name">پاكلىنىش يېتەكچىسى</h4><div class="f-desc">تاھارەت، غۇسۇل ۋە تەيەممۇم، قەدەممۇ قەدەم.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">38 / 51</div><h4 class="f-name">مۇبارەك كۈن ئەسكەرتىشى</h4><div class="f-desc">12 مۇبارەك كۈن: مۇبارەك كېچىلەر شۇ كۈنى كەچتە، قالغانلىرى بىر كۈن ئىلگىرى ئەسكەرتىلىدۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">39 / 51</div><h4 class="f-name">زاكات ۋە پىتىر سەدىقىسى</h4><div class="f-desc">كلاسسىك پىقھى ھۆكۈملىرىگە ئاساسلانغان ھېسابلىغۇچلار.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">ھىجرىيە كالېندارى</h4><p class="f-desc">مىلادىيە ۋە ھىجرىيە بىللە، مۇبارەك كۈنلەر ۋە رامىزان بىلەن.</p></li>
+          <li class="f-cell"><h4 class="f-name">ناماز يېتەكچىسى</h4><p class="f-desc">17 خىل ناماز؛ ئۆرە تۇرۇپ، ئولتۇرۇپ ياكى ئىشارەت بىلەن.</p></li>
+          <li class="f-cell"><h4 class="f-name">جۈمە خۇتبىسى</h4><p class="f-desc">دىيانەت ئۇسۇلىنى ئىشلىتىدىغانلار ئۈچۈن: خۇتبىنى ئوقۇڭ، ئاڭلاڭ، تورسىز ساقلاڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ئىمساكىيە</h4><p class="f-desc">بىر ئاينىڭ بارلىق ناماز ۋاقىتلىرى بىر تىزىملىكتە؛ رامىزاندا كۈن سانى ۋە ئىپتار.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">جۈمە يوليۇرۇقى</h4><p class="f-desc">تەييارلىق، غۇسۇل، خۇتبە، كەھف سۈرىسى ۋە سالاۋات — جۈمە كۈنى بىر بەتتە.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">پاكلىنىش يېتەكچىسى</h4><p class="f-desc">تاھارەت، غۇسۇل ۋە تەيەممۇم، قەدەممۇ قەدەم.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">مۇبارەك كۈن ئەسكەرتىشى</h4><p class="f-desc">12 مۇبارەك كۈن: مۇبارەك كېچىلەر شۇ كۈنى كەچتە، قالغانلىرى بىر كۈن ئىلگىرى ئەسكەرتىلىدۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">زاكات ۋە پىتىر سەدىقىسى</h4><p class="f-desc">كلاسسىك پىقھى ھۆكۈملىرىگە ئاساسلانغان ھېسابلىغۇچلار.</p></li>
+        </ul>
       </div>
       <div class="f-group">
         <h3 class="f-group-title">ئۈسكۈنىلەر ۋە باشقىلار<span class="f-group-count">12</span></h3>
-        <div class="f-grid">
-          <div class="f-cell"><div class="f-num">40 / 51</div><h4 class="f-name">Apple Watch</h4><div class="f-desc">ناماز ۋاقىتلىرى، جانلىق قىبلە، 13 كىچىك كۆزنەك.</div></div>
-          <div class="f-cell"><div class="f-num">41 / 51</div><h4 class="f-name">ۋىجېتلار</h4><div class="f-desc">باش ئېكران، قۇلۇپ ئېكرانى، StandBy — Mac تىمۇ.</div></div>
-          <div class="f-cell"><div class="f-num">42 / 51</div><h4 class="f-name">جانلىق پائالىيەت</h4><div class="f-desc">Dynamic Island ۋە قۇلۇپ ئېكرانىدا قالغان ۋاقىت.</div></div>
-          <div class="f-cell f-last"><div class="f-num">43 / 51</div><h4 class="f-name">Mac ئەپى</h4><div class="f-desc">تىزىملىك بالدىقىدا قالغان ۋاقىت، كۇنۇپكا تاختىسى تېزلەتمىلىرى، iCloud ماسلىشىشى.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">44 / 51</div><h4 class="f-name">iPad</h4><div class="f-desc">ئوخشاش ئەپ چوڭراق ئېكراندا؛ خاتىرىلىرىڭىز iCloud ئارقىلىق ماسلىشىدۇ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">45 / 51</div><h4 class="f-name">25 تىل</h4><div class="f-desc">ئەرەبچە، ئۇردۇچە، پارسچە ۋە ئۇيغۇرچىدا ئوڭدىن سولغا كۆرۈنۈش.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">46 / 51</div><h4 class="f-name">iCloud ماسلىشىشى</h4><div class="f-desc">خاتىرىلىرىڭىز ئۆزىڭىزنىڭ iCloud ىدا، ھەر بىر ئۈسكۈنىدە.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">47 / 51</div><h4 class="f-name">Siri تېزلەتمىلىرى</h4><div class="f-desc">كېيىنكى نامازنى سوراڭ؛ ناماز، روزا ۋە قازانى ئاۋاز بىلەن بەلگىلەڭ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">48 / 51</div><h4 class="f-name">كونترول مەركىزى</h4><div class="f-desc">ئالتە تېز مەشغۇلات (iOS 18+) — قىبلە، كېيىنكى ناماز ۋە باشقىلار.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">49 / 51</div><h4 class="f-name">بىرلەشكەن ئىزدەش</h4><div class="f-desc">بىرلا ئىزدەش، ھەممە قورال — «بەقەرە 255» نى يېزىپ ئايەتكە بېرىڭ.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">50 / 51</div><h4 class="f-name">قاراڭغۇ ھالەت</h4><div class="f-desc">كېچىلىك ۋاقىتلار ئۈچۈن ئىللىق، تىنچ قاراڭغۇلۇق.</div></div>
-          <div class="f-cell f-extra"><div class="f-num">51 / 51</div><h4 class="f-name">Vakit نى قوللاش</h4><div class="f-desc">ھەقسىز ئەپنى داۋاملاشتۇرۇشنىڭ ئىختىيارىي يوللىرى.</div></div>
-        </div>
+        <ul class="f-list">
+          <li class="f-cell"><h4 class="f-name">Apple Watch</h4><p class="f-desc">ناماز ۋاقىتلىرى، جانلىق قىبلە، 13 كىچىك كۆزنەك.</p></li>
+          <li class="f-cell"><h4 class="f-name">ۋىجېتلار</h4><p class="f-desc">باش ئېكران، قۇلۇپ ئېكرانى، StandBy — Mac تىمۇ.</p></li>
+          <li class="f-cell"><h4 class="f-name">جانلىق پائالىيەت</h4><p class="f-desc">Dynamic Island ۋە قۇلۇپ ئېكرانىدا قالغان ۋاقىت.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mac ئەپى</h4><p class="f-desc">تىزىملىك بالدىقىدا قالغان ۋاقىت، كۇنۇپكا تاختىسى تېزلەتمىلىرى، iCloud ماسلىشىشى.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iPad</h4><p class="f-desc">ئوخشاش ئەپ چوڭراق ئېكراندا؛ خاتىرىلىرىڭىز iCloud ئارقىلىق ماسلىشىدۇ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">25 تىل</h4><p class="f-desc">ئەرەبچە، ئۇردۇچە، پارسچە ۋە ئۇيغۇرچىدا ئوڭدىن سولغا كۆرۈنۈش.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">iCloud ماسلىشىشى</h4><p class="f-desc">خاتىرىلىرىڭىز ئۆزىڭىزنىڭ iCloud ىدا، ھەر بىر ئۈسكۈنىدە.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Siri تېزلەتمىلىرى</h4><p class="f-desc">كېيىنكى نامازنى سوراڭ؛ ناماز، روزا ۋە قازانى ئاۋاز بىلەن بەلگىلەڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">كونترول مەركىزى</h4><p class="f-desc">ئالتە تېز مەشغۇلات (iOS 18+) — قىبلە، كېيىنكى ناماز ۋە باشقىلار.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">بىرلەشكەن ئىزدەش</h4><p class="f-desc">بىرلا ئىزدەش، ھەممە قورال — «بەقەرە 255» نى يېزىپ ئايەتكە بېرىڭ.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">قاراڭغۇ ھالەت</h4><p class="f-desc">كېچىلىك ۋاقىتلار ئۈچۈن ئىللىق، تىنچ قاراڭغۇلۇق.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Vakit نى قوللاش</h4><p class="f-desc">ھەقسىز ئەپنى داۋاملاشتۇرۇشنىڭ ئىختىيارىي يوللىرى.</p></li>
+        </ul>
       </div>
     </div>
     <button class="f-all" id="featAll" aria-controls="featGroups" aria-expanded="false">بارلىق 51 قورالنى كۆرسەت</button>
@@ -777,27 +829,27 @@
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>ھەقىقىي نامازخانلارنىڭ</span><br><em>ياخشى سۆزلىرى.</em></h2>
+      <h2 class="sec-title"><span>ھەقىقىي نامازخانلارنىڭ</span> <em>ياخشى سۆزلىرى.</em></h2>
       <div class="t-meta">
         <span>ئوتتۇرىچە باھا</span>
-        <b>4.8 ★</b>
+        <b>4.8 <span class="star" aria-hidden="true">★</span></b>
         <span>App Store دىكى 473 باھادىن</span>
       </div>
     </div>
     <p class="t-note">بۇ باھالار تۈركىيە App Store ىدىن ئېلىنىپ، تۈركچىدىن تەرجىمە قىلىندى.</p>
     <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="ھەقىقىي نامازخانلارنىڭ ياخشى سۆزلىرى.">
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">10/10 ئەپ.</div><p class="t-body">مەيلى ۋىجېتتىكى ئاجايىپ گرافىكلار بىلەن كۆرسىتىلگەن ناماز ۋاقىتلىرى بولسۇن، مەيلى ئەپنىڭ ئېلانسىز ۋە ناھايىتى پاكىز كۆرۈنۈشكە ئىگە بولۇشى بولسۇن — 10/10. ھەقىقەتەن بەك رازى بولدۇم، ھەممەيلەنگە تەۋسىيە قىلىمەن.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئاجايىپ.</div><p class="t-body">تاپالايدىغان ئەڭ پاكىز ۋە قولاي ئەپ. ئېلان يوق، كۆرۈنۈشى ناھايىتى ئاددىي ۋە نەپىس. قىبلە تېپىش قىسمى ھەقىقەتەن ناھايىتى توغرا ۋە ياخشى ئىشلەيدۇ. باشقا مەزمۇنلىرىمۇ بەك چىرايلىق بوپتۇ.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئاددىي ۋە قولاي.</div><p class="t-body">باشقا نۇرغۇن ئەپ، ئويۇن ۋە ئىجتىمائىي تاراتقۇ ئەپلىرىدىن ياخشىراق سەۋىيىدە. تىرىشچانلىقىڭىزغا رەھمەت، ئاجايىپ ئىش بوپتۇ. مەن دىنىمنى تېخىمۇ پىلانلىق ياشاشقا تىرىشىۋاتقان ئادەم، بۇ ئەپ مېنىڭ ئوڭ قولۇم بولۇپ قالدى.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">كەمچىلىكسىز.</div><p class="t-body">ياسىغۇچىنىڭ قولىغا دەرت كەلمىسۇن. ئېلان يوق. زور ئەمگەك سىڭدۈرۈلگەن. پەقەت ئاللاھنىڭ رازىلىقى ئۈچۈن قىلىنغانلىقى ئېنىق. رەھمەت.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ناھايىتى ئاز ئۇچرايدىغان ئەپ.</div><p class="t-body">ئاللاھ سىلەردىن رازى بولسۇن. ناماز ۋاقىتلىرىنىڭ بۇنداق رەتلىك بولۇشى، ھەدىسلەرنىڭ ئەستايىدىللىق بىلەن ئەرەبچىسى، تۈركچىسى ۋە سەھىھلىك دەرىجىسى بىلەن بېرىلىشى، لېكىن ئېلان كۆرسىتىلمەسلىكى — بۇنداق ئەپ ناھايىتى ئاز. چۈشۈرۈڭلار، ئېھتىمال مەڭگۈلۈك ئەپىڭلار بولۇپ قالىدۇ.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">تەلەپنىڭ دەل جاۋابى.</div><p class="t-body">كىم ئويلاپ ياسىغان بولسا ئاللاھ رازى بولسۇن. چۈشىنىشلىك، ئېلانسىز ۋە ئېنىق.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئەڭ يېڭى يېڭىلاش بىلەن ئاجايىپ بوپتۇ.</div><p class="t-body">ئاددىي، گۈزەل، قولاي، تېز — نېمە دېسەم بولار. قولىڭىزغا، ئەمگىكىڭىزگە، كۆڭلىڭىزگە دەرت كەلمىسۇن.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئاللاھ رازى بولسۇن.</div><p class="t-body">ئېلان بىلەن تولغان، توختىماي پۇل سورايدىغان، ئىشلىتىش قىيىن كۆرۈنۈشلەردىن بىزار بولۇپ كەتكەنىدىم. Vakit ھەقىقەتەن ئاجايىپ؛ ھەممە يەردە ئىشلەيدۇ، تورسىز، ئېلانسىز. قۇرئان، ھەدىس، زىكىر ساناقچى، ناماز ئىزلاش — باشقا ئەپكە ئېھتىياجىم يوق.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">باشقىلىرىنى ئۆچۈرۈۋەتتىم.</div><p class="t-body">ياسىغۇچىدىن ئاللاھ رازى بولسۇن. قولىڭىزغا دەرت كەلمىسۇن. ناھايىتى پايدىلىق بولدى.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئەڭ ياخشىسى.</div><p class="t-body">بۇنىڭدىن ياخشىسىنى كۆرمىدىم. ھەر بىر تېلېفوندا بولۇشقا تېگىشلىك ئەپ. ياسىغان قېرىندىشىمىزدىن ئاللاھ رازى بولسۇن.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ھەقىقەتەن پايدىلىق.</div><p class="t-body">ئەپ ناھايىتى پايدىلىق ۋە ئەمەلىي. ھەر بىر مۇسۇلماننىڭ تېلېفونىدا بولۇشقا تېگىشلىك ئەپ. ياسىغۇچىدىن ئاللاھ رازى بولسۇن.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><div class="t-title">ئاللاھ رازى بولسۇن.</div><p class="t-body">قېرىندىشىم، بۇنداق قىممەتلىك ئەپنى ھەقسىز قىلغىنىڭىز ئۈچۈن كۆپ رەھمەت. ئاللاھ كۆڭلىڭىزدىكىدەك بەرسۇن، ئىنشائاللاھ.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">10/10 ئەپ.</div><p class="t-body">مەيلى ۋىجېتتىكى ئاجايىپ گرافىكلار بىلەن كۆرسىتىلگەن ناماز ۋاقىتلىرى بولسۇن، مەيلى ئەپنىڭ ئېلانسىز ۋە ناھايىتى پاكىز كۆرۈنۈشكە ئىگە بولۇشى بولسۇن — 10/10. ھەقىقەتەن بەك رازى بولدۇم، ھەممەيلەنگە تەۋسىيە قىلىمەن.</p><div class="t-author"><span>Meryem Ebrar</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئاجايىپ.</div><p class="t-body">تاپالايدىغان ئەڭ پاكىز ۋە قولاي ئەپ. ئېلان يوق، كۆرۈنۈشى ناھايىتى ئاددىي ۋە نەپىس. قىبلە تېپىش قىسمى ھەقىقەتەن ناھايىتى توغرا ۋە ياخشى ئىشلەيدۇ. باشقا مەزمۇنلىرىمۇ بەك چىرايلىق بوپتۇ.</p><div class="t-author"><span>alpaslanx</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئاددىي ۋە قولاي.</div><p class="t-body">باشقا نۇرغۇن ئەپ، ئويۇن ۋە ئىجتىمائىي تاراتقۇ ئەپلىرىدىن ياخشىراق سەۋىيىدە. تىرىشچانلىقىڭىزغا رەھمەت، ئاجايىپ ئىش بوپتۇ. مەن دىنىمنى تېخىمۇ پىلانلىق ياشاشقا تىرىشىۋاتقان ئادەم، بۇ ئەپ مېنىڭ ئوڭ قولۇم بولۇپ قالدى.</p><div class="t-author"><span>h-seyin</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">كەمچىلىكسىز.</div><p class="t-body">ياسىغۇچىنىڭ قولىغا دەرت كەلمىسۇن. ئېلان يوق. زور ئەمگەك سىڭدۈرۈلگەن. پەقەت ئاللاھنىڭ رازىلىقى ئۈچۈن قىلىنغانلىقى ئېنىق. رەھمەت.</p><div class="t-author"><span>Keskin2298</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ناھايىتى ئاز ئۇچرايدىغان ئەپ.</div><p class="t-body">ئاللاھ سىلەردىن رازى بولسۇن. ناماز ۋاقىتلىرىنىڭ بۇنداق رەتلىك بولۇشى، ھەدىسلەرنىڭ ئەستايىدىللىق بىلەن ئەرەبچىسى، تۈركچىسى ۋە سەھىھلىك دەرىجىسى بىلەن بېرىلىشى، لېكىن ئېلان كۆرسىتىلمەسلىكى — بۇنداق ئەپ ناھايىتى ئاز. چۈشۈرۈڭلار، ئېھتىمال مەڭگۈلۈك ئەپىڭلار بولۇپ قالىدۇ.</p><div class="t-author"><span>Baalbak9907</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">تەلەپنىڭ دەل جاۋابى.</div><p class="t-body">كىم ئويلاپ ياسىغان بولسا ئاللاھ رازى بولسۇن. چۈشىنىشلىك، ئېلانسىز ۋە ئېنىق.</p><div class="t-author"><span>Sswnn21</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئەڭ يېڭى يېڭىلاش بىلەن ئاجايىپ بوپتۇ.</div><p class="t-body">ئاددىي، گۈزەل، قولاي، تېز — نېمە دېسەم بولار. قولىڭىزغا، ئەمگىكىڭىزگە، كۆڭلىڭىزگە دەرت كەلمىسۇن.</p><div class="t-author"><span>Mücahade</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئاللاھ رازى بولسۇن.</div><p class="t-body">ئېلان بىلەن تولغان، توختىماي پۇل سورايدىغان، ئىشلىتىش قىيىن كۆرۈنۈشلەردىن بىزار بولۇپ كەتكەنىدىم. Vakit ھەقىقەتەن ئاجايىپ؛ ھەممە يەردە ئىشلەيدۇ، تورسىز، ئېلانسىز. قۇرئان، ھەدىس، زىكىر ساناقچى، ناماز ئىزلاش — باشقا ئەپكە ئېھتىياجىم يوق.</p><div class="t-author"><span>h.ç44</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">باشقىلىرىنى ئۆچۈرۈۋەتتىم.</div><p class="t-body">ياسىغۇچىدىن ئاللاھ رازى بولسۇن. قولىڭىزغا دەرت كەلمىسۇن. ناھايىتى پايدىلىق بولدى.</p><div class="t-author"><span>Çerkezin biri</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئەڭ ياخشىسى.</div><p class="t-body">بۇنىڭدىن ياخشىسىنى كۆرمىدىم. ھەر بىر تېلېفوندا بولۇشقا تېگىشلىك ئەپ. ياسىغان قېرىندىشىمىزدىن ئاللاھ رازى بولسۇن.</p><div class="t-author"><span>Bessey Çelik</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ھەقىقەتەن پايدىلىق.</div><p class="t-body">ئەپ ناھايىتى پايدىلىق ۋە ئەمەلىي. ھەر بىر مۇسۇلماننىڭ تېلېفونىدا بولۇشقا تېگىشلىك ئەپ. ياسىغۇچىدىن ئاللاھ رازى بولسۇن.</p><div class="t-author"><span>tolgalive</span><span>App Store</span></div></article>
+        <article class="t-card"><div class="t-stars" aria-hidden="true">★★★★★</div><div class="t-title">ئاللاھ رازى بولسۇن.</div><p class="t-body">قېرىندىشىم، بۇنداق قىممەتلىك ئەپنى ھەقسىز قىلغىنىڭىز ئۈچۈن كۆپ رەھمەت. ئاللاھ كۆڭلىڭىزدىكىدەك بەرسۇن، ئىنشائاللاھ.</p><div class="t-author"><span>Murat KAYAHAN</span><span>App Store</span></div></article>
     </div>
   </div>
 </section>
@@ -805,7 +857,7 @@
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>سەمىمىي سوئاللارغا</span><br><em>سەمىمىي جاۋابلار.</em></h2>
+    <h2 class="sec-title"><span>سەمىمىي سوئاللارغا</span> <em>سەمىمىي جاۋابلار.</em></h2>
     <div class="faq-list" id="faqList">
         <div class="faq-item on"><button class="faq-q" aria-expanded="true">تورسىز ئىشلەمدۇ؟<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">ھەئە. ناماز ۋاقىتلىرى ئورنىڭىزغا ئاساسەن تېلېفونىڭىزدا ھېسابلىنىدۇ. قۇرئان تېكىستى، قىبلە، زىكىر ۋە بارلىق ئاساسىي قوراللار تولۇق تورسىز ئىشلەيدۇ.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">ئەپنى ئاچمىسام ئۇقتۇرۇشلار كېلەمدۇ؟<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">ھەئە. ئۇقتۇرۇشلار ئۈسكۈنىڭىزدە يەرلىك ئورۇنلاشتۇرۇلىدۇ، ئەپ تاقاقلىق تۇرسىمۇ تاپشۇرۇۋالىسىز. ئەگەر «ھەمىشە» ئورۇن ئىجازىتى بەرسىڭىز، Vakit سەپەردىن كېيىن ۋاقىتلارنى جىمجىت قايتا ھېسابلايدۇ.</div></div></div>
@@ -828,7 +880,7 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="Vakit" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>ئىبادىتىڭىز</span> <em>ئۈزۈلۈپ قالمىسۇن.</em></h2>
+  <h2 class="sec-title"><span>ئىبادىتىڭىز</span> <em>ئۈزۈلۈپ قالمىسۇن.</em></h2>
   <p>ھەقسىز. ھېسابات يوق. تورسىز ئىشلەيدۇ. iPhone، iPad، Apple Watch ۋە Mac — iOS 16.4+، watchOS 9+، macOS 13+.</p>
   <div class="final-actions">
     <a href="https://apps.apple.com/app/id6748356813?pt=127947182&ct=site-final-ug" class="btn-primary">

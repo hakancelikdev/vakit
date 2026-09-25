@@ -54,7 +54,7 @@ const LEGAL_I18N = Object.fromEntries(
 const legalCopy = (key, lang) => LEGAL_COPY[key][lang] || LEGAL_I18N[lang]?.[key];
 const legalMeta = (key, lang) => LEGAL[key][lang] || LEGAL_I18N[lang]?.[key]?.meta;
 
-const { SCRIPTS, fontHref, joinsWithoutSpace } = require("./tools/fonts.js");
+const { SCRIPTS, joinsWithoutSpace } = require("./tools/fonts.js");
 
 /* Runs before first paint so a dark-mode visitor never sees a white flash;
    script.js takes over the toggle once the page has loaded. */
@@ -133,13 +133,6 @@ function deviceCopy(lang, ref) {
 
 /** Link-preview card, rendered per language by tools/make-og.js. */
 const ogUrl = (lang) => `/assets/og/${lang}.jpg`;
-
-function fontHead(lang) {
-  const s = SCRIPTS[LANGS[lang].script];
-  const link = `<link href="${fontHref(LANGS[lang].script)}" rel="stylesheet">`;
-  const vars = [s.serif && `--serif: ${s.serif}`, s.sans && `--sans: ${s.sans}`].filter(Boolean);
-  return vars.length ? `${link}\n    <style>:root { ${vars.join("; ")} }</style>` : link;
-}
 
 /** <html> attributes: language, direction, and a script class for typography. */
 function htmlAttrs(lang) {
@@ -245,37 +238,21 @@ function langMenu(lang) {
     </details>`;
 }
 
-function showcaseList(lang) {
-  return SHOWCASE[lang]
-    .map(
-      (item, i) =>
-        `        <button class="sc-item${i === 0 ? " on" : ""}" data-index="${i}">` +
-        `<span class="sc-num">${pad2(i + 1)}</span>` +
-        `<div class="sc-body"><h3>${esc(item.t)}</h3><p>${esc(item.d)}</p></div>` +
-        `<span class="sc-tag">${esc(t(lang, "preview"))}</span></button>`
-    )
-    .join("\n");
-}
-
-/** Screenshots in the page's language; the preview video plays in the hero instead. */
-function showcaseScreens(lang) {
-  return SHOWCASE[lang]
-    .map((item, i) =>
-      `        <img class="phone-screenshot${i === 0 ? " on" : ""}" data-i="${i}" src="${shotUrl(lang, item.img)}" alt="${esc(item.t)}"` +
-      ` width="390" height="844" loading="lazy">`
-    )
-    .concat(showcaseMore(lang).map((m, k) =>
-      `        <img class="phone-screenshot" data-i="${SHOWCASE[lang].length + k}" src="${moreUrl(lang, m.img)}" alt="${esc(m.f.n)}"` +
-      ` width="390" height="844" loading="lazy">`))
-    .join("\n");
-}
-
-/** More screens for the same phone: tabs under the showcase list, labelled with feature names. */
-function showcaseChips(lang) {
-  const base = SHOWCASE[lang].length;
-  return showcaseMore(lang)
-    .map((m, k) =>
-      `      <button class="dv-tab sc-chip" data-index="${base + k}" aria-pressed="false" data-desc="${esc(m.f.d)}">${esc(m.f.n)}</button>`)
+/**
+ * The highlights gallery: every iPhone screen in its own phone, side by side,
+ * with its title and description underneath — SHOWCASE first, then the extra
+ * screens this language has a capture for (SHOWCASE_MORE, labelled with feature copy).
+ */
+function galleryItems(lang) {
+  const items = SHOWCASE[lang]
+    .map((s) => ({ src: shotUrl(lang, s.img), t: s.t, d: s.d }))
+    .concat(showcaseMore(lang).map((m) => ({ src: moreUrl(lang, m.img), t: m.f.n, d: m.f.d })));
+  return items
+    .map((it) => `        <li class="g-item">
+          <div class="phone"><div class="phone-screen"><img src="${it.src}" alt="${esc(it.t)}" width="390" height="844" loading="lazy" decoding="async"></div></div>
+          <h3 class="g-title">${esc(it.t)}</h3>
+          <p class="g-desc">${esc(it.d)}</p>
+        </li>`)
     .join("\n");
 }
 
@@ -328,35 +305,31 @@ function featureGroupIndexes() {
 
 /**
  * Features in groups. Until "show all" is tapped, each group shows its first
- * FEATURE_PREVIEW entries (one fewer where the grid has three columns or one);
+ * FEATURE_PREVIEW entries;
  * the rest are still in the HTML, so crawlers read every feature.
  */
 function featureGroups(lang) {
   const list = FEATURES[lang];
-  const total = pad2(list.length);
-  let n = 0;
   return featureGroupIndexes()
     .map((idxs, g) => {
       const cells = idxs
         .map((i, k) => {
           const f = list[i];
-          const cls = k >= FEATURE_PREVIEW ? " f-extra" : k === FEATURE_PREVIEW - 1 ? " f-last" : "";
-          n += 1;
+          const cls = k >= FEATURE_PREVIEW ? " f-extra" : "";
           return (
-            `          <div class="f-cell${cls}">` +
-            `<div class="f-num">${pad2(n)} / ${total}</div>` +
+            `          <li class="f-cell${cls}">` +
             // A heading, not a div: these names are the page's keyword-bearing
             // headings (the showcase titles are poetic).
             `<h4 class="f-name">${esc(f.n)}</h4>` +
-            `<div class="f-desc">${esc(f.d)}</div></div>`
+            `<p class="f-desc">${esc(f.d)}</p></li>`
           );
         })
         .join("\n");
       return `      <div class="f-group">
         <h3 class="f-group-title">${esc(t(lang, `fg-${g + 1}`))}<span class="f-group-count">${idxs.length}</span></h3>
-        <div class="f-grid">
+        <ul class="f-list">
 ${cells}
-        </div>
+        </ul>
       </div>`;
     })
     .join("\n");
@@ -392,7 +365,7 @@ function reviewGrid(lang) {
     .map(
       (r) =>
         `        <article class="t-card">` +
-        `<div class="t-stars">★★★★★</div>` +
+        `<div class="t-stars" aria-hidden="true">★★★★★</div>` +
         `<div class="t-title">${esc(r.t)}</div>` +
         `<p class="t-body">${esc(r.b)}</p>` +
         `<div class="t-author"><span>${esc(r.n)}</span><span>App Store</span></div></article>`
@@ -413,6 +386,22 @@ function faqList(lang) {
 
 const APPLE_LOGO =
   '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>';
+
+/* Line icons in the SF Symbols spirit: 24 px grid, 1.6 stroke, round caps. */
+const ICON = (d) => `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const TRUST_ICONS = [
+  // no account: a person, crossed out
+  ICON('<circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/><path d="M4 4l16 16"/>'),
+  // calculated on the phone
+  ICON('<rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3"/><path d="M12 9.5v3.2l2 1.3"/>'),
+  // the exact location stays out
+  ICON('<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>'),
+  // a short, plain policy
+  ICON('<path d="M7 2.5h7l4 4v15H7a1.5 1.5 0 0 1-1.5-1.5V4A1.5 1.5 0 0 1 7 2.5z"/><path d="M14 2.5V7h4"/><path d="M9 12h6M9 15.5h6"/>'),
+];
+const SUN = '<svg class="i-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>';
+const MOON = '<svg class="i-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
+const CHEVRON = (dir) => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${dir === "prev" ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"}"/></svg>`;
 
 /* -------------------------------------------------------------------- page */
 
@@ -486,11 +475,7 @@ ${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:altern
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    ${fontHead(lang)}
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -520,7 +505,7 @@ ${jsonLd(faqSchema(lang))}
     <a href="#faq">${esc(t(lang, "faq"))}</a>
   </div>
   <div class="nav-cta">
-    <button class="nav-theme" id="themeToggle" aria-label="${esc(t(lang, "themeLabel"))}">☀</button>
+    <button class="nav-theme" id="themeToggle" aria-label="${esc(t(lang, "themeLabel"))}">${SUN}${MOON}</button>
     ${langMenu(lang)}
     <a href="${storeLink(`site-nav-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
   </div>
@@ -597,26 +582,22 @@ ${clockRows(lang)}
   </div>
 </section>
 
-<!-- ========== SHOWCASE ========== -->
+<!-- ========== SHOWCASE: every screen, side by side ========== -->
 <section class="showcase" id="showcase">
-  <div class="sc-copy">
-    <div class="sc-head">${esc(t(lang, "sc-head"))}</div>
-    <h2 class="sc-h2"><span>${esc(t(lang, "sc-h2a"))}</span><br><em>${esc(t(lang, "sc-h2b"))}</em></h2>
-    <p class="sc-lede">${esc(t(lang, "sc-lede"))}</p>
-    <div class="sc-list" id="scList">
-${showcaseList(lang)}
-    </div>
-    <div class="sc-more dv-tabs" id="scMore">
-${showcaseChips(lang)}
-    </div>
-    <p class="sc-caption" id="scCaption" aria-live="polite"></p>
+  <div class="sec-head">
+    <p class="sec-eye">${esc(t(lang, "sc-head"))}</p>
+    <h2 class="sec-title"><span>${esc(t(lang, "sc-h2a"))}</span>${gap}<em>${esc(t(lang, "sc-h2b"))}</em></h2>
+    <p class="sec-lede">${esc(t(lang, "sc-lede"))}</p>
   </div>
-  <div class="sc-phone-wrap">
-    <div class="phone">
-      <div class="phone-screen" id="phoneScreen">
-${showcaseScreens(lang)}
-      </div>
-    </div>
+  <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="${esc(t(lang, "sc-h2a") + gap + t(lang, "sc-h2b"))}">
+    <ul class="g-track">
+${galleryItems(lang)}
+    </ul>
+  </div>
+  <!-- Pointer shortcuts only: the gallery itself scrolls by swipe, trackpad or arrow keys. -->
+  <div class="g-controls" aria-hidden="true">
+    <button class="g-btn g-prev" tabindex="-1" disabled>${CHEVRON("prev")}</button>
+    <button class="g-btn g-next" tabindex="-1">${CHEVRON("next")}</button>
   </div>
 </section>
 
@@ -633,15 +614,14 @@ ${deviceColumn(lang, "watch")}
 <!-- ========== TRUST / EMANET ========== -->
 <section class="trust" id="trust">
   <div class="trust-inner">
-    <div class="trust-eyebrow">${esc(t(lang, "trust-eye"))}</div>
-    <h2>
-      <span>${esc(t(lang, "trust-h1"))}</span>${gap}<em>${esc(t(lang, "trust-h2"))}</em><br>
-      <span>${esc(t(lang, "trust-h3"))}</span>
+    <p class="sec-eye">${esc(t(lang, "trust-eye"))}</p>
+    <h2 class="sec-title">
+      <span>${esc(t(lang, "trust-h1"))}</span>${gap}<span>${esc(t(lang, "trust-h2"))}</span>${gap}<em>${esc(t(lang, "trust-h3"))}</em>
     </h2>
     <p class="trust-lede">${esc(t(lang, "trust-lede"))}</p>
     <div class="trust-grid">
 ${[1, 2, 3, 4].map((i) => `      <div class="trust-cell">
-        <div class="trust-cell-num">${pad2(i)}</div>
+        <div class="trust-icon">${TRUST_ICONS[i - 1]}</div>
         <h3>${esc(t(lang, `t-${i}a`))}</h3>
         <p>${esc(t(lang, `t-${i}b`))}</p>
       </div>`).join("\n")}
@@ -662,8 +642,8 @@ ${compareTable(lang)}
 <section class="feats" id="features">
   <div class="f-inner">
     <div class="f-head">
-      <div class="f-eye">${esc(t(lang, "f-eye"))}</div>
-      <h2><span>${esc(t(lang, "f-h1"))}</span><br><em>${esc(t(lang, "f-h2"))}</em></h2>
+      <p class="sec-eye">${esc(t(lang, "f-eye"))}</p>
+      <h2 class="sec-title"><span>${esc(t(lang, "f-h1"))}</span>${gap}<em>${esc(t(lang, "f-h2"))}</em></h2>
     </div>
     <div class="f-groups is-collapsed" id="featGroups">
 ${featureGroups(lang)}
@@ -676,10 +656,10 @@ ${featureGroups(lang)}
 <section class="testimonials" id="reviews">
   <div class="t-inner">
     <div class="t-head">
-      <h2><span>${esc(t(lang, "r-h1"))}</span><br><em>${esc(t(lang, "r-h2"))}</em></h2>
+      <h2 class="sec-title"><span>${esc(t(lang, "r-h1"))}</span>${gap}<em>${esc(t(lang, "r-h2"))}</em></h2>
       <div class="t-meta">
         <span>${esc(t(lang, "r-m1"))}</span>
-        <b>${num(lang, SITE.rating.value)} ★</b>
+        <b>${num(lang, SITE.rating.value)} <span class="star" aria-hidden="true">★</span></b>
         <span>${esc(t(lang, "r-m2"))}</span>
       </div>
     </div>
@@ -692,7 +672,7 @@ ${reviewGrid(lang)}
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2><span>${esc(t(lang, "q-h1"))}</span><br><em>${esc(t(lang, "q-h2"))}</em></h2>
+    <h2 class="sec-title"><span>${esc(t(lang, "q-h1"))}</span>${gap}<em>${esc(t(lang, "q-h2"))}</em></h2>
     <div class="faq-list" id="faqList">
 ${faqList(lang)}
     </div>
@@ -702,7 +682,7 @@ ${faqList(lang)}
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="${esc(SITE.appName)}" width="88" height="88" loading="lazy" decoding="async"></div>
-  <h2><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
+  <h2 class="sec-title"><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
   <p>${esc(t(lang, "fin-p"))}</p>
   <div class="final-actions">
     <a href="${storeLink(`site-final-${lang}`)}" class="btn-primary">
@@ -751,20 +731,20 @@ ${faqList(lang)}
 
 /* Shared by all three legal documents — kept identical to the inline block the
    hand-written pages used, so their appearance is unchanged. */
-const LEGAL_STYLE = `      .legal-page { padding: 120px 48px 80px; max-width: 860px; margin: 0 auto }
-      .legal-page h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px }
-      .legal-page h1 em { font-style: italic; color: var(--accent-ink) }
+const LEGAL_STYLE = `      .legal-page { padding: 96px 40px 80px; max-width: 820px; margin: 0 auto }
+      .legal-page h1 { font-size: clamp(40px, 5vw, 64px); font-weight: 700; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 16px }
+      .legal-page h1 em { font-style: normal; color: var(--ink-3) }
       .legal-notice { font-size: 14px; line-height: 1.6; color: var(--ink-3); border-inline-start: 2px solid var(--accent-ink); padding-inline-start: 14px; margin-bottom: 28px }
       .legal-notice a { color: var(--accent-ink); text-decoration: underline }
-      .legal-desc { font-size: 17px; line-height: 1.7; color: var(--ink-2); font-weight: 300; margin-bottom: 48px; white-space: pre-line }
-      .legal-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .legal-card h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+      .legal-desc { font-size: 19px; line-height: 1.55; color: var(--ink-2); margin-bottom: 40px; white-space: pre-line }
+      .legal-card { background: var(--bg-2); border-radius: 22px; padding: 32px 34px; margin-bottom: 16px }
+      .legal-card h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 12px }
       .legal-card p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
-      .legal-contact { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 13px; color: var(--ink-3) }
+      .legal-contact { margin-top: 48px; text-align: center; font-size: 14px; color: var(--ink-3) }
       .legal-contact a { color: var(--accent-ink); transition: color .2s }
       .legal-contact a:hover { color: var(--ink) }
       :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
-      @media (max-width: 768px) { .legal-page { padding: 100px 20px 60px } }`;
+      @media (max-width: 734px) { .legal-page { padding: 56px 20px 60px } .legal-card { padding: 24px 22px } }`;
 
 /** Heading markup: documents ship it as HTML; some as two parts. */
 function legalHeading(doc) {
@@ -820,10 +800,7 @@ function legalPage(key, lang) {
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    ${fontHead(lang)}
     <style>
 ${LEGAL_STYLE}
     </style>
@@ -899,14 +876,14 @@ ${sections}
 /* Press kit exists in Turkish and English only, like the legal pages; it reuses
    their page frame and adds two blocks of its own — the fact table and the
    asset list (the only place on the site that links raw media files). */
-const PRESS_STYLE = `      .press-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 32px; margin-bottom: 20px }
-      .press-block h2 { font-family: var(--serif); font-size: 22px; color: var(--accent-ink); margin-bottom: 14px; font-weight: 400 }
+const PRESS_STYLE = `      .press-block { background: var(--bg-2); border-radius: 22px; padding: 32px 34px; margin-bottom: 16px }
+      .press-block h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 12px }
       .press-block p { font-size: 15px; line-height: 1.7; color: var(--ink-2); white-space: pre-line }
       .press-boiler { margin-bottom: 18px }
       .press-boiler:last-child { margin-bottom: 0 }
-      .press-boiler span { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px }
+      .press-boiler span { display: block; font-size: 13px; font-weight: 600; color: var(--ink-3); margin-bottom: 4px }
       .press-facts { width: 100%; border-collapse: collapse; font-size: 15px }
-      .press-facts td { padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); line-height: 1.6; vertical-align: top }
+      .press-facts td { padding: 10px 0; border-bottom: 1px solid var(--rule-2); color: var(--ink-2); line-height: 1.6; vertical-align: top }
       .press-facts tr:last-child td { border-bottom: 0 }
       .press-facts td:first-child { width: 38%; color: var(--ink-3); padding-inline-end: 16px }
       .press-video { width: 100%; max-width: 320px; display: block; margin: 0 auto; border-radius: 22px; background: #0b1020 }
@@ -963,10 +940,7 @@ function pressPage(lang) {
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles.css">
-    ${fontHead(lang)}
     <style>
 ${LEGAL_STYLE}
 ${PRESS_STYLE}
