@@ -351,7 +351,7 @@ const FEATURES = {
     { n: "Canlı Gökyüzü", d: "Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre." },
     { n: "Nafile Vakitleri", d: "İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı." },
     { n: "Manuel Konum", d: "Konumu elle seç ya da seyahatte kendiliğinden güncellensin." },
-    { n: "Apple Watch", d: "Namaz vakitleri, canlı kıble, 13 komplikasyon." },
+    { n: "Apple Watch", d: "Namaz vakitleri, canlı kıble, 14 komplikasyon." },
     { n: "Mac Uygulaması", d: "Menü çubuğunda geri sayım, klavye kısayolları, iCloud senkron." },
     { n: "iPad", d: "Aynı uygulama büyük ekranda; kayıtların iCloud ile senkron." },
     { n: "25 Dil", d: "Arapça, Urduca, Farsça ve Uygurca'da sağdan sola arayüz." },
@@ -404,7 +404,7 @@ const FEATURES = {
     { n: "Live Sky", d: "Real stars and the moon on the day arc — for where you are, right now." },
     { n: "Voluntary Prayer Times", d: "Ishraq, Duha, Awwabin and the parts of the night; optional." },
     { n: "Manual Location", d: "Set your location by hand, or let it follow you as you travel." },
-    { n: "Apple Watch", d: "Prayer times, live qibla, 13 complications." },
+    { n: "Apple Watch", d: "Prayer times, live qibla, 14 complications." },
     { n: "Mac App", d: "Menu bar countdown, keyboard shortcuts, iCloud sync." },
     { n: "iPad", d: "The same app on a bigger screen; your records sync over iCloud." },
     { n: "25 Languages", d: "Right-to-left interface in Arabic, Urdu, Persian and Uyghur." },
@@ -486,7 +486,7 @@ const SHOWCASE = {
 const COMPARE = {
   tr: [
     { f: "Reklam", o: "Dini içeriğin yanında casino ve uygunsuz reklamlar.", v: "Tamamen reklamsız. İsteğe bağlısı da yok: Vakit hiç reklam göstermez." },
-    { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz, kıble, Kur'an metni, zikir — hepsi çevrimdışı." },
+    { f: "Çevrimdışı", o: "Temel özellikler internet gerektirir.", v: "Namaz vakitleri, bildirimler, kıble ve zikir ilk açılıştan internetsiz; Kur'an ve hadis bir kez indirildikten sonra." },
     { f: "Kilit Ekranı", o: "Widget'lar iOS güncellemelerinde bozulur.", v: "Live Activity ve Dynamic Island; iOS 17'den itibaren StandBy." },
     { f: "Doğruluk", o: "Yaz/kış saati hataları, sınırlı hesaplama.", v: "12 yöntem, zaman dilimi bilinci, seyahat algılama." },
     { f: "Cihazlar", o: "Yalnız telefon; saat ve masaüstü yok ya da yarım.", v: "iPhone, iPad ve Mac iCloud ile; Apple Watch iPhone üzerinden senkron." },
@@ -495,7 +495,7 @@ const COMPARE = {
   ],
   en: [
     { f: "Advertising", o: "Casino and inappropriate ads, shown beside religious content.", v: "Completely ad-free. Not even optional ones: Vakit shows no ads at all." },
-    { f: "Offline", o: "Core features require an internet connection.", v: "Prayer, qibla, Quran text, dhikr — all work offline." },
+    { f: "Offline", o: "Core features require an internet connection.", v: "Prayer times, notifications, qibla and dhikr work offline from the first launch; the Quran and hadith after a one-time download." },
     { f: "Lock Screen", o: "Widgets break between iOS updates.", v: "Live Activity and Dynamic Island; StandBy from iOS 17." },
     { f: "Accuracy", o: "DST errors, limited calculation methods.", v: "12 methods, timezone-aware, travel-detecting." },
     { f: "Devices", o: "Phone only; watch and desktop missing or half-built.", v: "iPhone, iPad and Mac over iCloud; Apple Watch syncs through iPhone." },
@@ -541,7 +541,7 @@ const REVIEWS = {
 // this one array — the two can no longer drift apart.
 const FAQ = {
   tr: [
-    { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumuna göre telefonunda hesaplanır. Kur'an metni, kıble, zikir ve tüm temel araçlar tamamen çevrimdışı çalışır." },
+    { q: "İnternet bağlantısı olmadan çalışır mı?", a: "Evet. Namaz vakitleri konumuna göre telefonunda hesaplanır; bildirimler, widget'lar, kıble, zikir, tesbihat ve esmâ ilk açılıştan internetsiz çalışır. Kur'an metni ve meali, hadis koleksiyonları ve tefsir ise bir kez indirilir, sonra internetsiz kullanılır." },
     { q: "Uygulamayı açmasam bile bildirimler gelir mi?", a: "Evet. Bildirimler cihazında yerel olarak planlanır. Uygulama kapalıyken bile bildirim alırsın. 'Her Zaman' konum izni verirsen, seyahat sonrası vakitler sessizce yeniden hesaplanır." },
     { q: "Her şey gerçekten ücretsiz mi?", a: "Evet. Uygulamanın tamamı ücretsiz: abonelik, paywall ya da 'premium' yok, hiçbir özellik kilitli değil. Destek olmak isteyen bağış yapabilir; bağış hiçbir şeyin kilidini açmaz — zaten kilitli bir şey yok." },
     { q: "Namaz vakitleri nereden geliyor?", a: "Bir sunucudan çekilmiyor. Vakit bunları cihazında, seçtiğin yönteme (12 yöntem mevcut) ve konumuna göre hesaplar." },
@@ -550,14 +550,14 @@ const FAQ = {
     { q: "Ezan sesini seçebiliyor muyum?", a: "Evet. Ezan seçeneğinde her vakit kendi makamında okunur: sabah saba, öğle uşşak, ikindi rast, akşam segah, yatsı hicaz. İstersen her vakte ayrı bir bildirim sesi de seçebilirsin. Ezanlar uygulamayla birlikte geldiği için çalmaları internet gerektirmez." },
     { q: "Sabah namazı için alarm var mı?", a: "Evet. Sabah namazını henüz kılmadıysan güneş doğmadan önce çalan bir alarm kurabilirsin; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır, önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var." },
     { q: "Cuma hutbesi nereden geliyor?", a: "Diyanet'in o hafta yayımladığı hutbe uygulamaya düşer; okuyabilir, sesli kaydını dinleyebilir ve çevrimdışı okumak için indirebilirsin. Hutbe Diyanet'in yayını olduğu için bu bölüm, hesaplama yöntemi Diyanet olan kullanıcılarda görünür." },
-    { q: "Kur'an özelliğinde neler var?", a: "Tüm 114 sure, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet, sesli meal ve hatim takibi. Metin, meal ve tefsir çevrimdışı; tilavet, indirdiğin sure ya da cüzlerde internetsiz çalışır. Meali cihazının kendi sesi okur — tek başına ya da her ayette tilavetin ardından; bunun için indirme de internet de gerekmez." },
+    { q: "Kur'an özelliğinde neler var?", a: "Tüm 114 sure, kelime kelime analiz, Diyanet tefsiri, geleneksel Mushaf görünümü, sesli tilavet, sesli meal ve hatim takibi. Metin ve meal, tefsir ve Medine mushafı bir kez indirildikten sonra internetsiz çalışır; tilavet de indirdiğin sure ya da cüzlerde internetsiz. Meali cihazının kendi sesi okur — tek başına ya da her ayette tilavetin ardından; bunun için ayrıca ses indirmen ya da internet gerekmez." },
     { q: "İbadet takibi nasıl çalışır?", a: "Activity Ring tarzı bir görünüm namazlarını, Kur'an okumanı ve zikirlerini kaydeder. Ömür kazanı vakit bazlı takip edebilir, borcunu kıldıkça eritebilirsin. Süreklilik ve istatistikler nazikçe gösterilir — suçlandırma yok." },
-    { q: "Hangi widget'lar var?", a: "Namaz vakitleri, geri sayım, günün ayeti, günün esması, Hicri takvim, mübarek günler, ay fazı ve ibadet serileri için 25 widget. Ana ekranda, kilit ekranında ve iOS 17'den itibaren StandBy'da; 20'si Mac masaüstünde de." },
-    { q: "Apple Watch uygulaması var mı?", a: "Evet. Apple Watch uygulaması namaz vakitlerini (geri sayım + liste), canlı kıble pusulasını ve 13 komplikasyonu destekler. iPhone ile birlikte çalışır — ayrı kurulum yok." },
+    { q: "Hangi widget'lar var?", a: "Namaz vakitleri, geri sayım, günün ayeti, günün esması, Hicri takvim, mübarek günler, ay fazı ve ibadet serileri için 26 widget. Ana ekranda, kilit ekranında ve iOS 17'den itibaren StandBy'da; 20'si Mac masaüstünde de." },
+    { q: "Apple Watch uygulaması var mı?", a: "Evet. Apple Watch uygulaması namaz vakitlerini (geri sayım + liste), canlı kıble pusulasını ve 14 komplikasyonu destekler. iPhone ile birlikte çalışır — ayrı kurulum yok." },
     { q: "Verilerim nerede saklanıyor?", a: "Kayıtlarının kendisi — kaza defteri, hatim, yer imi listesi, okuma geçmişi, favori camiler — yalnızca cihazında ve senin özel iCloud alanında durur. Sunucuya kullanım istatistikleri gider: işaretlediğin namaz, günlük ibadet sayıların, kaydettiğin âyetin ya da hadisin numarası gibi. Ayrıca zikir listen ve uygulama içinde aradığın kelimeler gider; aradığını bulamadığın yerleri görüp aramayı düzeltebilelim diye. Zekât tutarların ve koordinatların hiçbir zaman gönderilmez; konum olarak yalnız ülke, il ve ilçe gider. Hepsi ad, e-posta ya da telefon içermeyen kalıcı bir kullanıcı koduna bağlıdır — takma kimlik, anonim değil. Ayrıntısı gizlilik politikasında." },
   ],
   en: [
-    { q: "Does it work without internet?", a: "Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline." },
+    { q: "Does it work without internet?", a: "Yes. Prayer times are computed on your phone from your location, and notifications, widgets, the qibla, dhikr, tasbihat and the Names of Allah work offline from the first launch. The Quran text and translation, the hadith collections and tafsir are downloaded once, then work without internet." },
     { q: "Will notifications arrive if I never open the app?", a: "Yes. They're scheduled locally. You'll receive them even when the app is closed. If you grant 'Always' location access, Vakit quietly recalculates after you travel." },
     { q: "Is everything really free?", a: "Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate; a donation unlocks nothing, because nothing is locked." },
     { q: "Where do prayer times come from?", a: "They're not fetched from a server. Vakit calculates them on your device using the method you pick — 12 are available — and your local coordinates." },
@@ -566,10 +566,10 @@ const FAQ = {
     { q: "Can I choose the adhan sound?", a: "Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer. The recordings ship with the app, so playing them needs no connection." },
     { q: "Is there an alarm for Fajr?", a: "Yes. You can set an alarm that rings before sunrise if you haven't prayed Fajr yet; mark the prayer as done and it stays silent. On iOS 26 it is a real alarm that breaks through silent mode; on earlier versions it arrives as a notification. There's also a suhoor alarm for Ramadan, every day, or the recommended fasting days." },
     { q: "Where does the Friday sermon come from?", a: "The khutbah Diyanet publishes each week lands in the app; you can read it, listen to the audio recording, and download it for offline reading. Because it is Diyanet's publication, this section appears for users whose calculation method is Diyanet." },
-    { q: "What's in the Quran feature?", a: "All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text, translation and tafsir work offline; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no download and no internet needed." },
+    { q: "What's in the Quran feature?", a: "All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text and translation, tafsir and the Madinah mushaf work offline once downloaded; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no extra audio download and no internet needed." },
     { q: "How does worship tracking work?", a: "An Activity Ring-style view logs your prayers, Quran reading, and dhikr. You can also track a lifetime of missed prayers (qada) by time slot and clear the debt as you pray them. Streaks and gentle statistics help you keep going, without guilt." },
-    { q: "Which widgets exist?", a: "25 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen and Lock Screen, in StandBy from iOS 17, and 20 of them on the Mac desktop." },
-    { q: "Is there an Apple Watch app?", a: "Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 13 complications. It works alongside iPhone — no separate setup." },
+    { q: "Which widgets exist?", a: "26 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen and Lock Screen, in StandBy from iOS 17, and 20 of them on the Mac desktop." },
+    { q: "Is there an Apple Watch app?", a: "Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 14 complications. It works alongside iPhone — no separate setup." },
     { q: "Where is my data stored?", a: "Your records themselves — qada ledger, khatm, bookmark list, reading history, favourite mosques — stay on your device and in your own private iCloud. What reaches the server is usage statistics: the prayer you mark, your daily worship counts, the number of an ayah or hadith you save. Your dhikr list and the words you search for inside the app go too — so we can see where search failed you and fix it. Your zakat amounts and coordinates are never sent; for location, only country, city and district go. All of it is tied to a persistent user code with no name, email or phone — a pseudonym, not anonymous. Details are in the privacy policy." },
   ],
 };

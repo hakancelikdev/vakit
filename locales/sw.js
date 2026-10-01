@@ -66,7 +66,7 @@ module.exports = {
     { n: "Anga Hai", d: "Nyota halisi na mwezi kwenye upinde wa siku — kwa mahali ulipo, sasa hivi." },
     { n: "Nyakati za Swala za Sunna", d: "Ishraki, Dhuha, Awwabin na sehemu za usiku; kwa hiari." },
     { n: "Mahali kwa Mkono", d: "Weka mahali ulipo mwenyewe, au iache ikufuate unaposafiri." },
-    { n: "Apple Watch", d: "Nyakati za swala, kibla hai, vipengele 13 vya saa." },
+    { n: "Apple Watch", d: "Nyakati za swala, kibla hai, vipengele 14 vya saa." },
     { n: "Programu ya Mac", d: "Hesabu ya muda kwenye upau wa menyu, njia za mkato za kibodi, usawazishaji wa iCloud." },
     { n: "iPad", d: "Programu ileile kwenye skrini kubwa; kumbukumbu zako husawazishwa kupitia iCloud." },
     { n: "Lugha 25", d: "Kiolesura cha kulia kwenda kushoto kwa Kiarabu, Kiurdu, Kiajemi na Kiuyghur." },
@@ -130,7 +130,7 @@ module.exports = {
 
   COMPARE: [
     { f: "Matangazo", o: "Matangazo ya kasino na yasiyofaa, kando ya maudhui ya dini.", v: "Bila matangazo kabisa. Isipokuwa jambo moja tu: ukitaka kuiunga mkono Vakit, unaweza kuchagua kutazama tangazo." },
-    { f: "Bila intaneti", o: "Vipengele vya msingi vinahitaji intaneti.", v: "Swala, kibla, maandishi ya Qurani, dhikri — vyote bila intaneti." },
+    { f: "Bila intaneti", o: "Vipengele vya msingi vinahitaji intaneti.", v: "Nyakati za swala, arifa, kibla na dhikri hufanya kazi bila intaneti tangu mara ya kwanza; Qurani na hadithi baada ya kupakuliwa mara moja." },
     { f: "Skrini ya Kufuli", o: "Wijeti huharibika kila iOS inaposasishwa.", v: "Shughuli Hai na Dynamic Island; StandBy kuanzia iOS 17." },
     { f: "Usahihi", o: "Makosa ya saa za majira ya joto, mbinu chache za kukokotoa.", v: "Mbinu 12, huzingatia saa za eneo, hutambua unaposafiri." },
     { f: "Vifaa", o: "Simu pekee; saa na kompyuta hazipo au zimekamilika nusu.", v: "iPhone, iPad na Mac kupitia iCloud; Apple Watch husawazishwa kupitia iPhone." },
@@ -154,7 +154,7 @@ module.exports = {
   ],
 
   FAQ: [
-    { q: "Inafanya kazi bila intaneti?", a: "Ndiyo. Nyakati za swala zinakokotolewa kwenye simu yako kulingana na mahali ulipo. Maandishi ya Qurani, kibla, dhikri na kila zana ya msingi hufanya kazi kikamilifu bila intaneti." },
+    { q: "Inafanya kazi bila intaneti?", a: "Ndiyo. Nyakati za swala zinakokotolewa kwenye simu yako kulingana na mahali ulipo; arifa, wijeti, kibla, dhikri, tasbihi na Asmaul-Husna hufanya kazi bila intaneti tangu unapoifungua mara ya kwanza. Maandishi na tarjuma ya Qurani, mikusanyiko ya hadithi na tafsiri hupakuliwa mara moja, kisha hufanya kazi bila intaneti." },
     { q: "Nitapata arifa hata nisipofungua programu?", a: "Ndiyo. Arifa hupangwa kwenye kifaa chenyewe, kwa hiyo utazipata hata programu ikiwa imefungwa. Ukiruhusu mahali pako “Kila Wakati”, Vakit hukokotoa upya kimya kimya baada ya kusafiri." },
     { q: "Je, kila kitu ni bila malipo kweli?", a: "Ndiyo. Programu yote ni bila malipo: hakuna usajili, hakuna kuta za malipo, hakuna kiwango cha “premium”, na hakuna kilichofungwa. Ukitaka kuiunga mkono, unaweza kutoa mchango au kuchagua kutazama tangazo; hakuna kimojawapo kinachofungua chochote." },
     { q: "Nyakati za swala zinatoka wapi?", a: "Hazichukuliwi kutoka kwenye seva. Vakit huzikokotoa kwenye kifaa chako kwa mbinu unayochagua — zipo 12 — na viwianishi vya mahali ulipo." },
@@ -163,10 +163,10 @@ module.exports = {
     { q: "Naweza kuchagua sauti ya adhana?", a: "Ndiyo. Ukichagua adhana, kila swala husomwa kwa makamu yake: Alfajiri saba, Adhuhuri ussak, Alasiri rast, Magharibi segah, Isha hicaz. Unaweza pia kuweka sauti tofauti ya arifa kwa kila swala. Rekodi zimo ndani ya programu, kwa hiyo kuzicheza hakuhitaji intaneti." },
     { q: "Kuna kengele ya Alfajiri?", a: "Ndiyo. Unaweza kuweka kengele inayolia kabla ya macheo ikiwa bado hujaswali Alfajiri; ukiweka alama kwamba umeswali, hailii. Kwenye iOS 26 ni kengele halisi inayopenya hali ya kimya; kwenye matoleo ya awali huja kama arifa. Pia kuna kengele ya daku kwa Ramadhani, kila siku, au siku za funga za sunna." },
     { q: "Khutba ya Ijumaa inatoka wapi?", a: "Khutba ambayo Diyanet (Idara ya Mambo ya Dini ya Uturuki) huchapisha kila wiki huingia kwenye programu; unaweza kuisoma, kusikiliza rekodi yake ya sauti, na kuipakua uisome bila intaneti. Kwa kuwa ni chapisho la Diyanet, sehemu hii huonekana kwa watumiaji ambao mbinu yao ya kukokotoa ni Diyanet." },
-    { q: "Kipengele cha Qurani kina nini?", a: "Sura zote 114, uchambuzi wa neno kwa neno, tafsiri ya Diyanet, mwonekano wa Msahafu wa jadi, kisomo cha sauti na ufuatiliaji wa hitima. Maandishi, tarjuma na tafsiri hufanya kazi bila intaneti; kisomo husikika bila intaneti kwa sura au juzuu unazopakua." },
+    { q: "Kipengele cha Qurani kina nini?", a: "Sura zote 114, uchambuzi wa neno kwa neno, tafsiri ya Diyanet, mwonekano wa Msahafu wa jadi, kisomo cha sauti na ufuatiliaji wa hitima. Maandishi, tarjuma, tafsiri na Msahafu wa Madina hufanya kazi bila intaneti baada ya kupakuliwa mara moja; kisomo husikika bila intaneti kwa sura au juzuu unazopakua." },
     { q: "Ufuatiliaji wa ibada hufanyaje kazi?", a: "Mwonekano wa mtindo wa Pete za Shughuli hurekodi swala zako, usomaji wa Qurani na dhikri. Unaweza pia kufuatilia swala zilizokupita maishani (kadhaa) kwa kila wakati na kupunguza deni kadiri unavyozilipa. Mifululizo na takwimu za upole hukusaidia kuendelea, bila kukuhukumu." },
-    { q: "Kuna wijeti zipi?", a: "Wijeti 25 za nyakati za swala, hesabu ya muda, aya ya siku, jina la siku, kalenda ya Hijria, siku za baraka, hali ya mwezi na mifululizo ya ibada. Zinapatikana kwenye Skrini ya Nyumbani na Skrini ya Kufuli, kwenye StandBy kuanzia iOS 17, na 20 kati yake kwenye eneo-kazi la Mac." },
-    { q: "Kuna programu ya Apple Watch?", a: "Ndiyo. Programu ya Apple Watch huonyesha nyakati za swala (hesabu ya muda + orodha), dira ya kibla hai, na vipengele 13 vya saa. Hufanya kazi pamoja na iPhone — hakuna mpangilio tofauti." },
+    { q: "Kuna wijeti zipi?", a: "Wijeti 26 za nyakati za swala, hesabu ya muda, aya ya siku, jina la siku, kalenda ya Hijria, siku za baraka, hali ya mwezi na mifululizo ya ibada. Zinapatikana kwenye Skrini ya Nyumbani na Skrini ya Kufuli, kwenye StandBy kuanzia iOS 17, na 20 kati yake kwenye eneo-kazi la Mac." },
+    { q: "Kuna programu ya Apple Watch?", a: "Ndiyo. Programu ya Apple Watch huonyesha nyakati za swala (hesabu ya muda + orodha), dira ya kibla hai, na vipengele 14 vya saa. Hufanya kazi pamoja na iPhone — hakuna mpangilio tofauti." },
     { q: "Data yangu inahifadhiwa wapi?", a: "Kumbukumbu zenyewe — daftari la kadhaa, hitima, orodha ya alamisho, historia ya usomaji, misikiti unayoipenda — hukaa kwenye kifaa chako na kwenye iCloud yako binafsi. Kinachofika kwenye seva ni takwimu za matumizi: swala unayoiwekea alama, idadi ya ibada zako za kila siku, namba ya aya au hadithi unayoihifadhi. Orodha yako ya dhikri na maneno unayotafuta ndani ya programu nayo huenda — ili tuone mahali ambapo utafutaji haukukusaidia na kuurekebisha. Kiasi cha zaka yako na viwianishi vyako havitumwi kamwe; kuhusu mahali, huenda nchi, mji na wilaya pekee. Vyote vimefungamanishwa na msimbo wa kudumu wa mtumiaji usio na jina, barua pepe wala simu — jina bandia, si kutojulikana kabisa. Maelezo zaidi yako katika sera ya faragha." },
   ],
 };

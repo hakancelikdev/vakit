@@ -31,7 +31,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 - **Live Sky** — Real stars and the moon on the day arc — for where you are, right now.
 - **Voluntary Prayer Times** — Ishraq, Duha, Awwabin and the parts of the night; optional.
 - **Manual Location** — Set your location by hand, or let it follow you as you travel.
-- **Apple Watch** — Prayer times, live qibla, 13 complications.
+- **Apple Watch** — Prayer times, live qibla, 14 complications.
 - **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **25 Languages** — Right-to-left interface in Arabic, Urdu, Persian and Uyghur.
@@ -83,7 +83,7 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 
 ### Does it work without internet?
 
-Yes. Prayer times are computed on your phone from your location. The Quran text, qibla, dhikr and every core tool work fully offline.
+Yes. Prayer times are computed on your phone from your location, and notifications, widgets, the qibla, dhikr, tasbihat and the Names of Allah work offline from the first launch. The Quran text and translation, the hadith collections and tafsir are downloaded once, then work without internet.
 
 ### Will notifications arrive if I never open the app?
 
@@ -119,7 +119,7 @@ The khutbah Diyanet publishes each week lands in the app; you can read it, liste
 
 ### What's in the Quran feature?
 
-All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text, translation and tafsir work offline; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no download and no internet needed.
+All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text and translation, tafsir and the Madinah mushaf work offline once downloaded; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no extra audio download and no internet needed.
 
 ### How does worship tracking work?
 
@@ -127,11 +127,11 @@ An Activity Ring-style view logs your prayers, Quran reading, and dhikr. You can
 
 ### Which widgets exist?
 
-25 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen and Lock Screen, in StandBy from iOS 17, and 20 of them on the Mac desktop.
+26 widgets covering prayer times, countdown, verse of the day, name of the day, Hijri calendar, holy days, moon phase, and worship streaks. Available on the Home Screen and Lock Screen, in StandBy from iOS 17, and 20 of them on the Mac desktop.
 
 ### Is there an Apple Watch app?
 
-Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 13 complications. It works alongside iPhone — no separate setup.
+Yes. The Apple Watch app shows prayer times (countdown + list), a live qibla compass, and 14 complications. It works alongside iPhone — no separate setup.
 
 ### Where is my data stored?
 
