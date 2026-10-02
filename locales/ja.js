@@ -14,7 +14,7 @@ module.exports = {
     pillars: "無料 · 広告なし · オフライン対応 · アカウント不要",
     h1a: "礼拝のアプリを、", h1b: "あるべき", h1c: "かたちで。",
     heroSub: "1日5回の礼拝に寄り添う静かな相棒——クルアーン、キブラ、ズィクル、そしてあなたの日々を大切にするカレンダーとともに。必要のないときはそっと姿を消し、必要なときにはそばにいます。",
-    downloadCta: "App Store からダウンロード", watchTour: "ツアーを見る →",
+    downloadCta: "App Store からダウンロード", seeScreens: "画面を見る →",
     p1: "App Store · {ratingCount}件の評価", p3: "計算方法", p4: "表示言語",
     nextPrayer: "次の礼拝 · あと",
     "sc-head": "必要なものはすべて、余計なものは何も",

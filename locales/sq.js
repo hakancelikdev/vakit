@@ -14,7 +14,7 @@ module.exports = {
     pillars: "Falas · Pa reklama · Pa internet · Pa llogari",
     h1a: "Aplikacioni i ibadetit,", h1b: "ashtu si", h1c: "duhet të jetë.",
     heroSub: "Një shoqërues i qetë për pesë namazet e ditës — me Kuran, kiblë, dhikër dhe një kalendar që nderon ditët tuaja. I ndërtuar që të mënjanohet kur nuk ju duhet dhe të jetë pranë jush kur ju duhet.",
-    downloadCta: "Shkarkojeni nga App Store", watchTour: "Nisni turin →",
+    downloadCta: "Shkarkojeni nga App Store", seeScreens: "Shihni ekranet →",
     p1: "App Store · {ratingCount} vlerësime", p3: "Metoda llogaritjeje", p4: "Gjuhë të ndërfaqes",
     nextPrayer: "Namazi i radhës · pas",
     "sc-head": "Gjithçka, asgjë më tepër",

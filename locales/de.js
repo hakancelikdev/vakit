@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Kostenlos · Werbefrei · Offline · Ohne Konto",
     h1a: "Die App für deine Ibada,", h1b: "so, wie sie", h1c: "sein sollte.",
     heroSub: "Ein stiller Begleiter für die fünf täglichen Gebete – mit Koran, Qibla, Dhikr und einem Kalender, der deine Tage würdigt. Er tritt zurück, wenn du ihn nicht brauchst, und ist da, wenn du ihn brauchst.",
-    downloadCta: "Laden im App Store", watchTour: "Tour starten →",
+    downloadCta: "Laden im App Store", seeScreens: "Bildschirme ansehen →",
     p1: "App Store · {ratingCount} Bewertungen", p3: "Berechnungsmethoden", p4: "Sprachen der Oberfläche",
     nextPrayer: "Nächstes · in",
     "sc-head": "Alles, nichts zu viel",

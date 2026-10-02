@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Pulsuz · Reklamsız · Oflayn · Hesab tələb etmir",
     h1a: "İbadət tətbiqi", h1b: "necə olmalıdırsa,", h1c: "elə.",
     heroSub: "Beş vaxt namaz üçün sakit bir yoldaş — Quran, qiblə, zikr və günlərinizə hörmət edən bir təqvimlə. Ehtiyac olmayanda kənara çəkilir; ehtiyac olanda yanınızdadır.",
-    downloadCta: "App Store-dan yükləyin", watchTour: "Tura başla →",
+    downloadCta: "App Store-dan yükləyin", seeScreens: "Ekranlara bax →",
     p1: "App Store · {ratingCount} qiymət", p3: "Hesablama üsulu", p4: "İnterfeys dili",
     nextPrayer: "Növbəti · qalıb",
     "sc-head": "Hər şey var, artığı yox",

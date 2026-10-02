@@ -14,7 +14,7 @@ module.exports = {
     pillars: "Bila malipo · Bila matangazo · Bila intaneti · Bila akaunti",
     h1a: "Programu ya ibada,", h1b: "kama", h1c: "inavyopaswa kuwa.",
     heroSub: "Mwenzi mtulivu wa swala tano za kila siku — pamoja na Qurani, kibla, dhikri, na kalenda inayoheshimu siku zako. Imejengwa kujiweka kando usipoihitaji, na kuwa karibu unapoihitaji.",
-    downloadCta: "Pakua kwenye App Store", watchTour: "Anza ziara →",
+    downloadCta: "Pakua kwenye App Store", seeScreens: "Tazama skrini →",
     p1: "App Store · tathmini {ratingCount}", p3: "Mbinu za kukokotoa", p4: "Lugha za kiolesura",
     nextPrayer: "Inayofuata · baada ya",
     "sc-head": "Kila kitu, bila ziada",

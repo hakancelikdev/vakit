@@ -14,7 +14,7 @@ module.exports = {
     pillars: "免费 · 无广告 · 离线可用 · 无需账户",
     h1a: "功修应用，", h1b: "本该有的", h1c: "样子。",
     heroSub: "一位安静陪伴五番礼拜的伙伴——还有古兰经、朝向、记主，以及一本珍视你每一天的日历。不需要时悄然隐去，需要时一直都在。",
-    downloadCta: "在 App Store 下载", watchTour: "开始导览 →",
+    downloadCta: "在 App Store 下载", seeScreens: "查看界面 →",
     p1: "App Store · {ratingCount} 个评分", p3: "计算方法", p4: "种界面语言",
     nextPrayer: "下一次 · 还有",
     "sc-head": "应有尽有，别无多余",

@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Gratis · Tanpa iklan · Offline · Tanpa akun",
     h1a: "Aplikasi ibadah,", h1b: "sebagaimana", h1c: "mestinya.",
     heroSub: "Teman yang tenang untuk salat lima waktu — dengan Al-Qur'an, kiblat, zikir, dan kalender yang memuliakan hari-harimu. Menepi saat tidak kamu perlukan. Hadir saat kamu butuh.",
-    downloadCta: "Unduh di App Store", watchTour: "Mulai tur →",
+    downloadCta: "Unduh di App Store", seeScreens: "Lihat layarnya →",
     p1: "App Store · {ratingCount} rating", p3: "Metode perhitungan", p4: "Bahasa antarmuka",
     nextPrayer: "Berikutnya · dalam",
     "sc-head": "Semua yang perlu, tanpa yang berlebih",

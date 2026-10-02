@@ -14,7 +14,7 @@ module.exports = {
     pillars: "Gratuito · Sem anúncios · Offline · Sem conta",
     h1a: "A app de adoração,", h1b: "como", h1c: "deve ser.",
     heroSub: "Uma companhia discreta para as cinco orações diárias — com Alcorão, Qibla, dhikr e um calendário que honra os teus dias. Feita para desaparecer quando não precisas dela e para estar lá quando precisas.",
-    downloadCta: "Descarregar na App Store", watchTour: "Fazer a visita →",
+    downloadCta: "Descarregar na App Store", seeScreens: "Ver os ecrãs →",
     p1: "App Store · {ratingCount} classificações", p3: "Métodos de cálculo", p4: "Idiomas da interface",
     nextPrayer: "Próxima · daqui a",
     "sc-head": "Tudo, nada a mais",

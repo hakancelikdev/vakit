@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Gratis · Zonder advertenties · Offline · Zonder account",
     h1a: "De app voor je ibada,", h1b: "zoals die", h1c: "hoort te zijn.",
     heroSub: "Een rustige metgezel bij de vijf dagelijkse gebeden – met Koran, qibla, dhikr en een kalender die je dagen eert. Hij stapt opzij als je hem niet nodig hebt, en staat klaar als je hem wel nodig hebt.",
-    downloadCta: "Download in de App Store", watchTour: "Bekijk de rondleiding →",
+    downloadCta: "Download in de App Store", seeScreens: "Bekijk de schermen →",
     p1: "App Store · {ratingCount} beoordelingen", p3: "Berekeningsmethoden", p4: "Talen van de app",
     nextPrayer: "Volgende · over",
     "sc-head": "Alles, niets te veel",

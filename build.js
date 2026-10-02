@@ -708,7 +708,7 @@ ${jsonLd(faqSchema(lang))}
         ${APPLE_LOGO}
         <span>${esc(t(lang, "downloadCta"))}</span>
       </a>
-      <a href="#showcase" class="btn-ghost">${esc(t(lang, "watchTour"))}</a>
+      <a href="#showcase" class="btn-ghost">${esc(t(lang, "seeScreens"))}</a>
     </div>
     <!-- The four promises, as small print under the button. -->
     <ul class="hero-pillars">

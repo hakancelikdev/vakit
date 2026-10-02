@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Gratis · Uden reklamer · Offline · Ingen konto",
     h1a: "Appen til din ibada,", h1b: "som den", h1c: "bør være.",
     heroSub: "En stille ledsager til de fem daglige bønner – med Koranen, qibla, dhikr og en kalender, der ærer dine dage. Den træder til side, når du ikke har brug for den, og er der, når du har.",
-    downloadCta: "Hent i App Store", watchTour: "Tag rundturen →",
+    downloadCta: "Hent i App Store", seeScreens: "Se skærmene →",
     p1: "App Store · {ratingCount} bedømmelser", p3: "Beregningsmetoder", p4: "Sprog i appen",
     nextPrayer: "Næste · om",
     "sc-head": "Alt, intet overflødigt",

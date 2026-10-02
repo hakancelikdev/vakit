@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Gratis · Senza pubblicità · Offline · Senza account",
     h1a: "L'app per l'adorazione,", h1b: "come", h1c: "dev'essere.",
     heroSub: "Una compagna discreta per le cinque preghiere quotidiane, con Corano, Qibla, dhikr e un calendario che dà valore ai tuoi giorni. Fatta per sparire quando non ti serve, e per esserci quando ti serve.",
-    downloadCta: "Scarica su App Store", watchTour: "Fai il tour →",
+    downloadCta: "Scarica su App Store", seeScreens: "Guarda le schermate →",
     p1: "App Store · {ratingCount} valutazioni", p3: "Metodi di calcolo", p4: "Lingue dell'interfaccia",
     nextPrayer: "Prossima · tra",
     "sc-head": "Tutto, niente di superfluo",

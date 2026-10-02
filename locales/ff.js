@@ -13,7 +13,7 @@ module.exports = {
     pillars: "Meere · Publisite alaa · Enterneet alaa · Konte alaa",
     h1a: "Jaaɓnirgal dewal,", h1b: "no foti wonirde,", h1c: "non tigi.",
     heroSub: "Gonɗiɗo deƴƴuɗo ngam juulɗe jowi ɗe ñalawma — wondude e Alkur'aana, alqibla, jikru e kalandiriye teddinoowo balɗe mon. Ina suuɗoo so haajaaka; ina woni ton so haajaama.",
-    downloadCta: "Jippin e App Store", watchTour: "Fuɗɗo yiylaade →",
+    downloadCta: "Jippin e App Store", seeScreens: "Yiy kuutorɗe ɗee →",
     p1: "App Store · notaaji {ratingCount}", p3: "Laabi hesaabo", p4: "Ɗemɗe jaaɓnirgal",
     nextPrayer: "Juulde aroore · ko heddii",
     "sc-head": "Kala huunde, alaa ko ɓeydaa",
