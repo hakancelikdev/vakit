@@ -82,7 +82,7 @@ for pair in tr:tr en:en-US; do
 done
 
 # Apple Watch: Turkish and English captures only, like the Mac.
-WATCH="prayer-dial qibla dhikr complications"
+WATCH="prayer-dial qibla complications"
 for pair in tr:tr en:en-US; do
   lang="${pair%%:*}"; locale="${pair##*:}"
   src="$RAW/$locale/_watch"; dst="$OUT/screenshots/$lang/watch"

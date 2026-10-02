@@ -187,4 +187,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-09-26
+Last updated: 2026-10-03
