@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         t: "5. 外部サービス",
-        b: "Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：\n\n• Apple iCloud / CloudKit – 利用者データの同期（ご自身のプライベートなiCloud領域内）。\n• Apple MapKit – 近くのモスク、地図、経路（位置情報はAppleに送信されます）。\n• Firebase Crashlytics（Google）– 身元情報を含まないクラッシュ報告（スタックトレース、端末の機種、iOS/macOSのバージョン）。\n• Firebase Remote Config（Google）– 機能フラグと段階的な公開（端末からデータを読み取りません）。\n• Apple StoreKit 2 – 任意の寄付（アプリ内課金）。支払い情報はAppleが処理し、Vakitがカード情報を目にすることはありません。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）– 祝福の日と新バージョンのお知らせ。お知らせはトピック単位で一斉配信され、個人ごとの配信は行いません。\n• トルコ宗務庁（dinhizmetleri.diyanet.gov.tr）– 金曜の説教の本文と音声。\n• Vakitのサーバー（ドイツ、フランクフルト）– 利用統計とズィクルの一覧。身元情報を含まない利用者コードに結びついています。通読、しおり、目標、読書の記録がここに送信されることはありません。\n\n注：Firebase Analyticsは「使用していません」。広告識別子（IDFA）は収集しません。\n\nGoogleのプライバシーポリシー：policies.google.com/privacy",
+        b: "Vakitは次のサービスを限られた目的で使用しています。いずれも個人の身元とは結びついていません：\n\n• Apple iCloud / CloudKit – 利用者データの同期（ご自身のプライベートなiCloud領域内）。\n• Apple MapKit – 近くのモスク、地図、経路（位置情報はAppleに送信されます）。\n• Firebase Crashlytics（Google）– 身元情報を含まないクラッシュ報告（スタックトレース、端末の機種、iOS/macOSのバージョン）。\n• Firebase Remote Config（Google）– 機能フラグと段階的な公開（端末からデータを読み取りません）。\n• Apple StoreKit 2 – 任意の寄付（アプリ内課金）。支払い情報はAppleが処理し、Vakitがカード情報を目にすることはありません。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）– 祝福の日と新バージョンのお知らせ。お知らせはトピック単位で一斉配信され、個人ごとの配信は行いません。\n• トルコ宗務庁（dinhizmetleri.diyanet.gov.tr）– 金曜の説教の本文と音声。\n• Vakitのサーバー（ドイツ、ニュルンベルク）– 利用統計とズィクルの一覧。身元情報を含まない利用者コードに結びついています。通読、しおり、目標、読書の記録がここに送信されることはありません。\n\n注：Firebase Analyticsは「使用していません」。広告識別子（IDFA）は収集しません。\n\nGoogleのプライバシーポリシー：policies.google.com/privacy",
       },
       {
         t: "6. 広告",

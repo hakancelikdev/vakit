@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         t: "5. 第三方服务",
-        b: "Vakit 出于有限的目的使用以下服务。它们都不与你的个人身份关联：\n\n• Apple iCloud / CloudKit——用户数据同步（在你私人的 iCloud 空间内）。\n• Apple MapKit——附近的清真寺、地图与路线（位置会发送给 Apple）。\n• Firebase Crashlytics（Google）——不含身份数据的崩溃报告（堆栈跟踪、设备型号、iOS/macOS 版本）。\n• Firebase Remote Config（Google）——功能开关与逐步发布（不读取设备上的数据）。\n• Apple StoreKit 2——自愿捐助（应用内购买）。付款信息由 Apple 处理；Vakit 从不接触卡片数据。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）——吉庆之日与版本公告。公告按主题广播；不针对个人推送。\n• 土耳其宗教事务部（dinhizmetleri.diyanet.gov.tr）——主麻讲道的文本与音频。\n• Vakit 服务器（德国，法兰克福）——使用统计和你的记主列表，关联到一个不含任何身份信息的用户代码。你的通读、书签、目标和阅读记录从不发送到那里。\n\n注意：我们完全不使用 Firebase Analytics；不收集广告标识符（IDFA）。\n\nGoogle 的隐私政策：policies.google.com/privacy",
+        b: "Vakit 出于有限的目的使用以下服务。它们都不与你的个人身份关联：\n\n• Apple iCloud / CloudKit——用户数据同步（在你私人的 iCloud 空间内）。\n• Apple MapKit——附近的清真寺、地图与路线（位置会发送给 Apple）。\n• Firebase Crashlytics（Google）——不含身份数据的崩溃报告（堆栈跟踪、设备型号、iOS/macOS 版本）。\n• Firebase Remote Config（Google）——功能开关与逐步发布（不读取设备上的数据）。\n• Apple StoreKit 2——自愿捐助（应用内购买）。付款信息由 Apple 处理；Vakit 从不接触卡片数据。\n• Firebase Cloud Messaging（Google）+ Apple Push Notification（APNs）——吉庆之日与版本公告。公告按主题广播；不针对个人推送。\n• 土耳其宗教事务部（dinhizmetleri.diyanet.gov.tr）——主麻讲道的文本与音频。\n• Vakit 服务器（德国，纽伦堡）——使用统计和你的记主列表，关联到一个不含任何身份信息的用户代码。你的通读、书签、目标和阅读记录从不发送到那里。\n\n注意：我们完全不使用 Firebase Analytics；不收集广告标识符（IDFA）。\n\nGoogle 的隐私政策：policies.google.com/privacy",
       },
       {
         t: "6. 广告",
