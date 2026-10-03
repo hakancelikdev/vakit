@@ -6,7 +6,7 @@
 module.exports = {
   "tr": {
     "title": "Kullanım <em>Şartları</em>",
-    "desc": "Son güncelleme: 10 Eylül 2026 — Sürüm 1.7.4\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
+    "desc": "Son güncelleme: 3 Ekim 2026 — Sürüm 2.0.0\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
     "sections": [
       {
         "t": "1. Şartların Kabulü",
@@ -17,8 +17,8 @@ module.exports = {
         "b": "Vakit, namaz vakitleri, kıble yönü, Kur'an, hadis, zikirmatik, namaz/abdest rehberi, hatim ve ibadet takibi, Cuma hutbesi, yakındaki camiler ve dini gün takvimi gibi ibadet araçları sunan ücretsiz bir uygulamadır. iOS 16.4+ ve macOS 13+ üzerinde çalışır; watchOS 9+ için companion bir Apple Watch uygulaması da içerir."
       },
       {
-        "t": "3. Reklamlar",
-        "b": "Vakit reklam göstermez. Uygulamanın tek gelir kaynağı, kullanıcıların isteğe bağlı bağışlarıdır."
+        "t": "3. Ücretsiz Kullanım ve İsteğe Bağlı Bağışlar",
+        "b": "Vakit'in tüm özellikleri ücretsizdir; kilitli özellik veya ayrıcalıklı kademe yoktur.\n\nGeliştiriciyi desteklemek isteyen kullanıcılar, \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde tek seferlik ya da aylık isteğe bağlı bağış yapabilir. Bu bağışlar:\n• Apple In-App Purchase (StoreKit 2) ile işlenir; ödeme App Store hesabınızdan alınır.\n• Hiçbir özelliğin kilidini açmaz; bağış karşılığında ek özellik satın alınmaz.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com).\n• Apple'ın geçerli ödeme şartları ve App Store kuralları geçerlidir.\n\nAylık destek (otomatik yenilenen abonelik):\n• Aylık destek, her ay otomatik olarak yenilenen bir aboneliktir; ödeme, satın alma onaylandığında App Store hesabınızdan alınır.\n• Dönem bitmeden en az 24 saat önce iptal edilmezse abonelik aynı tutarla yenilenir ve yenileme ücreti, dönem bitmeden önceki 24 saat içinde hesabınızdan alınır.\n• Aboneliği App Store hesap ayarlarınızdan (iPhone'da Ayarlar > adınız > Abonelikler) dilediğiniz an yönetebilir veya iptal edebilirsiniz; iptal, içinde bulunulan dönemin sonunda geçerli olur.\n• Geri ödeme talepleri yalnızca Apple üzerinden yapılabilir (reportaproblem.apple.com)."
       },
       {
         "t": "4. Reklamlar",
@@ -70,7 +70,7 @@ module.exports = {
   },
   "en": {
     "title": "Terms of <em>Use</em>",
-    "desc": "Last updated: 10 September 2026 — Version 1.7.4\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
+    "desc": "Last updated: 3 October 2026 — Version 2.0.0\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
     "sections": [
       {
         "t": "1. Acceptance of Terms",
@@ -81,8 +81,8 @@ module.exports = {
         "b": "Vakit is a free app providing worship tools such as prayer times, qibla direction, Quran, hadith, a dhikr counter, prayer/ablution guides, khatm and worship tracking, the Friday sermon, nearby mosques, and a religious-day calendar. It runs on iOS 16.4+ and macOS 13+, and ships a companion Apple Watch app for watchOS 9+."
       },
       {
-        "t": "3. Advertising",
-        "b": "Vakit shows no ads. The app's only source of income is optional donations from users."
+        "t": "3. Free Use and Optional Donations",
+        "b": "All of Vakit's features are free; there are no locked features and no premium tier.\n\nUsers who wish to support the developer can make optional one-time or monthly donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These donations:\n• Are processed via Apple In-App Purchase (StoreKit 2); payment is charged to your App Store account.\n• Unlock no features; a donation does not buy any additional feature.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com).\n• Apple's payment terms and App Store rules apply.\n\nMonthly support (auto-renewing subscription):\n• Monthly support is a subscription that renews automatically every month; payment is charged to your App Store account when you confirm the purchase.\n• Unless cancelled at least 24 hours before the end of the current period, the subscription renews at the same amount, and your account is charged for renewal within the 24 hours before the period ends.\n• You can manage or cancel the subscription anytime in your App Store account settings (on iPhone: Settings > your name > Subscriptions); cancellation takes effect at the end of the current period.\n• Refund requests can only be submitted through Apple (reportaproblem.apple.com)."
       },
       {
         "t": "4. Advertising",

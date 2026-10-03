@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. Donasi (pembelian dalam aplikasi)",
-        b: "Vakit gratis. Untuk mendukung pengembang, kamu bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Transaksi ini:\n• Diproses oleh Apple StoreKit 2; data pembayaran (kartu, IBAN, Apple Pay) hanya dikirim ke Apple.\n• Vakit tidak pernah melihat atau menyimpan metode pembayaran maupun data keuanganmu.\n• Pengembalian dana hanya bisa diajukan lewat Apple (reportaproblem.apple.com).",
+        b: "Vakit gratis. Untuk mendukung pengembang, kamu bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Transaksi ini:\n• Diproses oleh Apple StoreKit 2; data pembayaran (kartu, IBAN, Apple Pay) hanya dikirim ke Apple.\n• Vakit tidak pernah melihat atau menyimpan metode pembayaran maupun data keuanganmu.\n• Pengembalian dana hanya bisa diajukan lewat Apple (reportaproblem.apple.com).\n• Dukungan bulanan adalah langganan yang diperpanjang otomatis; dikelola dan dibatalkan kapan saja di pengaturan akun App Store-mu (diperpanjang kecuali dibatalkan paling lambat 24 jam sebelum periode berakhir).",
       },
       {
         t: "8. Masa penyimpanan data",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit adalah aplikasi gratis yang menyediakan alat bantu ibadah seperti jadwal salat, arah kiblat, Al-Qur'an, hadis, penghitung zikir, panduan salat/wudu, catatan khatam dan ibadah, khotbah Jumat, masjid terdekat, dan kalender hari keagamaan. Aplikasi ini berjalan di iOS 16.4+ dan macOS 13+, serta menyertakan aplikasi pendamping Apple Watch untuk watchOS 9+.",
       },
       {
-        t: "3. Penggunaan gratis & donasi opsional",
-        b: "Semua fitur inti Vakit gratis. Aplikasi ini tidak menampilkan iklan (kecuali iklan video berhadiah pada “Mode Sedekah” yang opsional, yang dimulai sendiri oleh pengguna).\n\nPengguna yang ingin mendukung pengembang bisa berdonasi secara opsional dengan pilihan nominal mulai ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Donasi ini:\n• Diproses lewat Apple In-App Purchase (StoreKit 2).\n• Merupakan produk habis pakai (consumable); donasi tidak membuka fitur tambahan atau langganan.\n• Permintaan pengembalian dana hanya bisa diajukan lewat Apple (reportaproblem.apple.com).\n• Ketentuan pembayaran Apple dan aturan App Store berlaku.",
+        t: "3. Penggunaan gratis dan donasi opsional",
+        b: "Vakit sepenuhnya gratis. Semua fiturnya (jadwal salat, kompas kiblat, Al-Qur'an, hadis, penghitung zikir, panduan salat/wudu, catatan khatam dan ibadah, masjid terdekat, widget, dan aktivitas langsung) tersedia untuk semua orang tanpa biaya. Tidak ada dinding berbayar atau tingkat premium. Aplikasi ini sama sekali tidak menampilkan iklan.\n\nLayar «Jaga Vakit tetap hidup» menawarkan cara-cara yang sepenuhnya sukarela untuk mendukung pengembangnya; tidak ada yang wajib. Tersedia donasi opsional ₺10 hingga ₺10.000 lewat pembelian dalam aplikasi Apple (StoreKit 2); donasi inilah satu-satunya sumber pemasukan aplikasi. Donasi bisa sekali saja atau bulanan; donasi bulanan adalah langganan yang diperpanjang otomatis dan bisa kamu batalkan kapan saja di pengaturan App Store (paling lambat 24 jam sebelum periode berakhir). Tidak ada donasi yang membuka fitur apa pun, karena tidak ada yang dikunci di Vakit. Permintaan pengembalian dana hanya bisa diajukan ke Apple (reportaproblem.apple.com).\n\nDukungan bulanan adalah langganan yang diperpanjang otomatis setiap bulan melalui akun App Store-mu, kecuali kamu membatalkannya di pengaturan App Store paling lambat 24 jam sebelum periode berakhir.",
       },
       {
         t: "4. Iklan",

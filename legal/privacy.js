@@ -6,7 +6,7 @@
 module.exports = {
   "tr": {
     "title": "Gizlilik <em>Politikası</em>",
-    "desc": "Son güncelleme: 10 Eylül 2026 — Sürüm 1.7.4\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kişisel kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar tamamen cihazınızda hesaplanır. Hatim, yer imi, hedef ve favori cami kayıtlarınız cihazınızda kalır ve yalnızca sizin Apple iCloud alanınızda senkronlanır — sunucularımıza gönderilmez. Zikir listeniz bunun istisnasıdır: uygulamayı geliştirebilmek için kullanım istatistikleriyle birlikte sunucularımıza da gönderilir (ayrıntı: 1. bölüm). Sunucuya giden her şey kimliğinizi içermeyen kalıcı bir kullanıcı koduna bağlıdır.",
+    "desc": "Son güncelleme: 3 Ekim 2026 — Sürüm 2.0.0\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kişisel kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar tamamen cihazınızda hesaplanır. Hatim, yer imi, hedef ve favori cami kayıtlarınız cihazınızda kalır ve yalnızca sizin Apple iCloud alanınızda senkronlanır — sunucularımıza gönderilmez. Zikir listeniz bunun istisnasıdır: uygulamayı geliştirebilmek için kullanım istatistikleriyle birlikte sunucularımıza da gönderilir (ayrıntı: 1. bölüm). Sunucuya giden her şey kimliğinizi içermeyen kalıcı bir kullanıcı koduna bağlıdır.",
     "sections": [
       {
         "t": "1. Topladığımız Veriler",
@@ -25,8 +25,8 @@ module.exports = {
         "b": "Vakit, watchOS 9+ üzerinde companion uygulama içerir. Watch tarafında:\n• Konum izniniz Watch'a ayrı verilir; iPhone'da Vakit yüklüyse konum WatchConnectivity ile iPhone'dan alınır, yoksa Watch GPS'i kullanılır.\n• Pusula sensörü kıble yönü için cihazda işlenir; sunucuya gönderilmez.\n• Sağlık (HealthKit), aktivite veya kalp atışı verisi okumayız.\n• Bildirimler iOS notification mirroring ile iPhone'dan iletilir; Watch yalnız çalışıyorsa kendi yerel bildirimlerini planlar.\n\nMac tarafında (macOS 13+):\n• Mac uygulaması iPhone uygulamasının aynısıdır; verileriniz yine cihazda saklanır ve sizin özel iCloud alanınızda senkronlanır.\n• Mac'te pusula donanımı bulunmadığı için canlı kıble pusulası yoktur; yön ve mesafe konumdan hesaplanarak yazıyla gösterilir.\n• Konum, Mac'te GPS yerine Wi-Fi tabanlı konum servisinden gelir ve yine sunucuya gönderilmez.\n• Bildirim izni ve bildirim ayarları her cihazda ayrıdır; Mac'te yaptığınız değişiklik iPhone'unuzu etkilemez."
       },
       {
-        "t": "5. Reklamlar",
-        "b": "Vakit reklam göstermez. Uygulamanın tek gelir kaynağı, kullanıcıların isteğe bağlı bağışlarıdır."
+        "t": "5. Üçüncü Taraf Hizmetler",
+        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbiri kişisel kimlik bilginize bağlı değildir:\n\n• Apple iCloud / CloudKit – Kullanıcı verisi senkronizasyonu (sizin özel iCloud alanınızda).\n• Apple MapKit – Yakındaki camiler, harita ve yol tarifi (konum Apple'a gönderilir).\n• Firebase Crashlytics (Google) – Kimlik bilgisi içermeyen çökme raporları (stack trace, cihaz modeli, iOS/macOS sürümü).\n• Firebase Remote Config (Google) – Özellik bayrakları ve kademeli rollout (cihazdan veri okumaz).\n• Apple StoreKit 2 – İsteğe bağlı bağışlar (tek seferlik ve aylık). Ödeme bilgileriniz Apple üzerinden işlenir; Vakit kart bilgisi görmez.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Mübarek gün ve sürüm duyuruları. Duyurular topic bazlı toplu gönderilir; kişiye özel hedefleme yapılmaz.\n• Diyanet İşleri Başkanlığı (dinhizmetleri.diyanet.gov.tr) – Cuma Hutbesi metni ve ses kaydı.\n• Vakit sunucusu (Almanya, Nürnberg) – Kullanım istatistikleri ve zikir listeniz; kimliğinizi içermeyen bir kullanıcı koduna bağlıdır. Hatim, yer imi, hedef ve okuma kayıtlarınız buraya gönderilmez.\n\nNot: Firebase Analytics KULLANILMAZ; reklam tanımlayıcısı (IDFA) toplanmaz.\n\nGoogle gizlilik politikası: policies.google.com/privacy"
       },
       {
         "t": "6. Reklamlar",
@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         "t": "7. Bağışlar (In-App Purchase)",
-        "b": "Vakit ücretsizdir. Geliştiriciyi desteklemek için \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilirsiniz. Bu işlemler:\n• Apple StoreKit 2 ile işlenir; ödeme bilgileriniz (kart, IBAN, Apple Pay) yalnızca Apple'a iletilir.\n• Vakit, ödeme yöntemi veya finansal bilgilerinizi görmez ve saklamaz.\n• Bağışların geri ödemesi yalnızca Apple üzerinden talep edilebilir (reportaproblem.apple.com)."
+        "b": "Vakit ücretsizdir. Geliştiriciyi desteklemek için \"Vakit'i Yaşat\" ekranından ₺10'dan ₺10.000'e uzanan kademelerde tek seferlik ya da aylık isteğe bağlı bağış yapabilirsiniz. Bu işlemler:\n• Apple StoreKit 2 ile işlenir; ödeme bilgileriniz (kart, IBAN, Apple Pay) yalnızca Apple'a iletilir.\n• Vakit, ödeme yöntemi veya finansal bilgilerinizi görmez ve saklamaz.\n• Aylık destek otomatik yenilenen bir aboneliktir; App Store hesap ayarlarınızdan yönetilir ve istediğiniz an iptal edilir (dönem bitmeden en az 24 saat önce iptal edilmezse yenilenir).\n• Bağışların geri ödemesi yalnızca Apple üzerinden talep edilebilir (reportaproblem.apple.com)."
       },
       {
         "t": "8. Veri Saklama Süresi",
@@ -70,7 +70,7 @@ module.exports = {
   },
   "en": {
     "title": "Privacy <em>Policy</em>",
-    "desc": "Last updated: 10 September 2026 — Version 1.7.4\n\nVakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Your khatm progress, bookmarks, goals and favourite mosques stay on your device and sync only within your own Apple iCloud account — they are never sent to our servers. Your dhikr list is the exception: it is sent to our servers along with usage statistics so we can improve the app (see section 1). Everything sent to our servers is tied to a persistent user code containing no identifying information.",
+    "desc": "Last updated: 3 October 2026 — Version 2.0.0\n\nVakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Your khatm progress, bookmarks, goals and favourite mosques stay on your device and sync only within your own Apple iCloud account — they are never sent to our servers. Your dhikr list is the exception: it is sent to our servers along with usage statistics so we can improve the app (see section 1). Everything sent to our servers is tied to a persistent user code containing no identifying information.",
     "sections": [
       {
         "t": "1. Data We Collect",
@@ -89,8 +89,8 @@ module.exports = {
         "b": "Vakit ships a companion app on watchOS 9+. On the Watch:\n• Location permission is granted separately on the Watch; if Vakit is installed on iPhone, location is received via WatchConnectivity, otherwise Watch GPS is used.\n• Compass sensor is processed on-device for qibla; never sent to a server.\n• We do not read Health (HealthKit), activity or heart-rate data.\n• Notifications are mirrored from iPhone via iOS notification mirroring; if the Watch runs alone, it schedules its own local notifications.\n\nOn the Mac (macOS 13+):\n• The Mac app is the same app as on iPhone; your data is still stored on the device and synced within your own private iCloud.\n• Macs have no compass hardware, so there is no live qibla compass; the bearing and distance are computed from your location and shown as text.\n• Location on Mac comes from Wi-Fi based location services rather than GPS, and is likewise never sent to our servers.\n• Notification permission and notification settings are per-device; changing them on Mac does not affect your iPhone."
       },
       {
-        "t": "5. Advertising",
-        "b": "Vakit shows no ads. The app's only source of income is optional donations from users."
+        "t": "5. Third-Party Services",
+        "b": "Vakit uses the following services for limited purposes. None are tied to your personal identity:\n\n• Apple iCloud / CloudKit – User data sync (in your private iCloud space).\n• Apple MapKit – Nearby mosques, map and directions (location is sent to Apple).\n• Firebase Crashlytics (Google) – Crash reports with no identity data (stack trace, device model, iOS/macOS version).\n• Firebase Remote Config (Google) – Feature flags and gradual rollout (does not read data from the device).\n• Apple StoreKit 2 – Optional donations (one-time and monthly). Payment details are processed by Apple; Vakit never sees card data.\n• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Blessed-day and release announcements. Announcements are broadcast by topic; there is no per-person targeting.\n• Diyanet (dinhizmetleri.diyanet.gov.tr) – Friday sermon text and audio.\n• Vakit server (Germany, Nuremberg) – Usage statistics and your dhikr list, tied to a user code that contains no identifying information. Your khatm, bookmark, goal and reading records are never sent there.\n\nNote: Firebase Analytics is NOT used; the Advertising Identifier (IDFA) is not collected.\n\nGoogle's privacy policy: policies.google.com/privacy"
       },
       {
         "t": "6. Advertising",
@@ -98,7 +98,7 @@ module.exports = {
       },
       {
         "t": "7. Donations (In-App Purchase)",
-        "b": "Vakit is free. To support the developer you can make optional donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These transactions:\n• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.\n• Vakit never sees or stores your payment method or financial details.\n• Refunds can only be requested through Apple (reportaproblem.apple.com)."
+        "b": "Vakit is free. To support the developer you can make optional one-time or monthly donations in tiers from ₺10 to ₺10,000 from the \"Keep Vakit Alive\" screen. These transactions:\n• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.\n• Vakit never sees or stores your payment method or financial details.\n• Monthly support is an auto-renewing subscription, managed and cancelled anytime in your App Store account settings (it renews unless cancelled at least 24 hours before the period ends).\n• Refunds can only be requested through Apple (reportaproblem.apple.com)."
       },
       {
         "t": "8. Data Retention",

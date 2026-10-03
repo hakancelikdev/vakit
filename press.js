@@ -62,7 +62,7 @@ module.exports = {
       },
       {
         t: "Geliştirici",
-        b: "Vakit'i Hakan Çelik tek başına yazıyor; yatırım almadı, abonelik satmıyor. Uygulamanın amacı günlük ibadeti kolaylaştırmak: doğru vakit, hızlı açılış, kullanıcıyı bunaltmayan bir arayüz ve satılmayan bir veri.",
+        b: "Vakit'i Hakan Çelik tek başına yazıyor; yatırım almadı, hiçbir özelliği satmıyor. Uygulamanın amacı günlük ibadeti kolaylaştırmak: doğru vakit, hızlı açılış, kullanıcıyı bunaltmayan bir arayüz ve satılmayan bir veri.",
       },
     ],
     videoTitle: "Tanıtım turu",
@@ -119,7 +119,7 @@ module.exports = {
       },
       {
         t: "Developer",
-        b: "Vakit is written solo by Hakan Çelik — no funding, no subscription. The goal is a calmer daily practice: the right time, a fast launch, an interface that does not shout, and data that is never sold.",
+        b: "Vakit is written solo by Hakan Çelik — no funding, no paywall. The goal is a calmer daily practice: the right time, a fast launch, an interface that does not shout, and data that is never sold.",
       },
     ],
     videoTitle: "Walkthrough",

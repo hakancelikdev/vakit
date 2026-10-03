@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         t: "7. Dokke (In-App Purchase)",
-        b: "Vakit ko meere. Ngam wallude gollanoowo oo, on mbaawi okkude dokke suɓaaɗe e darajaaji gila ₺10 haa ₺10,000 e hello \"Wuurnu Vakit\". Ɗee njoɓdi:\n• Ina gollee e Apple StoreKit 2; keɓe njoɓdi (kart, IBAN, Apple Pay) ina neldee tan to Apple.\n• Vakit yiyataa, mooftataa haa abada laawol njoɓdi walla keɓe kaalis mon.\n• Ruttugol kaalis ina naamnee tan e Apple (reportaproblem.apple.com).",
+        b: "Vakit ko meere. Ngam wallude gollanoowo oo, on mbaawi okkude dokke suɓaaɗe e darajaaji gila ₺10 haa ₺10,000 e hello \"Wuurnu Vakit\". Ɗee njoɓdi:\n• Ina gollee e Apple StoreKit 2; keɓe njoɓdi (kart, IBAN, Apple Pay) ina neldee tan to Apple.\n• Vakit yiyataa, mooftataa haa abada laawol njoɓdi walla keɓe kaalis mon.\n• Ruttugol kaalis ina naamnee tan e Apple (reportaproblem.apple.com).\n• Wallude lewru kala ko winnditeede kesitinteende e hoore mum; toppitortee ɗum, haaytortee ɗum sahaa fof e teelte konte maa App Store (ina kesitinee si haaytaaka ko famɗi fof waktuuji 24 ado sahaa oo gasude).",
       },
       {
         t: "8. Mooftugol keɓe",
@@ -86,8 +86,8 @@ module.exports = {
         b: "Vakit ko jaaɓnirgal meere hokkoowo kuutorɗe dewal wano waktuuji juulde, senngo alqibla, Alkur'aana, hadiisa, limoowo jikru, peeje juulde/salligi, jokkugol khatma e dewal, Khutba Aljumaa, jumaaji ɓadiiɗi e kalandiriye ñalɗi diine. Ina golloo e iOS 16.4+ e macOS 13+, ina jogii kadi jaaɓnirgal companion Apple Watch ngam watchOS 9+.",
       },
       {
-        t: "3. Jeeyle",
-        b: "Vakit hollirtaa jeeyle. Ko sadakaaji suɓaaɗi kuutinooɓe woni ɗum tan ngalu jaaɓnirgal ngal.",
+        t: "3. Kuutorgol meere e sadakaaji suɓaaɗi",
+        b: "Vakit ko meere haa timmi. Kuule fof (waktuuji juulde, kompaas alqibla, Alkur'aana, hadiisa, limoowo jikru, peeje salligi/juulde, jokkugol khatma, jumaaji ɓadiiɗi, widget e Live Activity) ina okkee kuutorooɓe fof meere. Alaa paywall, alaa daraja premium. Jaaɓnirgal ngal hollirtaa jeeyle.\n\nHello 'Wuurnu Vakit' ina hollita peeje suɓaaɗe haa timmi ngam wallude cosɗo oo; alaa e majje ko waɗɗii. Sadakaaji suɓaaɗi gila ₺10 haa ₺10,000 ina waawi waɗeede e Apple In-App Purchase (StoreKit 2). Sadaka ina waawi wonde wootere walla lewru kala; sadaka lewru kala ko abonemaa kesitinteengo e hoore mum, mo a waawi haaytude saa'i fof e teelte App Store (ko famɗi fof waktuuji 24 ado sahaa oo gasude). Alaa sadaka uddittoowa kuule, sabu alaa ko uddaa e Vakit. Naamndeeji ruttugol kaalis sadaka ina neldee tan e Apple (reportaproblem.apple.com).\n\nWallude lewru kala ko winnditeede kesitinteende e hoore mum lewru kala e konte maa App Store, si a haaytaani ɗum e teelte App Store ko famɗi fof waktuuji 24 ado sahaa oo gasude.",
       },
       {
         t: "4. Jeeyle",

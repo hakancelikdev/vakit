@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. İanələr (tətbiqdaxili alış)",
-        b: "Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilərsiniz. Bu əməliyyatlar:\n• Apple StoreKit 2 ilə emal olunur; ödəniş məlumatlarınız (kart, IBAN, Apple Pay) yalnız Apple-a ötürülür.\n• Vakit ödəniş üsulunuzu və ya maliyyə məlumatlarınızı heç vaxt görmür və saxlamır.\n• İanələrin geri qaytarılması yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).",
+        b: "Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilərsiniz. Bu əməliyyatlar:\n• Apple StoreKit 2 ilə emal olunur; ödəniş məlumatlarınız (kart, IBAN, Apple Pay) yalnız Apple-a ötürülür.\n• Vakit ödəniş üsulunuzu və ya maliyyə məlumatlarınızı heç vaxt görmür və saxlamır.\n• İanələrin geri qaytarılması yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).\n• Aylıq dəstək avtomatik yenilənən abunəlikdir; App Store hesab ayarlarından idarə olunur və istədiyiniz an ləğv edilir (dövr bitməzdən ən azı 24 saat əvvəl ləğv edilməsə yenilənir).",
       },
       {
         t: "8. Məlumatların saxlanma müddəti",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit namaz vaxtları, qiblə istiqaməti, Quran, hədis, zikr sayğacı, namaz/dəstəmaz bələdçiləri, xətm və ibadət izləmə, cümə xütbəsi, yaxındakı məscidlər və dini günlər təqvimi kimi ibadət alətləri təqdim edən pulsuz tətbiqdir. iOS 16.4+ və macOS 13+ üzərində işləyir, watchOS 9+ üçün Apple Watch müşayiətçi tətbiqini də ehtiva edir.",
       },
       {
-        t: "3. Pulsuz istifadə və könüllü ianələr",
-        b: "Vakit-in bütün əsas funksiyaları pulsuzdur. Tətbiq reklam göstərmir (istifadəçinin özünün başlatdığı, könüllü «Sədəqə rejimi»ndəki mükafatlı video reklamlar istisna olmaqla).\n\nTərtibatçını dəstəkləmək istəyən istifadəçilər «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilər. Bu ianələr:\n• Apple In-App Purchase (StoreKit 2) ilə emal olunur.\n• İstehlak olunan (consumable) məhsullardır; ianə müqabilində əlavə funksiya və ya abunə açılmır.\n• Geri qaytarma tələbləri yalnız Apple üzərindən edilə bilər (reportaproblem.apple.com).\n• Apple-ın ödəniş şərtləri və App Store qaydaları tətbiq olunur.",
+        t: "3. Pulsuz istifadə və könüllü ianə",
+        b: "Vakit tamamilə pulsuzdur. Bütün funksiyalar (namaz vaxtları, qiblə kompası, Quran, hədis, zikr sayğacı, dəstəmaz/namaz bələdçiləri, xətm izləmə, yaxındakı məscidlər, vidjetlər və Live Activity) bütün istifadəçilər üçün ödənişsizdir. Ödəniş divarı və ya premium səviyyə yoxdur. Tətbiq heç reklam göstərmir.\n\n«Vakit-i Yaşat» ekranı tərtibatçını dəstəkləmək üçün tamamilə könüllü yollar təklif edir; heç biri məcburi deyil. Apple tətbiqdaxili alışla (StoreKit 2) ₺10-dan ₺10.000-ə qədər könüllü ianə edə bilərsiniz; tətbiqin yeganə gəlir mənbəyi bu ianələrdir. İanə birdəfəlik və ya aylıq ola bilər; aylıq ianə App Store ayarlarından istədiyiniz an ləğv edə biləcəyiniz (dövr bitməzdən ən azı 24 saat əvvəl) avtomatik yenilənən abunəlikdir. Heç bir ianə funksiya açmır, çünki Vakit-də bağlı heç nə yoxdur. İanələrin geri qaytarılması yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).\n\nAylıq dəstək abunəlikdir və hər ay App Store hesabınız vasitəsilə avtomatik yenilənir; dövr bitməzdən ən azı 24 saat əvvəl App Store ayarlarından ləğv etməsəniz davam edir.",
       },
       {
         t: "4. Reklamlar",

@@ -1301,7 +1301,8 @@ ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
 
 ## What makes it different
 
-- **Free, with no paywall.** No subscription, no "premium" tier, no locked features.
+- **Free, with no paywall.** No "premium" tier, no locked features. Optional one-time or
+  monthly donations unlock nothing.
 - **Completely ad-free.** No screen shows an ad, and there is no opt-in ad either.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 12 calculation methods — not fetched from a server. Quran, qibla,

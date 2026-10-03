@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         t: "7. Donativos (compra dentro da app)",
-        b: "O Vakit é gratuito. Para apoiares o programador, podes fazer donativos opcionais em escalões de ₺10 a ₺10.000 no ecrã «Mantém o Vakit vivo». Estas transações:\n• São processadas pelo Apple StoreKit 2; os dados de pagamento (cartão, IBAN, Apple Pay) são enviados apenas à Apple.\n• O Vakit nunca vê nem guarda o teu método de pagamento ou os teus dados financeiros.\n• Os reembolsos só podem ser pedidos através da Apple (reportaproblem.apple.com).",
+        b: "O Vakit é gratuito. Para apoiares o programador, podes fazer donativos opcionais em escalões de ₺10 a ₺10.000 no ecrã «Mantém o Vakit vivo». Estas transações:\n• São processadas pelo Apple StoreKit 2; os dados de pagamento (cartão, IBAN, Apple Pay) são enviados apenas à Apple.\n• O Vakit nunca vê nem guarda o teu método de pagamento ou os teus dados financeiros.\n• Os reembolsos só podem ser pedidos através da Apple (reportaproblem.apple.com).\n• O apoio mensal é uma assinatura de renovação automática; gere-se e cancela-se a qualquer momento nos ajustes da tua conta da App Store (renova-se a menos que seja cancelada pelo menos 24 horas antes do fim do período).",
       },
       {
         t: "8. Conservação dos dados",
@@ -87,8 +87,8 @@ module.exports = {
         b: "O Vakit é uma app gratuita com ferramentas de adoração como horários das orações, direção da Qibla, Alcorão, hadith, contador de dhikr, guias da oração e da ablução, registo de khatm e de adoração, sermão de sexta-feira, mesquitas perto e um calendário de dias religiosos. Funciona em iOS 16.4+ e macOS 13+, e inclui uma app complementar para Apple Watch com watchOS 9+.",
       },
       {
-        t: "3. Publicidade",
-        b: "O Vakit não mostra publicidade. A única fonte de receita da app são os donativos voluntários dos utilizadores.",
+        t: "3. Utilização gratuita e donativos opcionais",
+        b: "O Vakit é totalmente gratuito. Todas as funcionalidades (horários, bússola da Qibla, Alcorão, hadith, contador de dhikr, guias de ablução e da oração, registo de khatm, mesquitas perto, widgets e atividades ao vivo) estão disponíveis para todos sem qualquer custo. Não há paywall nem nível premium. A app não mostra publicidade.\n\nO ecrã «Mantém o Vakit vivo» oferece formas inteiramente opcionais de apoiar o programador; nenhuma é obrigatória. Estão disponíveis donativos opcionais de ₺10 a ₺10.000 através da compra dentro da app da Apple (StoreKit 2). Os donativos podem ser únicos ou mensais; o donativo mensal é uma subscrição com renovação automática que podes cancelar quando quiseres nos ajustes da App Store (pelo menos 24 horas antes do fim do período). Nenhum donativo desbloqueia funcionalidades, porque nada no Vakit está bloqueado. Os pedidos de reembolso só podem ser feitos junto da Apple (reportaproblem.apple.com).\n\nO apoio mensal é uma assinatura renovada automaticamente todos os meses pela tua conta da App Store, a menos que a canceles nos ajustes da App Store pelo menos 24 horas antes do fim do período.",
       },
       {
         t: "4. Publicidade",

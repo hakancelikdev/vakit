@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. Derma (belian dalam apl)",
-        b: "Vakit percuma. Untuk menyokong pembangun, anda boleh membuat derma pilihan dalam peringkat dari ₺10 hingga ₺10,000 pada skrin “Pastikan Vakit terus hidup”. Transaksi ini:\n• Diproses oleh Apple StoreKit 2; butiran pembayaran (kad, IBAN, Apple Pay) hanya dihantar ke Apple.\n• Vakit tidak pernah melihat atau menyimpan kaedah pembayaran mahupun butiran kewangan anda.\n• Bayaran balik hanya boleh dipohon melalui Apple (reportaproblem.apple.com).",
+        b: "Vakit percuma. Untuk menyokong pembangun, anda boleh membuat derma pilihan dalam peringkat dari ₺10 hingga ₺10,000 pada skrin “Pastikan Vakit terus hidup”. Transaksi ini:\n• Diproses oleh Apple StoreKit 2; butiran pembayaran (kad, IBAN, Apple Pay) hanya dihantar ke Apple.\n• Vakit tidak pernah melihat atau menyimpan kaedah pembayaran mahupun butiran kewangan anda.\n• Bayaran balik hanya boleh dipohon melalui Apple (reportaproblem.apple.com).\n• Sokongan bulanan ialah langganan yang diperbaharui secara automatik; diurus dan dibatalkan bila-bila masa dalam tetapan akaun App Store anda (diperbaharui melainkan dibatalkan sekurang-kurangnya 24 jam sebelum tempoh tamat).",
       },
       {
         t: "8. Tempoh penyimpanan data",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit ialah apl percuma yang menyediakan alat ibadah seperti waktu solat, arah kiblat, Al-Quran, hadis, pengira zikir, panduan solat/wuduk, catatan khatam dan ibadah, khutbah Jumaat, masjid berdekatan dan kalendar hari keagamaan. Apl ini berjalan pada iOS 16.4+ dan macOS 13+, serta menyertakan apl pendamping Apple Watch untuk watchOS 9+.",
       },
       {
-        t: "3. Penggunaan percuma & derma pilihan",
-        b: "Semua ciri teras Vakit adalah percuma. Apl ini tidak memaparkan iklan (kecuali iklan video berganjaran dalam “Mod Sedekah” yang pilihan, yang dimulakan sendiri oleh pengguna).\n\nPengguna yang ingin menyokong pembangun boleh membuat derma pilihan dalam peringkat dari ₺10 hingga ₺10,000 pada skrin “Pastikan Vakit terus hidup”. Derma ini:\n• Diproses melalui Apple In-App Purchase (StoreKit 2).\n• Merupakan produk boleh guna habis (consumable); derma tidak membuka ciri tambahan atau langganan.\n• Permintaan bayaran balik hanya boleh dibuat melalui Apple (reportaproblem.apple.com).\n• Terma pembayaran Apple dan peraturan App Store terpakai.",
+        t: "3. Penggunaan percuma dan derma pilihan",
+        b: "Vakit percuma sepenuhnya. Semua cirinya (waktu solat, kompas kiblat, Al-Quran, hadis, pengira zikir, panduan solat/wuduk, catatan khatam dan ibadah, masjid berdekatan, widget dan aktiviti langsung) tersedia untuk semua tanpa bayaran. Tiada dinding bayaran atau peringkat premium. Apl ini langsung tidak memaparkan iklan.\n\nSkrin «Pastikan Vakit terus hidup» menawarkan cara yang sepenuhnya sukarela untuk menyokong pembangunnya; tiada satu pun yang wajib. Terdapat derma pilihan ₺10 hingga ₺10,000 melalui belian dalam apl Apple (StoreKit 2); derma inilah satu-satunya sumber pendapatan apl. Derma boleh dibuat sekali sahaja atau bulanan; derma bulanan ialah langganan yang diperbaharui secara automatik dan boleh anda batalkan pada bila-bila masa dalam tetapan App Store (sekurang-kurangnya 24 jam sebelum tempoh tamat). Tiada derma yang membuka ciri kerana tiada apa-apa yang dikunci dalam Vakit. Permintaan bayaran balik hanya boleh dibuat kepada Apple (reportaproblem.apple.com).\n\nSokongan bulanan ialah langganan yang diperbaharui secara automatik setiap bulan melalui akaun App Store anda, melainkan anda membatalkannya dalam tetapan App Store sekurang-kurangnya 24 jam sebelum tempoh tamat.",
       },
       {
         t: "4. Iklan",

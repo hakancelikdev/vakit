@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         t: "7. Donationer (køb i app)",
-        b: "Vakit er gratis. For at støtte udvikleren kan du give valgfrie donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:\n• Behandles af Apple StoreKit 2; betalingsoplysninger (kort, IBAN, Apple Pay) sendes kun til Apple.\n• Vakit ser eller gemmer aldrig din betalingsmetode eller dine økonomiske oplysninger.\n• Refusion kan kun anmodes om via Apple (reportaproblem.apple.com).",
+        b: "Vakit er gratis. For at støtte udvikleren kan du give valgfrie donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:\n• Behandles af Apple StoreKit 2; betalingsoplysninger (kort, IBAN, Apple Pay) sendes kun til Apple.\n• Vakit ser eller gemmer aldrig din betalingsmetode eller dine økonomiske oplysninger.\n• Refusion kan kun anmodes om via Apple (reportaproblem.apple.com).\n• Månedlig støtte er et abonnement, der fornys automatisk; det administreres og opsiges når som helst i dine App Store-kontoindstillinger (det fornys, medmindre det opsiges mindst 24 timer før perioden slutter).",
       },
       {
         t: "8. Opbevaring af data",
@@ -87,8 +87,8 @@ module.exports = {
         b: "Vakit er en gratis app med værktøjer til tilbedelse som bedetider, Qibla-retning, Koran, hadith, dhikr-tæller, guider til bøn og wudu, khatm- og tilbedelsesregistrering, fredagsprædiken, moskeer i nærheden og en kalender med religiøse dage. Den kører på iOS 16.4+ og macOS 13+ og har en ledsagende Apple Watch-app til watchOS 9+.",
       },
       {
-        t: "3. Reklamer",
-        b: "Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.",
+        t: "3. Gratis brug og valgfri donationer",
+        b: "Vakit er helt gratis. Alle funktioner (bedetider, Qibla-kompas, Koran, hadith, dhikr-tæller, guider til wudu og bøn, khatm- og tilbedelsesregistrering, moskeer i nærheden, widgets og live-aktiviteter) er tilgængelige for alle uden betaling. Der er ingen betalingsmur og intet premium-niveau. Appen viser ikke reklamer.\n\nSkærmen «Hold Vakit i live» tilbyder helt frivillige måder at støtte udvikleren på; ingen af dem er påkrævet. Der kan gives valgfri donationer på ₺10 til ₺10.000 via Apples køb i app (StoreKit 2). Donationer kan være engangsbeløb eller månedlige; en månedlig donation er et abonnement, der fornys automatisk, og som du når som helst kan opsige i App Store-indstillingerne (mindst 24 timer før perioden slutter). Ingen donation låser en funktion op, for intet i Vakit er låst. Anmodninger om refusion kan kun sendes til Apple (reportaproblem.apple.com).\n\nMånedlig støtte er et abonnement, der fornys automatisk hver måned via din App Store-konto, medmindre du opsiger det i App Store-indstillingerne mindst 24 timer før perioden slutter.",
       },
       {
         t: "4. Reklamer",

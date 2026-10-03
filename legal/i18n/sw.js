@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. Michango (Manunuzi Ndani ya Programu)",
-        b: "Vakit ni bure. Ili kumsaidia msanidi, unaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:\n• Huchakatwa na Apple StoreKit 2; maelezo ya malipo (kadi, IBAN, Apple Pay) hutumwa kwa Apple pekee.\n• Vakit haioni wala haihifadhi kamwe njia yako ya malipo au taarifa zako za kifedha.\n• Marejesho ya fedha yanaweza kuombwa kupitia Apple pekee (reportaproblem.apple.com).",
+        b: "Vakit ni bure. Ili kumsaidia msanidi, unaweza kutoa michango ya hiari kwa viwango kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:\n• Huchakatwa na Apple StoreKit 2; maelezo ya malipo (kadi, IBAN, Apple Pay) hutumwa kwa Apple pekee.\n• Vakit haioni wala haihifadhi kamwe njia yako ya malipo au taarifa zako za kifedha.\n• Marejesho ya fedha yanaweza kuombwa kupitia Apple pekee (reportaproblem.apple.com).\n• Msaada wa kila mwezi ni usajili unaojisasisha wenyewe; unasimamiwa na kughairiwa wakati wowote katika mipangilio ya akaunti yako ya App Store (hujisasisha usipoughairi angalau saa 24 kabla kipindi hakijaisha).",
       },
       {
         t: "8. Muda wa Kuhifadhi Data",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit ni programu ya bure inayotoa zana za ibada kama nyakati za swala, mwelekeo wa kibla, Qurani, hadithi, kihesabu cha dhikri, miongozo ya swala/udhu, ufuatiliaji wa hitima na ibada, khutba ya Ijumaa, misikiti iliyo karibu na kalenda ya siku za dini. Inafanya kazi kwenye iOS 16.4+ na macOS 13+, na ina programu shirikishi ya Apple Watch kwa watchOS 9+.",
       },
       {
-        t: "3. Matangazo",
-        b: "Vakit haionyeshi matangazo. Chanzo pekee cha mapato ya programu ni michango ya hiari ya watumiaji.",
+        t: "3. Matumizi ya Bure na Michango ya Hiari",
+        b: "Vakit ni bure kabisa. Kila kipengele (nyakati za swala, dira ya kibla, Qurani, hadithi, kihesabu cha dhikri, mwongozo wa udhu/swala, ufuatiliaji wa hitima, misikiti ya karibu, wijeti na shughuli hai) kinapatikana kwa watumiaji wote bila malipo. Hakuna ukuta wa malipo wala kiwango cha premium. Programu haionyeshi matangazo.\n\nSkrini ya 'Iendeleze Vakit' inatoa njia za hiari kabisa za kumsaidia msanidi; hakuna hata moja inayolazimika. Michango ya hiari ya kuanzia ₺10 hadi ₺10,000 inapatikana kupitia Apple In-App Purchase (StoreKit 2). Mchango unaweza kuwa wa mara moja au wa kila mwezi; mchango wa kila mwezi ni usajili unaojisasisha wenyewe, ambao unaweza kuughairi wakati wowote katika mipangilio ya App Store (angalau saa 24 kabla kipindi hakijaisha). Hakuna mchango unaofungua vipengele kwa sababu hakuna kilichofungwa ndani ya Vakit. Maombi ya kurejeshewa fedha za michango yanaweza kuwasilishwa kupitia Apple pekee (reportaproblem.apple.com).\n\nMsaada wa kila mwezi ni usajili unaojisasisha wenyewe kila mwezi kupitia akaunti yako ya App Store, isipokuwa ukiughairi katika mipangilio ya App Store angalau saa 24 kabla kipindi hakijaisha.",
       },
       {
         t: "4. Matangazo",

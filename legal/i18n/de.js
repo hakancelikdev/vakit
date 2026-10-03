@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. Spenden (In-App-Käufe)",
-        b: "Vakit ist kostenlos. Um den Entwickler zu unterstützen, kannst du über den Bildschirm „Vakit am Leben halten“ freiwillig in Stufen von 10 ₺ bis 10.000 ₺ spenden. Diese Vorgänge:\n• Werden über Apple StoreKit 2 abgewickelt; Zahlungsdaten (Karte, IBAN, Apple Pay) gehen nur an Apple.\n• Vakit sieht und speichert weder deine Zahlungsart noch deine Finanzdaten.\n• Erstattungen können nur über Apple beantragt werden (reportaproblem.apple.com).",
+        b: "Vakit ist kostenlos. Um den Entwickler zu unterstützen, kannst du über den Bildschirm „Vakit am Leben halten“ freiwillig in Stufen von 10 ₺ bis 10.000 ₺ spenden. Diese Vorgänge:\n• Werden über Apple StoreKit 2 abgewickelt; Zahlungsdaten (Karte, IBAN, Apple Pay) gehen nur an Apple.\n• Vakit sieht und speichert weder deine Zahlungsart noch deine Finanzdaten.\n• Erstattungen können nur über Apple beantragt werden (reportaproblem.apple.com).\n• Die monatliche Unterstützung ist ein sich automatisch verlängerndes Abo; du verwaltest und kündigst es jederzeit in deinen App-Store-Kontoeinstellungen (es verlängert sich, sofern es nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt wird).",
       },
       {
         t: "8. Speicherdauer",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit ist eine kostenlose App mit Werkzeugen für den Gottesdienst wie Gebetszeiten, Qibla-Richtung, Koran, Hadith, einem Dhikr-Zähler, Leitfäden für Gebet und Wudū (Gebetswaschung), Chatm- und Gottesdienst-Verfolgung, der Freitagspredigt, Moscheen in der Nähe und einem Kalender religiöser Tage. Sie läuft unter iOS 16.4+ und macOS 13+ und enthält eine Begleit-App für die Apple Watch unter watchOS 9+.",
       },
       {
-        t: "3. Werbung",
-        b: "Vakit zeigt keine Werbung. Die einzige Einnahmequelle der App sind freiwillige Spenden der Nutzer.",
+        t: "3. Kostenlose Nutzung und freiwillige Spenden",
+        b: "Vakit ist vollständig kostenlos. Alle Funktionen (Gebetszeiten, Qibla-Kompass, Koran, Hadith, Dhikr-Zähler, Leitfäden zu Wudū und Gebet, Chatm-Verfolgung, Moscheen in der Nähe, Widgets und Live-Aktivitäten) stehen allen Nutzenden ohne Kosten zur Verfügung. Es gibt keine Bezahlschranke und keine Premium-Stufe. Die App zeigt keine Werbung.\n\nDer Bereich „Vakit am Leben halten“ bietet ausschließlich freiwillige Wege, die Entwicklung zu unterstützen; keiner davon ist erforderlich. Freiwillige Spenden von 10 ₺ bis 10.000 ₺ sind über Apple In-App-Käufe (StoreKit 2) möglich. Spenden können einmalig oder monatlich sein; eine monatliche Spende ist ein sich automatisch verlängerndes Abonnement, das du jederzeit in den App-Store-Einstellungen kündigen kannst (mindestens 24 Stunden vor Ende des Zeitraums). Keine Spende schaltet eine Funktion frei, denn in Vakit ist nichts gesperrt. Erstattungen für Spenden können nur über Apple beantragt werden (reportaproblem.apple.com).\n\nDie monatliche Unterstützung ist ein Abo, das sich jeden Monat automatisch über dein App-Store-Konto verlängert, sofern du es nicht mindestens 24 Stunden vor Ende des Zeitraums in den App-Store-Einstellungen kündigst.",
       },
       {
         t: "4. Werbung",

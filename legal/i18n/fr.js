@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         t: "7. Dons (achats intégrés)",
-        b: "Vakit est gratuite. Pour soutenir le développeur, tu peux faire des dons facultatifs, par paliers de 10 ₺ à 10 000 ₺, depuis l'écran « Faire vivre Vakit ». Ces transactions :\n• Sont traitées par Apple StoreKit 2 ; les données de paiement (carte, IBAN, Apple Pay) ne sont transmises qu'à Apple.\n• Vakit ne voit ni ne conserve ton moyen de paiement ni tes données financières.\n• Les remboursements ne peuvent être demandés qu'auprès d'Apple (reportaproblem.apple.com).",
+        b: "Vakit est gratuite. Pour soutenir le développeur, tu peux faire des dons facultatifs, par paliers de 10 ₺ à 10 000 ₺, depuis l'écran « Faire vivre Vakit ». Ces transactions :\n• Sont traitées par Apple StoreKit 2 ; les données de paiement (carte, IBAN, Apple Pay) ne sont transmises qu'à Apple.\n• Vakit ne voit ni ne conserve ton moyen de paiement ni tes données financières.\n• Les remboursements ne peuvent être demandés qu'auprès d'Apple (reportaproblem.apple.com).\n• Le soutien mensuel est un abonnement à renouvellement automatique ; il se gère et s'annule à tout moment dans les réglages de ton compte App Store (il se renouvelle sauf annulation au moins 24 heures avant la fin de la période).",
       },
       {
         t: "8. Durée de conservation",
@@ -85,8 +85,8 @@ module.exports = {
         b: "Vakit est une app gratuite qui propose des outils d'adoration tels que les horaires de prière, la direction de la Qibla, le Coran, les hadiths, un compteur de dhikr, des guides de la prière et des ablutions, le suivi du khatm et des adorations, le sermon du vendredi, les mosquées à proximité et un calendrier des jours religieux. Elle fonctionne sur iOS 16.4+ et macOS 13+, et comprend une app compagnon pour Apple Watch sous watchOS 9+.",
       },
       {
-        t: "3. Publicité",
-        b: "Vakit n'affiche aucune publicité. La seule source de revenus de l'app, ce sont les dons facultatifs des utilisateurs.",
+        t: "3. Utilisation gratuite et dons facultatifs",
+        b: "Vakit est entièrement gratuite. Toutes les fonctionnalités (horaires de prière, boussole Qibla, Coran, hadiths, compteur de dhikr, guides des ablutions et de la prière, suivi du khatm, mosquées à proximité, widgets et activités en direct) sont accessibles à tous sans frais. Il n'y a ni mur payant ni offre premium. L'app n'affiche aucune publicité.\n\nL'écran « Faire vivre Vakit » propose uniquement des façons facultatives de soutenir le développeur ; aucune n'est requise. Des dons facultatifs de 10 ₺ à 10 000 ₺ sont possibles via les achats intégrés d'Apple (StoreKit 2). Les dons peuvent être ponctuels ou mensuels ; un don mensuel est un abonnement renouvelé automatiquement que tu peux annuler à tout moment dans les réglages de l'App Store (au moins 24 heures avant la fin de la période). Aucun don ne débloque de fonctionnalité, car rien n'est verrouillé dans Vakit. Les demandes de remboursement passent uniquement par Apple (reportaproblem.apple.com).\n\nLe soutien mensuel est un abonnement renouvelé automatiquement chaque mois via ton compte App Store, sauf si tu l'annules dans les réglages de l'App Store au moins 24 heures avant la fin de la période.",
       },
       {
         t: "4. Publicité",

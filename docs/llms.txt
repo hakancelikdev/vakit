@@ -9,7 +9,8 @@ iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 
 ## What makes it different
 
-- **Free, with no paywall.** No subscription, no "premium" tier, no locked features.
+- **Free, with no paywall.** No "premium" tier, no locked features. Optional one-time or
+  monthly donations unlock nothing.
 - **Completely ad-free.** No screen shows an ad, and there is no opt-in ad either.
 - **Offline-first.** Prayer times are calculated on the device from your coordinates
   using one of 12 calculation methods — not fetched from a server. Quran, qibla,
@@ -91,7 +92,7 @@ Yes. They're scheduled locally. You'll receive them even when the app is closed.
 
 ### Is everything really free?
 
-Yes. The whole app is free: no subscription, no paywall, no 'premium' tier, nothing locked. If you want to support it you can donate; a donation unlocks nothing, because nothing is locked.
+Yes. The whole app is free: no paywall, no 'premium' tier, nothing locked. If you want to support it you can make a one-time or monthly donation; a donation unlocks nothing, because nothing is locked.
 
 ### Where do prayer times come from?
 

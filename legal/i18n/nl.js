@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         t: "7. Donaties (in-app-aankoop)",
-        b: "Vakit is gratis. Om de ontwikkelaar te steunen kun je op het scherm «Houd Vakit in leven» optionele donaties doen in niveaus van ₺10 tot ₺10.000. Deze transacties:\n• Worden verwerkt door Apple StoreKit 2; betaalgegevens (kaart, IBAN, Apple Pay) gaan alleen naar Apple.\n• Vakit ziet of bewaart nooit je betaalmethode of financiële gegevens.\n• Terugbetaling kan alleen via Apple worden aangevraagd (reportaproblem.apple.com).",
+        b: "Vakit is gratis. Om de ontwikkelaar te steunen kun je op het scherm «Houd Vakit in leven» optionele donaties doen in niveaus van ₺10 tot ₺10.000. Deze transacties:\n• Worden verwerkt door Apple StoreKit 2; betaalgegevens (kaart, IBAN, Apple Pay) gaan alleen naar Apple.\n• Vakit ziet of bewaart nooit je betaalmethode of financiële gegevens.\n• Terugbetaling kan alleen via Apple worden aangevraagd (reportaproblem.apple.com).\n• Maandelijkse steun is een automatisch verlengend abonnement; je beheert en zegt het op wanneer je wilt in je App Store-accountinstellingen (het wordt verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt).",
       },
       {
         t: "8. Bewaartermijnen",
@@ -87,8 +87,8 @@ module.exports = {
         b: "Vakit is een gratis app met hulpmiddelen voor aanbidding, zoals gebedstijden, Qibla-richting, Koran, hadith, een dhikr-teller, gidsen voor gebed en wassing, chatm- en aanbiddingsregistratie, de vrijdagpreek, moskeeën in de buurt en een kalender met religieuze dagen. De app werkt op iOS 16.4+ en macOS 13+ en bevat een begeleidende Apple Watch-app voor watchOS 9+.",
       },
       {
-        t: "3. Advertenties",
-        b: "Vakit toont geen advertenties. De enige inkomstenbron van de app zijn vrijwillige donaties van gebruikers.",
+        t: "3. Gratis gebruik en vrijwillige donaties",
+        b: "Vakit is volledig gratis. Alle functies (gebedstijden, Qibla-kompas, Koran, hadith, dhikr-teller, gidsen voor gebed en wassing, chatm-registratie, moskeeën in de buurt, widgets en live activiteiten) zijn voor iedereen kosteloos beschikbaar. Er is geen betaalmuur of premiumlaag. De app toont geen advertenties.\n\nHet scherm «Houd Vakit in leven» biedt uitsluitend vrijwillige manieren om de ontwikkelaar te steunen; geen ervan is verplicht. Vrijwillige donaties van 10 ₺ tot 10.000 ₺ zijn mogelijk via Apple in-app-aankopen (StoreKit 2). Donaties kunnen eenmalig of maandelijks zijn; een maandelijkse donatie is een automatisch verlengd abonnement dat je altijd kunt opzeggen in de App Store-instellingen (minstens 24 uur voor het einde van de periode). Geen enkele donatie ontgrendelt een functie, want in Vakit is niets vergrendeld. Restituties vraag je uitsluitend via Apple aan (reportaproblem.apple.com).\n\nMaandelijkse steun is een abonnement dat elke maand automatisch via je App Store-account wordt verlengd, tenzij je het minstens 24 uur voor het einde van de periode opzegt in de App Store-instellingen.",
       },
       {
         t: "4. Advertenties",

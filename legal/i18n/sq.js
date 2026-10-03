@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         t: "7. Donacionet (blerje brenda aplikacionit)",
-        b: "Vakit është falas. Për të mbështetur zhvilluesin, mund të bëni donacione opsionale në nivele nga ₺10 deri në ₺10.000 nga ekrani «Mbajeni Vakit gjallë». Këto transaksione:\n• Përpunohen nga Apple StoreKit 2; detajet e pagesës (karta, IBAN, Apple Pay) i dërgohen vetëm Apple.\n• Vakit nuk e sheh dhe nuk e ruan kurrë mënyrën tuaj të pagesës apo të dhënat tuaja financiare.\n• Rimbursimet mund të kërkohen vetëm përmes Apple (reportaproblem.apple.com).",
+        b: "Vakit është falas. Për të mbështetur zhvilluesin, mund të bëni donacione opsionale në nivele nga ₺10 deri në ₺10.000 nga ekrani «Mbajeni Vakit gjallë». Këto transaksione:\n• Përpunohen nga Apple StoreKit 2; detajet e pagesës (karta, IBAN, Apple Pay) i dërgohen vetëm Apple.\n• Vakit nuk e sheh dhe nuk e ruan kurrë mënyrën tuaj të pagesës apo të dhënat tuaja financiare.\n• Rimbursimet mund të kërkohen vetëm përmes Apple (reportaproblem.apple.com).\n• Mbështetja mujore është një abonim që rinovohet automatikisht; menaxhohet dhe anulohet në çdo kohë te cilësimet e llogarisë suaj të App Store (rinovohet nëse nuk anulohet të paktën 24 orë para përfundimit të periudhës).",
       },
       {
         t: "8. Ruajtja e të dhënave",
@@ -87,8 +87,8 @@ module.exports = {
         b: "Vakit është një aplikacion falas që ofron mjete ibadeti si kohët e namazit, drejtimi i kiblës, Kurani, hadithi, numëruesi i dhikrit, udhëzuesit e namazit dhe të abdesit, ndjekja e hatmes dhe e ibadetit, hutbeja e xhumasë, xhamitë afër dhe kalendari i ditëve fetare. Punon në iOS 16.4+ dhe macOS 13+ dhe përfshin një aplikacion shoqërues për Apple Watch me watchOS 9+.",
       },
       {
-        t: "3. Reklamat",
-        b: "Vakit nuk shfaq reklama. Burimi i vetëm i të ardhurave të aplikacionit janë dhurimet vullnetare të përdoruesve.",
+        t: "3. Përdorim falas dhe donacione opsionale",
+        b: "Vakit është tërësisht falas. Çdo veçori (kohët e namazit, busulla e kiblës, Kurani, hadithi, numëruesi i dhikrit, udhëzuesit e abdesit/namazit, ndjekja e hatmes, xhamitë afër, miniaplikacionet dhe aktivitetet e drejtpërdrejta) u ofrohet të gjithë përdoruesve pa asnjë kosto. Nuk ka mur pagese apo nivel premium. Aplikacioni nuk shfaq reklama.\n\nEkrani 'Mbajeni Vakit gjallë' ofron mënyra tërësisht opsionale për të mbështetur zhvilluesin; asnjëra prej tyre nuk është e detyrueshme. Donacionet opsionale prej ₺10 deri në ₺10.000 ofrohen përmes Apple In-App Purchase (StoreKit 2). Donacioni mund të jetë i njëhershëm ose mujor; donacioni mujor është një abonim që rinovohet automatikisht dhe që mund ta anuloni kurdo te cilësimet e App Store (të paktën 24 orë para përfundimit të periudhës). Asnjë donacion nuk zhbllokon veçori, sepse në Vakit nuk ka asgjë të kyçur. Kërkesat për rimbursim të donacioneve mund të dërgohen vetëm përmes Apple (reportaproblem.apple.com).\n\nMbështetja mujore është një abonim që rinovohet automatikisht çdo muaj përmes llogarisë suaj të App Store, përveç nëse e anuloni te cilësimet e App Store të paktën 24 orë para përfundimit të periudhës.",
       },
       {
         t: "4. Reklamat",
