@@ -250,3 +250,27 @@ test("language-detection.js desteklenen dil listesi LANGS ile aynı", () => {
   const list = m[1].match(/'([a-z]+)'/g).map((s) => s.slice(1, -1));
   assert.deepStrictEqual([...list].sort(), [...LANGS].sort());
 });
+
+// Google Play'in gizlilik politikası adresi: Android uygulamasının kendi metni
+// (tools/import-android-privacy.js), her dilde /<dil>/android/privacy.html (2026-10-06).
+const AP = require("./legal/android-privacy.js");
+for (const lang of LANGS) {
+  test(`${lang}: Android gizlilik politikası sayfası uygulamanın metniyle, iOS hizmeti anmadan`, () => {
+    const href = `${C.LANGS[lang].path}android/privacy.html`;
+    const p = fs.readFileSync(path.join("docs", href), "utf8");
+    const L = C.LANGS[lang];
+    assert.ok(p.includes(`<html lang="${L.htmlLang}"${L.rtl ? ' dir="rtl"' : ""}`), "html lang/dir yanlış");
+    assert.ok(p.includes(`<link rel="canonical" href="${C.SITE.origin}${href}">`), "canonical yanlış");
+    assert.strictEqual((p.match(/<div class="legal-card">/g) || []).length, AP[lang].sections.length, "bölüm sayısı");
+    assert.strictEqual(AP[lang].sections.length, 13);
+    assert.strictEqual((p.match(/<div class="legal-item">/g) || []).length, 6, "veri kalemi sayısı");
+    assert.ok(!/iCloud|CloudKit|MapKit|StoreKit|Crashlytics|Apple Watch/.test(p.slice(p.indexOf("<main"), p.indexOf("</main>"))), "iOS'a özgü hizmet");
+    if (!["tr", "en"].includes(lang)) {
+      assert.ok(p.includes('class="legal-notice"') && p.includes('href="/en/android/privacy.html"'), "İngilizce metne not yok");
+    }
+  });
+}
+test("Android gizlilik sayfaları site haritasında", () => {
+  const sm = fs.readFileSync(path.join("docs", "sitemap.xml"), "utf8");
+  for (const lang of LANGS) assert.ok(sm.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}android/privacy.html</loc>`), lang);
+});

@@ -7,7 +7,8 @@
  *
  *   docs/index.html          Turkish, canonical root
  *   docs/<lang>/index.html   every other language in LANGS, each its own indexable URL
- *   docs/{,en/}{privacy,terms}.html          legal pages (Turkish + English only)
+ *   docs/{,<lang>/}{privacy,terms}.html      legal pages, every language
+ *   docs/{,<lang>/}android/privacy.html      the Android app's privacy policy (legal/android-privacy.js)
  *   docs/sitemap.xml         every page, cross-linked with hreflang
  *   docs/robots.txt          search + AI crawlers
  *   docs/llms.txt            plain-text summary for AI assistants
@@ -37,6 +38,8 @@ const PRESS = require("./press.js");
 const LEGAL_COPY = {
   privacy: require("./legal/privacy.js"),
   terms: require("./legal/terms.js"),
+  // The Android app's own in-app policy, all 25 languages (tools/import-android-privacy.js).
+  androidPrivacy: require("./legal/android-privacy.js"),
 };
 
 const DOCS = path.join(__dirname, "docs");
@@ -55,7 +58,7 @@ const LEGAL_I18N = Object.fromEntries(
   })
 );
 const legalCopy = (key, lang) => LEGAL_COPY[key][lang] || LEGAL_I18N[lang]?.[key];
-const legalMeta = (key, lang) => LEGAL[key][lang] || LEGAL_I18N[lang]?.[key]?.meta;
+const legalMeta = (key, lang) => LEGAL[key][lang] || LEGAL_COPY[key][lang]?.meta || LEGAL_I18N[lang]?.[key]?.meta;
 
 const { SCRIPTS, joinsWithoutSpace } = require("./tools/fonts.js");
 
@@ -908,6 +911,12 @@ const LEGAL_STYLE = `      .legal-page { padding: 96px 40px 80px; max-width: 820
       :where(html:not(.script-latin):not(.script-cyrillic)) .legal-page h1 { line-height: 1.25 }
       @media (max-width: 734px) { .legal-page { padding: 56px 20px 60px } .legal-card { padding: 24px 22px } }`;
 
+/* Only on documents whose sections list data items (the Android policy's
+   "Information We Collect"): each item a bold name over its three lines. */
+const LEGAL_ITEM_STYLE = `
+      .legal-item { margin-bottom: 16px }
+      .legal-item h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 4px }`;
+
 /** Heading markup: documents ship it as HTML; some as two parts. */
 function legalHeading(doc) {
   if (doc.title) return doc.title; // trusted authored HTML, contains <em>
@@ -932,9 +941,12 @@ function legalPage(key, lang) {
   ).join("\n    ");
   const currentLang = isOriginal ? "" : `<a class="on" aria-current="page">${esc(lang.toUpperCase())}</a>\n      `;
 
+  const items = (s) =>
+    (s.items || []).map((i) => `<div class="legal-item"><h3>${esc(i.name)}</h3><p>${esc(i.lines.join("\n"))}</p></div>`).join("");
   const sections = doc.sections
-    .map((s) => `  <div class="legal-card"><h2>${esc(s.t)}</h2><p>${esc(s.b)}</p></div>`)
+    .map((s) => `  <div class="legal-card"><h2>${esc(s.t)}</h2>${items(s)}<p>${esc(s.b)}</p></div>`)
     .join("\n");
+  const style = LEGAL_STYLE + (doc.sections.some((s) => s.items) ? LEGAL_ITEM_STYLE : "");
 
   return `<!DOCTYPE html>
 <html ${htmlAttrs(lang)}>
@@ -964,7 +976,7 @@ function legalPage(key, lang) {
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="stylesheet" href="/styles.css">
     <style>
-${LEGAL_STYLE}
+${style}
     </style>
     ${THEME_BOOT}
 </head>
