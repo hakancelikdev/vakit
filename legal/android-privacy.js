@@ -78,7 +78,7 @@ module.exports = {
       },
       {
         "t": "4. Üçüncü Taraf Hizmetler",
-        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:\n• Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.\n• OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).\n• quran.com ve everyayah.com – Kur'an tilaveti sesleri.\n• Diyanet İşleri Başkanlığı – Cuma hutbesi metni ve sesi.\nHer hizmet istekleri kendi gizlilik politikasına göre işler."
+        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:\n• Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.\n• OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).\n• quran.com ve everyayah.com – Kur'an tilaveti sesleri.\n• Diyanet İşleri Başkanlığı – Cuma hutbesi metni ve sesi.\n• Cloudflare – Vakit sunucusuna giden trafiğin (kullanım istatistikleri) iletimi ve indirilebilir içerik paketlerinin dağıtımı.\nHer hizmet istekleri kendi gizlilik politikasına göre işler."
       },
       {
         "t": "5. Reklamlar",
@@ -191,7 +191,7 @@ module.exports = {
       },
       {
         "t": "4. Third-Party Services",
-        "b": "Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:\n• Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.\n• OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).\n• quran.com and everyayah.com – Quran recitation audio.\n• Diyanet İşleri Başkanlığı – Friday sermon text and audio.\nEach service processes requests under its own privacy policy."
+        "b": "Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:\n• Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.\n• OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).\n• quran.com and everyayah.com – Quran recitation audio.\n• Diyanet İşleri Başkanlığı – Friday sermon text and audio.\n• Cloudflare – carries traffic to Vakit's server (usage statistics) and delivers downloadable content packs.\nEach service processes requests under its own privacy policy."
       },
       {
         "t": "5. Advertising",
@@ -304,7 +304,7 @@ module.exports = {
       },
       {
         "t": "٤. خدمات الأطراف الثالثة",
-        "b": "يستخدم Vakit الخدمات التالية لأغراض محدودة، ولا يرسل Vakit هويتك إلى أيٍّ منها:\n• Google – النسخ الاحتياطي في Android، والترميز الجغرافي لاسم مدينتك، وGoogle Fonts، والتقييم داخل التطبيق من Play (In-App Review)، وخرائط Google عندما تطلب الاتجاهات.\n• OpenStreetMap (Overpass API) – البحث عن المساجد القريبة (إحداثيات منطقة البحث).\n• quran.com وeveryayah.com – صوت تلاوة القرآن.\n• Diyanet İşleri Başkanlığı – نص خطبة الجمعة وصوتها.\nتعالج كل خدمة الطلبات وفق سياسة الخصوصية الخاصة بها."
+        "b": "يستخدم Vakit الخدمات التالية لأغراض محدودة، ولا يرسل Vakit هويتك إلى أيٍّ منها:\n• Google – النسخ الاحتياطي في Android، والترميز الجغرافي لاسم مدينتك، وGoogle Fonts، والتقييم داخل التطبيق من Play (In-App Review)، وخرائط Google عندما تطلب الاتجاهات.\n• OpenStreetMap (Overpass API) – البحث عن المساجد القريبة (إحداثيات منطقة البحث).\n• quran.com وeveryayah.com – صوت تلاوة القرآن.\n• Diyanet İşleri Başkanlığı – نص خطبة الجمعة وصوتها.\n• Cloudflare – تمرير حركة البيانات إلى خادم Vakit (إحصاءات الاستخدام) وتوزيع حزم المحتوى القابلة للتنزيل.\nتعالج كل خدمة الطلبات وفق سياسة الخصوصية الخاصة بها."
       },
       {
         "t": "٥. الإعلانات",
@@ -417,7 +417,7 @@ module.exports = {
       },
       {
         "t": "4. Üçüncü tərəf xidmətləri",
-        "b": "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç birinə Vakit tərəfindən şəxsiyyətiniz ötürülmür:\n• Google – Android ehtiyat nüsxəsi, şəhər adı üçün ünvan müəyyənetmə, Google Fonts, Play tətbiqdaxili rəy (In-App Review) və marşrut istədiyiniz zaman Google Maps.\n• OpenStreetMap (Overpass API) – yaxındakı məscid axtarışı (axtarış sahəsinin koordinatları).\n• quran.com və everyayah.com – Quran tilavəti səsləri.\n• Diyanet İşleri Başkanlığı – cümə xütbəsinin mətni və səsi.\nHər xidmət sorğuları öz məxfilik siyasətinə uyğun emal edir."
+        "b": "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç birinə Vakit tərəfindən şəxsiyyətiniz ötürülmür:\n• Google – Android ehtiyat nüsxəsi, şəhər adı üçün ünvan müəyyənetmə, Google Fonts, Play tətbiqdaxili rəy (In-App Review) və marşrut istədiyiniz zaman Google Maps.\n• OpenStreetMap (Overpass API) – yaxındakı məscid axtarışı (axtarış sahəsinin koordinatları).\n• quran.com və everyayah.com – Quran tilavəti səsləri.\n• Diyanet İşleri Başkanlığı – cümə xütbəsinin mətni və səsi.\n• Cloudflare – Vakit serverinə gedən trafikin (istifadə statistikası) ötürülməsi və endirilə bilən məzmun paketlərinin paylanması.\nHər xidmət sorğuları öz məxfilik siyasətinə uyğun emal edir."
       },
       {
         "t": "5. Reklam",
@@ -530,7 +530,7 @@ module.exports = {
       },
       {
         "t": "4. তৃতীয় পক্ষের সেবা",
-        "b": "Vakit সীমিত উদ্দেশ্যে নিচের সেবাগুলো ব্যবহার করে। এদের কেউই Vakit থেকে আপনার পরিচয় পায় না:\n• Google – Android ব্যাকআপ, শহরের নামের জন্য জিওকোডিং, Google Fonts, Play-এর অ্যাপের ভেতরে রিভিউ (In-App Review), এবং আপনি পথনির্দেশ চাইলে Google Maps।\n• OpenStreetMap (Overpass API) – কাছের মসজিদ অনুসন্ধান (অনুসন্ধান এলাকার স্থানাঙ্ক)।\n• quran.com ও everyayah.com – কুরআন তিলাওয়াতের অডিও।\n• Diyanet İşleri Başkanlığı – জুমার খুতবার টেক্সট ও অডিও।\nপ্রতিটি সেবা নিজের গোপনীয়তা নীতি অনুযায়ী অনুরোধ প্রক্রিয়া করে।"
+        "b": "Vakit সীমিত উদ্দেশ্যে নিচের সেবাগুলো ব্যবহার করে। এদের কেউই Vakit থেকে আপনার পরিচয় পায় না:\n• Google – Android ব্যাকআপ, শহরের নামের জন্য জিওকোডিং, Google Fonts, Play-এর অ্যাপের ভেতরে রিভিউ (In-App Review), এবং আপনি পথনির্দেশ চাইলে Google Maps।\n• OpenStreetMap (Overpass API) – কাছের মসজিদ অনুসন্ধান (অনুসন্ধান এলাকার স্থানাঙ্ক)।\n• quran.com ও everyayah.com – কুরআন তিলাওয়াতের অডিও।\n• Diyanet İşleri Başkanlığı – জুমার খুতবার টেক্সট ও অডিও।\n• Cloudflare – Vakit সার্ভারে যাওয়া ট্রাফিক (ব্যবহারের পরিসংখ্যান) পৌঁছে দেওয়া এবং ডাউনলোডযোগ্য কনটেন্ট প্যাক বিতরণ।\nপ্রতিটি সেবা নিজের গোপনীয়তা নীতি অনুযায়ী অনুরোধ প্রক্রিয়া করে।"
       },
       {
         "t": "5. বিজ্ঞাপন",
@@ -643,7 +643,7 @@ module.exports = {
       },
       {
         "t": "4. Tredjepartstjenester",
-        "b": "Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:\n• Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.\n• OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).\n• quran.com og everyayah.com – lyd af Koranrecitation.\n• Diyanet İşleri Başkanlığı – tekst og lyd til fredagsprædikenen.\nHver tjeneste behandler forespørgsler efter sin egen privatlivspolitik."
+        "b": "Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:\n• Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.\n• OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).\n• quran.com og everyayah.com – lyd af Koranrecitation.\n• Diyanet İşleri Başkanlığı – tekst og lyd til fredagsprædikenen.\n• Cloudflare – videresendelse af trafik til Vakits server (brugsstatistik) og levering af indholdspakker, der kan downloades.\nHver tjeneste behandler forespørgsler efter sin egen privatlivspolitik."
       },
       {
         "t": "5. Reklamer",
@@ -756,7 +756,7 @@ module.exports = {
       },
       {
         "t": "4. Dienste Dritter",
-        "b": "Vakit nutzt die folgenden Dienste für begrenzte Zwecke. Keiner von ihnen erhält von Vakit deine Identität:\n• Google – Android-Sicherung, Geocoding für deinen Ortsnamen, Google Fonts, Play In-App-Bewertung und Google Maps, wenn du eine Route anforderst.\n• OpenStreetMap (Overpass API) – Suche nach Moscheen in der Nähe (Koordinaten des Suchbereichs).\n• quran.com und everyayah.com – Audio der Koranrezitation.\n• Diyanet İşleri Başkanlığı – Text und Audio der Freitagspredigt.\nJeder Dienst verarbeitet Anfragen nach seiner eigenen Datenschutzerklärung."
+        "b": "Vakit nutzt die folgenden Dienste für begrenzte Zwecke. Keiner von ihnen erhält von Vakit deine Identität:\n• Google – Android-Sicherung, Geocoding für deinen Ortsnamen, Google Fonts, Play In-App-Bewertung und Google Maps, wenn du eine Route anforderst.\n• OpenStreetMap (Overpass API) – Suche nach Moscheen in der Nähe (Koordinaten des Suchbereichs).\n• quran.com und everyayah.com – Audio der Koranrezitation.\n• Diyanet İşleri Başkanlığı – Text und Audio der Freitagspredigt.\n• Cloudflare – Weiterleitung der Verbindungen zum Vakit-Server (Nutzungsstatistiken) und Auslieferung der herunterladbaren Inhaltspakete.\nJeder Dienst verarbeitet Anfragen nach seiner eigenen Datenschutzerklärung."
       },
       {
         "t": "5. Werbung",
@@ -869,7 +869,7 @@ module.exports = {
       },
       {
         "t": "4. Servicios de terceros",
-        "b": "Vakit usa los siguientes servicios con fines limitados. Ninguno de ellos recibe tu identidad por parte de Vakit:\n• Google – copia de seguridad de Android, geocodificación para el nombre de tu ciudad, Google Fonts, la reseña integrada de Play (In-App Review) y Google Maps cuando pides indicaciones.\n• OpenStreetMap (Overpass API) – búsqueda de mezquitas cercanas (coordenadas del área de búsqueda).\n• quran.com y everyayah.com – audio de recitación del Corán.\n• Diyanet İşleri Başkanlığı – texto y audio del sermón del viernes.\nCada servicio procesa las solicitudes según su propia política de privacidad."
+        "b": "Vakit usa los siguientes servicios con fines limitados. Ninguno de ellos recibe tu identidad por parte de Vakit:\n• Google – copia de seguridad de Android, geocodificación para el nombre de tu ciudad, Google Fonts, la reseña integrada de Play (In-App Review) y Google Maps cuando pides indicaciones.\n• OpenStreetMap (Overpass API) – búsqueda de mezquitas cercanas (coordenadas del área de búsqueda).\n• quran.com y everyayah.com – audio de recitación del Corán.\n• Diyanet İşleri Başkanlığı – texto y audio del sermón del viernes.\n• Cloudflare – transmisión del tráfico hacia el servidor de Vakit (estadísticas de uso) y distribución de los paquetes de contenido descargables.\nCada servicio procesa las solicitudes según su propia política de privacidad."
       },
       {
         "t": "5. Publicidad",
@@ -982,7 +982,7 @@ module.exports = {
       },
       {
         "t": "4. سرویس‌های شخص ثالث",
-        "b": "Vakit از سرویس‌های زیر برای هدف‌های محدود استفاده می‌کند. هیچ‌کدام از آن‌ها هویت تو را از Vakit دریافت نمی‌کند:\n• Google – پشتیبان‌گیری Android، مکان‌یابی نشانی برای نام شهرت، Google Fonts، نظردهی درون‌برنامه‌ای Play (In-App Review) و Google Maps هنگامی که مسیریابی می‌خواهی.\n• OpenStreetMap (Overpass API) – جست‌وجوی مسجدهای نزدیک (مختصات محدوده جست‌وجو).\n• quran.com و everyayah.com – صدای تلاوت قرآن.\n• Diyanet İşleri Başkanlığı – متن و صدای خطبه جمعه.\nهر سرویس درخواست‌ها را طبق سیاست حریم خصوصی خودش پردازش می‌کند."
+        "b": "Vakit از سرویس‌های زیر برای هدف‌های محدود استفاده می‌کند. هیچ‌کدام از آن‌ها هویت تو را از Vakit دریافت نمی‌کند:\n• Google – پشتیبان‌گیری Android، مکان‌یابی نشانی برای نام شهرت، Google Fonts، نظردهی درون‌برنامه‌ای Play (In-App Review) و Google Maps هنگامی که مسیریابی می‌خواهی.\n• OpenStreetMap (Overpass API) – جست‌وجوی مسجدهای نزدیک (مختصات محدوده جست‌وجو).\n• quran.com و everyayah.com – صدای تلاوت قرآن.\n• Diyanet İşleri Başkanlığı – متن و صدای خطبه جمعه.\n• Cloudflare – انتقال ترافیک به سرور Vakit (آمار استفاده) و توزیع بسته‌های محتوای قابل دانلود.\nهر سرویس درخواست‌ها را طبق سیاست حریم خصوصی خودش پردازش می‌کند."
       },
       {
         "t": "5. تبلیغات",
@@ -1095,7 +1095,7 @@ module.exports = {
       },
       {
         "t": "4. Golle fedde tataɓe",
-        "b": "Vakit ina huutoroo sarwiisuuji ɗii ngam faandaaje keeriiɗe. Hay gootel e majje heɓataa innitol mon gila e Vakit:\n• Google – backup Android, geocoding ngam innde wuro mon, Google Fonts, Play In-App Review, e Google Maps so on ɗaɓɓii laawol.\n• OpenStreetMap (Overpass API) – ɗaɓɓitgol jumaaji ɓadiiɗi (koordone nokku ɗaɓɓitgol).\n• quran.com e everyayah.com – ɗemngal janngugol Alkur'aana.\n• Diyanet İşleri Başkanlığı – binndi e ɗemngal khutba Aljumaa.\nSarwiis kala ina golla ɗaɓɓitanɗe e politik suturaa mum."
+        "b": "Vakit ina huutoroo sarwiisuuji ɗii ngam faandaaje keeriiɗe. Hay gootel e majje heɓataa innitol mon gila e Vakit:\n• Google – backup Android, geocoding ngam innde wuro mon, Google Fonts, Play In-App Review, e Google Maps so on ɗaɓɓii laawol.\n• OpenStreetMap (Overpass API) – ɗaɓɓitgol jumaaji ɓadiiɗi (koordone nokku ɗaɓɓitgol).\n• quran.com e everyayah.com – ɗemngal janngugol Alkur'aana.\n• Diyanet İşleri Başkanlığı – binndi e ɗemngal khutba Aljumaa.\n• Cloudflare – nawgol jokkondire faade e sarworde Vakit (limooje kuutorgol) e senndugol paketaaji loowdi ɗi aawtotee.\nSarwiis kala ina golla ɗaɓɓitanɗe e politik suturaa mum."
       },
       {
         "t": "5. Publisite",
@@ -1208,7 +1208,7 @@ module.exports = {
       },
       {
         "t": "4. Services tiers",
-        "b": "Vakit utilise les services suivants à des fins limitées. Aucun d'eux ne reçoit ton identité de la part de Vakit :\n• Google – sauvegarde Android, géocodage pour le nom de ta ville, Google Fonts, avis intégré de Play (In-App Review) et Google Maps quand tu demandes un itinéraire.\n• OpenStreetMap (Overpass API) – recherche des mosquées à proximité (coordonnées de la zone de recherche).\n• quran.com et everyayah.com – audio de récitation du Coran.\n• Diyanet İşleri Başkanlığı – texte et audio du sermon du vendredi.\nChaque service traite les requêtes selon sa propre politique de confidentialité."
+        "b": "Vakit utilise les services suivants à des fins limitées. Aucun d'eux ne reçoit ton identité de la part de Vakit :\n• Google – sauvegarde Android, géocodage pour le nom de ta ville, Google Fonts, avis intégré de Play (In-App Review) et Google Maps quand tu demandes un itinéraire.\n• OpenStreetMap (Overpass API) – recherche des mosquées à proximité (coordonnées de la zone de recherche).\n• quran.com et everyayah.com – audio de récitation du Coran.\n• Diyanet İşleri Başkanlığı – texte et audio du sermon du vendredi.\n• Cloudflare – acheminement du trafic vers le serveur de Vakit (statistiques d'utilisation) et distribution des packs de contenu téléchargeables.\nChaque service traite les requêtes selon sa propre politique de confidentialité."
       },
       {
         "t": "5. Publicité",
@@ -1321,7 +1321,7 @@ module.exports = {
       },
       {
         "t": "4. तीसरे पक्ष की सेवाएँ",
-        "b": "Vakit सीमित उद्देश्यों के लिए नीचे दी गई सेवाओं का इस्तेमाल करता है। इनमें से किसी को भी Vakit से आपकी पहचान नहीं मिलती:\n• Google – Android बैकअप, शहर के नाम के लिए जियोकोडिंग, Google Fonts, Play का ऐप में रिव्यू (In-App Review), और रास्ता माँगने पर Google Maps।\n• OpenStreetMap (Overpass API) – पास की मस्जिदों की खोज (खोज क्षेत्र के निर्देशांक)।\n• quran.com और everyayah.com – क़ुरआन तिलावत की ऑडियो।\n• Diyanet İşleri Başkanlığı – जुमे के ख़ुत्बे का टेक्स्ट और ऑडियो।\nहर सेवा अनुरोधों को अपनी निजता नीति के अनुसार प्रोसेस करती है।"
+        "b": "Vakit सीमित उद्देश्यों के लिए नीचे दी गई सेवाओं का इस्तेमाल करता है। इनमें से किसी को भी Vakit से आपकी पहचान नहीं मिलती:\n• Google – Android बैकअप, शहर के नाम के लिए जियोकोडिंग, Google Fonts, Play का ऐप में रिव्यू (In-App Review), और रास्ता माँगने पर Google Maps।\n• OpenStreetMap (Overpass API) – पास की मस्जिदों की खोज (खोज क्षेत्र के निर्देशांक)।\n• quran.com और everyayah.com – क़ुरआन तिलावत की ऑडियो।\n• Diyanet İşleri Başkanlığı – जुमे के ख़ुत्बे का टेक्स्ट और ऑडियो।\n• Cloudflare – Vakit सर्वर तक जाने वाले ट्रैफ़िक (उपयोग के आँकड़े) को पहुँचाना और डाउनलोड किए जा सकने वाले कंटेंट पैक बाँटना।\nहर सेवा अनुरोधों को अपनी निजता नीति के अनुसार प्रोसेस करती है।"
       },
       {
         "t": "5. विज्ञापन",
@@ -1434,7 +1434,7 @@ module.exports = {
       },
       {
         "t": "4. Layanan pihak ketiga",
-        "b": "Vakit menggunakan layanan berikut untuk tujuan terbatas. Tidak satu pun menerima identitasmu dari Vakit:\n• Google – pencadangan Android, geocoding untuk nama kotamu, Google Fonts, ulasan dalam aplikasi Play (In-App Review), dan Google Maps saat kamu meminta petunjuk arah.\n• OpenStreetMap (Overpass API) – pencarian masjid terdekat (koordinat area pencarian).\n• quran.com dan everyayah.com – audio tilawah Al-Qur'an.\n• Diyanet İşleri Başkanlığı – teks dan audio khotbah Jumat.\nSetiap layanan memproses permintaan sesuai kebijakan privasinya sendiri."
+        "b": "Vakit menggunakan layanan berikut untuk tujuan terbatas. Tidak satu pun menerima identitasmu dari Vakit:\n• Google – pencadangan Android, geocoding untuk nama kotamu, Google Fonts, ulasan dalam aplikasi Play (In-App Review), dan Google Maps saat kamu meminta petunjuk arah.\n• OpenStreetMap (Overpass API) – pencarian masjid terdekat (koordinat area pencarian).\n• quran.com dan everyayah.com – audio tilawah Al-Qur'an.\n• Diyanet İşleri Başkanlığı – teks dan audio khotbah Jumat.\n• Cloudflare – penerusan lalu lintas ke server Vakit (statistik penggunaan) dan pengiriman paket konten yang dapat diunduh.\nSetiap layanan memproses permintaan sesuai kebijakan privasinya sendiri."
       },
       {
         "t": "5. Iklan",
@@ -1547,7 +1547,7 @@ module.exports = {
       },
       {
         "t": "4. Servizi di terze parti",
-        "b": "Vakit usa i seguenti servizi per scopi limitati. Nessuno di essi riceve la tua identità da Vakit:\n• Google – backup di Android, geocodifica per il nome della tua città, Google Fonts, recensione in-app di Play (In-App Review) e Google Maps quando chiedi indicazioni.\n• OpenStreetMap (Overpass API) – ricerca delle moschee vicine (coordinate dell'area di ricerca).\n• quran.com ed everyayah.com – audio delle recitazioni del Corano.\n• Diyanet İşleri Başkanlığı – testo e audio del sermone del venerdì.\nOgni servizio tratta le richieste secondo la propria informativa sulla privacy."
+        "b": "Vakit usa i seguenti servizi per scopi limitati. Nessuno di essi riceve la tua identità da Vakit:\n• Google – backup di Android, geocodifica per il nome della tua città, Google Fonts, recensione in-app di Play (In-App Review) e Google Maps quando chiedi indicazioni.\n• OpenStreetMap (Overpass API) – ricerca delle moschee vicine (coordinate dell'area di ricerca).\n• quran.com ed everyayah.com – audio delle recitazioni del Corano.\n• Diyanet İşleri Başkanlığı – testo e audio del sermone del venerdì.\n• Cloudflare – inoltro del traffico verso il server di Vakit (statistiche d'uso) e distribuzione dei pacchetti di contenuti scaricabili.\nOgni servizio tratta le richieste secondo la propria informativa sulla privacy."
       },
       {
         "t": "5. Pubblicità",
@@ -1660,7 +1660,7 @@ module.exports = {
       },
       {
         "t": "4. 外部サービス",
-        "b": "Vakitは以下のサービスを限られた目的で利用します。いずれもVakitからあなたの身元を受け取ることはありません：\n• Google – Androidのバックアップ、都市名のためのジオコーディング、Google Fonts、Playのアプリ内レビュー（In-App Review）、経路案内を求めたときのGoogleマップ。\n• OpenStreetMap（Overpass API） – 近くのモスクの検索（検索範囲の座標）。\n• quran.comとeveryayah.com – クルアーン朗誦の音声。\n• Diyanet İşleri Başkanlığı – 金曜の説教のテキストと音声。\n各サービスはそれぞれのプライバシーポリシーに従ってリクエストを処理します。"
+        "b": "Vakitは以下のサービスを限られた目的で利用します。いずれもVakitからあなたの身元を受け取ることはありません：\n• Google – Androidのバックアップ、都市名のためのジオコーディング、Google Fonts、Playのアプリ内レビュー（In-App Review）、経路案内を求めたときのGoogleマップ。\n• OpenStreetMap（Overpass API） – 近くのモスクの検索（検索範囲の座標）。\n• quran.comとeveryayah.com – クルアーン朗誦の音声。\n• Diyanet İşleri Başkanlığı – 金曜の説教のテキストと音声。\n• Cloudflare – Vakitサーバーへの通信（利用統計）の中継と、ダウンロード可能なコンテンツパックの配信。\n各サービスはそれぞれのプライバシーポリシーに従ってリクエストを処理します。"
       },
       {
         "t": "5. 広告",
@@ -1773,7 +1773,7 @@ module.exports = {
       },
       {
         "t": "4. Perkhidmatan pihak ketiga",
-        "b": "Vakit menggunakan perkhidmatan berikut untuk tujuan terhad. Tiada satu pun menerima identiti anda daripada Vakit:\n• Google – sandaran Android, geokod untuk nama bandar anda, Google Fonts, ulasan dalam apl Play (In-App Review) dan Google Maps apabila anda meminta arah.\n• OpenStreetMap (Overpass API) – carian masjid berdekatan (koordinat kawasan carian).\n• quran.com dan everyayah.com – audio bacaan al-Quran.\n• Diyanet İşleri Başkanlığı – teks dan audio khutbah Jumaat.\nSetiap perkhidmatan memproses permintaan mengikut dasar privasinya sendiri."
+        "b": "Vakit menggunakan perkhidmatan berikut untuk tujuan terhad. Tiada satu pun menerima identiti anda daripada Vakit:\n• Google – sandaran Android, geokod untuk nama bandar anda, Google Fonts, ulasan dalam apl Play (In-App Review) dan Google Maps apabila anda meminta arah.\n• OpenStreetMap (Overpass API) – carian masjid berdekatan (koordinat kawasan carian).\n• quran.com dan everyayah.com – audio bacaan al-Quran.\n• Diyanet İşleri Başkanlığı – teks dan audio khutbah Jumaat.\n• Cloudflare – penghantaran trafik ke pelayan Vakit (statistik penggunaan) dan pengedaran pek kandungan yang boleh dimuat turun.\nSetiap perkhidmatan memproses permintaan mengikut dasar privasinya sendiri."
       },
       {
         "t": "5. Pengiklanan",
@@ -1886,7 +1886,7 @@ module.exports = {
       },
       {
         "t": "4. Diensten van derden",
-        "b": "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen van hen ontvangt je identiteit van Vakit:\n• Google – Android-back-up, geocodering voor je plaatsnaam, Google Fonts, Play In-App Review en Google Maps wanneer je om een routebeschrijving vraagt.\n• OpenStreetMap (Overpass API) – zoeken naar moskeeën in de buurt (coördinaten van het zoekgebied).\n• quran.com en everyayah.com – audio van Koranrecitaties.\n• Diyanet İşleri Başkanlığı – tekst en audio van de vrijdagpreek.\nElke dienst verwerkt verzoeken volgens zijn eigen privacybeleid."
+        "b": "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen van hen ontvangt je identiteit van Vakit:\n• Google – Android-back-up, geocodering voor je plaatsnaam, Google Fonts, Play In-App Review en Google Maps wanneer je om een routebeschrijving vraagt.\n• OpenStreetMap (Overpass API) – zoeken naar moskeeën in de buurt (coördinaten van het zoekgebied).\n• quran.com en everyayah.com – audio van Koranrecitaties.\n• Diyanet İşleri Başkanlığı – tekst en audio van de vrijdagpreek.\n• Cloudflare – doorgeven van verkeer naar de server van Vakit (gebruiksstatistieken) en levering van downloadbare inhoudspakketten.\nElke dienst verwerkt verzoeken volgens zijn eigen privacybeleid."
       },
       {
         "t": "5. Advertenties",
@@ -1999,7 +1999,7 @@ module.exports = {
       },
       {
         "t": "4. Serviços de terceiros",
-        "b": "O Vakit usa os seguintes serviços para fins limitados. Nenhum deles recebe a tua identidade por parte do Vakit:\n• Google – cópia de segurança do Android, geocodificação para o nome da tua cidade, Google Fonts, avaliação na app do Play (In-App Review) e Google Maps quando pedes direções.\n• OpenStreetMap (Overpass API) – pesquisa de mesquitas perto (coordenadas da área de pesquisa).\n• quran.com e everyayah.com – áudio de recitação do Alcorão.\n• Diyanet İşleri Başkanlığı – texto e áudio do sermão de sexta-feira.\nCada serviço trata os pedidos segundo a sua própria política de privacidade."
+        "b": "O Vakit usa os seguintes serviços para fins limitados. Nenhum deles recebe a tua identidade por parte do Vakit:\n• Google – cópia de segurança do Android, geocodificação para o nome da tua cidade, Google Fonts, avaliação na app do Play (In-App Review) e Google Maps quando pedes direções.\n• OpenStreetMap (Overpass API) – pesquisa de mesquitas perto (coordenadas da área de pesquisa).\n• quran.com e everyayah.com – áudio de recitação do Alcorão.\n• Diyanet İşleri Başkanlığı – texto e áudio do sermão de sexta-feira.\n• Cloudflare – encaminhamento do tráfego para o servidor da Vakit (estatísticas de utilização) e distribuição dos pacotes de conteúdo transferíveis.\nCada serviço trata os pedidos segundo a sua própria política de privacidade."
       },
       {
         "t": "5. Publicidade",
@@ -2112,7 +2112,7 @@ module.exports = {
       },
       {
         "t": "4. Сторонние сервисы",
-        "b": "Vakit использует следующие сервисы в ограниченных целях. Ни один из них не получает от Vakit сведений о вашей личности:\n• Google – резервное копирование Android, геокодирование для названия города, Google Fonts, отзывы в приложении Play (In-App Review) и Google Maps, когда вы запрашиваете маршрут.\n• OpenStreetMap (Overpass API) – поиск мечетей рядом (координаты области поиска).\n• quran.com и everyayah.com – аудио чтения Корана.\n• Diyanet İşleri Başkanlığı – текст и аудио пятничной проповеди.\nКаждый сервис обрабатывает запросы в соответствии со своей политикой конфиденциальности."
+        "b": "Vakit использует следующие сервисы в ограниченных целях. Ни один из них не получает от Vakit сведений о вашей личности:\n• Google – резервное копирование Android, геокодирование для названия города, Google Fonts, отзывы в приложении Play (In-App Review) и Google Maps, когда вы запрашиваете маршрут.\n• OpenStreetMap (Overpass API) – поиск мечетей рядом (координаты области поиска).\n• quran.com и everyayah.com – аудио чтения Корана.\n• Diyanet İşleri Başkanlığı – текст и аудио пятничной проповеди.\n• Cloudflare – передача трафика на сервер Vakit (статистика использования) и доставка загружаемых пакетов контента.\nКаждый сервис обрабатывает запросы в соответствии со своей политикой конфиденциальности."
       },
       {
         "t": "5. Реклама",
@@ -2225,7 +2225,7 @@ module.exports = {
       },
       {
         "t": "4. Shërbimet e palëve të treta",
-        "b": "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjëri prej tyre nuk e merr identitetin tuaj nga Vakit:\n• Google – kopjeruajtja e Android-it, gjeokodimi për emrin e qytetit, Google Fonts, vlerësimi brenda aplikacionit i Play (In-App Review) dhe Google Maps kur kërkoni udhëzime rruge.\n• OpenStreetMap (Overpass API) – kërkimi i xhamive afër (koordinatat e zonës së kërkimit).\n• quran.com dhe everyayah.com – audio e leximit të Kuranit.\n• Diyanet İşleri Başkanlığı – teksti dhe audioja e hutbes së xhumasë.\nÇdo shërbim i përpunon kërkesat sipas politikës së vet të privatësisë."
+        "b": "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjëri prej tyre nuk e merr identitetin tuaj nga Vakit:\n• Google – kopjeruajtja e Android-it, gjeokodimi për emrin e qytetit, Google Fonts, vlerësimi brenda aplikacionit i Play (In-App Review) dhe Google Maps kur kërkoni udhëzime rruge.\n• OpenStreetMap (Overpass API) – kërkimi i xhamive afër (koordinatat e zonës së kërkimit).\n• quran.com dhe everyayah.com – audio e leximit të Kuranit.\n• Diyanet İşleri Başkanlığı – teksti dhe audioja e hutbes së xhumasë.\n• Cloudflare – përcjellja e trafikut drejt serverit të Vakit (statistikat e përdorimit) dhe shpërndarja e paketave të përmbajtjes që mund të shkarkohen.\nÇdo shërbim i përpunon kërkesat sipas politikës së vet të privatësisë."
       },
       {
         "t": "5. Reklamat",
@@ -2338,7 +2338,7 @@ module.exports = {
       },
       {
         "t": "4. Huduma za Watu wa Tatu",
-        "b": "Vakit hutumia huduma zifuatazo kwa madhumuni maalum. Hakuna hata moja inayopokea utambulisho wako kutoka Vakit:\n• Google – nakala rudufu ya Android, geocoding kwa jina la mji wako, Google Fonts, tathmini ndani ya programu ya Play (In-App Review) na Google Maps unapoomba maelekezo ya njia.\n• OpenStreetMap (Overpass API) – utafutaji wa misikiti iliyo karibu (viwianishi vya eneo la utafutaji).\n• quran.com na everyayah.com – sauti za visomo vya Kurani.\n• Diyanet İşleri Başkanlığı – maandishi na sauti ya khutba ya Ijumaa.\nKila huduma huchakata maombi kulingana na sera yake ya faragha."
+        "b": "Vakit hutumia huduma zifuatazo kwa madhumuni maalum. Hakuna hata moja inayopokea utambulisho wako kutoka Vakit:\n• Google – nakala rudufu ya Android, geocoding kwa jina la mji wako, Google Fonts, tathmini ndani ya programu ya Play (In-App Review) na Google Maps unapoomba maelekezo ya njia.\n• OpenStreetMap (Overpass API) – utafutaji wa misikiti iliyo karibu (viwianishi vya eneo la utafutaji).\n• quran.com na everyayah.com – sauti za visomo vya Kurani.\n• Diyanet İşleri Başkanlığı – maandishi na sauti ya khutba ya Ijumaa.\n• Cloudflare – kupitisha trafiki kwenda kwenye seva ya Vakit (takwimu za matumizi) na kusambaza vifurushi vya maudhui vinavyoweza kupakuliwa.\nKila huduma huchakata maombi kulingana na sera yake ya faragha."
       },
       {
         "t": "5. Matangazo",
@@ -2451,7 +2451,7 @@ module.exports = {
       },
       {
         "t": "4. บริการภายนอก",
-        "b": "Vakit ใช้บริการต่อไปนี้เพื่อวัตถุประสงค์ที่จำกัด ไม่มีบริการใดได้รับข้อมูลระบุตัวตนของคุณจาก Vakit:\n• Google – การสำรองข้อมูลของ Android การแปลงพิกัดเป็นชื่อเมือง Google Fonts การรีวิวในแอปของ Play (In-App Review) และ Google Maps เมื่อคุณขอเส้นทาง\n• OpenStreetMap (Overpass API) – ค้นหามัสยิดใกล้เคียง (พิกัดของพื้นที่ค้นหา)\n• quran.com และ everyayah.com – เสียงการอ่านอัลกุรอาน\n• Diyanet İşleri Başkanlığı – ข้อความและเสียงคุฏบะฮฺวันศุกร์\nแต่ละบริการประมวลผลคำขอตามนโยบายความเป็นส่วนตัวของตนเอง"
+        "b": "Vakit ใช้บริการต่อไปนี้เพื่อวัตถุประสงค์ที่จำกัด ไม่มีบริการใดได้รับข้อมูลระบุตัวตนของคุณจาก Vakit:\n• Google – การสำรองข้อมูลของ Android การแปลงพิกัดเป็นชื่อเมือง Google Fonts การรีวิวในแอปของ Play (In-App Review) และ Google Maps เมื่อคุณขอเส้นทาง\n• OpenStreetMap (Overpass API) – ค้นหามัสยิดใกล้เคียง (พิกัดของพื้นที่ค้นหา)\n• quran.com และ everyayah.com – เสียงการอ่านอัลกุรอาน\n• Diyanet İşleri Başkanlığı – ข้อความและเสียงคุฏบะฮฺวันศุกร์\n• Cloudflare – ส่งต่อการรับส่งข้อมูลไปยังเซิร์ฟเวอร์ของ Vakit (สถิติการใช้งาน) และกระจายแพ็กเนื้อหาที่ดาวน์โหลดได้\nแต่ละบริการประมวลผลคำขอตามนโยบายความเป็นส่วนตัวของตนเอง"
       },
       {
         "t": "5. โฆษณา",
@@ -2564,7 +2564,7 @@ module.exports = {
       },
       {
         "t": "4. ئۈچىنچى تەرەپ مۇلازىمەتلىرى",
-        "b": "Vakit تۆۋەندىكى مۇلازىمەتلەرنى چەكلىك مەقسەتتە ئىشلىتىدۇ. ئۇلارنىڭ ھېچقايسىسى Vakit تىن كىملىكىڭىزنى تاپشۇرۇۋالمايدۇ:\n• Google – Android زاپاسلاش، شەھەر نامى ئۈچۈن ئادرېس بېكىتىش، Google Fonts، Play ئەپ ئىچى باھالاش (In-App Review)، ۋە يول سورىغىنىڭىزدا Google Maps.\n• OpenStreetMap (Overpass API) – يېقىندىكى مەسچىتلەرنى ئىزدەش (ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى).\n• quran.com ۋە everyayah.com – قۇرئان قىرائىتى ئاۋازلىرى.\n• Diyanet İşleri Başkanlığı – جۈمە خۇتبىسىنىڭ تېكىستى ۋە ئاۋازى.\nھەر بىر مۇلازىمەت تەلەپلەرنى ئۆزىنىڭ مەخپىيەتلىك سىياسىتى بويىچە بىر تەرەپ قىلىدۇ."
+        "b": "Vakit تۆۋەندىكى مۇلازىمەتلەرنى چەكلىك مەقسەتتە ئىشلىتىدۇ. ئۇلارنىڭ ھېچقايسىسى Vakit تىن كىملىكىڭىزنى تاپشۇرۇۋالمايدۇ:\n• Google – Android زاپاسلاش، شەھەر نامى ئۈچۈن ئادرېس بېكىتىش، Google Fonts، Play ئەپ ئىچى باھالاش (In-App Review)، ۋە يول سورىغىنىڭىزدا Google Maps.\n• OpenStreetMap (Overpass API) – يېقىندىكى مەسچىتلەرنى ئىزدەش (ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى).\n• quran.com ۋە everyayah.com – قۇرئان قىرائىتى ئاۋازلىرى.\n• Diyanet İşleri Başkanlığı – جۈمە خۇتبىسىنىڭ تېكىستى ۋە ئاۋازى.\n• Cloudflare – Vakit مۇلازىمېتىرىغا بارىدىغان ئېقىمنى (ئىشلىتىش ستاتىستىكىسى) يەتكۈزۈش ۋە چۈشۈرگىلى بولىدىغان مەزمۇن بوغچىلىرىنى تارقىتىش.\nھەر بىر مۇلازىمەت تەلەپلەرنى ئۆزىنىڭ مەخپىيەتلىك سىياسىتى بويىچە بىر تەرەپ قىلىدۇ."
       },
       {
         "t": "5. ئېلان",
@@ -2677,7 +2677,7 @@ module.exports = {
       },
       {
         "t": "4. بیرونی خدمات",
-        "b": "Vakit درج ذیل خدمات محدود مقاصد کے لیے استعمال کرتا ہے۔ ان میں سے کسی کو بھی Vakit کی طرف سے آپ کی شناخت نہیں ملتی:\n• Google – Android بیک اپ، شہر کے نام کے لیے جیوکوڈنگ، Google Fonts، Play کا ایپ میں جائزہ (In-App Review)، اور جب آپ راستہ مانگیں تو Google Maps۔\n• OpenStreetMap (Overpass API) – قریبی مساجد کی تلاش (تلاش کے علاقے کے کوآرڈینیٹس)۔\n• quran.com اور everyayah.com – قرآن کی تلاوت کی آڈیو۔\n• Diyanet İşleri Başkanlığı – جمعہ کے خطبے کا متن اور آڈیو۔\nہر سروس درخواستوں کو اپنی رازداری کی پالیسی کے مطابق پراسیس کرتی ہے۔"
+        "b": "Vakit درج ذیل خدمات محدود مقاصد کے لیے استعمال کرتا ہے۔ ان میں سے کسی کو بھی Vakit کی طرف سے آپ کی شناخت نہیں ملتی:\n• Google – Android بیک اپ، شہر کے نام کے لیے جیوکوڈنگ، Google Fonts، Play کا ایپ میں جائزہ (In-App Review)، اور جب آپ راستہ مانگیں تو Google Maps۔\n• OpenStreetMap (Overpass API) – قریبی مساجد کی تلاش (تلاش کے علاقے کے کوآرڈینیٹس)۔\n• quran.com اور everyayah.com – قرآن کی تلاوت کی آڈیو۔\n• Diyanet İşleri Başkanlığı – جمعہ کے خطبے کا متن اور آڈیو۔\n• Cloudflare – Vakit سرور تک جانے والے ٹریفک (استعمال کے اعداد و شمار) کی ترسیل اور ڈاؤن لوڈ کیے جا سکنے والے مواد کے پیکجز کی فراہمی۔\nہر سروس درخواستوں کو اپنی رازداری کی پالیسی کے مطابق پراسیس کرتی ہے۔"
       },
       {
         "t": "5. اشتہارات",
@@ -2790,7 +2790,7 @@ module.exports = {
       },
       {
         "t": "4. 第三方服务",
-        "b": "Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：\n• Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。\n• OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。\n• quran.com 和 everyayah.com – 古兰经诵读音频。\n• Diyanet İşleri Başkanlığı – 主麻讲道的文本和音频。\n每项服务都按照其自身的隐私政策处理请求。"
+        "b": "Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：\n• Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。\n• OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。\n• quran.com 和 everyayah.com – 古兰经诵读音频。\n• Diyanet İşleri Başkanlığı – 主麻讲道的文本和音频。\n• Cloudflare – 转发发往 Vakit 服务器的流量（使用统计）并分发可下载的内容包。\n每项服务都按照其自身的隐私政策处理请求。"
       },
       {
         "t": "5. 广告",
