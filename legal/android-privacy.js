@@ -12,7 +12,7 @@ module.exports = {
     },
     "titleBefore": "Gizlilik Politikası ",
     "titleEm": "Android",
-    "desc": "Son güncelleme: 6 Ekim 2026\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.",
+    "desc": "Son güncelleme: 7 Ekim 2026\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.",
     "sections": [
       {
         "t": "1. Topladığımız Veriler",
@@ -85,8 +85,8 @@ module.exports = {
         "b": "Vakit reklam göstermez ve reklam SDK'sı içermez. Reklam kimliğiniz okunmaz."
       },
       {
-        "t": "6. Ödemeler",
-        "b": "Vakit'te uygulama içi satın alma yoktur ve ödeme bilgisi işlenmez."
+        "t": "6. Bağışlar (Uygulama İçi Satın Alma)",
+        "b": "Vakit ücretsizdir. Geliştiriciyi desteklemek için 'Vakit'i Yaşat' ekranından ₺10'dan ₺10.000'e uzanan kademelerde isteğe bağlı bağış yapabilirsiniz. Bu işlemler:\n• Google Play Faturalandırma ile işlenir; ödeme bilgileriniz (kart, banka hesabı, Google Pay) yalnızca Google'a iletilir.\n• Vakit, ödeme yönteminizi veya finansal bilgilerinizi görmez ve saklamaz.\n• Bağış sayılarını tutmak için bağış kaydı (kademe, tutar, para birimi, tek seferlik ya da aylık oluşu ve Google Play sipariş numarası) anonim kullanıcı kimliğinizle birlikte sunucumuza gönderilir; adınız, e-postanız veya ödeme bilgileriniz bu kayda girmez.\n• Bağışlar geliştiriciye verilen birer ikramdır; herhangi bir özelliği açmaz.\n• Geri ödemeler Google Play üzerinden talep edilir."
       },
       {
         "t": "7. Veri Paylaşımı",
@@ -125,7 +125,7 @@ module.exports = {
     },
     "titleBefore": "Privacy Policy ",
     "titleEm": "Android",
-    "desc": "Last updated: 6 October 2026\n\nVakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.",
+    "desc": "Last updated: 7 October 2026\n\nVakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.",
     "sections": [
       {
         "t": "1. Information We Collect",
@@ -198,8 +198,8 @@ module.exports = {
         "b": "Vakit shows no ads and contains no advertising SDK. Your advertising ID is not read."
       },
       {
-        "t": "6. Payments",
-        "b": "Vakit has no in-app purchases and processes no payment information."
+        "t": "6. Donations (In-App Purchase)",
+        "b": "Vakit is free. To support the developer you can make optional donations of ₺10 to ₺10,000 from the 'Keep Vakit Alive' screen. These transactions:\n• Are processed by Google Play Billing; payment details (card, bank account, Google Pay) are sent only to Google.\n• Vakit never sees or stores your payment method or financial details.\n• To count donations, a donation record (tier, amount, currency, whether it is one-time or monthly, and the Google Play order number) is sent to our server together with your anonymous user ID; your name, email and payment details are not part of it.\n• Donations are tips for the developer; they do not unlock features.\n• Refunds are requested through Google Play."
       },
       {
         "t": "7. Data Sharing",
@@ -238,7 +238,7 @@ module.exports = {
     },
     "titleBefore": "سياسة الخصوصية ",
     "titleEm": "Android",
-    "desc": "آخر تحديث: ٦ أكتوبر ٢٠٢٦\n\nيحترم تطبيق Vakit خصوصيتك. لا تحتاج إلى حساب، ولا نجمع بيانات الهوية مثل اسمك أو بريدك الإلكتروني أو رقم هاتفك أو صورك أو جهات اتصالك. تُحسب أوقات الصلاة واتجاه القبلة والتذكيرات على جهازك. تُحفظ سجلات عبادتك (الأذكار والختمات والمحفوظات والأهداف والمساجد المفضّلة) على جهازك، وفي حسابك الخاص على Google إذا كان النسخ الاحتياطي في Android مفعّلاً — ولا تُرسل إلى خادمنا أبداً. لا يُرسل إلى خادمنا إلا إحصاءات الاستخدام لنتمكّن من تحسين التطبيق، وهذه البيانات مرتبطة برمز مستخدم لا يحمل أي معلومة تعريفية. ولا تُرسل أي تقارير أعطال أو معرّفات إعلانية.",
+    "desc": "آخر تحديث: ٧ أكتوبر ٢٠٢٦\n\nيحترم تطبيق Vakit خصوصيتك. لا تحتاج إلى حساب، ولا نجمع بيانات الهوية مثل اسمك أو بريدك الإلكتروني أو رقم هاتفك أو صورك أو جهات اتصالك. تُحسب أوقات الصلاة واتجاه القبلة والتذكيرات على جهازك. تُحفظ سجلات عبادتك (الأذكار والختمات والمحفوظات والأهداف والمساجد المفضّلة) على جهازك، وفي حسابك الخاص على Google إذا كان النسخ الاحتياطي في Android مفعّلاً — ولا تُرسل إلى خادمنا أبداً. لا يُرسل إلى خادمنا إلا إحصاءات الاستخدام لنتمكّن من تحسين التطبيق، وهذه البيانات مرتبطة برمز مستخدم لا يحمل أي معلومة تعريفية. ولا تُرسل أي تقارير أعطال أو معرّفات إعلانية.",
     "sections": [
       {
         "t": "١. المعلومات التي نجمعها",
@@ -311,8 +311,8 @@ module.exports = {
         "b": "لا يعرض Vakit أي إعلانات ولا يحتوي على أي SDK إعلاني. ولا يُقرأ معرّفك الإعلاني."
       },
       {
-        "t": "٦. المدفوعات",
-        "b": "لا توجد في Vakit عمليات شراء داخل التطبيق، ولا تُعالج أي معلومات دفع."
+        "t": "٦. التبرعات (الشراء داخل التطبيق)",
+        "b": "تطبيق Vakit مجاني. ولدعم المطوّر يمكنك التبرع اختيارياً بمبلغ يتراوح من ١٠ إلى ١٠٬٠٠٠ ليرة من شاشة «أحيِ Vakit». وهذه العمليات:\n• يعالجها نظام الفوترة في Google Play؛ وتُرسل تفاصيل الدفع (البطاقة، والحساب المصرفي، وGoogle Pay) إلى Google وحدها.\n• ولا يرى Vakit وسيلة دفعك ولا بياناتك المالية ولا يحفظها.\n• ولإحصاء التبرعات يُرسل سجل التبرع (الفئة، والمبلغ، والعملة، وكونه لمرة واحدة أو شهرياً، ورقم طلب Google Play) إلى خادمنا مع معرّف المستخدم المجهول الخاص بك؛ ولا يتضمن اسمك ولا بريدك الإلكتروني ولا تفاصيل الدفع.\n• والتبرعات إكرام للمطوّر؛ ولا تفتح ميزات.\n• وتُطلب الاستردادات عبر Google Play."
       },
       {
         "t": "٧. مشاركة البيانات",
@@ -351,7 +351,7 @@ module.exports = {
     },
     "titleBefore": "Məxfilik Siyasəti ",
     "titleEm": "Android",
-    "desc": "Son yenilənmə: 6 oktyabr 2026\n\nVakit məxfiliyinizə hörmət edir. Hesab yaratmağınız lazım deyil; adınız, e-poçtunuz, telefon nömrəniz, şəkilləriniz və ya kontaktlarınız kimi şəxsiyyət məlumatlarını toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar cihazınızda hesablanır. İbadət qeydləriniz (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) cihazınızda saxlanılır; Android ehtiyat nüsxəsi aktivdirsə, öz Google hesabınızda da saxlanılır — heç vaxt serverimizə göndərilmir. Tətbiqi yaxşılaşdıra bilməyimiz üçün serverimizə yalnız istifadə statistikası göndərilir; bu məlumat heç bir kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Çökmə hesabatı və ya reklam identifikatoru göndərilmir.",
+    "desc": "Son yenilənmə: 7 oktyabr 2026\n\nVakit məxfiliyinizə hörmət edir. Hesab yaratmağınız lazım deyil; adınız, e-poçtunuz, telefon nömrəniz, şəkilləriniz və ya kontaktlarınız kimi şəxsiyyət məlumatlarını toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar cihazınızda hesablanır. İbadət qeydləriniz (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) cihazınızda saxlanılır; Android ehtiyat nüsxəsi aktivdirsə, öz Google hesabınızda da saxlanılır — heç vaxt serverimizə göndərilmir. Tətbiqi yaxşılaşdıra bilməyimiz üçün serverimizə yalnız istifadə statistikası göndərilir; bu məlumat heç bir kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Çökmə hesabatı və ya reklam identifikatoru göndərilmir.",
     "sections": [
       {
         "t": "1. Topladığımız məlumatlar",
@@ -424,8 +424,8 @@ module.exports = {
         "b": "Vakit reklam göstərmir və reklam SDK-sı ehtiva etmir. Reklam identifikatorunuz oxunmur."
       },
       {
-        "t": "6. Ödənişlər",
-        "b": "Vakit-də tətbiqdaxili alış yoxdur və heç bir ödəniş məlumatı emal edilmir."
+        "t": "6. İanələr (tətbiqdaxili alış)",
+        "b": "Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün “Vakit-i Yaşat” ekranından ₺10-dan ₺10.000-ə qədər könüllü ianə edə bilərsiniz. Bu əməliyyatlar:\n• Google Play ödəniş sistemi tərəfindən emal olunur; ödəniş məlumatları (kart, bank hesabı, Google Pay) yalnız Google-a göndərilir.\n• Vakit ödəniş üsulunuzu və maliyyə məlumatlarınızı heç vaxt görmür və saxlamır.\n• İanələri saymaq üçün ianə qeydi (səviyyə, məbləğ, valyuta, birdəfəlik və ya aylıq olması və Google Play sifariş nömrəsi) anonim istifadəçi ID-niz ilə birlikdə serverimizə göndərilir; adınız, e-poçtunuz və ödəniş məlumatlarınız bu qeydə daxil deyil.\n• İanələr tərtibatçıya hədiyyədir; funksiya açmır.\n• Geri qaytarma Google Play üzərindən tələb olunur."
       },
       {
         "t": "7. Məlumat paylaşımı",
@@ -464,7 +464,7 @@ module.exports = {
     },
     "titleBefore": "গোপনীয়তা নীতি ",
     "titleEm": "Android",
-    "desc": "সর্বশেষ হালনাগাদ: ৬ অক্টোবর ২০২৬\n\nVakit আপনার গোপনীয়তাকে সম্মান করে। আপনার কোনো অ্যাকাউন্ট লাগে না, এবং আমরা আপনার নাম, ইমেইল, ফোন নম্বর, ছবি বা কন্টাক্টের মতো পরিচয়ের তথ্য সংগ্রহ করি না। নামাজের সময়, কিবলার দিক ও রিমাইন্ডার আপনার ডিভাইসেই হিসাব করা হয়। আপনার ইবাদতের রেকর্ড (জিকির, খতম, বুকমার্ক, লক্ষ্য, প্রিয় মসজিদ) আপনার ডিভাইসে সংরক্ষিত থাকে, আর Android ব্যাকআপ চালু থাকলে আপনার নিজের Google অ্যাকাউন্টেও — সেগুলো কখনো আমাদের সার্ভারে পাঠানো হয় না। অ্যাপটি উন্নত করার জন্য শুধু ব্যবহারের পরিসংখ্যান আমাদের সার্ভারে পাঠানো হয়; সেই তথ্য পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি ব্যবহারকারী কোডের সঙ্গে যুক্ত। কোনো ক্র্যাশ রিপোর্ট বা বিজ্ঞাপন আইডি পাঠানো হয় না।",
+    "desc": "সর্বশেষ হালনাগাদ: ৭ অক্টোবর ২০২৬\n\nVakit আপনার গোপনীয়তাকে সম্মান করে। আপনার কোনো অ্যাকাউন্ট লাগে না, এবং আমরা আপনার নাম, ইমেইল, ফোন নম্বর, ছবি বা কন্টাক্টের মতো পরিচয়ের তথ্য সংগ্রহ করি না। নামাজের সময়, কিবলার দিক ও রিমাইন্ডার আপনার ডিভাইসেই হিসাব করা হয়। আপনার ইবাদতের রেকর্ড (জিকির, খতম, বুকমার্ক, লক্ষ্য, প্রিয় মসজিদ) আপনার ডিভাইসে সংরক্ষিত থাকে, আর Android ব্যাকআপ চালু থাকলে আপনার নিজের Google অ্যাকাউন্টেও — সেগুলো কখনো আমাদের সার্ভারে পাঠানো হয় না। অ্যাপটি উন্নত করার জন্য শুধু ব্যবহারের পরিসংখ্যান আমাদের সার্ভারে পাঠানো হয়; সেই তথ্য পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি ব্যবহারকারী কোডের সঙ্গে যুক্ত। কোনো ক্র্যাশ রিপোর্ট বা বিজ্ঞাপন আইডি পাঠানো হয় না।",
     "sections": [
       {
         "t": "1. আমরা যে তথ্য সংগ্রহ করি",
@@ -537,8 +537,8 @@ module.exports = {
         "b": "Vakit কোনো বিজ্ঞাপন দেখায় না এবং এতে কোনো বিজ্ঞাপন SDK নেই। আপনার বিজ্ঞাপন আইডি পড়া হয় না।"
       },
       {
-        "t": "6. পেমেন্ট",
-        "b": "Vakit-এ কোনো ইন-অ্যাপ কেনাকাটা নেই এবং কোনো পেমেন্টের তথ্য প্রক্রিয়া করা হয় না।"
+        "t": "6. অনুদান (ইন-অ্যাপ পারচেজ)",
+        "b": "Vakit ফ্রি। ডেভেলপারকে সহযোগিতা করতে “Vakit-কে বাঁচিয়ে রাখুন” স্ক্রিন থেকে ₺10 থেকে ₺10,000 পর্যন্ত ধাপে ঐচ্ছিক অনুদান দিতে পারেন। এই লেনদেনগুলো:\n• Google Play বিলিং দিয়ে প্রক্রিয়া করা হয়; আপনার পেমেন্টের তথ্য (কার্ড, ব্যাংক অ্যাকাউন্ট, Google Pay) কেবল Google-এ যায়।\n• Vakit আপনার পেমেন্ট পদ্ধতি বা আর্থিক তথ্য দেখে না ও সংরক্ষণ করে না।\n• অনুদান গণনার জন্য একটি অনুদান রেকর্ড (স্তর, পরিমাণ, মুদ্রা, এককালীন না মাসিক, এবং Google Play অর্ডার নম্বর) আপনার বেনামী ব্যবহারকারী ID-সহ আমাদের সার্ভারে পাঠানো হয়; আপনার নাম, ইমেল ও পেমেন্টের তথ্য এতে থাকে না।\n• অনুদান ডেভেলপারের জন্য একটি উপহার; কোনো ফিচার খোলে না।\n• ফেরত Google Play-এর মাধ্যমে চাওয়া যায়।"
       },
       {
         "t": "7. তথ্য ভাগাভাগি",
@@ -577,7 +577,7 @@ module.exports = {
     },
     "titleBefore": "Privatlivspolitik ",
     "titleEm": "Android",
-    "desc": "Sidst opdateret: 6. oktober 2026\n\nVakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.",
+    "desc": "Sidst opdateret: 7. oktober 2026\n\nVakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.",
     "sections": [
       {
         "t": "1. Oplysninger vi indsamler",
@@ -650,8 +650,8 @@ module.exports = {
         "b": "Vakit viser ingen reklamer og indeholder intet annonce-SDK. Dit annonce-id læses ikke."
       },
       {
-        "t": "6. Betalinger",
-        "b": "Vakit har ingen køb i appen og behandler ingen betalingsoplysninger."
+        "t": "6. Donationer (køb i app)",
+        "b": "Vakit er gratis. For at støtte udvikleren kan du give valgfrie donationer på ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:\n• Behandles af Google Play-faktureringssystemet; betalingsoplysninger (kort, bankkonto, Google Pay) sendes kun til Google.\n• Vakit ser eller gemmer aldrig din betalingsmetode eller dine økonomiske oplysninger.\n• For at tælle donationerne sendes en donationspost (niveau, beløb, valuta, om den er engangs eller månedlig, og Google Play-ordrenummeret) til vores server sammen med dit anonyme bruger-id; dit navn, din e-mail og dine betalingsoplysninger indgår ikke.\n• Donationer er drikkepenge til udvikleren; de låser ikke funktioner op.\n• Refusion anmodes om via Google Play."
       },
       {
         "t": "7. Deling af data",
@@ -690,7 +690,7 @@ module.exports = {
     },
     "titleBefore": "Datenschutzerklärung ",
     "titleEm": "Android",
-    "desc": "Zuletzt aktualisiert: 6. Oktober 2026\n\nVakit achtet deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Identitätsdaten wie Name, E-Mail-Adresse, Telefonnummer, Fotos oder Kontakte. Gebetszeiten, Qibla-Richtung und Erinnerungen werden auf deinem Gerät berechnet. Deine Gottesdienst-Einträge (Dhikr, Chatm, Lesezeichen, Ziele, bevorzugte Moscheen) werden auf deinem Gerät gespeichert und, wenn die Android-Sicherung aktiviert ist, in deinem eigenen Google-Konto — an unseren Server gehen sie nie. Nur Nutzungsstatistiken werden an unseren Server gesendet, damit wir die App verbessern können; diese Daten sind mit einem Benutzercode ohne identifizierende Angaben verknüpft. Es werden keine Absturzberichte oder Werbe-IDs gesendet.",
+    "desc": "Zuletzt aktualisiert: 7. Oktober 2026\n\nVakit achtet deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Identitätsdaten wie Name, E-Mail-Adresse, Telefonnummer, Fotos oder Kontakte. Gebetszeiten, Qibla-Richtung und Erinnerungen werden auf deinem Gerät berechnet. Deine Gottesdienst-Einträge (Dhikr, Chatm, Lesezeichen, Ziele, bevorzugte Moscheen) werden auf deinem Gerät gespeichert und, wenn die Android-Sicherung aktiviert ist, in deinem eigenen Google-Konto — an unseren Server gehen sie nie. Nur Nutzungsstatistiken werden an unseren Server gesendet, damit wir die App verbessern können; diese Daten sind mit einem Benutzercode ohne identifizierende Angaben verknüpft. Es werden keine Absturzberichte oder Werbe-IDs gesendet.",
     "sections": [
       {
         "t": "1. Welche Daten wir erheben",
@@ -763,8 +763,8 @@ module.exports = {
         "b": "Vakit zeigt keine Werbung und enthält kein Werbe-SDK. Deine Werbe-ID wird nicht gelesen."
       },
       {
-        "t": "6. Zahlungen",
-        "b": "Vakit bietet keine In-App-Käufe und verarbeitet keine Zahlungsdaten."
+        "t": "6. Spenden (In-App-Kauf)",
+        "b": "Vakit ist kostenlos. Zur Unterstützung des Entwicklers kannst du auf dem Bildschirm „Vakit am Leben halten“ freiwillig 10 ₺ bis 10.000 ₺ spenden. Diese Vorgänge:\n• Werden über das Google-Play-Abrechnungssystem abgewickelt; Zahlungsdaten (Karte, Bankkonto, Google Pay) gehen nur an Google.\n• Vakit sieht und speichert weder deine Zahlungsart noch deine Finanzdaten.\n• Damit Spenden gezählt werden können, wird ein Spendeneintrag (Stufe, Betrag, Währung, einmalig oder monatlich sowie die Google-Play-Bestellnummer) zusammen mit deiner anonymen Nutzer-ID an unseren Server gesendet; dein Name, deine E-Mail-Adresse und deine Zahlungsdaten gehören nicht dazu.\n• Spenden sind ein Trinkgeld für den Entwickler; sie schalten keine Funktionen frei.\n• Erstattungen werden über Google Play beantragt."
       },
       {
         "t": "7. Weitergabe von Daten",
@@ -803,7 +803,7 @@ module.exports = {
     },
     "titleBefore": "Política de privacidad ",
     "titleEm": "Android",
-    "desc": "Última actualización: 6 de octubre de 2026\n\nVakit respeta tu privacidad. No necesitas una cuenta y no recogemos datos de identidad como tu nombre, correo electrónico, número de teléfono, fotos o contactos. Los horarios de oración, la dirección de la alquibla y los recordatorios se calculan en tu dispositivo. Tus registros de adoración (dhikr, jatm, marcadores, metas, mezquitas favoritas) se guardan en tu dispositivo y, si la copia de seguridad de Android está activada, en tu propia cuenta de Google — nunca se envían a nuestro servidor. Solo se envían estadísticas de uso a nuestro servidor para que podamos mejorar la app; esos datos están vinculados a un código de usuario sin datos identificativos. No se envían informes de fallos ni identificadores publicitarios.",
+    "desc": "Última actualización: 7 de octubre de 2026\n\nVakit respeta tu privacidad. No necesitas una cuenta y no recogemos datos de identidad como tu nombre, correo electrónico, número de teléfono, fotos o contactos. Los horarios de oración, la dirección de la alquibla y los recordatorios se calculan en tu dispositivo. Tus registros de adoración (dhikr, jatm, marcadores, metas, mezquitas favoritas) se guardan en tu dispositivo y, si la copia de seguridad de Android está activada, en tu propia cuenta de Google — nunca se envían a nuestro servidor. Solo se envían estadísticas de uso a nuestro servidor para que podamos mejorar la app; esos datos están vinculados a un código de usuario sin datos identificativos. No se envían informes de fallos ni identificadores publicitarios.",
     "sections": [
       {
         "t": "1. Datos que recogemos",
@@ -876,8 +876,8 @@ module.exports = {
         "b": "Vakit no muestra anuncios ni contiene ningún SDK de publicidad. Tu ID de publicidad no se lee."
       },
       {
-        "t": "6. Pagos",
-        "b": "Vakit no tiene compras integradas y no procesa ninguna información de pago."
+        "t": "6. Donaciones (compras integradas)",
+        "b": "Vakit es gratuita. Para apoyar al desarrollador puedes donar voluntariamente de 10 ₺ a 10.000 ₺ desde la pantalla «Mantener vivo Vakit». Estas operaciones:\n• Las procesa el sistema de facturación de Google Play; los datos de pago (tarjeta, cuenta bancaria, Google Pay) solo se envían a Google.\n• Vakit no ve ni guarda tu forma de pago ni tus datos financieros.\n• Para contar las donaciones, se envía a nuestro servidor un registro de la donación (nivel, importe, moneda, si es única o mensual y el número de pedido de Google Play) junto con tu ID de usuario anónimo; tu nombre, tu correo y tus datos de pago no forman parte de él.\n• Las donaciones son una propina para el desarrollador; no desbloquean funciones.\n• Los reembolsos se solicitan a través de Google Play."
       },
       {
         "t": "7. Compartición de datos",
@@ -916,7 +916,7 @@ module.exports = {
     },
     "titleBefore": "سیاست حریم خصوصی ",
     "titleEm": "Android",
-    "desc": "آخرین به‌روزرسانی: 6 اکتبر 2026\n\nVakit به حریم خصوصی تو احترام می‌گذارد. به حساب کاربری نیازی نداری و ما داده‌های هویتی مانند نام، ایمیل، شماره تلفن، عکس‌ها یا مخاطبانت را گردآوری نمی‌کنیم. اوقات نماز، جهت قبله و یادآوری‌ها روی دستگاه تو محاسبه می‌شوند. سوابق عبادت تو (ذکر، ختم، نشان‌ها، هدف‌ها، مسجدهای دلخواه) روی دستگاهت ذخیره می‌شود و اگر پشتیبان‌گیری Android روشن باشد، در حساب Google خودت نیز — هرگز به سرور ما فرستاده نمی‌شود. تنها آمار استفاده به سرور ما فرستاده می‌شود تا بتوانیم برنامه را بهتر کنیم؛ آن داده به کد کاربری‌ای پیوند دارد که هیچ اطلاعات شناسایی ندارد. هیچ گزارش خرابی یا شناسه تبلیغاتی فرستاده نمی‌شود.",
+    "desc": "آخرین به‌روزرسانی: 7 اکتبر 2026\n\nVakit به حریم خصوصی تو احترام می‌گذارد. به حساب کاربری نیازی نداری و ما داده‌های هویتی مانند نام، ایمیل، شماره تلفن، عکس‌ها یا مخاطبانت را گردآوری نمی‌کنیم. اوقات نماز، جهت قبله و یادآوری‌ها روی دستگاه تو محاسبه می‌شوند. سوابق عبادت تو (ذکر، ختم، نشان‌ها، هدف‌ها، مسجدهای دلخواه) روی دستگاهت ذخیره می‌شود و اگر پشتیبان‌گیری Android روشن باشد، در حساب Google خودت نیز — هرگز به سرور ما فرستاده نمی‌شود. تنها آمار استفاده به سرور ما فرستاده می‌شود تا بتوانیم برنامه را بهتر کنیم؛ آن داده به کد کاربری‌ای پیوند دارد که هیچ اطلاعات شناسایی ندارد. هیچ گزارش خرابی یا شناسه تبلیغاتی فرستاده نمی‌شود.",
     "sections": [
       {
         "t": "1. داده‌هایی که گردآوری می‌کنیم",
@@ -989,8 +989,8 @@ module.exports = {
         "b": "Vakit هیچ تبلیغی نشان نمی‌دهد و هیچ SDK تبلیغاتی ندارد. شناسه تبلیغاتی تو خوانده نمی‌شود."
       },
       {
-        "t": "6. پرداخت‌ها",
-        "b": "Vakit هیچ خرید درون‌برنامه‌ای ندارد و هیچ اطلاعات پرداختی را پردازش نمی‌کند."
+        "t": "6. کمک مالی (خرید درون‌برنامه‌ای)",
+        "b": "Vakit رایگان است. برای پشتیبانی از توسعه‌دهنده می‌توانی از صفحه «Vakit را زنده نگه دار» کمک اختیاری از ₺10 تا ₺10,000 بدهی. این تراکنش‌ها:\n• با سیستم پرداخت Google Play پردازش می‌شوند؛ جزئیات پرداخت (کارت، حساب بانکی، Google Pay) تنها به Google می‌رسد.\n• Vakit هرگز شیوه پرداخت یا جزئیات مالی تو را نمی‌بیند و ذخیره نمی‌کند.\n• برای شمارش کمک‌ها، یک رکورد کمک (سطح، مبلغ، واحد پول، یک‌باره یا ماهانه بودن و شماره سفارش Google Play) همراه با شناسه کاربری ناشناس تو به سرور ما فرستاده می‌شود؛ نام، ایمیل و جزئیات پرداخت تو در آن نیست.\n• کمک‌ها انعامی برای توسعه‌دهنده‌اند؛ امکانی را باز نمی‌کنند.\n• بازپرداخت از راه Google Play درخواست می‌شود."
       },
       {
         "t": "7. هم‌رسانی داده",
@@ -1029,7 +1029,7 @@ module.exports = {
     },
     "titleBefore": "Politik suturaa ",
     "titleEm": "Android",
-    "desc": "Kesɗitinal sakkitiingal: 6 Yarkomaa 2026\n\nVakit ina teddina suturaa mon. Konte naamnaaka, min mooɓataa keɓe innitorɗe no innde mon, imeel, limngal telefoŋ, nate walla jokkondirɓe mon. Waktuuji juulde, senngo alqibla e siftinooje ina limee e nder kaɓirgal mon. Winndanɗe dewal mon (jikru, khatma, maandorɗe, payndaale, jumaaji cuɓaaɗi) ina mooftee e kaɓirgal mon, so backup Android ina udditi kadi, e konte Google mon keeriiɗo — ɗe neldetaake abadaa to seerbeer amen. Ko limooje kuutorgol tan neldetee to seerbeer amen ngam min mbaawa ɓeydude moƴƴere jaaɓnirgal; ɗeen keɓe ina jokkondiri e kod kuutoroowo mo alaa heen keɓe keeriiɗe. Ciforɗe firtagol walla maandorɗe publisite neldetaake.",
+    "desc": "Kesɗitinal sakkitiingal: 7 Yarkomaa 2026\n\nVakit ina teddina suturaa mon. Konte naamnaaka, min mooɓataa keɓe innitorɗe no innde mon, imeel, limngal telefoŋ, nate walla jokkondirɓe mon. Waktuuji juulde, senngo alqibla e siftinooje ina limee e nder kaɓirgal mon. Winndanɗe dewal mon (jikru, khatma, maandorɗe, payndaale, jumaaji cuɓaaɗi) ina mooftee e kaɓirgal mon, so backup Android ina udditi kadi, e konte Google mon keeriiɗo — ɗe neldetaake abadaa to seerbeer amen. Ko limooje kuutorgol tan neldetee to seerbeer amen ngam min mbaawa ɓeydude moƴƴere jaaɓnirgal; ɗeen keɓe ina jokkondiri e kod kuutoroowo mo alaa heen keɓe keeriiɗe. Ciforɗe firtagol walla maandorɗe publisite neldetaake.",
     "sections": [
       {
         "t": "1. Keɓe ɗe min mooɓata",
@@ -1102,8 +1102,8 @@ module.exports = {
         "b": "Vakit hollataa publisite, alaa kadi SDK publisite. Maandorgal publisite mon janngetaake."
       },
       {
-        "t": "6. Njoɓdi",
-        "b": "Vakit alaa soodgol e nder jaaɓnirgal, gollataa hay keɓe njoɓdi."
+        "t": "6. Dokke (In-App Purchase)",
+        "b": "Vakit ko meere. Ngam wallude gollanoowo oo, aɗon mbaawi waɗde dokke toɗɗaniiɗe gila ₺10 haa ₺10,000 gila e hello 'Wuurnu Vakit'. Ɗee golle:\n• Golloree Google Play Billing; keɓe njoɓdi mon (kart, konte banke, Google Pay) neldee tan Google.\n• Vakit yi'ataa, danndataa mbaydi njoɓdi walla keɓe kaalis mon.\n• Ngam limde dokke, binndol dokkal (daraja, kaalis, ceede, wootere walla lewru kala, e limoore yamiroore Google Play) ina neldee e sarwoor amen wondude e ID kuutoroowo mon mo innde alaa; innde mon, imeel mon e keɓe njoɓdi mon naatataa e mayre.\n• Dokke ko dokkal ngam gollanoowo oo; ɗe udditataa kuule.\n• Ruttugol kaalis ɗaɓɓiree e Google Play."
       },
       {
         "t": "7. Feccugol keɓe",
@@ -1142,7 +1142,7 @@ module.exports = {
     },
     "titleBefore": "Politique de confidentialité ",
     "titleEm": "Android",
-    "desc": "Dernière mise à jour : 6 octobre 2026\n\nVakit respecte ta vie privée. Aucun compte n'est nécessaire, et nous ne collectons aucune donnée d'identité comme ton nom, ton e-mail, ton numéro de téléphone, tes photos ou tes contacts. Les horaires de prière, la direction de la Qibla et les rappels sont calculés sur ton appareil. Tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) sont stockés sur ton appareil et, si la sauvegarde Android est activée, dans ton propre compte Google — ils ne sont jamais envoyés à notre serveur. Seules des statistiques d'utilisation sont envoyées à notre serveur, afin que nous puissions améliorer l'app ; ces données sont rattachées à un code utilisateur sans information identifiante. Aucun rapport de plantage ni aucun identifiant publicitaire n'est envoyé.",
+    "desc": "Dernière mise à jour : 7 octobre 2026\n\nVakit respecte ta vie privée. Aucun compte n'est nécessaire, et nous ne collectons aucune donnée d'identité comme ton nom, ton e-mail, ton numéro de téléphone, tes photos ou tes contacts. Les horaires de prière, la direction de la Qibla et les rappels sont calculés sur ton appareil. Tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) sont stockés sur ton appareil et, si la sauvegarde Android est activée, dans ton propre compte Google — ils ne sont jamais envoyés à notre serveur. Seules des statistiques d'utilisation sont envoyées à notre serveur, afin que nous puissions améliorer l'app ; ces données sont rattachées à un code utilisateur sans information identifiante. Aucun rapport de plantage ni aucun identifiant publicitaire n'est envoyé.",
     "sections": [
       {
         "t": "1. Données que nous collectons",
@@ -1215,8 +1215,8 @@ module.exports = {
         "b": "Vakit n'affiche aucune publicité et ne contient aucun SDK publicitaire. Ton identifiant publicitaire n'est pas lu."
       },
       {
-        "t": "6. Paiements",
-        "b": "Vakit ne propose aucun achat intégré et ne traite aucune information de paiement."
+        "t": "6. Dons (achats intégrés)",
+        "b": "Vakit est gratuite. Pour soutenir le développeur, tu peux faire un don facultatif de 10 ₺ à 10 000 ₺ depuis l'écran « Faire vivre Vakit ». Ces opérations :\n• Sont traitées par le système de facturation Google Play ; les données de paiement (carte, compte bancaire, Google Pay) ne sont envoyées qu'à Google.\n• Vakit ne voit ni ne stocke ton moyen de paiement ni tes données financières.\n• Pour compter les dons, un enregistrement du don (palier, montant, devise, ponctuel ou mensuel, et numéro de commande Google Play) est envoyé à notre serveur avec ton identifiant utilisateur anonyme ; ton nom, ton e-mail et tes données de paiement n'en font pas partie.\n• Les dons sont un pourboire pour le développeur ; ils ne débloquent aucune fonctionnalité.\n• Les remboursements se demandent via Google Play."
       },
       {
         "t": "7. Partage des données",
@@ -1255,7 +1255,7 @@ module.exports = {
     },
     "titleBefore": "निजता नीति ",
     "titleEm": "Android",
-    "desc": "आख़िरी अपडेट: 6 अक्टूबर 2026\n\nVakit आपकी निजता का सम्मान करता है। आपको किसी खाते की ज़रूरत नहीं, और हम आपका नाम, ईमेल, फ़ोन नंबर, तस्वीरें या संपर्क जैसी पहचान की जानकारी नहीं लेते। नमाज़ के वक़्त, क़िबले की दिशा और याददिहानी आपके डिवाइस पर निकाली जाती हैं। आपकी इबादत के रिकॉर्ड (ज़िक्र, ख़त्म, बुकमार्क, लक्ष्य, पसंदीदा मस्जिदें) आपके डिवाइस पर सहेजे जाते हैं, और अगर Android बैकअप चालू है तो आपके अपने Google खाते में भी — ये कभी हमारे सर्वर पर नहीं भेजे जाते। हमारे सर्वर पर सिर्फ़ इस्तेमाल के आँकड़े भेजे जाते हैं, ताकि हम ऐप को बेहतर बना सकें; यह डेटा ऐसे उपयोगकर्ता कोड से जुड़ा है जिसमें कोई पहचान की जानकारी नहीं। कोई क्रैश रिपोर्ट या विज्ञापन आईडी नहीं भेजी जाती।",
+    "desc": "आख़िरी अपडेट: 7 अक्टूबर 2026\n\nVakit आपकी निजता का सम्मान करता है। आपको किसी खाते की ज़रूरत नहीं, और हम आपका नाम, ईमेल, फ़ोन नंबर, तस्वीरें या संपर्क जैसी पहचान की जानकारी नहीं लेते। नमाज़ के वक़्त, क़िबले की दिशा और याददिहानी आपके डिवाइस पर निकाली जाती हैं। आपकी इबादत के रिकॉर्ड (ज़िक्र, ख़त्म, बुकमार्क, लक्ष्य, पसंदीदा मस्जिदें) आपके डिवाइस पर सहेजे जाते हैं, और अगर Android बैकअप चालू है तो आपके अपने Google खाते में भी — ये कभी हमारे सर्वर पर नहीं भेजे जाते। हमारे सर्वर पर सिर्फ़ इस्तेमाल के आँकड़े भेजे जाते हैं, ताकि हम ऐप को बेहतर बना सकें; यह डेटा ऐसे उपयोगकर्ता कोड से जुड़ा है जिसमें कोई पहचान की जानकारी नहीं। कोई क्रैश रिपोर्ट या विज्ञापन आईडी नहीं भेजी जाती।",
     "sections": [
       {
         "t": "1. हम कौन-सी जानकारी लेते हैं",
@@ -1328,8 +1328,8 @@ module.exports = {
         "b": "Vakit कोई विज्ञापन नहीं दिखाता और इसमें कोई विज्ञापन SDK नहीं है। आपकी विज्ञापन आईडी नहीं पढ़ी जाती।"
       },
       {
-        "t": "6. भुगतान",
-        "b": "Vakit में कोई इन-ऐप ख़रीद नहीं है और यह भुगतान की कोई जानकारी प्रोसेस नहीं करता।"
+        "t": "6. दान (इन-ऐप ख़रीद)",
+        "b": "Vakit मुफ़्त है। डेवलपर की मदद के लिए “Vakit को ज़िंदा रखें” स्क्रीन से ₺10 से ₺10,000 तक का स्वैच्छिक दान दे सकते हैं। ये लेन-देन:\n• Google Play बिलिंग से प्रोसेस होते हैं; भुगतान का ब्योरा (कार्ड, बैंक खाता, Google Pay) सिर्फ़ Google को जाता है।\n• Vakit आपका भुगतान का तरीक़ा या वित्तीय जानकारी कभी नहीं देखता या सहेजता।\n• दान गिनने के लिए दान का रिकॉर्ड (स्तर, राशि, मुद्रा, एक बार का है या मासिक, और Google Play ऑर्डर नंबर) आपकी गुमनाम यूज़र ID के साथ हमारे सर्वर पर भेजा जाता है; आपका नाम, ईमेल और भुगतान का ब्योरा इसमें शामिल नहीं होता।\n• दान डेवलपर के लिए तोहफ़ा है; इससे कोई सुविधा नहीं खुलती।\n• रिफ़ंड Google Play के ज़रिए माँगा जाता है।"
       },
       {
         "t": "7. डेटा साझा करना",
@@ -1368,7 +1368,7 @@ module.exports = {
     },
     "titleBefore": "Kebijakan Privasi ",
     "titleEm": "Android",
-    "desc": "Terakhir diperbarui: 6 Oktober 2026\n\nVakit menghormati privasimu. Kamu tidak perlu akun, dan kami tidak mengumpulkan data identitas seperti nama, email, nomor telepon, foto, atau kontakmu. Jadwal salat, arah kiblat, dan pengingat dihitung di perangkatmu. Catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) disimpan di perangkatmu dan, jika pencadangan Android aktif, di akun Google-mu sendiri — catatan itu tidak pernah dikirim ke server kami. Hanya statistik penggunaan yang dikirim ke server kami agar kami dapat menyempurnakan aplikasi; data tersebut terhubung ke kode pengguna tanpa informasi identitas. Tidak ada laporan error atau ID iklan yang dikirim.",
+    "desc": "Terakhir diperbarui: 7 Oktober 2026\n\nVakit menghormati privasimu. Kamu tidak perlu akun, dan kami tidak mengumpulkan data identitas seperti nama, email, nomor telepon, foto, atau kontakmu. Jadwal salat, arah kiblat, dan pengingat dihitung di perangkatmu. Catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) disimpan di perangkatmu dan, jika pencadangan Android aktif, di akun Google-mu sendiri — catatan itu tidak pernah dikirim ke server kami. Hanya statistik penggunaan yang dikirim ke server kami agar kami dapat menyempurnakan aplikasi; data tersebut terhubung ke kode pengguna tanpa informasi identitas. Tidak ada laporan error atau ID iklan yang dikirim.",
     "sections": [
       {
         "t": "1. Informasi yang kami kumpulkan",
@@ -1441,8 +1441,8 @@ module.exports = {
         "b": "Vakit tidak menampilkan iklan dan tidak berisi SDK iklan. ID iklanmu tidak dibaca."
       },
       {
-        "t": "6. Pembayaran",
-        "b": "Vakit tidak memiliki pembelian dalam aplikasi dan tidak memproses informasi pembayaran apa pun."
+        "t": "6. Donasi (pembelian dalam aplikasi)",
+        "b": "Vakit gratis. Untuk mendukung pengembangnya kamu bisa berdonasi secara opsional ₺10 hingga ₺10.000 di layar “Jaga Vakit tetap hidup”. Transaksi ini:\n• Diproses oleh sistem penagihan Google Play; data pembayaran (kartu, rekening bank, Google Pay) hanya dikirim ke Google.\n• Vakit tidak pernah melihat atau menyimpan metode pembayaran maupun data keuanganmu.\n• Untuk menghitung donasi, catatan donasi (tingkat, jumlah, mata uang, apakah sekali atau bulanan, dan nomor pesanan Google Play) dikirim ke server kami bersama ID pengguna anonimmu; nama, email, dan data pembayaranmu tidak termasuk di dalamnya.\n• Donasi adalah tanda terima kasih untuk pengembang; ia tidak membuka fitur.\n• Pengembalian dana diminta melalui Google Play."
       },
       {
         "t": "7. Pembagian data",
@@ -1481,7 +1481,7 @@ module.exports = {
     },
     "titleBefore": "Informativa sulla privacy ",
     "titleEm": "Android",
-    "desc": "Ultimo aggiornamento: 6 ottobre 2026\n\nVakit rispetta la tua privacy. Non ti serve un account e non raccogliamo dati identificativi come nome, e-mail, numero di telefono, foto o contatti. Gli orari di preghiera, la direzione della Qibla e i promemoria vengono calcolati sul tuo dispositivo. I tuoi dati di adorazione (dhikr, khatm, segnalibri, obiettivi, moschee preferite) sono salvati sul tuo dispositivo e, se il backup di Android è attivo, nel tuo account Google — non vengono mai inviati al nostro server. Al nostro server vengono inviate solo statistiche d'uso, per permetterci di migliorare l'app; questi dati sono collegati a un codice utente privo di dati identificativi. Non vengono inviati rapporti sugli arresti anomali né identificatori pubblicitari.",
+    "desc": "Ultimo aggiornamento: 7 ottobre 2026\n\nVakit rispetta la tua privacy. Non ti serve un account e non raccogliamo dati identificativi come nome, e-mail, numero di telefono, foto o contatti. Gli orari di preghiera, la direzione della Qibla e i promemoria vengono calcolati sul tuo dispositivo. I tuoi dati di adorazione (dhikr, khatm, segnalibri, obiettivi, moschee preferite) sono salvati sul tuo dispositivo e, se il backup di Android è attivo, nel tuo account Google — non vengono mai inviati al nostro server. Al nostro server vengono inviate solo statistiche d'uso, per permetterci di migliorare l'app; questi dati sono collegati a un codice utente privo di dati identificativi. Non vengono inviati rapporti sugli arresti anomali né identificatori pubblicitari.",
     "sections": [
       {
         "t": "1. Dati che raccogliamo",
@@ -1554,8 +1554,8 @@ module.exports = {
         "b": "Vakit non mostra pubblicità e non contiene alcun SDK pubblicitario. Il tuo ID pubblicità non viene letto."
       },
       {
-        "t": "6. Pagamenti",
-        "b": "Vakit non ha acquisti in-app e non tratta alcuna informazione di pagamento."
+        "t": "6. Donazioni (acquisti in-app)",
+        "b": "Vakit è gratuita. Per sostenere lo sviluppatore puoi donare volontariamente da 10 ₺ a 10.000 ₺ dalla schermata «Sostieni Vakit». Queste operazioni:\n• Sono gestite dal sistema di fatturazione di Google Play; i dati di pagamento (carta, conto bancario, Google Pay) vanno solo a Google.\n• Vakit non vede né conserva il tuo metodo di pagamento o i tuoi dati finanziari.\n• Per contare le donazioni, un record della donazione (livello, importo, valuta, se è una tantum o mensile e il numero d'ordine Google Play) viene inviato al nostro server insieme al tuo ID utente anonimo; il tuo nome, la tua email e i tuoi dati di pagamento non ne fanno parte.\n• Le donazioni sono una mancia per lo sviluppatore; non sbloccano funzioni.\n• I rimborsi si richiedono tramite Google Play."
       },
       {
         "t": "7. Condivisione dei dati",
@@ -1594,7 +1594,7 @@ module.exports = {
     },
     "titleBefore": "プライバシーポリシー ",
     "titleEm": "Android",
-    "desc": "最終更新： 2026年10月6日\n\nVakitはあなたのプライバシーを尊重します。アカウントは不要で、氏名、メールアドレス、電話番号、写真、連絡先などの身元情報を集めません。礼拝時刻、キブラの方角、リマインダーは端末内で計算します。行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）は端末に保存され、Androidのバックアップがオンの場合はあなた自身のGoogleアカウントにも保存されます — これらが当方のサーバーへ送られることはありません。当方のサーバーへ送るのは、アプリを良くするための利用統計だけです。このデータは身元情報を含まない利用者コードに結びついています。クラッシュレポートや広告IDは送信しません。",
+    "desc": "最終更新： 2026年10月7日\n\nVakitはあなたのプライバシーを尊重します。アカウントは不要で、氏名、メールアドレス、電話番号、写真、連絡先などの身元情報を集めません。礼拝時刻、キブラの方角、リマインダーは端末内で計算します。行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）は端末に保存され、Androidのバックアップがオンの場合はあなた自身のGoogleアカウントにも保存されます — これらが当方のサーバーへ送られることはありません。当方のサーバーへ送るのは、アプリを良くするための利用統計だけです。このデータは身元情報を含まない利用者コードに結びついています。クラッシュレポートや広告IDは送信しません。",
     "sections": [
       {
         "t": "1. 収集する情報",
@@ -1667,8 +1667,8 @@ module.exports = {
         "b": "Vakitは広告を表示せず、広告SDKも含みません。広告IDを読み取ることはありません。"
       },
       {
-        "t": "6. 支払い",
-        "b": "Vakitにはアプリ内課金がなく、支払い情報を扱いません。"
+        "t": "6. 寄付（アプリ内課金）",
+        "b": "Vakitは無料です。開発者を支えるために、「Vakitを支える」画面から10〜10,000トルコリラの任意の寄付ができます。これらの取引は：\n• Google Playの課金システムが処理します。支払いの情報（カード、銀行口座、Google Pay）はGoogleにだけ送られます。\n• Vakitがあなたの支払い方法や金融情報を見たり保存したりすることはありません。\n• 寄付を集計するため、寄付の記録（段階、金額、通貨、1回か毎月か、Google Playの注文番号）が匿名のユーザーIDとともに当方のサーバーに送信されます。名前、メールアドレス、支払い情報は含まれません。\n• 寄付は開発者への心づけで、機能を解放しません。\n• 返金はGoogle Playから申請します。"
       },
       {
         "t": "7. データの共有",
@@ -1707,7 +1707,7 @@ module.exports = {
     },
     "titleBefore": "Dasar Privasi ",
     "titleEm": "Android",
-    "desc": "Kemas kini terakhir: 6 Oktober 2026\n\nVakit menghormati privasi anda. Anda tidak memerlukan akaun, dan kami tidak mengumpul data identiti seperti nama, e-mel, nombor telefon, gambar atau kenalan anda. Waktu solat, arah kiblat dan peringatan dikira pada peranti anda. Catatan ibadah anda (zikir, khatam, penanda, sasaran, masjid kegemaran) disimpan pada peranti anda dan, jika sandaran Android dihidupkan, dalam akaun Google anda sendiri — catatan ini tidak pernah dihantar ke pelayan kami. Hanya statistik penggunaan dihantar ke pelayan kami supaya kami dapat menambah baik apl; data itu terpaut pada kod pengguna tanpa maklumat identiti. Tiada laporan ranap atau ID pengiklanan dihantar.",
+    "desc": "Kemas kini terakhir: 7 Oktober 2026\n\nVakit menghormati privasi anda. Anda tidak memerlukan akaun, dan kami tidak mengumpul data identiti seperti nama, e-mel, nombor telefon, gambar atau kenalan anda. Waktu solat, arah kiblat dan peringatan dikira pada peranti anda. Catatan ibadah anda (zikir, khatam, penanda, sasaran, masjid kegemaran) disimpan pada peranti anda dan, jika sandaran Android dihidupkan, dalam akaun Google anda sendiri — catatan ini tidak pernah dihantar ke pelayan kami. Hanya statistik penggunaan dihantar ke pelayan kami supaya kami dapat menambah baik apl; data itu terpaut pada kod pengguna tanpa maklumat identiti. Tiada laporan ranap atau ID pengiklanan dihantar.",
     "sections": [
       {
         "t": "1. Maklumat yang kami kumpulkan",
@@ -1780,8 +1780,8 @@ module.exports = {
         "b": "Vakit tidak memaparkan iklan dan tidak mengandungi SDK pengiklanan. ID pengiklanan anda tidak dibaca."
       },
       {
-        "t": "6. Pembayaran",
-        "b": "Vakit tidak mempunyai pembelian dalam apl dan tidak memproses sebarang maklumat pembayaran."
+        "t": "6. Derma (belian dalam apl)",
+        "b": "Vakit percuma. Untuk menyokong pembangunnya anda boleh menderma secara pilihan ₺10 hingga ₺10,000 pada skrin “Pastikan Vakit terus hidup”. Transaksi ini:\n• Diproses oleh sistem pengebilan Google Play; data pembayaran (kad, akaun bank, Google Pay) hanya dihantar kepada Google.\n• Vakit tidak pernah melihat atau menyimpan kaedah pembayaran mahupun data kewangan anda.\n• Untuk mengira derma, rekod derma (peringkat, jumlah, mata wang, sama ada sekali sahaja atau bulanan, dan nombor pesanan Google Play) dihantar ke pelayan kami bersama ID pengguna tanpa nama anda; nama, e-mel dan data pembayaran anda tidak termasuk di dalamnya.\n• Derma ialah tanda penghargaan kepada pembangun; ia tidak membuka ciri.\n• Bayaran balik dipohon melalui Google Play."
       },
       {
         "t": "7. Perkongsian data",
@@ -1820,7 +1820,7 @@ module.exports = {
     },
     "titleBefore": "Privacybeleid ",
     "titleEm": "Android",
-    "desc": "Laatst bijgewerkt: 6 oktober 2026\n\nVakit respecteert je privacy. Je hebt geen account nodig en we verzamelen geen identiteitsgegevens zoals je naam, e-mailadres, telefoonnummer, foto's of contacten. Gebedstijden, de Qibla-richting en herinneringen worden op je apparaat berekend. Je aanbiddingsgegevens (dhikr, chatm, bladwijzers, doelen, favoriete moskeeën) worden op je apparaat opgeslagen en, als Android-back-up aanstaat, in je eigen Google-account — ze worden nooit naar onze server gestuurd. Alleen gebruiksstatistieken worden naar onze server gestuurd, zodat we de app kunnen verbeteren; die gegevens zijn gekoppeld aan een gebruikerscode zonder identificerende gegevens. Er worden geen crashrapporten of advertentie-ID's verstuurd.",
+    "desc": "Laatst bijgewerkt: 7 oktober 2026\n\nVakit respecteert je privacy. Je hebt geen account nodig en we verzamelen geen identiteitsgegevens zoals je naam, e-mailadres, telefoonnummer, foto's of contacten. Gebedstijden, de Qibla-richting en herinneringen worden op je apparaat berekend. Je aanbiddingsgegevens (dhikr, chatm, bladwijzers, doelen, favoriete moskeeën) worden op je apparaat opgeslagen en, als Android-back-up aanstaat, in je eigen Google-account — ze worden nooit naar onze server gestuurd. Alleen gebruiksstatistieken worden naar onze server gestuurd, zodat we de app kunnen verbeteren; die gegevens zijn gekoppeld aan een gebruikerscode zonder identificerende gegevens. Er worden geen crashrapporten of advertentie-ID's verstuurd.",
     "sections": [
       {
         "t": "1. Gegevens die we verzamelen",
@@ -1893,8 +1893,8 @@ module.exports = {
         "b": "Vakit toont geen advertenties en bevat geen advertentie-SDK. Je advertentie-ID wordt niet gelezen."
       },
       {
-        "t": "6. Betalingen",
-        "b": "Vakit heeft geen in-app aankopen en verwerkt geen betaalgegevens."
+        "t": "6. Donaties (in-app-aankoop)",
+        "b": "Vakit is gratis. Om de ontwikkelaar te steunen kun je op het scherm «Houd Vakit in leven» optioneel ₺10 tot ₺10.000 doneren. Deze transacties:\n• Worden verwerkt door het factureringssysteem van Google Play; betaalgegevens (kaart, bankrekening, Google Pay) gaan alleen naar Google.\n• Vakit ziet of bewaart je betaalmethode of financiële gegevens nooit.\n• Om donaties te tellen wordt een donatierecord (niveau, bedrag, valuta, eenmalig of maandelijks en het Google Play-bestelnummer) samen met je anonieme gebruikers-ID naar onze server gestuurd; je naam, e-mailadres en betaalgegevens horen daar niet bij.\n• Donaties zijn een fooi voor de ontwikkelaar; ze ontgrendelen geen functies.\n• Terugbetaling vraag je aan via Google Play."
       },
       {
         "t": "7. Delen van gegevens",
@@ -1933,7 +1933,7 @@ module.exports = {
     },
     "titleBefore": "Política de Privacidade ",
     "titleEm": "Android",
-    "desc": "Última atualização: 6 de outubro de 2026\n\nO Vakit respeita a tua privacidade. Não precisas de conta e não recolhemos dados de identidade como o teu nome, e-mail, número de telefone, fotografias ou contactos. Os horários das orações, a direção da Qibla e os lembretes são calculados no teu dispositivo. Os teus registos de adoração (dhikr, khatm, marcadores, metas, mesquitas favoritas) são guardados no teu dispositivo e, se a cópia de segurança do Android estiver ativada, na tua própria conta Google — nunca são enviados para o nosso servidor. Apenas estatísticas de utilização são enviadas para o nosso servidor, para podermos melhorar a app; esses dados estão ligados a um código de utilizador sem informação identificativa. Não são enviados relatórios de falhas nem identificadores de publicidade.",
+    "desc": "Última atualização: 7 de outubro de 2026\n\nO Vakit respeita a tua privacidade. Não precisas de conta e não recolhemos dados de identidade como o teu nome, e-mail, número de telefone, fotografias ou contactos. Os horários das orações, a direção da Qibla e os lembretes são calculados no teu dispositivo. Os teus registos de adoração (dhikr, khatm, marcadores, metas, mesquitas favoritas) são guardados no teu dispositivo e, se a cópia de segurança do Android estiver ativada, na tua própria conta Google — nunca são enviados para o nosso servidor. Apenas estatísticas de utilização são enviadas para o nosso servidor, para podermos melhorar a app; esses dados estão ligados a um código de utilizador sem informação identificativa. Não são enviados relatórios de falhas nem identificadores de publicidade.",
     "sections": [
       {
         "t": "1. Informação que recolhemos",
@@ -2006,8 +2006,8 @@ module.exports = {
         "b": "O Vakit não mostra anúncios e não contém nenhum SDK de publicidade. O teu ID de publicidade não é lido."
       },
       {
-        "t": "6. Pagamentos",
-        "b": "O Vakit não tem compras dentro da app e não trata nenhuma informação de pagamento."
+        "t": "6. Donativos (compra dentro da app)",
+        "b": "O Vakit é gratuito. Para apoiares o programador podes fazer donativos opcionais de ₺10 a ₺10.000 no ecrã «Mantém o Vakit vivo». Estas transações:\n• São processadas pelo sistema de faturação do Google Play; os dados de pagamento (cartão, conta bancária, Google Pay) vão apenas para a Google.\n• O Vakit nunca vê nem guarda o teu método de pagamento ou dados financeiros.\n• Para contar os donativos, um registo do donativo (nível, montante, moeda, se é único ou mensal e o número de encomenda do Google Play) é enviado para o nosso servidor juntamente com o teu ID de utilizador anónimo; o teu nome, e-mail e dados de pagamento não fazem parte dele.\n• Os donativos são uma gorjeta para o programador; não desbloqueiam funcionalidades.\n• Os reembolsos são pedidos através do Google Play."
       },
       {
         "t": "7. Partilha de dados",
@@ -2046,7 +2046,7 @@ module.exports = {
     },
     "titleBefore": "Политика конфиденциальности ",
     "titleEm": "Android",
-    "desc": "Обновлено: 6 октября 2026 г.\n\nVakit уважает вашу конфиденциальность. Учётная запись не нужна, и мы не собираем идентифицирующие данные, такие как имя, e-mail, номер телефона, фотографии или контакты. Время молитв, направление на киблу и напоминания рассчитываются на вашем устройстве. Ваши записи поклонения (зикры, хатм, закладки, цели, любимые мечети) хранятся на устройстве и, если включено резервное копирование Android, в вашем собственном аккаунте Google — они никогда не отправляются на наш сервер. На наш сервер отправляется только статистика использования, чтобы мы могли улучшать приложение; эти данные привязаны к коду пользователя без идентифицирующих сведений. Отчёты о сбоях и рекламные идентификаторы не отправляются.",
+    "desc": "Обновлено: 7 октября 2026 г.\n\nVakit уважает вашу конфиденциальность. Учётная запись не нужна, и мы не собираем идентифицирующие данные, такие как имя, e-mail, номер телефона, фотографии или контакты. Время молитв, направление на киблу и напоминания рассчитываются на вашем устройстве. Ваши записи поклонения (зикры, хатм, закладки, цели, любимые мечети) хранятся на устройстве и, если включено резервное копирование Android, в вашем собственном аккаунте Google — они никогда не отправляются на наш сервер. На наш сервер отправляется только статистика использования, чтобы мы могли улучшать приложение; эти данные привязаны к коду пользователя без идентифицирующих сведений. Отчёты о сбоях и рекламные идентификаторы не отправляются.",
     "sections": [
       {
         "t": "1. Какие данные мы собираем",
@@ -2119,8 +2119,8 @@ module.exports = {
         "b": "Vakit не показывает рекламу и не содержит рекламных SDK. Ваш рекламный идентификатор не считывается."
       },
       {
-        "t": "6. Платежи",
-        "b": "В Vakit нет покупок в приложении, и платёжные данные не обрабатываются."
+        "t": "6. Пожертвования (покупка в приложении)",
+        "b": "Vakit бесплатен. Чтобы поддержать разработчика, на экране «Поддержите Vakit» можно сделать необязательные пожертвования от ₺10 до ₺10 000. Эти операции:\n• Обрабатываются платёжной системой Google Play; платёжные данные (карта, банковский счёт, Google Pay) отправляются только в Google.\n• Vakit никогда не видит и не хранит ваш способ оплаты и финансовые данные.\n• Для учёта пожертвований запись о пожертвовании (уровень, сумма, валюта, разовое оно или ежемесячное, а также номер заказа Google Play) отправляется на наш сервер вместе с вашим анонимным идентификатором пользователя; ваше имя, электронная почта и платёжные данные в неё не входят.\n• Пожертвования — это чаевые разработчику; они не открывают функции.\n• Возврат средств запрашивается через Google Play."
       },
       {
         "t": "7. Передача данных",
@@ -2159,7 +2159,7 @@ module.exports = {
     },
     "titleBefore": "Politika e privatësisë ",
     "titleEm": "Android",
-    "desc": "Përditësimi i fundit: 6 tetor 2026\n\nVakit e respekton privatësinë tuaj. Nuk ju nevojitet llogari dhe nuk mbledhim të dhëna identiteti si emri, e-maili, numri i telefonit, fotografitë apo kontaktet tuaja. Kohët e namazit, drejtimi i kiblës dhe kujtesat llogariten në pajisjen tuaj. Regjistrimet tuaja të ibadetit (dhikri, hatmja, shënuesit, synimet, xhamitë e preferuara) ruhen në pajisjen tuaj dhe, nëse kopjeruajtja e Android-it është aktive, në llogarinë tuaj Google — ato nuk dërgohen kurrë në serverin tonë. Në serverin tonë dërgohen vetëm statistikat e përdorimit, që të mund ta përmirësojmë aplikacionin; këto të dhëna janë të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Nuk dërgohen raporte ndërprerjesh apo identifikues reklamash.",
+    "desc": "Përditësimi i fundit: 7 tetor 2026\n\nVakit e respekton privatësinë tuaj. Nuk ju nevojitet llogari dhe nuk mbledhim të dhëna identiteti si emri, e-maili, numri i telefonit, fotografitë apo kontaktet tuaja. Kohët e namazit, drejtimi i kiblës dhe kujtesat llogariten në pajisjen tuaj. Regjistrimet tuaja të ibadetit (dhikri, hatmja, shënuesit, synimet, xhamitë e preferuara) ruhen në pajisjen tuaj dhe, nëse kopjeruajtja e Android-it është aktive, në llogarinë tuaj Google — ato nuk dërgohen kurrë në serverin tonë. Në serverin tonë dërgohen vetëm statistikat e përdorimit, që të mund ta përmirësojmë aplikacionin; këto të dhëna janë të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Nuk dërgohen raporte ndërprerjesh apo identifikues reklamash.",
     "sections": [
       {
         "t": "1. Të dhënat që mbledhim",
@@ -2232,8 +2232,8 @@ module.exports = {
         "b": "Vakit nuk shfaq reklama dhe nuk përmban asnjë SDK reklamash. ID-ja juaj e reklamave nuk lexohet."
       },
       {
-        "t": "6. Pagesat",
-        "b": "Vakit nuk ka blerje brenda aplikacionit dhe nuk përpunon asnjë të dhënë pagese."
+        "t": "6. Donacionet (Blerje brenda aplikacionit)",
+        "b": "Vakit është falas. Për të mbështetur zhvilluesin mund të bëni donacione opsionale prej ₺10 deri në ₺10.000 nga ekrani “Mbajeni Vakit gjallë”. Këto transaksione:\n• Përpunohen nga sistemi i faturimit të Google Play; detajet e pagesës (karta, llogaria bankare, Google Pay) i dërgohen vetëm Google.\n• Vakit nuk sheh dhe nuk ruan kurrë mënyrën tuaj të pagesës apo detajet financiare.\n• Për të numëruar donacionet, një regjistrim i donacionit (niveli, shuma, monedha, nëse është i njëhershëm apo mujor dhe numri i porosisë në Google Play) dërgohet në serverin tonë bashkë me ID-në tuaj anonime të përdoruesit; emri, email-i dhe detajet tuaja të pagesës nuk përfshihen në të.\n• Donacionet janë dhurata për zhvilluesin; nuk zhbllokojnë veçori.\n• Rimbursimet kërkohen përmes Google Play."
       },
       {
         "t": "7. Ndarja e të dhënave",
@@ -2272,7 +2272,7 @@ module.exports = {
     },
     "titleBefore": "Sera ya Faragha ",
     "titleEm": "Android",
-    "desc": "Ilisasishwa mwisho: 6 Oktoba 2026\n\nVakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi data za utambulisho kama jina lako, barua pepe, nambari ya simu, picha au anwani za mawasiliano. Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa ndani ya kifaa chako. Kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) huhifadhiwa ndani ya kifaa chako na, ikiwa nakala rudufu ya Android imewashwa, katika akaunti yako mwenyewe ya Google — hazitumwi kamwe kwenye seva yetu. Ni takwimu za matumizi pekee zinazotumwa kwenye seva yetu ili tuweze kuboresha programu; data hiyo imeunganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Hakuna ripoti za hitilafu wala vitambulisho vya matangazo vinavyotumwa.",
+    "desc": "Ilisasishwa mwisho: 7 Oktoba 2026\n\nVakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi data za utambulisho kama jina lako, barua pepe, nambari ya simu, picha au anwani za mawasiliano. Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa ndani ya kifaa chako. Kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) huhifadhiwa ndani ya kifaa chako na, ikiwa nakala rudufu ya Android imewashwa, katika akaunti yako mwenyewe ya Google — hazitumwi kamwe kwenye seva yetu. Ni takwimu za matumizi pekee zinazotumwa kwenye seva yetu ili tuweze kuboresha programu; data hiyo imeunganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Hakuna ripoti za hitilafu wala vitambulisho vya matangazo vinavyotumwa.",
     "sections": [
       {
         "t": "1. Taarifa Tunazokusanya",
@@ -2345,8 +2345,8 @@ module.exports = {
         "b": "Vakit haionyeshi matangazo na haina SDK yoyote ya matangazo. Kitambulisho chako cha matangazo hakisomwi."
       },
       {
-        "t": "6. Malipo",
-        "b": "Vakit haina manunuzi ndani ya programu na haichakati taarifa zozote za malipo."
+        "t": "6. Michango (Manunuzi Ndani ya Programu)",
+        "b": "Vakit ni bure. Ili kumsaidia msanidi unaweza kutoa michango ya hiari ya kuanzia ₺10 hadi ₺10,000 kutoka skrini ya “Iendeleze Vakit”. Miamala hii:\n• Huchakatwa na mfumo wa malipo wa Google Play; maelezo ya malipo (kadi, akaunti ya benki, Google Pay) hutumwa kwa Google pekee.\n• Vakit haioni wala kuhifadhi njia yako ya malipo au maelezo yako ya kifedha.\n• Ili kuhesabu michango, rekodi ya mchango (kiwango, kiasi, sarafu, ikiwa ni wa mara moja au wa kila mwezi, na nambari ya agizo la Google Play) hutumwa kwenye seva yetu pamoja na kitambulisho chako cha mtumiaji kisichojulikana; jina lako, barua pepe yako na maelezo yako ya malipo hayamo ndani yake.\n• Michango ni zawadi kwa msanidi; haifungui vipengele.\n• Marejesho huombwa kupitia Google Play."
       },
       {
         "t": "7. Kushiriki Data",
@@ -2385,7 +2385,7 @@ module.exports = {
     },
     "titleBefore": "นโยบายความเป็นส่วนตัว ",
     "titleEm": "Android",
-    "desc": "อัปเดตล่าสุด: 6 ตุลาคม 2026\n\nVakit เคารพความเป็นส่วนตัวของคุณ คุณไม่ต้องมีบัญชี และเราไม่เก็บข้อมูลระบุตัวตน เช่น ชื่อ อีเมล เบอร์โทรศัพท์ รูปภาพ หรือรายชื่อผู้ติดต่อ เวลาละหมาด ทิศกิบลัต และการเตือนคำนวณบนเครื่องของคุณ บันทึกอิบาดะฮฺของคุณ (ซิกิร คอตัม ที่คั่น เป้าหมาย มัสยิดที่ชอบ) เก็บไว้บนเครื่องของคุณ และหากเปิดการสำรองข้อมูลของ Android ไว้ ก็จะเก็บในบัญชี Google ของคุณเองด้วย — บันทึกเหล่านี้ไม่เคยถูกส่งไปยังเซิร์ฟเวอร์ของเรา มีเพียงสถิติการใช้งานเท่านั้นที่ถูกส่งไปยังเซิร์ฟเวอร์ของเราเพื่อให้เราปรับปรุงแอปได้ ข้อมูลนั้นผูกกับรหัสผู้ใช้ที่ไม่มีข้อมูลระบุตัวตน ไม่มีการส่งรายงานข้อขัดข้องหรือรหัสโฆษณา",
+    "desc": "อัปเดตล่าสุด: 7 ตุลาคม 2026\n\nVakit เคารพความเป็นส่วนตัวของคุณ คุณไม่ต้องมีบัญชี และเราไม่เก็บข้อมูลระบุตัวตน เช่น ชื่อ อีเมล เบอร์โทรศัพท์ รูปภาพ หรือรายชื่อผู้ติดต่อ เวลาละหมาด ทิศกิบลัต และการเตือนคำนวณบนเครื่องของคุณ บันทึกอิบาดะฮฺของคุณ (ซิกิร คอตัม ที่คั่น เป้าหมาย มัสยิดที่ชอบ) เก็บไว้บนเครื่องของคุณ และหากเปิดการสำรองข้อมูลของ Android ไว้ ก็จะเก็บในบัญชี Google ของคุณเองด้วย — บันทึกเหล่านี้ไม่เคยถูกส่งไปยังเซิร์ฟเวอร์ของเรา มีเพียงสถิติการใช้งานเท่านั้นที่ถูกส่งไปยังเซิร์ฟเวอร์ของเราเพื่อให้เราปรับปรุงแอปได้ ข้อมูลนั้นผูกกับรหัสผู้ใช้ที่ไม่มีข้อมูลระบุตัวตน ไม่มีการส่งรายงานข้อขัดข้องหรือรหัสโฆษณา",
     "sections": [
       {
         "t": "1. ข้อมูลที่เราเก็บ",
@@ -2458,8 +2458,8 @@ module.exports = {
         "b": "Vakit ไม่แสดงโฆษณาและไม่มี SDK โฆษณา รหัสโฆษณาของคุณจะไม่ถูกอ่าน"
       },
       {
-        "t": "6. การชำระเงิน",
-        "b": "Vakit ไม่มีการซื้อภายในแอปและไม่ประมวลผลข้อมูลการชำระเงินใด ๆ"
+        "t": "6. การบริจาค (ซื้อในแอป)",
+        "b": "Vakit ฟรี หากต้องการสนับสนุนนักพัฒนา คุณบริจาคตามสมัครใจได้ตั้งแต่ 10 ถึง 10,000 ลีราตุรกีจากหน้าจอ “สนับสนุน Vakit” ธุรกรรมเหล่านี้:\n• ประมวลผลโดยระบบการเรียกเก็บเงินของ Google Play ข้อมูลการชำระเงิน (บัตร บัญชีธนาคาร Google Pay) ส่งไปที่ Google เท่านั้น\n• Vakit ไม่เคยเห็นหรือจัดเก็บวิธีชำระเงินหรือข้อมูลทางการเงินของคุณ\n• เพื่อนับจำนวนการบริจาค ระบบจะส่งบันทึกการบริจาค (ระดับ จำนวนเงิน สกุลเงิน แบบครั้งเดียวหรือรายเดือน และหมายเลขคำสั่งซื้อ Google Play) ไปยังเซิร์ฟเวอร์ของเราพร้อมรหัสผู้ใช้แบบไม่ระบุตัวตนของคุณ โดยไม่รวมชื่อ อีเมล หรือข้อมูลการชำระเงินของคุณ\n• การบริจาคเป็นน้ำใจให้นักพัฒนา ไม่ปลดล็อกฟีเจอร์\n• การขอคืนเงินทำผ่าน Google Play"
       },
       {
         "t": "7. การแบ่งปันข้อมูล",
@@ -2498,7 +2498,7 @@ module.exports = {
     },
     "titleBefore": "مەخپىيەتلىك سىياسىتى ",
     "titleEm": "Android",
-    "desc": "ئاخىرقى يېڭىلانغان: 2026-يىلى 6-ئۆكتەبىر\n\nVakit مەخپىيەتلىكىڭىزنى ھۆرمەت قىلىدۇ. ھېسابات ئېچىشىڭىزنىڭ ھاجىتى يوق، بىز ئىسمىڭىز، ئېلخەت ئادرېسىڭىز، تېلېفون نومۇرىڭىز، سۈرەتلىرىڭىز ياكى ئالاقەداشلىرىڭىزغا ئوخشاش كىملىك ئۇچۇرلىرىنى يىغمايمىز. ناماز ۋاقىتلىرى، قىبلە يۆنىلىشى ۋە ئەسكەرتىشلەر ئۈسكۈنىڭىزدە ھېسابلىنىدۇ. ئىبادەت خاتىرىلىرىڭىز (زىكىر، خەتمە، خەتكۈچلەر، نىشانلار، ياقتۇرغان مەسچىتلەر) ئۈسكۈنىڭىزدە ساقلىنىدۇ، ئەگەر Android زاپاسلاش ئوچۇق بولسا، ئۆزىڭىزنىڭ Google ھېساباتىدىمۇ ساقلىنىدۇ — ئۇلار ھەرگىز مۇلازىمېتىرىمىزغا ئەۋەتىلمەيدۇ. ئەپنى ياخشىلىشىمىز ئۈچۈن مۇلازىمېتىرىمىزغا پەقەت ئىشلىتىش ستاتىستىكىسىلا ئەۋەتىلىدۇ؛ بۇ سانلىق مەلۇمات ھېچقانداق كىملىك ئۇچۇرى بولمىغان ئىشلەتكۈچى كودىغا باغلانغان. يىمىرىلىش دوكلاتى ياكى ئېلان كىملىكى ئەۋەتىلمەيدۇ.",
+    "desc": "ئاخىرقى يېڭىلانغان: 2026-يىلى 7-ئۆكتەبىر\n\nVakit مەخپىيەتلىكىڭىزنى ھۆرمەت قىلىدۇ. ھېسابات ئېچىشىڭىزنىڭ ھاجىتى يوق، بىز ئىسمىڭىز، ئېلخەت ئادرېسىڭىز، تېلېفون نومۇرىڭىز، سۈرەتلىرىڭىز ياكى ئالاقەداشلىرىڭىزغا ئوخشاش كىملىك ئۇچۇرلىرىنى يىغمايمىز. ناماز ۋاقىتلىرى، قىبلە يۆنىلىشى ۋە ئەسكەرتىشلەر ئۈسكۈنىڭىزدە ھېسابلىنىدۇ. ئىبادەت خاتىرىلىرىڭىز (زىكىر، خەتمە، خەتكۈچلەر، نىشانلار، ياقتۇرغان مەسچىتلەر) ئۈسكۈنىڭىزدە ساقلىنىدۇ، ئەگەر Android زاپاسلاش ئوچۇق بولسا، ئۆزىڭىزنىڭ Google ھېساباتىدىمۇ ساقلىنىدۇ — ئۇلار ھەرگىز مۇلازىمېتىرىمىزغا ئەۋەتىلمەيدۇ. ئەپنى ياخشىلىشىمىز ئۈچۈن مۇلازىمېتىرىمىزغا پەقەت ئىشلىتىش ستاتىستىكىسىلا ئەۋەتىلىدۇ؛ بۇ سانلىق مەلۇمات ھېچقانداق كىملىك ئۇچۇرى بولمىغان ئىشلەتكۈچى كودىغا باغلانغان. يىمىرىلىش دوكلاتى ياكى ئېلان كىملىكى ئەۋەتىلمەيدۇ.",
     "sections": [
       {
         "t": "1. بىز يىغىدىغان ئۇچۇرلار",
@@ -2571,8 +2571,8 @@ module.exports = {
         "b": "Vakit ئېلان كۆرسەتمەيدۇ ۋە ھېچقانداق ئېلان SDK سى يوق. ئېلان كىملىكىڭىز ئوقۇلمايدۇ."
       },
       {
-        "t": "6. پۇل تۆلەش",
-        "b": "Vakit تا ئەپ ئىچى سېتىۋېلىش يوق، ھېچقانداق پۇل تۆلەش ئۇچۇرى بىر تەرەپ قىلىنمايدۇ."
+        "t": "6. ئىئانە (ئەپ ئىچى سېتىۋېلىش)",
+        "b": "Vakit ھەقسىز. ئىجادىيەتچىنى قوللاش ئۈچۈن «Vakit نى ياشىتىڭ» ئېكرانىدىن ₺10 دىن ₺10,000 غىچە خالىغان ئىئانە قىلالايسىز. بۇ مۇئامىلىلەر:\n• Google Play پۇل تۆلەش سىستېمىسى ئارقىلىق بىر تەرەپ قىلىنىدۇ؛ چىقىم ئۇچۇرلىرى (كارتا، بانكا ھېساباتى، Google Pay) پەقەت Google غا ئەۋەتىلىدۇ.\n• Vakit چىقىم ئۇسۇلىڭىزنى ياكى مالىيە ئۇچۇرلىرىڭىزنى ھەرگىز كۆرمەيدۇ ۋە ساقلىمايدۇ.\n• ئىئانىلەرنى ساناش ئۈچۈن ئىئانە خاتىرىسى (دەرىجە، سومما، پۇل تۈرى، بىر قېتىملىق ياكى ئايلىق ئىكەنلىكى ۋە Google Play زاكاز نومۇرى) نامسىز ئىشلەتكۈچى كىملىكىڭىز بىلەن بىللە مۇلازىمېتىرىمىزغا ئەۋەتىلىدۇ؛ ئىسمىڭىز، ئېلخەت ئادرېسىڭىز ۋە چىقىم ئۇچۇرلىرىڭىز ئۇنىڭ ئىچىدە يوق.\n• ئىئانىلەر ئىجادىيەتچىگە بېرىلگەن قوللاش؛ ئىقتىدار ئاچمايدۇ.\n• پۇل قايتۇرۇش Google Play ئارقىلىق تەلەپ قىلىنىدۇ."
       },
       {
         "t": "7. سانلىق مەلۇمات ھەمبەھىرلەش",
@@ -2611,7 +2611,7 @@ module.exports = {
     },
     "titleBefore": "رازداری کی پالیسی ",
     "titleEm": "Android",
-    "desc": "آخری تازہ کاری: 6 اکتوبر 2026\n\nVakit آپ کی رازداری کا احترام کرتا ہے۔ آپ کو کسی اکاؤنٹ کی ضرورت نہیں، اور ہم آپ کا نام، ای میل، فون نمبر، تصاویر یا رابطے جیسی شناختی معلومات جمع نہیں کرتے۔ نماز کے اوقات، قبلہ کا رخ اور یاد دہانیاں آپ کے آلے پر شمار ہوتی ہیں۔ آپ کے عبادت کے ریکارڈ (ذکر، ختم، نشانیاں، اہداف، پسندیدہ مساجد) آپ کے آلے پر محفوظ ہوتے ہیں، اور اگر Android بیک اپ آن ہو تو آپ کے اپنے Google اکاؤنٹ میں بھی — یہ کبھی ہمارے سرور کو نہیں بھیجے جاتے۔ ہمارے سرور کو صرف استعمال کے اعداد و شمار بھیجے جاتے ہیں تاکہ ہم ایپ کو بہتر بنا سکیں؛ یہ ڈیٹا ایک ایسے صارف کوڈ سے منسلک ہوتا ہے جس میں کوئی شناختی معلومات نہیں۔ کوئی کریش رپورٹ یا اشتہاری شناخت کنندہ نہیں بھیجا جاتا۔",
+    "desc": "آخری تازہ کاری: 7 اکتوبر 2026\n\nVakit آپ کی رازداری کا احترام کرتا ہے۔ آپ کو کسی اکاؤنٹ کی ضرورت نہیں، اور ہم آپ کا نام، ای میل، فون نمبر، تصاویر یا رابطے جیسی شناختی معلومات جمع نہیں کرتے۔ نماز کے اوقات، قبلہ کا رخ اور یاد دہانیاں آپ کے آلے پر شمار ہوتی ہیں۔ آپ کے عبادت کے ریکارڈ (ذکر، ختم، نشانیاں، اہداف، پسندیدہ مساجد) آپ کے آلے پر محفوظ ہوتے ہیں، اور اگر Android بیک اپ آن ہو تو آپ کے اپنے Google اکاؤنٹ میں بھی — یہ کبھی ہمارے سرور کو نہیں بھیجے جاتے۔ ہمارے سرور کو صرف استعمال کے اعداد و شمار بھیجے جاتے ہیں تاکہ ہم ایپ کو بہتر بنا سکیں؛ یہ ڈیٹا ایک ایسے صارف کوڈ سے منسلک ہوتا ہے جس میں کوئی شناختی معلومات نہیں۔ کوئی کریش رپورٹ یا اشتہاری شناخت کنندہ نہیں بھیجا جاتا۔",
     "sections": [
       {
         "t": "1. ہم کون سی معلومات جمع کرتے ہیں",
@@ -2684,8 +2684,8 @@ module.exports = {
         "b": "Vakit کوئی اشتہار نہیں دکھاتا اور اس میں کوئی اشتہاری SDK نہیں ہے۔ آپ کی اشتہاری ID نہیں پڑھی جاتی۔"
       },
       {
-        "t": "6. ادائیگیاں",
-        "b": "Vakit میں کوئی ان-ایپ خریداری نہیں ہے اور یہ ادائیگی کی کوئی معلومات پراسیس نہیں کرتا۔"
+        "t": "6. عطیات (ان-ایپ خریداری)",
+        "b": "Vakit مفت ہے۔ ڈویلپر کی مدد کے لیے آپ «Vakit کو زندہ رکھیں» اسکرین سے ₺10 سے ₺10,000 تک کے اختیاری عطیات دے سکتے ہیں۔ یہ لین دین:\n• Google Play بلنگ کے ذریعے پروسیس ہوتے ہیں؛ ادائیگی کی تفصیلات (کارڈ، بینک اکاؤنٹ، Google Pay) صرف Google کو جاتی ہیں۔\n• Vakit آپ کا ذریعۂ ادائیگی یا مالی تفصیلات نہ دیکھتا ہے نہ محفوظ کرتا ہے۔\n• عطیات شمار کرنے کے لیے عطیے کا ریکارڈ (درجہ، رقم، کرنسی، ایک بار کا یا ماہانہ ہونا، اور Google Play آرڈر نمبر) آپ کی گمنام صارف ID کے ساتھ ہمارے سرور کو بھیجا جاتا ہے؛ آپ کا نام، ای میل اور ادائیگی کی تفصیلات اس میں شامل نہیں ہوتیں۔\n• عطیات ڈویلپر کے لیے تحفہ ہیں؛ ان سے کوئی خصوصیت نہیں کھلتی۔\n• رقم کی واپسی Google Play کے ذریعے مانگی جاتی ہے۔"
       },
       {
         "t": "7. ڈیٹا کی شراکت",
@@ -2724,7 +2724,7 @@ module.exports = {
     },
     "titleBefore": "隐私政策 ",
     "titleEm": "Android",
-    "desc": "上次更新： 2026年10月6日\n\nVakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。",
+    "desc": "上次更新： 2026年10月7日\n\nVakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。",
     "sections": [
       {
         "t": "1. 我们收集的信息",
@@ -2797,8 +2797,8 @@ module.exports = {
         "b": "Vakit 不显示广告，也不含任何广告 SDK。不会读取你的广告 ID。"
       },
       {
-        "t": "6. 付款",
-        "b": "Vakit 没有应用内购买，也不处理任何付款信息。"
+        "t": "6. 捐助（应用内购买）",
+        "b": "Vakit 是免费的。为支持开发者，你可以在「支持 Vakit」页面自愿捐助 10 至 10,000 土耳其里拉。这些交易：\n• 由 Google Play 结算系统处理；付款信息（卡片、银行账户、Google Pay）只发送给 Google。\n• Vakit 从不查看或存储你的付款方式或财务信息。\n• 为统计捐助，一条捐助记录（档位、金额、币种、一次性还是每月，以及 Google Play 订单号）会与你的匿名用户 ID 一起发送到我们的服务器；其中不包含你的姓名、电子邮件或付款信息。\n• 捐助是给开发者的心意；不解锁功能。\n• 退款通过 Google Play 申请。"
       },
       {
         "t": "7. 数据共享",
