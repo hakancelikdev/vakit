@@ -1283,12 +1283,17 @@ function robots() {
     "Googlebot",
   ];
 
+  // Not for search: Google Play review material (foreground-service demo videos linked only from the
+  // Play Console declaration). Every group repeats it — a crawler obeys only its own group.
+  const hidden = ["/assets/video/play-review/"].map((p) => `Disallow: ${p}`).join("\n");
+
   return `# https://vakit.hakancelik.dev
 User-agent: *
 Allow: /
+${hidden}
 
 # Search and AI assistants are explicitly welcome to read and cite this page.
-${aiBots.map((b) => `User-agent: ${b}\nAllow: /`).join("\n\n")}
+${aiBots.map((b) => `User-agent: ${b}\nAllow: /\n${hidden}`).join("\n\n")}
 
 # Nothing useful to crawl here
 Disallow: /assets/favicon*

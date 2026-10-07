@@ -54,7 +54,7 @@ Hand-maintained files in `docs/`:
 The live clock (the band under the hero) fetches times from the public Aladhan API. It keeps the last good answer per city in `localStorage` and hides itself if it has no times at all — never a row of `00:00:00`. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
 
 The site loads **no analytics or tracking scripts** (Google Analytics was removed 2026-09-10; `npm test` fails if it comes back). App Store campaign tokens (`storeLink`) are the only acquisition measurement.
-| `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`) |
+| `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`). `assets/video/play-review/` = Google Play foreground-service demo videos for the Android app (720p, silent); linked only from the Play Console declaration, `Disallow`ed in `robots.txt` — keep them until the app is approved for production |
 
 ### The Vakit Manifesto
 

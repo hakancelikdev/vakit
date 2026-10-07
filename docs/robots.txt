@@ -1,46 +1,60 @@
 # https://vakit.hakancelik.dev
 User-agent: *
 Allow: /
+Disallow: /assets/video/play-review/
 
 # Search and AI assistants are explicitly welcome to read and cite this page.
 User-agent: GPTBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: CCBot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /assets/video/play-review/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /assets/video/play-review/
 
 # Nothing useful to crawl here
 Disallow: /assets/favicon*
