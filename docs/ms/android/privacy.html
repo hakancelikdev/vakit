@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>Dasar Privasi <em>Android</em></h1>
   <p class="legal-notice">Halaman ini ialah terjemahan yang disediakan untuk kemudahan; jika terdapat perbezaan dengan versi bahasa Inggeris, versi bahasa Inggeris yang terpakai. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Kemas kini terakhir: 7 Oktober 2026
+  <p class="legal-desc">Kemas kini terakhir: 8 Oktober 2026
 
 Vakit menghormati privasi anda. Anda tidak memerlukan akaun, dan kami tidak mengumpul data identiti seperti nama, e-mel, nombor telefon, gambar atau kenalan anda. Waktu solat, arah kiblat dan peringatan dikira pada peranti anda. Catatan ibadah anda (zikir, khatam, penanda, sasaran, masjid kegemaran) disimpan pada peranti anda dan, jika sandaran Android dihidupkan, dalam akaun Google anda sendiri — catatan ini tidak pernah dihantar ke pelayan kami. Hanya statistik penggunaan dihantar ke pelayan kami supaya kami dapat menambah baik apl; data itu terpaut pada kod pengguna tanpa maklumat identiti. Tiada laporan ranap atau ID pengiklanan dihantar.</p>
   <div class="legal-card"><h2>1. Maklumat yang kami kumpulkan</h2><div class="legal-item"><h3>Data lokasi</h3><p>Tujuan: Mengira waktu solat harian dan arah kiblat, memaparkan nama bandar anda dan mencari masjid berdekatan
@@ -112,8 +112,8 @@ Penyimpanan: Lokasi terakhir anda disimpan pada peranti supaya waktu solat dapat
 Pemprosesan: Hanya pada peranti
 Penyimpanan: Tidak disimpan</p></div><div class="legal-item"><h3>Data gerakan</h3><p>Tujuan: Pelicinan dan kestabilan kompas (penderia vektor putaran)
 Pemprosesan: Hanya pada peranti
-Penyimpanan: Tidak disimpan</p></div><div class="legal-item"><h3>Data pemberitahuan</h3><p>Tujuan: Menghantar pemberitahuan solat setempat
-Pemprosesan: AlarmManager / Saluran Pemberitahuan Android
+Penyimpanan: Tidak disimpan</p></div><div class="legal-item"><h3>Data pemberitahuan</h3><p>Tujuan: Menghantar peringatan solat serta pengumuman hari kebesaran dan versi baharu
+Pemprosesan: AlarmManager / Saluran Pemberitahuan Android · Firebase Cloud Messaging (Google)
 Penyimpanan: Sehingga anda mematikannya atau memadam apl</p></div><div class="legal-item"><h3>Data tetapan</h3><p>Tujuan: Mengingati pilihan anda
 Pemprosesan: DataStore (pilihan umum dihantar ke pelayan kami dengan kod pengguna samaran; tiada kandungan peribadi disertakan)
 Penyimpanan: Sehingga anda set semula atau memadam apl. Data pilihan pada pelayan tidak dipadam secara automatik; ia dipadam atas permintaan.</p></div><div class="legal-item"><h3>Statistik penggunaan</h3><p>Tujuan: Memantau prestasi apl, mengesan pepijat dan menambah baik pengalaman
@@ -123,7 +123,8 @@ Penyimpanan: Disimpan untuk statistik agregat dan tidak dipadam secara automatik
 Yang dihantar ke pelayan kami: kod pengguna tanpa maklumat identiti, negara anda (bukan koordinat GPS), maklumat peranti dan versi, pilihan anda dalam apl (bahasa, kaedah pengiraan, tema, mazhab, jenis kalendar, jantina yang anda pilih untuk panduan solat, pilihan pemberitahuan dan bacaan Al-Quran/hadis), serta statistik penggunaan ciri. Statistik itu menunjukkan bahawa sesuatu bahagian digunakan; kandungan catatan anda tidak disertakan. Perkataan yang anda cari dalam apl dihantar: kami menyimpannya, paling banyak 80 aksara, untuk melihat sama ada carian menemui apa yang anda perlukan dan menambah baik hasilnya.</p></div>
   <div class="legal-card"><h2>2. Cara kami menggunakan data anda</h2><p>• Waktu solat – dikira di luar talian pada peranti anda dengan pustaka Adhan; tiada koordinat dihantar untuk ini.
 • Arah kiblat – lokasi dan arah kompas digabungkan pada peranti anda.
-• Pemberitahuan solat – dijadualkan pada peranti anda dengan AlarmManager; apl Android tidak menerima pemberitahuan tolak jarak jauh.
+• Pemberitahuan solat – dijadualkan pada peranti anda dengan AlarmManager.
+• Pengumuman – Pengumuman hari kebesaran dan versi baharu dihantar melalui Firebase Cloud Messaging; tiada penyasaran setiap orang.
 • Nama bandar – koordinat dihantar ke perkhidmatan geokod Android (Google); carian bandar secara manual menghantar teks yang anda taip.
 • Masjid berdekatan – koordinat kawasan carian dihantar ke OpenStreetMap (Overpass API). Arah perjalanan membuka Google Maps dengan lokasi masjid.
 • Audio al-Quran – bacaan distrim atau dimuat turun dari quran.com dan everyayah.com; permintaan hanya mengenal pasti fail audio.
@@ -139,6 +140,7 @@ Statistik penggunaan tidak terpaut pada identiti anda, tetapi pada kod pengguna 
 • Jika anda mematikan sandaran dalam Tetapan Android, data anda kekal hanya pada peranti anda.</p></div>
   <div class="legal-card"><h2>4. Perkhidmatan pihak ketiga</h2><p>Vakit menggunakan perkhidmatan berikut untuk tujuan terhad. Tiada satu pun menerima identiti anda daripada Vakit:
 • Google – sandaran Android, geokod untuk nama bandar anda, Google Fonts, ulasan dalam apl Play (In-App Review) dan Google Maps apabila anda meminta arah.
+• Firebase Cloud Messaging (Google) – Pengumuman hari kebesaran dan versi baharu. Pengumumannya disiarkan mengikut topik; tiada penyasaran setiap orang.
 • OpenStreetMap (Overpass API) – carian masjid berdekatan (koordinat kawasan carian).
 • quran.com dan everyayah.com – audio bacaan al-Quran.
 • Diyanet İşleri Başkanlığı – teks dan audio khutbah Jumaat.

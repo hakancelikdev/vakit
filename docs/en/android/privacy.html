@@ -101,7 +101,7 @@
 
 <main class="legal-page">
   <h1>Privacy Policy <em>Android</em></h1>
-  <p class="legal-desc">Last updated: 7 October 2026
+  <p class="legal-desc">Last updated: 8 October 2026
 
 Vakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.</p>
   <div class="legal-card"><h2>1. Information We Collect</h2><div class="legal-item"><h3>Location Data</h3><p>Purpose: Calculating daily prayer times and the Qibla direction, showing your city name and finding nearby mosques
@@ -110,8 +110,8 @@ Retention: Your last location is kept on your device so prayer times can be calc
 Processed: On-device only
 Retention: Not stored</p></div><div class="legal-item"><h3>Motion Data</h3><p>Purpose: Compass smoothing and stability (rotation vector sensor)
 Processed: On-device only
-Retention: Not stored</p></div><div class="legal-item"><h3>Notification Data</h3><p>Purpose: To deliver local prayer notifications
-Processed: AlarmManager / Android Notification Channels
+Retention: Not stored</p></div><div class="legal-item"><h3>Notification Data</h3><p>Purpose: Deliver prayer reminders plus blessed-day and release announcements
+Processed: AlarmManager / Android Notification Channels · Firebase Cloud Messaging (Google)
 Retention: Until disabled or the app is uninstalled</p></div><div class="legal-item"><h3>Settings Data</h3><p>Purpose: Remember your preferences
 Processed: DataStore (general preferences are sent to our server under the pseudonymous user code; no personal content is included)
 Retention: Until reset or app deletion. Preference data on the server is not deleted automatically; it is deleted on request.</p></div><div class="legal-item"><h3>Usage Statistics</h3><p>Purpose: Monitor app performance, detect bugs, and improve the experience
@@ -121,7 +121,8 @@ Retention: Kept for aggregate statistics and not deleted automatically (deleted 
 What does go to our server: a user code that contains no identifying information, your country (not GPS coordinates), device and version information, your app preferences (language, calculation method, theme, madhab, calendar type, the gender you chose for the prayer guide, notification and Quran/hadith reading preferences) and feature usage statistics. Those statistics show that a section was used; they do not include the content of your records. The words you search for inside the app are sent: we record them, up to 80 characters, to see whether search finds what you need and to improve the results.</p></div>
   <div class="legal-card"><h2>2. How We Use Your Data</h2><p>• Prayer times – calculated offline on your device with the Adhan library; no coordinates are sent for this.
 • Qibla direction – location and compass heading are combined on your device.
-• Prayer notifications – scheduled on your device with AlarmManager; the Android app receives no remote push notifications.
+• Prayer notifications – scheduled on your device with AlarmManager.
+• Announcements – Blessed-day and release announcements are broadcast via Firebase Cloud Messaging; there is no per-person targeting.
 • City name – coordinates are sent to Android's geocoding service (Google); a manual city search sends the text you type.
 • Nearby Mosques – the coordinates of the search area are sent to OpenStreetMap (Overpass API). Directions open Google Maps with the mosque's location.
 • Quran audio – recitations are streamed or downloaded from quran.com and everyayah.com; a request identifies only the audio file.
@@ -137,6 +138,7 @@ Usage statistics are tied not to your identity but to a random user code that co
 • If you turn backup off in Android Settings, your data stays only on your device.</p></div>
   <div class="legal-card"><h2>4. Third-Party Services</h2><p>Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:
 • Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.
+• Firebase Cloud Messaging (Google) – Blessed-day and release announcements. Announcements are sent to everyone at once; there is no per-person targeting.
 • OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).
 • quran.com and everyayah.com – Quran recitation audio.
 • Diyanet İşleri Başkanlığı – Friday sermon text and audio.

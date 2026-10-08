@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>Política de privacidad <em>Android</em></h1>
   <p class="legal-notice">Esta página es una traducción ofrecida para tu comodidad; si difiere de la versión en inglés, prevalece la versión en inglés. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Última actualización: 7 de octubre de 2026
+  <p class="legal-desc">Última actualización: 8 de octubre de 2026
 
 Vakit respeta tu privacidad. No necesitas una cuenta y no recogemos datos de identidad como tu nombre, correo electrónico, número de teléfono, fotos o contactos. Los horarios de oración, la dirección de la alquibla y los recordatorios se calculan en tu dispositivo. Tus registros de adoración (dhikr, jatm, marcadores, metas, mezquitas favoritas) se guardan en tu dispositivo y, si la copia de seguridad de Android está activada, en tu propia cuenta de Google — nunca se envían a nuestro servidor. Solo se envían estadísticas de uso a nuestro servidor para que podamos mejorar la app; esos datos están vinculados a un código de usuario sin datos identificativos. No se envían informes de fallos ni identificadores publicitarios.</p>
   <div class="legal-card"><h2>1. Datos que recogemos</h2><div class="legal-item"><h3>Datos de ubicación</h3><p>Finalidad: Calcular los horarios de oración diarios y la dirección de la alquibla, mostrar el nombre de tu ciudad y encontrar mezquitas cercanas
@@ -112,8 +112,8 @@ Conservación: Tu última ubicación se guarda en tu dispositivo para que los ho
 Tratamiento: Solo en el dispositivo
 Conservación: No se conserva</p></div><div class="legal-item"><h3>Datos de movimiento</h3><p>Finalidad: Suavizado y estabilidad de la brújula (sensor de vector de rotación)
 Tratamiento: Solo en el dispositivo
-Conservación: No se conserva</p></div><div class="legal-item"><h3>Datos de notificaciones</h3><p>Finalidad: Entregar notificaciones locales de oración
-Tratamiento: AlarmManager / canales de notificación de Android
+Conservación: No se conserva</p></div><div class="legal-item"><h3>Datos de notificaciones</h3><p>Finalidad: Entregar recordatorios de oración y avisos de días benditos y nuevas versiones
+Tratamiento: AlarmManager / canales de notificación de Android · Firebase Cloud Messaging (Google)
 Conservación: Hasta que se desactiven o se elimine la app</p></div><div class="legal-item"><h3>Datos de ajustes</h3><p>Finalidad: Recordar tus preferencias
 Tratamiento: DataStore (las preferencias generales se envían a nuestro servidor bajo el código de usuario seudónimo; no incluyen contenido personal)
 Conservación: Hasta restablecerlas o eliminar la app. En el servidor no se eliminan automáticamente; se eliminan previa solicitud.</p></div><div class="legal-item"><h3>Estadísticas de uso</h3><p>Finalidad: Vigilar el rendimiento, detectar fallos y mejorar la experiencia
@@ -123,7 +123,8 @@ Conservación: Se conservan con fines estadísticos agregados y no se eliminan a
 Lo que sí llega a nuestro servidor: un código de usuario sin datos identificativos, tu país (no coordenadas GPS), información del dispositivo y de la versión, tus preferencias de la app (idioma, método de cálculo, tema, escuela jurídica, tipo de calendario, el género elegido para la guía de oración, preferencias de notificación y de lectura del Corán y los hadices) y estadísticas de uso de las funciones. Esas estadísticas indican que se usó una sección; no incluyen el contenido de tus registros. Las palabras que buscas dentro de la app sí se envían: las registramos, hasta 80 caracteres, para comprobar si la búsqueda encuentra lo que necesitas y mejorar los resultados.</p></div>
   <div class="legal-card"><h2>2. Cómo usamos tus datos</h2><p>• Horarios de oración – se calculan sin conexión en tu dispositivo con la biblioteca Adhan; para ello no se envían coordenadas.
 • Dirección de la alquibla – la ubicación y el rumbo de la brújula se combinan en tu dispositivo.
-• Notificaciones de oración – se programan en tu dispositivo con AlarmManager; la app de Android no recibe notificaciones push remotas.
+• Notificaciones de oración – se programan en tu dispositivo con AlarmManager.
+• Avisos – Los avisos de días benditos y de versiones se difunden por Firebase Cloud Messaging; no hay segmentación individual.
 • Nombre de la ciudad – las coordenadas se envían al servicio de geocodificación de Android (Google); una búsqueda manual de ciudad envía el texto que escribes.
 • Mezquitas cercanas – las coordenadas del área de búsqueda se envían a OpenStreetMap (Overpass API). Las indicaciones abren Google Maps con la ubicación de la mezquita.
 • Audio del Corán – las recitaciones se reproducen en streaming o se descargan de quran.com y everyayah.com; una solicitud solo identifica el archivo de audio.
@@ -139,6 +140,7 @@ Las estadísticas de uso no están vinculadas a tu identidad, sino a un código 
 • Si desactivas la copia de seguridad en los Ajustes de Android, tus datos solo quedan en tu dispositivo.</p></div>
   <div class="legal-card"><h2>4. Servicios de terceros</h2><p>Vakit usa los siguientes servicios con fines limitados. Ninguno de ellos recibe tu identidad por parte de Vakit:
 • Google – copia de seguridad de Android, geocodificación para el nombre de tu ciudad, Google Fonts, la reseña integrada de Play (In-App Review) y Google Maps cuando pides indicaciones.
+• Firebase Cloud Messaging (Google) – Avisos de días benditos y de versiones. Se difunden por temas; no hay segmentación individual.
 • OpenStreetMap (Overpass API) – búsqueda de mezquitas cercanas (coordenadas del área de búsqueda).
 • quran.com y everyayah.com – audio de recitación del Corán.
 • Diyanet İşleri Başkanlığı – texto y audio del sermón del viernes.

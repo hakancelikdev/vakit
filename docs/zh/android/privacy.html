@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>隐私政策 <em>Android</em></h1>
   <p class="legal-notice">本页面是为方便阅读而提供的译文；如与英文版本有出入，以英文版本为准。 <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">上次更新： 2026年10月7日
+  <p class="legal-desc">上次更新： 2026年10月8日
 
 Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。</p>
   <div class="legal-card"><h2>1. 我们收集的信息</h2><div class="legal-item"><h3>位置数据</h3><p>用途： 计算每日礼拜时间与朝向，显示你所在城市的名称，并查找附近的清真寺
@@ -112,8 +112,8 @@ Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓�
 处理方式： 仅在设备上处理
 保留期： 不存储</p></div><div class="legal-item"><h3>运动数据</h3><p>用途： 罗盘平滑与稳定（旋转矢量传感器）
 处理方式： 仅在设备上处理
-保留期： 不存储</p></div><div class="legal-item"><h3>通知数据</h3><p>用途： 发送本地礼拜通知
-处理方式： AlarmManager / Android 通知渠道
+保留期： 不存储</p></div><div class="legal-item"><h3>通知数据</h3><p>用途： 送达礼拜提醒以及吉庆之日和版本公告
+处理方式： AlarmManager / Android 通知渠道 · Firebase Cloud Messaging (Google)
 保留期： 直到关闭或删除应用</p></div><div class="legal-item"><h3>设置数据</h3><p>用途： 记住你的偏好
 处理方式： DataStore（一般偏好会以假名用户代码发送到我们的服务器；不包含任何个人内容）
 保留期： 直到重置或删除应用。服务器上的偏好数据不会自动删除；可应要求删除。</p></div><div class="legal-item"><h3>使用统计</h3><p>用途： 监测应用性能、发现缺陷并改进体验
@@ -123,7 +123,8 @@ Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓�
 发送到我们服务器的内容：一个不含任何身份信息的用户代码、你所在的国家（不是 GPS 坐标）、设备与版本信息、你的应用偏好（语言、计算方法、主题、教法学派、历法类型、你为礼拜指南选择的性别、通知与《古兰经》/圣训的阅读偏好），以及功能使用统计。这些统计显示某个板块被使用过；不包含你记录的内容。你在应用内搜索的词会被发送：我们最多记录 80 个字符，以了解搜索是否找到了你需要的内容并改进结果。</p></div>
   <div class="legal-card"><h2>2. 我们如何使用你的数据</h2><p>• 礼拜时间 – 使用 Adhan 库在你的设备上离线计算；为此不会发送任何坐标。
 • 朝向 – 位置与指南针方向在你的设备上结合。
-• 礼拜通知 – 通过 AlarmManager 在你的设备上安排；Android 应用不接收远程推送通知。
+• 礼拜通知 – 通过 AlarmManager 在你的设备上安排。
+• 公告——吉庆之日与版本公告通过 Firebase 云消息广播；不针对个人。
 • 城市名称 – 坐标会发送到 Android 的地理编码服务（Google）；手动搜索城市时会发送你输入的文字。
 • 附近的清真寺 – 搜索区域的坐标会发送到 OpenStreetMap（Overpass API）。路线导航会以清真寺的位置打开 Google 地图。
 • 古兰经音频 – 诵读从 quran.com 和 everyayah.com 在线播放或下载；请求仅标识音频文件。
@@ -139,6 +140,7 @@ Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓�
 • 如果你在 Android 设置中关闭备份，你的数据只会保留在你的设备上。</p></div>
   <div class="legal-card"><h2>4. 第三方服务</h2><p>Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：
 • Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。
+• Firebase 云消息传递（Google）——吉庆之日与版本公告。公告统一广播；不针对个人。
 • OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。
 • quran.com 和 everyayah.com – 古兰经诵读音频。
 • Diyanet İşleri Başkanlığı – 主麻讲道的文本和音频。

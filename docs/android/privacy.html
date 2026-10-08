@@ -101,7 +101,7 @@
 
 <main class="legal-page">
   <h1>Gizlilik Politikası <em>Android</em></h1>
-  <p class="legal-desc">Son güncelleme: 7 Ekim 2026
+  <p class="legal-desc">Son güncelleme: 8 Ekim 2026
 
 Vakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.</p>
   <div class="legal-card"><h2>1. Topladığımız Veriler</h2><div class="legal-item"><h3>Konum Verisi</h3><p>Amaç: Günlük namaz vakitlerini ve kıble yönünü hesaplamak, şehir adınızı göstermek ve yakındaki camileri bulmak
@@ -110,8 +110,8 @@ Saklama: Namaz vakitleri internetsiz hesaplanabilsin diye son konumunuz, siz de�
 İşlenme: Yalnızca cihazda
 Saklama: Depolanmaz</p></div><div class="legal-item"><h3>Hareket Verisi</h3><p>Amaç: Pusula yumuşatma ve stabilitesi (rotasyon vektörü sensörü)
 İşlenme: Yalnızca cihazda
-Saklama: Depolanmaz</p></div><div class="legal-item"><h3>Bildirim Verisi</h3><p>Amaç: Yerel namaz bildirimleri göndermek
-İşlenme: AlarmManager / Android Bildirim Kanalları
+Saklama: Depolanmaz</p></div><div class="legal-item"><h3>Bildirim Verisi</h3><p>Amaç: Namaz vakti hatırlatıcıları ile mübarek gün ve sürüm duyurularını göndermek
+İşlenme: AlarmManager / Android Bildirim Kanalları · Firebase Cloud Messaging (Google)
 Saklama: Devre dışı bırakılana veya uygulama silinene kadar</p></div><div class="legal-item"><h3>Ayarlar Verisi</h3><p>Amaç: Tercihlerinizi hatırlamak
 İşlenme: DataStore (genel tercihler takma kimlikle sunucuya gönderilir; kişisel içerik dahil edilmez)
 Saklama: Sıfırlanana veya uygulama silinene kadar. Sunucudaki tercih verileri otomatik olarak silinmez; talep üzerine silinir.</p></div><div class="legal-item"><h3>Kullanım İstatistikleri</h3><p>Amaç: Uygulama performansını izlemek, hataları tespit etmek ve deneyimi iyileştirmek
@@ -121,7 +121,8 @@ Saklama: Toplu istatistik amacıyla saklanır, otomatik olarak silinmez (talep �
 Sunucumuza gidenler: kimlik bilgisi içermeyen bir kullanıcı kodu, ülkeniz (GPS koordinatı değil), cihaz ve sürüm bilgisi, uygulama tercihleriniz (dil, hesaplama yöntemi, tema, mezhep, takvim türü, namaz rehberi için seçtiğiniz cinsiyet, bildirim ve Kur'an/hadis okuma tercihleri) ve özellik kullanım istatistikleri. Bu istatistikler bir bölümün kullanıldığını gösterir; kaydın içeriğini taşımaz. Uygulama içinde aradığınız kelimeler gönderilir: aramanın aradığınızı bulup bulmadığını görmek ve sonuçları iyileştirmek için en fazla 80 karakterini kaydederiz.</p></div>
   <div class="legal-card"><h2>2. Verilerinizi Nasıl Kullanıyoruz</h2><p>• Namaz vakitleri – Adhan kütüphanesiyle cihazınızda, internetsiz hesaplanır; bunun için koordinat gönderilmez.
 • Kıble yönü – Konum ve pusula yönü cihazınızda birleştirilir.
-• Namaz bildirimleri – Cihazınızda AlarmManager ile planlanır; Android uygulaması uzaktan anlık bildirim almaz.
+• Namaz bildirimleri – Cihazınızda AlarmManager ile planlanır.
+• Duyuru Bildirimleri – Mübarek gün ve sürüm duyuruları Firebase Cloud Messaging ile topluca gönderilir; kişiye özel hedefleme yapılmaz.
 • Şehir adı – Koordinatlar Android'in adres çözümleme hizmetine (Google) gönderilir; elle şehir aramasında yazdığınız metin gönderilir.
 • Yakındaki Camiler – Arama alanının koordinatları OpenStreetMap'e (Overpass API) gönderilir. Yol tarifi, caminin konumuyla Google Haritalar'ı açar.
 • Kur'an sesi – Tilavetler quran.com ve everyayah.com'dan dinlenir veya indirilir; istek yalnızca ses dosyasını belirtir.
@@ -137,6 +138,7 @@ Kullanım istatistikleri kimliğinize değil, kimlik bilgisi içermeyen rastgele
 • Yedeklemeyi Android Ayarları'ndan kapatırsanız verileriniz yalnızca cihazınızda kalır.</p></div>
   <div class="legal-card"><h2>4. Üçüncü Taraf Hizmetler</h2><p>Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:
 • Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.
+• Firebase Cloud Messaging (Google) – Mübarek gün ve sürüm duyuruları. Duyurular herkese aynı anda toplu gönderilir; kişiye özel hedefleme yapılmaz.
 • OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).
 • quran.com ve everyayah.com – Kur'an tilaveti sesleri.
 • Diyanet İşleri Başkanlığı – Cuma hutbesi metni ve sesi.

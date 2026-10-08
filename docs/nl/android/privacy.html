@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>Privacybeleid <em>Android</em></h1>
   <p class="legal-notice">Deze pagina is een vertaling die voor het gemak wordt aangeboden; als deze afwijkt van de Engelse versie, geldt de Engelse versie. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Laatst bijgewerkt: 7 oktober 2026
+  <p class="legal-desc">Laatst bijgewerkt: 8 oktober 2026
 
 Vakit respecteert je privacy. Je hebt geen account nodig en we verzamelen geen identiteitsgegevens zoals je naam, e-mailadres, telefoonnummer, foto's of contacten. Gebedstijden, de Qibla-richting en herinneringen worden op je apparaat berekend. Je aanbiddingsgegevens (dhikr, chatm, bladwijzers, doelen, favoriete moskeeën) worden op je apparaat opgeslagen en, als Android-back-up aanstaat, in je eigen Google-account — ze worden nooit naar onze server gestuurd. Alleen gebruiksstatistieken worden naar onze server gestuurd, zodat we de app kunnen verbeteren; die gegevens zijn gekoppeld aan een gebruikerscode zonder identificerende gegevens. Er worden geen crashrapporten of advertentie-ID's verstuurd.</p>
   <div class="legal-card"><h2>1. Gegevens die we verzamelen</h2><div class="legal-item"><h3>Locatiegegevens</h3><p>Doel: De dagelijkse gebedstijden en de Qibla-richting berekenen, de naam van je plaats tonen en moskeeën in de buurt vinden
@@ -112,8 +112,8 @@ Bewaartermijn: Je laatste locatie blijft op je apparaat bewaard zodat gebedstijd
 Verwerking: Alleen op het apparaat
 Bewaartermijn: Niet bewaard</p></div><div class="legal-item"><h3>Bewegingsgegevens</h3><p>Doel: Het kompas soepel en stabiel houden (rotatievectorsensor)
 Verwerking: Alleen op het apparaat
-Bewaartermijn: Niet bewaard</p></div><div class="legal-item"><h3>Meldingsgegevens</h3><p>Doel: Lokale gebedsmeldingen bezorgen
-Verwerking: AlarmManager / Android-meldingskanalen
+Bewaartermijn: Niet bewaard</p></div><div class="legal-item"><h3>Meldingsgegevens</h3><p>Doel: Gebedsherinneringen en aankondigingen van gezegende dagen en nieuwe versies bezorgen
+Verwerking: AlarmManager / Android-meldingskanalen · Firebase Cloud Messaging (Google)
 Bewaartermijn: Tot je ze uitschakelt of de app verwijdert</p></div><div class="legal-item"><h3>Instellingsgegevens</h3><p>Doel: Je voorkeuren onthouden
 Verwerking: DataStore (algemene voorkeuren gaan onder de pseudonieme gebruikerscode naar onze server; persoonlijke inhoud zit er niet bij)
 Bewaartermijn: Tot je ze reset of de app verwijdert. Op de server worden voorkeursgegevens niet automatisch verwijderd; ze worden op verzoek verwijderd.</p></div><div class="legal-item"><h3>Gebruiksstatistieken</h3><p>Doel: Prestaties volgen, fouten opsporen en de ervaring verbeteren
@@ -123,7 +123,8 @@ Bewaartermijn: Bewaard voor geaggregeerde statistieken en niet automatisch verwi
 Wat wel naar onze server gaat: een gebruikerscode zonder identificerende gegevens, je land (geen GPS-coördinaten), apparaat- en versiegegevens, je app-voorkeuren (taal, berekeningsmethode, thema, rechtsschool, kalendertype, het voor de gebedsgids gekozen geslacht, meldings- en leesvoorkeuren voor Koran en hadith) en gebruiksstatistieken van functies. Die statistieken laten zien dát een onderdeel is gebruikt; de inhoud van je gegevens hoort er niet bij. De woorden waarop je in de app zoekt worden verstuurd: we noteren ze, tot 80 tekens, om te zien of de zoekfunctie vindt wat je nodig hebt en de resultaten te verbeteren.</p></div>
   <div class="legal-card"><h2>2. Hoe we je gegevens gebruiken</h2><p>• Gebedstijden – offline op je apparaat berekend met de Adhan-bibliotheek; hiervoor worden geen coördinaten verstuurd.
 • Qibla-richting – locatie en kompaskoers worden op je apparaat gecombineerd.
-• Gebedsmeldingen – op je apparaat ingepland met AlarmManager; de Android-app ontvangt geen pushmeldingen op afstand.
+• Gebedsmeldingen – op je apparaat ingepland met AlarmManager.
+• Aankondigingen – Meldingen over gezegende dagen en versies gaan via Firebase Cloud Messaging; er is geen persoonsgerichte targeting.
 • Plaatsnaam – de coördinaten worden naar de geocoderingsdienst van Android (Google) gestuurd; bij handmatig zoeken naar een plaats wordt de tekst die je typt verstuurd.
 • Moskeeën in de buurt – de coördinaten van het zoekgebied worden naar OpenStreetMap (Overpass API) gestuurd. Routebeschrijving opent Google Maps met de locatie van de moskee.
 • Koranaudio – recitaties worden gestreamd of gedownload van quran.com en everyayah.com; een verzoek identificeert alleen het audiobestand.
@@ -139,6 +140,7 @@ Gebruiksstatistieken zijn niet aan je identiteit gekoppeld maar aan een willekeu
 • Als je back-up uitzet in de Android-instellingen, blijven je gegevens alleen op je apparaat.</p></div>
   <div class="legal-card"><h2>4. Diensten van derden</h2><p>Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen van hen ontvangt je identiteit van Vakit:
 • Google – Android-back-up, geocodering voor je plaatsnaam, Google Fonts, Play In-App Review en Google Maps wanneer je om een routebeschrijving vraagt.
+• Firebase Cloud Messaging (Google) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen gaan per onderwerp naar iedereen; er is geen targeting per persoon.
 • OpenStreetMap (Overpass API) – zoeken naar moskeeën in de buurt (coördinaten van het zoekgebied).
 • quran.com en everyayah.com – audio van Koranrecitaties.
 • Diyanet İşleri Başkanlığı – tekst en audio van de vrijdagpreek.

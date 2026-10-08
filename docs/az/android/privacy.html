@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>Məxfilik Siyasəti <em>Android</em></h1>
   <p class="legal-notice">Bu səhifə rahatlıq üçün təqdim olunan tərcümədir; ingiliscə versiyadan fərqlənərsə, ingiliscə versiya əsas götürülür. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Son yenilənmə: 7 oktyabr 2026
+  <p class="legal-desc">Son yenilənmə: 8 oktyabr 2026
 
 Vakit məxfiliyinizə hörmət edir. Hesab yaratmağınız lazım deyil; adınız, e-poçtunuz, telefon nömrəniz, şəkilləriniz və ya kontaktlarınız kimi şəxsiyyət məlumatlarını toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar cihazınızda hesablanır. İbadət qeydləriniz (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) cihazınızda saxlanılır; Android ehtiyat nüsxəsi aktivdirsə, öz Google hesabınızda da saxlanılır — heç vaxt serverimizə göndərilmir. Tətbiqi yaxşılaşdıra bilməyimiz üçün serverimizə yalnız istifadə statistikası göndərilir; bu məlumat heç bir kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Çökmə hesabatı və ya reklam identifikatoru göndərilmir.</p>
   <div class="legal-card"><h2>1. Topladığımız məlumatlar</h2><div class="legal-item"><h3>Məkan məlumatı</h3><p>Məqsəd: Gündəlik namaz vaxtlarını və qiblə istiqamətini hesablamaq, şəhərinizin adını göstərmək və yaxındakı məscidləri tapmaq
@@ -112,8 +112,8 @@ Saxlanma müddəti: Namaz vaxtları internetsiz hesablana bilsin deyə son məka
 Emal: Yalnız cihazda
 Saxlanma müddəti: Saxlanılmır</p></div><div class="legal-item"><h3>Hərəkət məlumatı</h3><p>Məqsəd: Kompasın hamar və sabit işləməsi (fırlanma vektoru sensoru)
 Emal: Yalnız cihazda
-Saxlanma müddəti: Saxlanılmır</p></div><div class="legal-item"><h3>Bildiriş məlumatı</h3><p>Məqsəd: Yerli namaz bildirişlərini çatdırmaq
-Emal: AlarmManager / Android bildiriş kanalları
+Saxlanma müddəti: Saxlanılmır</p></div><div class="legal-item"><h3>Bildiriş məlumatı</h3><p>Məqsəd: Namaz xatırlatmaları ilə mübarək gün və versiya elanlarını çatdırmaq
+Emal: AlarmManager / Android bildiriş kanalları · Firebase Cloud Messaging (Google)
 Saxlanma müddəti: Söndürülənə və ya tətbiq silinənə qədər</p></div><div class="legal-item"><h3>Ayar məlumatı</h3><p>Məqsəd: Seçimlərinizi yadda saxlamaq
 Emal: DataStore (ümumi seçimlər təxəllüslü istifadəçi kodu ilə serverimizə göndərilir; şəxsi məzmun daxil deyil)
 Saxlanma müddəti: Sıfırlanana və ya tətbiq silinənə qədər. Serverdəki seçim məlumatları avtomatik silinmir; tələb əsasında silinir.</p></div><div class="legal-item"><h3>İstifadə statistikası</h3><p>Məqsəd: Tətbiqin işini izləmək, nasazlıqları tapmaq və təcrübəni yaxşılaşdırmaq
@@ -123,7 +123,8 @@ Saxlanma müddəti: Ümumi statistika üçün saxlanılır və avtomatik silinmi
 Serverimizə gedənlər: heç bir kimlik məlumatı daşımayan istifadəçi kodu, ölkəniz (GPS koordinatı deyil), cihaz və versiya məlumatı, tətbiq seçimləriniz (dil, hesablama üsulu, mövzu, məzhəb, təqvim növü, namaz bələdçisi üçün seçdiyiniz cins, bildiriş və Quran/hədis oxuma seçimləri) və funksiya istifadə statistikası. Bu statistika bir bölmənin istifadə olunduğunu göstərir; qeydlərinizin məzmununu daşımır. Tətbiqdə axtardığınız sözlər göndərilir: axtarışın lazım olanı tapıb-tapmadığını görmək və nəticələri yaxşılaşdırmaq üçün 80 simvola qədər yazırıq.</p></div>
   <div class="legal-card"><h2>2. Məlumatlarınızı necə istifadə edirik</h2><p>• Namaz vaxtları – Adhan kitabxanası ilə cihazınızda internetsiz hesablanır; bunun üçün koordinat göndərilmir.
 • Qiblə istiqaməti – məkan və kompas istiqaməti cihazınızda birləşdirilir.
-• Namaz bildirişləri – cihazınızda AlarmManager ilə planlaşdırılır; Android tətbiqi uzaqdan push bildirişi almır.
+• Namaz bildirişləri – cihazınızda AlarmManager ilə planlaşdırılır.
+• Elanlar — Mübarək gün və versiya elanları Firebase Cloud Messaging ilə mövzu üzrə yayımlanır; şəxs bazlı hədəfləmə yoxdur.
 • Şəhər adı – koordinatlar Android-in ünvan müəyyənetmə xidmətinə (Google) göndərilir; əl ilə şəhər axtarışında yazdığınız mətn göndərilir.
 • Yaxındakı məscidlər – axtarış sahəsinin koordinatları OpenStreetMap-ə (Overpass API) göndərilir. Marşrut məscidin yeri ilə Google Maps-i açır.
 • Quran səsi – tilavətlər quran.com və everyayah.com-dan dinlənilir və ya endirilir; sorğu yalnız səs faylını göstərir.
@@ -139,6 +140,7 @@ Serverimizə gedənlər: heç bir kimlik məlumatı daşımayan istifadəçi kod
 • Ehtiyat nüsxəni Android Ayarlarından söndürsəniz, məlumatlarınız yalnız cihazınızda qalır.</p></div>
   <div class="legal-card"><h2>4. Üçüncü tərəf xidmətləri</h2><p>Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç birinə Vakit tərəfindən şəxsiyyətiniz ötürülmür:
 • Google – Android ehtiyat nüsxəsi, şəhər adı üçün ünvan müəyyənetmə, Google Fonts, Play tətbiqdaxili rəy (In-App Review) və marşrut istədiyiniz zaman Google Maps.
+• Firebase Cloud Messaging (Google) — Mübarək gün və versiya elanları. Elanlar mövzu üzrə yayımlanır; şəxs bazlı hədəfləmə yoxdur.
 • OpenStreetMap (Overpass API) – yaxındakı məscid axtarışı (axtarış sahəsinin koordinatları).
 • quran.com və everyayah.com – Quran tilavəti səsləri.
 • Diyanet İşleri Başkanlığı – cümə xütbəsinin mətni və səsi.

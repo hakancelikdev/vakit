@@ -103,7 +103,7 @@
 <main class="legal-page">
   <h1>Privatlivspolitik <em>Android</em></h1>
   <p class="legal-notice">Denne side er en oversættelse, som stilles til rådighed for nemheds skyld; hvis den afviger fra den engelske version, gælder den engelske version. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Sidst opdateret: 7. oktober 2026
+  <p class="legal-desc">Sidst opdateret: 8. oktober 2026
 
 Vakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.</p>
   <div class="legal-card"><h2>1. Oplysninger vi indsamler</h2><div class="legal-item"><h3>Positionsdata</h3><p>Formål: Beregne de daglige bedetider og Qibla-retningen, vise navnet på din by og finde moskeer i nærheden
@@ -112,8 +112,8 @@ Opbevaring: Din seneste position gemmes på din enhed, så bedetiderne kan bereg
 Behandling: Kun på enheden
 Opbevaring: Gemmes ikke</p></div><div class="legal-item"><h3>Bevægelsesdata</h3><p>Formål: Udjævning og stabilitet i kompasset (rotationsvektorsensor)
 Behandling: Kun på enheden
-Opbevaring: Gemmes ikke</p></div><div class="legal-item"><h3>Notifikationsdata</h3><p>Formål: Levere lokale notifikationer om bøn
-Behandling: AlarmManager / Android-notifikationskanaler
+Opbevaring: Gemmes ikke</p></div><div class="legal-item"><h3>Notifikationsdata</h3><p>Formål: Levere påmindelser om bedetider samt beskeder om velsignede dage og nye versioner
+Behandling: AlarmManager / Android-notifikationskanaler · Firebase Cloud Messaging (Google)
 Opbevaring: Indtil du slår dem fra eller sletter appen</p></div><div class="legal-item"><h3>Indstillingsdata</h3><p>Formål: Huske dine valg
 Behandling: DataStore (generelle valg sendes til vores server under den pseudonyme brugerkode; intet personligt indhold indgår)
 Opbevaring: Indtil du nulstiller eller sletter appen. Data om valg på serveren slettes ikke automatisk; de slettes efter anmodning.</p></div><div class="legal-item"><h3>Brugsstatistik</h3><p>Formål: Følge appens ydeevne, finde fejl og forbedre oplevelsen
@@ -123,7 +123,8 @@ Opbevaring: Gemmes til samlet statistik og slettes ikke automatisk (slettes efte
 Det, der går til vores server: en brugerkode uden identificerende oplysninger, dit land (ikke GPS-koordinater), oplysninger om enhed og version, dine valg i appen (sprog, beregningsmetode, tema, skole, kalendertype, det køn du valgte til bønneguiden, valg om notifikationer og om læsning af Koran og hadith) samt statistik over brugen af funktionerne. Statistikken viser, at en del blev brugt; den indeholder ikke indholdet af dine registreringer. De ord, du søger efter i appen, sendes: vi gemmer dem, op til 80 tegn, for at se, om søgningen finder det, du har brug for, og for at gøre resultaterne bedre.</p></div>
   <div class="legal-card"><h2>2. Sådan bruger vi dine data</h2><p>• Bedetider – beregnes offline på din enhed med Adhan-biblioteket; der sendes ingen koordinater til det.
 • Qibla-retning – position og kompasretning kombineres på din enhed.
-• Bedenotifikationer – planlægges på din enhed med AlarmManager; Android-appen modtager ingen push-notifikationer udefra.
+• Bedenotifikationer – planlægges på din enhed med AlarmManager.
+• Beskeder – Beskeder om velsignede dage og nye versioner sendes via Firebase Cloud Messaging; der er ingen målretning mod enkeltpersoner.
 • Bynavn – koordinaterne sendes til Androids geokodningstjeneste (Google); en manuel bysøgning sender den tekst, du skriver.
 • Moskeer i nærheden – koordinaterne for søgeområdet sendes til OpenStreetMap (Overpass API). Rutevejledning åbner Google Maps med moskeens placering.
 • Koranlyd – recitationer streames eller downloades fra quran.com og everyayah.com; en forespørgsel identificerer kun lydfilen.
@@ -139,6 +140,7 @@ Brugsstatistikken er ikke knyttet til din identitet, men til en tilfældig bruge
 • Hvis du slår backup fra i Android-indstillinger, bliver dine data kun på din enhed.</p></div>
   <div class="legal-card"><h2>4. Tredjepartstjenester</h2><p>Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:
 • Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.
+• Firebase Cloud Messaging (Google) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.
 • OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).
 • quran.com og everyayah.com – lyd af Koranrecitation.
 • Diyanet İşleri Başkanlığı – tekst og lyd til fredagsprædikenen.

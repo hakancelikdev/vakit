@@ -12,7 +12,7 @@ module.exports = {
     },
     "titleBefore": "Gizlilik Politikası ",
     "titleEm": "Android",
-    "desc": "Son güncelleme: 7 Ekim 2026\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.",
+    "desc": "Son güncelleme: 8 Ekim 2026\n\nVakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.",
     "sections": [
       {
         "t": "1. Topladığımız Veriler",
@@ -44,8 +44,8 @@ module.exports = {
           {
             "name": "Bildirim Verisi",
             "lines": [
-              "Amaç: Yerel namaz bildirimleri göndermek",
-              "İşlenme: AlarmManager / Android Bildirim Kanalları",
+              "Amaç: Namaz vakti hatırlatıcıları ile mübarek gün ve sürüm duyurularını göndermek",
+              "İşlenme: AlarmManager / Android Bildirim Kanalları · Firebase Cloud Messaging (Google)",
               "Saklama: Devre dışı bırakılana veya uygulama silinene kadar"
             ]
           },
@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         "t": "2. Verilerinizi Nasıl Kullanıyoruz",
-        "b": "• Namaz vakitleri – Adhan kütüphanesiyle cihazınızda, internetsiz hesaplanır; bunun için koordinat gönderilmez.\n• Kıble yönü – Konum ve pusula yönü cihazınızda birleştirilir.\n• Namaz bildirimleri – Cihazınızda AlarmManager ile planlanır; Android uygulaması uzaktan anlık bildirim almaz.\n• Şehir adı – Koordinatlar Android'in adres çözümleme hizmetine (Google) gönderilir; elle şehir aramasında yazdığınız metin gönderilir.\n• Yakındaki Camiler – Arama alanının koordinatları OpenStreetMap'e (Overpass API) gönderilir. Yol tarifi, caminin konumuyla Google Haritalar'ı açar.\n• Kur'an sesi – Tilavetler quran.com ve everyayah.com'dan dinlenir veya indirilir; istek yalnızca ses dosyasını belirtir.\n• Cuma hutbesi – Metin, PDF ve ses Diyanet'ten (dinhizmetleri.diyanet.gov.tr) indirilir.\n• Yazı tipleri – Bazı yazı tipleri Google Play hizmetleri (Google Fonts) üzerinden indirilir.\n• İçerikleriniz – Zikir, hatim, yer imleri ve hedefler cihazınızda saklanır.\n\nKullanım istatistikleri kimliğinize değil, kimlik bilgisi içermeyen rastgele bir kullanıcı koduna (takma ad) bağlıdır. Android yedeklemesi açıksa kod yedeğinize dahil edilir; Vakit'i aynı Google hesabında yeniden yüklemek aynı kullanıcı sayılır. Veriler yalnızca uygulamayı geliştirmek için kullanılır; asla satılmaz ve reklam için kullanılmaz. Android sürümünde çökme raporlama veya reklam SDK'sı yoktur."
+        "b": "• Namaz vakitleri – Adhan kütüphanesiyle cihazınızda, internetsiz hesaplanır; bunun için koordinat gönderilmez.\n• Kıble yönü – Konum ve pusula yönü cihazınızda birleştirilir.\n• Namaz bildirimleri – Cihazınızda AlarmManager ile planlanır.\n• Duyuru Bildirimleri – Mübarek gün ve sürüm duyuruları Firebase Cloud Messaging ile topluca gönderilir; kişiye özel hedefleme yapılmaz.\n• Şehir adı – Koordinatlar Android'in adres çözümleme hizmetine (Google) gönderilir; elle şehir aramasında yazdığınız metin gönderilir.\n• Yakındaki Camiler – Arama alanının koordinatları OpenStreetMap'e (Overpass API) gönderilir. Yol tarifi, caminin konumuyla Google Haritalar'ı açar.\n• Kur'an sesi – Tilavetler quran.com ve everyayah.com'dan dinlenir veya indirilir; istek yalnızca ses dosyasını belirtir.\n• Cuma hutbesi – Metin, PDF ve ses Diyanet'ten (dinhizmetleri.diyanet.gov.tr) indirilir.\n• Yazı tipleri – Bazı yazı tipleri Google Play hizmetleri (Google Fonts) üzerinden indirilir.\n• İçerikleriniz – Zikir, hatim, yer imleri ve hedefler cihazınızda saklanır.\n\nKullanım istatistikleri kimliğinize değil, kimlik bilgisi içermeyen rastgele bir kullanıcı koduna (takma ad) bağlıdır. Android yedeklemesi açıksa kod yedeğinize dahil edilir; Vakit'i aynı Google hesabında yeniden yüklemek aynı kullanıcı sayılır. Veriler yalnızca uygulamayı geliştirmek için kullanılır; asla satılmaz ve reklam için kullanılmaz. Android sürümünde çökme raporlama veya reklam SDK'sı yoktur."
       },
       {
         "t": "3. Yedekleme ve Senkronizasyon (Google Yedekleme)",
@@ -78,7 +78,7 @@ module.exports = {
       },
       {
         "t": "4. Üçüncü Taraf Hizmetler",
-        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:\n• Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.\n• OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).\n• quran.com ve everyayah.com – Kur'an tilaveti sesleri.\n• Diyanet İşleri Başkanlığı – Cuma hutbesi metni ve sesi.\n• Cloudflare – Vakit sunucusuna giden trafiğin (kullanım istatistikleri) iletimi ve indirilebilir içerik paketlerinin dağıtımı.\nHer hizmet istekleri kendi gizlilik politikasına göre işler."
+        "b": "Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:\n• Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.\n• Firebase Cloud Messaging (Google) – Mübarek gün ve sürüm duyuruları. Duyurular herkese aynı anda toplu gönderilir; kişiye özel hedefleme yapılmaz.\n• OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).\n• quran.com ve everyayah.com – Kur'an tilaveti sesleri.\n• Diyanet İşleri Başkanlığı – Cuma hutbesi metni ve sesi.\n• Cloudflare – Vakit sunucusuna giden trafiğin (kullanım istatistikleri) iletimi ve indirilebilir içerik paketlerinin dağıtımı.\nHer hizmet istekleri kendi gizlilik politikasına göre işler."
       },
       {
         "t": "5. Reklamlar",
@@ -125,7 +125,7 @@ module.exports = {
     },
     "titleBefore": "Privacy Policy ",
     "titleEm": "Android",
-    "desc": "Last updated: 7 October 2026\n\nVakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.",
+    "desc": "Last updated: 8 October 2026\n\nVakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.",
     "sections": [
       {
         "t": "1. Information We Collect",
@@ -157,8 +157,8 @@ module.exports = {
           {
             "name": "Notification Data",
             "lines": [
-              "Purpose: To deliver local prayer notifications",
-              "Processed: AlarmManager / Android Notification Channels",
+              "Purpose: Deliver prayer reminders plus blessed-day and release announcements",
+              "Processed: AlarmManager / Android Notification Channels · Firebase Cloud Messaging (Google)",
               "Retention: Until disabled or the app is uninstalled"
             ]
           },
@@ -183,7 +183,7 @@ module.exports = {
       },
       {
         "t": "2. How We Use Your Data",
-        "b": "• Prayer times – calculated offline on your device with the Adhan library; no coordinates are sent for this.\n• Qibla direction – location and compass heading are combined on your device.\n• Prayer notifications – scheduled on your device with AlarmManager; the Android app receives no remote push notifications.\n• City name – coordinates are sent to Android's geocoding service (Google); a manual city search sends the text you type.\n• Nearby Mosques – the coordinates of the search area are sent to OpenStreetMap (Overpass API). Directions open Google Maps with the mosque's location.\n• Quran audio – recitations are streamed or downloaded from quran.com and everyayah.com; a request identifies only the audio file.\n• Friday sermon – the text, PDF and audio are downloaded from Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fonts – some fonts are downloaded through Google Play services (Google Fonts).\n• Your content – dhikr, khatm, bookmarks and goals are stored on your device.\n\nUsage statistics are tied not to your identity but to a random user code that contains no identifying information (a pseudonym). If Android backup is on, the code is included in your backup, so reinstalling Vakit on the same Google account counts as the same user. The data is used solely to improve the app; it is never sold or used for advertising. The Android version contains no crash-reporting or advertising SDK."
+        "b": "• Prayer times – calculated offline on your device with the Adhan library; no coordinates are sent for this.\n• Qibla direction – location and compass heading are combined on your device.\n• Prayer notifications – scheduled on your device with AlarmManager.\n• Announcements – Blessed-day and release announcements are broadcast via Firebase Cloud Messaging; there is no per-person targeting.\n• City name – coordinates are sent to Android's geocoding service (Google); a manual city search sends the text you type.\n• Nearby Mosques – the coordinates of the search area are sent to OpenStreetMap (Overpass API). Directions open Google Maps with the mosque's location.\n• Quran audio – recitations are streamed or downloaded from quran.com and everyayah.com; a request identifies only the audio file.\n• Friday sermon – the text, PDF and audio are downloaded from Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fonts – some fonts are downloaded through Google Play services (Google Fonts).\n• Your content – dhikr, khatm, bookmarks and goals are stored on your device.\n\nUsage statistics are tied not to your identity but to a random user code that contains no identifying information (a pseudonym). If Android backup is on, the code is included in your backup, so reinstalling Vakit on the same Google account counts as the same user. The data is used solely to improve the app; it is never sold or used for advertising. The Android version contains no crash-reporting or advertising SDK."
       },
       {
         "t": "3. Backup and Sync (Google Backup)",
@@ -191,7 +191,7 @@ module.exports = {
       },
       {
         "t": "4. Third-Party Services",
-        "b": "Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:\n• Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.\n• OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).\n• quran.com and everyayah.com – Quran recitation audio.\n• Diyanet İşleri Başkanlığı – Friday sermon text and audio.\n• Cloudflare – carries traffic to Vakit's server (usage statistics) and delivers downloadable content packs.\nEach service processes requests under its own privacy policy."
+        "b": "Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:\n• Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.\n• Firebase Cloud Messaging (Google) – Blessed-day and release announcements. Announcements are sent to everyone at once; there is no per-person targeting.\n• OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).\n• quran.com and everyayah.com – Quran recitation audio.\n• Diyanet İşleri Başkanlığı – Friday sermon text and audio.\n• Cloudflare – carries traffic to Vakit's server (usage statistics) and delivers downloadable content packs.\nEach service processes requests under its own privacy policy."
       },
       {
         "t": "5. Advertising",
@@ -238,7 +238,7 @@ module.exports = {
     },
     "titleBefore": "سياسة الخصوصية ",
     "titleEm": "Android",
-    "desc": "آخر تحديث: ٧ أكتوبر ٢٠٢٦\n\nيحترم تطبيق Vakit خصوصيتك. لا تحتاج إلى حساب، ولا نجمع بيانات الهوية مثل اسمك أو بريدك الإلكتروني أو رقم هاتفك أو صورك أو جهات اتصالك. تُحسب أوقات الصلاة واتجاه القبلة والتذكيرات على جهازك. تُحفظ سجلات عبادتك (الأذكار والختمات والمحفوظات والأهداف والمساجد المفضّلة) على جهازك، وفي حسابك الخاص على Google إذا كان النسخ الاحتياطي في Android مفعّلاً — ولا تُرسل إلى خادمنا أبداً. لا يُرسل إلى خادمنا إلا إحصاءات الاستخدام لنتمكّن من تحسين التطبيق، وهذه البيانات مرتبطة برمز مستخدم لا يحمل أي معلومة تعريفية. ولا تُرسل أي تقارير أعطال أو معرّفات إعلانية.",
+    "desc": "آخر تحديث: ٨ أكتوبر ٢٠٢٦\n\nيحترم تطبيق Vakit خصوصيتك. لا تحتاج إلى حساب، ولا نجمع بيانات الهوية مثل اسمك أو بريدك الإلكتروني أو رقم هاتفك أو صورك أو جهات اتصالك. تُحسب أوقات الصلاة واتجاه القبلة والتذكيرات على جهازك. تُحفظ سجلات عبادتك (الأذكار والختمات والمحفوظات والأهداف والمساجد المفضّلة) على جهازك، وفي حسابك الخاص على Google إذا كان النسخ الاحتياطي في Android مفعّلاً — ولا تُرسل إلى خادمنا أبداً. لا يُرسل إلى خادمنا إلا إحصاءات الاستخدام لنتمكّن من تحسين التطبيق، وهذه البيانات مرتبطة برمز مستخدم لا يحمل أي معلومة تعريفية. ولا تُرسل أي تقارير أعطال أو معرّفات إعلانية.",
     "sections": [
       {
         "t": "١. المعلومات التي نجمعها",
@@ -270,8 +270,8 @@ module.exports = {
           {
             "name": "بيانات الإشعارات",
             "lines": [
-              "الغرض: إيصال إشعارات الصلاة المحلية",
-              "المعالجة: AlarmManager / قنوات إشعارات Android",
+              "الغرض: إيصال تذكيرات الصلاة وإعلانات الأيام المباركة والإصدارات",
+              "المعالجة: AlarmManager / قنوات إشعارات Android · Firebase Cloud Messaging (Google)",
               "مدة الحفظ: حتى التعطيل أو حذف التطبيق"
             ]
           },
@@ -296,7 +296,7 @@ module.exports = {
       },
       {
         "t": "٢. كيف نستخدم بياناتك",
-        "b": "• أوقات الصلاة – تُحسب دون اتصال على جهازك بمكتبة Adhan؛ ولا تُرسل أي إحداثيات لذلك.\n• اتجاه القبلة – يُدمج الموقع واتجاه البوصلة على جهازك.\n• إشعارات الصلاة – تُجدول على جهازك باستخدام AlarmManager؛ ولا يتلقى تطبيق Android إشعارات فورية عن بُعد.\n• اسم المدينة – تُرسل الإحداثيات إلى خدمة الترميز الجغرافي في Android (Google)؛ وعند البحث اليدوي عن مدينة يُرسل النص الذي تكتبه.\n• المساجد القريبة – تُرسل إحداثيات منطقة البحث إلى OpenStreetMap (Overpass API). ويفتح طلب الاتجاهات خرائط Google على موقع المسجد.\n• صوت القرآن – تُبث التلاوات أو تُنزَّل من quran.com وeveryayah.com؛ ولا يحدّد الطلب إلا الملف الصوتي.\n• خطبة الجمعة – يُنزَّل النص وملف PDF والصوت من Diyanet (dinhizmetleri.diyanet.gov.tr).\n• الخطوط – تُنزَّل بعض الخطوط عبر خدمات Google Play (Google Fonts).\n• محتواك – تُحفظ الأذكار والختمات والمحفوظات والأهداف على جهازك.\n\nإحصاءات الاستخدام غير مرتبطة بهويتك بل برمز مستخدم عشوائي لا يحمل أي معلومة تعريفية (اسم مستعار). وإذا كان النسخ الاحتياطي في Android مفعّلاً يُضمَّن الرمز في نسختك الاحتياطية، ولذلك تُحتسب المستخدم نفسه عند إعادة تثبيت Vakit على حساب Google نفسه. وتُستخدم البيانات لتحسين التطبيق فحسب؛ ولا تُباع أبداً ولا تُستعمل في الإعلانات. لا تحتوي نسخة Android على أي SDK لتقارير الأعطال أو للإعلانات."
+        "b": "• أوقات الصلاة – تُحسب دون اتصال على جهازك بمكتبة Adhan؛ ولا تُرسل أي إحداثيات لذلك.\n• اتجاه القبلة – يُدمج الموقع واتجاه البوصلة على جهازك.\n• إشعارات الصلاة – تُجدول على جهازك باستخدام AlarmManager.\n• الإعلانات – تُبثّ إعلانات الأيام المباركة والإصدارات عبر خدمة الإشعارات؛ دون استهداف فردي.\n• اسم المدينة – تُرسل الإحداثيات إلى خدمة الترميز الجغرافي في Android (Google)؛ وعند البحث اليدوي عن مدينة يُرسل النص الذي تكتبه.\n• المساجد القريبة – تُرسل إحداثيات منطقة البحث إلى OpenStreetMap (Overpass API). ويفتح طلب الاتجاهات خرائط Google على موقع المسجد.\n• صوت القرآن – تُبث التلاوات أو تُنزَّل من quran.com وeveryayah.com؛ ولا يحدّد الطلب إلا الملف الصوتي.\n• خطبة الجمعة – يُنزَّل النص وملف PDF والصوت من Diyanet (dinhizmetleri.diyanet.gov.tr).\n• الخطوط – تُنزَّل بعض الخطوط عبر خدمات Google Play (Google Fonts).\n• محتواك – تُحفظ الأذكار والختمات والمحفوظات والأهداف على جهازك.\n\nإحصاءات الاستخدام غير مرتبطة بهويتك بل برمز مستخدم عشوائي لا يحمل أي معلومة تعريفية (اسم مستعار). وإذا كان النسخ الاحتياطي في Android مفعّلاً يُضمَّن الرمز في نسختك الاحتياطية، ولذلك تُحتسب المستخدم نفسه عند إعادة تثبيت Vakit على حساب Google نفسه. وتُستخدم البيانات لتحسين التطبيق فحسب؛ ولا تُباع أبداً ولا تُستعمل في الإعلانات. لا تحتوي نسخة Android على أي SDK لتقارير الأعطال أو للإعلانات."
       },
       {
         "t": "٣. النسخ الاحتياطي والمزامنة (Google Backup)",
@@ -304,7 +304,7 @@ module.exports = {
       },
       {
         "t": "٤. خدمات الأطراف الثالثة",
-        "b": "يستخدم Vakit الخدمات التالية لأغراض محدودة، ولا يرسل Vakit هويتك إلى أيٍّ منها:\n• Google – النسخ الاحتياطي في Android، والترميز الجغرافي لاسم مدينتك، وGoogle Fonts، والتقييم داخل التطبيق من Play (In-App Review)، وخرائط Google عندما تطلب الاتجاهات.\n• OpenStreetMap (Overpass API) – البحث عن المساجد القريبة (إحداثيات منطقة البحث).\n• quran.com وeveryayah.com – صوت تلاوة القرآن.\n• Diyanet İşleri Başkanlığı – نص خطبة الجمعة وصوتها.\n• Cloudflare – تمرير حركة البيانات إلى خادم Vakit (إحصاءات الاستخدام) وتوزيع حزم المحتوى القابلة للتنزيل.\nتعالج كل خدمة الطلبات وفق سياسة الخصوصية الخاصة بها."
+        "b": "يستخدم Vakit الخدمات التالية لأغراض محدودة، ولا يرسل Vakit هويتك إلى أيٍّ منها:\n• Google – النسخ الاحتياطي في Android، والترميز الجغرافي لاسم مدينتك، وGoogle Fonts، والتقييم داخل التطبيق من Play (In-App Review)، وخرائط Google عندما تطلب الاتجاهات.\n• Firebase Cloud Messaging من جوجل – إعلانات الأيام المباركة والإصدارات. وتُرسل للجميع دفعة واحدة؛ دون استهداف فردي.\n• OpenStreetMap (Overpass API) – البحث عن المساجد القريبة (إحداثيات منطقة البحث).\n• quran.com وeveryayah.com – صوت تلاوة القرآن.\n• Diyanet İşleri Başkanlığı – نص خطبة الجمعة وصوتها.\n• Cloudflare – تمرير حركة البيانات إلى خادم Vakit (إحصاءات الاستخدام) وتوزيع حزم المحتوى القابلة للتنزيل.\nتعالج كل خدمة الطلبات وفق سياسة الخصوصية الخاصة بها."
       },
       {
         "t": "٥. الإعلانات",
@@ -351,7 +351,7 @@ module.exports = {
     },
     "titleBefore": "Məxfilik Siyasəti ",
     "titleEm": "Android",
-    "desc": "Son yenilənmə: 7 oktyabr 2026\n\nVakit məxfiliyinizə hörmət edir. Hesab yaratmağınız lazım deyil; adınız, e-poçtunuz, telefon nömrəniz, şəkilləriniz və ya kontaktlarınız kimi şəxsiyyət məlumatlarını toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar cihazınızda hesablanır. İbadət qeydləriniz (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) cihazınızda saxlanılır; Android ehtiyat nüsxəsi aktivdirsə, öz Google hesabınızda da saxlanılır — heç vaxt serverimizə göndərilmir. Tətbiqi yaxşılaşdıra bilməyimiz üçün serverimizə yalnız istifadə statistikası göndərilir; bu məlumat heç bir kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Çökmə hesabatı və ya reklam identifikatoru göndərilmir.",
+    "desc": "Son yenilənmə: 8 oktyabr 2026\n\nVakit məxfiliyinizə hörmət edir. Hesab yaratmağınız lazım deyil; adınız, e-poçtunuz, telefon nömrəniz, şəkilləriniz və ya kontaktlarınız kimi şəxsiyyət məlumatlarını toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar cihazınızda hesablanır. İbadət qeydləriniz (zikr, xətm, əlfəcinlər, hədəflər, sevimli məscidlər) cihazınızda saxlanılır; Android ehtiyat nüsxəsi aktivdirsə, öz Google hesabınızda da saxlanılır — heç vaxt serverimizə göndərilmir. Tətbiqi yaxşılaşdıra bilməyimiz üçün serverimizə yalnız istifadə statistikası göndərilir; bu məlumat heç bir kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Çökmə hesabatı və ya reklam identifikatoru göndərilmir.",
     "sections": [
       {
         "t": "1. Topladığımız məlumatlar",
@@ -383,8 +383,8 @@ module.exports = {
           {
             "name": "Bildiriş məlumatı",
             "lines": [
-              "Məqsəd: Yerli namaz bildirişlərini çatdırmaq",
-              "Emal: AlarmManager / Android bildiriş kanalları",
+              "Məqsəd: Namaz xatırlatmaları ilə mübarək gün və versiya elanlarını çatdırmaq",
+              "Emal: AlarmManager / Android bildiriş kanalları · Firebase Cloud Messaging (Google)",
               "Saxlanma müddəti: Söndürülənə və ya tətbiq silinənə qədər"
             ]
           },
@@ -409,7 +409,7 @@ module.exports = {
       },
       {
         "t": "2. Məlumatlarınızı necə istifadə edirik",
-        "b": "• Namaz vaxtları – Adhan kitabxanası ilə cihazınızda internetsiz hesablanır; bunun üçün koordinat göndərilmir.\n• Qiblə istiqaməti – məkan və kompas istiqaməti cihazınızda birləşdirilir.\n• Namaz bildirişləri – cihazınızda AlarmManager ilə planlaşdırılır; Android tətbiqi uzaqdan push bildirişi almır.\n• Şəhər adı – koordinatlar Android-in ünvan müəyyənetmə xidmətinə (Google) göndərilir; əl ilə şəhər axtarışında yazdığınız mətn göndərilir.\n• Yaxındakı məscidlər – axtarış sahəsinin koordinatları OpenStreetMap-ə (Overpass API) göndərilir. Marşrut məscidin yeri ilə Google Maps-i açır.\n• Quran səsi – tilavətlər quran.com və everyayah.com-dan dinlənilir və ya endirilir; sorğu yalnız səs faylını göstərir.\n• Cümə xütbəsi – mətn, PDF və səs Diyanet-dən (dinhizmetleri.diyanet.gov.tr) endirilir.\n• Şriftlər – bəzi şriftlər Google Play xidmətləri (Google Fonts) vasitəsilə endirilir.\n• Məzmununuz – zikr, xətm, əlfəcinlər və hədəflər cihazınızda saxlanılır.\n\nİstifadə statistikası kimliyinizə deyil, heç bir kimlik məlumatı daşımayan təsadüfi istifadəçi koduna (təxəllüs) bağlıdır. Android ehtiyat nüsxəsi aktivdirsə, kod ehtiyat nüsxənizə daxil edilir; buna görə Vakit-i eyni Google hesabında yenidən quraşdırmaq eyni istifadəçi sayılır. Məlumat yalnız tətbiqi yaxşılaşdırmaq üçün istifadə olunur; heç vaxt satılmır və reklamda işlədilmir. Android versiyasında çökmə hesabatı və ya reklam SDK-sı yoxdur."
+        "b": "• Namaz vaxtları – Adhan kitabxanası ilə cihazınızda internetsiz hesablanır; bunun üçün koordinat göndərilmir.\n• Qiblə istiqaməti – məkan və kompas istiqaməti cihazınızda birləşdirilir.\n• Namaz bildirişləri – cihazınızda AlarmManager ilə planlaşdırılır.\n• Elanlar — Mübarək gün və versiya elanları Firebase Cloud Messaging ilə mövzu üzrə yayımlanır; şəxs bazlı hədəfləmə yoxdur.\n• Şəhər adı – koordinatlar Android-in ünvan müəyyənetmə xidmətinə (Google) göndərilir; əl ilə şəhər axtarışında yazdığınız mətn göndərilir.\n• Yaxındakı məscidlər – axtarış sahəsinin koordinatları OpenStreetMap-ə (Overpass API) göndərilir. Marşrut məscidin yeri ilə Google Maps-i açır.\n• Quran səsi – tilavətlər quran.com və everyayah.com-dan dinlənilir və ya endirilir; sorğu yalnız səs faylını göstərir.\n• Cümə xütbəsi – mətn, PDF və səs Diyanet-dən (dinhizmetleri.diyanet.gov.tr) endirilir.\n• Şriftlər – bəzi şriftlər Google Play xidmətləri (Google Fonts) vasitəsilə endirilir.\n• Məzmununuz – zikr, xətm, əlfəcinlər və hədəflər cihazınızda saxlanılır.\n\nİstifadə statistikası kimliyinizə deyil, heç bir kimlik məlumatı daşımayan təsadüfi istifadəçi koduna (təxəllüs) bağlıdır. Android ehtiyat nüsxəsi aktivdirsə, kod ehtiyat nüsxənizə daxil edilir; buna görə Vakit-i eyni Google hesabında yenidən quraşdırmaq eyni istifadəçi sayılır. Məlumat yalnız tətbiqi yaxşılaşdırmaq üçün istifadə olunur; heç vaxt satılmır və reklamda işlədilmir. Android versiyasında çökmə hesabatı və ya reklam SDK-sı yoxdur."
       },
       {
         "t": "3. Ehtiyat nüsxə və sinxronizasiya (Google Backup)",
@@ -417,7 +417,7 @@ module.exports = {
       },
       {
         "t": "4. Üçüncü tərəf xidmətləri",
-        "b": "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç birinə Vakit tərəfindən şəxsiyyətiniz ötürülmür:\n• Google – Android ehtiyat nüsxəsi, şəhər adı üçün ünvan müəyyənetmə, Google Fonts, Play tətbiqdaxili rəy (In-App Review) və marşrut istədiyiniz zaman Google Maps.\n• OpenStreetMap (Overpass API) – yaxındakı məscid axtarışı (axtarış sahəsinin koordinatları).\n• quran.com və everyayah.com – Quran tilavəti səsləri.\n• Diyanet İşleri Başkanlığı – cümə xütbəsinin mətni və səsi.\n• Cloudflare – Vakit serverinə gedən trafikin (istifadə statistikası) ötürülməsi və endirilə bilən məzmun paketlərinin paylanması.\nHər xidmət sorğuları öz məxfilik siyasətinə uyğun emal edir."
+        "b": "Vakit aşağıdakı xidmətlərdən məhdud məqsədlərlə istifadə edir. Onların heç birinə Vakit tərəfindən şəxsiyyətiniz ötürülmür:\n• Google – Android ehtiyat nüsxəsi, şəhər adı üçün ünvan müəyyənetmə, Google Fonts, Play tətbiqdaxili rəy (In-App Review) və marşrut istədiyiniz zaman Google Maps.\n• Firebase Cloud Messaging (Google) — Mübarək gün və versiya elanları. Elanlar mövzu üzrə yayımlanır; şəxs bazlı hədəfləmə yoxdur.\n• OpenStreetMap (Overpass API) – yaxındakı məscid axtarışı (axtarış sahəsinin koordinatları).\n• quran.com və everyayah.com – Quran tilavəti səsləri.\n• Diyanet İşleri Başkanlığı – cümə xütbəsinin mətni və səsi.\n• Cloudflare – Vakit serverinə gedən trafikin (istifadə statistikası) ötürülməsi və endirilə bilən məzmun paketlərinin paylanması.\nHər xidmət sorğuları öz məxfilik siyasətinə uyğun emal edir."
       },
       {
         "t": "5. Reklam",
@@ -464,7 +464,7 @@ module.exports = {
     },
     "titleBefore": "গোপনীয়তা নীতি ",
     "titleEm": "Android",
-    "desc": "সর্বশেষ হালনাগাদ: ৭ অক্টোবর ২০২৬\n\nVakit আপনার গোপনীয়তাকে সম্মান করে। আপনার কোনো অ্যাকাউন্ট লাগে না, এবং আমরা আপনার নাম, ইমেইল, ফোন নম্বর, ছবি বা কন্টাক্টের মতো পরিচয়ের তথ্য সংগ্রহ করি না। নামাজের সময়, কিবলার দিক ও রিমাইন্ডার আপনার ডিভাইসেই হিসাব করা হয়। আপনার ইবাদতের রেকর্ড (জিকির, খতম, বুকমার্ক, লক্ষ্য, প্রিয় মসজিদ) আপনার ডিভাইসে সংরক্ষিত থাকে, আর Android ব্যাকআপ চালু থাকলে আপনার নিজের Google অ্যাকাউন্টেও — সেগুলো কখনো আমাদের সার্ভারে পাঠানো হয় না। অ্যাপটি উন্নত করার জন্য শুধু ব্যবহারের পরিসংখ্যান আমাদের সার্ভারে পাঠানো হয়; সেই তথ্য পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি ব্যবহারকারী কোডের সঙ্গে যুক্ত। কোনো ক্র্যাশ রিপোর্ট বা বিজ্ঞাপন আইডি পাঠানো হয় না।",
+    "desc": "সর্বশেষ হালনাগাদ: ৮ অক্টোবর ২০২৬\n\nVakit আপনার গোপনীয়তাকে সম্মান করে। আপনার কোনো অ্যাকাউন্ট লাগে না, এবং আমরা আপনার নাম, ইমেইল, ফোন নম্বর, ছবি বা কন্টাক্টের মতো পরিচয়ের তথ্য সংগ্রহ করি না। নামাজের সময়, কিবলার দিক ও রিমাইন্ডার আপনার ডিভাইসেই হিসাব করা হয়। আপনার ইবাদতের রেকর্ড (জিকির, খতম, বুকমার্ক, লক্ষ্য, প্রিয় মসজিদ) আপনার ডিভাইসে সংরক্ষিত থাকে, আর Android ব্যাকআপ চালু থাকলে আপনার নিজের Google অ্যাকাউন্টেও — সেগুলো কখনো আমাদের সার্ভারে পাঠানো হয় না। অ্যাপটি উন্নত করার জন্য শুধু ব্যবহারের পরিসংখ্যান আমাদের সার্ভারে পাঠানো হয়; সেই তথ্য পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি ব্যবহারকারী কোডের সঙ্গে যুক্ত। কোনো ক্র্যাশ রিপোর্ট বা বিজ্ঞাপন আইডি পাঠানো হয় না।",
     "sections": [
       {
         "t": "1. আমরা যে তথ্য সংগ্রহ করি",
@@ -496,8 +496,8 @@ module.exports = {
           {
             "name": "বিজ্ঞপ্তির তথ্য",
             "lines": [
-              "উদ্দেশ্য: স্থানীয় নামাজের বিজ্ঞপ্তি পৌঁছে দেওয়া",
-              "প্রক্রিয়াকরণ: AlarmManager / Android বিজ্ঞপ্তি চ্যানেল",
+              "উদ্দেশ্য: নামাজের রিমাইন্ডার এবং বরকতময় দিন ও সংস্করণের ঘোষণা পাঠানো",
+              "প্রক্রিয়াকরণ: AlarmManager / Android বিজ্ঞপ্তি চ্যানেল · Firebase Cloud Messaging (Google)",
               "সংরক্ষণ: বন্ধ করা বা অ্যাপ মুছে ফেলা পর্যন্ত"
             ]
           },
@@ -522,7 +522,7 @@ module.exports = {
       },
       {
         "t": "2. আমরা আপনার তথ্য কীভাবে ব্যবহার করি",
-        "b": "• নামাজের সময় – Adhan লাইব্রেরি দিয়ে আপনার ডিভাইসে ইন্টারনেট ছাড়াই হিসাব করা হয়; এর জন্য কোনো স্থানাঙ্ক পাঠানো হয় না।\n• কিবলার দিক – অবস্থান ও কম্পাসের দিক আপনার ডিভাইসে একত্র করা হয়।\n• নামাজের বিজ্ঞপ্তি – AlarmManager দিয়ে আপনার ডিভাইসে নির্ধারণ করা হয়; Android অ্যাপ দূর থেকে কোনো পুশ বিজ্ঞপ্তি পায় না।\n• শহরের নাম – স্থানাঙ্ক Android-এর জিওকোডিং সেবায় (Google) পাঠানো হয়; হাতে শহর খুঁজলে আপনার লেখা টেক্সট পাঠানো হয়।\n• কাছের মসজিদ – অনুসন্ধান এলাকার স্থানাঙ্ক OpenStreetMap-এ (Overpass API) পাঠানো হয়। পথনির্দেশ মসজিদের অবস্থানসহ Google Maps খোলে।\n• কুরআনের অডিও – তিলাওয়াত quran.com ও everyayah.com থেকে স্ট্রিম বা ডাউনলোড করা হয়; অনুরোধে শুধু অডিও ফাইলটি চিহ্নিত হয়।\n• জুমার খুতবা – টেক্সট, PDF ও অডিও Diyanet (dinhizmetleri.diyanet.gov.tr) থেকে ডাউনলোড করা হয়।\n• ফন্ট – কিছু ফন্ট Google Play পরিষেবার (Google Fonts) মাধ্যমে ডাউনলোড করা হয়।\n• আপনার কনটেন্ট – জিকির, খতম, বুকমার্ক ও লক্ষ্য আপনার ডিভাইসে সংরক্ষিত থাকে।\n\nব্যবহারের পরিসংখ্যান আপনার পরিচয়ের সঙ্গে নয়, পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি র‍্যান্ডম ব্যবহারকারী কোডের (ছদ্মনাম) সঙ্গে যুক্ত। Android ব্যাকআপ চালু থাকলে কোডটি আপনার ব্যাকআপে যুক্ত হয়, তাই একই Google অ্যাকাউন্টে Vakit আবার ইনস্টল করলে একই ব্যবহারকারী হিসেবে গণ্য হয়। তথ্যগুলো শুধু অ্যাপ উন্নত করতে ব্যবহৃত হয়; কখনো বিক্রি করা হয় না বা বিজ্ঞাপনে ব্যবহার করা হয় না। Android সংস্করণে কোনো ক্র্যাশ রিপোর্টিং বা বিজ্ঞাপন SDK নেই।"
+        "b": "• নামাজের সময় – Adhan লাইব্রেরি দিয়ে আপনার ডিভাইসে ইন্টারনেট ছাড়াই হিসাব করা হয়; এর জন্য কোনো স্থানাঙ্ক পাঠানো হয় না।\n• কিবলার দিক – অবস্থান ও কম্পাসের দিক আপনার ডিভাইসে একত্র করা হয়।\n• নামাজের বিজ্ঞপ্তি – AlarmManager দিয়ে আপনার ডিভাইসে নির্ধারণ করা হয়।\n• ঘোষণার বিজ্ঞপ্তি – বরকতময় দিন ও সংস্করণের ঘোষণা Firebase Cloud Messaging দিয়ে সবার কাছে একসঙ্গে পাঠানো হয়; ব্যক্তিভিত্তিক লক্ষ্য নির্ধারণ করা হয় না।\n• শহরের নাম – স্থানাঙ্ক Android-এর জিওকোডিং সেবায় (Google) পাঠানো হয়; হাতে শহর খুঁজলে আপনার লেখা টেক্সট পাঠানো হয়।\n• কাছের মসজিদ – অনুসন্ধান এলাকার স্থানাঙ্ক OpenStreetMap-এ (Overpass API) পাঠানো হয়। পথনির্দেশ মসজিদের অবস্থানসহ Google Maps খোলে।\n• কুরআনের অডিও – তিলাওয়াত quran.com ও everyayah.com থেকে স্ট্রিম বা ডাউনলোড করা হয়; অনুরোধে শুধু অডিও ফাইলটি চিহ্নিত হয়।\n• জুমার খুতবা – টেক্সট, PDF ও অডিও Diyanet (dinhizmetleri.diyanet.gov.tr) থেকে ডাউনলোড করা হয়।\n• ফন্ট – কিছু ফন্ট Google Play পরিষেবার (Google Fonts) মাধ্যমে ডাউনলোড করা হয়।\n• আপনার কনটেন্ট – জিকির, খতম, বুকমার্ক ও লক্ষ্য আপনার ডিভাইসে সংরক্ষিত থাকে।\n\nব্যবহারের পরিসংখ্যান আপনার পরিচয়ের সঙ্গে নয়, পরিচয়ের কোনো তথ্য ধারণ করে না এমন একটি র‍্যান্ডম ব্যবহারকারী কোডের (ছদ্মনাম) সঙ্গে যুক্ত। Android ব্যাকআপ চালু থাকলে কোডটি আপনার ব্যাকআপে যুক্ত হয়, তাই একই Google অ্যাকাউন্টে Vakit আবার ইনস্টল করলে একই ব্যবহারকারী হিসেবে গণ্য হয়। তথ্যগুলো শুধু অ্যাপ উন্নত করতে ব্যবহৃত হয়; কখনো বিক্রি করা হয় না বা বিজ্ঞাপনে ব্যবহার করা হয় না। Android সংস্করণে কোনো ক্র্যাশ রিপোর্টিং বা বিজ্ঞাপন SDK নেই।"
       },
       {
         "t": "৩. ব্যাকআপ ও সিঙ্ক (Google Backup)",
@@ -530,7 +530,7 @@ module.exports = {
       },
       {
         "t": "4. তৃতীয় পক্ষের সেবা",
-        "b": "Vakit সীমিত উদ্দেশ্যে নিচের সেবাগুলো ব্যবহার করে। এদের কেউই Vakit থেকে আপনার পরিচয় পায় না:\n• Google – Android ব্যাকআপ, শহরের নামের জন্য জিওকোডিং, Google Fonts, Play-এর অ্যাপের ভেতরে রিভিউ (In-App Review), এবং আপনি পথনির্দেশ চাইলে Google Maps।\n• OpenStreetMap (Overpass API) – কাছের মসজিদ অনুসন্ধান (অনুসন্ধান এলাকার স্থানাঙ্ক)।\n• quran.com ও everyayah.com – কুরআন তিলাওয়াতের অডিও।\n• Diyanet İşleri Başkanlığı – জুমার খুতবার টেক্সট ও অডিও।\n• Cloudflare – Vakit সার্ভারে যাওয়া ট্রাফিক (ব্যবহারের পরিসংখ্যান) পৌঁছে দেওয়া এবং ডাউনলোডযোগ্য কনটেন্ট প্যাক বিতরণ।\nপ্রতিটি সেবা নিজের গোপনীয়তা নীতি অনুযায়ী অনুরোধ প্রক্রিয়া করে।"
+        "b": "Vakit সীমিত উদ্দেশ্যে নিচের সেবাগুলো ব্যবহার করে। এদের কেউই Vakit থেকে আপনার পরিচয় পায় না:\n• Google – Android ব্যাকআপ, শহরের নামের জন্য জিওকোডিং, Google Fonts, Play-এর অ্যাপের ভেতরে রিভিউ (In-App Review), এবং আপনি পথনির্দেশ চাইলে Google Maps।\n• Firebase Cloud Messaging (Google) – বরকতময় দিন ও সংস্করণের ঘোষণা। ঘোষণা টপিক অনুযায়ী সবার কাছে যায়; ব্যক্তিভিত্তিক লক্ষ্য নির্ধারণ নেই।\n• OpenStreetMap (Overpass API) – কাছের মসজিদ অনুসন্ধান (অনুসন্ধান এলাকার স্থানাঙ্ক)।\n• quran.com ও everyayah.com – কুরআন তিলাওয়াতের অডিও।\n• Diyanet İşleri Başkanlığı – জুমার খুতবার টেক্সট ও অডিও।\n• Cloudflare – Vakit সার্ভারে যাওয়া ট্রাফিক (ব্যবহারের পরিসংখ্যান) পৌঁছে দেওয়া এবং ডাউনলোডযোগ্য কনটেন্ট প্যাক বিতরণ।\nপ্রতিটি সেবা নিজের গোপনীয়তা নীতি অনুযায়ী অনুরোধ প্রক্রিয়া করে।"
       },
       {
         "t": "5. বিজ্ঞাপন",
@@ -577,7 +577,7 @@ module.exports = {
     },
     "titleBefore": "Privatlivspolitik ",
     "titleEm": "Android",
-    "desc": "Sidst opdateret: 7. oktober 2026\n\nVakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.",
+    "desc": "Sidst opdateret: 8. oktober 2026\n\nVakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.",
     "sections": [
       {
         "t": "1. Oplysninger vi indsamler",
@@ -609,8 +609,8 @@ module.exports = {
           {
             "name": "Notifikationsdata",
             "lines": [
-              "Formål: Levere lokale notifikationer om bøn",
-              "Behandling: AlarmManager / Android-notifikationskanaler",
+              "Formål: Levere påmindelser om bedetider samt beskeder om velsignede dage og nye versioner",
+              "Behandling: AlarmManager / Android-notifikationskanaler · Firebase Cloud Messaging (Google)",
               "Opbevaring: Indtil du slår dem fra eller sletter appen"
             ]
           },
@@ -635,7 +635,7 @@ module.exports = {
       },
       {
         "t": "2. Sådan bruger vi dine data",
-        "b": "• Bedetider – beregnes offline på din enhed med Adhan-biblioteket; der sendes ingen koordinater til det.\n• Qibla-retning – position og kompasretning kombineres på din enhed.\n• Bedenotifikationer – planlægges på din enhed med AlarmManager; Android-appen modtager ingen push-notifikationer udefra.\n• Bynavn – koordinaterne sendes til Androids geokodningstjeneste (Google); en manuel bysøgning sender den tekst, du skriver.\n• Moskeer i nærheden – koordinaterne for søgeområdet sendes til OpenStreetMap (Overpass API). Rutevejledning åbner Google Maps med moskeens placering.\n• Koranlyd – recitationer streames eller downloades fra quran.com og everyayah.com; en forespørgsel identificerer kun lydfilen.\n• Fredagsprædiken – tekst, PDF og lyd downloades fra Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Skrifttyper – nogle skrifttyper downloades via Google Play-tjenester (Google Fonts).\n• Dit indhold – dhikr, khatm, bogmærker og mål gemmes på din enhed.\n\nBrugsstatistikken er ikke knyttet til din identitet, men til en tilfældig brugerkode uden identificerende oplysninger (et pseudonym). Hvis Android-backup er slået til, kommer koden med i din backup, så hvis du geninstallerer Vakit på den samme Google-konto, tæller det som den samme bruger. Data bruges udelukkende til at forbedre appen; de sælges aldrig og bruges ikke til reklamer. Android-versionen indeholder intet SDK til nedbrudsrapportering eller annoncering."
+        "b": "• Bedetider – beregnes offline på din enhed med Adhan-biblioteket; der sendes ingen koordinater til det.\n• Qibla-retning – position og kompasretning kombineres på din enhed.\n• Bedenotifikationer – planlægges på din enhed med AlarmManager.\n• Beskeder – Beskeder om velsignede dage og nye versioner sendes via Firebase Cloud Messaging; der er ingen målretning mod enkeltpersoner.\n• Bynavn – koordinaterne sendes til Androids geokodningstjeneste (Google); en manuel bysøgning sender den tekst, du skriver.\n• Moskeer i nærheden – koordinaterne for søgeområdet sendes til OpenStreetMap (Overpass API). Rutevejledning åbner Google Maps med moskeens placering.\n• Koranlyd – recitationer streames eller downloades fra quran.com og everyayah.com; en forespørgsel identificerer kun lydfilen.\n• Fredagsprædiken – tekst, PDF og lyd downloades fra Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Skrifttyper – nogle skrifttyper downloades via Google Play-tjenester (Google Fonts).\n• Dit indhold – dhikr, khatm, bogmærker og mål gemmes på din enhed.\n\nBrugsstatistikken er ikke knyttet til din identitet, men til en tilfældig brugerkode uden identificerende oplysninger (et pseudonym). Hvis Android-backup er slået til, kommer koden med i din backup, så hvis du geninstallerer Vakit på den samme Google-konto, tæller det som den samme bruger. Data bruges udelukkende til at forbedre appen; de sælges aldrig og bruges ikke til reklamer. Android-versionen indeholder intet SDK til nedbrudsrapportering eller annoncering."
       },
       {
         "t": "3. Sikkerhedskopiering og synkronisering (Google Backup)",
@@ -643,7 +643,7 @@ module.exports = {
       },
       {
         "t": "4. Tredjepartstjenester",
-        "b": "Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:\n• Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.\n• OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).\n• quran.com og everyayah.com – lyd af Koranrecitation.\n• Diyanet İşleri Başkanlığı – tekst og lyd til fredagsprædikenen.\n• Cloudflare – videresendelse af trafik til Vakits server (brugsstatistik) og levering af indholdspakker, der kan downloades.\nHver tjeneste behandler forespørgsler efter sin egen privatlivspolitik."
+        "b": "Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:\n• Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.\n• Firebase Cloud Messaging (Google) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.\n• OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).\n• quran.com og everyayah.com – lyd af Koranrecitation.\n• Diyanet İşleri Başkanlığı – tekst og lyd til fredagsprædikenen.\n• Cloudflare – videresendelse af trafik til Vakits server (brugsstatistik) og levering af indholdspakker, der kan downloades.\nHver tjeneste behandler forespørgsler efter sin egen privatlivspolitik."
       },
       {
         "t": "5. Reklamer",
@@ -690,7 +690,7 @@ module.exports = {
     },
     "titleBefore": "Datenschutzerklärung ",
     "titleEm": "Android",
-    "desc": "Zuletzt aktualisiert: 7. Oktober 2026\n\nVakit achtet deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Identitätsdaten wie Name, E-Mail-Adresse, Telefonnummer, Fotos oder Kontakte. Gebetszeiten, Qibla-Richtung und Erinnerungen werden auf deinem Gerät berechnet. Deine Gottesdienst-Einträge (Dhikr, Chatm, Lesezeichen, Ziele, bevorzugte Moscheen) werden auf deinem Gerät gespeichert und, wenn die Android-Sicherung aktiviert ist, in deinem eigenen Google-Konto — an unseren Server gehen sie nie. Nur Nutzungsstatistiken werden an unseren Server gesendet, damit wir die App verbessern können; diese Daten sind mit einem Benutzercode ohne identifizierende Angaben verknüpft. Es werden keine Absturzberichte oder Werbe-IDs gesendet.",
+    "desc": "Zuletzt aktualisiert: 8. Oktober 2026\n\nVakit achtet deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Identitätsdaten wie Name, E-Mail-Adresse, Telefonnummer, Fotos oder Kontakte. Gebetszeiten, Qibla-Richtung und Erinnerungen werden auf deinem Gerät berechnet. Deine Gottesdienst-Einträge (Dhikr, Chatm, Lesezeichen, Ziele, bevorzugte Moscheen) werden auf deinem Gerät gespeichert und, wenn die Android-Sicherung aktiviert ist, in deinem eigenen Google-Konto — an unseren Server gehen sie nie. Nur Nutzungsstatistiken werden an unseren Server gesendet, damit wir die App verbessern können; diese Daten sind mit einem Benutzercode ohne identifizierende Angaben verknüpft. Es werden keine Absturzberichte oder Werbe-IDs gesendet.",
     "sections": [
       {
         "t": "1. Welche Daten wir erheben",
@@ -722,8 +722,8 @@ module.exports = {
           {
             "name": "Mitteilungsdaten",
             "lines": [
-              "Zweck: Lokale Gebetsmitteilungen zustellen",
-              "Verarbeitung: AlarmManager / Android-Benachrichtigungskanäle",
+              "Zweck: Gebetserinnerungen sowie Ankündigungen zu heiligen Tagen und neuen Versionen zustellen",
+              "Verarbeitung: AlarmManager / Android-Benachrichtigungskanäle · Firebase Cloud Messaging (Google)",
               "Aufbewahrung: Bis zur Deaktivierung oder Löschung der App"
             ]
           },
@@ -748,7 +748,7 @@ module.exports = {
       },
       {
         "t": "2. Wie wir deine Daten nutzen",
-        "b": "• Gebetszeiten – werden mit der Adhan-Bibliothek offline auf deinem Gerät berechnet; dafür werden keine Koordinaten gesendet.\n• Qibla-Richtung – Standort und Kompassrichtung werden auf deinem Gerät kombiniert.\n• Gebetsbenachrichtigungen – werden auf deinem Gerät mit AlarmManager geplant; die Android-App empfängt keine Push-Benachrichtigungen aus der Ferne.\n• Ortsname – die Koordinaten werden an den Geocoding-Dienst von Android (Google) gesendet; bei einer manuellen Ortssuche wird der eingegebene Text gesendet.\n• Moscheen in der Nähe – die Koordinaten des Suchbereichs werden an OpenStreetMap (Overpass API) gesendet. Die Routenführung öffnet Google Maps mit dem Standort der Moschee.\n• Koran-Audio – Rezitationen werden von quran.com und everyayah.com gestreamt oder heruntergeladen; eine Anfrage bezeichnet nur die Audiodatei.\n• Freitagspredigt – Text, PDF und Audio werden von Diyanet (dinhizmetleri.diyanet.gov.tr) heruntergeladen.\n• Schriftarten – einige Schriftarten werden über die Google Play-Dienste (Google Fonts) heruntergeladen.\n• Deine Inhalte – Dhikr, Chatm, Lesezeichen und Ziele werden auf deinem Gerät gespeichert.\n\nNutzungsstatistiken sind nicht mit deiner Identität verknüpft, sondern mit einem zufälligen Benutzercode ohne identifizierende Angaben (einem Pseudonym). Wenn die Android-Sicherung aktiviert ist, ist der Code in deiner Sicherung enthalten; installierst du Vakit im selben Google-Konto neu, zählt das daher als dieselbe Person. Die Daten dienen ausschließlich der Verbesserung der App; sie werden nie verkauft oder für Werbung verwendet. Die Android-Version enthält kein Absturzberichts- oder Werbe-SDK."
+        "b": "• Gebetszeiten – werden mit der Adhan-Bibliothek offline auf deinem Gerät berechnet; dafür werden keine Koordinaten gesendet.\n• Qibla-Richtung – Standort und Kompassrichtung werden auf deinem Gerät kombiniert.\n• Gebetsbenachrichtigungen – werden auf deinem Gerät mit AlarmManager geplant.\n• Ankündigungen – Hinweise zu heiligen Tagen und neuen Versionen werden über Firebase Cloud Messaging gesendet; es gibt keine personenbezogene Ansprache.\n• Ortsname – die Koordinaten werden an den Geocoding-Dienst von Android (Google) gesendet; bei einer manuellen Ortssuche wird der eingegebene Text gesendet.\n• Moscheen in der Nähe – die Koordinaten des Suchbereichs werden an OpenStreetMap (Overpass API) gesendet. Die Routenführung öffnet Google Maps mit dem Standort der Moschee.\n• Koran-Audio – Rezitationen werden von quran.com und everyayah.com gestreamt oder heruntergeladen; eine Anfrage bezeichnet nur die Audiodatei.\n• Freitagspredigt – Text, PDF und Audio werden von Diyanet (dinhizmetleri.diyanet.gov.tr) heruntergeladen.\n• Schriftarten – einige Schriftarten werden über die Google Play-Dienste (Google Fonts) heruntergeladen.\n• Deine Inhalte – Dhikr, Chatm, Lesezeichen und Ziele werden auf deinem Gerät gespeichert.\n\nNutzungsstatistiken sind nicht mit deiner Identität verknüpft, sondern mit einem zufälligen Benutzercode ohne identifizierende Angaben (einem Pseudonym). Wenn die Android-Sicherung aktiviert ist, ist der Code in deiner Sicherung enthalten; installierst du Vakit im selben Google-Konto neu, zählt das daher als dieselbe Person. Die Daten dienen ausschließlich der Verbesserung der App; sie werden nie verkauft oder für Werbung verwendet. Die Android-Version enthält kein Absturzberichts- oder Werbe-SDK."
       },
       {
         "t": "3. Backup und Synchronisierung (Google Backup)",
@@ -756,7 +756,7 @@ module.exports = {
       },
       {
         "t": "4. Dienste Dritter",
-        "b": "Vakit nutzt die folgenden Dienste für begrenzte Zwecke. Keiner von ihnen erhält von Vakit deine Identität:\n• Google – Android-Sicherung, Geocoding für deinen Ortsnamen, Google Fonts, Play In-App-Bewertung und Google Maps, wenn du eine Route anforderst.\n• OpenStreetMap (Overpass API) – Suche nach Moscheen in der Nähe (Koordinaten des Suchbereichs).\n• quran.com und everyayah.com – Audio der Koranrezitation.\n• Diyanet İşleri Başkanlığı – Text und Audio der Freitagspredigt.\n• Cloudflare – Weiterleitung der Verbindungen zum Vakit-Server (Nutzungsstatistiken) und Auslieferung der herunterladbaren Inhaltspakete.\nJeder Dienst verarbeitet Anfragen nach seiner eigenen Datenschutzerklärung."
+        "b": "Vakit nutzt die folgenden Dienste für begrenzte Zwecke. Keiner von ihnen erhält von Vakit deine Identität:\n• Google – Android-Sicherung, Geocoding für deinen Ortsnamen, Google Fonts, Play In-App-Bewertung und Google Maps, wenn du eine Route anforderst.\n• Firebase Cloud Messaging (Google) – Ankündigungen zu heiligen Tagen und Versionen. Sie werden nach Themen gesendet; es gibt keine personenbezogene Ansprache.\n• OpenStreetMap (Overpass API) – Suche nach Moscheen in der Nähe (Koordinaten des Suchbereichs).\n• quran.com und everyayah.com – Audio der Koranrezitation.\n• Diyanet İşleri Başkanlığı – Text und Audio der Freitagspredigt.\n• Cloudflare – Weiterleitung der Verbindungen zum Vakit-Server (Nutzungsstatistiken) und Auslieferung der herunterladbaren Inhaltspakete.\nJeder Dienst verarbeitet Anfragen nach seiner eigenen Datenschutzerklärung."
       },
       {
         "t": "5. Werbung",
@@ -803,7 +803,7 @@ module.exports = {
     },
     "titleBefore": "Política de privacidad ",
     "titleEm": "Android",
-    "desc": "Última actualización: 7 de octubre de 2026\n\nVakit respeta tu privacidad. No necesitas una cuenta y no recogemos datos de identidad como tu nombre, correo electrónico, número de teléfono, fotos o contactos. Los horarios de oración, la dirección de la alquibla y los recordatorios se calculan en tu dispositivo. Tus registros de adoración (dhikr, jatm, marcadores, metas, mezquitas favoritas) se guardan en tu dispositivo y, si la copia de seguridad de Android está activada, en tu propia cuenta de Google — nunca se envían a nuestro servidor. Solo se envían estadísticas de uso a nuestro servidor para que podamos mejorar la app; esos datos están vinculados a un código de usuario sin datos identificativos. No se envían informes de fallos ni identificadores publicitarios.",
+    "desc": "Última actualización: 8 de octubre de 2026\n\nVakit respeta tu privacidad. No necesitas una cuenta y no recogemos datos de identidad como tu nombre, correo electrónico, número de teléfono, fotos o contactos. Los horarios de oración, la dirección de la alquibla y los recordatorios se calculan en tu dispositivo. Tus registros de adoración (dhikr, jatm, marcadores, metas, mezquitas favoritas) se guardan en tu dispositivo y, si la copia de seguridad de Android está activada, en tu propia cuenta de Google — nunca se envían a nuestro servidor. Solo se envían estadísticas de uso a nuestro servidor para que podamos mejorar la app; esos datos están vinculados a un código de usuario sin datos identificativos. No se envían informes de fallos ni identificadores publicitarios.",
     "sections": [
       {
         "t": "1. Datos que recogemos",
@@ -835,8 +835,8 @@ module.exports = {
           {
             "name": "Datos de notificaciones",
             "lines": [
-              "Finalidad: Entregar notificaciones locales de oración",
-              "Tratamiento: AlarmManager / canales de notificación de Android",
+              "Finalidad: Entregar recordatorios de oración y avisos de días benditos y nuevas versiones",
+              "Tratamiento: AlarmManager / canales de notificación de Android · Firebase Cloud Messaging (Google)",
               "Conservación: Hasta que se desactiven o se elimine la app"
             ]
           },
@@ -861,7 +861,7 @@ module.exports = {
       },
       {
         "t": "2. Cómo usamos tus datos",
-        "b": "• Horarios de oración – se calculan sin conexión en tu dispositivo con la biblioteca Adhan; para ello no se envían coordenadas.\n• Dirección de la alquibla – la ubicación y el rumbo de la brújula se combinan en tu dispositivo.\n• Notificaciones de oración – se programan en tu dispositivo con AlarmManager; la app de Android no recibe notificaciones push remotas.\n• Nombre de la ciudad – las coordenadas se envían al servicio de geocodificación de Android (Google); una búsqueda manual de ciudad envía el texto que escribes.\n• Mezquitas cercanas – las coordenadas del área de búsqueda se envían a OpenStreetMap (Overpass API). Las indicaciones abren Google Maps con la ubicación de la mezquita.\n• Audio del Corán – las recitaciones se reproducen en streaming o se descargan de quran.com y everyayah.com; una solicitud solo identifica el archivo de audio.\n• Sermón del viernes – el texto, el PDF y el audio se descargan de Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fuentes – algunas fuentes se descargan a través de los servicios de Google Play (Google Fonts).\n• Tu contenido – dhikr, jatm, marcadores y metas se guardan en tu dispositivo.\n\nLas estadísticas de uso no están vinculadas a tu identidad, sino a un código de usuario aleatorio sin datos identificativos (un seudónimo). Si la copia de seguridad de Android está activada, el código se incluye en tu copia, por lo que reinstalar Vakit en la misma cuenta de Google cuenta como el mismo usuario. Los datos solo sirven para mejorar la app; nunca se venden ni se usan con fines publicitarios. La versión para Android no contiene ningún SDK de informes de fallos ni de publicidad."
+        "b": "• Horarios de oración – se calculan sin conexión en tu dispositivo con la biblioteca Adhan; para ello no se envían coordenadas.\n• Dirección de la alquibla – la ubicación y el rumbo de la brújula se combinan en tu dispositivo.\n• Notificaciones de oración – se programan en tu dispositivo con AlarmManager.\n• Avisos – Los avisos de días benditos y de versiones se difunden por Firebase Cloud Messaging; no hay segmentación individual.\n• Nombre de la ciudad – las coordenadas se envían al servicio de geocodificación de Android (Google); una búsqueda manual de ciudad envía el texto que escribes.\n• Mezquitas cercanas – las coordenadas del área de búsqueda se envían a OpenStreetMap (Overpass API). Las indicaciones abren Google Maps con la ubicación de la mezquita.\n• Audio del Corán – las recitaciones se reproducen en streaming o se descargan de quran.com y everyayah.com; una solicitud solo identifica el archivo de audio.\n• Sermón del viernes – el texto, el PDF y el audio se descargan de Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fuentes – algunas fuentes se descargan a través de los servicios de Google Play (Google Fonts).\n• Tu contenido – dhikr, jatm, marcadores y metas se guardan en tu dispositivo.\n\nLas estadísticas de uso no están vinculadas a tu identidad, sino a un código de usuario aleatorio sin datos identificativos (un seudónimo). Si la copia de seguridad de Android está activada, el código se incluye en tu copia, por lo que reinstalar Vakit en la misma cuenta de Google cuenta como el mismo usuario. Los datos solo sirven para mejorar la app; nunca se venden ni se usan con fines publicitarios. La versión para Android no contiene ningún SDK de informes de fallos ni de publicidad."
       },
       {
         "t": "3. Copia de seguridad y sincronización (Google Backup)",
@@ -869,7 +869,7 @@ module.exports = {
       },
       {
         "t": "4. Servicios de terceros",
-        "b": "Vakit usa los siguientes servicios con fines limitados. Ninguno de ellos recibe tu identidad por parte de Vakit:\n• Google – copia de seguridad de Android, geocodificación para el nombre de tu ciudad, Google Fonts, la reseña integrada de Play (In-App Review) y Google Maps cuando pides indicaciones.\n• OpenStreetMap (Overpass API) – búsqueda de mezquitas cercanas (coordenadas del área de búsqueda).\n• quran.com y everyayah.com – audio de recitación del Corán.\n• Diyanet İşleri Başkanlığı – texto y audio del sermón del viernes.\n• Cloudflare – transmisión del tráfico hacia el servidor de Vakit (estadísticas de uso) y distribución de los paquetes de contenido descargables.\nCada servicio procesa las solicitudes según su propia política de privacidad."
+        "b": "Vakit usa los siguientes servicios con fines limitados. Ninguno de ellos recibe tu identidad por parte de Vakit:\n• Google – copia de seguridad de Android, geocodificación para el nombre de tu ciudad, Google Fonts, la reseña integrada de Play (In-App Review) y Google Maps cuando pides indicaciones.\n• Firebase Cloud Messaging (Google) – Avisos de días benditos y de versiones. Se difunden por temas; no hay segmentación individual.\n• OpenStreetMap (Overpass API) – búsqueda de mezquitas cercanas (coordenadas del área de búsqueda).\n• quran.com y everyayah.com – audio de recitación del Corán.\n• Diyanet İşleri Başkanlığı – texto y audio del sermón del viernes.\n• Cloudflare – transmisión del tráfico hacia el servidor de Vakit (estadísticas de uso) y distribución de los paquetes de contenido descargables.\nCada servicio procesa las solicitudes según su propia política de privacidad."
       },
       {
         "t": "5. Publicidad",
@@ -916,7 +916,7 @@ module.exports = {
     },
     "titleBefore": "سیاست حریم خصوصی ",
     "titleEm": "Android",
-    "desc": "آخرین به‌روزرسانی: 7 اکتبر 2026\n\nVakit به حریم خصوصی تو احترام می‌گذارد. به حساب کاربری نیازی نداری و ما داده‌های هویتی مانند نام، ایمیل، شماره تلفن، عکس‌ها یا مخاطبانت را گردآوری نمی‌کنیم. اوقات نماز، جهت قبله و یادآوری‌ها روی دستگاه تو محاسبه می‌شوند. سوابق عبادت تو (ذکر، ختم، نشان‌ها، هدف‌ها، مسجدهای دلخواه) روی دستگاهت ذخیره می‌شود و اگر پشتیبان‌گیری Android روشن باشد، در حساب Google خودت نیز — هرگز به سرور ما فرستاده نمی‌شود. تنها آمار استفاده به سرور ما فرستاده می‌شود تا بتوانیم برنامه را بهتر کنیم؛ آن داده به کد کاربری‌ای پیوند دارد که هیچ اطلاعات شناسایی ندارد. هیچ گزارش خرابی یا شناسه تبلیغاتی فرستاده نمی‌شود.",
+    "desc": "آخرین به‌روزرسانی: 8 اکتبر 2026\n\nVakit به حریم خصوصی تو احترام می‌گذارد. به حساب کاربری نیازی نداری و ما داده‌های هویتی مانند نام، ایمیل، شماره تلفن، عکس‌ها یا مخاطبانت را گردآوری نمی‌کنیم. اوقات نماز، جهت قبله و یادآوری‌ها روی دستگاه تو محاسبه می‌شوند. سوابق عبادت تو (ذکر، ختم، نشان‌ها، هدف‌ها، مسجدهای دلخواه) روی دستگاهت ذخیره می‌شود و اگر پشتیبان‌گیری Android روشن باشد، در حساب Google خودت نیز — هرگز به سرور ما فرستاده نمی‌شود. تنها آمار استفاده به سرور ما فرستاده می‌شود تا بتوانیم برنامه را بهتر کنیم؛ آن داده به کد کاربری‌ای پیوند دارد که هیچ اطلاعات شناسایی ندارد. هیچ گزارش خرابی یا شناسه تبلیغاتی فرستاده نمی‌شود.",
     "sections": [
       {
         "t": "1. داده‌هایی که گردآوری می‌کنیم",
@@ -948,8 +948,8 @@ module.exports = {
           {
             "name": "داده اعلان",
             "lines": [
-              "هدف: رساندن اعلان‌های محلی نماز",
-              "پردازش: AlarmManager / کانال‌های اعلان Android",
+              "هدف: رساندن یادآوری نماز و اعلان روزهای مبارک و نسخه‌های تازه",
+              "پردازش: AlarmManager / کانال‌های اعلان Android · Firebase Cloud Messaging (Google)",
               "نگهداری: تا زمان خاموش کردن یا حذف برنامه"
             ]
           },
@@ -974,7 +974,7 @@ module.exports = {
       },
       {
         "t": "2. داده تو را چگونه به کار می‌بریم",
-        "b": "• اوقات نماز – با کتابخانه Adhan، بدون اینترنت روی دستگاهت محاسبه می‌شود؛ برای این کار هیچ مختصاتی فرستاده نمی‌شود.\n• جهت قبله – موقعیت و جهت قطب‌نما روی دستگاهت با هم ترکیب می‌شوند.\n• اعلان‌های نماز – با AlarmManager روی دستگاهت زمان‌بندی می‌شوند؛ برنامه Android هیچ اعلان push از راه دور دریافت نمی‌کند.\n• نام شهر – مختصات به سرویس مکان‌یابی نشانی Android (Google) فرستاده می‌شود؛ در جست‌وجوی دستی شهر، متنی که می‌نویسی فرستاده می‌شود.\n• مسجدهای نزدیک – مختصات محدوده جست‌وجو به OpenStreetMap (Overpass API) فرستاده می‌شود. مسیریابی، Google Maps را با موقعیت مسجد باز می‌کند.\n• صدای قرآن – تلاوت‌ها از quran.com و everyayah.com پخش یا دانلود می‌شوند؛ هر درخواست تنها فایل صوتی را مشخص می‌کند.\n• خطبه جمعه – متن، PDF و صدا از Diyanet (dinhizmetleri.diyanet.gov.tr) دانلود می‌شوند.\n• قلم‌ها – برخی قلم‌ها از راه سرویس‌های Google Play (Google Fonts) دانلود می‌شوند.\n• محتوای تو – ذکر، ختم، نشان‌ها و هدف‌ها روی دستگاهت ذخیره می‌شوند.\n\nآمار استفاده نه به هویت تو، بلکه به یک کد کاربری تصادفی بدون هیچ اطلاعات شناسایی (نام مستعار) پیوند دارد. اگر پشتیبان‌گیری Android روشن باشد، این کد در پشتیبانت گنجانده می‌شود؛ بنابراین نصب دوباره Vakit روی همان حساب Google همان کاربر به شمار می‌آید. این داده تنها برای بهتر کردن برنامه به کار می‌رود؛ هرگز فروخته نمی‌شود و در تبلیغات به کار نمی‌رود. نسخه Android هیچ SDK گزارش خرابی یا تبلیغات ندارد."
+        "b": "• اوقات نماز – با کتابخانه Adhan، بدون اینترنت روی دستگاهت محاسبه می‌شود؛ برای این کار هیچ مختصاتی فرستاده نمی‌شود.\n• جهت قبله – موقعیت و جهت قطب‌نما روی دستگاهت با هم ترکیب می‌شوند.\n• اعلان‌های نماز – با AlarmManager روی دستگاهت زمان‌بندی می‌شوند.\n• اعلان‌ها – اعلان روزهای مبارک و نسخه‌های تازه از راه Firebase Cloud Messaging پخش می‌شود؛ هدف‌گیری فردی وجود ندارد.\n• نام شهر – مختصات به سرویس مکان‌یابی نشانی Android (Google) فرستاده می‌شود؛ در جست‌وجوی دستی شهر، متنی که می‌نویسی فرستاده می‌شود.\n• مسجدهای نزدیک – مختصات محدوده جست‌وجو به OpenStreetMap (Overpass API) فرستاده می‌شود. مسیریابی، Google Maps را با موقعیت مسجد باز می‌کند.\n• صدای قرآن – تلاوت‌ها از quran.com و everyayah.com پخش یا دانلود می‌شوند؛ هر درخواست تنها فایل صوتی را مشخص می‌کند.\n• خطبه جمعه – متن، PDF و صدا از Diyanet (dinhizmetleri.diyanet.gov.tr) دانلود می‌شوند.\n• قلم‌ها – برخی قلم‌ها از راه سرویس‌های Google Play (Google Fonts) دانلود می‌شوند.\n• محتوای تو – ذکر، ختم، نشان‌ها و هدف‌ها روی دستگاهت ذخیره می‌شوند.\n\nآمار استفاده نه به هویت تو، بلکه به یک کد کاربری تصادفی بدون هیچ اطلاعات شناسایی (نام مستعار) پیوند دارد. اگر پشتیبان‌گیری Android روشن باشد، این کد در پشتیبانت گنجانده می‌شود؛ بنابراین نصب دوباره Vakit روی همان حساب Google همان کاربر به شمار می‌آید. این داده تنها برای بهتر کردن برنامه به کار می‌رود؛ هرگز فروخته نمی‌شود و در تبلیغات به کار نمی‌رود. نسخه Android هیچ SDK گزارش خرابی یا تبلیغات ندارد."
       },
       {
         "t": "3. پشتیبان‌گیری و همگام‌سازی (پشتیبان Google)",
@@ -982,7 +982,7 @@ module.exports = {
       },
       {
         "t": "4. سرویس‌های شخص ثالث",
-        "b": "Vakit از سرویس‌های زیر برای هدف‌های محدود استفاده می‌کند. هیچ‌کدام از آن‌ها هویت تو را از Vakit دریافت نمی‌کند:\n• Google – پشتیبان‌گیری Android، مکان‌یابی نشانی برای نام شهرت، Google Fonts، نظردهی درون‌برنامه‌ای Play (In-App Review) و Google Maps هنگامی که مسیریابی می‌خواهی.\n• OpenStreetMap (Overpass API) – جست‌وجوی مسجدهای نزدیک (مختصات محدوده جست‌وجو).\n• quran.com و everyayah.com – صدای تلاوت قرآن.\n• Diyanet İşleri Başkanlığı – متن و صدای خطبه جمعه.\n• Cloudflare – انتقال ترافیک به سرور Vakit (آمار استفاده) و توزیع بسته‌های محتوای قابل دانلود.\nهر سرویس درخواست‌ها را طبق سیاست حریم خصوصی خودش پردازش می‌کند."
+        "b": "Vakit از سرویس‌های زیر برای هدف‌های محدود استفاده می‌کند. هیچ‌کدام از آن‌ها هویت تو را از Vakit دریافت نمی‌کند:\n• Google – پشتیبان‌گیری Android، مکان‌یابی نشانی برای نام شهرت، Google Fonts، نظردهی درون‌برنامه‌ای Play (In-App Review) و Google Maps هنگامی که مسیریابی می‌خواهی.\n• Firebase Cloud Messaging (گوگل) – اعلان روزهای مبارک و نسخه‌های تازه. اعلان‌ها یکجا برای همه فرستاده می‌شوند؛ هدف‌گیری فردی نیست.\n• OpenStreetMap (Overpass API) – جست‌وجوی مسجدهای نزدیک (مختصات محدوده جست‌وجو).\n• quran.com و everyayah.com – صدای تلاوت قرآن.\n• Diyanet İşleri Başkanlığı – متن و صدای خطبه جمعه.\n• Cloudflare – انتقال ترافیک به سرور Vakit (آمار استفاده) و توزیع بسته‌های محتوای قابل دانلود.\nهر سرویس درخواست‌ها را طبق سیاست حریم خصوصی خودش پردازش می‌کند."
       },
       {
         "t": "5. تبلیغات",
@@ -1029,7 +1029,7 @@ module.exports = {
     },
     "titleBefore": "Politik suturaa ",
     "titleEm": "Android",
-    "desc": "Kesɗitinal sakkitiingal: 7 Yarkomaa 2026\n\nVakit ina teddina suturaa mon. Konte naamnaaka, min mooɓataa keɓe innitorɗe no innde mon, imeel, limngal telefoŋ, nate walla jokkondirɓe mon. Waktuuji juulde, senngo alqibla e siftinooje ina limee e nder kaɓirgal mon. Winndanɗe dewal mon (jikru, khatma, maandorɗe, payndaale, jumaaji cuɓaaɗi) ina mooftee e kaɓirgal mon, so backup Android ina udditi kadi, e konte Google mon keeriiɗo — ɗe neldetaake abadaa to seerbeer amen. Ko limooje kuutorgol tan neldetee to seerbeer amen ngam min mbaawa ɓeydude moƴƴere jaaɓnirgal; ɗeen keɓe ina jokkondiri e kod kuutoroowo mo alaa heen keɓe keeriiɗe. Ciforɗe firtagol walla maandorɗe publisite neldetaake.",
+    "desc": "Kesɗitinal sakkitiingal: 8 Yarkomaa 2026\n\nVakit ina teddina suturaa mon. Konte naamnaaka, min mooɓataa keɓe innitorɗe no innde mon, imeel, limngal telefoŋ, nate walla jokkondirɓe mon. Waktuuji juulde, senngo alqibla e siftinooje ina limee e nder kaɓirgal mon. Winndanɗe dewal mon (jikru, khatma, maandorɗe, payndaale, jumaaji cuɓaaɗi) ina mooftee e kaɓirgal mon, so backup Android ina udditi kadi, e konte Google mon keeriiɗo — ɗe neldetaake abadaa to seerbeer amen. Ko limooje kuutorgol tan neldetee to seerbeer amen ngam min mbaawa ɓeydude moƴƴere jaaɓnirgal; ɗeen keɓe ina jokkondiri e kod kuutoroowo mo alaa heen keɓe keeriiɗe. Ciforɗe firtagol walla maandorɗe publisite neldetaake.",
     "sections": [
       {
         "t": "1. Keɓe ɗe min mooɓata",
@@ -1061,8 +1061,8 @@ module.exports = {
           {
             "name": "Keɓe tintinal",
             "lines": [
-              "Faandaare: Neldude tintine juulde ɗe kaɓirgal mon eɓɓata",
-              "Golliraama: AlarmManager / Laawi tintine Android",
+              "Faandaare: Neldude siftinooje juulde e jeeyle ñalɗi barka e versiyoŋ kesa",
+              "Golliraama: AlarmManager / Laawi tintine Android · Firebase Cloud Messaging (Google)",
               "Moftugol: Haa uggee walla jaaɓnirgal ngal momtee"
             ]
           },
@@ -1087,7 +1087,7 @@ module.exports = {
       },
       {
         "t": "2. No min kuutortoo keɓe mon",
-        "b": "• Waktuuji juulde – ina limee alaa enternet e kaɓirgal mon e biblotek Adhan; alaa koordone neldetee ngam ɗum.\n• Senngo alqibla – nokku e senngo kompaas ina renndinee e kaɓirgal mon.\n• Tintine juulde – ina eɓɓee e kaɓirgal mon e AlarmManager; jaaɓnirgal Android heɓataa tintine push iwɗe woɗɗunde.\n• Innde wuro – koordone ina neldee to sarwiis geocoding Android (Google); ɗaɓɓitgol wuro e junngo ina nelda binndi ɗi mbinndoton.\n• Jumaaji ɓadiiɗi – koordone nokku ɗaɓɓitgol ina neldee to OpenStreetMap (Overpass API). Laawol ina uddita Google Maps e nokku jumaa oo.\n• Ɗemngal Alkur'aana – janngule ina keɗitee walla aawtee gila e quran.com e everyayah.com; ɗaɓɓitannde ina holla tan fiilde ɗemngal ndee.\n• Khutba Aljumaa – binndi, PDF e ɗemngal ina aawtee gila e Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Binndi (fonts) – binndi goɗɗi ina aawtee e sarwiisuuji Google Play (Google Fonts).\n• Loowdi mon – jikru, khatma, maandorɗe e payndaale ina mooftee e kaɓirgal mon.\n\nLimooje kuutorgol ina jokkondiri wonaa e keɓe keeriiɗe mon, kono e kod kuutoroowo sosaaɗo e ndaw-ndaw mo alaa heen keɓe keeriiɗe (innde suuɗiinde). So backup Android ina udditi, kod oo ina naatnee e backup mon; ɗum noon, so on kuutinii Vakit e konte Google gooto oo, ina limee kuutoroowo gooto oo. Keɓe ɗee ina kuutoree tan ngam ɓeydude moƴƴere jaaɓnirgal; ɗe njeeyetaake abadaa, ɗe kuutortaake e jeeyle. Versiyoŋ Android alaa SDK ciforɗe firtagol walla publisite."
+        "b": "• Waktuuji juulde – ina limee alaa enternet e kaɓirgal mon e biblotek Adhan; alaa koordone neldetee ngam ɗum.\n• Senngo alqibla – nokku e senngo kompaas ina renndinee e kaɓirgal mon.\n• Tintine juulde – ina eɓɓee e kaɓirgal mon e AlarmManager.\n• Jeeyle – Jeeyle ñalɗi barka e versiyoŋ kesa ina neldee denndaangal e Firebase Cloud Messaging; alaa hedditagol neɗɗo gooto.\n• Innde wuro – koordone ina neldee to sarwiis geocoding Android (Google); ɗaɓɓitgol wuro e junngo ina nelda binndi ɗi mbinndoton.\n• Jumaaji ɓadiiɗi – koordone nokku ɗaɓɓitgol ina neldee to OpenStreetMap (Overpass API). Laawol ina uddita Google Maps e nokku jumaa oo.\n• Ɗemngal Alkur'aana – janngule ina keɗitee walla aawtee gila e quran.com e everyayah.com; ɗaɓɓitannde ina holla tan fiilde ɗemngal ndee.\n• Khutba Aljumaa – binndi, PDF e ɗemngal ina aawtee gila e Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Binndi (fonts) – binndi goɗɗi ina aawtee e sarwiisuuji Google Play (Google Fonts).\n• Loowdi mon – jikru, khatma, maandorɗe e payndaale ina mooftee e kaɓirgal mon.\n\nLimooje kuutorgol ina jokkondiri wonaa e keɓe keeriiɗe mon, kono e kod kuutoroowo sosaaɗo e ndaw-ndaw mo alaa heen keɓe keeriiɗe (innde suuɗiinde). So backup Android ina udditi, kod oo ina naatnee e backup mon; ɗum noon, so on kuutinii Vakit e konte Google gooto oo, ina limee kuutoroowo gooto oo. Keɓe ɗee ina kuutoree tan ngam ɓeydude moƴƴere jaaɓnirgal; ɗe njeeyetaake abadaa, ɗe kuutortaake e jeeyle. Versiyoŋ Android alaa SDK ciforɗe firtagol walla publisite."
       },
       {
         "t": "3. Backup e sinkirgol (Google Backup)",
@@ -1095,7 +1095,7 @@ module.exports = {
       },
       {
         "t": "4. Golle fedde tataɓe",
-        "b": "Vakit ina huutoroo sarwiisuuji ɗii ngam faandaaje keeriiɗe. Hay gootel e majje heɓataa innitol mon gila e Vakit:\n• Google – backup Android, geocoding ngam innde wuro mon, Google Fonts, Play In-App Review, e Google Maps so on ɗaɓɓii laawol.\n• OpenStreetMap (Overpass API) – ɗaɓɓitgol jumaaji ɓadiiɗi (koordone nokku ɗaɓɓitgol).\n• quran.com e everyayah.com – ɗemngal janngugol Alkur'aana.\n• Diyanet İşleri Başkanlığı – binndi e ɗemngal khutba Aljumaa.\n• Cloudflare – nawgol jokkondire faade e sarworde Vakit (limooje kuutorgol) e senndugol paketaaji loowdi ɗi aawtotee.\nSarwiis kala ina golla ɗaɓɓitanɗe e politik suturaa mum."
+        "b": "Vakit ina huutoroo sarwiisuuji ɗii ngam faandaaje keeriiɗe. Hay gootel e majje heɓataa innitol mon gila e Vakit:\n• Google – backup Android, geocoding ngam innde wuro mon, Google Fonts, Play In-App Review, e Google Maps so on ɗaɓɓii laawol.\n• Firebase Cloud Messaging (Google) – Jeeyle ñalɗi barka e jaltine kese. Jeeyle neldee hono topic; alaa toɗɗagol neɗɗo gooto.\n• OpenStreetMap (Overpass API) – ɗaɓɓitgol jumaaji ɓadiiɗi (koordone nokku ɗaɓɓitgol).\n• quran.com e everyayah.com – ɗemngal janngugol Alkur'aana.\n• Diyanet İşleri Başkanlığı – binndi e ɗemngal khutba Aljumaa.\n• Cloudflare – nawgol jokkondire faade e sarworde Vakit (limooje kuutorgol) e senndugol paketaaji loowdi ɗi aawtotee.\nSarwiis kala ina golla ɗaɓɓitanɗe e politik suturaa mum."
       },
       {
         "t": "5. Publisite",
@@ -1142,7 +1142,7 @@ module.exports = {
     },
     "titleBefore": "Politique de confidentialité ",
     "titleEm": "Android",
-    "desc": "Dernière mise à jour : 7 octobre 2026\n\nVakit respecte ta vie privée. Aucun compte n'est nécessaire, et nous ne collectons aucune donnée d'identité comme ton nom, ton e-mail, ton numéro de téléphone, tes photos ou tes contacts. Les horaires de prière, la direction de la Qibla et les rappels sont calculés sur ton appareil. Tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) sont stockés sur ton appareil et, si la sauvegarde Android est activée, dans ton propre compte Google — ils ne sont jamais envoyés à notre serveur. Seules des statistiques d'utilisation sont envoyées à notre serveur, afin que nous puissions améliorer l'app ; ces données sont rattachées à un code utilisateur sans information identifiante. Aucun rapport de plantage ni aucun identifiant publicitaire n'est envoyé.",
+    "desc": "Dernière mise à jour : 8 octobre 2026\n\nVakit respecte ta vie privée. Aucun compte n'est nécessaire, et nous ne collectons aucune donnée d'identité comme ton nom, ton e-mail, ton numéro de téléphone, tes photos ou tes contacts. Les horaires de prière, la direction de la Qibla et les rappels sont calculés sur ton appareil. Tes enregistrements d'adoration (dhikr, khatm, signets, objectifs, mosquées favorites) sont stockés sur ton appareil et, si la sauvegarde Android est activée, dans ton propre compte Google — ils ne sont jamais envoyés à notre serveur. Seules des statistiques d'utilisation sont envoyées à notre serveur, afin que nous puissions améliorer l'app ; ces données sont rattachées à un code utilisateur sans information identifiante. Aucun rapport de plantage ni aucun identifiant publicitaire n'est envoyé.",
     "sections": [
       {
         "t": "1. Données que nous collectons",
@@ -1174,8 +1174,8 @@ module.exports = {
           {
             "name": "Données de notification",
             "lines": [
-              "Finalité : Envoyer les notifications locales de prière",
-              "Traitement : AlarmManager / canaux de notification Android",
+              "Finalité : Envoyer les rappels de prière ainsi que les annonces de jours bénis et de nouvelles versions",
+              "Traitement : AlarmManager / canaux de notification Android · Firebase Cloud Messaging (Google)",
               "Conservation : Jusqu'à désactivation ou suppression de l'app"
             ]
           },
@@ -1200,7 +1200,7 @@ module.exports = {
       },
       {
         "t": "2. Utilisation de tes données",
-        "b": "• Horaires de prière – calculés hors ligne sur ton appareil avec la bibliothèque Adhan ; aucune coordonnée n'est envoyée pour cela.\n• Direction de la Qibla – la position et le cap de la boussole sont combinés sur ton appareil.\n• Notifications de prière – planifiées sur ton appareil avec AlarmManager ; l'app Android ne reçoit aucune notification push à distance.\n• Nom de la ville – les coordonnées sont envoyées au service de géocodage d'Android (Google) ; une recherche manuelle de ville envoie le texte que tu saisis.\n• Mosquées à proximité – les coordonnées de la zone de recherche sont envoyées à OpenStreetMap (Overpass API). L'itinéraire ouvre Google Maps avec l'emplacement de la mosquée.\n• Audio du Coran – les récitations sont diffusées ou téléchargées depuis quran.com et everyayah.com ; une requête n'identifie que le fichier audio.\n• Sermon du vendredi – le texte, le PDF et l'audio sont téléchargés depuis Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Polices – certaines polices sont téléchargées via les services Google Play (Google Fonts).\n• Tes contenus – dhikr, khatm, signets et objectifs sont stockés sur ton appareil.\n\nLes statistiques d'utilisation ne sont pas liées à ton identité mais à un code utilisateur aléatoire sans information identifiante (un pseudonyme). Si la sauvegarde Android est activée, ce code est inclus dans ta sauvegarde : réinstaller Vakit sur le même compte Google compte donc comme le même utilisateur. Ces données servent uniquement à améliorer l'app ; elles ne sont jamais vendues ni utilisées à des fins publicitaires. La version Android ne contient aucun SDK de rapport de plantage ou de publicité."
+        "b": "• Horaires de prière – calculés hors ligne sur ton appareil avec la bibliothèque Adhan ; aucune coordonnée n'est envoyée pour cela.\n• Direction de la Qibla – la position et le cap de la boussole sont combinés sur ton appareil.\n• Notifications de prière – planifiées sur ton appareil avec AlarmManager.\n• Annonces – Les annonces de jours bénis et de versions passent par Firebase Cloud Messaging ; il n'y a aucun ciblage individuel.\n• Nom de la ville – les coordonnées sont envoyées au service de géocodage d'Android (Google) ; une recherche manuelle de ville envoie le texte que tu saisis.\n• Mosquées à proximité – les coordonnées de la zone de recherche sont envoyées à OpenStreetMap (Overpass API). L'itinéraire ouvre Google Maps avec l'emplacement de la mosquée.\n• Audio du Coran – les récitations sont diffusées ou téléchargées depuis quran.com et everyayah.com ; une requête n'identifie que le fichier audio.\n• Sermon du vendredi – le texte, le PDF et l'audio sont téléchargés depuis Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Polices – certaines polices sont téléchargées via les services Google Play (Google Fonts).\n• Tes contenus – dhikr, khatm, signets et objectifs sont stockés sur ton appareil.\n\nLes statistiques d'utilisation ne sont pas liées à ton identité mais à un code utilisateur aléatoire sans information identifiante (un pseudonyme). Si la sauvegarde Android est activée, ce code est inclus dans ta sauvegarde : réinstaller Vakit sur le même compte Google compte donc comme le même utilisateur. Ces données servent uniquement à améliorer l'app ; elles ne sont jamais vendues ni utilisées à des fins publicitaires. La version Android ne contient aucun SDK de rapport de plantage ou de publicité."
       },
       {
         "t": "3. Sauvegarde et synchronisation (Google Backup)",
@@ -1208,7 +1208,7 @@ module.exports = {
       },
       {
         "t": "4. Services tiers",
-        "b": "Vakit utilise les services suivants à des fins limitées. Aucun d'eux ne reçoit ton identité de la part de Vakit :\n• Google – sauvegarde Android, géocodage pour le nom de ta ville, Google Fonts, avis intégré de Play (In-App Review) et Google Maps quand tu demandes un itinéraire.\n• OpenStreetMap (Overpass API) – recherche des mosquées à proximité (coordonnées de la zone de recherche).\n• quran.com et everyayah.com – audio de récitation du Coran.\n• Diyanet İşleri Başkanlığı – texte et audio du sermon du vendredi.\n• Cloudflare – acheminement du trafic vers le serveur de Vakit (statistiques d'utilisation) et distribution des packs de contenu téléchargeables.\nChaque service traite les requêtes selon sa propre politique de confidentialité."
+        "b": "Vakit utilise les services suivants à des fins limitées. Aucun d'eux ne reçoit ton identité de la part de Vakit :\n• Google – sauvegarde Android, géocodage pour le nom de ta ville, Google Fonts, avis intégré de Play (In-App Review) et Google Maps quand tu demandes un itinéraire.\n• Firebase Cloud Messaging (Google) – Annonces de jours bénis et de versions. Elles sont diffusées par thème ; il n'y a aucun ciblage individuel.\n• OpenStreetMap (Overpass API) – recherche des mosquées à proximité (coordonnées de la zone de recherche).\n• quran.com et everyayah.com – audio de récitation du Coran.\n• Diyanet İşleri Başkanlığı – texte et audio du sermon du vendredi.\n• Cloudflare – acheminement du trafic vers le serveur de Vakit (statistiques d'utilisation) et distribution des packs de contenu téléchargeables.\nChaque service traite les requêtes selon sa propre politique de confidentialité."
       },
       {
         "t": "5. Publicité",
@@ -1255,7 +1255,7 @@ module.exports = {
     },
     "titleBefore": "निजता नीति ",
     "titleEm": "Android",
-    "desc": "आख़िरी अपडेट: 7 अक्टूबर 2026\n\nVakit आपकी निजता का सम्मान करता है। आपको किसी खाते की ज़रूरत नहीं, और हम आपका नाम, ईमेल, फ़ोन नंबर, तस्वीरें या संपर्क जैसी पहचान की जानकारी नहीं लेते। नमाज़ के वक़्त, क़िबले की दिशा और याददिहानी आपके डिवाइस पर निकाली जाती हैं। आपकी इबादत के रिकॉर्ड (ज़िक्र, ख़त्म, बुकमार्क, लक्ष्य, पसंदीदा मस्जिदें) आपके डिवाइस पर सहेजे जाते हैं, और अगर Android बैकअप चालू है तो आपके अपने Google खाते में भी — ये कभी हमारे सर्वर पर नहीं भेजे जाते। हमारे सर्वर पर सिर्फ़ इस्तेमाल के आँकड़े भेजे जाते हैं, ताकि हम ऐप को बेहतर बना सकें; यह डेटा ऐसे उपयोगकर्ता कोड से जुड़ा है जिसमें कोई पहचान की जानकारी नहीं। कोई क्रैश रिपोर्ट या विज्ञापन आईडी नहीं भेजी जाती।",
+    "desc": "आख़िरी अपडेट: 8 अक्टूबर 2026\n\nVakit आपकी निजता का सम्मान करता है। आपको किसी खाते की ज़रूरत नहीं, और हम आपका नाम, ईमेल, फ़ोन नंबर, तस्वीरें या संपर्क जैसी पहचान की जानकारी नहीं लेते। नमाज़ के वक़्त, क़िबले की दिशा और याददिहानी आपके डिवाइस पर निकाली जाती हैं। आपकी इबादत के रिकॉर्ड (ज़िक्र, ख़त्म, बुकमार्क, लक्ष्य, पसंदीदा मस्जिदें) आपके डिवाइस पर सहेजे जाते हैं, और अगर Android बैकअप चालू है तो आपके अपने Google खाते में भी — ये कभी हमारे सर्वर पर नहीं भेजे जाते। हमारे सर्वर पर सिर्फ़ इस्तेमाल के आँकड़े भेजे जाते हैं, ताकि हम ऐप को बेहतर बना सकें; यह डेटा ऐसे उपयोगकर्ता कोड से जुड़ा है जिसमें कोई पहचान की जानकारी नहीं। कोई क्रैश रिपोर्ट या विज्ञापन आईडी नहीं भेजी जाती।",
     "sections": [
       {
         "t": "1. हम कौन-सी जानकारी लेते हैं",
@@ -1287,8 +1287,8 @@ module.exports = {
           {
             "name": "नोटिफ़िकेशन डेटा",
             "lines": [
-              "उद्देश्य: लोकल नमाज़ नोटिफ़िकेशन पहुँचाने के लिए",
-              "प्रोसेसिंग: AlarmManager / Android नोटिफ़िकेशन चैनल",
+              "उद्देश्य: नमाज़ की याददिहानी और मुबारक दिनों व नए संस्करण की सूचनाएँ भेजने के लिए",
+              "प्रोसेसिंग: AlarmManager / Android नोटिफ़िकेशन चैनल · Firebase Cloud Messaging (Google)",
               "कब तक: बंद करने या ऐप हटाने तक"
             ]
           },
@@ -1313,7 +1313,7 @@ module.exports = {
       },
       {
         "t": "2. हम आपका डेटा कैसे इस्तेमाल करते हैं",
-        "b": "• नमाज़ के वक़्त – Adhan लाइब्रेरी से आपके डिवाइस पर बिना इंटरनेट निकाले जाते हैं; इसके लिए कोई निर्देशांक नहीं भेजे जाते।\n• क़िबले की दिशा – लोकेशन और कम्पास की दिशा आपके डिवाइस पर मिलाई जाती हैं।\n• नमाज़ की सूचनाएँ – AlarmManager से आपके डिवाइस पर तय की जाती हैं; Android ऐप को दूर से कोई पुश सूचना नहीं मिलती।\n• शहर का नाम – निर्देशांक Android की जियोकोडिंग सेवा (Google) को भेजे जाते हैं; हाथ से शहर खोजने पर आपका लिखा टेक्स्ट भेजा जाता है।\n• पास की मस्जिदें – खोज क्षेत्र के निर्देशांक OpenStreetMap (Overpass API) को भेजे जाते हैं। रास्ता दिखाने के लिए मस्जिद की लोकेशन के साथ Google Maps खुलता है।\n• क़ुरआन की ऑडियो – तिलावतें quran.com और everyayah.com से स्ट्रीम या डाउनलोड होती हैं; अनुरोध सिर्फ़ ऑडियो फ़ाइल की पहचान करता है।\n• जुमे का ख़ुत्बा – टेक्स्ट, PDF और ऑडियो Diyanet (dinhizmetleri.diyanet.gov.tr) से डाउनलोड होते हैं।\n• फ़ॉन्ट – कुछ फ़ॉन्ट Google Play सेवाओं (Google Fonts) के ज़रिए डाउनलोड होते हैं।\n• आपकी सामग्री – ज़िक्र, ख़त्म, बुकमार्क और लक्ष्य आपके डिवाइस पर सहेजे जाते हैं।\n\nइस्तेमाल के आँकड़े आपकी पहचान से नहीं, बल्कि एक यादृच्छिक उपयोगकर्ता कोड (छद्म नाम) से जुड़े हैं जिसमें कोई पहचान की जानकारी नहीं। अगर Android बैकअप चालू है तो यह कोड आपके बैकअप में शामिल होता है, इसलिए उसी Google खाते पर Vakit दोबारा इंस्टॉल करने पर आप वही उपयोगकर्ता गिने जाते हैं। यह डेटा सिर्फ़ ऐप सुधारने के लिए इस्तेमाल होता है; इसे कभी न बेचा जाता है, न विज्ञापन के लिए इस्तेमाल किया जाता है। Android संस्करण में कोई क्रैश रिपोर्टिंग या विज्ञापन SDK नहीं है।"
+        "b": "• नमाज़ के वक़्त – Adhan लाइब्रेरी से आपके डिवाइस पर बिना इंटरनेट निकाले जाते हैं; इसके लिए कोई निर्देशांक नहीं भेजे जाते।\n• क़िबले की दिशा – लोकेशन और कम्पास की दिशा आपके डिवाइस पर मिलाई जाती हैं।\n• नमाज़ की सूचनाएँ – AlarmManager से आपके डिवाइस पर तय की जाती हैं।\n• सूचनाएँ — मुबारक दिनों और नए संस्करण की सूचनाएँ Firebase Cloud Messaging से विषय के हिसाब से प्रसारित होती हैं; किसी व्यक्ति को अलग से निशाना नहीं बनाया जाता।\n• शहर का नाम – निर्देशांक Android की जियोकोडिंग सेवा (Google) को भेजे जाते हैं; हाथ से शहर खोजने पर आपका लिखा टेक्स्ट भेजा जाता है।\n• पास की मस्जिदें – खोज क्षेत्र के निर्देशांक OpenStreetMap (Overpass API) को भेजे जाते हैं। रास्ता दिखाने के लिए मस्जिद की लोकेशन के साथ Google Maps खुलता है।\n• क़ुरआन की ऑडियो – तिलावतें quran.com और everyayah.com से स्ट्रीम या डाउनलोड होती हैं; अनुरोध सिर्फ़ ऑडियो फ़ाइल की पहचान करता है।\n• जुमे का ख़ुत्बा – टेक्स्ट, PDF और ऑडियो Diyanet (dinhizmetleri.diyanet.gov.tr) से डाउनलोड होते हैं।\n• फ़ॉन्ट – कुछ फ़ॉन्ट Google Play सेवाओं (Google Fonts) के ज़रिए डाउनलोड होते हैं।\n• आपकी सामग्री – ज़िक्र, ख़त्म, बुकमार्क और लक्ष्य आपके डिवाइस पर सहेजे जाते हैं।\n\nइस्तेमाल के आँकड़े आपकी पहचान से नहीं, बल्कि एक यादृच्छिक उपयोगकर्ता कोड (छद्म नाम) से जुड़े हैं जिसमें कोई पहचान की जानकारी नहीं। अगर Android बैकअप चालू है तो यह कोड आपके बैकअप में शामिल होता है, इसलिए उसी Google खाते पर Vakit दोबारा इंस्टॉल करने पर आप वही उपयोगकर्ता गिने जाते हैं। यह डेटा सिर्फ़ ऐप सुधारने के लिए इस्तेमाल होता है; इसे कभी न बेचा जाता है, न विज्ञापन के लिए इस्तेमाल किया जाता है। Android संस्करण में कोई क्रैश रिपोर्टिंग या विज्ञापन SDK नहीं है।"
       },
       {
         "t": "3. बैकअप और सिंक (Google Backup)",
@@ -1321,7 +1321,7 @@ module.exports = {
       },
       {
         "t": "4. तीसरे पक्ष की सेवाएँ",
-        "b": "Vakit सीमित उद्देश्यों के लिए नीचे दी गई सेवाओं का इस्तेमाल करता है। इनमें से किसी को भी Vakit से आपकी पहचान नहीं मिलती:\n• Google – Android बैकअप, शहर के नाम के लिए जियोकोडिंग, Google Fonts, Play का ऐप में रिव्यू (In-App Review), और रास्ता माँगने पर Google Maps।\n• OpenStreetMap (Overpass API) – पास की मस्जिदों की खोज (खोज क्षेत्र के निर्देशांक)।\n• quran.com और everyayah.com – क़ुरआन तिलावत की ऑडियो।\n• Diyanet İşleri Başkanlığı – जुमे के ख़ुत्बे का टेक्स्ट और ऑडियो।\n• Cloudflare – Vakit सर्वर तक जाने वाले ट्रैफ़िक (उपयोग के आँकड़े) को पहुँचाना और डाउनलोड किए जा सकने वाले कंटेंट पैक बाँटना।\nहर सेवा अनुरोधों को अपनी निजता नीति के अनुसार प्रोसेस करती है।"
+        "b": "Vakit सीमित उद्देश्यों के लिए नीचे दी गई सेवाओं का इस्तेमाल करता है। इनमें से किसी को भी Vakit से आपकी पहचान नहीं मिलती:\n• Google – Android बैकअप, शहर के नाम के लिए जियोकोडिंग, Google Fonts, Play का ऐप में रिव्यू (In-App Review), और रास्ता माँगने पर Google Maps।\n• Firebase Cloud Messaging (Google) — मुबारक दिनों और नए संस्करण की सूचनाएँ। सूचनाएँ विषय के हिसाब से प्रसारित होती हैं; किसी व्यक्ति को अलग से निशाना नहीं बनाया जाता।\n• OpenStreetMap (Overpass API) – पास की मस्जिदों की खोज (खोज क्षेत्र के निर्देशांक)।\n• quran.com और everyayah.com – क़ुरआन तिलावत की ऑडियो।\n• Diyanet İşleri Başkanlığı – जुमे के ख़ुत्बे का टेक्स्ट और ऑडियो।\n• Cloudflare – Vakit सर्वर तक जाने वाले ट्रैफ़िक (उपयोग के आँकड़े) को पहुँचाना और डाउनलोड किए जा सकने वाले कंटेंट पैक बाँटना।\nहर सेवा अनुरोधों को अपनी निजता नीति के अनुसार प्रोसेस करती है।"
       },
       {
         "t": "5. विज्ञापन",
@@ -1368,7 +1368,7 @@ module.exports = {
     },
     "titleBefore": "Kebijakan Privasi ",
     "titleEm": "Android",
-    "desc": "Terakhir diperbarui: 7 Oktober 2026\n\nVakit menghormati privasimu. Kamu tidak perlu akun, dan kami tidak mengumpulkan data identitas seperti nama, email, nomor telepon, foto, atau kontakmu. Jadwal salat, arah kiblat, dan pengingat dihitung di perangkatmu. Catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) disimpan di perangkatmu dan, jika pencadangan Android aktif, di akun Google-mu sendiri — catatan itu tidak pernah dikirim ke server kami. Hanya statistik penggunaan yang dikirim ke server kami agar kami dapat menyempurnakan aplikasi; data tersebut terhubung ke kode pengguna tanpa informasi identitas. Tidak ada laporan error atau ID iklan yang dikirim.",
+    "desc": "Terakhir diperbarui: 8 Oktober 2026\n\nVakit menghormati privasimu. Kamu tidak perlu akun, dan kami tidak mengumpulkan data identitas seperti nama, email, nomor telepon, foto, atau kontakmu. Jadwal salat, arah kiblat, dan pengingat dihitung di perangkatmu. Catatan ibadahmu (zikir, khatam, penanda, target, masjid favorit) disimpan di perangkatmu dan, jika pencadangan Android aktif, di akun Google-mu sendiri — catatan itu tidak pernah dikirim ke server kami. Hanya statistik penggunaan yang dikirim ke server kami agar kami dapat menyempurnakan aplikasi; data tersebut terhubung ke kode pengguna tanpa informasi identitas. Tidak ada laporan error atau ID iklan yang dikirim.",
     "sections": [
       {
         "t": "1. Informasi yang kami kumpulkan",
@@ -1400,8 +1400,8 @@ module.exports = {
           {
             "name": "Data notifikasi",
             "lines": [
-              "Tujuan: Mengirim notifikasi salat lokal",
-              "Pemrosesan: AlarmManager / Saluran Notifikasi Android",
+              "Tujuan: Mengirim pengingat salat serta pengumuman hari besar dan versi baru",
+              "Pemrosesan: AlarmManager / Saluran Notifikasi Android · Firebase Cloud Messaging (Google)",
               "Penyimpanan: Sampai kamu mematikannya atau menghapus aplikasi"
             ]
           },
@@ -1426,7 +1426,7 @@ module.exports = {
       },
       {
         "t": "2. Cara kami memakai datamu",
-        "b": "• Jadwal salat – dihitung offline di perangkatmu dengan library Adhan; tidak ada koordinat yang dikirim untuk ini.\n• Arah kiblat – lokasi dan arah kompas digabungkan di perangkatmu.\n• Notifikasi salat – dijadwalkan di perangkatmu dengan AlarmManager; aplikasi Android tidak menerima notifikasi push jarak jauh.\n• Nama kota – koordinat dikirim ke layanan geocoding Android (Google); pencarian kota manual mengirim teks yang kamu ketik.\n• Masjid terdekat – koordinat area pencarian dikirim ke OpenStreetMap (Overpass API). Petunjuk arah membuka Google Maps dengan lokasi masjid.\n• Audio Al-Qur'an – tilawah diputar streaming atau diunduh dari quran.com dan everyayah.com; permintaan hanya menyebut file audionya.\n• Khotbah Jumat – teks, PDF, dan audio diunduh dari Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Font – beberapa font diunduh melalui layanan Google Play (Google Fonts).\n• Kontenmu – zikir, khatam, penanda, dan target disimpan di perangkatmu.\n\nStatistik penggunaan tidak terhubung ke identitasmu, melainkan ke kode pengguna acak tanpa informasi identitas (samaran). Jika pencadangan Android aktif, kode itu ikut masuk ke cadanganmu, sehingga memasang ulang Vakit di akun Google yang sama dihitung sebagai pengguna yang sama. Datanya hanya dipakai untuk memperbaiki aplikasi; tidak pernah dijual atau dipakai untuk iklan. Vakit versi Android tidak berisi SDK pelaporan error atau iklan."
+        "b": "• Jadwal salat – dihitung offline di perangkatmu dengan library Adhan; tidak ada koordinat yang dikirim untuk ini.\n• Arah kiblat – lokasi dan arah kompas digabungkan di perangkatmu.\n• Notifikasi salat – dijadwalkan di perangkatmu dengan AlarmManager.\n• Pengumuman – Pengumuman hari besar dan versi baru dikirim lewat Firebase Cloud Messaging; tidak ada penargetan per orang.\n• Nama kota – koordinat dikirim ke layanan geocoding Android (Google); pencarian kota manual mengirim teks yang kamu ketik.\n• Masjid terdekat – koordinat area pencarian dikirim ke OpenStreetMap (Overpass API). Petunjuk arah membuka Google Maps dengan lokasi masjid.\n• Audio Al-Qur'an – tilawah diputar streaming atau diunduh dari quran.com dan everyayah.com; permintaan hanya menyebut file audionya.\n• Khotbah Jumat – teks, PDF, dan audio diunduh dari Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Font – beberapa font diunduh melalui layanan Google Play (Google Fonts).\n• Kontenmu – zikir, khatam, penanda, dan target disimpan di perangkatmu.\n\nStatistik penggunaan tidak terhubung ke identitasmu, melainkan ke kode pengguna acak tanpa informasi identitas (samaran). Jika pencadangan Android aktif, kode itu ikut masuk ke cadanganmu, sehingga memasang ulang Vakit di akun Google yang sama dihitung sebagai pengguna yang sama. Datanya hanya dipakai untuk memperbaiki aplikasi; tidak pernah dijual atau dipakai untuk iklan. Vakit versi Android tidak berisi SDK pelaporan error atau iklan."
       },
       {
         "t": "3. Cadangan dan sinkronisasi (Google Backup)",
@@ -1434,7 +1434,7 @@ module.exports = {
       },
       {
         "t": "4. Layanan pihak ketiga",
-        "b": "Vakit menggunakan layanan berikut untuk tujuan terbatas. Tidak satu pun menerima identitasmu dari Vakit:\n• Google – pencadangan Android, geocoding untuk nama kotamu, Google Fonts, ulasan dalam aplikasi Play (In-App Review), dan Google Maps saat kamu meminta petunjuk arah.\n• OpenStreetMap (Overpass API) – pencarian masjid terdekat (koordinat area pencarian).\n• quran.com dan everyayah.com – audio tilawah Al-Qur'an.\n• Diyanet İşleri Başkanlığı – teks dan audio khotbah Jumat.\n• Cloudflare – penerusan lalu lintas ke server Vakit (statistik penggunaan) dan pengiriman paket konten yang dapat diunduh.\nSetiap layanan memproses permintaan sesuai kebijakan privasinya sendiri."
+        "b": "Vakit menggunakan layanan berikut untuk tujuan terbatas. Tidak satu pun menerima identitasmu dari Vakit:\n• Google – pencadangan Android, geocoding untuk nama kotamu, Google Fonts, ulasan dalam aplikasi Play (In-App Review), dan Google Maps saat kamu meminta petunjuk arah.\n• Firebase Cloud Messaging (Google) – Pengumuman hari besar dan versi baru. Pengumumannya disiarkan per topik; tidak ada penargetan per orang.\n• OpenStreetMap (Overpass API) – pencarian masjid terdekat (koordinat area pencarian).\n• quran.com dan everyayah.com – audio tilawah Al-Qur'an.\n• Diyanet İşleri Başkanlığı – teks dan audio khotbah Jumat.\n• Cloudflare – penerusan lalu lintas ke server Vakit (statistik penggunaan) dan pengiriman paket konten yang dapat diunduh.\nSetiap layanan memproses permintaan sesuai kebijakan privasinya sendiri."
       },
       {
         "t": "5. Iklan",
@@ -1481,7 +1481,7 @@ module.exports = {
     },
     "titleBefore": "Informativa sulla privacy ",
     "titleEm": "Android",
-    "desc": "Ultimo aggiornamento: 7 ottobre 2026\n\nVakit rispetta la tua privacy. Non ti serve un account e non raccogliamo dati identificativi come nome, e-mail, numero di telefono, foto o contatti. Gli orari di preghiera, la direzione della Qibla e i promemoria vengono calcolati sul tuo dispositivo. I tuoi dati di adorazione (dhikr, khatm, segnalibri, obiettivi, moschee preferite) sono salvati sul tuo dispositivo e, se il backup di Android è attivo, nel tuo account Google — non vengono mai inviati al nostro server. Al nostro server vengono inviate solo statistiche d'uso, per permetterci di migliorare l'app; questi dati sono collegati a un codice utente privo di dati identificativi. Non vengono inviati rapporti sugli arresti anomali né identificatori pubblicitari.",
+    "desc": "Ultimo aggiornamento: 8 ottobre 2026\n\nVakit rispetta la tua privacy. Non ti serve un account e non raccogliamo dati identificativi come nome, e-mail, numero di telefono, foto o contatti. Gli orari di preghiera, la direzione della Qibla e i promemoria vengono calcolati sul tuo dispositivo. I tuoi dati di adorazione (dhikr, khatm, segnalibri, obiettivi, moschee preferite) sono salvati sul tuo dispositivo e, se il backup di Android è attivo, nel tuo account Google — non vengono mai inviati al nostro server. Al nostro server vengono inviate solo statistiche d'uso, per permetterci di migliorare l'app; questi dati sono collegati a un codice utente privo di dati identificativi. Non vengono inviati rapporti sugli arresti anomali né identificatori pubblicitari.",
     "sections": [
       {
         "t": "1. Dati che raccogliamo",
@@ -1513,8 +1513,8 @@ module.exports = {
           {
             "name": "Dati delle notifiche",
             "lines": [
-              "Finalità: Inviare notifiche di preghiera locali",
-              "Trattamento: AlarmManager / canali di notifica di Android",
+              "Finalità: Consegnare i promemoria di preghiera e gli annunci di giorni benedetti e nuove versioni",
+              "Trattamento: AlarmManager / canali di notifica di Android · Firebase Cloud Messaging (Google)",
               "Conservazione: Fino alla disattivazione o alla rimozione dell'app"
             ]
           },
@@ -1539,7 +1539,7 @@ module.exports = {
       },
       {
         "t": "2. Come usiamo i tuoi dati",
-        "b": "• Orari di preghiera – calcolati offline sul tuo dispositivo con la libreria Adhan; per questo non vengono inviate coordinate.\n• Direzione della Qibla – posizione e direzione della bussola vengono combinate sul tuo dispositivo.\n• Notifiche di preghiera – programmate sul tuo dispositivo con AlarmManager; l'app Android non riceve notifiche push remote.\n• Nome della città – le coordinate vengono inviate al servizio di geocodifica di Android (Google); una ricerca manuale della città invia il testo che digiti.\n• Moschee vicine – le coordinate dell'area di ricerca vengono inviate a OpenStreetMap (Overpass API). Le indicazioni stradali aprono Google Maps con la posizione della moschea.\n• Audio del Corano – le recitazioni vengono riprodotte in streaming o scaricate da quran.com ed everyayah.com; una richiesta identifica solo il file audio.\n• Sermone del venerdì – testo, PDF e audio vengono scaricati da Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Caratteri – alcuni caratteri vengono scaricati tramite i servizi Google Play (Google Fonts).\n• I tuoi contenuti – dhikr, khatm, segnalibri e obiettivi sono salvati sul tuo dispositivo.\n\nLe statistiche d'uso non sono collegate alla tua identità ma a un codice utente casuale privo di dati identificativi (uno pseudonimo). Se il backup di Android è attivo, il codice viene incluso nel tuo backup, quindi reinstallare Vakit con lo stesso account Google conta come lo stesso utente. I dati servono solo a migliorare l'app; non vengono mai venduti né usati per la pubblicità. La versione Android non contiene alcun SDK di segnalazione degli arresti anomali o pubblicitario."
+        "b": "• Orari di preghiera – calcolati offline sul tuo dispositivo con la libreria Adhan; per questo non vengono inviate coordinate.\n• Direzione della Qibla – posizione e direzione della bussola vengono combinate sul tuo dispositivo.\n• Notifiche di preghiera – programmate sul tuo dispositivo con AlarmManager.\n• Annunci – Gli annunci di giorni benedetti e nuove versioni passano da Firebase Cloud Messaging; non c'è alcuna profilazione individuale.\n• Nome della città – le coordinate vengono inviate al servizio di geocodifica di Android (Google); una ricerca manuale della città invia il testo che digiti.\n• Moschee vicine – le coordinate dell'area di ricerca vengono inviate a OpenStreetMap (Overpass API). Le indicazioni stradali aprono Google Maps con la posizione della moschea.\n• Audio del Corano – le recitazioni vengono riprodotte in streaming o scaricate da quran.com ed everyayah.com; una richiesta identifica solo il file audio.\n• Sermone del venerdì – testo, PDF e audio vengono scaricati da Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Caratteri – alcuni caratteri vengono scaricati tramite i servizi Google Play (Google Fonts).\n• I tuoi contenuti – dhikr, khatm, segnalibri e obiettivi sono salvati sul tuo dispositivo.\n\nLe statistiche d'uso non sono collegate alla tua identità ma a un codice utente casuale privo di dati identificativi (uno pseudonimo). Se il backup di Android è attivo, il codice viene incluso nel tuo backup, quindi reinstallare Vakit con lo stesso account Google conta come lo stesso utente. I dati servono solo a migliorare l'app; non vengono mai venduti né usati per la pubblicità. La versione Android non contiene alcun SDK di segnalazione degli arresti anomali o pubblicitario."
       },
       {
         "t": "3. Backup e sincronizzazione (Google Backup)",
@@ -1547,7 +1547,7 @@ module.exports = {
       },
       {
         "t": "4. Servizi di terze parti",
-        "b": "Vakit usa i seguenti servizi per scopi limitati. Nessuno di essi riceve la tua identità da Vakit:\n• Google – backup di Android, geocodifica per il nome della tua città, Google Fonts, recensione in-app di Play (In-App Review) e Google Maps quando chiedi indicazioni.\n• OpenStreetMap (Overpass API) – ricerca delle moschee vicine (coordinate dell'area di ricerca).\n• quran.com ed everyayah.com – audio delle recitazioni del Corano.\n• Diyanet İşleri Başkanlığı – testo e audio del sermone del venerdì.\n• Cloudflare – inoltro del traffico verso il server di Vakit (statistiche d'uso) e distribuzione dei pacchetti di contenuti scaricabili.\nOgni servizio tratta le richieste secondo la propria informativa sulla privacy."
+        "b": "Vakit usa i seguenti servizi per scopi limitati. Nessuno di essi riceve la tua identità da Vakit:\n• Google – backup di Android, geocodifica per il nome della tua città, Google Fonts, recensione in-app di Play (In-App Review) e Google Maps quando chiedi indicazioni.\n• Firebase Cloud Messaging (Google) – Annunci di giorni benedetti e nuove versioni. Sono diffusi per argomento; non c'è profilazione individuale.\n• OpenStreetMap (Overpass API) – ricerca delle moschee vicine (coordinate dell'area di ricerca).\n• quran.com ed everyayah.com – audio delle recitazioni del Corano.\n• Diyanet İşleri Başkanlığı – testo e audio del sermone del venerdì.\n• Cloudflare – inoltro del traffico verso il server di Vakit (statistiche d'uso) e distribuzione dei pacchetti di contenuti scaricabili.\nOgni servizio tratta le richieste secondo la propria informativa sulla privacy."
       },
       {
         "t": "5. Pubblicità",
@@ -1594,7 +1594,7 @@ module.exports = {
     },
     "titleBefore": "プライバシーポリシー ",
     "titleEm": "Android",
-    "desc": "最終更新： 2026年10月7日\n\nVakitはあなたのプライバシーを尊重します。アカウントは不要で、氏名、メールアドレス、電話番号、写真、連絡先などの身元情報を集めません。礼拝時刻、キブラの方角、リマインダーは端末内で計算します。行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）は端末に保存され、Androidのバックアップがオンの場合はあなた自身のGoogleアカウントにも保存されます — これらが当方のサーバーへ送られることはありません。当方のサーバーへ送るのは、アプリを良くするための利用統計だけです。このデータは身元情報を含まない利用者コードに結びついています。クラッシュレポートや広告IDは送信しません。",
+    "desc": "最終更新： 2026年10月8日\n\nVakitはあなたのプライバシーを尊重します。アカウントは不要で、氏名、メールアドレス、電話番号、写真、連絡先などの身元情報を集めません。礼拝時刻、キブラの方角、リマインダーは端末内で計算します。行いの記録（ズィクル、通読、しおり、目標、お気に入りのモスク）は端末に保存され、Androidのバックアップがオンの場合はあなた自身のGoogleアカウントにも保存されます — これらが当方のサーバーへ送られることはありません。当方のサーバーへ送るのは、アプリを良くするための利用統計だけです。このデータは身元情報を含まない利用者コードに結びついています。クラッシュレポートや広告IDは送信しません。",
     "sections": [
       {
         "t": "1. 収集する情報",
@@ -1626,8 +1626,8 @@ module.exports = {
           {
             "name": "通知のデータ",
             "lines": [
-              "目的： ローカルの礼拝通知を届けるため",
-              "処理： AlarmManager / Android 通知チャネル",
+              "目的： 礼拝のリマインダー、祝福の日と新バージョンのお知らせを届けるため",
+              "処理： AlarmManager / Android 通知チャネル · Firebase Cloud Messaging (Google)",
               "保存期間： オフにするかアプリを削除するまで"
             ]
           },
@@ -1652,7 +1652,7 @@ module.exports = {
       },
       {
         "t": "2. データの使い方",
-        "b": "• 礼拝時刻 – Adhanライブラリで端末内でオフライン計算します。そのために座標を送信することはありません。\n• キブラの方角 – 位置情報とコンパスの向きを端末内で組み合わせます。\n• 礼拝の通知 – AlarmManagerで端末内でスケジュールします。Androidアプリはリモートのプッシュ通知を受け取りません。\n• 都市名 – 座標がAndroidのジオコーディングサービス（Google）に送信されます。都市を手動で検索すると、入力したテキストが送信されます。\n• 近くのモスク – 検索範囲の座標がOpenStreetMap（Overpass API）に送信されます。経路案内はモスクの位置でGoogleマップを開きます。\n• クルアーンの音声 – 朗誦はquran.comとeveryayah.comからストリーミングまたはダウンロードされます。リクエストで特定されるのは音声ファイルだけです。\n• 金曜の説教 – テキスト、PDF、音声はDiyanet（dinhizmetleri.diyanet.gov.tr）からダウンロードされます。\n• フォント – 一部のフォントはGoogle Play開発者サービス（Google Fonts）を通じてダウンロードされます。\n• あなたのコンテンツ – ズィクル、通読、しおり、目標は端末に保存されます。\n\n利用統計はあなたの身元ではなく、身元情報を含まないランダムな利用者コード（仮名）に結びついています。Androidのバックアップがオンの場合、このコードはバックアップに含まれるため、同じGoogleアカウントでVakitを入れ直しても同じ利用者として数えられます。データはアプリを良くするためだけに使い、販売も広告利用もしません。Android版にはクラッシュレポートや広告のSDKは含まれていません。"
+        "b": "• 礼拝時刻 – Adhanライブラリで端末内でオフライン計算します。そのために座標を送信することはありません。\n• キブラの方角 – 位置情報とコンパスの向きを端末内で組み合わせます。\n• 礼拝の通知 – AlarmManagerで端末内でスケジュールします。\n• お知らせ — 祝福の日と新バージョンのお知らせはFirebase Cloud Messagingで一斉配信します。個人ごとの配信はしません。\n• 都市名 – 座標がAndroidのジオコーディングサービス（Google）に送信されます。都市を手動で検索すると、入力したテキストが送信されます。\n• 近くのモスク – 検索範囲の座標がOpenStreetMap（Overpass API）に送信されます。経路案内はモスクの位置でGoogleマップを開きます。\n• クルアーンの音声 – 朗誦はquran.comとeveryayah.comからストリーミングまたはダウンロードされます。リクエストで特定されるのは音声ファイルだけです。\n• 金曜の説教 – テキスト、PDF、音声はDiyanet（dinhizmetleri.diyanet.gov.tr）からダウンロードされます。\n• フォント – 一部のフォントはGoogle Play開発者サービス（Google Fonts）を通じてダウンロードされます。\n• あなたのコンテンツ – ズィクル、通読、しおり、目標は端末に保存されます。\n\n利用統計はあなたの身元ではなく、身元情報を含まないランダムな利用者コード（仮名）に結びついています。Androidのバックアップがオンの場合、このコードはバックアップに含まれるため、同じGoogleアカウントでVakitを入れ直しても同じ利用者として数えられます。データはアプリを良くするためだけに使い、販売も広告利用もしません。Android版にはクラッシュレポートや広告のSDKは含まれていません。"
       },
       {
         "t": "3. バックアップと同期（Google バックアップ）",
@@ -1660,7 +1660,7 @@ module.exports = {
       },
       {
         "t": "4. 外部サービス",
-        "b": "Vakitは以下のサービスを限られた目的で利用します。いずれもVakitからあなたの身元を受け取ることはありません：\n• Google – Androidのバックアップ、都市名のためのジオコーディング、Google Fonts、Playのアプリ内レビュー（In-App Review）、経路案内を求めたときのGoogleマップ。\n• OpenStreetMap（Overpass API） – 近くのモスクの検索（検索範囲の座標）。\n• quran.comとeveryayah.com – クルアーン朗誦の音声。\n• Diyanet İşleri Başkanlığı – 金曜の説教のテキストと音声。\n• Cloudflare – Vakitサーバーへの通信（利用統計）の中継と、ダウンロード可能なコンテンツパックの配信。\n各サービスはそれぞれのプライバシーポリシーに従ってリクエストを処理します。"
+        "b": "Vakitは以下のサービスを限られた目的で利用します。いずれもVakitからあなたの身元を受け取ることはありません：\n• Google – Androidのバックアップ、都市名のためのジオコーディング、Google Fonts、Playのアプリ内レビュー（In-App Review）、経路案内を求めたときのGoogleマップ。\n• Firebase Cloud Messaging（Google） — 祝福の日と新バージョンのお知らせ。トピックごとの一斉配信で、個人ごとの配信はしません。\n• OpenStreetMap（Overpass API） – 近くのモスクの検索（検索範囲の座標）。\n• quran.comとeveryayah.com – クルアーン朗誦の音声。\n• Diyanet İşleri Başkanlığı – 金曜の説教のテキストと音声。\n• Cloudflare – Vakitサーバーへの通信（利用統計）の中継と、ダウンロード可能なコンテンツパックの配信。\n各サービスはそれぞれのプライバシーポリシーに従ってリクエストを処理します。"
       },
       {
         "t": "5. 広告",
@@ -1707,7 +1707,7 @@ module.exports = {
     },
     "titleBefore": "Dasar Privasi ",
     "titleEm": "Android",
-    "desc": "Kemas kini terakhir: 7 Oktober 2026\n\nVakit menghormati privasi anda. Anda tidak memerlukan akaun, dan kami tidak mengumpul data identiti seperti nama, e-mel, nombor telefon, gambar atau kenalan anda. Waktu solat, arah kiblat dan peringatan dikira pada peranti anda. Catatan ibadah anda (zikir, khatam, penanda, sasaran, masjid kegemaran) disimpan pada peranti anda dan, jika sandaran Android dihidupkan, dalam akaun Google anda sendiri — catatan ini tidak pernah dihantar ke pelayan kami. Hanya statistik penggunaan dihantar ke pelayan kami supaya kami dapat menambah baik apl; data itu terpaut pada kod pengguna tanpa maklumat identiti. Tiada laporan ranap atau ID pengiklanan dihantar.",
+    "desc": "Kemas kini terakhir: 8 Oktober 2026\n\nVakit menghormati privasi anda. Anda tidak memerlukan akaun, dan kami tidak mengumpul data identiti seperti nama, e-mel, nombor telefon, gambar atau kenalan anda. Waktu solat, arah kiblat dan peringatan dikira pada peranti anda. Catatan ibadah anda (zikir, khatam, penanda, sasaran, masjid kegemaran) disimpan pada peranti anda dan, jika sandaran Android dihidupkan, dalam akaun Google anda sendiri — catatan ini tidak pernah dihantar ke pelayan kami. Hanya statistik penggunaan dihantar ke pelayan kami supaya kami dapat menambah baik apl; data itu terpaut pada kod pengguna tanpa maklumat identiti. Tiada laporan ranap atau ID pengiklanan dihantar.",
     "sections": [
       {
         "t": "1. Maklumat yang kami kumpulkan",
@@ -1739,8 +1739,8 @@ module.exports = {
           {
             "name": "Data pemberitahuan",
             "lines": [
-              "Tujuan: Menghantar pemberitahuan solat setempat",
-              "Pemprosesan: AlarmManager / Saluran Pemberitahuan Android",
+              "Tujuan: Menghantar peringatan solat serta pengumuman hari kebesaran dan versi baharu",
+              "Pemprosesan: AlarmManager / Saluran Pemberitahuan Android · Firebase Cloud Messaging (Google)",
               "Penyimpanan: Sehingga anda mematikannya atau memadam apl"
             ]
           },
@@ -1765,7 +1765,7 @@ module.exports = {
       },
       {
         "t": "2. Cara kami menggunakan data anda",
-        "b": "• Waktu solat – dikira di luar talian pada peranti anda dengan pustaka Adhan; tiada koordinat dihantar untuk ini.\n• Arah kiblat – lokasi dan arah kompas digabungkan pada peranti anda.\n• Pemberitahuan solat – dijadualkan pada peranti anda dengan AlarmManager; apl Android tidak menerima pemberitahuan tolak jarak jauh.\n• Nama bandar – koordinat dihantar ke perkhidmatan geokod Android (Google); carian bandar secara manual menghantar teks yang anda taip.\n• Masjid berdekatan – koordinat kawasan carian dihantar ke OpenStreetMap (Overpass API). Arah perjalanan membuka Google Maps dengan lokasi masjid.\n• Audio al-Quran – bacaan distrim atau dimuat turun dari quran.com dan everyayah.com; permintaan hanya mengenal pasti fail audio.\n• Khutbah Jumaat – teks, PDF dan audio dimuat turun dari Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fon – sesetengah fon dimuat turun melalui perkhidmatan Google Play (Google Fonts).\n• Kandungan anda – zikir, khatam, penanda dan sasaran disimpan pada peranti anda.\n\nStatistik penggunaan tidak terpaut pada identiti anda, tetapi pada kod pengguna rawak tanpa maklumat identiti (samaran). Jika sandaran Android dihidupkan, kod itu dimasukkan dalam sandaran anda, jadi memasang semula Vakit pada akaun Google yang sama dikira sebagai pengguna yang sama. Data itu hanya digunakan untuk menambah baik apl; ia tidak pernah dijual atau digunakan untuk pengiklanan. Vakit versi Android tidak mengandungi SDK pelaporan ranap atau pengiklanan."
+        "b": "• Waktu solat – dikira di luar talian pada peranti anda dengan pustaka Adhan; tiada koordinat dihantar untuk ini.\n• Arah kiblat – lokasi dan arah kompas digabungkan pada peranti anda.\n• Pemberitahuan solat – dijadualkan pada peranti anda dengan AlarmManager.\n• Pengumuman – Pengumuman hari kebesaran dan versi baharu dihantar melalui Firebase Cloud Messaging; tiada penyasaran setiap orang.\n• Nama bandar – koordinat dihantar ke perkhidmatan geokod Android (Google); carian bandar secara manual menghantar teks yang anda taip.\n• Masjid berdekatan – koordinat kawasan carian dihantar ke OpenStreetMap (Overpass API). Arah perjalanan membuka Google Maps dengan lokasi masjid.\n• Audio al-Quran – bacaan distrim atau dimuat turun dari quran.com dan everyayah.com; permintaan hanya mengenal pasti fail audio.\n• Khutbah Jumaat – teks, PDF dan audio dimuat turun dari Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fon – sesetengah fon dimuat turun melalui perkhidmatan Google Play (Google Fonts).\n• Kandungan anda – zikir, khatam, penanda dan sasaran disimpan pada peranti anda.\n\nStatistik penggunaan tidak terpaut pada identiti anda, tetapi pada kod pengguna rawak tanpa maklumat identiti (samaran). Jika sandaran Android dihidupkan, kod itu dimasukkan dalam sandaran anda, jadi memasang semula Vakit pada akaun Google yang sama dikira sebagai pengguna yang sama. Data itu hanya digunakan untuk menambah baik apl; ia tidak pernah dijual atau digunakan untuk pengiklanan. Vakit versi Android tidak mengandungi SDK pelaporan ranap atau pengiklanan."
       },
       {
         "t": "3. Sandaran dan penyegerakan (Google Backup)",
@@ -1773,7 +1773,7 @@ module.exports = {
       },
       {
         "t": "4. Perkhidmatan pihak ketiga",
-        "b": "Vakit menggunakan perkhidmatan berikut untuk tujuan terhad. Tiada satu pun menerima identiti anda daripada Vakit:\n• Google – sandaran Android, geokod untuk nama bandar anda, Google Fonts, ulasan dalam apl Play (In-App Review) dan Google Maps apabila anda meminta arah.\n• OpenStreetMap (Overpass API) – carian masjid berdekatan (koordinat kawasan carian).\n• quran.com dan everyayah.com – audio bacaan al-Quran.\n• Diyanet İşleri Başkanlığı – teks dan audio khutbah Jumaat.\n• Cloudflare – penghantaran trafik ke pelayan Vakit (statistik penggunaan) dan pengedaran pek kandungan yang boleh dimuat turun.\nSetiap perkhidmatan memproses permintaan mengikut dasar privasinya sendiri."
+        "b": "Vakit menggunakan perkhidmatan berikut untuk tujuan terhad. Tiada satu pun menerima identiti anda daripada Vakit:\n• Google – sandaran Android, geokod untuk nama bandar anda, Google Fonts, ulasan dalam apl Play (In-App Review) dan Google Maps apabila anda meminta arah.\n• Firebase Cloud Messaging (Google) – Pengumuman hari kebesaran dan versi baharu. Pengumumannya disiarkan mengikut topik; tiada penyasaran setiap orang.\n• OpenStreetMap (Overpass API) – carian masjid berdekatan (koordinat kawasan carian).\n• quran.com dan everyayah.com – audio bacaan al-Quran.\n• Diyanet İşleri Başkanlığı – teks dan audio khutbah Jumaat.\n• Cloudflare – penghantaran trafik ke pelayan Vakit (statistik penggunaan) dan pengedaran pek kandungan yang boleh dimuat turun.\nSetiap perkhidmatan memproses permintaan mengikut dasar privasinya sendiri."
       },
       {
         "t": "5. Pengiklanan",
@@ -1820,7 +1820,7 @@ module.exports = {
     },
     "titleBefore": "Privacybeleid ",
     "titleEm": "Android",
-    "desc": "Laatst bijgewerkt: 7 oktober 2026\n\nVakit respecteert je privacy. Je hebt geen account nodig en we verzamelen geen identiteitsgegevens zoals je naam, e-mailadres, telefoonnummer, foto's of contacten. Gebedstijden, de Qibla-richting en herinneringen worden op je apparaat berekend. Je aanbiddingsgegevens (dhikr, chatm, bladwijzers, doelen, favoriete moskeeën) worden op je apparaat opgeslagen en, als Android-back-up aanstaat, in je eigen Google-account — ze worden nooit naar onze server gestuurd. Alleen gebruiksstatistieken worden naar onze server gestuurd, zodat we de app kunnen verbeteren; die gegevens zijn gekoppeld aan een gebruikerscode zonder identificerende gegevens. Er worden geen crashrapporten of advertentie-ID's verstuurd.",
+    "desc": "Laatst bijgewerkt: 8 oktober 2026\n\nVakit respecteert je privacy. Je hebt geen account nodig en we verzamelen geen identiteitsgegevens zoals je naam, e-mailadres, telefoonnummer, foto's of contacten. Gebedstijden, de Qibla-richting en herinneringen worden op je apparaat berekend. Je aanbiddingsgegevens (dhikr, chatm, bladwijzers, doelen, favoriete moskeeën) worden op je apparaat opgeslagen en, als Android-back-up aanstaat, in je eigen Google-account — ze worden nooit naar onze server gestuurd. Alleen gebruiksstatistieken worden naar onze server gestuurd, zodat we de app kunnen verbeteren; die gegevens zijn gekoppeld aan een gebruikerscode zonder identificerende gegevens. Er worden geen crashrapporten of advertentie-ID's verstuurd.",
     "sections": [
       {
         "t": "1. Gegevens die we verzamelen",
@@ -1852,8 +1852,8 @@ module.exports = {
           {
             "name": "Meldingsgegevens",
             "lines": [
-              "Doel: Lokale gebedsmeldingen bezorgen",
-              "Verwerking: AlarmManager / Android-meldingskanalen",
+              "Doel: Gebedsherinneringen en aankondigingen van gezegende dagen en nieuwe versies bezorgen",
+              "Verwerking: AlarmManager / Android-meldingskanalen · Firebase Cloud Messaging (Google)",
               "Bewaartermijn: Tot je ze uitschakelt of de app verwijdert"
             ]
           },
@@ -1878,7 +1878,7 @@ module.exports = {
       },
       {
         "t": "2. Hoe we je gegevens gebruiken",
-        "b": "• Gebedstijden – offline op je apparaat berekend met de Adhan-bibliotheek; hiervoor worden geen coördinaten verstuurd.\n• Qibla-richting – locatie en kompaskoers worden op je apparaat gecombineerd.\n• Gebedsmeldingen – op je apparaat ingepland met AlarmManager; de Android-app ontvangt geen pushmeldingen op afstand.\n• Plaatsnaam – de coördinaten worden naar de geocoderingsdienst van Android (Google) gestuurd; bij handmatig zoeken naar een plaats wordt de tekst die je typt verstuurd.\n• Moskeeën in de buurt – de coördinaten van het zoekgebied worden naar OpenStreetMap (Overpass API) gestuurd. Routebeschrijving opent Google Maps met de locatie van de moskee.\n• Koranaudio – recitaties worden gestreamd of gedownload van quran.com en everyayah.com; een verzoek identificeert alleen het audiobestand.\n• Vrijdagpreek – de tekst, pdf en audio worden gedownload van Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Lettertypen – sommige lettertypen worden gedownload via Google Play-services (Google Fonts).\n• Je inhoud – dhikr, chatm, bladwijzers en doelen worden op je apparaat opgeslagen.\n\nGebruiksstatistieken zijn niet aan je identiteit gekoppeld maar aan een willekeurige gebruikerscode zonder identificerende gegevens (een pseudoniem). Als Android-back-up aanstaat, wordt de code in je back-up opgenomen; Vakit opnieuw installeren op hetzelfde Google-account telt dus als dezelfde gebruiker. De gegevens dienen alleen om de app te verbeteren; ze worden nooit verkocht of voor advertenties gebruikt. De Android-versie bevat geen crashrapportage- of advertentie-SDK."
+        "b": "• Gebedstijden – offline op je apparaat berekend met de Adhan-bibliotheek; hiervoor worden geen coördinaten verstuurd.\n• Qibla-richting – locatie en kompaskoers worden op je apparaat gecombineerd.\n• Gebedsmeldingen – op je apparaat ingepland met AlarmManager.\n• Aankondigingen – Meldingen over gezegende dagen en versies gaan via Firebase Cloud Messaging; er is geen persoonsgerichte targeting.\n• Plaatsnaam – de coördinaten worden naar de geocoderingsdienst van Android (Google) gestuurd; bij handmatig zoeken naar een plaats wordt de tekst die je typt verstuurd.\n• Moskeeën in de buurt – de coördinaten van het zoekgebied worden naar OpenStreetMap (Overpass API) gestuurd. Routebeschrijving opent Google Maps met de locatie van de moskee.\n• Koranaudio – recitaties worden gestreamd of gedownload van quran.com en everyayah.com; een verzoek identificeert alleen het audiobestand.\n• Vrijdagpreek – de tekst, pdf en audio worden gedownload van Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Lettertypen – sommige lettertypen worden gedownload via Google Play-services (Google Fonts).\n• Je inhoud – dhikr, chatm, bladwijzers en doelen worden op je apparaat opgeslagen.\n\nGebruiksstatistieken zijn niet aan je identiteit gekoppeld maar aan een willekeurige gebruikerscode zonder identificerende gegevens (een pseudoniem). Als Android-back-up aanstaat, wordt de code in je back-up opgenomen; Vakit opnieuw installeren op hetzelfde Google-account telt dus als dezelfde gebruiker. De gegevens dienen alleen om de app te verbeteren; ze worden nooit verkocht of voor advertenties gebruikt. De Android-versie bevat geen crashrapportage- of advertentie-SDK."
       },
       {
         "t": "3. Back-up en synchronisatie (Google Backup)",
@@ -1886,7 +1886,7 @@ module.exports = {
       },
       {
         "t": "4. Diensten van derden",
-        "b": "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen van hen ontvangt je identiteit van Vakit:\n• Google – Android-back-up, geocodering voor je plaatsnaam, Google Fonts, Play In-App Review en Google Maps wanneer je om een routebeschrijving vraagt.\n• OpenStreetMap (Overpass API) – zoeken naar moskeeën in de buurt (coördinaten van het zoekgebied).\n• quran.com en everyayah.com – audio van Koranrecitaties.\n• Diyanet İşleri Başkanlığı – tekst en audio van de vrijdagpreek.\n• Cloudflare – doorgeven van verkeer naar de server van Vakit (gebruiksstatistieken) en levering van downloadbare inhoudspakketten.\nElke dienst verwerkt verzoeken volgens zijn eigen privacybeleid."
+        "b": "Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen van hen ontvangt je identiteit van Vakit:\n• Google – Android-back-up, geocodering voor je plaatsnaam, Google Fonts, Play In-App Review en Google Maps wanneer je om een routebeschrijving vraagt.\n• Firebase Cloud Messaging (Google) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen gaan per onderwerp naar iedereen; er is geen targeting per persoon.\n• OpenStreetMap (Overpass API) – zoeken naar moskeeën in de buurt (coördinaten van het zoekgebied).\n• quran.com en everyayah.com – audio van Koranrecitaties.\n• Diyanet İşleri Başkanlığı – tekst en audio van de vrijdagpreek.\n• Cloudflare – doorgeven van verkeer naar de server van Vakit (gebruiksstatistieken) en levering van downloadbare inhoudspakketten.\nElke dienst verwerkt verzoeken volgens zijn eigen privacybeleid."
       },
       {
         "t": "5. Advertenties",
@@ -1933,7 +1933,7 @@ module.exports = {
     },
     "titleBefore": "Política de Privacidade ",
     "titleEm": "Android",
-    "desc": "Última atualização: 7 de outubro de 2026\n\nO Vakit respeita a tua privacidade. Não precisas de conta e não recolhemos dados de identidade como o teu nome, e-mail, número de telefone, fotografias ou contactos. Os horários das orações, a direção da Qibla e os lembretes são calculados no teu dispositivo. Os teus registos de adoração (dhikr, khatm, marcadores, metas, mesquitas favoritas) são guardados no teu dispositivo e, se a cópia de segurança do Android estiver ativada, na tua própria conta Google — nunca são enviados para o nosso servidor. Apenas estatísticas de utilização são enviadas para o nosso servidor, para podermos melhorar a app; esses dados estão ligados a um código de utilizador sem informação identificativa. Não são enviados relatórios de falhas nem identificadores de publicidade.",
+    "desc": "Última atualização: 8 de outubro de 2026\n\nO Vakit respeita a tua privacidade. Não precisas de conta e não recolhemos dados de identidade como o teu nome, e-mail, número de telefone, fotografias ou contactos. Os horários das orações, a direção da Qibla e os lembretes são calculados no teu dispositivo. Os teus registos de adoração (dhikr, khatm, marcadores, metas, mesquitas favoritas) são guardados no teu dispositivo e, se a cópia de segurança do Android estiver ativada, na tua própria conta Google — nunca são enviados para o nosso servidor. Apenas estatísticas de utilização são enviadas para o nosso servidor, para podermos melhorar a app; esses dados estão ligados a um código de utilizador sem informação identificativa. Não são enviados relatórios de falhas nem identificadores de publicidade.",
     "sections": [
       {
         "t": "1. Informação que recolhemos",
@@ -1965,8 +1965,8 @@ module.exports = {
           {
             "name": "Dados de notificações",
             "lines": [
-              "Finalidade: Entregar notificações locais das orações",
-              "Processamento: AlarmManager / canais de notificação do Android",
+              "Finalidade: Entregar lembretes das orações e anúncios de dias abençoados e de novas versões",
+              "Processamento: AlarmManager / canais de notificação do Android · Firebase Cloud Messaging (Google)",
               "Conservação: Até desativares ou apagares a app"
             ]
           },
@@ -1991,7 +1991,7 @@ module.exports = {
       },
       {
         "t": "2. Como usamos os teus dados",
-        "b": "• Horários das orações – calculados offline no teu dispositivo com a biblioteca Adhan; para isso não são enviadas coordenadas.\n• Direção da Qibla – a localização e o rumo da bússola são combinados no teu dispositivo.\n• Notificações de oração – agendadas no teu dispositivo com o AlarmManager; a app Android não recebe notificações push remotas.\n• Nome da cidade – as coordenadas são enviadas para o serviço de geocodificação do Android (Google); uma pesquisa manual de cidade envia o texto que escreves.\n• Mesquitas perto – as coordenadas da área de pesquisa são enviadas para o OpenStreetMap (Overpass API). As direções abrem o Google Maps com a localização da mesquita.\n• Áudio do Alcorão – as recitações são transmitidas ou transferidas de quran.com e everyayah.com; um pedido identifica apenas o ficheiro de áudio.\n• Sermão de sexta-feira – o texto, o PDF e o áudio são transferidos da Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Tipos de letra – alguns tipos de letra são transferidos através dos serviços Google Play (Google Fonts).\n• O teu conteúdo – dhikr, khatm, marcadores e metas são guardados no teu dispositivo.\n\nAs estatísticas de utilização não estão ligadas à tua identidade, mas a um código de utilizador aleatório sem informação identificativa (um pseudónimo). Se a cópia de segurança do Android estiver ativada, o código é incluído na tua cópia de segurança, pelo que reinstalar o Vakit na mesma conta Google conta como o mesmo utilizador. Os dados servem apenas para melhorar a app; nunca são vendidos nem usados para publicidade. A versão Android não contém nenhum SDK de relatórios de falhas ou de publicidade."
+        "b": "• Horários das orações – calculados offline no teu dispositivo com a biblioteca Adhan; para isso não são enviadas coordenadas.\n• Direção da Qibla – a localização e o rumo da bússola são combinados no teu dispositivo.\n• Notificações de oração – agendadas no teu dispositivo com o AlarmManager.\n• Anúncios – Os anúncios de dias abençoados e de novas versões são difundidos pelo Firebase Cloud Messaging; não há segmentação por pessoa.\n• Nome da cidade – as coordenadas são enviadas para o serviço de geocodificação do Android (Google); uma pesquisa manual de cidade envia o texto que escreves.\n• Mesquitas perto – as coordenadas da área de pesquisa são enviadas para o OpenStreetMap (Overpass API). As direções abrem o Google Maps com a localização da mesquita.\n• Áudio do Alcorão – as recitações são transmitidas ou transferidas de quran.com e everyayah.com; um pedido identifica apenas o ficheiro de áudio.\n• Sermão de sexta-feira – o texto, o PDF e o áudio são transferidos da Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Tipos de letra – alguns tipos de letra são transferidos através dos serviços Google Play (Google Fonts).\n• O teu conteúdo – dhikr, khatm, marcadores e metas são guardados no teu dispositivo.\n\nAs estatísticas de utilização não estão ligadas à tua identidade, mas a um código de utilizador aleatório sem informação identificativa (um pseudónimo). Se a cópia de segurança do Android estiver ativada, o código é incluído na tua cópia de segurança, pelo que reinstalar o Vakit na mesma conta Google conta como o mesmo utilizador. Os dados servem apenas para melhorar a app; nunca são vendidos nem usados para publicidade. A versão Android não contém nenhum SDK de relatórios de falhas ou de publicidade."
       },
       {
         "t": "3. Cópia de segurança e sincronização (Google Backup)",
@@ -1999,7 +1999,7 @@ module.exports = {
       },
       {
         "t": "4. Serviços de terceiros",
-        "b": "O Vakit usa os seguintes serviços para fins limitados. Nenhum deles recebe a tua identidade por parte do Vakit:\n• Google – cópia de segurança do Android, geocodificação para o nome da tua cidade, Google Fonts, avaliação na app do Play (In-App Review) e Google Maps quando pedes direções.\n• OpenStreetMap (Overpass API) – pesquisa de mesquitas perto (coordenadas da área de pesquisa).\n• quran.com e everyayah.com – áudio de recitação do Alcorão.\n• Diyanet İşleri Başkanlığı – texto e áudio do sermão de sexta-feira.\n• Cloudflare – encaminhamento do tráfego para o servidor da Vakit (estatísticas de utilização) e distribuição dos pacotes de conteúdo transferíveis.\nCada serviço trata os pedidos segundo a sua própria política de privacidade."
+        "b": "O Vakit usa os seguintes serviços para fins limitados. Nenhum deles recebe a tua identidade por parte do Vakit:\n• Google – cópia de segurança do Android, geocodificação para o nome da tua cidade, Google Fonts, avaliação na app do Play (In-App Review) e Google Maps quando pedes direções.\n• Firebase Cloud Messaging (Google) – Anúncios de dias abençoados e de novas versões. Os anúncios são difundidos por tema; não há segmentação por pessoa.\n• OpenStreetMap (Overpass API) – pesquisa de mesquitas perto (coordenadas da área de pesquisa).\n• quran.com e everyayah.com – áudio de recitação do Alcorão.\n• Diyanet İşleri Başkanlığı – texto e áudio do sermão de sexta-feira.\n• Cloudflare – encaminhamento do tráfego para o servidor da Vakit (estatísticas de utilização) e distribuição dos pacotes de conteúdo transferíveis.\nCada serviço trata os pedidos segundo a sua própria política de privacidade."
       },
       {
         "t": "5. Publicidade",
@@ -2046,7 +2046,7 @@ module.exports = {
     },
     "titleBefore": "Политика конфиденциальности ",
     "titleEm": "Android",
-    "desc": "Обновлено: 7 октября 2026 г.\n\nVakit уважает вашу конфиденциальность. Учётная запись не нужна, и мы не собираем идентифицирующие данные, такие как имя, e-mail, номер телефона, фотографии или контакты. Время молитв, направление на киблу и напоминания рассчитываются на вашем устройстве. Ваши записи поклонения (зикры, хатм, закладки, цели, любимые мечети) хранятся на устройстве и, если включено резервное копирование Android, в вашем собственном аккаунте Google — они никогда не отправляются на наш сервер. На наш сервер отправляется только статистика использования, чтобы мы могли улучшать приложение; эти данные привязаны к коду пользователя без идентифицирующих сведений. Отчёты о сбоях и рекламные идентификаторы не отправляются.",
+    "desc": "Обновлено: 8 октября 2026 г.\n\nVakit уважает вашу конфиденциальность. Учётная запись не нужна, и мы не собираем идентифицирующие данные, такие как имя, e-mail, номер телефона, фотографии или контакты. Время молитв, направление на киблу и напоминания рассчитываются на вашем устройстве. Ваши записи поклонения (зикры, хатм, закладки, цели, любимые мечети) хранятся на устройстве и, если включено резервное копирование Android, в вашем собственном аккаунте Google — они никогда не отправляются на наш сервер. На наш сервер отправляется только статистика использования, чтобы мы могли улучшать приложение; эти данные привязаны к коду пользователя без идентифицирующих сведений. Отчёты о сбоях и рекламные идентификаторы не отправляются.",
     "sections": [
       {
         "t": "1. Какие данные мы собираем",
@@ -2078,8 +2078,8 @@ module.exports = {
           {
             "name": "Данные уведомлений",
             "lines": [
-              "Цель: Доставка локальных уведомлений о молитвах",
-              "Обработка: AlarmManager / каналы уведомлений Android",
+              "Цель: Доставка напоминаний о молитвах, а также объявлений о благословенных днях и новых версиях",
+              "Обработка: AlarmManager / каналы уведомлений Android · Firebase Cloud Messaging (Google)",
               "Хранение: Пока вы их не отключите или не удалите приложение"
             ]
           },
@@ -2104,7 +2104,7 @@ module.exports = {
       },
       {
         "t": "2. Как мы используем ваши данные",
-        "b": "• Время молитв – рассчитывается без интернета на устройстве с помощью библиотеки Adhan; координаты для этого не отправляются.\n• Направление на киблу – местоположение и показания компаса объединяются на устройстве.\n• Уведомления о молитвах – планируются на устройстве через AlarmManager; Android-приложение не получает удалённых push-уведомлений.\n• Название города – координаты отправляются в службу геокодирования Android (Google); при ручном поиске города отправляется введённый вами текст.\n• Мечети рядом – координаты области поиска отправляются в OpenStreetMap (Overpass API). Построение маршрута открывает Google Maps с местоположением мечети.\n• Аудио Корана – чтения воспроизводятся потоком или скачиваются с quran.com и everyayah.com; запрос указывает только аудиофайл.\n• Пятничная проповедь – текст, PDF и аудио скачиваются с сайта Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Шрифты – некоторые шрифты скачиваются через сервисы Google Play (Google Fonts).\n• Ваш контент – зикры, хатм, закладки и цели хранятся на устройстве.\n\nСтатистика использования привязана не к вашей личности, а к случайному коду пользователя без идентифицирующих сведений (псевдониму). Если включено резервное копирование Android, этот код попадает в вашу резервную копию, поэтому при повторной установке Vakit с тем же аккаунтом Google вы считаетесь тем же пользователем. Данные используются только для улучшения приложения; они никогда не продаются и не используются для рекламы. Android-версия не содержит SDK для отчётов о сбоях или рекламы."
+        "b": "• Время молитв – рассчитывается без интернета на устройстве с помощью библиотеки Adhan; координаты для этого не отправляются.\n• Направление на киблу – местоположение и показания компаса объединяются на устройстве.\n• Уведомления о молитвах – планируются на устройстве через AlarmManager.\n• Объявления – Объявления о благословенных днях и новых версиях рассылаются через Firebase Cloud Messaging; персональной адресации нет.\n• Название города – координаты отправляются в службу геокодирования Android (Google); при ручном поиске города отправляется введённый вами текст.\n• Мечети рядом – координаты области поиска отправляются в OpenStreetMap (Overpass API). Построение маршрута открывает Google Maps с местоположением мечети.\n• Аудио Корана – чтения воспроизводятся потоком или скачиваются с quran.com и everyayah.com; запрос указывает только аудиофайл.\n• Пятничная проповедь – текст, PDF и аудио скачиваются с сайта Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Шрифты – некоторые шрифты скачиваются через сервисы Google Play (Google Fonts).\n• Ваш контент – зикры, хатм, закладки и цели хранятся на устройстве.\n\nСтатистика использования привязана не к вашей личности, а к случайному коду пользователя без идентифицирующих сведений (псевдониму). Если включено резервное копирование Android, этот код попадает в вашу резервную копию, поэтому при повторной установке Vakit с тем же аккаунтом Google вы считаетесь тем же пользователем. Данные используются только для улучшения приложения; они никогда не продаются и не используются для рекламы. Android-версия не содержит SDK для отчётов о сбоях или рекламы."
       },
       {
         "t": "3. Резервное копирование и синхронизация (Google Backup)",
@@ -2112,7 +2112,7 @@ module.exports = {
       },
       {
         "t": "4. Сторонние сервисы",
-        "b": "Vakit использует следующие сервисы в ограниченных целях. Ни один из них не получает от Vakit сведений о вашей личности:\n• Google – резервное копирование Android, геокодирование для названия города, Google Fonts, отзывы в приложении Play (In-App Review) и Google Maps, когда вы запрашиваете маршрут.\n• OpenStreetMap (Overpass API) – поиск мечетей рядом (координаты области поиска).\n• quran.com и everyayah.com – аудио чтения Корана.\n• Diyanet İşleri Başkanlığı – текст и аудио пятничной проповеди.\n• Cloudflare – передача трафика на сервер Vakit (статистика использования) и доставка загружаемых пакетов контента.\nКаждый сервис обрабатывает запросы в соответствии со своей политикой конфиденциальности."
+        "b": "Vakit использует следующие сервисы в ограниченных целях. Ни один из них не получает от Vakit сведений о вашей личности:\n• Google – резервное копирование Android, геокодирование для названия города, Google Fonts, отзывы в приложении Play (In-App Review) и Google Maps, когда вы запрашиваете маршрут.\n• Firebase Cloud Messaging (Google) — Объявления о благословенных днях и новых версиях. Рассылка идёт по темам; персональной адресации нет.\n• OpenStreetMap (Overpass API) – поиск мечетей рядом (координаты области поиска).\n• quran.com и everyayah.com – аудио чтения Корана.\n• Diyanet İşleri Başkanlığı – текст и аудио пятничной проповеди.\n• Cloudflare – передача трафика на сервер Vakit (статистика использования) и доставка загружаемых пакетов контента.\nКаждый сервис обрабатывает запросы в соответствии со своей политикой конфиденциальности."
       },
       {
         "t": "5. Реклама",
@@ -2159,7 +2159,7 @@ module.exports = {
     },
     "titleBefore": "Politika e privatësisë ",
     "titleEm": "Android",
-    "desc": "Përditësimi i fundit: 7 tetor 2026\n\nVakit e respekton privatësinë tuaj. Nuk ju nevojitet llogari dhe nuk mbledhim të dhëna identiteti si emri, e-maili, numri i telefonit, fotografitë apo kontaktet tuaja. Kohët e namazit, drejtimi i kiblës dhe kujtesat llogariten në pajisjen tuaj. Regjistrimet tuaja të ibadetit (dhikri, hatmja, shënuesit, synimet, xhamitë e preferuara) ruhen në pajisjen tuaj dhe, nëse kopjeruajtja e Android-it është aktive, në llogarinë tuaj Google — ato nuk dërgohen kurrë në serverin tonë. Në serverin tonë dërgohen vetëm statistikat e përdorimit, që të mund ta përmirësojmë aplikacionin; këto të dhëna janë të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Nuk dërgohen raporte ndërprerjesh apo identifikues reklamash.",
+    "desc": "Përditësimi i fundit: 8 tetor 2026\n\nVakit e respekton privatësinë tuaj. Nuk ju nevojitet llogari dhe nuk mbledhim të dhëna identiteti si emri, e-maili, numri i telefonit, fotografitë apo kontaktet tuaja. Kohët e namazit, drejtimi i kiblës dhe kujtesat llogariten në pajisjen tuaj. Regjistrimet tuaja të ibadetit (dhikri, hatmja, shënuesit, synimet, xhamitë e preferuara) ruhen në pajisjen tuaj dhe, nëse kopjeruajtja e Android-it është aktive, në llogarinë tuaj Google — ato nuk dërgohen kurrë në serverin tonë. Në serverin tonë dërgohen vetëm statistikat e përdorimit, që të mund ta përmirësojmë aplikacionin; këto të dhëna janë të lidhura me një kod përdoruesi që nuk përmban asnjë informacion identifikues. Nuk dërgohen raporte ndërprerjesh apo identifikues reklamash.",
     "sections": [
       {
         "t": "1. Të dhënat që mbledhim",
@@ -2191,8 +2191,8 @@ module.exports = {
           {
             "name": "Të dhënat e njoftimeve",
             "lines": [
-              "Qëllimi: Dërgimi i njoftimeve lokale të namazit",
-              "Përpunimi: AlarmManager / Kanalet e njoftimeve të Android",
+              "Qëllimi: Dërgimi i kujtesave të namazit si dhe i njoftimeve për ditët e bekuara dhe versionet e reja",
+              "Përpunimi: AlarmManager / Kanalet e njoftimeve të Android · Firebase Cloud Messaging (Google)",
               "Ruajtja: Derisa të çaktivizohen ose të fshihet aplikacioni"
             ]
           },
@@ -2217,7 +2217,7 @@ module.exports = {
       },
       {
         "t": "2. Si i përdorim të dhënat tuaja",
-        "b": "• Kohët e namazit – llogariten pa internet në pajisjen tuaj me bibliotekën Adhan; për këtë nuk dërgohen koordinata.\n• Drejtimi i kiblës – vendndodhja dhe drejtimi i busullës kombinohen në pajisjen tuaj.\n• Njoftimet e namazit – planifikohen në pajisjen tuaj me AlarmManager; aplikacioni Android nuk merr njoftime push nga larg.\n• Emri i qytetit – koordinatat dërgohen te shërbimi i gjeokodimit të Android-it (Google); kërkimi manual i qytetit dërgon tekstin që shkruani.\n• Xhamitë afër – koordinatat e zonës së kërkimit dërgohen te OpenStreetMap (Overpass API). Udhëzimet e rrugës hapin Google Maps me vendndodhjen e xhamisë.\n• Audioja e Kuranit – leximet transmetohen ose shkarkohen nga quran.com dhe everyayah.com; një kërkesë identifikon vetëm skedarin audio.\n• Hutbeja e xhumasë – teksti, PDF-ja dhe audioja shkarkohen nga Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Shkronjat – disa shkronja shkarkohen përmes shërbimeve Google Play (Google Fonts).\n• Përmbajtja juaj – dhikri, hatmja, shënuesit dhe synimet ruhen në pajisjen tuaj.\n\nStatistikat e përdorimit nuk janë të lidhura me identitetin tuaj, por me një kod të rastësishëm përdoruesi që nuk përmban asnjë informacion identifikues (pseudonim). Nëse kopjeruajtja e Android-it është aktive, kodi përfshihet në kopjeruajtjen tuaj, prandaj riinstalimi i Vakit në të njëjtën llogari Google numërohet si i njëjti përdorues. Të dhënat përdoren vetëm për të përmirësuar aplikacionin; ato nuk shiten kurrë dhe nuk përdoren për reklama. Versioni Android nuk përmban asnjë SDK raportimi ndërprerjesh apo reklamash."
+        "b": "• Kohët e namazit – llogariten pa internet në pajisjen tuaj me bibliotekën Adhan; për këtë nuk dërgohen koordinata.\n• Drejtimi i kiblës – vendndodhja dhe drejtimi i busullës kombinohen në pajisjen tuaj.\n• Njoftimet e namazit – planifikohen në pajisjen tuaj me AlarmManager.\n• Njoftimet – Njoftimet për ditët e bekuara dhe për versionet e reja transmetohen përmes Firebase Cloud Messaging; nuk ka shënjestrim individual.\n• Emri i qytetit – koordinatat dërgohen te shërbimi i gjeokodimit të Android-it (Google); kërkimi manual i qytetit dërgon tekstin që shkruani.\n• Xhamitë afër – koordinatat e zonës së kërkimit dërgohen te OpenStreetMap (Overpass API). Udhëzimet e rrugës hapin Google Maps me vendndodhjen e xhamisë.\n• Audioja e Kuranit – leximet transmetohen ose shkarkohen nga quran.com dhe everyayah.com; një kërkesë identifikon vetëm skedarin audio.\n• Hutbeja e xhumasë – teksti, PDF-ja dhe audioja shkarkohen nga Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Shkronjat – disa shkronja shkarkohen përmes shërbimeve Google Play (Google Fonts).\n• Përmbajtja juaj – dhikri, hatmja, shënuesit dhe synimet ruhen në pajisjen tuaj.\n\nStatistikat e përdorimit nuk janë të lidhura me identitetin tuaj, por me një kod të rastësishëm përdoruesi që nuk përmban asnjë informacion identifikues (pseudonim). Nëse kopjeruajtja e Android-it është aktive, kodi përfshihet në kopjeruajtjen tuaj, prandaj riinstalimi i Vakit në të njëjtën llogari Google numërohet si i njëjti përdorues. Të dhënat përdoren vetëm për të përmirësuar aplikacionin; ato nuk shiten kurrë dhe nuk përdoren për reklama. Versioni Android nuk përmban asnjë SDK raportimi ndërprerjesh apo reklamash."
       },
       {
         "t": "3. Rezervimi dhe sinkronizimi (Google Backup)",
@@ -2225,7 +2225,7 @@ module.exports = {
       },
       {
         "t": "4. Shërbimet e palëve të treta",
-        "b": "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjëri prej tyre nuk e merr identitetin tuaj nga Vakit:\n• Google – kopjeruajtja e Android-it, gjeokodimi për emrin e qytetit, Google Fonts, vlerësimi brenda aplikacionit i Play (In-App Review) dhe Google Maps kur kërkoni udhëzime rruge.\n• OpenStreetMap (Overpass API) – kërkimi i xhamive afër (koordinatat e zonës së kërkimit).\n• quran.com dhe everyayah.com – audio e leximit të Kuranit.\n• Diyanet İşleri Başkanlığı – teksti dhe audioja e hutbes së xhumasë.\n• Cloudflare – përcjellja e trafikut drejt serverit të Vakit (statistikat e përdorimit) dhe shpërndarja e paketave të përmbajtjes që mund të shkarkohen.\nÇdo shërbim i përpunon kërkesat sipas politikës së vet të privatësisë."
+        "b": "Vakit përdor shërbimet e mëposhtme për qëllime të kufizuara. Asnjëri prej tyre nuk e merr identitetin tuaj nga Vakit:\n• Google – kopjeruajtja e Android-it, gjeokodimi për emrin e qytetit, Google Fonts, vlerësimi brenda aplikacionit i Play (In-App Review) dhe Google Maps kur kërkoni udhëzime rruge.\n• Firebase Cloud Messaging (Google) – Njoftime për ditët e bekuara dhe versionet e reja. Njoftimet dërgohen sipas temës; nuk ka shënjestrim individual.\n• OpenStreetMap (Overpass API) – kërkimi i xhamive afër (koordinatat e zonës së kërkimit).\n• quran.com dhe everyayah.com – audio e leximit të Kuranit.\n• Diyanet İşleri Başkanlığı – teksti dhe audioja e hutbes së xhumasë.\n• Cloudflare – përcjellja e trafikut drejt serverit të Vakit (statistikat e përdorimit) dhe shpërndarja e paketave të përmbajtjes që mund të shkarkohen.\nÇdo shërbim i përpunon kërkesat sipas politikës së vet të privatësisë."
       },
       {
         "t": "5. Reklamat",
@@ -2272,7 +2272,7 @@ module.exports = {
     },
     "titleBefore": "Sera ya Faragha ",
     "titleEm": "Android",
-    "desc": "Ilisasishwa mwisho: 7 Oktoba 2026\n\nVakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi data za utambulisho kama jina lako, barua pepe, nambari ya simu, picha au anwani za mawasiliano. Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa ndani ya kifaa chako. Kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) huhifadhiwa ndani ya kifaa chako na, ikiwa nakala rudufu ya Android imewashwa, katika akaunti yako mwenyewe ya Google — hazitumwi kamwe kwenye seva yetu. Ni takwimu za matumizi pekee zinazotumwa kwenye seva yetu ili tuweze kuboresha programu; data hiyo imeunganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Hakuna ripoti za hitilafu wala vitambulisho vya matangazo vinavyotumwa.",
+    "desc": "Ilisasishwa mwisho: 8 Oktoba 2026\n\nVakit inaheshimu faragha yako. Huhitaji akaunti, na hatukusanyi data za utambulisho kama jina lako, barua pepe, nambari ya simu, picha au anwani za mawasiliano. Nyakati za swala, mwelekeo wa kibla na vikumbusho hukokotolewa ndani ya kifaa chako. Kumbukumbu zako za ibada (dhikri, hitima, alamisho, malengo, misikiti uipendayo) huhifadhiwa ndani ya kifaa chako na, ikiwa nakala rudufu ya Android imewashwa, katika akaunti yako mwenyewe ya Google — hazitumwi kamwe kwenye seva yetu. Ni takwimu za matumizi pekee zinazotumwa kwenye seva yetu ili tuweze kuboresha programu; data hiyo imeunganishwa na msimbo wa mtumiaji usio na taarifa zozote za utambulisho. Hakuna ripoti za hitilafu wala vitambulisho vya matangazo vinavyotumwa.",
     "sections": [
       {
         "t": "1. Taarifa Tunazokusanya",
@@ -2304,8 +2304,8 @@ module.exports = {
           {
             "name": "Data ya Arifa",
             "lines": [
-              "Lengo: Kutuma arifa za swala zinazoandaliwa ndani ya kifaa",
-              "Uchakataji: AlarmManager / Chaneli za Arifa za Android",
+              "Lengo: Kutuma vikumbusho vya swala pamoja na matangazo ya siku za baraka na ya matoleo mapya",
+              "Uchakataji: AlarmManager / Chaneli za Arifa za Android · Firebase Cloud Messaging (Google)",
               "Uhifadhi: Hadi zizimwe au programu ifutwe"
             ]
           },
@@ -2330,7 +2330,7 @@ module.exports = {
       },
       {
         "t": "2. Jinsi Tunavyotumia Data Yako",
-        "b": "• Nyakati za swala – hukokotolewa bila intaneti ndani ya kifaa chako kwa maktaba ya Adhan; hakuna viwianishi vinavyotumwa kwa ajili ya hili.\n• Mwelekeo wa kibla – mahali na mwelekeo wa dira huunganishwa ndani ya kifaa chako.\n• Arifa za swala – hupangwa ndani ya kifaa chako kwa AlarmManager; programu ya Android haipokei arifa za push kutoka mbali.\n• Jina la mji – viwianishi hutumwa kwa huduma ya geocoding ya Android (Google); utafutaji wa mji kwa mkono hutuma maandishi unayoandika.\n• Misikiti Iliyo Karibu – viwianishi vya eneo la utafutaji hutumwa kwa OpenStreetMap (Overpass API). Maelekezo ya njia hufungua Google Maps pamoja na mahali msikiti ulipo.\n• Sauti ya Kurani – visomo husikilizwa mtandaoni au hupakuliwa kutoka quran.com na everyayah.com; ombi hutambulisha faili ya sauti tu.\n• Khutba ya Ijumaa – maandishi, PDF na sauti hupakuliwa kutoka Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fonti – baadhi ya fonti hupakuliwa kupitia huduma za Google Play (Google Fonts).\n• Maudhui yako – dhikri, hitima, alamisho na malengo huhifadhiwa ndani ya kifaa chako.\n\nTakwimu za matumizi hazijaunganishwa na utambulisho wako, bali na msimbo nasibu wa mtumiaji usio na taarifa zozote za utambulisho (jina bandia). Ikiwa nakala rudufu ya Android imewashwa, msimbo huo hujumuishwa katika nakala rudufu yako, hivyo kusakinisha Vakit upya kwenye akaunti ileile ya Google huhesabiwa kama mtumiaji yuleyule. Data hutumika tu kuboresha programu; haiuzwi kamwe wala haitumiki kwa matangazo. Toleo la Android halina SDK yoyote ya kuripoti hitilafu wala ya matangazo."
+        "b": "• Nyakati za swala – hukokotolewa bila intaneti ndani ya kifaa chako kwa maktaba ya Adhan; hakuna viwianishi vinavyotumwa kwa ajili ya hili.\n• Mwelekeo wa kibla – mahali na mwelekeo wa dira huunganishwa ndani ya kifaa chako.\n• Arifa za swala – hupangwa ndani ya kifaa chako kwa AlarmManager.\n• Matangazo – Matangazo ya siku za baraka na ya matoleo mapya hutumwa kwa wote kupitia Firebase Cloud Messaging; hakuna ulengaji wa mtu binafsi.\n• Jina la mji – viwianishi hutumwa kwa huduma ya geocoding ya Android (Google); utafutaji wa mji kwa mkono hutuma maandishi unayoandika.\n• Misikiti Iliyo Karibu – viwianishi vya eneo la utafutaji hutumwa kwa OpenStreetMap (Overpass API). Maelekezo ya njia hufungua Google Maps pamoja na mahali msikiti ulipo.\n• Sauti ya Kurani – visomo husikilizwa mtandaoni au hupakuliwa kutoka quran.com na everyayah.com; ombi hutambulisha faili ya sauti tu.\n• Khutba ya Ijumaa – maandishi, PDF na sauti hupakuliwa kutoka Diyanet (dinhizmetleri.diyanet.gov.tr).\n• Fonti – baadhi ya fonti hupakuliwa kupitia huduma za Google Play (Google Fonts).\n• Maudhui yako – dhikri, hitima, alamisho na malengo huhifadhiwa ndani ya kifaa chako.\n\nTakwimu za matumizi hazijaunganishwa na utambulisho wako, bali na msimbo nasibu wa mtumiaji usio na taarifa zozote za utambulisho (jina bandia). Ikiwa nakala rudufu ya Android imewashwa, msimbo huo hujumuishwa katika nakala rudufu yako, hivyo kusakinisha Vakit upya kwenye akaunti ileile ya Google huhesabiwa kama mtumiaji yuleyule. Data hutumika tu kuboresha programu; haiuzwi kamwe wala haitumiki kwa matangazo. Toleo la Android halina SDK yoyote ya kuripoti hitilafu wala ya matangazo."
       },
       {
         "t": "3. Hifadhi rudufu na usawazishaji (Google Backup)",
@@ -2338,7 +2338,7 @@ module.exports = {
       },
       {
         "t": "4. Huduma za Watu wa Tatu",
-        "b": "Vakit hutumia huduma zifuatazo kwa madhumuni maalum. Hakuna hata moja inayopokea utambulisho wako kutoka Vakit:\n• Google – nakala rudufu ya Android, geocoding kwa jina la mji wako, Google Fonts, tathmini ndani ya programu ya Play (In-App Review) na Google Maps unapoomba maelekezo ya njia.\n• OpenStreetMap (Overpass API) – utafutaji wa misikiti iliyo karibu (viwianishi vya eneo la utafutaji).\n• quran.com na everyayah.com – sauti za visomo vya Kurani.\n• Diyanet İşleri Başkanlığı – maandishi na sauti ya khutba ya Ijumaa.\n• Cloudflare – kupitisha trafiki kwenda kwenye seva ya Vakit (takwimu za matumizi) na kusambaza vifurushi vya maudhui vinavyoweza kupakuliwa.\nKila huduma huchakata maombi kulingana na sera yake ya faragha."
+        "b": "Vakit hutumia huduma zifuatazo kwa madhumuni maalum. Hakuna hata moja inayopokea utambulisho wako kutoka Vakit:\n• Google – nakala rudufu ya Android, geocoding kwa jina la mji wako, Google Fonts, tathmini ndani ya programu ya Play (In-App Review) na Google Maps unapoomba maelekezo ya njia.\n• Firebase Cloud Messaging (Google) – Matangazo ya siku za baraka na ya matoleo mapya. Matangazo hutumwa kwa jumla kwa mada; hakuna ulengaji wa kila mtu.\n• OpenStreetMap (Overpass API) – utafutaji wa misikiti iliyo karibu (viwianishi vya eneo la utafutaji).\n• quran.com na everyayah.com – sauti za visomo vya Kurani.\n• Diyanet İşleri Başkanlığı – maandishi na sauti ya khutba ya Ijumaa.\n• Cloudflare – kupitisha trafiki kwenda kwenye seva ya Vakit (takwimu za matumizi) na kusambaza vifurushi vya maudhui vinavyoweza kupakuliwa.\nKila huduma huchakata maombi kulingana na sera yake ya faragha."
       },
       {
         "t": "5. Matangazo",
@@ -2385,7 +2385,7 @@ module.exports = {
     },
     "titleBefore": "นโยบายความเป็นส่วนตัว ",
     "titleEm": "Android",
-    "desc": "อัปเดตล่าสุด: 7 ตุลาคม 2026\n\nVakit เคารพความเป็นส่วนตัวของคุณ คุณไม่ต้องมีบัญชี และเราไม่เก็บข้อมูลระบุตัวตน เช่น ชื่อ อีเมล เบอร์โทรศัพท์ รูปภาพ หรือรายชื่อผู้ติดต่อ เวลาละหมาด ทิศกิบลัต และการเตือนคำนวณบนเครื่องของคุณ บันทึกอิบาดะฮฺของคุณ (ซิกิร คอตัม ที่คั่น เป้าหมาย มัสยิดที่ชอบ) เก็บไว้บนเครื่องของคุณ และหากเปิดการสำรองข้อมูลของ Android ไว้ ก็จะเก็บในบัญชี Google ของคุณเองด้วย — บันทึกเหล่านี้ไม่เคยถูกส่งไปยังเซิร์ฟเวอร์ของเรา มีเพียงสถิติการใช้งานเท่านั้นที่ถูกส่งไปยังเซิร์ฟเวอร์ของเราเพื่อให้เราปรับปรุงแอปได้ ข้อมูลนั้นผูกกับรหัสผู้ใช้ที่ไม่มีข้อมูลระบุตัวตน ไม่มีการส่งรายงานข้อขัดข้องหรือรหัสโฆษณา",
+    "desc": "อัปเดตล่าสุด: 8 ตุลาคม 2026\n\nVakit เคารพความเป็นส่วนตัวของคุณ คุณไม่ต้องมีบัญชี และเราไม่เก็บข้อมูลระบุตัวตน เช่น ชื่อ อีเมล เบอร์โทรศัพท์ รูปภาพ หรือรายชื่อผู้ติดต่อ เวลาละหมาด ทิศกิบลัต และการเตือนคำนวณบนเครื่องของคุณ บันทึกอิบาดะฮฺของคุณ (ซิกิร คอตัม ที่คั่น เป้าหมาย มัสยิดที่ชอบ) เก็บไว้บนเครื่องของคุณ และหากเปิดการสำรองข้อมูลของ Android ไว้ ก็จะเก็บในบัญชี Google ของคุณเองด้วย — บันทึกเหล่านี้ไม่เคยถูกส่งไปยังเซิร์ฟเวอร์ของเรา มีเพียงสถิติการใช้งานเท่านั้นที่ถูกส่งไปยังเซิร์ฟเวอร์ของเราเพื่อให้เราปรับปรุงแอปได้ ข้อมูลนั้นผูกกับรหัสผู้ใช้ที่ไม่มีข้อมูลระบุตัวตน ไม่มีการส่งรายงานข้อขัดข้องหรือรหัสโฆษณา",
     "sections": [
       {
         "t": "1. ข้อมูลที่เราเก็บ",
@@ -2417,8 +2417,8 @@ module.exports = {
           {
             "name": "ข้อมูลการแจ้งเตือน",
             "lines": [
-              "วัตถุประสงค์: ส่งการแจ้งเตือนละหมาดภายในเครื่อง",
-              "การประมวลผล: AlarmManager / ช่องการแจ้งเตือนของ Android",
+              "วัตถุประสงค์: ส่งการเตือนละหมาด รวมถึงประกาศวันสำคัญและเวอร์ชันใหม่",
+              "การประมวลผล: AlarmManager / ช่องการแจ้งเตือนของ Android · Firebase Cloud Messaging (Google)",
               "ระยะเก็บรักษา: จนกว่าจะปิดหรือลบแอป"
             ]
           },
@@ -2443,7 +2443,7 @@ module.exports = {
       },
       {
         "t": "2. เราใช้ข้อมูลของคุณอย่างไร",
-        "b": "• เวลาละหมาด – คำนวณแบบออฟไลน์บนเครื่องของคุณด้วยไลบรารี Adhan ไม่มีการส่งพิกัดเพื่อการนี้\n• ทิศกิบลัต – ตำแหน่งและทิศเข็มทิศถูกรวมกันบนเครื่องของคุณ\n• การแจ้งเตือนละหมาด – ตั้งเวลาบนเครื่องของคุณด้วย AlarmManager แอป Android ไม่ได้รับการแจ้งเตือนแบบพุชจากระยะไกล\n• ชื่อเมือง – พิกัดถูกส่งไปยังบริการแปลงพิกัดเป็นที่อยู่ของ Android (Google) การค้นหาเมืองด้วยตนเองจะส่งข้อความที่คุณพิมพ์\n• มัสยิดใกล้ฉัน – พิกัดของพื้นที่ค้นหาถูกส่งไปยัง OpenStreetMap (Overpass API) การนำทางจะเปิด Google Maps พร้อมตำแหน่งของมัสยิด\n• เสียงอัลกุรอาน – การอ่านถูกสตรีมหรือดาวน์โหลดจาก quran.com และ everyayah.com คำขอระบุเพียงไฟล์เสียงเท่านั้น\n• คุฏบะฮฺวันศุกร์ – ข้อความ PDF และเสียงดาวน์โหลดจาก Diyanet (dinhizmetleri.diyanet.gov.tr)\n• แบบอักษร – แบบอักษรบางชุดดาวน์โหลดผ่านบริการ Google Play (Google Fonts)\n• เนื้อหาของคุณ – ซิกิร คอตัม ที่คั่น และเป้าหมายเก็บไว้บนเครื่องของคุณ\n\nสถิติการใช้งานไม่ได้ผูกกับตัวตนของคุณ แต่ผูกกับรหัสผู้ใช้แบบสุ่มที่ไม่มีข้อมูลระบุตัวตน (นามแฝง) หากเปิดการสำรองข้อมูลของ Android ไว้ รหัสนี้จะรวมอยู่ในข้อมูลสำรองของคุณ การติดตั้ง Vakit ใหม่ในบัญชี Google เดียวกันจึงนับเป็นผู้ใช้คนเดิม ข้อมูลใช้เพื่อพัฒนาแอปเท่านั้น ไม่ถูกขายและไม่ใช้เพื่อโฆษณาเลย เวอร์ชัน Android ไม่มี SDK ด้านการรายงานข้อขัดข้องหรือโฆษณา"
+        "b": "• เวลาละหมาด – คำนวณแบบออฟไลน์บนเครื่องของคุณด้วยไลบรารี Adhan ไม่มีการส่งพิกัดเพื่อการนี้\n• ทิศกิบลัต – ตำแหน่งและทิศเข็มทิศถูกรวมกันบนเครื่องของคุณ\n• การแจ้งเตือนละหมาด – ตั้งเวลาบนเครื่องของคุณด้วย AlarmManager\n• ประกาศ — ประกาศวันสำคัญและเวอร์ชันใหม่ส่งผ่าน Firebase Cloud Messaging แบบกระจายตามหัวข้อ ไม่มีการเจาะจงรายบุคคล\n• ชื่อเมือง – พิกัดถูกส่งไปยังบริการแปลงพิกัดเป็นที่อยู่ของ Android (Google) การค้นหาเมืองด้วยตนเองจะส่งข้อความที่คุณพิมพ์\n• มัสยิดใกล้ฉัน – พิกัดของพื้นที่ค้นหาถูกส่งไปยัง OpenStreetMap (Overpass API) การนำทางจะเปิด Google Maps พร้อมตำแหน่งของมัสยิด\n• เสียงอัลกุรอาน – การอ่านถูกสตรีมหรือดาวน์โหลดจาก quran.com และ everyayah.com คำขอระบุเพียงไฟล์เสียงเท่านั้น\n• คุฏบะฮฺวันศุกร์ – ข้อความ PDF และเสียงดาวน์โหลดจาก Diyanet (dinhizmetleri.diyanet.gov.tr)\n• แบบอักษร – แบบอักษรบางชุดดาวน์โหลดผ่านบริการ Google Play (Google Fonts)\n• เนื้อหาของคุณ – ซิกิร คอตัม ที่คั่น และเป้าหมายเก็บไว้บนเครื่องของคุณ\n\nสถิติการใช้งานไม่ได้ผูกกับตัวตนของคุณ แต่ผูกกับรหัสผู้ใช้แบบสุ่มที่ไม่มีข้อมูลระบุตัวตน (นามแฝง) หากเปิดการสำรองข้อมูลของ Android ไว้ รหัสนี้จะรวมอยู่ในข้อมูลสำรองของคุณ การติดตั้ง Vakit ใหม่ในบัญชี Google เดียวกันจึงนับเป็นผู้ใช้คนเดิม ข้อมูลใช้เพื่อพัฒนาแอปเท่านั้น ไม่ถูกขายและไม่ใช้เพื่อโฆษณาเลย เวอร์ชัน Android ไม่มี SDK ด้านการรายงานข้อขัดข้องหรือโฆษณา"
       },
       {
         "t": "3. การสำรองข้อมูลและการซิงค์ (Google Backup)",
@@ -2451,7 +2451,7 @@ module.exports = {
       },
       {
         "t": "4. บริการภายนอก",
-        "b": "Vakit ใช้บริการต่อไปนี้เพื่อวัตถุประสงค์ที่จำกัด ไม่มีบริการใดได้รับข้อมูลระบุตัวตนของคุณจาก Vakit:\n• Google – การสำรองข้อมูลของ Android การแปลงพิกัดเป็นชื่อเมือง Google Fonts การรีวิวในแอปของ Play (In-App Review) และ Google Maps เมื่อคุณขอเส้นทาง\n• OpenStreetMap (Overpass API) – ค้นหามัสยิดใกล้เคียง (พิกัดของพื้นที่ค้นหา)\n• quran.com และ everyayah.com – เสียงการอ่านอัลกุรอาน\n• Diyanet İşleri Başkanlığı – ข้อความและเสียงคุฏบะฮฺวันศุกร์\n• Cloudflare – ส่งต่อการรับส่งข้อมูลไปยังเซิร์ฟเวอร์ของ Vakit (สถิติการใช้งาน) และกระจายแพ็กเนื้อหาที่ดาวน์โหลดได้\nแต่ละบริการประมวลผลคำขอตามนโยบายความเป็นส่วนตัวของตนเอง"
+        "b": "Vakit ใช้บริการต่อไปนี้เพื่อวัตถุประสงค์ที่จำกัด ไม่มีบริการใดได้รับข้อมูลระบุตัวตนของคุณจาก Vakit:\n• Google – การสำรองข้อมูลของ Android การแปลงพิกัดเป็นชื่อเมือง Google Fonts การรีวิวในแอปของ Play (In-App Review) และ Google Maps เมื่อคุณขอเส้นทาง\n• Firebase Cloud Messaging (Google) — ประกาศวันสำคัญและเวอร์ชันใหม่ กระจายตามหัวข้อ ไม่เจาะจงรายบุคคล\n• OpenStreetMap (Overpass API) – ค้นหามัสยิดใกล้เคียง (พิกัดของพื้นที่ค้นหา)\n• quran.com และ everyayah.com – เสียงการอ่านอัลกุรอาน\n• Diyanet İşleri Başkanlığı – ข้อความและเสียงคุฏบะฮฺวันศุกร์\n• Cloudflare – ส่งต่อการรับส่งข้อมูลไปยังเซิร์ฟเวอร์ของ Vakit (สถิติการใช้งาน) และกระจายแพ็กเนื้อหาที่ดาวน์โหลดได้\nแต่ละบริการประมวลผลคำขอตามนโยบายความเป็นส่วนตัวของตนเอง"
       },
       {
         "t": "5. โฆษณา",
@@ -2498,7 +2498,7 @@ module.exports = {
     },
     "titleBefore": "مەخپىيەتلىك سىياسىتى ",
     "titleEm": "Android",
-    "desc": "ئاخىرقى يېڭىلانغان: 2026-يىلى 7-ئۆكتەبىر\n\nVakit مەخپىيەتلىكىڭىزنى ھۆرمەت قىلىدۇ. ھېسابات ئېچىشىڭىزنىڭ ھاجىتى يوق، بىز ئىسمىڭىز، ئېلخەت ئادرېسىڭىز، تېلېفون نومۇرىڭىز، سۈرەتلىرىڭىز ياكى ئالاقەداشلىرىڭىزغا ئوخشاش كىملىك ئۇچۇرلىرىنى يىغمايمىز. ناماز ۋاقىتلىرى، قىبلە يۆنىلىشى ۋە ئەسكەرتىشلەر ئۈسكۈنىڭىزدە ھېسابلىنىدۇ. ئىبادەت خاتىرىلىرىڭىز (زىكىر، خەتمە، خەتكۈچلەر، نىشانلار، ياقتۇرغان مەسچىتلەر) ئۈسكۈنىڭىزدە ساقلىنىدۇ، ئەگەر Android زاپاسلاش ئوچۇق بولسا، ئۆزىڭىزنىڭ Google ھېساباتىدىمۇ ساقلىنىدۇ — ئۇلار ھەرگىز مۇلازىمېتىرىمىزغا ئەۋەتىلمەيدۇ. ئەپنى ياخشىلىشىمىز ئۈچۈن مۇلازىمېتىرىمىزغا پەقەت ئىشلىتىش ستاتىستىكىسىلا ئەۋەتىلىدۇ؛ بۇ سانلىق مەلۇمات ھېچقانداق كىملىك ئۇچۇرى بولمىغان ئىشلەتكۈچى كودىغا باغلانغان. يىمىرىلىش دوكلاتى ياكى ئېلان كىملىكى ئەۋەتىلمەيدۇ.",
+    "desc": "ئاخىرقى يېڭىلانغان: 2026-يىلى 8-ئۆكتەبىر\n\nVakit مەخپىيەتلىكىڭىزنى ھۆرمەت قىلىدۇ. ھېسابات ئېچىشىڭىزنىڭ ھاجىتى يوق، بىز ئىسمىڭىز، ئېلخەت ئادرېسىڭىز، تېلېفون نومۇرىڭىز، سۈرەتلىرىڭىز ياكى ئالاقەداشلىرىڭىزغا ئوخشاش كىملىك ئۇچۇرلىرىنى يىغمايمىز. ناماز ۋاقىتلىرى، قىبلە يۆنىلىشى ۋە ئەسكەرتىشلەر ئۈسكۈنىڭىزدە ھېسابلىنىدۇ. ئىبادەت خاتىرىلىرىڭىز (زىكىر، خەتمە، خەتكۈچلەر، نىشانلار، ياقتۇرغان مەسچىتلەر) ئۈسكۈنىڭىزدە ساقلىنىدۇ، ئەگەر Android زاپاسلاش ئوچۇق بولسا، ئۆزىڭىزنىڭ Google ھېساباتىدىمۇ ساقلىنىدۇ — ئۇلار ھەرگىز مۇلازىمېتىرىمىزغا ئەۋەتىلمەيدۇ. ئەپنى ياخشىلىشىمىز ئۈچۈن مۇلازىمېتىرىمىزغا پەقەت ئىشلىتىش ستاتىستىكىسىلا ئەۋەتىلىدۇ؛ بۇ سانلىق مەلۇمات ھېچقانداق كىملىك ئۇچۇرى بولمىغان ئىشلەتكۈچى كودىغا باغلانغان. يىمىرىلىش دوكلاتى ياكى ئېلان كىملىكى ئەۋەتىلمەيدۇ.",
     "sections": [
       {
         "t": "1. بىز يىغىدىغان ئۇچۇرلار",
@@ -2530,8 +2530,8 @@ module.exports = {
           {
             "name": "ئۇقتۇرۇش سانلىق مەلۇماتى",
             "lines": [
-              "مەقسەت: يەرلىك ناماز ئۇقتۇرۇشلىرىنى يەتكۈزۈش",
-              "بىر تەرەپ قىلىنىشى: AlarmManager / Android ئۇقتۇرۇش قاناللىرى",
+              "مەقسەت: ناماز ئەسكەرتىشلىرى ھەمدە مۇبارەك كۈن ۋە يېڭى نەشر ئۇقتۇرۇشلىرىنى يەتكۈزۈش",
+              "بىر تەرەپ قىلىنىشى: AlarmManager / Android ئۇقتۇرۇش قاناللىرى · Firebase Cloud Messaging (Google)",
               "ساقلىنىشى: چەكلەنگۈچە ياكى ئەپ ئۆچۈرۈلگۈچە"
             ]
           },
@@ -2556,7 +2556,7 @@ module.exports = {
       },
       {
         "t": "2. سانلىق مەلۇماتىڭىزنى قانداق ئىشلىتىمىز",
-        "b": "• ناماز ۋاقىتلىرى – Adhan كۇتۇپخانىسى ئارقىلىق ئۈسكۈنىڭىزدە تورسىز ھېسابلىنىدۇ؛ بۇنىڭ ئۈچۈن ھېچقانداق كوئوردىنات ئەۋەتىلمەيدۇ.\n• قىبلە يۆنىلىشى – ئورۇن بىلەن كومپاس يۆنىلىشى ئۈسكۈنىڭىزدە بىرلەشتۈرۈلىدۇ.\n• ناماز ئۇقتۇرۇشلىرى – ئۈسكۈنىڭىزدە AlarmManager ئارقىلىق ئورۇنلاشتۇرۇلىدۇ؛ Android ئەپى يىراقتىن ئىتتىرىلگەن ئۇقتۇرۇش تاپشۇرۇۋالمايدۇ.\n• شەھەر نامى – كوئوردىناتلار Android نىڭ ئادرېس بېكىتىش مۇلازىمىتىگە (Google) ئەۋەتىلىدۇ؛ شەھەرنى قولدا ئىزدىگەندە سىز يازغان تېكىست ئەۋەتىلىدۇ.\n• يېقىندىكى مەسچىتلەر – ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى OpenStreetMap (Overpass API) غا ئەۋەتىلىدۇ. يول كۆرسىتىش مەسچىتنىڭ ئورنى بىلەن Google Maps نى ئاچىدۇ.\n• قۇرئان ئاۋازى – قىرائەتلەر quran.com ۋە everyayah.com دىن تور ئارقىلىق قويۇلىدۇ ياكى چۈشۈرۈلىدۇ؛ تەلەپ پەقەت ئاۋاز ھۆججىتىنىلا بەلگىلەيدۇ.\n• جۈمە خۇتبىسى – تېكىست، PDF ۋە ئاۋاز Diyanet (dinhizmetleri.diyanet.gov.tr) تىن چۈشۈرۈلىدۇ.\n• خەت نۇسخىلىرى – بەزى خەت نۇسخىلىرى Google Play مۇلازىمەتلىرى (Google Fonts) ئارقىلىق چۈشۈرۈلىدۇ.\n• مەزمۇنلىرىڭىز – زىكىر، خەتمە، خەتكۈچلەر ۋە نىشانلار ئۈسكۈنىڭىزدە ساقلىنىدۇ.\n\nئىشلىتىش ستاتىستىكىسى كىملىكىڭىزگە ئەمەس، ھېچقانداق كىملىك ئۇچۇرى بولمىغان تاسادىپىي ئىشلەتكۈچى كودىغا (تەخەللۇس) باغلانغان. ئەگەر Android زاپاسلاش ئوچۇق بولسا، بۇ كود زاپىسىڭىزغا كىرگۈزۈلىدۇ، شۇڭا Vakit نى ئوخشاش Google ھېساباتىدا قايتا قاچىلىسىڭىز ئوخشاش ئىشلەتكۈچى دەپ ھېسابلىنىدۇ. سانلىق مەلۇمات پەقەت ئەپنى ياخشىلاشقا ئىشلىتىلىدۇ؛ ھەرگىز سېتىلمايدۇ ۋە ئېلانغا ئىشلىتىلمەيدۇ. Android نەشرىدە ھېچقانداق يىمىرىلىش دوكلاتى ياكى ئېلان SDK سى يوق."
+        "b": "• ناماز ۋاقىتلىرى – Adhan كۇتۇپخانىسى ئارقىلىق ئۈسكۈنىڭىزدە تورسىز ھېسابلىنىدۇ؛ بۇنىڭ ئۈچۈن ھېچقانداق كوئوردىنات ئەۋەتىلمەيدۇ.\n• قىبلە يۆنىلىشى – ئورۇن بىلەن كومپاس يۆنىلىشى ئۈسكۈنىڭىزدە بىرلەشتۈرۈلىدۇ.\n• ناماز ئۇقتۇرۇشلىرى – ئۈسكۈنىڭىزدە AlarmManager ئارقىلىق ئورۇنلاشتۇرۇلىدۇ.\n• ئۇقتۇرۇشلار – مۇبارەك كۈن ۋە يېڭى نەشر ئۇقتۇرۇشلىرى Firebase Cloud Messaging ئارقىلىق تارقىتىلىدۇ؛ شەخس بويىچە نىشانلاش يوق.\n• شەھەر نامى – كوئوردىناتلار Android نىڭ ئادرېس بېكىتىش مۇلازىمىتىگە (Google) ئەۋەتىلىدۇ؛ شەھەرنى قولدا ئىزدىگەندە سىز يازغان تېكىست ئەۋەتىلىدۇ.\n• يېقىندىكى مەسچىتلەر – ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى OpenStreetMap (Overpass API) غا ئەۋەتىلىدۇ. يول كۆرسىتىش مەسچىتنىڭ ئورنى بىلەن Google Maps نى ئاچىدۇ.\n• قۇرئان ئاۋازى – قىرائەتلەر quran.com ۋە everyayah.com دىن تور ئارقىلىق قويۇلىدۇ ياكى چۈشۈرۈلىدۇ؛ تەلەپ پەقەت ئاۋاز ھۆججىتىنىلا بەلگىلەيدۇ.\n• جۈمە خۇتبىسى – تېكىست، PDF ۋە ئاۋاز Diyanet (dinhizmetleri.diyanet.gov.tr) تىن چۈشۈرۈلىدۇ.\n• خەت نۇسخىلىرى – بەزى خەت نۇسخىلىرى Google Play مۇلازىمەتلىرى (Google Fonts) ئارقىلىق چۈشۈرۈلىدۇ.\n• مەزمۇنلىرىڭىز – زىكىر، خەتمە، خەتكۈچلەر ۋە نىشانلار ئۈسكۈنىڭىزدە ساقلىنىدۇ.\n\nئىشلىتىش ستاتىستىكىسى كىملىكىڭىزگە ئەمەس، ھېچقانداق كىملىك ئۇچۇرى بولمىغان تاسادىپىي ئىشلەتكۈچى كودىغا (تەخەللۇس) باغلانغان. ئەگەر Android زاپاسلاش ئوچۇق بولسا، بۇ كود زاپىسىڭىزغا كىرگۈزۈلىدۇ، شۇڭا Vakit نى ئوخشاش Google ھېساباتىدا قايتا قاچىلىسىڭىز ئوخشاش ئىشلەتكۈچى دەپ ھېسابلىنىدۇ. سانلىق مەلۇمات پەقەت ئەپنى ياخشىلاشقا ئىشلىتىلىدۇ؛ ھەرگىز سېتىلمايدۇ ۋە ئېلانغا ئىشلىتىلمەيدۇ. Android نەشرىدە ھېچقانداق يىمىرىلىش دوكلاتى ياكى ئېلان SDK سى يوق."
       },
       {
         "t": "3. زاپاسلاش ۋە ماسلاشتۇرۇش (Google زاپاسلاش)",
@@ -2564,7 +2564,7 @@ module.exports = {
       },
       {
         "t": "4. ئۈچىنچى تەرەپ مۇلازىمەتلىرى",
-        "b": "Vakit تۆۋەندىكى مۇلازىمەتلەرنى چەكلىك مەقسەتتە ئىشلىتىدۇ. ئۇلارنىڭ ھېچقايسىسى Vakit تىن كىملىكىڭىزنى تاپشۇرۇۋالمايدۇ:\n• Google – Android زاپاسلاش، شەھەر نامى ئۈچۈن ئادرېس بېكىتىش، Google Fonts، Play ئەپ ئىچى باھالاش (In-App Review)، ۋە يول سورىغىنىڭىزدا Google Maps.\n• OpenStreetMap (Overpass API) – يېقىندىكى مەسچىتلەرنى ئىزدەش (ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى).\n• quran.com ۋە everyayah.com – قۇرئان قىرائىتى ئاۋازلىرى.\n• Diyanet İşleri Başkanlığı – جۈمە خۇتبىسىنىڭ تېكىستى ۋە ئاۋازى.\n• Cloudflare – Vakit مۇلازىمېتىرىغا بارىدىغان ئېقىمنى (ئىشلىتىش ستاتىستىكىسى) يەتكۈزۈش ۋە چۈشۈرگىلى بولىدىغان مەزمۇن بوغچىلىرىنى تارقىتىش.\nھەر بىر مۇلازىمەت تەلەپلەرنى ئۆزىنىڭ مەخپىيەتلىك سىياسىتى بويىچە بىر تەرەپ قىلىدۇ."
+        "b": "Vakit تۆۋەندىكى مۇلازىمەتلەرنى چەكلىك مەقسەتتە ئىشلىتىدۇ. ئۇلارنىڭ ھېچقايسىسى Vakit تىن كىملىكىڭىزنى تاپشۇرۇۋالمايدۇ:\n• Google – Android زاپاسلاش، شەھەر نامى ئۈچۈن ئادرېس بېكىتىش، Google Fonts، Play ئەپ ئىچى باھالاش (In-App Review)، ۋە يول سورىغىنىڭىزدا Google Maps.\n• Firebase Cloud Messaging (Google) – مۇبارەك كۈن ۋە يېڭى نەشر ئۇقتۇرۇشلىرى. ئۇقتۇرۇشلار ھەممەيلەنگە بىراقلا ئەۋەتىلىدۇ؛ شەخس بويىچە نىشانلاش يوق.\n• OpenStreetMap (Overpass API) – يېقىندىكى مەسچىتلەرنى ئىزدەش (ئىزدەش دائىرىسىنىڭ كوئوردىناتلىرى).\n• quran.com ۋە everyayah.com – قۇرئان قىرائىتى ئاۋازلىرى.\n• Diyanet İşleri Başkanlığı – جۈمە خۇتبىسىنىڭ تېكىستى ۋە ئاۋازى.\n• Cloudflare – Vakit مۇلازىمېتىرىغا بارىدىغان ئېقىمنى (ئىشلىتىش ستاتىستىكىسى) يەتكۈزۈش ۋە چۈشۈرگىلى بولىدىغان مەزمۇن بوغچىلىرىنى تارقىتىش.\nھەر بىر مۇلازىمەت تەلەپلەرنى ئۆزىنىڭ مەخپىيەتلىك سىياسىتى بويىچە بىر تەرەپ قىلىدۇ."
       },
       {
         "t": "5. ئېلان",
@@ -2611,7 +2611,7 @@ module.exports = {
     },
     "titleBefore": "رازداری کی پالیسی ",
     "titleEm": "Android",
-    "desc": "آخری تازہ کاری: 7 اکتوبر 2026\n\nVakit آپ کی رازداری کا احترام کرتا ہے۔ آپ کو کسی اکاؤنٹ کی ضرورت نہیں، اور ہم آپ کا نام، ای میل، فون نمبر، تصاویر یا رابطے جیسی شناختی معلومات جمع نہیں کرتے۔ نماز کے اوقات، قبلہ کا رخ اور یاد دہانیاں آپ کے آلے پر شمار ہوتی ہیں۔ آپ کے عبادت کے ریکارڈ (ذکر، ختم، نشانیاں، اہداف، پسندیدہ مساجد) آپ کے آلے پر محفوظ ہوتے ہیں، اور اگر Android بیک اپ آن ہو تو آپ کے اپنے Google اکاؤنٹ میں بھی — یہ کبھی ہمارے سرور کو نہیں بھیجے جاتے۔ ہمارے سرور کو صرف استعمال کے اعداد و شمار بھیجے جاتے ہیں تاکہ ہم ایپ کو بہتر بنا سکیں؛ یہ ڈیٹا ایک ایسے صارف کوڈ سے منسلک ہوتا ہے جس میں کوئی شناختی معلومات نہیں۔ کوئی کریش رپورٹ یا اشتہاری شناخت کنندہ نہیں بھیجا جاتا۔",
+    "desc": "آخری تازہ کاری: 8 اکتوبر 2026\n\nVakit آپ کی رازداری کا احترام کرتا ہے۔ آپ کو کسی اکاؤنٹ کی ضرورت نہیں، اور ہم آپ کا نام، ای میل، فون نمبر، تصاویر یا رابطے جیسی شناختی معلومات جمع نہیں کرتے۔ نماز کے اوقات، قبلہ کا رخ اور یاد دہانیاں آپ کے آلے پر شمار ہوتی ہیں۔ آپ کے عبادت کے ریکارڈ (ذکر، ختم، نشانیاں، اہداف، پسندیدہ مساجد) آپ کے آلے پر محفوظ ہوتے ہیں، اور اگر Android بیک اپ آن ہو تو آپ کے اپنے Google اکاؤنٹ میں بھی — یہ کبھی ہمارے سرور کو نہیں بھیجے جاتے۔ ہمارے سرور کو صرف استعمال کے اعداد و شمار بھیجے جاتے ہیں تاکہ ہم ایپ کو بہتر بنا سکیں؛ یہ ڈیٹا ایک ایسے صارف کوڈ سے منسلک ہوتا ہے جس میں کوئی شناختی معلومات نہیں۔ کوئی کریش رپورٹ یا اشتہاری شناخت کنندہ نہیں بھیجا جاتا۔",
     "sections": [
       {
         "t": "1. ہم کون سی معلومات جمع کرتے ہیں",
@@ -2643,8 +2643,8 @@ module.exports = {
           {
             "name": "اطلاعات کا ڈیٹا",
             "lines": [
-              "مقصد: مقامی نماز کی اطلاعات پہنچانا",
-              "پروسیسنگ: AlarmManager / Android اطلاعاتی چینلز",
+              "مقصد: نماز کی یاد دہانیاں اور مبارک دنوں و نئے ورژن کے اعلانات پہنچانا",
+              "پروسیسنگ: AlarmManager / Android اطلاعاتی چینلز · Firebase Cloud Messaging (Google)",
               "مدتِ حفاظت: بند کرنے یا ایپ ہٹانے تک"
             ]
           },
@@ -2669,7 +2669,7 @@ module.exports = {
       },
       {
         "t": "2. ہم آپ کا ڈیٹا کیسے استعمال کرتے ہیں",
-        "b": "• نماز کے اوقات – Adhan لائبریری کے ذریعے آپ کے آلے پر انٹرنیٹ کے بغیر شمار ہوتے ہیں؛ اس کے لیے کوئی کوآرڈینیٹس نہیں بھیجے جاتے۔\n• قبلہ کا رخ – مقام اور قطب نما کی سمت آپ کے آلے پر ملائی جاتی ہیں۔\n• نماز کی اطلاعات – آپ کے آلے پر AlarmManager کے ذریعے طے کی جاتی ہیں؛ Android ایپ کوئی ریموٹ پُش اطلاع وصول نہیں کرتی۔\n• شہر کا نام – کوآرڈینیٹس Android کی جیوکوڈنگ سروس (Google) کو بھیجے جاتے ہیں؛ دستی طور پر شہر تلاش کرنے پر آپ کا لکھا ہوا متن بھیجا جاتا ہے۔\n• قریبی مساجد – تلاش کے علاقے کے کوآرڈینیٹس OpenStreetMap (Overpass API) کو بھیجے جاتے ہیں۔ راستہ دکھانے کے لیے مسجد کے مقام کے ساتھ Google Maps کھلتا ہے۔\n• قرآن کی آڈیو – تلاوتیں quran.com اور everyayah.com سے اسٹریم یا ڈاؤن لوڈ ہوتی ہیں؛ درخواست صرف آڈیو فائل کی نشاندہی کرتی ہے۔\n• جمعہ کا خطبہ – متن، PDF اور آڈیو Diyanet (dinhizmetleri.diyanet.gov.tr) سے ڈاؤن لوڈ ہوتے ہیں۔\n• فونٹس – کچھ فونٹس Google Play سروسز (Google Fonts) کے ذریعے ڈاؤن لوڈ ہوتے ہیں۔\n• آپ کا مواد – ذکر، ختم، نشانیاں اور اہداف آپ کے آلے پر محفوظ ہوتے ہیں۔\n\nاستعمال کے اعداد و شمار آپ کی شناخت سے نہیں بلکہ ایک بے ترتیب صارف کوڈ (فرضی نام) سے منسلک ہیں جس میں کوئی شناختی معلومات نہیں۔ اگر Android بیک اپ آن ہو تو یہ کوڈ آپ کے بیک اپ میں شامل ہوتا ہے، اس لیے اسی Google اکاؤنٹ پر Vakit دوبارہ انسٹال کرنے پر آپ وہی صارف شمار ہوتے ہیں۔ یہ ڈیٹا صرف ایپ کو بہتر بنانے کے لیے استعمال ہوتا ہے؛ نہ کبھی بیچا جاتا ہے نہ اشتہارات کے لیے استعمال ہوتا ہے۔ Android ورژن میں کوئی کریش رپورٹنگ یا اشتہاری SDK نہیں ہے۔"
+        "b": "• نماز کے اوقات – Adhan لائبریری کے ذریعے آپ کے آلے پر انٹرنیٹ کے بغیر شمار ہوتے ہیں؛ اس کے لیے کوئی کوآرڈینیٹس نہیں بھیجے جاتے۔\n• قبلہ کا رخ – مقام اور قطب نما کی سمت آپ کے آلے پر ملائی جاتی ہیں۔\n• نماز کی اطلاعات – آپ کے آلے پر AlarmManager کے ذریعے طے کی جاتی ہیں۔\n• اعلانات – مبارک دنوں اور نئے ورژن کے اعلانات Firebase Cloud Messaging سے نشر ہوتے ہیں؛ کسی فرد کو الگ سے نشانہ نہیں بنایا جاتا۔\n• شہر کا نام – کوآرڈینیٹس Android کی جیوکوڈنگ سروس (Google) کو بھیجے جاتے ہیں؛ دستی طور پر شہر تلاش کرنے پر آپ کا لکھا ہوا متن بھیجا جاتا ہے۔\n• قریبی مساجد – تلاش کے علاقے کے کوآرڈینیٹس OpenStreetMap (Overpass API) کو بھیجے جاتے ہیں۔ راستہ دکھانے کے لیے مسجد کے مقام کے ساتھ Google Maps کھلتا ہے۔\n• قرآن کی آڈیو – تلاوتیں quran.com اور everyayah.com سے اسٹریم یا ڈاؤن لوڈ ہوتی ہیں؛ درخواست صرف آڈیو فائل کی نشاندہی کرتی ہے۔\n• جمعہ کا خطبہ – متن، PDF اور آڈیو Diyanet (dinhizmetleri.diyanet.gov.tr) سے ڈاؤن لوڈ ہوتے ہیں۔\n• فونٹس – کچھ فونٹس Google Play سروسز (Google Fonts) کے ذریعے ڈاؤن لوڈ ہوتے ہیں۔\n• آپ کا مواد – ذکر، ختم، نشانیاں اور اہداف آپ کے آلے پر محفوظ ہوتے ہیں۔\n\nاستعمال کے اعداد و شمار آپ کی شناخت سے نہیں بلکہ ایک بے ترتیب صارف کوڈ (فرضی نام) سے منسلک ہیں جس میں کوئی شناختی معلومات نہیں۔ اگر Android بیک اپ آن ہو تو یہ کوڈ آپ کے بیک اپ میں شامل ہوتا ہے، اس لیے اسی Google اکاؤنٹ پر Vakit دوبارہ انسٹال کرنے پر آپ وہی صارف شمار ہوتے ہیں۔ یہ ڈیٹا صرف ایپ کو بہتر بنانے کے لیے استعمال ہوتا ہے؛ نہ کبھی بیچا جاتا ہے نہ اشتہارات کے لیے استعمال ہوتا ہے۔ Android ورژن میں کوئی کریش رپورٹنگ یا اشتہاری SDK نہیں ہے۔"
       },
       {
         "t": "3. بیک اپ اور ہم آہنگی (Google Backup)",
@@ -2677,7 +2677,7 @@ module.exports = {
       },
       {
         "t": "4. بیرونی خدمات",
-        "b": "Vakit درج ذیل خدمات محدود مقاصد کے لیے استعمال کرتا ہے۔ ان میں سے کسی کو بھی Vakit کی طرف سے آپ کی شناخت نہیں ملتی:\n• Google – Android بیک اپ، شہر کے نام کے لیے جیوکوڈنگ، Google Fonts، Play کا ایپ میں جائزہ (In-App Review)، اور جب آپ راستہ مانگیں تو Google Maps۔\n• OpenStreetMap (Overpass API) – قریبی مساجد کی تلاش (تلاش کے علاقے کے کوآرڈینیٹس)۔\n• quran.com اور everyayah.com – قرآن کی تلاوت کی آڈیو۔\n• Diyanet İşleri Başkanlığı – جمعہ کے خطبے کا متن اور آڈیو۔\n• Cloudflare – Vakit سرور تک جانے والے ٹریفک (استعمال کے اعداد و شمار) کی ترسیل اور ڈاؤن لوڈ کیے جا سکنے والے مواد کے پیکجز کی فراہمی۔\nہر سروس درخواستوں کو اپنی رازداری کی پالیسی کے مطابق پراسیس کرتی ہے۔"
+        "b": "Vakit درج ذیل خدمات محدود مقاصد کے لیے استعمال کرتا ہے۔ ان میں سے کسی کو بھی Vakit کی طرف سے آپ کی شناخت نہیں ملتی:\n• Google – Android بیک اپ، شہر کے نام کے لیے جیوکوڈنگ، Google Fonts، Play کا ایپ میں جائزہ (In-App Review)، اور جب آپ راستہ مانگیں تو Google Maps۔\n• Firebase Cloud Messaging (Google) – مبارک دنوں اور نئے ورژن کے اعلانات۔ اعلانات سب کو ایک ساتھ جاتے ہیں؛ کسی فرد کو الگ نشانہ نہیں بنایا جاتا۔\n• OpenStreetMap (Overpass API) – قریبی مساجد کی تلاش (تلاش کے علاقے کے کوآرڈینیٹس)۔\n• quran.com اور everyayah.com – قرآن کی تلاوت کی آڈیو۔\n• Diyanet İşleri Başkanlığı – جمعہ کے خطبے کا متن اور آڈیو۔\n• Cloudflare – Vakit سرور تک جانے والے ٹریفک (استعمال کے اعداد و شمار) کی ترسیل اور ڈاؤن لوڈ کیے جا سکنے والے مواد کے پیکجز کی فراہمی۔\nہر سروس درخواستوں کو اپنی رازداری کی پالیسی کے مطابق پراسیس کرتی ہے۔"
       },
       {
         "t": "5. اشتہارات",
@@ -2724,7 +2724,7 @@ module.exports = {
     },
     "titleBefore": "隐私政策 ",
     "titleEm": "Android",
-    "desc": "上次更新： 2026年10月7日\n\nVakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。",
+    "desc": "上次更新： 2026年10月8日\n\nVakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。",
     "sections": [
       {
         "t": "1. 我们收集的信息",
@@ -2756,8 +2756,8 @@ module.exports = {
           {
             "name": "通知数据",
             "lines": [
-              "用途： 发送本地礼拜通知",
-              "处理方式： AlarmManager / Android 通知渠道",
+              "用途： 送达礼拜提醒以及吉庆之日和版本公告",
+              "处理方式： AlarmManager / Android 通知渠道 · Firebase Cloud Messaging (Google)",
               "保留期： 直到关闭或删除应用"
             ]
           },
@@ -2782,7 +2782,7 @@ module.exports = {
       },
       {
         "t": "2. 我们如何使用你的数据",
-        "b": "• 礼拜时间 – 使用 Adhan 库在你的设备上离线计算；为此不会发送任何坐标。\n• 朝向 – 位置与指南针方向在你的设备上结合。\n• 礼拜通知 – 通过 AlarmManager 在你的设备上安排；Android 应用不接收远程推送通知。\n• 城市名称 – 坐标会发送到 Android 的地理编码服务（Google）；手动搜索城市时会发送你输入的文字。\n• 附近的清真寺 – 搜索区域的坐标会发送到 OpenStreetMap（Overpass API）。路线导航会以清真寺的位置打开 Google 地图。\n• 古兰经音频 – 诵读从 quran.com 和 everyayah.com 在线播放或下载；请求仅标识音频文件。\n• 主麻讲道 – 文本、PDF 和音频从 Diyanet（dinhizmetleri.diyanet.gov.tr）下载。\n• 字体 – 部分字体通过 Google Play 服务（Google Fonts）下载。\n• 你的内容 – 记主、通读、书签和目标保存在你的设备上。\n\n使用统计关联的不是你的身份，而是一个不含任何身份信息的随机用户代码（假名）。如果开启了 Android 备份，该代码会包含在你的备份中，因此在同一 Google 账号上重新安装 Vakit 会被算作同一位用户。这些数据仅用于改进应用；从不出售，也不用于广告。Android 版本不含任何崩溃报告或广告 SDK。"
+        "b": "• 礼拜时间 – 使用 Adhan 库在你的设备上离线计算；为此不会发送任何坐标。\n• 朝向 – 位置与指南针方向在你的设备上结合。\n• 礼拜通知 – 通过 AlarmManager 在你的设备上安排。\n• 公告——吉庆之日与版本公告通过 Firebase 云消息广播；不针对个人。\n• 城市名称 – 坐标会发送到 Android 的地理编码服务（Google）；手动搜索城市时会发送你输入的文字。\n• 附近的清真寺 – 搜索区域的坐标会发送到 OpenStreetMap（Overpass API）。路线导航会以清真寺的位置打开 Google 地图。\n• 古兰经音频 – 诵读从 quran.com 和 everyayah.com 在线播放或下载；请求仅标识音频文件。\n• 主麻讲道 – 文本、PDF 和音频从 Diyanet（dinhizmetleri.diyanet.gov.tr）下载。\n• 字体 – 部分字体通过 Google Play 服务（Google Fonts）下载。\n• 你的内容 – 记主、通读、书签和目标保存在你的设备上。\n\n使用统计关联的不是你的身份，而是一个不含任何身份信息的随机用户代码（假名）。如果开启了 Android 备份，该代码会包含在你的备份中，因此在同一 Google 账号上重新安装 Vakit 会被算作同一位用户。这些数据仅用于改进应用；从不出售，也不用于广告。Android 版本不含任何崩溃报告或广告 SDK。"
       },
       {
         "t": "3. 备份与同步（Google 备份）",
@@ -2790,7 +2790,7 @@ module.exports = {
       },
       {
         "t": "4. 第三方服务",
-        "b": "Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：\n• Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。\n• OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。\n• quran.com 和 everyayah.com – 古兰经诵读音频。\n• Diyanet İşleri Başkanlığı – 主麻讲道的文本和音频。\n• Cloudflare – 转发发往 Vakit 服务器的流量（使用统计）并分发可下载的内容包。\n每项服务都按照其自身的隐私政策处理请求。"
+        "b": "Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：\n• Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。\n• Firebase 云消息传递（Google）——吉庆之日与版本公告。公告统一广播；不针对个人。\n• OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。\n• quran.com 和 everyayah.com – 古兰经诵读音频。\n• Diyanet İşleri Başkanlığı – 主麻讲道的文本和音频。\n• Cloudflare – 转发发往 Vakit 服务器的流量（使用统计）并分发可下载的内容包。\n每项服务都按照其自身的隐私政策处理请求。"
       },
       {
         "t": "5. 广告",
