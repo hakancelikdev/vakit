@@ -88,7 +88,7 @@ Two other things follow from the generator, and both are the point:
 - **Download dock** (phones only): a fixed App Store button while neither the hero's nor the closing section's button is on screen. Never in iPhone Safari — the `apple-itunes-app` meta already shows Apple's Smart App Banner there, which also opens the app when it's installed.
 - **The page never swaps a screen on its own.** Scroll-driven switching swapped the preview video out on phones before anyone saw it (2026-09-22); the video now plays in the hero, and every iPhone, iPad, Mac and Watch screen is shown at once in its gallery. `tools/import-media.sh` `KEEP` lists toolkit captures known to be broken, so a re-import doesn't bring them back.
 - **Screenshots are the raw per-language app captures** from the toolkit, framed by the page's own phone mockup. A language without its own capture uses English (`shots: "en"`) — the App Store listing's rule. The preview video: Turkish has its own recording, everyone else gets English.
-- **Content translations are Turkish and English only** — the app's interface is in 25 languages, its Quran/hadith translations are not. No page may imply otherwise (`locales/README.md`).
+- **Content languages are narrower than the interface (2.1.0)** — Quran translation in 24 languages (not Arabic), tafsir in 19, hadith translations in 7; anything else opens in English. Claim only what the app's `content_packs.json` carries (`locales/README.md`).
 
 ### Editing content
 

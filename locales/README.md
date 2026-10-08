@@ -32,10 +32,10 @@ wrong length, so a feature added to Turkish/English cannot silently skip a langu
   of dawn), then `prayer_sunrise`, `prayer_dhuhr`, `prayer_asr`, `prayer_maghrib`,
   `prayer_isha` from `VakitApp-Swift/vakit/Infrastructure/Localization/<lang>.lproj/Localizable.strings`.
   The same file is the reference for every other app term (qada, dhikr, tasbihat, khatm…).
-- **Content translations are Turkish and English only.** The interface is in 25 languages,
-  but the Quran translation, word meanings, transliteration and hadith translations are
-  not. Never imply a translation in the reader's language exists. (Arabic interface: an
-  Arabic tafsir opens for part of the Quran. Friday sermon: Turkish, English, some weeks Arabic.)
+- **Content languages are narrower than the interface (2.1.0).** Quran translation in 24
+  languages (all but Arabic), tafsir in 19, hadith translations in 7 (tr en id ru bn ja es);
+  anything missing opens in English. Never claim more than the app's `content_packs.json`
+  carries. (Friday sermon: Turkish, English, some weeks Arabic.)
 - **"Free today", never "free forever".** The app is free now; the copy does not promise the future.
 - **Vakit accompanies worship, it does not own it** — no "prayed with Vakit" style credit-taking.
 - **Plain words.** No technical jargon in user-facing copy.
