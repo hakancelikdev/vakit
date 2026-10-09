@@ -103,12 +103,12 @@
 <main class="legal-page">
   <h1>Privatlivspolitik <em>Android</em></h1>
   <p class="legal-notice">Denne side er en oversættelse, som stilles til rådighed for nemheds skyld; hvis den afviger fra den engelske version, gælder den engelske version. <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Sidst opdateret: 8. oktober 2026
+  <p class="legal-desc">Sidst opdateret: 9. oktober 2026
 
 Vakit respekterer dit privatliv. Du behøver ingen konto, og vi indsamler ikke identitetsdata som dit navn, din e-mail, dit telefonnummer, dine billeder eller dine kontakter. Bedetider, Qibla-retning og påmindelser beregnes på din enhed. Dine registreringer af tilbedelse (dhikr, khatm, bogmærker, mål, favoritmoskeer) gemmes på din enhed og, hvis Android-backup er slået til, på din egen Google-konto — de sendes aldrig til vores server. Kun brugsstatistik sendes til vores server, så vi kan forbedre appen; de data er knyttet til en brugerkode uden identificerende oplysninger. Der sendes ingen nedbrudsrapporter eller annonce-id'er.</p>
   <div class="legal-card"><h2>1. Oplysninger vi indsamler</h2><div class="legal-item"><h3>Positionsdata</h3><p>Formål: Beregne de daglige bedetider og Qibla-retningen, vise navnet på din by og finde moskeer i nærheden
 Behandling: På din enhed. For at vise navnet på din by sendes koordinaterne til Androids geokodningstjeneste (Google). Når du åbner Moskeer i nærheden, sendes koordinaterne for søgeområdet til OpenStreetMap (Overpass API). Koordinater sendes aldrig til en Vakit-server.
-Opbevaring: Din seneste position gemmes på din enhed, så bedetiderne kan beregnes offline, indtil du ændrer den eller sletter appen. Positionen læses kun, mens appen er i brug.</p></div><div class="legal-item"><h3>Retningsdata</h3><p>Formål: Qibla-kompas i realtid
+Opbevaring: Din seneste position gemmes på din enhed, så bedetiderne kan beregnes offline, indtil du ændrer den eller sletter appen. Positionen læses, mens appen er i brug; slår du “Opdater på rejsen” til i Indstillinger, læses den også i baggrunden, selv når appen er lukket, så appen kan opdage, at du er kommet til en anden by, og opdatere bedetider og notifikationer. Indstillingen er slået fra som standard, og du kan slå den fra når som helst.</p></div><div class="legal-item"><h3>Retningsdata</h3><p>Formål: Qibla-kompas i realtid
 Behandling: Kun på enheden
 Opbevaring: Gemmes ikke</p></div><div class="legal-item"><h3>Bevægelsesdata</h3><p>Formål: Udjævning og stabilitet i kompasset (rotationsvektorsensor)
 Behandling: Kun på enheden
@@ -140,6 +140,7 @@ Brugsstatistikken er ikke knyttet til din identitet, men til en tilfældig bruge
 • Hvis du slår backup fra i Android-indstillinger, bliver dine data kun på din enhed.</p></div>
   <div class="legal-card"><h2>4. Tredjepartstjenester</h2><p>Vakit bruger følgende tjenester til begrænsede formål. Ingen af dem modtager din identitet fra Vakit:
 • Google – Android-backup, geokodning til dit bynavn, Google Fonts, Play In-App Review og Google Maps, når du beder om rutevejledning.
+• Firebase Remote Config (Google) – Funktionsflag og gradvis udrulning (læser ingen data fra enheden).
 • Firebase Cloud Messaging (Google) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.
 • OpenStreetMap (Overpass API) – søgning efter moskeer i nærheden (koordinater for søgeområdet).
 • quran.com og everyayah.com – lyd af Koranrecitation.

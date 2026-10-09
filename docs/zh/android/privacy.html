@@ -103,12 +103,12 @@
 <main class="legal-page">
   <h1>隐私政策 <em>Android</em></h1>
   <p class="legal-notice">本页面是为方便阅读而提供的译文；如与英文版本有出入，以英文版本为准。 <a href="/en/android/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">上次更新： 2026年10月8日
+  <p class="legal-desc">上次更新： 2026年10月9日
 
 Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓名、邮箱、电话号码、照片或通讯录等身份信息。礼拜时间、朝向和提醒都在你的设备上计算。你的功修记录（记主、通读、书签、目标、收藏的清真寺）保存在你的设备上；如果开启了 Android 备份，也会保存在你自己的 Google 账号中——这些记录从不发送到我们的服务器。只有使用统计会发送到我们的服务器，以便我们改进应用；这些数据与一个不含任何身份信息的用户代码关联。不会发送崩溃报告或广告标识符。</p>
   <div class="legal-card"><h2>1. 我们收集的信息</h2><div class="legal-item"><h3>位置数据</h3><p>用途： 计算每日礼拜时间与朝向，显示你所在城市的名称，并查找附近的清真寺
 处理方式： 在你的设备上。为了显示城市名称，坐标会发送到 Android 的地理编码服务（Google）。当你打开“附近的清真寺”时，搜索区域的坐标会发送到 OpenStreetMap（Overpass API）。坐标从不会发送到 Vakit 的服务器。
-保留期： 你最后的位置会保存在设备上，以便离线计算礼拜时间，直到你更改位置或删除应用。仅在使用应用时读取位置。</p></div><div class="legal-item"><h3>方位数据</h3><p>用途： 实时朝向罗盘
+保留期： 你最后的位置会保存在设备上，以便离线计算礼拜时间，直到你更改位置或删除应用。使用应用时会读取位置；如果你在设置中开启“出行时更新”，即使应用已关闭，也会在后台读取位置，以便发现你已到达其他城市并更新礼拜时间和通知。此设置默认关闭，你可以随时关闭。</p></div><div class="legal-item"><h3>方位数据</h3><p>用途： 实时朝向罗盘
 处理方式： 仅在设备上处理
 保留期： 不存储</p></div><div class="legal-item"><h3>运动数据</h3><p>用途： 罗盘平滑与稳定（旋转矢量传感器）
 处理方式： 仅在设备上处理
@@ -140,6 +140,7 @@ Vakit 尊重你的隐私。你无需注册账号，我们也不收集你的姓�
 • 如果你在 Android 设置中关闭备份，你的数据只会保留在你的设备上。</p></div>
   <div class="legal-card"><h2>4. 第三方服务</h2><p>Vakit 出于有限的目的使用以下服务。其中任何一项都不会从 Vakit 获得你的身份信息：
 • Google – Android 备份、用于城市名称的地理编码、Google Fonts、Play 应用内评价（In-App Review），以及你请求路线时的 Google 地图。
+• Firebase Remote Config（Google）—— 功能开关与灰度发布（不读取设备上的数据）。
 • Firebase 云消息传递（Google）——吉庆之日与版本公告。公告统一广播；不针对个人。
 • OpenStreetMap（Overpass API） – 附近清真寺搜索（搜索区域的坐标）。
 • quran.com 和 everyayah.com – 古兰经诵读音频。

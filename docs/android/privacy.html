@@ -101,12 +101,12 @@
 
 <main class="legal-page">
   <h1>Gizlilik Politikası <em>Android</em></h1>
-  <p class="legal-desc">Son güncelleme: 8 Ekim 2026
+  <p class="legal-desc">Son güncelleme: 9 Ekim 2026
 
 Vakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar cihazınızda hesaplanır. İbadet kayıtlarınız (zikir, hatim, yer imleri, hedefler, favori camiler) cihazınızda saklanır; Android yedeklemesi açıksa kendi Google hesabınızda yedeklenir — sunucumuza hiçbir zaman gönderilmez. Uygulamayı geliştirebilmemiz için sunucumuza yalnızca kullanım istatistikleri gönderilir; bu veriler kimlik bilgisi içermeyen bir kullanıcı koduna bağlıdır. Çökme raporu veya reklam kimliği gönderilmez.</p>
   <div class="legal-card"><h2>1. Topladığımız Veriler</h2><div class="legal-item"><h3>Konum Verisi</h3><p>Amaç: Günlük namaz vakitlerini ve kıble yönünü hesaplamak, şehir adınızı göstermek ve yakındaki camileri bulmak
 İşlenme: Cihazınızda. Şehir adınızı göstermek için koordinatlar Android'in adres çözümleme hizmetine (Google) gönderilir. Yakındaki Camiler'i açtığınızda arama alanının koordinatları OpenStreetMap'e (Overpass API) gönderilir. Koordinatlar hiçbir zaman bir Vakit sunucusuna gönderilmez.
-Saklama: Namaz vakitleri internetsiz hesaplanabilsin diye son konumunuz, siz değiştirene ya da uygulamayı silene kadar cihazınızda tutulur. Konum yalnızca uygulama kullanılırken okunur.</p></div><div class="legal-item"><h3>Yön Verisi</h3><p>Amaç: Gerçek zamanlı kıble pusulası
+Saklama: Namaz vakitleri internetsiz hesaplanabilsin diye son konumunuz, siz değiştirene ya da uygulamayı silene kadar cihazınızda tutulur. Konum, uygulama kullanılırken okunur; Ayarlar'da “Seyahatte Güncelle”yi açarsanız başka bir şehre geçtiğinizi fark edip namaz vakitlerini ve bildirimleri güncellemek için uygulama kapalıyken de arka planda okunur. Bu ayar varsayılan olarak kapalıdır, istediğiniz zaman kapatabilirsiniz.</p></div><div class="legal-item"><h3>Yön Verisi</h3><p>Amaç: Gerçek zamanlı kıble pusulası
 İşlenme: Yalnızca cihazda
 Saklama: Depolanmaz</p></div><div class="legal-item"><h3>Hareket Verisi</h3><p>Amaç: Pusula yumuşatma ve stabilitesi (rotasyon vektörü sensörü)
 İşlenme: Yalnızca cihazda
@@ -138,6 +138,7 @@ Kullanım istatistikleri kimliğinize değil, kimlik bilgisi içermeyen rastgele
 • Yedeklemeyi Android Ayarları'ndan kapatırsanız verileriniz yalnızca cihazınızda kalır.</p></div>
   <div class="legal-card"><h2>4. Üçüncü Taraf Hizmetler</h2><p>Vakit aşağıdaki hizmetleri sınırlı amaçlarla kullanır. Hiçbirine Vakit tarafından kimliğiniz iletilmez:
 • Google – Android yedeklemesi, şehir adı için adres çözümleme, Google Fonts, Play uygulama içi değerlendirme ve yol tarifi istediğinizde Google Haritalar.
+• Firebase Remote Config (Google) – Özellikleri uzaktan açıp kapatma ve kademeli yayma (cihazdan veri okumaz).
 • Firebase Cloud Messaging (Google) – Mübarek gün ve sürüm duyuruları. Duyurular herkese aynı anda toplu gönderilir; kişiye özel hedefleme yapılmaz.
 • OpenStreetMap (Overpass API) – Yakındaki cami araması (arama alanının koordinatları).
 • quran.com ve everyayah.com – Kur'an tilaveti sesleri.

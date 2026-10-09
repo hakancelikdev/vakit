@@ -101,12 +101,12 @@
 
 <main class="legal-page">
   <h1>Privacy Policy <em>Android</em></h1>
-  <p class="legal-desc">Last updated: 8 October 2026
+  <p class="legal-desc">Last updated: 9 October 2026
 
 Vakit respects your privacy. You don't need an account, and we don't collect identity data such as your name, email, phone number, photos or contacts. Prayer times, the Qibla direction and reminders are calculated on your device. Your worship records (dhikr, khatm, bookmarks, goals, favorite mosques) are stored on your device and, if Android backup is on, in your own Google account — they are never sent to our server. Only usage statistics are sent to our server so we can improve the app; that data is tied to a user code that contains no identifying information. No crash reports or advertising identifiers are sent.</p>
   <div class="legal-card"><h2>1. Information We Collect</h2><div class="legal-item"><h3>Location Data</h3><p>Purpose: Calculating daily prayer times and the Qibla direction, showing your city name and finding nearby mosques
 Processed: On your device. To show your city name, coordinates are sent to Android's geocoding service (Google). When you open Nearby Mosques, the coordinates of the search area are sent to OpenStreetMap (Overpass API). Coordinates are never sent to a Vakit server.
-Retention: Your last location is kept on your device so prayer times can be calculated offline, until you change it or delete the app. Location is read only while the app is in use.</p></div><div class="legal-item"><h3>Heading Data</h3><p>Purpose: Real-time Qibla compass
+Retention: Your last location is kept on your device so prayer times can be calculated offline, until you change it or delete the app. Location is read while the app is in use; if you turn on “Update When Traveling” in Settings, it is also read in the background, even when the app is closed, to notice that you have moved to another city and update prayer times and notifications. This setting is off by default and you can turn it off at any time.</p></div><div class="legal-item"><h3>Heading Data</h3><p>Purpose: Real-time Qibla compass
 Processed: On-device only
 Retention: Not stored</p></div><div class="legal-item"><h3>Motion Data</h3><p>Purpose: Compass smoothing and stability (rotation vector sensor)
 Processed: On-device only
@@ -138,6 +138,7 @@ Usage statistics are tied not to your identity but to a random user code that co
 • If you turn backup off in Android Settings, your data stays only on your device.</p></div>
   <div class="legal-card"><h2>4. Third-Party Services</h2><p>Vakit uses the following services for limited purposes. None of them receives your identity from Vakit:
 • Google – Android backup, geocoding for your city name, Google Fonts, Play In-App Review, and Google Maps when you ask for directions.
+• Firebase Remote Config (Google) – Turning features on or off remotely and rolling them out gradually (does not read data from the device).
 • Firebase Cloud Messaging (Google) – Blessed-day and release announcements. Announcements are sent to everyone at once; there is no per-person targeting.
 • OpenStreetMap (Overpass API) – nearby mosque search (coordinates of the search area).
 • quran.com and everyayah.com – Quran recitation audio.
