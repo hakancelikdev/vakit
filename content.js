@@ -45,6 +45,16 @@ const SITE = {
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
   operatingSystem: "iOS, iPadOS, macOS, watchOS",
+  // Google Play — Android uygulaması (VakitApp-Android, minSdk 26 = Android 8.0).
+  // `live: false` iken sitede Android'e dair HİÇBİR ŞEY görünmez ("yalnız bugün doğru olan"
+  // kuralı); Play sayfası herkese açıldığı gün `true` yap → Play butonları, dock, SSS, JSON-LD,
+  // llms.txt birlikte açılır. Kontrol: curl -s -o /dev/null -w "%{http_code}" "$(node -e
+  // 'console.log(require("./content.js").playLink())')" → 200. Önizleme: VAKIT_PLAY_PREVIEW=1 npm run dev
+  play: {
+    live: false || process.env.VAKIT_PLAY_PREVIEW === "1",
+    packageId: "com.hakancelikdev.vakit",
+    minAndroid: "8.0",
+  },
   // Methods the user can pick: CalculationMethod.userSelectableCases in
   // VakitApp-Swift (every case except .other, which the menu hides).
   calcMethods: 12,
@@ -266,6 +276,9 @@ const COPY = {
     "fin-h1": "İbadetin yarıda", "fin-h2": "kesilmesin.",
     "fin-p": "Ücretsiz. Reklamsız. Hesap yok. İnternetsiz çalışır. iPhone, iPad, Apple Watch ve Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "App Store'dan İndir", explore: "Özellikleri keşfet →",
+    playCta: "Google Play'den Alın",
+    "faq-android-q": "Android'de var mı?",
+    "faq-android-a": "Evet. Vakit, Android 8.0 ve üzeri cihazlarda Google Play'de; ücretsiz ve reklamsız, aynı 12 hesaplama yöntemi ve 25 dille. Apple Watch, Mac ve iCloud senkronu Apple cihazlarına özel.",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
     footPrivacy: "Gizlilik", footTerms: "Şartlar", footPress: "Basın",
     footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
@@ -308,6 +321,9 @@ const COPY = {
     "fin-h1": "Don't let your worship", "fin-h2": "be interrupted.",
     "fin-p": "Free. Ad-free. No account. Works offline. iPhone, iPad, Apple Watch and Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
     downloadCta2: "Download on the App Store", explore: "Explore features →",
+    playCta: "Get it on Google Play",
+    "faq-android-q": "Is Vakit on Android?",
+    "faq-android-a": "Yes. Vakit is on Google Play for Android 8.0 and later — free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.",
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Terms", footPress: "Press",
     footSig: "Made with care · © 2026 Hakan Çelik",
@@ -631,6 +647,17 @@ function storeLink(campaign) {
   return `${base}?pt=${SITE.appStoreProviderToken}&ct=${encodeURIComponent(campaign)}`;
 }
 
+/**
+ * Google Play linki üretir. Kampanya Play Console → Edinme raporlarına `utm_source` /
+ * `utm_campaign` olarak düşer (yalnız `referrer` parametresi içinde okunur, ayrı parametre
+ * olarak değil). Kampanyasız çağrı JSON-LD içindir — storeLink() ile aynı gerekçe.
+ */
+function playLink(campaign) {
+  const base = `https://play.google.com/store/apps/details?id=${SITE.play.packageId}`;
+  if (!campaign) return base;
+  return `${base}&referrer=${encodeURIComponent(`utm_source=vakit-site&utm_medium=web&utm_campaign=${campaign}`)}`;
+}
+
 /* ------------------------------------------------------------------ assembly */
 
 // Every language other than tr/en brings its copy from locales/<lang>.js.
@@ -662,7 +689,7 @@ function clockCities(lang) {
 
 const CONTENT = {
   SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, CITIES, CITY_CATALOG, FEATURES, SHOWCASE,
-  SHOWCASE_IMG, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, clockCities,
+  SHOWCASE_IMG, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, REVIEWERS, FAQ, LEGAL, storeLink, playLink, clockCities,
 };
 
 if (typeof module !== "undefined" && module.exports) module.exports = CONTENT;

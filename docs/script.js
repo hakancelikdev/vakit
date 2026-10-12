@@ -323,7 +323,21 @@ const isIOSSafari = () => {
   return /iP(hone|od|ad)/.test(ua) && /Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\/|FBAN|FBAV|Instagram|Line\//.test(ua);
 };
 
+/* Once the Play listing is live (build.js → playButton) every download spot carries
+   both stores. An Android visitor gets Google Play first and alone in the dock;
+   everyone else keeps the App Store there. */
+function orderStores() {
+  if (!document.querySelector('.btn-play')) return;
+  const android = /Android/.test(navigator.userAgent);
+  document.querySelectorAll('.btn-play').forEach(play => {
+    const apple = play.previousElementSibling;
+    if (play.parentElement.id === 'dock') (android ? apple : play).remove();
+    else if (android && apple) play.parentElement.insertBefore(play, apple);
+  });
+}
+
 function initDock() {
+  orderStores();
   const dock = document.getElementById('dock');
   if (dock && isIOSSafari()) { dock.remove(); return; }
   const hero = document.querySelector('.hero-actions');

@@ -27,7 +27,7 @@ const path = require("path");
 const C = require("./content.js");
 const { validateLocale } = require("./tools/validate.js");
 
-const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, clockCities } = C;
+const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, playLink, clockCities } = C;
 
 // The Vakit Manifesto — the app's own text in all 25 languages (tools/import-manifesto.js).
 const MANIFESTO_RAW = require("./manifesto.js");
@@ -169,10 +169,10 @@ function appSchema(lang) {
     name: META[lang].title,
     description: META[lang].description,
     url: SITE.origin + LANGS[lang].path,
-    downloadUrl: storeLink(),
-    installUrl: storeLink(),
+    downloadUrl: SITE.play.live ? [storeLink(), playLink()] : storeLink(),
+    installUrl: SITE.play.live ? [storeLink(), playLink()] : storeLink(),
     applicationCategory: "LifestyleApplication",
-    operatingSystem: SITE.operatingSystem,
+    operatingSystem: SITE.play.live ? `${SITE.operatingSystem}, Android` : SITE.operatingSystem,
     operatingSystemVersion: minOSText(),
     softwareVersion: SITE.appVersion,
     inLanguage: ALL.map((l) => LANGS[l].htmlLang),
@@ -180,14 +180,15 @@ function appSchema(lang) {
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     featureList: FEATURES[lang].map((f) => f.n),
     screenshot: SHOWCASE[lang].map((s) => SITE.origin + shotUrl(lang, s.img)),
-    sameAs: [storeLink()],
+    sameAs: SITE.play.live ? [storeLink(), playLink()] : [storeLink()],
   };
 }
 
 /** "iOS 16.4+, watchOS 9+, macOS 13+" — one platform's minimum is not the others'. */
 function minOSText() {
   const m = SITE.minOS;
-  return `iOS ${m.ios}+, watchOS ${m.watchos}+, macOS ${m.macos}+`;
+  const android = SITE.play.live ? `, Android ${SITE.play.minAndroid}+` : "";
+  return `iOS ${m.ios}+, watchOS ${m.watchos}+, macOS ${m.macos}+${android}`;
 }
 
 /** `name` is the short brand Google shows as the site name; the page title is the alternate. */
@@ -207,12 +208,35 @@ function faqSchema(lang) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ[lang].map((f) => ({
+    mainEntity: faqs(lang).map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+}
+
+/**
+ * The FAQ as shown: once the Play listing is live (SITE.play.live), the Android
+ * question follows "Which devices does it run on?" — page, FAQPage data and llms.txt
+ * read this one function, so they stay identical.
+ */
+const ANDROID_FAQ_AFTER = 5;
+function faqs(lang) {
+  if (!SITE.play.live) return FAQ[lang];
+  const list = FAQ[lang].slice();
+  list.splice(ANDROID_FAQ_AFTER + 1, 0, { q: t(lang, "faq-android-q"), a: t(lang, "faq-android-a") });
+  return list;
+}
+
+/** The Google Play button next to an App Store one — nothing until the listing is live. */
+function playButton(lang, where, label = "playCta") {
+  if (!SITE.play.live) return "";
+  return `
+      <a href="${playLink(`site-${where}-${lang}`)}" class="btn-primary btn-play">
+        ${PLAY_LOGO}
+        <span>${esc(t(lang, label))}</span>
+      </a>`;
 }
 
 /** Everything script.js needs for the live clock, in the page's language. */
@@ -403,7 +427,7 @@ function reviewGrid(lang) {
 }
 
 function faqList(lang) {
-  return FAQ[lang]
+  return faqs(lang)
     .map(
       (f, i) =>
         `        <div class="faq-item${i === 0 ? " on" : ""}">` +
@@ -412,6 +436,9 @@ function faqList(lang) {
     )
     .join("\n");
 }
+
+const PLAY_LOGO =
+  '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.2 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7-9.5-9.7zm10.6 10.8 2.6 2.7-11.3 6.5c-.4.2-.8.3-1.1.2l9.8-9.4zm3.9-3.6 2.4 1.4c.9.5.9 1.8 0 2.3l-2.4 1.4-2.8-2.6 2.8-2.5zM6.1 1.7c.3-.1.7 0 1.1.2l11.3 6.5-2.6 2.7-9.8-9.4z"/></svg>';
 
 const APPLE_LOGO =
   '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 13.4c0-2.4 2-3.5 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8zm-2.5-7.1c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z"/></svg>';
@@ -710,7 +737,7 @@ ${jsonLd(faqSchema(lang))}
       <a href="${storeLink(`site-hero-${lang}`)}" class="btn-primary">
         ${APPLE_LOGO}
         <span>${esc(t(lang, "downloadCta"))}</span>
-      </a>
+      </a>${playButton(lang, "hero")}
       <a href="#showcase" class="btn-ghost">${esc(t(lang, "seeScreens"))}</a>
     </div>
     <!-- The four promises, as small print under the button. -->
@@ -867,7 +894,7 @@ ${faqList(lang)}
     <a href="${storeLink(`site-final-${lang}`)}" class="btn-primary">
       ${APPLE_LOGO}
       <span>${esc(t(lang, "downloadCta2"))}</span>
-    </a>
+    </a>${playButton(lang, "final")}
     <a href="#showcase" class="btn-ghost">${esc(t(lang, "explore"))}</a>
   </div>
 </section>
@@ -882,7 +909,7 @@ ${siteFooter(lang)}
   <a href="${storeLink(`site-dock-${lang}`)}" class="btn-primary">
     ${APPLE_LOGO}
     <span>${esc(t(lang, "downloadCta"))}</span>
-  </a>
+  </a>${playButton(lang, "dock")}
 </aside>
 
 <script id="vakit-data" type="application/json">${jsonLd(clockData(lang))}</script>
@@ -1304,7 +1331,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 
 function llms() {
   const feats = FEATURES.en.map((f) => `- **${f.n}** — ${f.d}`).join("\n");
-  const faqs = FAQ.en.map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n");
+  const faqText = faqs("en").map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n");
   const langs = ALL.map((l) => `- [${LANGS[l].name}](${SITE.origin}${LANGS[l].path})`).join("\n");
 
   return `# ${META.en.title}
@@ -1312,9 +1339,10 @@ function llms() {
 > ${META.en.description}
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
-Apple Watch and Mac, built by ${SITE.author}. Current release: ${SITE.appVersion}; requires
+Apple Watch and Mac${SITE.play.live ? " — and Android" : ""}, built by ${SITE.author}. Current release: ${SITE.appVersion}; requires
 ${minOSText()}. App Store rating ${SITE.rating.value} from
-${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}
+${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}${SITE.play.live ? `
+Android: ${playLink('llms-txt')}` : ""}
 
 ## What makes it different
 
@@ -1341,7 +1369,7 @@ ${feats}
 
 ## Frequently asked questions
 
-${faqs}
+${faqText}
 
 ## The Vakit Manifesto
 

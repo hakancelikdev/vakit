@@ -179,12 +179,35 @@ test("tr/en: \"takip yok\" iddiası yok", () => {
 
 test("JSON-LD linkinde ct YOK — yapısal veriye kampanya token'ı girmez", () => {
   // Arama motorundan gelen her tıklama tek bir sahte kampanyaya yazılırsa kanal ayrımı bozulur.
+  const app = [...TR.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .map((m) => JSON.parse(m[1])).find((d) => d["@type"] === "MobileApplication");
   for (const field of ["downloadUrl", "installUrl"]) {
-    const m = TR.match(new RegExp(`"${field}":\\s*"([^"]+)"`));
-    assert.ok(m, `${field} bulunamadı`);
-    assert.ok(!m[1].includes("ct="), `JSON-LD ${field} kampanyalı: ${m[1]}`);
+    assert.ok(app && app[field], `${field} bulunamadı`);
+    for (const u of [].concat(app[field])) {
+      assert.ok(!u.includes("ct=") && !u.includes("referrer="), `JSON-LD ${field} kampanyalı: ${u}`);
+    }
   }
 });
+
+// Google Play: SITE.play.live kapalıyken sitede Android'e dair hiçbir şey yok ("yalnız bugün
+// doğru olan"); açıkken her indirme noktasında kampanyalı Play linki ve SSS'de Android sorusu.
+for (const lang of LANGS) {
+  test(`${lang}: Google Play yalnız SITE.play.live iken`, () => {
+    const page = html(lang);
+    const plays = [...page.matchAll(/href="(https:\/\/play\.google\.com[^"]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&"));
+    if (!C.SITE.play.live) {
+      assert.strictEqual(plays.length, 0, "Play linki var");
+      assert.ok(!page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si var");
+      return;
+    }
+    for (const where of ["hero", "final", "dock"]) {
+      const u = plays.find((x) => x.includes(`utm_campaign%3Dsite-${where}-${lang}`) || x.includes(`utm_campaign=site-${where}-${lang}`));
+      assert.ok(u, `${where} Play linki yok`);
+      assert.ok(new URL(u).searchParams.get("referrer").startsWith("utm_source=vakit-site"), `${where} referrer`);
+    }
+    assert.ok(page.includes(C.COPY[lang]["faq-android-q"].replace(/'/g, "&#39;")) || page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si yok");
+  });
+}
 
 test("llms.txt linki kampanyalı — AI kaynaklı trafiğin tek ölçüm noktası", () => {
   const llms = fs.readFileSync("docs/llms.txt", "utf8");
