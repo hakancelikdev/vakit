@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-10-08",
+  updated: "2026-10-12",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -54,6 +54,13 @@ const SITE = {
     live: false || process.env.VAKIT_PLAY_PREVIEW === "1",
     packageId: "com.hakancelikdev.vakit",
     minAndroid: "8.0",
+    // Kapalı test (sahip kararı 2026-10-12): `live` kapalıyken bu doluysa site "Android'de dene"
+    // butonu + iki adımlı katılım bölümü (#android) + kapalı test SSS'si gösterir; JSON-LD'ye
+    // Android girmez (herkese açık değil). Herkese açılınca `live: true` — test bölümü kalkar.
+    test: {
+      group: "https://groups.google.com/g/vakit-android-test",
+      optIn: "https://play.google.com/apps/testing/com.hakancelikdev.vakit",
+    },
   },
   // Methods the user can pick: CalculationMethod.userSelectableCases in
   // VakitApp-Swift (every case except .other, which the menu hides).
@@ -279,6 +286,14 @@ const COPY = {
     playCta: "Google Play'den Alın",
     "faq-android-q": "Android'de var mı?",
     "faq-android-a": "Evet. Vakit, Android 8.0 ve üzeri cihazlarda Google Play'de; ücretsiz ve reklamsız, aynı 12 hesaplama yöntemi ve 25 dille. Apple Watch, Mac ve iCloud senkronu Apple cihazlarına özel.",
+    playTestCta: "Android'de dene",
+    "and-h1": "Android'de",
+    "and-h2": "kapalı testte.",
+    "and-p": "Vakit'in Android sürümü Google Play'de kapalı testte. İki adımda katılıp hemen deneyebilirsin.",
+    "and-s1": "Önce test grubuna katıl",
+    "and-s2": "Sonra Google Play'den indir",
+    "and-note": "İki adımda da Google hesabınla giriş yaparsın; Play'de kullandığın hesapla aynı olmalı.",
+    "faq-android-a-test": "Evet, şu an Google Play'de kapalı testte (Android 8.0 ve üzeri). Önce groups.google.com/g/vakit-android-test grubuna katıl, sonra play.google.com/apps/testing/com.hakancelikdev.vakit adresinden indir. Ücretsiz ve reklamsız; aynı 12 hesaplama yöntemi ve 25 dil. Apple Watch, Mac ve iCloud senkronu Apple cihazlarına özel.",
     footContact: "İletişim", footFeedback: "Geri Bildirim",
     footPrivacy: "Gizlilik", footTerms: "Şartlar", footPress: "Basın",
     footSig: "Özenle yapıldı · © 2026 Hakan Çelik",
@@ -324,6 +339,14 @@ const COPY = {
     playCta: "Get it on Google Play",
     "faq-android-q": "Is Vakit on Android?",
     "faq-android-a": "Yes. Vakit is on Google Play for Android 8.0 and later — free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.",
+    playTestCta: "Try it on Android",
+    "and-h1": "On Android,",
+    "and-h2": "in closed testing.",
+    "and-p": "Vakit for Android is in closed testing on Google Play. Join in two steps and try it now.",
+    "and-s1": "First, join the test group",
+    "and-s2": "Then get it on Google Play",
+    "and-note": "Both steps ask you to sign in with your Google account — the same one you use on Play.",
+    "faq-android-a-test": "Yes — it is in closed testing on Google Play (Android 8.0 and later). First join groups.google.com/g/vakit-android-test, then install from play.google.com/apps/testing/com.hakancelikdev.vakit. Free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.",
     footContact: "Contact", footFeedback: "Feedback",
     footPrivacy: "Privacy", footTerms: "Terms", footPress: "Press",
     footSig: "Made with care · © 2026 Hakan Çelik",

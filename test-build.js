@@ -189,23 +189,38 @@ test("JSON-LD linkinde ct YOK — yapısal veriye kampanya token'ı girmez", () 
   }
 });
 
-// Google Play: SITE.play.live kapalıyken sitede Android'e dair hiçbir şey yok ("yalnız bugün
-// doğru olan"); açıkken her indirme noktasında kampanyalı Play linki ve SSS'de Android sorusu.
+// Google Play üç aşama: hiçbiri → Android'e dair hiçbir şey ("yalnız bugün doğru olan");
+// kapalı test → "Android'de dene" #android'e iner, iki adım (grup + opt-in), test SSS'si,
+// JSON-LD'de Android yok; yayında → her indirme noktasında kampanyalı Play linki.
+const STAGE = C.SITE.play.live ? "live" : C.SITE.play.test ? "test" : null;
+const unesc = (x) => x.replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"');
 for (const lang of LANGS) {
-  test(`${lang}: Google Play yalnız SITE.play.live iken`, () => {
-    const page = html(lang);
-    const plays = [...page.matchAll(/href="(https:\/\/play\.google\.com[^"]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&"));
-    if (!C.SITE.play.live) {
+  test(`${lang}: Google Play aşaması (${STAGE})`, () => {
+    const page = unesc(html(lang));
+    const plays = [...page.matchAll(/href="(https:\/\/play\.google\.com[^"]+)"/g)].map((m) => m[1]);
+    const app = [...html(lang).matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((m) => JSON.parse(m[1])).find((d) => d["@type"] === "MobileApplication");
+    if (!STAGE) {
       assert.strictEqual(plays.length, 0, "Play linki var");
       assert.ok(!page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si var");
       return;
     }
+    assert.ok(page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si yok");
+    if (STAGE === "test") {
+      assert.ok(page.includes('id="android"'), "#android bölümü yok");
+      assert.ok(page.includes(`href="${C.SITE.play.test.group}"`), "grup linki yok");
+      assert.deepStrictEqual([...new Set(plays)], [C.SITE.play.test.optIn], "yalnız opt-in linki olmalı");
+      assert.strictEqual((page.match(/href="#android" class="btn-primary btn-play"/g) || []).length, 3, "hero/final/dock");
+      assert.ok(page.includes(C.COPY[lang]["faq-android-a-test"]), "test SSS cevabı yok");
+      assert.ok(!/Android/.test(app.operatingSystem), "kapalı testte JSON-LD Android demez");
+      return;
+    }
     for (const where of ["hero", "final", "dock"]) {
-      const u = plays.find((x) => x.includes(`utm_campaign%3Dsite-${where}-${lang}`) || x.includes(`utm_campaign=site-${where}-${lang}`));
+      const u = plays.find((x) => x.includes(`utm_campaign%3Dsite-${where}-${lang}`));
       assert.ok(u, `${where} Play linki yok`);
       assert.ok(new URL(u).searchParams.get("referrer").startsWith("utm_source=vakit-site"), `${where} referrer`);
     }
-    assert.ok(page.includes(C.COPY[lang]["faq-android-q"].replace(/'/g, "&#39;")) || page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si yok");
+    assert.ok(!page.includes('id="android"'), "yayındayken test bölümü kalmamalı");
   });
 }
 

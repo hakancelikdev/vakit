@@ -222,21 +222,51 @@ function faqSchema(lang) {
  * read this one function, so they stay identical.
  */
 const ANDROID_FAQ_AFTER = 5;
+/** "live" (public Play listing), "test" (closed testing, SITE.play.test) or null. */
+const playStage = () => (SITE.play.live ? "live" : SITE.play.test ? "test" : null);
 function faqs(lang) {
-  if (!SITE.play.live) return FAQ[lang];
+  const stage = playStage();
+  if (!stage) return FAQ[lang];
   const list = FAQ[lang].slice();
-  list.splice(ANDROID_FAQ_AFTER + 1, 0, { q: t(lang, "faq-android-q"), a: t(lang, "faq-android-a") });
+  const a = t(lang, stage === "live" ? "faq-android-a" : "faq-android-a-test");
+  list.splice(ANDROID_FAQ_AFTER + 1, 0, { q: t(lang, "faq-android-q"), a });
   return list;
 }
 
-/** The Google Play button next to an App Store one — nothing until the listing is live. */
-function playButton(lang, where, label = "playCta") {
-  if (!SITE.play.live) return "";
+/** The Google Play button next to an App Store one: the listing when live, the
+ *  on-page "join the closed test" steps while testing, nothing otherwise. */
+function playButton(lang, where) {
+  const stage = playStage();
+  if (!stage) return "";
+  const href = stage === "live" ? playLink(`site-${where}-${lang}`) : "#android";
   return `
-      <a href="${playLink(`site-${where}-${lang}`)}" class="btn-primary btn-play">
+      <a href="${href}" class="btn-primary btn-play">
         ${PLAY_LOGO}
-        <span>${esc(t(lang, label))}</span>
+        <span>${esc(t(lang, stage === "live" ? "playCta" : "playTestCta"))}</span>
       </a>`;
+}
+
+/** Closed testing: the two steps (join the group, then opt in on Play). */
+function androidTestSection(lang) {
+  if (playStage() !== "test") return "";
+  const gap = joinsWithoutSpace(LANGS[lang].script) ? "" : " ";
+  return `
+<!-- ========== ANDROID — CLOSED TEST ========== -->
+<section class="android-test" id="android">
+  <div class="at-card">
+    <h2 class="sec-title"><span>${esc(t(lang, "and-h1"))}</span>${gap}<em>${esc(t(lang, "and-h2"))}</em></h2>
+    <p class="at-lede">${esc(t(lang, "and-p"))}</p>
+    <div class="at-steps">
+      <a href="${SITE.play.test.group}" class="btn-ghost at-step" rel="noopener">${esc(t(lang, "and-s1"))} <span class="at-arrow" aria-hidden="true">→</span></a>
+      <a href="${SITE.play.test.optIn}" class="btn-primary at-step" rel="noopener">
+        ${PLAY_LOGO}
+        <span>${esc(t(lang, "and-s2"))}</span>
+      </a>
+    </div>
+    <p class="at-note">${esc(t(lang, "and-note"))}</p>
+  </div>
+</section>
+`;
 }
 
 /** Everything script.js needs for the live clock, in the page's language. */
@@ -885,6 +915,7 @@ ${faqList(lang)}
   </div>
 </section>
 
+${androidTestSection(lang)}
 <!-- ========== FINAL CTA ========== -->
 <section class="final" id="download">
   <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="${esc(SITE.appName)}" width="88" height="88" loading="lazy" decoding="async"></div>
@@ -1342,7 +1373,8 @@ Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac${SITE.play.live ? " — and Android" : ""}, built by ${SITE.author}. Current release: ${SITE.appVersion}; requires
 ${minOSText()}. App Store rating ${SITE.rating.value} from
 ${SITE.rating.count} ratings. Download: ${storeLink('llms-txt')}${SITE.play.live ? `
-Android: ${playLink('llms-txt')}` : ""}
+Android: ${playLink('llms-txt')}` : playStage() === "test" ? `
+Android (closed testing): join ${SITE.play.test.group}, then install from ${SITE.play.test.optIn}` : ""}
 
 ## What makes it different
 

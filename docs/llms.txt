@@ -6,6 +6,7 @@ Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac, built by Hakan Çelik. Current release: 2.0.0; requires
 iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
 488 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
+Android (closed testing): join https://groups.google.com/g/vakit-android-test, then install from https://play.google.com/apps/testing/com.hakancelikdev.vakit
 
 ## What makes it different
 
@@ -106,6 +107,10 @@ The app's interface is in 25 languages: Turkish, English, Arabic, German, French
 
 iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen, and your records stay identical across devices through iCloud. Since 1.7.0 Vakit runs on Mac too: next prayer and countdown in the menu bar, keyboard shortcuts, desktop widgets, and tabs in the sidebar from macOS 15. Prayer times, Quran, hadith, dhikr and worship records sync with your iPhone over the same iCloud account. The Qibla tab shows the bearing and distance to the Ka'bah as text, since Macs have no compass hardware.
 
+### Is Vakit on Android?
+
+Yes — it is in closed testing on Google Play (Android 8.0 and later). First join groups.google.com/g/vakit-android-test, then install from play.google.com/apps/testing/com.hakancelikdev.vakit. Free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.
+
 ### Can I choose the adhan sound?
 
 Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer. The recordings ship with the app, so playing them needs no connection.
@@ -188,4 +193,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-10-08
+Last updated: 2026-10-12

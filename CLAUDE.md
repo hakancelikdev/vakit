@@ -68,6 +68,8 @@ The Android app is not public yet, so the site says nothing about it (the no-fut
 
 When `true`: a Google Play button (`playCta`, Google's own badge wording per language) next to the App Store one in the hero, the closing section and the dock; the "Is Vakit on Android?" FAQ (`faq-android-q/a`, after "Which devices") in the page **and** `FAQPage`; `Android` + both store URLs in the app's JSON-LD; Android in `llms.txt`. `script.js` (`orderStores`) puts Play first for Android visitors and leaves one store in the dock (Play on Android, App Store elsewhere). Play links carry the campaign in `referrer=utm_source=vakit-site&utm_campaign=…` (`playLink()`), which Play Console → Acquisition reads; JSON-LD stays campaign-free. `npm test` checks both states.
 
+**Closed testing (live since 2026-10-12, owner's decision):** while `live` is `false` and `SITE.play.test` holds the group + opt-in URLs, the same three buttons read "Android'de dene" (`playTestCta`) and jump to an on-page `#android` section with the two steps (join `groups.google.com/g/vakit-android-test`, then `play.google.com/apps/testing/…`; `and-*` keys), the FAQ uses `faq-android-a-test`, `llms.txt` gets one line, and the JSON-LD stays Apple-only (the app isn't public). Ending the test: `live: true` replaces all of it; deleting `test` hides Android again.
+
 **Launch day:** confirm `curl -s -o /dev/null -w "%{http_code}" "https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit"` is 200 → `live: true` → build → commit. Not covered by the switch, to do by hand the same day: `docs/404.html` (static, add a Play link), the `META` descriptions and `fin-p` that list "iPhone, iPad, Apple Watch and Mac" (25 languages), and `apps.json`.
 
 ### The Android privacy policy
