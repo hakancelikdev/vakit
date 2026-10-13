@@ -34,13 +34,13 @@ const SITE = {
   // From the Turkish storefront (iTunes lookup API), where effectively all
   // ratings are. Re-check on each release:
   //   curl -s "https://itunes.apple.com/lookup?id=6748356813&country=tr"
-  rating: { value: "4.8", count: "488" },
+  rating: { value: "4.8", count: "505" },
   // Mirrors the shipping iOS release. Bump together with the app.
   appVersion: "2.0.0",
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-10-12",
+  updated: "2026-10-13",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
