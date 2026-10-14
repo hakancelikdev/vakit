@@ -145,6 +145,15 @@ function deviceCopy(lang, ref) {
   return { n: s.t.replace(/[.。۔]$/u, ""), d: s.d };
 }
 
+/**
+ * A hand-maintained file in docs/ with a content hash, so a changed styles.css or
+ * script.js is fetched again instead of the copy Cloudflare and the browser keep
+ * for hours (max-age=14400) — new HTML with old CSS dropped the Android frame.
+ */
+const assetHashes = {};
+const asset = (name) =>
+  `/${name}?v=${(assetHashes[name] ??= require("crypto").createHash("sha1").update(fs.readFileSync(path.join(DOCS, name))).digest("hex").slice(0, 10))}`;
+
 /** Link-preview card, rendered per language by tools/make-og.js. */
 const ogUrl = (lang) => `/assets/og/${lang}.jpg`;
 
@@ -592,7 +601,7 @@ function manifestoPage(lang) {
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="${asset("styles.css")}">
     <script type="application/ld+json">
 ${jsonLd(schema)}
     </script>
@@ -644,7 +653,7 @@ ${items}
 
 ${siteFooter(lang)}
 
-<script src="/script.js"></script>
+<script src="${asset("script.js")}"></script>
 </body>
 </html>
 `;
@@ -721,7 +730,7 @@ ${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:altern
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="${asset("styles.css")}">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -734,7 +743,7 @@ ${jsonLd(siteSchema(lang))}
 ${jsonLd(faqSchema(lang))}
     </script>
 
-    <script src="/language-detection.js"></script>
+    <script src="${asset("language-detection.js")}"></script>
 </head>
 <body>
 
@@ -953,7 +962,7 @@ ${siteFooter(lang)}
 </aside>
 
 <script id="vakit-data" type="application/json">${jsonLd(clockData(lang))}</script>
-<script src="/script.js"></script>
+<script src="${asset("script.js")}"></script>
 </body>
 </html>
 `;
@@ -1041,7 +1050,7 @@ function legalPage(key, lang) {
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="${asset("styles.css")}">
     <style>
 ${style}
     </style>
@@ -1181,7 +1190,7 @@ function pressPage(lang) {
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="${asset("styles.css")}">
     <style>
 ${LEGAL_STYLE}
 ${PRESS_STYLE}

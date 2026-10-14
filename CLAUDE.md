@@ -40,6 +40,8 @@ Page copy lives in **`content.js`** (Turkish + English, page metadata, language 
 
 **Never hand-edit those files** — the next build overwrites them, and CI fails the deploy if they don't match their source.
 
+Generated pages load `styles.css`, `script.js` and `language-detection.js` with a content hash (`?v=…`, `asset()` in `build.js`): Cloudflare serves them with `max-age=14400`, and without the hash new HTML ran on the old CSS for hours. Editing one of them therefore changes every page — rebuild and commit.
+
 Hand-maintained files in `docs/`:
 
 | File | Purpose |
