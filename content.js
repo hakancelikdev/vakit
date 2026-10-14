@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-10-13",
+  updated: "2026-10-14",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -159,7 +159,11 @@ const CITY_SLOTS = 12;
 // captions reuse copy that exists in every language — `feature` names a
 // FEATURES entry by its English name, `showcase` a SHOWCASE entry by its image.
 // The Watch, like the Mac, was fully captured in Turkish and English only.
-// Must match IPAD / MAC / WATCH in tools/import-media.sh.
+// Android (the Play set's raw captures, <shots>/android/) is shown only while
+// SITE.play has a stage (test or live) and carries titles only: the FEATURES
+// and SHOWCASE descriptions name iPhone things (Dynamic Island, iCloud, two
+// mushaf scripts) that the Android app doesn't have.
+// Must match IPAD / MAC / WATCH / ANDROID in tools/import-media.sh.
 const DEVICES = {
   ipad: {
     caption: { feature: "iPad" },
@@ -188,6 +192,19 @@ const DEVICES = {
       { img: "calendar", label: { feature: "Hijri Calendar" } },
       { img: "zikirmatik", label: { feature: "Dhikr Counter" } },
       { img: "prayer-guide", label: { feature: "Purification Guide" } },
+    ],
+  },
+  android: {
+    shots: [
+      { img: "prayer-times", label: { feature: "Prayer Times" } },
+      { img: "widget", label: { feature: "Widgets" } },
+      { img: "discover", label: { showcase: "discover" } },
+      { img: "qibla", label: { feature: "Qibla Compass" } },
+      { img: "quran", label: { feature: "Holy Quran" } },
+      { img: "zikirmatik", label: { feature: "Dhikr Counter" } },
+      { img: "profile", label: { feature: "Worship Tracking" } },
+      { img: "qada", label: { feature: "Qada Tracking" } },
+      { img: "prayer-guide", label: { feature: "Prayer Guide" } },
     ],
   },
 };

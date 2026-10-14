@@ -203,19 +203,21 @@ for (const lang of LANGS) {
     if (!STAGE) {
       assert.strictEqual(plays.length, 0, "Play linki var");
       assert.ok(!page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si var");
+      assert.ok(!page.includes("dv-android"), "Android galerisi var");
       return;
     }
     assert.ok(page.includes(C.COPY[lang]["faq-android-q"]), "Android SSS'si yok");
+    assert.ok(page.includes('class="dv-row dv-android"'), "Android galerisi yok");
     if (STAGE === "test") {
       assert.ok(page.includes('id="android"'), "#android bölümü yok");
       assert.ok(page.includes(`href="${C.SITE.play.test.group}"`), "grup linki yok");
       assert.deepStrictEqual([...new Set(plays)], [C.SITE.play.test.optIn], "yalnız opt-in linki olmalı");
-      assert.strictEqual((page.match(/href="#android" class="btn-primary btn-play"/g) || []).length, 3, "hero/final/dock");
+      assert.strictEqual((page.match(/href="#android" class="btn-primary btn-play"/g) || []).length, 4, "hero/final/dock/cihazlar");
       assert.ok(page.includes(C.COPY[lang]["faq-android-a-test"]), "test SSS cevabı yok");
       assert.ok(!/Android/.test(app.operatingSystem), "kapalı testte JSON-LD Android demez");
       return;
     }
-    for (const where of ["hero", "final", "dock"]) {
+    for (const where of ["hero", "final", "dock", "devices"]) {
       const u = plays.find((x) => x.includes(`utm_campaign%3Dsite-${where}-${lang}`));
       assert.ok(u, `${where} Play linki yok`);
       assert.ok(new URL(u).searchParams.get("referrer").startsWith("utm_source=vakit-site"), `${where} referrer`);

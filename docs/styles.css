@@ -361,7 +361,7 @@ ul { list-style: none }
 .g-btn:disabled { opacity: .35; cursor: default }
 [dir="rtl"] .g-btn svg { transform: scaleX(-1) }
 
-/* ---------- iPad · Mac · Apple Watch: one gallery per device ---------- */
+/* ---------- iPad · Mac · Apple Watch · Android: one gallery per device ---------- */
 .devices { padding-bottom: var(--section) }
 .dv-row { margin-top: 48px }
 .dv-row + .dv-row { margin-top: 72px }
@@ -397,6 +397,19 @@ ul { list-style: none }
 }
 .watch .dv-screen { aspect-ratio: 396 / 484; border-radius: 22% / 18%; background: #000 }
 .watch .dv-screen img { object-fit: cover }
+/* Android: a thin, even bezel with a punch-hole camera over the status bar. */
+.dv-android .g-item { width: 240px }
+.dv-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px }
+.dv-frame.android {
+  padding: 7px; border-radius: 36px; background: #1d1d1f;
+  box-shadow: inset 0 0 0 1.5px #3a3a3c, 0 22px 44px -26px rgb(0 0 0 / .35);
+}
+.android .dv-screen { aspect-ratio: 780 / 1734; border-radius: 30px; background: #000 }
+.android .dv-screen img { object-fit: cover }
+.dv-frame.android::after {
+  content: ""; position: absolute; top: calc(7px + 1.6%); left: 50%; translate: -50% 0;
+  width: 4.5%; aspect-ratio: 1; border-radius: 50%; background: #0b0b0c;
+}
 
 /* ---------- emanet / trust: the one dark section ---------- */
 .trust {
@@ -664,6 +677,7 @@ html.script-urdu { --font: "Noto Nastaliq Urdu", -apple-system, "Segoe UI", syst
   .dv-ipad .g-item { width: 70vw; max-width: 300px }
   .dv-mac .g-item { width: 84vw; max-width: 460px }
   .dv-watch .g-item { width: 42vw; max-width: 180px }
+  .dv-android .g-item { width: 60vw; max-width: 230px }
   .dv-mac .g-track { padding-top: 44px }
 
   .trust-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 40px }

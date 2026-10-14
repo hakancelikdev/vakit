@@ -94,6 +94,20 @@ for pair in tr:tr en:en-US; do
   echo "screenshots/$lang/watch ← $locale"
 done
 
+# Android: the Google Play set's raw captures (toolkit tools/capture-android.sh),
+# for every language above. Shown only while SITE.play has a stage.
+ANDROID="prayer-times widget discover qibla quran zikirmatik profile qada prayer-guide"
+for pair in $PAIRS; do
+  lang="${pair%%:*}"; locale="${pair##*:}"
+  src="$RAW/$locale/_android"; dst="$OUT/screenshots/$lang/android"
+  mkdir -p "$dst"
+  for shot in $ANDROID; do
+    [ -f "$src/$shot.png" ] || { echo "missing $src/$shot.png" >&2; exit 1; }
+    cwebp -quiet -q "$QUALITY" -resize "$WIDTH" 0 "$src/$shot.png" -o "$dst/$shot.webp"
+  done
+  echo "screenshots/$lang/android ← $locale"
+done
+
 # More iPhone screens (SHOWCASE_MORE in content.js). Every language has the
 # first five; the rest exist only where the toolkit captured them (tr, en).
 EXTRAS="prayer-nafile mushaf esma-ul-husna tesbihat accounting-year hadith search nearby-mosques lock-screen-live-activity imsakiye"

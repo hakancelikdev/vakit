@@ -123,7 +123,7 @@ const shotUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/${img}.
 
 /** iPad captures follow the iPhone ones; the Mac and the Watch were captured in Turkish and English only. */
 const deviceUrl = (lang, device, img) =>
-  `/assets/screenshots/${device === "ipad" ? LANGS[lang].shots : lang === "tr" ? "tr" : "en"}/${device}/${img}.webp`;
+  `/assets/screenshots/${device === "ipad" || device === "android" ? LANGS[lang].shots : lang === "tr" ? "tr" : "en"}/${device}/${img}.webp`;
 
 const moreUrl = (lang, img) => `/assets/screenshots/${LANGS[lang].shots}/more/${img}.webp`;
 
@@ -340,8 +340,14 @@ function galleryControls() {
  */
 function deviceRow(lang, device) {
   const D = DEVICES[device];
-  const cap = deviceCopy(lang, D.caption);
-  const size = { ipad: 'width="900" height="1200"', mac: 'width="1200" height="914"', watch: 'width="396" height="484"' }[device];
+  // Android: no feature entry to borrow a caption from (FEATURES describes the
+  // iOS app). While testing, the line under it is the test's own and the button
+  // leads to the two steps; once live, the button is the Play badge.
+  if (device === "android" && !playStage()) return "";
+  const cap = device === "android"
+    ? { n: "Android", d: playStage() === "test" ? t(lang, "and-p") : "" }
+    : deviceCopy(lang, D.caption);
+  const size = { ipad: 'width="900" height="1200"', mac: 'width="1200" height="914"', watch: 'width="396" height="484"', android: 'width="780" height="1734"' }[device];
   const items = D.shots
     .map((s, i) => {
       const label = deviceCopy(lang, s.label);
@@ -351,15 +357,17 @@ function deviceRow(lang, device) {
         : "";
       return `        <li class="g-item">
           <div class="dv-frame ${device}"><div class="dv-screen"><img src="${deviceUrl(lang, device, s.img)}" alt="${esc(`${cap.n} · ${label.n}`)}" ${size} loading="lazy" decoding="async"></div>${menuBar}</div>
-          <h4 class="g-title">${esc(label.n)}</h4>
-          <p class="g-desc">${esc(label.d)}</p>
+          <h4 class="g-title">${esc(label.n)}</h4>${device === "android" ? "" : `
+          <p class="g-desc">${esc(label.d)}</p>`}
         </li>`;
     })
     .join("\n");
   return `<div class="dv-row dv-${device}">
   <div class="sec-head">
-    <h3 class="dv-name">${esc(cap.n)}</h3>
-    <p class="dv-desc">${esc(cap.d)}</p>
+    <h3 class="dv-name">${esc(cap.n)}</h3>${cap.d ? `
+    <p class="dv-desc">${esc(cap.d)}</p>` : ""}${device === "android" ? `
+    <div class="dv-actions">${playButton(lang, "devices")}
+    </div>` : ""}
   </div>
   <div class="gallery" tabindex="0" role="region" aria-label="${esc(cap.n)}">
     <ul class="g-track">
@@ -837,14 +845,15 @@ ${galleryItems(lang)}
 ${galleryControls()}
 </section>
 
-<!-- ========== IPAD · MAC · APPLE WATCH: one gallery per device ========== -->
+<!-- ========== IPAD · MAC · APPLE WATCH (· ANDROID): one gallery per device ========== -->
 <section class="devices" id="devices">
   <div class="sec-head">
-    <p class="sec-eye">iPad · Mac · Apple Watch</p>
+    <p class="sec-eye">iPad · Mac · Apple Watch${playStage() ? " · Android" : ""}</p>
   </div>
 ${deviceRow(lang, "ipad")}
 ${deviceRow(lang, "mac")}
 ${deviceRow(lang, "watch")}
+${deviceRow(lang, "android")}
 </section>
 
 <!-- ========== TRUST / EMANET ========== -->
