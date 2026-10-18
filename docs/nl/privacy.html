@@ -101,7 +101,7 @@
 <main class="legal-page">
   <h1>Privacy<em>beleid</em></h1>
   <p class="legal-notice">Deze pagina is een vertaling die voor het gemak wordt aangeboden; als deze afwijkt van de Engelse versie, geldt de Engelse versie. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Laatst bijgewerkt: 10 september 2026 — Versie 1.7.4
+  <p class="legal-desc">Laatst bijgewerkt: 18 oktober 2026 — Versie 2.1.0
 
 Vakit respecteert je privacy. Er is geen account nodig en we verzamelen geen persoonlijk identificerende gegevens (naam, e-mail, telefoonnummer, foto's, contacten). Gebedstijden, Qibla-richting en herinneringen worden volledig op je apparaat berekend. Je chatm-voortgang, bladwijzers, doelen en favoriete moskeeën blijven op je apparaat en synchroniseren alleen binnen je eigen Apple iCloud-account — ze worden nooit naar onze servers gestuurd. Je dhikr-lijst is de uitzondering: die wordt samen met gebruiksstatistieken naar onze servers gestuurd, zodat we de app kunnen verbeteren (zie sectie 1). Alles wat naar onze servers gaat, is gekoppeld aan een blijvende gebruikerscode zonder identificerende gegevens.</p>
   <div class="legal-card"><h2>1. Gegevens die we verzamelen</h2><p>Gegevens die we NIET verzamelen:
@@ -125,7 +125,10 @@ Gegevens die naar onze servers worden gestuurd — gekoppeld aan een blijvende g
 • Gebruiksstatistieken van functies (schermweergaven, gebruik van functies). Deze laten zien dat een onderdeel is gebruikt — bijvoorbeeld dat een uitzonderingsdag is gemarkeerd of dat een in te halen gebed is genoteerd. Het register zelf (de lijst van je gegevens) wordt niet verstuurd. Wat wel wordt verstuurd, is het feit dat de handeling heeft plaatsgevonden plus enkele getallen — bijvoorbeeld het gebed dat je hebt aangevinkt, je dagelijkse aantallen aanbiddingen, je resterende qada, het nummer van een vers of hadith dat je hebt bewaard; zoals elke statistiek draagt dit een tijdstempel.
 • De tekst van zoekopdrachten die je in de app uitvoert (zoeken in Koran, hadith, dhikr, namen van Allah, moskeeën en instellingen) – verzameld zodat we kunnen zien met welke woorden je niet vindt wat je zoekt en de zoekfunctie kunnen verbeteren; er worden hoogstens 80 tekens bewaard.
 • Je dhikr-lijst – naam, type, categorie en tellers van de dhikr; inclusief de Arabische tekst, beschrijving en bron die je invoert bij dhikr die je zelf toevoegt. Deze worden verzameld om te zien welke dhikr hoe vaak worden gebruikt, zodat het dhikr-onderdeel kan worden verbeterd.
+• De namen die je aan je Koran-afspeellijsten geeft – om te zien hoe afspeellijsten worden gebruikt; er worden hoogstens 80 tekens bewaard.
+• Donatiegegevens – het bedrag en de valuta, of het eenmalig of maandelijks is, gegevens over het starten, wijzigen en verlengen van maandelijkse steun, en het transactienummer van Apple. Kaartgegevens, IBAN of andere betaalgegevens horen hier NIET bij.
 • Crashrapporten (via Firebase Crashlytics, bevatten geen persoonsgegevens)
+• Apple MetricKit-diagnostiek – rapporten over crashes, vastlopers en overmatig batterij-/CPU-gebruik (codeadressen, apparaat- en versiegegevens; geen persoonsgegevens). Ze worden naar de Vakit-server gestuurd zodat fouten kunnen worden gevonden en verholpen.
 
 Omdat deze gebruikerscode via de iCloud-sleutelhanger synchroniseert, tellen apparaten met dezelfde Apple ID als één gebruiker en blijft de code behouden als je de app verwijdert en opnieuw installeert. De code bevat geen identiteitsgegevens; je gegevens worden nooit verkocht of voor advertenties gebruikt.</p></div>
   <div class="legal-card"><h2>2. Hoe we je gegevens gebruiken</h2><p>• Berekening van gebedstijden – De locatie wordt lokaal op je apparaat verwerkt en offline berekend met de Adhan-bibliotheek.
@@ -142,7 +145,7 @@ Omdat deze gebruikerscode via de iCloud-sleutelhanger synchroniseert, tellen app
 • Zijn versleuteld op de infrastructuur van Apple; wij, medewerkers van Apple en derden hebben er geen toegang toe.
 • Synchroniseren automatisch tussen iPhone, iPad, Mac en Apple Watch.
 • Blijven alleen op je apparaat als je iCloud uitschakelt.
-• Worden van al je apparaten verwijderd wanneer je «Account verwijderen» gebruikt of de gegevens van Vakit uit iCloud verwijdert.
+• Worden van al je apparaten verwijderd wanneer je Instellingen → «Account verwijderen» gebruikt of de gegevens van Vakit uit iCloud verwijdert.
 
 Meer informatie: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Gegevens op Apple Watch en Mac</h2><p>Vakit levert een begeleidende app voor watchOS 9+. Op de Watch:
@@ -156,41 +159,42 @@ Op de Mac (macOS 13+):
 • Macs hebben geen kompashardware, dus er is geen live Qibla-kompas; de richting en afstand worden op basis van je locatie berekend en als tekst getoond.
 • De locatie komt op de Mac van locatievoorzieningen op basis van wifi in plaats van gps, en wordt evenmin naar onze servers gestuurd.
 • Meldingstoestemming en meldingsinstellingen gelden per apparaat; een wijziging op de Mac heeft geen invloed op je iPhone.</p></div>
-  <div class="legal-card"><h2>5. Diensten van derden</h2><p>Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen ervan is aan je persoonlijke identiteit gekoppeld:
+  <div class="legal-card"><h2>5. Diensten van derden</h2><p>Vakit gebruikt de volgende diensten voor beperkte doeleinden. Geen ervan is gekoppeld aan je persoonlijke identiteit:
 
 • Apple iCloud / CloudKit – Synchronisatie van gebruikersgegevens (in je privé-iCloudruimte).
 • Apple MapKit – Moskeeën in de buurt, kaart en routebeschrijving (de locatie wordt naar Apple gestuurd).
-• Firebase Crashlytics (Google) – Crashrapporten zonder identiteitsgegevens (stack trace, apparaatmodel, iOS-/macOS-versie).
-• Firebase Remote Config (Google) – Functievlaggen en geleidelijke uitrol (leest geen gegevens van het apparaat).
-• Apple StoreKit 2 – Optionele donaties (in-app-aankoop). Betaalgegevens worden door Apple verwerkt; Vakit ziet nooit kaartgegevens.
-• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen worden per onderwerp naar iedereen tegelijk verstuurd; er is geen targeting per persoon.
+• Firebase Crashlytics (Google) – Crashrapporten zonder identiteitsgegevens (stacktrace, apparaatmodel, iOS-/macOS-versie).
+• Firebase Remote Config (Google) – Functieschakelaars en geleidelijke uitrol (leest geen gegevens van het apparaat).
+• Apple StoreKit 2 – Optionele donaties (eenmalig en maandelijks). Betaalgegevens worden door Apple verwerkt; Vakit ziet nooit kaartgegevens.
+• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Aankondigingen van gezegende dagen en nieuwe versies. Aankondigingen worden per onderwerp verstuurd; er is geen gerichte verzending per persoon.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Tekst en audio van de vrijdagpreek.
-• Vakit-server (Duitsland, Neurenberg) – Gebruiksstatistieken en je dhikr-lijst, gekoppeld aan een gebruikerscode zonder identificerende gegevens. Je chatm-, bladwijzer-, doel- en leesgegevens worden daar nooit naartoe gestuurd.
+• Cloudflare – Downloadbare inhoud (Korantekst en vertalingen, tafsir, hadith, moeshaf-pagina's, audio van recitaties en vertalingen, meldingsgeluiden) komt uit het opslag- en distributienetwerk van Cloudflare (R2/CDN), en gegevens die naar de Vakit-server gaan, lopen via de versleutelde verbinding van Cloudflare (Tunnel). Bij deze verzoeken gaat je IP-adres via de infrastructuur van Cloudflare; ze bevatten geen identificerende gegevens.
+• Vakit-server (Duitsland, Neurenberg) – Gebruiksstatistieken, je dhikr-lijst, de tekst van je zoekopdrachten, de namen van je afspeellijsten, donatiegegevens en MetricKit-diagnostiek, allemaal gekoppeld aan een gebruikerscode zonder identificerende gegevens. Je chatm-, bladwijzer-, doel- en leesgegevens worden daar nooit naartoe gestuurd.
 
-Let op: Firebase Analytics wordt NIET gebruikt; de reclame-identificatie (IDFA) wordt niet verzameld.
+Let op: Firebase Analytics wordt NIET gebruikt; de advertentie-ID (IDFA) wordt niet verzameld.
 
 Privacybeleid van Google: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Advertenties</h2><p>Vakit toont geen advertenties. De enige inkomstenbron van de app zijn vrijwillige donaties van gebruikers.</p></div>
-  <div class="legal-card"><h2>7. Donaties (in-app-aankoop)</h2><p>Vakit is gratis. Om de ontwikkelaar te steunen kun je op het scherm «Houd Vakit in leven» optionele donaties doen in niveaus van ₺10 tot ₺10.000. Deze transacties:
+  <div class="legal-card"><h2>7. Donaties (in-app-aankoop)</h2><p>Vakit is gratis. Om de ontwikkelaar te steunen kun je op het scherm «Houd Vakit in leven» optionele eenmalige of maandelijkse donaties doen in niveaus van ₺10 tot ₺10.000. Deze transacties:
 • Worden verwerkt door Apple StoreKit 2; betaalgegevens (kaart, IBAN, Apple Pay) gaan alleen naar Apple.
-• Vakit ziet of bewaart nooit je betaalmethode of financiële gegevens.
-• Terugbetaling kan alleen via Apple worden aangevraagd (reportaproblem.apple.com).
-• Maandelijkse steun is een automatisch verlengend abonnement; je beheert en zegt het op wanneer je wilt in je App Store-accountinstellingen (het wordt verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt).</p></div>
-  <div class="legal-card"><h2>8. Bewaartermijnen</h2><p>• Lokale gegevens op het apparaat – Bewaard tot je de app verwijdert.
-• iCloud-gegevens – Bewaard tot je de gegevens van Vakit uit iCloud verwijdert of je Apple ID uitschakelt.
-• Gebruiksstatistieken op de server – 180 dagen (ongeveer 6 maanden) bewaard en daarna automatisch verwijderd. Voor de tekst van zoekopdrachten geldt dezelfde termijn.
+• Vakit ziet of bewaart nooit je kaart, IBAN of betaalmethode. Het bedrag, de valuta en het type donatie (eenmalig of maandelijks) en het transactienummer van Apple worden op de Vakit-server vastgelegd, gekoppeld aan je gebruikerscode (zie sectie 1).
+• Maandelijkse steun is een automatisch verlengend abonnement; je beheert en zegt het op wanneer je wilt in je App Store-accountinstellingen (het wordt verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt).
+• Terugbetaling kan alleen via Apple worden aangevraagd (reportaproblem.apple.com).</p></div>
+  <div class="legal-card"><h2>8. Bewaartermijnen</h2><p>• Lokale apparaatgegevens – Bewaard totdat je de app verwijdert.
+• iCloud-gegevens – Bewaard totdat je de gegevens van Vakit uit iCloud verwijdert of je Apple ID uitschakelt.
+• Gegevens op de server (gebruiksstatistieken, zoekteksten, dhikr-lijst, namen van afspeellijsten, donatiegegevens, MetricKit-diagnostiek) – Worden niet automatisch na een vaste termijn verwijderd; ze worden bewaard totdat je vraagt ze te verwijderen. Instellingen → Account verwijderen in de app wist alleen de gegevens op je apparaat en in iCloud, niet de gegevens op de server. Wil je je gegevens op de server laten verwijderen, schrijf dan naar hakancelikdev@gmail.com; je verzoek wordt uiterlijk binnen 30 dagen afgehandeld.
 • Crashrapporten (Crashlytics) – 90 dagen bewaard en daarna verwijderd.
-• Serverlogboeken – Binnen 30 dagen geroteerd.</p></div>
-  <div class="legal-card"><h2>9. Je rechten (KVKK / AVG)</h2><p>Onder de Turkse KVKK en de Europese AVG (GDPR) heb je het recht om:
-• Te weten welke gegevens over jou worden verzameld
-• Bezwaar te maken tegen gegevensverwerking (trek de toegang tot locatie, meldingen of beweging in via Instellingen → Vakit op iOS, of Systeeminstellingen → Vakit op de Mac)
-• Verwijdering van je gegevens te vragen: Instellingen → Account verwijderen wist alles op je apparaat en in iCloud. Wil je dat de gebruiksstatistieken op onze server worden verwijderd, schrijf dan naar hakancelikdev@gmail.com; je verzoek wordt uiterlijk binnen 30 dagen afgehandeld.
+• Logbestanden van de server – Bewaard binnen een maximale omvang; zodra die is bereikt, worden de oudste automatisch verwijderd.</p></div>
+  <div class="legal-card"><h2>9. Je rechten (KVKK / AVG)</h2><p>Volgens de Turkse KVKK en de AVG van de EU heb je het recht om:
+• Te weten welke gegevens over je worden verzameld
+• Bezwaar te maken tegen gegevensverwerking (trek de toestemming voor locatie, meldingen of beweging in via Instellingen → Vakit op iOS, of Systeeminstellingen → Vakit op de Mac)
+• Verwijdering van je gegevens te vragen: Instellingen → Account verwijderen wist alles op je apparaat en in iCloud; de gegevens op onze server worden daarmee niet verwijderd. Wil je je gegevens op onze server (inclusief gebruiksstatistieken) laten verwijderen, schrijf dan naar hakancelikdev@gmail.com; je verzoek wordt uiterlijk binnen 30 dagen afgehandeld.
 • Je gegevens over te dragen (dataportabiliteit)
-• Een klacht in te dienen bij de KVKK-toezichthouder
+• Een klacht in te dienen bij de KVKK-autoriteit
 
-Dien verzoeken in via hakancelikdev@gmail.com; we antwoorden uiterlijk binnen 30 dagen.</p></div>
+Stuur verzoeken naar hakancelikdev@gmail.com; we reageren uiterlijk binnen 30 dagen.</p></div>
   <div class="legal-card"><h2>10. Privacy van kinderen</h2><p>Vakit wordt in de App Store aangeboden met leeftijdsclassificatie 4+, maar we verzamelen niet bewust persoonsgegevens van gebruikers jonger dan 13 jaar. Denk je dat een kind jonger dan 13 gegevens heeft verstrekt, schrijf dan naar hakancelikdev@gmail.com; we verwijderen de betreffende gegevens onmiddellijk.</p></div>
-  <div class="legal-card"><h2>11. Beveiliging</h2><p>Alle lokale gegevens blijven op je apparaat, beschermd door de sandbox van iOS/macOS en apparaatversleuteling. iCloud-gegevens zijn versleuteld op de infrastructuur van Apple. Gegevens die naar onze server gaan, worden via HTTPS/TLS verzonden en in een versleutelde database opgeslagen; ze bevatten geen identiteitsgegevens. Vakit detecteert daarnaast jailbreak, debugger en code-injectie voor extra bescherming bij gevoelige handelingen.</p></div>
+  <div class="legal-card"><h2>11. Beveiliging</h2><p>Alle lokale gegevens blijven op je apparaat, beschermd door de sandbox van iOS/macOS en de versleuteling van het apparaat. iCloud-gegevens worden versleuteld op de infrastructuur van Apple. Gegevens die naar onze server gaan, worden tijdens het verzenden versleuteld via HTTPS/TLS en opgeslagen op een server die niet rechtstreeks vanaf internet bereikbaar is (alleen via de versleutelde verbinding van Cloudflare); ze bevatten geen identiteitsgegevens. Vakit detecteert daarnaast jailbreak, debuggers en code-injectie voor extra bescherming bij gevoelige handelingen.</p></div>
   <div class="legal-card"><h2>12. Wijzigingen in dit beleid</h2><p>Dit beleid kan worden bijgewerkt naarmate de app zich ontwikkelt. Bij wezenlijke wijzigingen wordt de datum «Laatst bijgewerkt» op deze pagina vernieuwd en wordt in de app een melding getoond. We raden je aan dit beleid regelmatig door te lezen.</p></div>
   <div class="legal-card"><h2>13. Contact</h2><p>Voor vragen, verzoeken of feedback over privacy: hakancelikdev@gmail.com
 

@@ -1436,7 +1436,7 @@ ${langs}
 
 - [Privacy policy](${SITE.origin}${localUrl("en", "privacy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "privacy.html")}))
 - [Terms of use](${SITE.origin}${localUrl("en", "terms.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "terms.html")}))
-- [Source](${SITE.repoUrl})
+- [Website source](${SITE.repoUrl})
 
 Last updated: ${BUILD_DATE}
 `;

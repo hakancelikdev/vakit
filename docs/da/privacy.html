@@ -101,7 +101,7 @@
 <main class="legal-page">
   <h1>Privatlivs<em>politik</em></h1>
   <p class="legal-notice">Denne side er en oversættelse, som stilles til rådighed for nemheds skyld; hvis den afviger fra den engelske version, gælder den engelske version. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Sidst opdateret: 10. september 2026 — Version 1.7.4
+  <p class="legal-desc">Sidst opdateret: 18. oktober 2026 — Version 2.1.0
 
 Vakit respekterer dit privatliv. Der kræves ingen konto, og vi indsamler ikke personligt identificerende oplysninger (navn, e-mail, telefonnummer, billeder, kontakter). Bedetider, Qibla-retning og påmindelser beregnes helt på din enhed. Din khatm-fremdrift, dine bogmærker, mål og favoritmoskeer bliver på din enhed og synkroniseres kun i din egen Apple iCloud-konto — de sendes aldrig til vores servere. Din dhikr-liste er undtagelsen: den sendes til vores servere sammen med brugsstatistik, så vi kan forbedre appen (se afsnit 1). Alt, hvad der sendes til vores servere, er knyttet til en varig brugerkode uden identificerende oplysninger.</p>
   <div class="legal-card"><h2>1. Data, vi indsamler</h2><p>Data, vi IKKE indsamler:
@@ -125,7 +125,10 @@ Data, der sendes til vores servere — knyttet til en varig brugerkode uden iden
 • Statistik over brugen af funktioner (skærmvisninger, brug af funktioner). Den viser, at en del blev brugt — for eksempel at en fritagelsesdag blev markeret, eller at en manglende bøn blev registreret. Selve registret (listen over dine registreringer) sendes ikke. Det, der sendes, er, at handlingen fandt sted, plus nogle tal — for eksempel den bøn, du markerede, dine daglige antal af tilbedelser, din resterende qada, nummeret på et vers eller en hadith, du har gemt; som al statistik har den et tidsstempel.
 • Teksten i de søgninger, du foretager i appen (søgning i Koran, hadith, dhikr, Allahs navne, moskeer og indstillinger) – indsamles, så vi kan se, hvilke ord der ikke finder det, du leder efter, og forbedre søgningen; der gemmes højst 80 tegn.
 • Din dhikr-liste – dhikr-navn, type, kategori og tællere; herunder den arabiske tekst, beskrivelse og kilde, du indtaster for dhikr, du selv tilføjer. Den indsamles for at se, hvilke dhikr der bruges og hvor ofte, så dhikr-delen kan forbedres.
+• De navne, du giver dine Koran-playlister – for at se, hvordan playlister bruges; der gemmes højst 80 tegn.
+• Donationsregistreringer – beløb og valuta, om donationen er engangs eller månedlig, registreringer af start, ændring og fornyelse af månedlig støtte samt Apples transaktionsnummer. Kortoplysninger, IBAN eller andre betalingsoplysninger er IKKE med.
 • Nedbrudsrapporter (via Firebase Crashlytics, indeholder ingen personoplysninger)
+• Apple MetricKit-diagnostik – rapporter om nedbrud, hængninger og overdrevent batteri-/CPU-forbrug (kodeadresser, oplysninger om enhed og version; ingen personoplysninger). De sendes til Vakits server, så fejl kan findes og rettes.
 
 Da denne brugerkode synkroniseres via iCloud-nøglering, tæller enheder med samme Apple ID som én bruger, og koden bevares, selv hvis du sletter og geninstallerer appen. Koden indeholder ingen identitetsoplysninger; dine data sælges aldrig og bruges ikke til reklamer.</p></div>
   <div class="legal-card"><h2>2. Sådan bruger vi dine data</h2><p>• Beregning af bedetider – Positionen behandles lokalt på din enhed og beregnes offline med Adhan-biblioteket.
@@ -142,7 +145,7 @@ Da denne brugerkode synkroniseres via iCloud-nøglering, tæller enheder med sam
 • Er krypteret på Apples infrastruktur; hverken vi, Apples medarbejdere eller tredjeparter kan tilgå dem.
 • Synkroniseres automatisk mellem iPhone, iPad, Mac og Apple Watch.
 • Bliver kun på din enhed, hvis du slår iCloud fra.
-• Fjernes fra alle dine enheder, når du bruger «Slet kontoen» eller fjerner Vakits data fra iCloud.
+• Fjernes fra alle dine enheder, når du bruger Indstillinger → «Slet kontoen» eller fjerner Vakits data fra iCloud.
 
 Flere oplysninger: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Data på Apple Watch og Mac</h2><p>Vakit har en ledsagende app til watchOS 9+. På uret:
@@ -162,35 +165,36 @@ På Mac (macOS 13+):
 • Apple MapKit – Moskeer i nærheden, kort og rutevejledning (positionen sendes til Apple).
 • Firebase Crashlytics (Google) – Nedbrudsrapporter uden identitetsdata (stack trace, enhedsmodel, iOS-/macOS-version).
 • Firebase Remote Config (Google) – Funktionsflag og gradvis udrulning (læser ingen data fra enheden).
-• Apple StoreKit 2 – Valgfrie donationer (køb i app). Betalingsoplysninger behandles af Apple; Vakit ser aldrig kortdata.
+• Apple StoreKit 2 – Valgfrie donationer (engangs og månedlige). Betalingsoplysninger behandles af Apple; Vakit ser aldrig kortdata.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Beskeder om velsignede dage og nye versioner. Beskederne sendes efter emne; der er ingen målretning mod enkeltpersoner.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Fredagsprædikenens tekst og lyd.
-• Vakits server (Tyskland, Nürnberg) – Brugsstatistik og din dhikr-liste, knyttet til en brugerkode uden identificerende oplysninger. Dine registreringer af khatm, bogmærker, mål og læsning sendes aldrig dertil.
+• Cloudflare – Indhold til download (Koranens tekst og oversættelser, tafsir, hadith, mushaf-sider, lyd med recitation og oversættelse, notifikationslyde) kommer fra Cloudflares lagrings- og leveringsnetværk (R2/CDN), og data, der sendes til Vakits server, går gennem Cloudflares krypterede forbindelse (Tunnel). Disse forespørgsler sender din IP-adresse gennem Cloudflares infrastruktur; de indeholder ingen identificerende oplysninger.
+• Vakits server (Tyskland, Nürnberg) – Brugsstatistik, din dhikr-liste, teksten i dine søgninger, navnene på dine playlister, donationsregistreringer og MetricKit-diagnostik, alt knyttet til en brugerkode uden identificerende oplysninger. Dine registreringer af khatm, bogmærker, mål og læsning sendes aldrig dertil.
 
 Bemærk: Firebase Analytics bruges IKKE; annonce-id'et (IDFA) indsamles ikke.
 
 Googles privatlivspolitik: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Reklamer</h2><p>Vakit viser ingen reklamer. Appens eneste indtægtskilde er frivillige donationer fra brugerne.</p></div>
-  <div class="legal-card"><h2>7. Donationer (køb i app)</h2><p>Vakit er gratis. For at støtte udvikleren kan du give valgfrie donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:
+  <div class="legal-card"><h2>7. Donationer (køb i app)</h2><p>Vakit er gratis. For at støtte udvikleren kan du give valgfrie engangs- eller månedlige donationer i trin fra ₺10 til ₺10.000 på skærmen «Hold Vakit i live». Disse transaktioner:
 • Behandles af Apple StoreKit 2; betalingsoplysninger (kort, IBAN, Apple Pay) sendes kun til Apple.
-• Vakit ser eller gemmer aldrig din betalingsmetode eller dine økonomiske oplysninger.
-• Refusion kan kun anmodes om via Apple (reportaproblem.apple.com).
-• Månedlig støtte er et abonnement, der fornys automatisk; det administreres og opsiges når som helst i dine App Store-kontoindstillinger (det fornys, medmindre det opsiges mindst 24 timer før perioden slutter).</p></div>
+• Vakit ser eller gemmer aldrig dit kort, dit IBAN eller din betalingsmetode. Donationens beløb, valuta, type (engangs eller månedlig) og Apples transaktionsnummer registreres på Vakits server, knyttet til din brugerkode (se afsnit 1).
+• Månedlig støtte er et abonnement, der fornys automatisk; det administreres og opsiges når som helst i dine App Store-kontoindstillinger (det fornys, medmindre det opsiges mindst 24 timer før perioden slutter).
+• Refusion kan kun anmodes om via Apple (reportaproblem.apple.com).</p></div>
   <div class="legal-card"><h2>8. Opbevaring af data</h2><p>• Lokale data på enheden – Gemmes, indtil du sletter appen.
 • Data i iCloud – Gemmes, indtil du fjerner Vakits område fra iCloud eller deaktiverer dit Apple ID.
-• Brugsstatistik på serveren – Opbevares i 180 dage (ca. 6 måneder) og slettes derefter automatisk. Teksten i søgninger følger samme frist.
+• Data på serveren (brugsstatistik, søgetekster, dhikr-liste, playlistenavne, donationsregistreringer, MetricKit-diagnostik) – Slettes ikke automatisk efter en fast periode; opbevares, indtil du beder om at få dem slettet. Indstillinger → Slet kontoen i appen fjerner kun data på din enhed og i iCloud, ikke data på serveren. Vil du have dine data på serveren slettet, så skriv til hakancelikdev@gmail.com; din anmodning efterkommes senest inden for 30 dage.
 • Nedbrudsrapporter (Crashlytics) – Opbevares i 90 dage og slettes derefter.
-• Serverlogfiler – Roteres inden for 30 dage.</p></div>
+• Serverlogfiler – Opbevares inden for en størrelsesgrænse; når den nås, slettes de ældste automatisk.</p></div>
   <div class="legal-card"><h2>9. Dine rettigheder (KVKK / GDPR)</h2><p>Efter Tyrkiets KVKK og EU's GDPR har du ret til at:
 • Vide, hvilke data der indsamles om dig
 • Gøre indsigelse mod behandlingen af data (tilbagekald adgang til Position, Notifikationer eller Bevægelse under Indstillinger → Vakit på iOS eller Systemindstillinger → Vakit på Mac)
-• Anmode om sletning af dine data: Indstillinger → Slet kontoen fjerner alt på din enhed og i iCloud. Vil du have brugsstatistikken på vores server slettet, så skriv til hakancelikdev@gmail.com; din anmodning efterkommes senest inden for 30 dage.
+• Anmode om sletning af dine data: Indstillinger → Slet kontoen fjerner alt på din enhed og i iCloud; det sletter ikke data på vores server. Vil du have dine data på vores server (herunder brugsstatistikken) slettet, så skriv til hakancelikdev@gmail.com; din anmodning efterkommes senest inden for 30 dage.
 • Dataportabilitet
 • Klage til KVKK-myndigheden
 
 Send anmodninger til hakancelikdev@gmail.com; vi svarer senest inden for 30 dage.</p></div>
   <div class="legal-card"><h2>10. Børns privatliv</h2><p>Vakit udbydes i App Store med aldersgrænsen 4+, men vi indsamler ikke bevidst personoplysninger fra brugere under 13 år. Hvis du mener, at et barn under 13 år har afgivet data, så skriv til hakancelikdev@gmail.com, og vi sletter de pågældende data med det samme.</p></div>
-  <div class="legal-card"><h2>11. Sikkerhed</h2><p>Alle lokale data bliver på din enhed, beskyttet af iOS'/macOS' sandkasse og enhedens kryptering. Data i iCloud er krypteret på Apples infrastruktur. Data, der sendes til vores server, overføres via HTTPS/TLS og gemmes i en krypteret database; de indeholder ingen identitetsoplysninger. Vakit registrerer desuden jailbreak, debugger og kodeinjektion som ekstra beskyttelse under følsomme handlinger.</p></div>
+  <div class="legal-card"><h2>11. Sikkerhed</h2><p>Alle lokale data bliver på din enhed, beskyttet af iOS'/macOS' sandkasse og enhedens kryptering. Data i iCloud er krypteret på Apples infrastruktur. Data, der sendes til vores server, krypteres under overførslen via HTTPS/TLS og gemmes på en server, der ikke kan nås direkte fra internettet (den kan kun nås gennem Cloudflares krypterede forbindelse); de indeholder ingen identitetsoplysninger. Vakit registrerer desuden jailbreak, debugger og kodeinjektion som ekstra beskyttelse under følsomme handlinger.</p></div>
   <div class="legal-card"><h2>12. Ændringer af politikken</h2><p>Denne politik kan blive opdateret, efterhånden som appen udvikler sig. Ved væsentlige ændringer fornyes datoen «Sidst opdateret» på denne side, og der vises en besked i appen. Vi anbefaler, at du jævnligt læser politikken igennem.</p></div>
   <div class="legal-card"><h2>13. Kontakt</h2><p>Spørgsmål, anmodninger eller tilbagemeldinger om privatliv: hakancelikdev@gmail.com
 

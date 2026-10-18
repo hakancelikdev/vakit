@@ -99,7 +99,7 @@
 
 <main class="legal-page">
   <h1>Privacy <em>Policy</em></h1>
-  <p class="legal-desc">Last updated: 3 October 2026 — Version 2.0.0
+  <p class="legal-desc">Last updated: 18 October 2026 — Version 2.1.0
 
 Vakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Your khatm progress, bookmarks, goals and favourite mosques stay on your device and sync only within your own Apple iCloud account — they are never sent to our servers. Your dhikr list is the exception: it is sent to our servers along with usage statistics so we can improve the app (see section 1). Everything sent to our servers is tied to a persistent user code containing no identifying information.</p>
   <div class="legal-card"><h2>1. Data We Collect</h2><p>Data we DO NOT collect:
@@ -123,7 +123,10 @@ Data sent to our servers — tied to a persistent user code that contains no ide
 • Feature usage statistics (screen views, feature usage). These show that a section was used — for example that an excused day was marked or a missed-prayer entry was made. The ledger itself (the list of your records) is not sent. What is sent is the fact that the action happened plus some numbers — for example the prayer you marked, your daily worship counts, your remaining qada, the number of an ayah or hadith you saved; like every statistic it carries a timestamp.
 • The text of searches you make in the app (Quran, hadith, dhikr, names of Allah, mosque and settings search) – collected so we can see which words fail to find what you are looking for and fix search; at most 80 characters are stored.
 • Your dhikr list – dhikr name, type, category and counters; including the Arabic text, description and source you enter for dhikr you add yourself. They are collected to see which dhikr are used and how often, so the dhikr section can be improved.
+• The names you give your Quran playlists – to see how playlists are used; at most 80 characters are stored.
+• Donation records – the amount and currency, whether it is one-time or monthly, start, change and renewal records for monthly support, and Apple's transaction number. Card, IBAN or any other payment details are NOT included.
 • Crash reports (via Firebase Crashlytics, contains no personal data)
+• Apple MetricKit diagnostics – crash, hang and excessive battery/CPU use reports (code addresses, device and version information; no personal data). They are sent to the Vakit server so bugs can be found and fixed.
 
 Because this user code syncs through the iCloud keychain, devices on the same Apple ID count as one user and the code survives deleting and reinstalling the app. The code contains no identity data; your data is never sold or used for advertising.</p></div>
   <div class="legal-card"><h2>2. How We Use Your Data</h2><p>• Prayer Time Calculation – Location is processed locally on your device, calculated offline using the Adhan library.
@@ -140,7 +143,7 @@ Because this user code syncs through the iCloud keychain, devices on the same Ap
 • Is encrypted on Apple's infrastructure; we, Apple staff and third parties cannot access it.
 • Syncs automatically across iPhone, iPad, Mac and Apple Watch.
 • Stays only on your device if you disable iCloud.
-• Is removed from all your devices when you use &quot;Delete My Account&quot; or remove Vakit data from iCloud.
+• Is removed from all your devices when you use Settings → &quot;Delete Account&quot; or remove Vakit data from iCloud.
 
 Details: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Apple Watch and Mac Data</h2><p>Vakit ships a companion app on watchOS 9+. On the Watch:
@@ -163,7 +166,8 @@ On the Mac (macOS 13+):
 • Apple StoreKit 2 – Optional donations (one-time and monthly). Payment details are processed by Apple; Vakit never sees card data.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Blessed-day and release announcements. Announcements are broadcast by topic; there is no per-person targeting.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Friday sermon text and audio.
-• Vakit server (Germany, Nuremberg) – Usage statistics and your dhikr list, tied to a user code that contains no identifying information. Your khatm, bookmark, goal and reading records are never sent there.
+• Cloudflare – Downloadable content (the Quran text and translations, tafsir, hadith, mushaf pages, recitation and translation audio, notification sounds) comes from Cloudflare's storage and delivery network (R2/CDN), and data sent to the Vakit server passes through Cloudflare's encrypted connection (Tunnel). These requests pass your IP address through Cloudflare's infrastructure; they carry no identifying information.
+• Vakit server (Germany, Nuremberg) – Usage statistics, your dhikr list, the text of your searches, your playlist names, donation records and MetricKit diagnostics, all tied to a user code that contains no identifying information. Your khatm, bookmark, goal and reading records are never sent there.
 
 Note: Firebase Analytics is NOT used; the Advertising Identifier (IDFA) is not collected.
 
@@ -171,24 +175,24 @@ Google's privacy policy: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Advertising</h2><p>Vakit shows no ads. The app's only source of income is optional donations from users.</p></div>
   <div class="legal-card"><h2>7. Donations (In-App Purchase)</h2><p>Vakit is free. To support the developer you can make optional one-time or monthly donations in tiers from ₺10 to ₺10,000 from the &quot;Keep Vakit Alive&quot; screen. These transactions:
 • Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.
-• Vakit never sees or stores your payment method or financial details.
+• Vakit never sees or stores your card, IBAN or payment method. The donation's amount, currency, type (one-time or monthly) and Apple's transaction number are recorded on the Vakit server, tied to your user code (see section 1).
 • Monthly support is an auto-renewing subscription, managed and cancelled anytime in your App Store account settings (it renews unless cancelled at least 24 hours before the period ends).
 • Refunds can only be requested through Apple (reportaproblem.apple.com).</p></div>
   <div class="legal-card"><h2>8. Data Retention</h2><p>• Local device data – Stored until you delete the app.
 • iCloud data – Stored until you remove Vakit's scope from iCloud or disable your Apple ID.
-• Usage statistics on the server – Kept for 180 days (about 6 months), then deleted automatically. Search query texts follow the same schedule.
+• Data on the server (usage statistics, search texts, dhikr list, playlist names, donation records, MetricKit diagnostics) – Not deleted automatically after a set period; kept until you ask for it to be deleted. Settings → Delete Account in the app removes only the data on your device and in iCloud, not the data on the server. To have your data on the server deleted, write to hakancelikdev@gmail.com; your request is fulfilled within 30 days at the latest.
 • Crash reports (Crashlytics) – Kept for 90 days, then deleted.
-• Server logs – Rotated within 30 days.</p></div>
+• Server log files – Kept within a size limit; once it is reached the oldest are deleted automatically.</p></div>
   <div class="legal-card"><h2>9. Your Rights (KVKK / GDPR)</h2><p>Under Turkey's KVKK and the EU GDPR you have the right to:
 • Know which data is collected about you
 • Object to data processing (revoke Location, Notification or Motion permissions in Settings → Vakit on iOS, or System Settings → Vakit on Mac)
-• Request deletion of your data: Settings → Delete My Account removes everything on your device and in iCloud. To have the usage statistics on our server deleted, write to hakancelikdev@gmail.com; your request is fulfilled within 30 days at the latest.
+• Request deletion of your data: Settings → Delete Account removes everything on your device and in iCloud; it does not delete the data on our server. To have your data on our server (including usage statistics) deleted, write to hakancelikdev@gmail.com; your request is fulfilled within 30 days at the latest.
 • Data portability
 • File a complaint with the KVKK authority
 
 Submit requests to hakancelikdev@gmail.com; we respond within 30 days at the latest.</p></div>
   <div class="legal-card"><h2>10. Children's Privacy</h2><p>Vakit is offered in the App Store with a 4+ age rating, but we do not knowingly collect personal data from users under 13. If you believe that a child under 13 has provided data, please write to hakancelikdev@gmail.com and we will delete the relevant data immediately.</p></div>
-  <div class="legal-card"><h2>11. Security</h2><p>All local data stays on your device, protected by the iOS/macOS sandbox and device encryption. iCloud data is encrypted on Apple's infrastructure. Data sent to our server is transmitted over HTTPS/TLS and stored in an encrypted database; it contains no identity information. Vakit also performs jailbreak, debugger and injection detection for additional protection during sensitive operations.</p></div>
+  <div class="legal-card"><h2>11. Security</h2><p>All local data stays on your device, protected by the iOS/macOS sandbox and device encryption. iCloud data is encrypted on Apple's infrastructure. Data sent to our server is encrypted in transit over HTTPS/TLS and stored on a server that cannot be reached directly from the internet (it is reachable only through Cloudflare's encrypted connection); it contains no identity information. Vakit also performs jailbreak, debugger and injection detection for additional protection during sensitive operations.</p></div>
   <div class="legal-card"><h2>12. Policy Changes</h2><p>This policy may be updated as the app evolves. For material changes the &quot;Last updated&quot; date on this page is refreshed and an in-app notice is shown. We recommend reviewing this policy periodically.</p></div>
   <div class="legal-card"><h2>13. Contact</h2><p>For privacy questions, requests or feedback: hakancelikdev@gmail.com
 

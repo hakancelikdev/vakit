@@ -99,7 +99,7 @@
 
 <main class="legal-page">
   <h1>Gizlilik <em>Politikası</em></h1>
-  <p class="legal-desc">Son güncelleme: 3 Ekim 2026 — Sürüm 2.0.0
+  <p class="legal-desc">Son güncelleme: 18 Ekim 2026 — Sürüm 2.1.0
 
 Vakit gizliliğinize saygı duyar. Hesap oluşturmanız gerekmez; ad, e-posta, telefon, fotoğraf veya rehber gibi kişisel kimlik bilgisi toplamayız. Namaz vakitleri, kıble yönü ve hatırlatıcılar tamamen cihazınızda hesaplanır. Hatim, yer imi, hedef ve favori cami kayıtlarınız cihazınızda kalır ve yalnızca sizin Apple iCloud alanınızda senkronlanır — sunucularımıza gönderilmez. Zikir listeniz bunun istisnasıdır: uygulamayı geliştirebilmek için kullanım istatistikleriyle birlikte sunucularımıza da gönderilir (ayrıntı: 1. bölüm). Sunucuya giden her şey kimliğinizi içermeyen kalıcı bir kullanıcı koduna bağlıdır.</p>
   <div class="legal-card"><h2>1. Topladığımız Veriler</h2><p>Toplamadığımız veriler:
@@ -123,7 +123,10 @@ Sunucularımıza gönderilen veriler — kimliğinizi içermeyen kalıcı bir ku
 • Özellik kullanım istatistikleri (ekran görüntülenme, özellik kullanımı). Bu istatistikler yukarıdaki defterlerin kullanıldığını gösterir — örneğin bir mazeret günü işaretlendiğini ya da kaza kaydı girildiğini. Defterin kendisi (kayıtlarınızın listesi) gönderilmez. Gönderilen, o işlemin yapıldığı bilgisi ve bazı sayılardır — örneğin işaretlediğiniz namaz, günlük ibadet sayılarınız, kalan kaza borcunuz, kaydettiğiniz âyetin ya da hadisin numarası; her istatistik gibi zaman damgası taşır.
 • Uygulama içinde yaptığınız aramaların metni (Kur'an, hadis, zikir, Esmâ, cami ve ayar aramaları) – hangi kelimelerin aradığınızı bulamadığını görüp aramayı düzeltmek için toplanır; en fazla 80 karakteri saklanır.
 • Zikir listeniz – zikir adı, türü, kategorisi ve çekim sayaçları; kendi eklediğiniz zikirlerde girdiğiniz Arapça metin, açıklama ve kaynak bilgisi dahil. Hangi zikirlerin ne sıklıkta kullanıldığını görüp uygulamanın zikir bölümünü geliştirmek için toplanır.
+• Kur'an çalma listelerinize verdiğiniz adlar – listelerin nasıl kullanıldığını görmek için; en fazla 80 karakteri saklanır.
+• Bağış kayıtları – bağışın tutarı ve para birimi, tek seferlik mi aylık mı olduğu, aylık destekte başlama, değişiklik ve yenileme kayıtları ve Apple'ın işlem numarası. Kart, IBAN veya başka bir ödeme bilgisi bunlara dahil DEĞİLDİR.
 • Çökme raporları (Firebase Crashlytics aracılığıyla, kişisel veri içermez)
+• Apple MetricKit tanıları – çökme, donma ve aşırı pil/işlemci kullanımı raporları (kod adresleri, cihaz ve sürüm bilgisi; kişisel veri içermez). Hataları bulup düzeltmek için Vakit sunucusuna gönderilir.
 
 Bu kullanıcı kodu iCloud anahtar zinciri üzerinden senkronlandığı için aynı Apple ID'ye sahip cihazlarınız tek kullanıcı sayılır ve uygulamayı silip yeniden kurduğunuzda korunur. Kod hiçbir kimlik bilgisi içermez; verileriniz satılmaz ve reklam için kullanılmaz.</p></div>
   <div class="legal-card"><h2>2. Verilerinizi Nasıl Kullanıyoruz</h2><p>• Namaz Vakti Hesaplama – Konum cihazınızda yerel olarak Adhan kütüphanesi ile çevrim dışı işlenir.
@@ -140,7 +143,7 @@ Bu kullanıcı kodu iCloud anahtar zinciri üzerinden senkronlandığı için ay
 • Apple altyapısında şifrelenir; biz, Apple çalışanları ve üçüncü taraflar bu verilere erişemez.
 • iPhone, iPad, Mac ve Apple Watch arasında otomatik senkronlanır.
 • iCloud'u devre dışı bıraktığınızda yalnızca cihazınızda kalır.
-• &quot;Hesabımı Sil&quot; özelliğini veya iCloud'dan Vakit verilerini sildiğinizde tüm cihazlarınızdan kaldırılır.
+• Ayarlar → &quot;Hesabı Sil&quot; özelliğini veya iCloud'dan Vakit verilerini sildiğinizde tüm cihazlarınızdan kaldırılır.
 
 Detaylar için: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Apple Watch ve Mac Verileri</h2><p>Vakit, watchOS 9+ üzerinde companion uygulama içerir. Watch tarafında:
@@ -163,7 +166,8 @@ Mac tarafında (macOS 13+):
 • Apple StoreKit 2 – İsteğe bağlı bağışlar (tek seferlik ve aylık). Ödeme bilgileriniz Apple üzerinden işlenir; Vakit kart bilgisi görmez.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Mübarek gün ve sürüm duyuruları. Duyurular topic bazlı toplu gönderilir; kişiye özel hedefleme yapılmaz.
 • Diyanet İşleri Başkanlığı (dinhizmetleri.diyanet.gov.tr) – Cuma Hutbesi metni ve ses kaydı.
-• Vakit sunucusu (Almanya, Nürnberg) – Kullanım istatistikleri ve zikir listeniz; kimliğinizi içermeyen bir kullanıcı koduna bağlıdır. Hatim, yer imi, hedef ve okuma kayıtlarınız buraya gönderilmez.
+• Cloudflare – İndirilebilir içerik (Kur'an metni ve mealleri, tefsir, hadis, mushaf sayfaları, tilavet ve meal sesleri, bildirim sesleri) Cloudflare'in depolama ve dağıtım ağından (R2/CDN) iner; Vakit sunucusuna giden veriler de Cloudflare'in şifreli bağlantısından (Tunnel) geçer. Bu isteklerde IP adresiniz Cloudflare altyapısından geçer; kimlik bilginiz taşınmaz.
+• Vakit sunucusu (Almanya, Nürnberg) – Kullanım istatistikleri, zikir listeniz, aramalarınızın metni, çalma listesi adlarınız, bağış kayıtları ve MetricKit tanıları; hepsi kimliğinizi içermeyen bir kullanıcı koduna bağlıdır. Hatim, yer imi, hedef ve okuma kayıtlarınız buraya gönderilmez.
 
 Not: Firebase Analytics KULLANILMAZ; reklam tanımlayıcısı (IDFA) toplanmaz.
 
@@ -171,24 +175,24 @@ Google gizlilik politikası: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Reklamlar</h2><p>Vakit reklam göstermez. Uygulamanın tek gelir kaynağı, kullanıcıların isteğe bağlı bağışlarıdır.</p></div>
   <div class="legal-card"><h2>7. Bağışlar (In-App Purchase)</h2><p>Vakit ücretsizdir. Geliştiriciyi desteklemek için &quot;Vakit'i Yaşat&quot; ekranından ₺10'dan ₺10.000'e uzanan kademelerde tek seferlik ya da aylık isteğe bağlı bağış yapabilirsiniz. Bu işlemler:
 • Apple StoreKit 2 ile işlenir; ödeme bilgileriniz (kart, IBAN, Apple Pay) yalnızca Apple'a iletilir.
-• Vakit, ödeme yöntemi veya finansal bilgilerinizi görmez ve saklamaz.
+• Vakit kart, IBAN veya ödeme yöntemi bilginizi görmez ve saklamaz. Bağışın tutarı, para birimi, türü (tek seferlik ya da aylık) ve Apple'ın işlem numarası, kullanıcı kodunuza bağlı olarak Vakit sunucusuna kaydedilir (bkz. 1. bölüm).
 • Aylık destek otomatik yenilenen bir aboneliktir; App Store hesap ayarlarınızdan yönetilir ve istediğiniz an iptal edilir (dönem bitmeden en az 24 saat önce iptal edilmezse yenilenir).
 • Bağışların geri ödemesi yalnızca Apple üzerinden talep edilebilir (reportaproblem.apple.com).</p></div>
   <div class="legal-card"><h2>8. Veri Saklama Süresi</h2><p>• Yerel cihaz verileri – Uygulamayı silene kadar saklanır.
 • iCloud verileri – iCloud'dan Vakit kapsamını silene veya Apple ID'nizi devre dışı bırakana kadar saklanır.
-• Sunucudaki kullanım istatistikleri – 180 gün (yaklaşık 6 ay) tutulur, sonra otomatik olarak silinir. Arama sorgu metinleri de bu süreye tabidir.
+• Sunucudaki veriler (kullanım istatistikleri, arama metinleri, zikir listesi, çalma listesi adları, bağış kayıtları, MetricKit tanıları) – Belirli bir süre sonunda otomatik olarak silinmez; silinmesini isteyene kadar saklanır. Uygulamadaki Ayarlar → Hesabı Sil yalnız cihazınızdaki ve iCloud'daki verileri kaldırır, sunucudakileri silmez. Sunucudaki verilerinizin silinmesi için hakancelikdev@gmail.com adresine yazmanız yeterlidir; talebiniz en geç 30 gün içinde karşılanır.
 • Çökme raporları (Crashlytics) – 90 gün tutulur, sonra silinir.
-• Sunucu logları – 30 gün içinde rotate edilir.</p></div>
+• Sunucu kayıt dosyaları (log) – Boyutla sınırlı tutulur; sınır dolunca en eskileri otomatik olarak silinir.</p></div>
   <div class="legal-card"><h2>9. Haklarınız (KVKK / GDPR)</h2><p>Türkiye KVKK ve AB GDPR kapsamında şu haklara sahipsiniz:
 • Hakkınızda hangi verilerin toplandığını öğrenme hakkı
 • Veri işlenmesine itiraz etme hakkı (iOS’ta Ayarlar → Vakit, Mac’te Sistem Ayarları → Vakit üzerinden Konum/Bildirim/Hareket izinlerini iptal edebilirsiniz)
-• Verilerin silinmesini isteme hakkı: Ayarlar → Hesabımı Sil cihazınızdaki ve iCloud'daki tüm verilerinizi kaldırır. Sunucumuzdaki kullanım istatistiklerinin silinmesi için hakancelikdev@gmail.com adresine yazmanız yeterlidir; talebiniz en geç 30 gün içinde karşılanır.
+• Verilerin silinmesini isteme hakkı: Ayarlar → Hesabı Sil cihazınızdaki ve iCloud'daki tüm verilerinizi kaldırır; sunucumuzdaki verileri silmez. Sunucumuzdaki verilerinizin (kullanım istatistikleri dahil) silinmesi için hakancelikdev@gmail.com adresine yazmanız yeterlidir; talebiniz en geç 30 gün içinde karşılanır.
 • Veri taşınabilirliği hakkı
 • KVKK Kurumu'na başvurma hakkı
 
 Başvurularınızı hakancelikdev@gmail.com adresine iletebilirsiniz; en geç 30 gün içinde yanıt veririz.</p></div>
   <div class="legal-card"><h2>10. Çocukların Gizliliği</h2><p>Vakit, App Store'da 4+ yaş kategorisinde sunulur ancak 13 yaş altındaki kullanıcılardan bilerek kişisel veri toplamayız. 13 yaş altı bir çocuğun verisinin toplandığını fark ederseniz lütfen hakancelikdev@gmail.com adresine yazın; ilgili veriler derhal silinir.</p></div>
-  <div class="legal-card"><h2>11. Güvenlik</h2><p>Tüm yerel veriler cihazınızda kalır ve iOS/macOS sandbox'ı ile cihaz şifrelemesi tarafından korunur. iCloud verileri Apple'ın altyapısında şifrelenir. Sunucumuza gönderilen veriler HTTPS/TLS ile iletilir ve şifrelenmiş veritabanında saklanır; kimlik bilgisi içermez. Vakit ayrıca jailbreak, debugger ve enjeksiyon tespiti yaparak hassas işlemler için ek koruma sağlar.</p></div>
+  <div class="legal-card"><h2>11. Güvenlik</h2><p>Tüm yerel veriler cihazınızda kalır ve iOS/macOS sandbox'ı ile cihaz şifrelemesi tarafından korunur. iCloud verileri Apple'ın altyapısında şifrelenir. Sunucumuza gönderilen veriler HTTPS/TLS ile şifrelenerek iletilir ve internetten doğrudan erişime kapalı bir sunucuda saklanır (sunucuya yalnız Cloudflare'in şifreli bağlantısı üzerinden ulaşılır); kimlik bilgisi içermez. Vakit ayrıca jailbreak, debugger ve enjeksiyon tespiti yaparak hassas işlemler için ek koruma sağlar.</p></div>
   <div class="legal-card"><h2>12. Politika Değişiklikleri</h2><p>Bu politika, uygulama özelliklerindeki değişikliklere bağlı olarak güncellenebilir. Önemli değişikliklerde bu sayfanın &quot;Son güncelleme&quot; tarihi yenilenir ve uygulama içinde bilgilendirme gösterilir. Politikayı düzenli aralıklarla kontrol etmenizi öneririz.</p></div>
   <div class="legal-card"><h2>13. İletişim</h2><p>Gizlilikle ilgili sorularınız, başvurularınız veya geri bildirimleriniz için: hakancelikdev@gmail.com
 

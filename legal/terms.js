@@ -6,7 +6,7 @@
 module.exports = {
   "tr": {
     "title": "Kullanım <em>Şartları</em>",
-    "desc": "Son güncelleme: 3 Ekim 2026 — Sürüm 2.0.0\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
+    "desc": "Son güncelleme: 18 Ekim 2026 — Sürüm 2.1.0\n\nUygulamamızı indirerek, yükleyerek veya kullanarak bu Şartlara bağlı kalmayı kabul edersiniz. Lütfen bu Şartları dikkatle okuyun.",
     "sections": [
       {
         "t": "1. Şartların Kabulü",
@@ -34,11 +34,11 @@ module.exports = {
       },
       {
         "t": "7. Üçüncü Taraf Hizmetler",
-        "b": "Vakit aşağıdaki üçüncü taraf hizmetleri kullanır ve onların kendi şartlarına tabidir:\n• Apple iCloud / CloudKit (kullanıcı verisi senkronizasyonu)\n• Apple MapKit (yakındaki camiler, harita)\n• Firebase Crashlytics, Remote Config ve Cloud Messaging (Google)\n• Apple StoreKit 2 (bağışlar)\n• Diyanet İşleri Başkanlığı (Cuma hutbesi metni ve ses kaydı)\n• Adhan kütüphanesi (namaz vakti hesaplama, açık kaynak)\n• SwiftAA (astronomik hesaplama, açık kaynak)\n\nBu hizmetlerin kullanım şartları ve gizlilik politikaları kendi sağlayıcılarına aittir."
+        "b": "Vakit aşağıdaki üçüncü taraf hizmetleri kullanır ve onların kendi şartlarına tabidir:\n• Apple iCloud / CloudKit (kullanıcı verisi senkronizasyonu)\n• Apple MapKit (yakındaki camiler, harita)\n• Firebase Crashlytics, Remote Config ve Cloud Messaging (Google)\n• Apple StoreKit 2 (bağışlar)\n• Cloudflare (indirilebilir içeriğin depolanması ve dağıtımı, Vakit sunucusuna şifreli bağlantı)\n• Diyanet İşleri Başkanlığı (Cuma hutbesi metni ve ses kaydı)\n• Adhan kütüphanesi (namaz vakti hesaplama, açık kaynak)\n• SwiftAA (astronomik hesaplama, açık kaynak)\n• GRDB.swift (içerik veritabanı, açık kaynak)\n\nBu hizmetlerin kullanım şartları ve gizlilik politikaları kendi sağlayıcılarına aittir."
       },
       {
         "t": "8. Fikri Mülkiyet",
-        "b": "Uygulamadaki kod ve tasarım Hakan Çelik'e aittir; uygulama MIT lisansı altında açık kaynaklıdır.\n\nVakit, üçüncü taraf içerik ve kütüphaneleri saygıyla kullanır:\n• Kur'an-ı Kerim Arapça metni: kamuya açık (public domain)\n• Türkçe meal: Diyanet İşleri Başkanlığı Meali\n• Hadis koleksiyonları: kamuya açık tasniflerden derlenmiştir\n• Kur'an okuma sesleri: ilgili sanatçıların izinleri ve lisansları AUDIO-LICENSES.md'de listelenmiştir\n• Adhan, SwiftAA, GRDB.swift: ilgili açık kaynak lisansları\n\nUygulama, ezan ve tilavet seslerini yalnızca dini ibadet maksadıyla kullanır."
+        "b": "Uygulamanın kodu ve tasarımı Hakan Çelik'e aittir; tüm hakları saklıdır. Bu tanıtım sitesinin kaynak kodu ise GPL-3.0 lisansıyla açıktır (github.com/hakancelikdev/vakit).\n\nVakit'teki üçüncü taraf içerikler sahiplerine aittir ve saygıyla kullanılır:\n• Kur'an-ı Kerim Arapça metni: kamuya açık (public domain)\n• Meal, tefsir ve hadis tercümeleri: her metnin künyesi (mütercim, müellif ya da yayıncı) uygulamada o metnin yanında gösterilir; hakları ilgili yayıncılara aittir.\n• Tilavet ve ezan kayıtları, yazı tipleri, görseller ve kod kütüphaneleri (Adhan, SwiftAA, GRDB.swift, Firebase): her biri sahibinin lisansına tabidir.\n\nKullanılan kaynakların tam listesini hakancelikdev@gmail.com adresinden isteyebilirsiniz.\n\nUygulama, ezan ve tilavet seslerini yalnızca dini ibadet maksadıyla kullanır."
       },
       {
         "t": "9. Sorumluluk Sınırlaması",
@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         "t": "10. Hesap ve Veri Silme",
-        "b": "Vakit hesap gerektirmez. Uygulamayı silerek tüm yerel verileri kaldırabilirsiniz. iCloud üzerinden senkronlanmış verileri silmek için: Ayarlar > Hesabımı Sil veya iOS’ta Ayarlar > Apple ID > iCloud > Vakit > Verileri Sil (Mac’te Sistem Ayarları > Apple Hesabı > iCloud). Sunucumuzda tutulan kullanım istatistiklerinin silinmesini isterseniz hakancelikdev@gmail.com adresine yazmanız yeterlidir; talebiniz en geç 30 gün içinde karşılanır."
+        "b": "Vakit hesap gerektirmez. Uygulamayı silerek tüm yerel verileri kaldırabilirsiniz. iCloud üzerinden senkronlanmış verileri silmek için: Ayarlar > Hesabı Sil veya iOS’ta Ayarlar > Apple ID > iCloud > Vakit > Verileri Sil (Mac’te Sistem Ayarları > Apple Hesabı > iCloud). Hesabı Sil sunucumuzdaki verileri silmez; sunucumuzda tutulan verilerin (kullanım istatistikleri dahil) silinmesini isterseniz hakancelikdev@gmail.com adresine yazmanız yeterlidir; talebiniz en geç 30 gün içinde karşılanır."
       },
       {
         "t": "11. Şartların Değiştirilmesi",
@@ -70,7 +70,7 @@ module.exports = {
   },
   "en": {
     "title": "Terms of <em>Use</em>",
-    "desc": "Last updated: 3 October 2026 — Version 2.0.0\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
+    "desc": "Last updated: 18 October 2026 — Version 2.1.0\n\nBy downloading, installing, or using our App, you agree to be bound by these Terms. Please read these Terms carefully.",
     "sections": [
       {
         "t": "1. Acceptance of Terms",
@@ -98,11 +98,11 @@ module.exports = {
       },
       {
         "t": "7. Third-Party Services",
-        "b": "Vakit uses the following third-party services and is subject to their own terms:\n• Apple iCloud / CloudKit (user data sync)\n• Apple MapKit (nearby mosques, maps)\n• Firebase Crashlytics, Remote Config and Cloud Messaging (Google)\n• Apple StoreKit 2 (donations)\n• Diyanet (Friday sermon text and audio)\n• Adhan library (prayer time calculation, open source)\n• SwiftAA (astronomical computation, open source)\n\nThe terms and privacy policies of these services belong to their respective providers."
+        "b": "Vakit uses the following third-party services and is subject to their own terms:\n• Apple iCloud / CloudKit (user data sync)\n• Apple MapKit (nearby mosques, maps)\n• Firebase Crashlytics, Remote Config and Cloud Messaging (Google)\n• Apple StoreKit 2 (donations)\n• Cloudflare (storage and delivery of downloadable content, encrypted connection to the Vakit server)\n• Diyanet (Friday sermon text and audio)\n• Adhan library (prayer time calculation, open source)\n• SwiftAA (astronomical computation, open source)\n• GRDB.swift (content database, open source)\n\nThe terms and privacy policies of these services belong to their respective providers."
       },
       {
         "t": "8. Intellectual Property",
-        "b": "The app code and design are owned by Hakan Çelik; the app is open-source under the MIT license.\n\nVakit uses third-party content and libraries respectfully:\n• Quran Arabic text: public domain\n• Turkish translation: Diyanet İşleri Başkanlığı Meali\n• Hadith collections: derived from public-domain compilations\n• Quran recitation audio: artist permissions and licenses listed in AUDIO-LICENSES.md\n• Adhan, SwiftAA, GRDB.swift: their respective open-source licenses\n\nThe app uses adhan and recitation audio strictly for religious worship purposes."
+        "b": "The app's code and design are owned by Hakan Çelik; all rights reserved. The source code of this website is open under the GPL-3.0 license (github.com/hakancelikdev/vakit).\n\nThird-party content in Vakit belongs to its owners and is used respectfully:\n• Quran Arabic text: public domain\n• Quran translations, tafsir and hadith translations: each text's credit (translator, author or publisher) is shown next to it in the app; the rights belong to the respective publishers.\n• Recitation and adhan recordings, fonts, images and code libraries (Adhan, SwiftAA, GRDB.swift, Firebase): each is subject to its owner's license.\n\nYou can request the full list of sources at hakancelikdev@gmail.com.\n\nThe app uses adhan and recitation audio strictly for religious worship purposes."
       },
       {
         "t": "9. Limitation of Liability",
@@ -110,7 +110,7 @@ module.exports = {
       },
       {
         "t": "10. Account & Data Deletion",
-        "b": "Vakit does not require an account. Deleting the app removes all local data. To remove iCloud-synced data: Settings > Delete My Account, or Settings > Apple ID > iCloud > Vakit > Delete Data on iOS (System Settings > Apple Account > iCloud on Mac). If you want the usage statistics held on our server deleted, write to hakancelikdev@gmail.com; your request is fulfilled within 30 days at the latest."
+        "b": "Vakit does not require an account. Deleting the app removes all local data. To remove iCloud-synced data: Settings > Delete Account, or Settings > Apple ID > iCloud > Vakit > Delete Data on iOS (System Settings > Apple Account > iCloud on Mac). Delete Account does not delete the data on our server; if you want the data held on our server (including usage statistics) deleted, write to hakancelikdev@gmail.com; your request is fulfilled within 30 days at the latest."
       },
       {
         "t": "11. Changes to Terms",

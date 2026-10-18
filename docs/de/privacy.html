@@ -101,7 +101,7 @@
 <main class="legal-page">
   <h1>Datenschutz<em>erklärung</em></h1>
   <p class="legal-notice">Diese Seite ist eine Übersetzung, die wir der Einfachheit halber bereitstellen; weicht sie von der englischen Fassung ab, gilt die englische Fassung. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Zuletzt aktualisiert: 10. September 2026 — Version 1.7.4
+  <p class="legal-desc">Zuletzt aktualisiert: 18. Oktober 2026 — Version 2.1.0
 
 Vakit respektiert deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Angaben, die dich persönlich identifizieren (Name, E-Mail, Telefonnummer, Fotos, Kontakte). Gebetszeiten, Qibla-Richtung und Erinnerungen werden vollständig auf deinem Gerät berechnet. Dein Chatm-Fortschritt, deine Lesezeichen, Ziele und bevorzugten Moscheen bleiben auf deinem Gerät und werden nur innerhalb deines eigenen Apple-iCloud-Kontos synchronisiert — sie werden nie an unsere Server gesendet. Eine Ausnahme ist deine Dhikr-Liste: Sie wird zusammen mit Nutzungsstatistiken an unsere Server gesendet, damit wir die App verbessern können (siehe Abschnitt 1). Alles, was an unsere Server geht, ist mit einem dauerhaften Benutzercode verknüpft, der keine identifizierenden Angaben enthält.</p>
   <div class="legal-card"><h2>1. Daten, die wir erheben</h2><p>Daten, die wir NICHT erheben:
@@ -125,7 +125,10 @@ Daten, die an unsere Server gesendet werden — verknüpft mit einem dauerhaften
 • Statistiken zur Nutzung von Funktionen (Bildschirmaufrufe, Nutzung von Funktionen). Sie zeigen, dass ein Bereich genutzt wurde — zum Beispiel, dass ein Ausnahmetag markiert oder ein versäumtes Gebet eingetragen wurde. Die Aufzeichnung selbst (die Liste deiner Einträge) wird nicht gesendet. Gesendet wird, dass die Aktion stattgefunden hat, zusammen mit einigen Zahlen — zum Beispiel das Gebet, das du markiert hast, deine täglichen Gottesdienstzahlen, deine noch offenen Nachholgebete (Qada), die Nummer eines Verses oder Hadiths, den du gespeichert hast; wie jede Statistik trägt dies einen Zeitstempel.
 • Der Text deiner Suchen in der App (Suche in Koran, Hadith, Dhikr, Namen Allahs, Moscheen und Einstellungen) – wird erfasst, damit wir sehen, bei welchen Wörtern du nicht findest, wonach du suchst, und die Suche verbessern können; gespeichert werden höchstens 80 Zeichen.
 • Deine Dhikr-Liste – Name, Art, Kategorie und Zähler der Dhikr; bei selbst hinzugefügten Dhikr einschließlich des arabischen Textes, der Beschreibung und der Quelle, die du eingibst. Sie wird erfasst, um zu sehen, welche Dhikr wie oft genutzt werden, damit wir den Dhikr-Bereich verbessern können.
+• Die Namen, die du deinen Koran-Wiedergabelisten gibst – um zu sehen, wie Wiedergabelisten genutzt werden; gespeichert werden höchstens 80 Zeichen.
+• Spendeneinträge – Betrag und Währung, ob einmalig oder monatlich, Einträge zu Beginn, Änderung und Verlängerung einer monatlichen Unterstützung sowie Apples Transaktionsnummer. Karten-, IBAN- oder sonstige Zahlungsdaten gehören NICHT dazu.
 • Absturzberichte (über Firebase Crashlytics, ohne personenbezogene Daten)
+• Apple-MetricKit-Diagnosen – Berichte zu Abstürzen, Hängern und übermäßigem Akku-/CPU-Verbrauch (Code-Adressen, Geräte- und Versionsangaben; keine personenbezogenen Daten). Sie werden an den Vakit-Server gesendet, damit Fehler gefunden und behoben werden können.
 
 Da dieser Benutzercode über den iCloud-Schlüsselbund synchronisiert wird, zählen Geräte mit derselben Apple-ID als eine Person, und der Code bleibt erhalten, wenn du die App löschst und neu installierst. Der Code enthält keine Identitätsdaten; deine Daten werden nie verkauft oder für Werbung verwendet.</p></div>
   <div class="legal-card"><h2>2. Wie wir deine Daten verwenden</h2><p>• Berechnung der Gebetszeiten – Der Standort wird lokal auf deinem Gerät verarbeitet und mit der Adhan-Bibliothek offline berechnet.
@@ -139,10 +142,10 @@ Da dieser Benutzercode über den iCloud-Schlüsselbund synchronisiert wird, zäh
 • Entwicklung und Verbesserung – Nutzungsstatistiken (ohne GPS-Koordinaten) dienen dazu, die Leistung zu überwachen und Fehler zu erkennen.</p></div>
   <div class="legal-card"><h2>3. iCloud-Synchronisierung (CloudKit)</h2><p>Vakit synchronisiert deine Gottesdienst-Einträge (Dhikr, Chatm, Lesezeichen, Ziele, bevorzugte Moscheen) über Apples CloudKit zwischen deinen Geräten. Diese Daten:
 • Liegen ausschließlich in der privaten Datenbank deiner eigenen Apple-ID.
-• Sind auf Apples Infrastruktur verschlüsselt; weder wir noch Apple-Mitarbeitende oder Dritte können darauf zugreifen.
+• Werden auf Apples Infrastruktur verschlüsselt; weder wir noch Apple-Mitarbeitende oder Dritte können darauf zugreifen.
 • Werden automatisch zwischen iPhone, iPad, Mac und Apple Watch synchronisiert.
 • Bleiben nur auf deinem Gerät, wenn du iCloud deaktivierst.
-• Werden von all deinen Geräten entfernt, wenn du „Konto löschen“ verwendest oder die Vakit-Daten aus iCloud entfernst.
+• Werden von all deinen Geräten entfernt, wenn du Einstellungen → „Konto löschen“ verwendest oder die Vakit-Daten aus iCloud entfernst.
 
 Details: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Daten auf Apple Watch und Mac</h2><p>Vakit bringt eine Begleit-App für watchOS 9+ mit. Auf der Watch:
@@ -162,35 +165,36 @@ Auf dem Mac (macOS 13+):
 • Apple MapKit – Moscheen in der Nähe, Karte und Route (der Standort wird an Apple gesendet).
 • Firebase Crashlytics (Google) – Absturzberichte ohne Identitätsdaten (Stack-Trace, Gerätemodell, iOS-/macOS-Version).
 • Firebase Remote Config (Google) – Funktionsschalter und schrittweise Einführung (liest keine Daten vom Gerät).
-• Apple StoreKit 2 – Freiwillige Spenden (In-App-Käufe). Zahlungsdaten werden von Apple verarbeitet; Vakit sieht nie Kartendaten.
-• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Ankündigungen zu heiligen Tagen und neuen Versionen. Ankündigungen werden nach Themen an alle gesendet; es gibt keine Ausrichtung auf einzelne Personen.
+• Apple StoreKit 2 – Freiwillige Spenden (einmalig und monatlich). Zahlungsdaten werden von Apple verarbeitet; Vakit sieht nie Kartendaten.
+• Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Ankündigungen zu gesegneten Tagen und neuen Versionen. Ankündigungen werden nach Themen an alle gesendet; es gibt keine Ausrichtung auf einzelne Personen.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Text und Audio der Freitagspredigt.
-• Vakit-Server (Deutschland, Nürnberg) – Nutzungsstatistiken und deine Dhikr-Liste, verknüpft mit einem Benutzercode ohne identifizierende Angaben. Deine Chatm-, Lesezeichen-, Ziel- und Leseeinträge werden nie dorthin gesendet.
+• Cloudflare – Herunterladbare Inhalte (Korantext und Übersetzungen, Tafsir, Hadith, Mushaf-Seiten, Rezitations- und Übersetzungsaudio, Mitteilungstöne) kommen aus dem Speicher- und Auslieferungsnetz von Cloudflare (R2/CDN), und Daten an den Vakit-Server laufen über die verschlüsselte Verbindung von Cloudflare (Tunnel). Bei diesen Anfragen läuft deine IP-Adresse über die Infrastruktur von Cloudflare; sie enthalten keine identifizierenden Angaben.
+• Vakit-Server (Deutschland, Nürnberg) – Nutzungsstatistiken, deine Dhikr-Liste, der Text deiner Suchen, die Namen deiner Wiedergabelisten, Spendeneinträge und MetricKit-Diagnosen, alle verknüpft mit einem Benutzercode ohne identifizierende Angaben. Deine Chatm-, Lesezeichen-, Ziel- und Leseeinträge werden nie dorthin gesendet.
 
 Hinweis: Firebase Analytics wird NICHT verwendet; die Werbe-ID (IDFA) wird nicht erhoben.
 
 Datenschutzerklärung von Google: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Werbung</h2><p>Vakit zeigt keine Werbung. Die einzige Einnahmequelle der App sind freiwillige Spenden der Nutzer.</p></div>
-  <div class="legal-card"><h2>7. Spenden (In-App-Käufe)</h2><p>Vakit ist kostenlos. Um den Entwickler zu unterstützen, kannst du über den Bildschirm „Vakit am Leben halten“ freiwillig in Stufen von 10 ₺ bis 10.000 ₺ spenden. Diese Vorgänge:
-• Werden über Apple StoreKit 2 abgewickelt; Zahlungsdaten (Karte, IBAN, Apple Pay) gehen nur an Apple.
-• Vakit sieht und speichert weder deine Zahlungsart noch deine Finanzdaten.
-• Erstattungen können nur über Apple beantragt werden (reportaproblem.apple.com).
-• Die monatliche Unterstützung ist ein sich automatisch verlängerndes Abo; du verwaltest und kündigst es jederzeit in deinen App-Store-Kontoeinstellungen (es verlängert sich, sofern es nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt wird).</p></div>
+  <div class="legal-card"><h2>7. Spenden (In-App-Käufe)</h2><p>Vakit ist kostenlos. Um den Entwickler zu unterstützen, kannst du über den Bildschirm „Vakit am Leben halten“ freiwillig einmalig oder monatlich in Stufen von 10 ₺ bis 10.000 ₺ spenden. Diese Vorgänge:
+• Werden von Apple StoreKit 2 abgewickelt; Zahlungsdaten (Karte, IBAN, Apple Pay) gehen nur an Apple.
+• Vakit sieht oder speichert nie deine Karte, deine IBAN oder deine Zahlungsmethode. Betrag, Währung und Art der Spende (einmalig oder monatlich) sowie Apples Transaktionsnummer werden auf dem Vakit-Server erfasst, verknüpft mit deinem Benutzercode (siehe Abschnitt 1).
+• Die monatliche Unterstützung ist ein automatisch verlängertes Abo, das du jederzeit in den Einstellungen deines App-Store-Kontos verwalten und kündigen kannst (es verlängert sich, sofern du nicht mindestens 24 Stunden vor Ende des Zeitraums kündigst).
+• Erstattungen können nur über Apple beantragt werden (reportaproblem.apple.com).</p></div>
   <div class="legal-card"><h2>8. Speicherdauer</h2><p>• Lokale Gerätedaten – Bleiben gespeichert, bis du die App löschst.
 • iCloud-Daten – Bleiben gespeichert, bis du die Vakit-Daten aus iCloud entfernst oder deine Apple-ID deaktivierst.
-• Nutzungsstatistiken auf dem Server – Werden 180 Tage (etwa 6 Monate) aufbewahrt und danach automatisch gelöscht. Für den Text von Suchanfragen gilt dieselbe Frist.
+• Daten auf dem Server (Nutzungsstatistiken, Suchtexte, Dhikr-Liste, Namen von Wiedergabelisten, Spendeneinträge, MetricKit-Diagnosen) – Werden nicht nach einer festen Frist automatisch gelöscht; sie bleiben gespeichert, bis du ihre Löschung verlangst. Einstellungen → Konto löschen in der App entfernt nur die Daten auf deinem Gerät und in iCloud, nicht die Daten auf dem Server. Um deine Daten auf dem Server löschen zu lassen, schreib an hakancelikdev@gmail.com; deine Anfrage wird spätestens innerhalb von 30 Tagen erfüllt.
 • Absturzberichte (Crashlytics) – Werden 90 Tage aufbewahrt und danach gelöscht.
-• Serverprotokolle – Werden innerhalb von 30 Tagen rotiert.</p></div>
+• Server-Logdateien – Werden innerhalb einer Größengrenze aufbewahrt; ist sie erreicht, werden die ältesten automatisch gelöscht.</p></div>
   <div class="legal-card"><h2>9. Deine Rechte (KVKK / DSGVO)</h2><p>Nach dem türkischen KVKK und der EU-DSGVO hast du das Recht:
 • zu erfahren, welche Daten über dich erhoben werden
 • der Datenverarbeitung zu widersprechen (entziehe die Berechtigungen für Standort, Mitteilungen oder Bewegung unter iOS in Einstellungen → Vakit, auf dem Mac in Systemeinstellungen → Vakit)
-• die Löschung deiner Daten zu verlangen: Einstellungen → Konto löschen entfernt alles auf deinem Gerät und in iCloud. Um die Nutzungsstatistiken auf unserem Server löschen zu lassen, schreib an hakancelikdev@gmail.com; deine Anfrage wird spätestens innerhalb von 30 Tagen erfüllt.
+• die Löschung deiner Daten zu verlangen: Einstellungen → Konto löschen entfernt alles auf deinem Gerät und in iCloud; die Daten auf unserem Server werden dabei nicht gelöscht. Um deine Daten auf unserem Server (einschließlich der Nutzungsstatistiken) löschen zu lassen, schreib an hakancelikdev@gmail.com; deine Anfrage wird spätestens innerhalb von 30 Tagen erfüllt.
 • auf Datenübertragbarkeit
 • bei der KVKK-Behörde Beschwerde einzulegen
 
 Richte Anfragen an hakancelikdev@gmail.com; wir antworten spätestens innerhalb von 30 Tagen.</p></div>
   <div class="legal-card"><h2>10. Datenschutz bei Kindern</h2><p>Vakit wird im App Store mit der Altersfreigabe 4+ angeboten, wir erheben jedoch wissentlich keine personenbezogenen Daten von Personen unter 13 Jahren. Wenn du glaubst, dass ein Kind unter 13 Jahren Daten übermittelt hat, schreib bitte an hakancelikdev@gmail.com; wir löschen die betreffenden Daten umgehend.</p></div>
-  <div class="legal-card"><h2>11. Sicherheit</h2><p>Alle lokalen Daten bleiben auf deinem Gerät, geschützt durch die iOS-/macOS-Sandbox und die Geräteverschlüsselung. iCloud-Daten werden auf Apples Infrastruktur verschlüsselt. Daten an unseren Server werden über HTTPS/TLS übertragen und in einer verschlüsselten Datenbank gespeichert; sie enthalten keine Identitätsangaben. Vakit erkennt außerdem Jailbreak, Debugger und Code-Injection, um sensible Vorgänge zusätzlich zu schützen.</p></div>
+  <div class="legal-card"><h2>11. Sicherheit</h2><p>Alle lokalen Daten bleiben auf deinem Gerät, geschützt durch die iOS-/macOS-Sandbox und die Geräteverschlüsselung. iCloud-Daten werden auf Apples Infrastruktur verschlüsselt. Daten an unseren Server werden bei der Übertragung über HTTPS/TLS verschlüsselt und auf einem Server gespeichert, der aus dem Internet nicht direkt erreichbar ist (er ist nur über die verschlüsselte Verbindung von Cloudflare erreichbar); sie enthalten keine Identitätsangaben. Vakit erkennt außerdem Jailbreak, Debugger und Code-Injection, um sensible Vorgänge zusätzlich zu schützen.</p></div>
   <div class="legal-card"><h2>12. Änderungen dieser Erklärung</h2><p>Diese Erklärung kann aktualisiert werden, wenn sich die App weiterentwickelt. Bei wesentlichen Änderungen wird das Datum „Zuletzt aktualisiert“ auf dieser Seite erneuert und in der App ein Hinweis angezeigt. Wir empfehlen dir, diese Erklärung regelmäßig zu lesen.</p></div>
   <div class="legal-card"><h2>13. Kontakt</h2><p>Für Fragen, Anfragen oder Rückmeldungen zum Datenschutz: hakancelikdev@gmail.com
 

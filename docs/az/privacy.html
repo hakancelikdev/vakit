@@ -101,7 +101,7 @@
 <main class="legal-page">
   <h1>Məxfilik <em>Siyasəti</em></h1>
   <p class="legal-notice">Bu səhifə rahatlıq üçün təqdim olunan tərcümədir; ingiliscə versiyadan fərqlənərsə, ingiliscə versiya əsas götürülür. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Son yenilənmə: 10 sentyabr 2026 — Versiya 1.7.4
+  <p class="legal-desc">Son yenilənmə: 18 oktyabr 2026 — Versiya 2.1.0
 
 Vakit məxfiliyinizə hörmət edir. Hesab tələb olunmur və şəxsiyyətinizi müəyyən edən məlumatları (ad, e-poçt, telefon, şəkillər, kontaktlar) toplamırıq. Namaz vaxtları, qiblə istiqaməti və xatırlatmalar tamamilə cihazınızda hesablanır. Xətm irəliləyişiniz, əlfəcinləriniz, hədəfləriniz və sevimli məscidləriniz cihazınızda qalır və yalnız öz Apple iCloud hesabınız daxilində sinxronlaşır — heç vaxt serverlərimizə göndərilmir. Zikr siyahınız bunun istisnasıdır: tətbiqi yaxşılaşdıra bilməyimiz üçün istifadə statistikası ilə birlikdə serverlərimizə göndərilir (ətraflı: 1-ci bölmə). Serverlərimizə göndərilən hər şey kimlik məlumatı daşımayan daimi istifadəçi koduna bağlıdır.</p>
   <div class="legal-card"><h2>1. Topladığımız məlumatlar</h2><p>TOPLAMADIĞIMIZ məlumatlar:
@@ -125,7 +125,10 @@ Serverlərimizə göndərilən məlumatlar — kimlik məlumatı daşımayan dai
 • Funksiya istifadə statistikası (ekran baxışları, funksiya istifadəsi). Bu statistika bir bölmənin istifadə olunduğunu göstərir — məsələn, üzrlü günün işarələndiyini və ya qəza qeydinin edildiyini. Dəftərin özü (qeydlərinizin siyahısı) göndərilmir. Göndərilən, həmin əməliyyatın edildiyi faktı və bəzi rəqəmlərdir — məsələn, işarələdiyiniz namaz, gündəlik ibadət saylarınız, qalan qəza borcunuz, yadda saxladığınız ayənin və ya hədisin nömrəsi; hər statistika kimi zaman damğası daşıyır.
 • Tətbiqdə etdiyiniz axtarışların mətni (Quran, hədis, zikr, Əsmayi-Hüsna, məscid və ayar axtarışları) – hansı sözlərdə axtarışın axtardığınızı tapa bilmədiyini görüb onu düzəltmək üçün toplanır; ən çox 80 simvol saxlanılır.
 • Zikr siyahınız – zikrin adı, növü, kateqoriyası və sayğacları; özünüzün əlavə etdiyiniz zikrlər üçün yazdığınız ərəbcə mətn, izah və mənbə məlumatı da daxil olmaqla. Hansı zikrlərin nə qədər tez-tez istifadə olunduğunu görüb zikr bölməsini yaxşılaşdırmaq üçün toplanır.
+• Quran pleylistlərinizə verdiyiniz adlar – pleylistlərin necə istifadə olunduğunu görmək üçün; ən çox 80 simvol saxlanılır.
+• İanə qeydləri – məbləğ və valyuta, ianənin birdəfəlik və ya aylıq olması, aylıq dəstəyin başlama, dəyişmə və yenilənmə qeydləri, həmçinin Apple-ın əməliyyat nömrəsi. Kart, IBAN və ya digər ödəniş məlumatları bura daxil DEYİL.
 • Çökmə hesabatları (Firebase Crashlytics vasitəsilə, şəxsi məlumat daşımır)
+• Apple MetricKit diaqnostikası – çökmə, donma və həddindən artıq batareya/CPU istifadəsi hesabatları (kod ünvanları, cihaz və versiya məlumatı; şəxsi məlumat yoxdur). Xətaların tapılıb düzəldilməsi üçün Vakit serverinə göndərilir.
 
 Bu istifadəçi kodu iCloud açar zənciri ilə sinxronlaşdığı üçün eyni Apple ID-yə bağlı cihazlarınız bir istifadəçi sayılır və tətbiqi silib yenidən quraşdırdıqda kod saxlanılır. Kod heç bir kimlik məlumatı daşımır; məlumatlarınız satılmır və reklam üçün istifadə olunmur.</p></div>
   <div class="legal-card"><h2>2. Məlumatlarınızı necə istifadə edirik</h2><p>• Namaz vaxtının hesablanması – Məkan cihazınızda yerli olaraq, Adhan kitabxanası ilə oflayn emal olunur.
@@ -142,7 +145,7 @@ Bu istifadəçi kodu iCloud açar zənciri ilə sinxronlaşdığı üçün eyni 
 • Apple infrastrukturunda şifrələnir; nə biz, nə Apple işçiləri, nə də üçüncü tərəflər bu məlumatlara baxa bilər.
 • iPhone, iPad, Mac və Apple Watch arasında avtomatik sinxronlaşır.
 • iCloud-u söndürdükdə yalnız cihazınızda qalır.
-• «Hesabı sil» funksiyasından istifadə etdikdə və ya Vakit məlumatlarını iCloud-dan sildikdə bütün cihazlarınızdan silinir.
+• Ayarlar → «Hesabı sil» funksiyasından istifadə etdikdə və ya Vakit məlumatlarını iCloud-dan sildikdə bütün cihazlarınızdan silinir.
 
 Ətraflı: apple.com/legal/privacy</p></div>
   <div class="legal-card"><h2>4. Apple Watch və Mac məlumatları</h2><p>Vakit watchOS 9+ üçün müşayiətçi tətbiq təqdim edir. Saatda:
@@ -162,35 +165,36 @@ Mac-də (macOS 13+):
 • Apple MapKit – Yaxındakı məscidlər, xəritə və marşrut (məkan Apple-a göndərilir).
 • Firebase Crashlytics (Google) – Kimlik məlumatı daşımayan çökmə hesabatları (stack trace, cihaz modeli, iOS/macOS versiyası).
 • Firebase Remote Config (Google) – Funksiya bayraqları və mərhələli yayım (cihazdan məlumat oxumur).
-• Apple StoreKit 2 – Könüllü ianələr (tətbiqdaxili alış). Ödəniş məlumatlarınızı Apple emal edir; Vakit kart məlumatlarını heç vaxt görmür.
+• Apple StoreKit 2 – Könüllü ianələr (birdəfəlik və aylıq). Ödəniş məlumatlarınızı Apple emal edir; Vakit kart məlumatlarını heç vaxt görmür.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Mübarək gün və versiya elanları. Elanlar mövzu üzrə hamıya birdən göndərilir; şəxsə xüsusi hədəfləmə yoxdur.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Cümə xütbəsinin mətni və səs yazısı.
-• Vakit serveri (Almaniya, Nürnberq) – İstifadə statistikası və zikr siyahınız; kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Xətm, əlfəcin, hədəf və oxuma qeydləriniz bura heç vaxt göndərilmir.
+• Cloudflare – Endirilə bilən məzmun (Quran mətni və tərcümələri, təfsir, hədis, müshəf səhifələri, tilavət və tərcümə səsləri, bildiriş səsləri) Cloudflare-in saxlama və çatdırılma şəbəkəsindən (R2/CDN) gəlir, Vakit serverinə göndərilən məlumatlar isə Cloudflare-in şifrələnmiş bağlantısından (Tunnel) keçir. Bu sorğular IP ünvanınızı Cloudflare infrastrukturundan keçirir; kimlik məlumatı daşımır.
+• Vakit serveri (Almaniya, Nürnberq) – İstifadə statistikası, zikr siyahınız, axtarışlarınızın mətni, pleylist adlarınız, ianə qeydləri və MetricKit diaqnostikası; hamısı kimlik məlumatı daşımayan istifadəçi koduna bağlıdır. Xətm, əlfəcin, hədəf və oxuma qeydləriniz bura heç vaxt göndərilmir.
 
 Qeyd: Firebase Analytics İSTİFADƏ OLUNMUR; reklam identifikatoru (IDFA) toplanmır.
 
 Google-un məxfilik siyasəti: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Reklamlar</h2><p>Vakit reklam göstərmir. Tətbiqin yeganə gəlir mənbəyi istifadəçilərin könüllü ianələridir.</p></div>
-  <div class="legal-card"><h2>7. İanələr (tətbiqdaxili alış)</h2><p>Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü ianə edə bilərsiniz. Bu əməliyyatlar:
+  <div class="legal-card"><h2>7. İanələr (tətbiqdaxili alış)</h2><p>Vakit pulsuzdur. Tərtibatçını dəstəkləmək üçün «Vakit-i Yaşat» ekranından ₺10-dan ₺10.000-ə qədər olan pillələrdə könüllü birdəfəlik və ya aylıq ianə edə bilərsiniz. Bu əməliyyatlar:
 • Apple StoreKit 2 ilə emal olunur; ödəniş məlumatlarınız (kart, IBAN, Apple Pay) yalnız Apple-a ötürülür.
-• Vakit ödəniş üsulunuzu və ya maliyyə məlumatlarınızı heç vaxt görmür və saxlamır.
-• İanələrin geri qaytarılması yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).
-• Aylıq dəstək avtomatik yenilənən abunəlikdir; App Store hesab ayarlarından idarə olunur və istədiyiniz an ləğv edilir (dövr bitməzdən ən azı 24 saat əvvəl ləğv edilməsə yenilənir).</p></div>
+• Vakit kartınızı, IBAN-ınızı və ya ödəniş üsulunuzu heç vaxt görmür və saxlamır. İanənin məbləği, valyutası, növü (birdəfəlik və ya aylıq) və Apple-ın əməliyyat nömrəsi istifadəçi kodunuza bağlı olaraq Vakit serverində qeyd olunur (ətraflı: 1-ci bölmə).
+• Aylıq dəstək avtomatik yenilənən abunəlikdir; App Store hesab ayarlarından idarə olunur və istədiyiniz an ləğv edilir (dövr bitməzdən ən azı 24 saat əvvəl ləğv edilməsə yenilənir).
+• Geri ödəniş yalnız Apple üzərindən tələb oluna bilər (reportaproblem.apple.com).</p></div>
   <div class="legal-card"><h2>8. Məlumatların saxlanma müddəti</h2><p>• Cihazdakı yerli məlumatlar – Tətbiqi silənə qədər saxlanılır.
 • iCloud məlumatları – Vakit məlumatlarını iCloud-dan silənə və ya Apple ID-nizi deaktiv edənə qədər saxlanılır.
-• Serverdəki istifadə statistikası – 180 gün (təxminən 6 ay) saxlanılır, sonra avtomatik silinir. Axtarış sorğularının mətnləri də bu müddətə tabedir.
+• Serverdəki məlumatlar (istifadə statistikası, axtarış mətnləri, zikr siyahısı, pleylist adları, ianə qeydləri, MetricKit diaqnostikası) – Müəyyən müddətdən sonra avtomatik silinmir; silinməsini istəyənə qədər saxlanılır. Tətbiqdəki Ayarlar → Hesabı sil yalnız cihazınızdakı və iCloud-dakı məlumatları silir, serverdəki məlumatları silmir. Serverdəki məlumatlarınızın silinməsi üçün hakancelikdev@gmail.com ünvanına yazın; müraciətiniz ən geci 30 gün ərzində yerinə yetirilir.
 • Çökmə hesabatları (Crashlytics) – 90 gün saxlanılır, sonra silinir.
-• Server logları – 30 gün ərzində rotasiya olunur.</p></div>
+• Server log faylları – Müəyyən ölçü limiti daxilində saxlanılır; limitə çatdıqda ən köhnələri avtomatik silinir.</p></div>
   <div class="legal-card"><h2>9. Hüquqlarınız (KVKK / GDPR)</h2><p>Türkiyənin KVKK qanunu və Aİ-nin GDPR qaydaları çərçivəsində aşağıdakı hüquqlara maliksiniz:
 • Haqqınızda hansı məlumatların toplandığını öyrənmək hüququ
 • Məlumatların emalına etiraz etmək hüququ (iOS-da Ayarlar → Vakit, Mac-də Sistem Ayarları → Vakit bölməsindən məkan, bildiriş və hərəkət icazələrini ləğv edə bilərsiniz)
-• Məlumatlarınızın silinməsini tələb etmək hüququ: Ayarlar → Hesabı sil cihazınızdakı və iCloud-dakı bütün məlumatlarınızı silir. Serverimizdəki istifadə statistikasının silinməsi üçün hakancelikdev@gmail.com ünvanına yazmağınız kifayətdir; müraciətiniz ən geci 30 gün ərzində yerinə yetirilir.
+• Məlumatlarınızın silinməsini tələb etmək hüququ: Ayarlar → Hesabı sil cihazınızdakı və iCloud-dakı bütün məlumatlarınızı silir; serverimizdəki məlumatları silmir. Serverimizdəki məlumatlarınızın (istifadə statistikası da daxil olmaqla) silinməsi üçün hakancelikdev@gmail.com ünvanına yazın; müraciətiniz ən geci 30 gün ərzində yerinə yetirilir.
 • Məlumatların daşınması hüququ
 • KVKK qurumuna müraciət etmək hüququ
 
 Müraciətlərinizi hakancelikdev@gmail.com ünvanına göndərə bilərsiniz; ən geci 30 gün ərzində cavab veririk.</p></div>
   <div class="legal-card"><h2>10. Uşaqların məxfiliyi</h2><p>Vakit App Store-da 4+ yaş kateqoriyasında təqdim olunur, lakin 13 yaşdan kiçik istifadəçilərdən bilərəkdən şəxsi məlumat toplamırıq. 13 yaşdan kiçik bir uşağın məlumat verdiyini düşünürsünüzsə, hakancelikdev@gmail.com ünvanına yazın; müvafiq məlumatlar dərhal silinəcək.</p></div>
-  <div class="legal-card"><h2>11. Təhlükəsizlik</h2><p>Bütün yerli məlumatlar cihazınızda qalır və iOS/macOS sandbox-u və cihaz şifrələməsi ilə qorunur. iCloud məlumatları Apple infrastrukturunda şifrələnir. Serverimizə göndərilən məlumatlar HTTPS/TLS ilə ötürülür və şifrələnmiş verilənlər bazasında saxlanılır; kimlik məlumatı daşımır. Vakit həmçinin həssas əməliyyatlar zamanı əlavə qoruma üçün jailbreak, debugger və inyeksiya aşkarlanması aparır.</p></div>
+  <div class="legal-card"><h2>11. Təhlükəsizlik</h2><p>Bütün yerli məlumatlar cihazınızda qalır və iOS/macOS sandbox-u və cihaz şifrələməsi ilə qorunur. iCloud məlumatları Apple infrastrukturunda şifrələnir. Serverimizə göndərilən məlumatlar ötürülmə zamanı HTTPS/TLS ilə şifrələnir və internetdən birbaşa əlçatan olmayan serverdə saxlanılır (ona yalnız Cloudflare-in şifrələnmiş bağlantısı ilə çatmaq olur); kimlik məlumatı daşımır. Vakit həmçinin həssas əməliyyatlar zamanı əlavə qoruma üçün jailbreak, debugger və inyeksiya aşkarlanması aparır.</p></div>
   <div class="legal-card"><h2>12. Siyasətdəki dəyişikliklər</h2><p>Bu siyasət tətbiq inkişaf etdikcə yenilənə bilər. Əhəmiyyətli dəyişikliklərdə bu səhifədəki «Son yenilənmə» tarixi təzələnir və tətbiq daxilində bildiriş göstərilir. Siyasəti vaxtaşırı nəzərdən keçirməyinizi tövsiyə edirik.</p></div>
   <div class="legal-card"><h2>13. Əlaqə</h2><p>Məxfiliklə bağlı suallar, müraciətlər və ya rəylər üçün: hakancelikdev@gmail.com
 

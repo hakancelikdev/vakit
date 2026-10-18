@@ -12,12 +12,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "İnternetsiz çalışmalı",
-        "body": "Herkesin her an bağlantısı yok. Vakitler, kıble, Kur'an, hadis ve zikir şebekesiz de eksiksiz çalışır."
+        "body": "Herkesin her an bağlantısı yok. Vakitler, kıble ve zikir şebekesiz de eksiksiz çalışır; Kur'an ve hadis bir kez indirildikten sonra internetsiz okunur."
       },
       {
         "id": "noAds",
         "title": "Reklam olmamalı",
-        "body": "İbadet huşû ister. Ekranınıza kendiliğinden hiçbir reklam çıkmaz."
+        "body": "İbadet huşû ister. Uygulama tamamen reklamsızdır."
       },
       {
         "id": "noPaywall",
@@ -32,7 +32,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Doğru olmalı",
-        "body": "Namaz vakti \"yaklaşık\" olamaz. 12 hesaplama yöntemi resmî takvimlerle karşılaştırılarak doğrulanır; kalan bir dakikalık farkı da kapatmak için çalışıyoruz. Hüküm içeren her metin resmî kaynağa dayanır ve kaynağı yazılır."
+        "body": "Namaz vakti \"yaklaşık\" olamaz. Diyanet, Umm Al-Qura, Singapur ve Moonsighting yöntemleri, yöntemi yayımlayan kurumun kendi takvimiyle karşılaştırılarak doğrulanır; diğer yöntemleri de doğrulamak için çalışıyoruz. Hüküm içeren her metin resmî kaynağa dayanır ve kaynağı yazılır."
       },
       {
         "id": "worldwide",
@@ -42,7 +42,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Kimliğiniz sorulmamalı",
-        "body": "Hesap açmanız istenmez; adınız, e-postanız, telefonunuz sorulmaz. İbadet kayıtlarınız yalnız sizin iCloud alanınızda durur ve satılmaz."
+        "body": "Hesap açmanız istenmez; adınız, e-postanız, telefonunuz sorulmaz. İbadet kayıtlarınız kendi iCloud alanınızda senkronlanır; verileriniz satılmaz, reklam için kullanılmaz."
       },
       {
         "id": "calm",
@@ -68,12 +68,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "It should work without internet",
-        "body": "Not everyone is online all the time. Prayer times, qibla, Qur'an, hadith and dhikr all work fully offline."
+        "body": "Not everyone is online all the time. Prayer times, qibla and dhikr work fully offline; the Quran and hadith can be read without internet once downloaded."
       },
       {
         "id": "noAds",
         "title": "There should be no ads",
-        "body": "Worship asks for stillness. No ad ever appears on your screen on its own."
+        "body": "Worship asks for stillness. The app is completely ad-free."
       },
       {
         "id": "noPaywall",
@@ -88,7 +88,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "It should be correct",
-        "body": "A prayer time cannot be \"about right\". All 12 calculation methods are verified against official calendars; we are still working to close the last minute of difference. Every text carrying a ruling rests on an official source and names it."
+        "body": "A prayer time cannot be \"about right\". The Diyanet, Umm Al-Qura, Singapore and Moonsighting methods are verified against the calendars published by the authorities behind them; we are working to verify the others too. Every text carrying a ruling rests on an official source and names it."
       },
       {
         "id": "worldwide",
@@ -98,7 +98,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "It should not ask who you are",
-        "body": "No account is required; your name, e-mail and phone are never asked. Your worship records stay in your own iCloud space and are never sold."
+        "body": "No account is required; your name, e-mail and phone are never asked. Your worship records sync in your own iCloud space; your data is never sold or used for ads."
       },
       {
         "id": "calm",
@@ -124,12 +124,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "ينبغي أن يعمل بلا إنترنت",
-        "body": "ليس الجميع متصلاً طوال الوقت. المواقيت والقبلة والقرآن والحديث والذكر تعمل كاملةً دون شبكة."
+        "body": "ليس الجميع متصلاً طوال الوقت. المواقيت والقبلة والذكر تعمل كاملةً دون شبكة، والقرآن والحديث يُقرآن دون إنترنت بعد تنزيلهما مرة واحدة."
       },
       {
         "id": "noAds",
         "title": "ينبغي ألا يفرض إعلانًا",
-        "body": "العبادة تحتاج خشوعًا. لا يظهر على شاشتك أي إعلان من تلقاء نفسه."
+        "body": "العبادة تحتاج خشوعًا. التطبيق خالٍ تمامًا من الإعلانات."
       },
       {
         "id": "noPaywall",
@@ -144,7 +144,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "ينبغي أن يكون صحيحًا",
-        "body": "وقت الصلاة لا يكون \"تقريبيًا\". تُتحقَّق طرق الحساب الاثنتا عشرة بمقارنتها بالتقاويم الرسمية، ولا نزال نعمل على إغلاق فارق الدقيقة الأخير؛ وكل نص يحمل حكمًا يستند إلى مصدر رسمي ويُذكر مصدره."
+        "body": "وقت الصلاة لا يكون \"تقريبيًا\". تُتحقَّق طرق رئاسة الشؤون الدينية وأم القرى وسنغافورة ولجنة تحري الهلال بمقارنتها بالتقاويم التي تنشرها الجهات المسؤولة عنها، ونعمل على التحقق من الطرق الأخرى أيضًا. وكل نص يحمل حكمًا يستند إلى مصدر رسمي ويُذكر مصدره."
       },
       {
         "id": "worldwide",
@@ -154,7 +154,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "ينبغي ألا يسأل عن هويتك",
-        "body": "لا يُطلب حساب، ولا اسمك ولا بريدك ولا هاتفك. تبقى سجلات عبادتك في مساحة iCloud الخاصة بك ولا تُباع."
+        "body": "لا يُطلب حساب، ولا اسمك ولا بريدك ولا هاتفك. تُزامَن سجلات عبادتك في مساحة iCloud الخاصة بك؛ ولا تُباع بياناتك ولا تُستخدم للإعلانات أبداً."
       },
       {
         "id": "calm",
@@ -180,12 +180,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "İnternetsiz işləməlidir",
-        "body": "Hər kəsin hər an bağlantısı yoxdur. Vaxtlar, qiblə, Quran, hədis və zikr şəbəkəsiz də tam işləyir."
+        "body": "Hər kəsin hər an bağlantısı yoxdur. Vaxtlar, qiblə və zikr şəbəkəsiz də tam işləyir; Quran və hədis bir dəfə endirildikdən sonra internetsiz oxunur."
       },
       {
         "id": "noAds",
         "title": "Reklam olmamalıdır",
-        "body": "İbadət xüşu istəyir. Ekranınıza öz-özünə heç bir reklam çıxmır."
+        "body": "İbadət xüşu istəyir. Tətbiq tamamilə reklamsızdır."
       },
       {
         "id": "noPaywall",
@@ -200,7 +200,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Doğru olmalıdır",
-        "body": "Namaz vaxtı \"təxmini\" ola bilməz. 12 hesablama metodu rəsmi təqvimlərlə tutuşdurularaq yoxlanılır; qalan bir dəqiqəlik fərqi də bağlamaq üçün çalışırıq. Hökm daşıyan hər mətn rəsmi mənbəyə söykənir və mənbəyi yazılır."
+        "body": "Namaz vaxtı \"təxmini\" ola bilməz. Diyanət, Ümmül-Qura, Sinqapur və Hilal Müşahidə Komitəsi metodları onlara cavabdeh qurumların dərc etdiyi təqvimlərlə tutuşdurularaq yoxlanılır; digərlərini də yoxlamaq üçün çalışırıq. Hökm daşıyan hər mətn rəsmi mənbəyə söykənir və mənbəyi yazılır."
       },
       {
         "id": "worldwide",
@@ -210,7 +210,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Kimliyiniz soruşulmamalıdır",
-        "body": "Hesab açmağınız tələb olunmur; adınız, e-poçtunuz, telefonunuz soruşulmur. İbadət qeydləriniz yalnız sizin iCloud sahənizdə qalır və satılmır."
+        "body": "Hesab açmağınız tələb olunmur; adınız, e-poçtunuz, telefonunuz soruşulmur. İbadət qeydləriniz öz iCloud sahənizdə sinxronlaşır; məlumatlarınız heç vaxt satılmır və reklam üçün istifadə olunmur."
       },
       {
         "id": "calm",
@@ -236,12 +236,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "ইন্টারনেট ছাড়াই চলা উচিত",
-        "body": "সবার সব সময় সংযোগ থাকে না। নামাজের সময়, কিবলা, কুরআন, হাদিস ও জিকির নেটওয়ার্ক ছাড়াও পুরোপুরি চলে।"
+        "body": "সবার সব সময় সংযোগ থাকে না। নামাজের সময়, কিবলা ও জিকির নেটওয়ার্ক ছাড়াও পুরোপুরি চলে; কুরআন ও হাদিস একবার ডাউনলোড করলে ইন্টারনেট ছাড়াই পড়া যায়।"
       },
       {
         "id": "noAds",
         "title": "বিজ্ঞাপন থাকা উচিত নয়",
-        "body": "ইবাদতে খুশু দরকার। আপনার পর্দায় নিজে থেকে কোনো বিজ্ঞাপন আসে না।"
+        "body": "ইবাদতে খুশু দরকার। অ্যাপটি সম্পূর্ণ বিজ্ঞাপনমুক্ত।"
       },
       {
         "id": "noPaywall",
@@ -256,7 +256,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "সঠিক হওয়া উচিত",
-        "body": "নামাজের সময় \"আনুমানিক\" হতে পারে না। ১২টি হিসাব পদ্ধতি সরকারি পঞ্জিকার সঙ্গে মিলিয়ে যাচাই করা হয়; বাকি এক মিনিটের পার্থক্যও মেটাতে আমরা কাজ করছি। বিধান বহনকারী প্রতিটি লেখা সরকারি উৎসে দাঁড়ায় এবং উৎস লেখা থাকে।"
+        "body": "নামাজের সময় \"আনুমানিক\" হতে পারে না। দিয়ানেত, উম্মুল কুরা, সিঙ্গাপুর ও মুনসাইটিং পদ্ধতিগুলো সেগুলোর পেছনের কর্তৃপক্ষের প্রকাশিত পঞ্জিকার সঙ্গে মিলিয়ে যাচাই করা হয়েছে; বাকিগুলো যাচাই করতেও আমরা কাজ করছি। বিধান বহনকারী প্রতিটি লেখা সরকারি উৎসে দাঁড়ায় এবং উৎস লেখা থাকে।"
       },
       {
         "id": "worldwide",
@@ -266,7 +266,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "আপনার পরিচয় জানতে চাওয়া উচিত নয়",
-        "body": "অ্যাকাউন্ট লাগে না; নাম, ই-মেইল বা ফোন চাওয়া হয় না। আপনার ইবাদতের নথি কেবল আপনার iCloud-এ থাকে, বিক্রি হয় না।"
+        "body": "অ্যাকাউন্ট লাগে না; নাম, ই-মেইল বা ফোন চাওয়া হয় না। আপনার ইবাদতের নথি আপনার নিজের iCloud জায়গায় সিঙ্ক হয়; আপনার তথ্য কখনো বিক্রি বা বিজ্ঞাপনে ব্যবহার করা হয় না।"
       },
       {
         "id": "calm",
@@ -292,12 +292,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Den bør virke uden internet",
-        "body": "Ikke alle er online hele tiden. Bedetider, qibla, Koranen, hadith og dhikr virker fuldt ud uden net."
+        "body": "Ikke alle er online hele tiden. Bedetider, qibla og dhikr virker fuldt ud uden net; Koranen og hadith kan læses uden internet, når de er hentet én gang."
       },
       {
         "id": "noAds",
         "title": "Der bør ikke være reklamer",
-        "body": "Tilbedelse kræver ro. Der dukker aldrig en reklame op af sig selv på din skærm."
+        "body": "Tilbedelse kræver ro. Appen er helt reklamefri."
       },
       {
         "id": "noPaywall",
@@ -312,7 +312,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Den bør være korrekt",
-        "body": "En bedetid kan ikke være \"cirka\". Alle 12 beregningsmetoder efterprøves mod officielle kalendere, og vi arbejder stadig på at lukke det sidste minuts forskel. Enhver tekst med en afgørelse hviler på en officiel kilde, som nævnes."
+        "body": "En bedetid kan ikke være \"cirka\". Metoderne fra Diyanet, Umm Al-Qura, Singapore og Moonsighting-komitéen er efterprøvet mod de kalendere, som myndighederne bag dem udgiver; vi arbejder på også at efterprøve de øvrige. Enhver tekst med en afgørelse hviler på en officiel kilde, som nævnes."
       },
       {
         "id": "worldwide",
@@ -322,7 +322,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Den bør ikke spørge, hvem du er",
-        "body": "Ingen konto kræves; navn, e-mail og telefon bliver aldrig spurgt om. Dine tilbedelsesdata bliver i dit eget iCloud og sælges ikke."
+        "body": "Ingen konto kræves; navn, e-mail og telefon bliver aldrig spurgt om. Dine tilbedelsesdata synkroniseres i dit eget iCloud; dine data sælges aldrig og bruges aldrig til reklamer."
       },
       {
         "id": "calm",
@@ -348,12 +348,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Sie sollte ohne Internet laufen",
-        "body": "Nicht jeder ist ständig online. Gebetszeiten, Qibla, Koran, Hadith und Dhikr funktionieren auch ohne Netz vollständig."
+        "body": "Nicht jeder ist ständig online. Gebetszeiten, Qibla und Dhikr funktionieren auch ohne Netz vollständig; Koran und Hadith liest du nach einmaligem Laden ebenfalls ohne Internet."
       },
       {
         "id": "noAds",
         "title": "Es sollte keine Werbung geben",
-        "body": "Andacht braucht Ruhe. Auf deinem Bildschirm erscheint von selbst keine Werbung."
+        "body": "Andacht braucht Ruhe. Die App ist komplett werbefrei."
       },
       {
         "id": "noPaywall",
@@ -368,7 +368,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Sie sollte richtig sein",
-        "body": "Eine Gebetszeit kann nicht \"ungefähr\" sein. Alle 12 Berechnungsmethoden werden mit offiziellen Kalendern abgeglichen; an der letzten Minute Abweichung arbeiten wir noch. Jeder Text mit einer Rechtsauskunft stützt sich auf eine offizielle Quelle und nennt sie."
+        "body": "Eine Gebetszeit kann nicht \"ungefähr\" sein. Die Methoden Diyanet, Umm al-Qura, Singapur und Moonsighting werden mit den Kalendern abgeglichen, die die dahinterstehenden Stellen veröffentlichen; an der Prüfung der übrigen arbeiten wir. Jeder Text mit einer Rechtsauskunft stützt sich auf eine offizielle Quelle und nennt sie."
       },
       {
         "id": "worldwide",
@@ -378,7 +378,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Sie sollte nicht fragen, wer du bist",
-        "body": "Kein Konto nötig; Name, E-Mail und Telefon werden nie verlangt. Deine Gebetsaufzeichnungen bleiben in deinem eigenen iCloud und werden nicht verkauft."
+        "body": "Kein Konto nötig; Name, E-Mail und Telefon werden nie verlangt. Deine Gebetsaufzeichnungen werden in deinem eigenen iCloud-Bereich synchronisiert; deine Daten werden nie verkauft oder für Werbung genutzt."
       },
       {
         "id": "calm",
@@ -404,12 +404,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Debería funcionar sin internet",
-        "body": "No todos están conectados siempre. Los tiempos de oración, la alquibla, el Corán, el hadiz y el dikr funcionan por completo sin red."
+        "body": "No todos están conectados siempre. Los tiempos de oración, la alquibla y el dikr funcionan por completo sin red; el Corán y el hadiz se leen sin Internet tras descargarlos una vez."
       },
       {
         "id": "noAds",
         "title": "No debería haber publicidad",
-        "body": "La adoración pide recogimiento. En tu pantalla no aparece ningún anuncio por sí solo."
+        "body": "La adoración pide recogimiento. La app no tiene ningún anuncio."
       },
       {
         "id": "noPaywall",
@@ -424,7 +424,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Debería ser exacta",
-        "body": "Un tiempo de oración no puede ser \"aproximado\". Los 12 métodos de cálculo se verifican con calendarios oficiales; aún trabajamos para cerrar el último minuto de diferencia. Todo texto con un dictamen se apoya en una fuente oficial y la cita."
+        "body": "Un tiempo de oración no puede ser \"aproximado\". Los métodos Diyanet, Umm al-Qura, Singapur y Moonsighting se verifican con los calendarios publicados por las autoridades que los respaldan; trabajamos para verificar también los demás. Todo texto con un dictamen se apoya en una fuente oficial y la cita."
       },
       {
         "id": "worldwide",
@@ -434,7 +434,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "No debería preguntar quién eres",
-        "body": "No hace falta cuenta; nunca se piden nombre, correo ni teléfono. Tus registros de adoración quedan en tu propio iCloud y no se venden."
+        "body": "No hace falta cuenta; nunca se piden nombre, correo ni teléfono. Tus registros de adoración se sincronizan en tu propio iCloud; tus datos nunca se venden ni se usan para publicidad."
       },
       {
         "id": "calm",
@@ -460,12 +460,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "باید بدون اینترنت کار کند",
-        "body": "همه همیشه به اینترنت دسترسی ندارند. اوقات نماز، قبله، قرآن، حدیث و ذکر بدون شبکه هم کامل کار می‌کنند."
+        "body": "همه همیشه به اینترنت دسترسی ندارند. اوقات نماز، قبله و ذکر بدون شبکه هم کامل کار می‌کنند؛ قرآن و حدیث هم پس از یک بار دانلود، بدون اینترنت خوانده می‌شوند."
       },
       {
         "id": "noAds",
         "title": "نباید تبلیغ داشته باشد",
-        "body": "عبادت خشوع می‌خواهد. هیچ تبلیغی خودبه‌خود روی صفحهٔ تو نمی‌آید."
+        "body": "عبادت خشوع می‌خواهد. برنامه کاملاً بدون تبلیغ است."
       },
       {
         "id": "noPaywall",
@@ -480,7 +480,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "باید درست باشد",
-        "body": "وقت نماز «تقریبی» نمی‌شود. هر ۱۲ روش محاسبه با تقویم‌های رسمی سنجیده می‌شود و هنوز برای بستن همان یک دقیقه اختلاف کار می‌کنیم؛ هر متنی که حکمی دارد بر منبع رسمی تکیه می‌کند و منبعش نوشته می‌شود."
+        "body": "وقت نماز «تقریبی» نمی‌شود. روش‌های دیانت، ام‌القری، سنگاپور و کمیته رؤیت هلال با تقویم‌هایی سنجیده می‌شوند که مرجع هر کدام منتشر کرده است؛ برای سنجش روش‌های دیگر هم کار می‌کنیم. هر متنی که حکمی دارد بر منبع رسمی تکیه می‌کند و منبعش نوشته می‌شود."
       },
       {
         "id": "worldwide",
@@ -490,7 +490,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "نباید بپرسد تو کیستی",
-        "body": "حسابی لازم نیست؛ نام، ایمیل و تلفنت هرگز پرسیده نمی‌شود. سوابق عبادتت فقط در فضای iCloud خودت می‌ماند و فروخته نمی‌شود."
+        "body": "حسابی لازم نیست؛ نام، ایمیل و تلفنت هرگز پرسیده نمی‌شود. سوابق عبادتت در فضای iCloud خودت همگام می‌شود؛ داده‌ات هرگز فروخته نمی‌شود و برای تبلیغ به کار نمی‌رود."
       },
       {
         "id": "calm",
@@ -516,12 +516,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Ngal foti gollude ko aldaa internet",
-        "body": "Wonaa kala neɗɗo woodi internet sahaa kala. Waktuuji, alqibla, Alkur'aana, hadiise e jikru ina golla haa timma ko aldaa rese."
+        "body": "Wonaa kala neɗɗo woodi internet sahaa kala. Waktuuji, alqibla e jikru ina golla haa timma ko aldaa rese; Alkur'aana e hadiise ina njanngee hay so internet alaa so jippinaama laawol gootol."
       },
       {
         "id": "noAds",
         "title": "Ñeeñal foti wonaade",
-        "body": "Dewal ina naamnoo deeƴre. Ñeeñal woo yaltataa e ekraa maa e hoore mum."
+        "body": "Dewal ina naamnoo deeƴre. Jaaɓnirgal ngal alaa ñeeñal fey."
       },
       {
         "id": "noPaywall",
@@ -536,7 +536,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Ngal foti wonde goonga",
-        "body": "Waktu juulde wonataa \"ɗoon-ɗoon\". Peeje hiisa 12 ɗen ina ƴeewndee e jantooje laamu; hiɗen golla tawa min uddi hojom gooto keddiiɗo. Kala binndi jogiiɗi ñaawoore ina tuugnoo e ɓernde laamu, ɓernde mum ina windee."
+        "body": "Waktu juulde wonataa \"ɗoon-ɗoon\". Peeje Diyanet, Umm Al-Qura, Singapore e Moonsighting ina ƴeewndaa e jantooje ɗe laamuuji ɗi ɗee peeje iwri yaltini; hiɗen golla ngam ƴeewndude goɗɗe ɗee kadi. Kala binndi jogiiɗi ñaawoore ina tuugnoo e ɓernde laamu, ɓernde mum ina windee."
       },
       {
         "id": "worldwide",
@@ -546,7 +546,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Ngal foti naamnaade an ko hommbo",
-        "body": "Konte naamnetaake; innde maa, imeel maa walla telefon maa naamnetaake. Winndanɗe dewal maa ina ngoodi tan e nokku iCloud maa, ɗe njeeytaake."
+        "body": "Konte naamnetaake; innde maa, imeel maa walla telefon maa naamnetaake. Winndanɗe dewal maa ina njokkondiree e nokku iCloud maa e hoore maa; keɓe maa njeeytaake, kuutortaake kadi ngam publisite."
       },
       {
         "id": "calm",
@@ -572,12 +572,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Elle devrait fonctionner sans internet",
-        "body": "Tout le monde n'est pas connecté en permanence. Horaires, qibla, Coran, hadith et dhikr fonctionnent entièrement hors réseau."
+        "body": "Tout le monde n'est pas connecté en permanence. Horaires, qibla et dhikr fonctionnent entièrement hors réseau ; le Coran et les hadiths se lisent sans Internet une fois téléchargés."
       },
       {
         "id": "noAds",
         "title": "Il ne devrait pas y avoir de publicité",
-        "body": "L'adoration demande le recueillement. Aucune publicité n'apparaît d'elle-même sur ton écran."
+        "body": "L'adoration demande le recueillement. L'app est entièrement sans publicité."
       },
       {
         "id": "noPaywall",
@@ -592,7 +592,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Elle devrait être juste",
-        "body": "Une heure de prière ne peut pas être « approximative ». Les 12 méthodes de calcul sont vérifiées avec les calendriers officiels ; nous travaillons encore à combler la dernière minute d'écart. Tout texte portant un avis s'appuie sur une source officielle et la cite."
+        "body": "Une heure de prière ne peut pas être « approximative ». Les méthodes Diyanet, Umm Al-Qura, Singapour et Moonsighting sont vérifiées avec les calendriers publiés par les autorités dont elles émanent ; nous travaillons à vérifier aussi les autres. Tout texte portant un avis s'appuie sur une source officielle et la cite."
       },
       {
         "id": "worldwide",
@@ -602,7 +602,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Elle ne devrait pas demander qui tu es",
-        "body": "Aucun compte n'est requis ; ni nom, ni e-mail, ni téléphone. Tes relevés de culte restent dans ton propre iCloud et ne sont pas vendus."
+        "body": "Aucun compte n'est requis ; ni nom, ni e-mail, ni téléphone ne te sont demandés. Tes enregistrements d'adoration se synchronisent dans ton propre espace iCloud ; tes données ne sont jamais vendues ni utilisées pour de la publicité."
       },
       {
         "id": "calm",
@@ -628,12 +628,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "बिना इंटरनेट चलना चाहिए",
-        "body": "हर किसी के पास हर वक़्त कनेक्शन नहीं होता। नमाज़ के वक़्त, क़िबला, क़ुरआन, हदीस और ज़िक्र बिना नेटवर्क भी पूरे चलते हैं।"
+        "body": "हर किसी के पास हर वक़्त कनेक्शन नहीं होता। नमाज़ के वक़्त, क़िबला और ज़िक्र बिना नेटवर्क भी पूरे चलते हैं; क़ुरआन और हदीस एक बार डाउनलोड करने के बाद बिना इंटरनेट पढ़े जा सकते हैं।"
       },
       {
         "id": "noAds",
         "title": "विज्ञापन नहीं होना चाहिए",
-        "body": "इबादत ख़ुशू माँगती है। आपकी स्क्रीन पर अपने आप कोई विज्ञापन नहीं आता।"
+        "body": "इबादत ख़ुशू माँगती है। ऐप पूरी तरह विज्ञापन-मुक्त है।"
       },
       {
         "id": "noPaywall",
@@ -648,7 +648,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "सही होना चाहिए",
-        "body": "नमाज़ का वक़्त \"लगभग\" नहीं हो सकता। बारह हिसाब विधियाँ आधिकारिक कैलेंडरों से मिलाकर जाँची जाती हैं; बचे हुए एक मिनट के फ़र्क़ को मिटाने पर भी हम काम कर रहे हैं। हुक्म वाला हर मतन आधिकारिक स्रोत पर टिका है और स्रोत लिखा जाता है।"
+        "body": "नमाज़ का वक़्त \"लगभग\" नहीं हो सकता। दियानत, उम्मुल क़ुरा, सिंगापुर और मूनसाइटिंग विधियाँ उनके पीछे की संस्थाओं के प्रकाशित कैलेंडरों से मिलाकर जाँची गई हैं; बाक़ी विधियों को भी जाँचने पर हम काम कर रहे हैं। हुक्म वाला हर मतन आधिकारिक स्रोत पर टिका है और स्रोत लिखा जाता है।"
       },
       {
         "id": "worldwide",
@@ -658,7 +658,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "आपकी पहचान नहीं पूछनी चाहिए",
-        "body": "खाता नहीं चाहिए; नाम, ई-मेल या फ़ोन कभी नहीं पूछा जाता। आपके इबादत के रिकॉर्ड सिर्फ़ आपके iCloud में रहते हैं और बेचे नहीं जाते।"
+        "body": "खाता नहीं चाहिए; नाम, ई-मेल या फ़ोन कभी नहीं पूछा जाता। आपके इबादत के रिकॉर्ड आपके अपने iCloud में सिंक होते हैं; आपका डेटा कभी बेचा नहीं जाता और न विज्ञापनों में इस्तेमाल होता है।"
       },
       {
         "id": "calm",
@@ -684,12 +684,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Harus berjalan tanpa internet",
-        "body": "Tidak semua orang selalu terhubung. Waktu salat, kiblat, Al-Qur'an, hadis, dan zikir berjalan penuh tanpa jaringan."
+        "body": "Tidak semua orang selalu terhubung. Waktu salat, kiblat, dan zikir berjalan penuh tanpa jaringan; Al-Qur'an dan hadis bisa dibaca tanpa internet setelah diunduh sekali."
       },
       {
         "id": "noAds",
         "title": "Tidak boleh ada iklan",
-        "body": "Ibadah menuntut kekhusyukan. Tidak ada iklan yang muncul sendiri di layarmu."
+        "body": "Ibadah menuntut kekhusyukan. Aplikasi ini sepenuhnya bebas iklan."
       },
       {
         "id": "noPaywall",
@@ -704,7 +704,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Harus benar",
-        "body": "Waktu salat tidak boleh \"kira-kira\". Kedua belas metode perhitungan diverifikasi dengan kalender resmi; selisih satu menit yang tersisa pun masih kami kejar. Setiap teks yang memuat hukum bersandar pada sumber resmi dan sumbernya dicantumkan."
+        "body": "Waktu salat tidak boleh \"kira-kira\". Metode Diyanet, Umm Al-Qura, Singapura, dan Moonsighting diverifikasi dengan kalender yang diterbitkan otoritas di baliknya; kami sedang berupaya memverifikasi metode lainnya juga. Setiap teks yang memuat hukum bersandar pada sumber resmi dan sumbernya dicantumkan."
       },
       {
         "id": "worldwide",
@@ -714,7 +714,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Tidak boleh menanyakan siapa dirimu",
-        "body": "Tidak perlu akun; nama, surel, dan nomor telepon tidak pernah diminta. Catatan ibadahmu hanya tersimpan di iCloud milikmu dan tidak dijual."
+        "body": "Tidak perlu akun; nama, surel, dan nomor telepon tidak pernah diminta. Catatan ibadahmu tersinkron di ruang iCloud milikmu sendiri; datamu tidak pernah dijual atau dipakai untuk iklan."
       },
       {
         "id": "calm",
@@ -740,12 +740,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Dovrebbe funzionare senza internet",
-        "body": "Non tutti sono sempre connessi. Orari, qibla, Corano, hadith e dhikr funzionano per intero senza rete."
+        "body": "Non tutti sono sempre connessi. Orari, qibla e dhikr funzionano per intero senza rete; Corano e hadith si leggono senza Internet dopo averli scaricati una volta."
       },
       {
         "id": "noAds",
         "title": "Non dovrebbe esserci pubblicità",
-        "body": "L'adorazione chiede raccoglimento. Sul tuo schermo non compare da sola nessuna pubblicità."
+        "body": "L'adorazione chiede raccoglimento. L'app è completamente senza pubblicità."
       },
       {
         "id": "noPaywall",
@@ -760,7 +760,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Dovrebbe essere esatta",
-        "body": "Un orario di preghiera non può essere \"circa\". I 12 metodi di calcolo sono verificati con i calendari ufficiali; stiamo ancora lavorando per colmare l'ultimo minuto di scarto. Ogni testo che porta un responso si appoggia a una fonte ufficiale e la cita."
+        "body": "Un orario di preghiera non può essere \"circa\". I metodi Diyanet, Umm Al-Qura, Singapore e Moonsighting sono verificati con i calendari pubblicati dalle autorità che li definiscono; stiamo lavorando per verificare anche gli altri. Ogni testo che porta un responso si appoggia a una fonte ufficiale e la cita."
       },
       {
         "id": "worldwide",
@@ -770,7 +770,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Non dovrebbe chiederti chi sei",
-        "body": "Nessun account richiesto; nome, e-mail e telefono non vengono mai chiesti. I tuoi registri restano nel tuo iCloud e non vengono venduti."
+        "body": "Nessun account richiesto; nome, e-mail e telefono non vengono mai chiesti. I tuoi dati di adorazione si sincronizzano nel tuo spazio iCloud; i tuoi dati non vengono mai venduti né usati per la pubblicità."
       },
       {
         "id": "calm",
@@ -796,12 +796,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "インターネットなしで動くべきだ",
-        "body": "誰もがいつも接続できるわけではありません。礼拝時刻、キブラ、クルアーン、ハディース、ズィクルは通信なしでも完全に動きます。"
+        "body": "誰もがいつも接続できるわけではありません。礼拝時刻、キブラ、ズィクルは通信なしでも完全に動きます。クルアーンとハディースも一度ダウンロードすれば、インターネットなしで読めます。"
       },
       {
         "id": "noAds",
         "title": "広告があってはならない",
-        "body": "礼拝には静けさが要ります。画面に広告がひとりでに現れることはありません。"
+        "body": "礼拝には静けさが要ります。アプリに広告は一切ありません。"
       },
       {
         "id": "noPaywall",
@@ -816,7 +816,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "正しくあるべきだ",
-        "body": "礼拝時刻に「およそ」はありません。12 の計算方式は公式のカレンダーと照合して検証し、残る 1 分の差を埋める作業も続けています。判断を含む文はすべて公式の典拠にもとづき、その典拠を明記します。"
+        "body": "礼拝時刻に「およそ」はありません。宗務庁、ウンム・アル＝クラー、シンガポール、月観測委員会の方式は、それぞれを定めた機関が公表するカレンダーと照合して検証しています。ほかの方式の検証も進めています。判断を含む文はすべて公式の典拠にもとづき、その典拠を明記します。"
       },
       {
         "id": "worldwide",
@@ -826,7 +826,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "あなたが誰かを尋ねるべきではない",
-        "body": "アカウントは不要で、氏名・メール・電話番号を尋ねることはありません。礼拝の記録はあなた自身の iCloud にとどまり、売られることはありません。"
+        "body": "アカウントは不要で、氏名・メール・電話番号を尋ねることはありません。礼拝の記録はあなた自身の iCloud で同期され、あなたのデータが売られたり広告に使われたりすることはありません。"
       },
       {
         "id": "calm",
@@ -852,12 +852,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Mesti berjalan tanpa internet",
-        "body": "Bukan semua orang sentiasa bersambung. Waktu solat, kiblat, al-Quran, hadis dan zikir berjalan sepenuhnya tanpa rangkaian."
+        "body": "Bukan semua orang sentiasa bersambung. Waktu solat, kiblat dan zikir berjalan sepenuhnya tanpa rangkaian; al-Quran dan hadis boleh dibaca tanpa internet selepas dimuat turun sekali."
       },
       {
         "id": "noAds",
         "title": "Tidak boleh ada iklan",
-        "body": "Ibadah menuntut kekhusyukan. Tiada iklan muncul sendiri pada skrin anda."
+        "body": "Ibadah menuntut kekhusyukan. Apl ini bebas iklan sepenuhnya."
       },
       {
         "id": "noPaywall",
@@ -872,7 +872,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Mesti tepat",
-        "body": "Waktu solat tidak boleh \"lebih kurang\". Kesemua 12 kaedah pengiraan disahkan dengan takwim rasmi; beza seminit yang tinggal pun masih kami kecilkan. Setiap teks yang membawa hukum bersandar pada sumber rasmi dan sumbernya dinyatakan."
+        "body": "Waktu solat tidak boleh \"lebih kurang\". Kaedah Diyanet, Umm Al-Qura, Singapura dan Moonsighting disahkan dengan takwim yang diterbitkan oleh pihak berkuasa di belakangnya; kami sedang berusaha mengesahkan kaedah lain juga. Setiap teks yang membawa hukum bersandar pada sumber rasmi dan sumbernya dinyatakan."
       },
       {
         "id": "worldwide",
@@ -882,7 +882,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Tidak patut bertanya siapa anda",
-        "body": "Tiada akaun diperlukan; nama, e-mel dan telefon tidak pernah diminta. Rekod ibadah anda kekal dalam iCloud anda sendiri dan tidak dijual."
+        "body": "Tiada akaun diperlukan; nama, e-mel dan telefon tidak pernah diminta. Rekod ibadah anda disegerakkan dalam ruang iCloud anda sendiri; data anda tidak pernah dijual atau digunakan untuk iklan."
       },
       {
         "id": "calm",
@@ -908,12 +908,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Ze hoort zonder internet te werken",
-        "body": "Niet iedereen is altijd online. Gebedstijden, qibla, Koran, hadith en dhikr werken volledig zonder netwerk."
+        "body": "Niet iedereen is altijd online. Gebedstijden, qibla en dhikr werken volledig zonder netwerk; Koran en hadith lees je na één keer downloaden ook zonder internet."
       },
       {
         "id": "noAds",
         "title": "Er horen geen advertenties te zijn",
-        "body": "Aanbidding vraagt om rust. Er verschijnt vanzelf geen enkele advertentie op je scherm."
+        "body": "Aanbidding vraagt om rust. De app is volledig reclamevrij."
       },
       {
         "id": "noPaywall",
@@ -928,7 +928,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Ze hoort te kloppen",
-        "body": "Een gebedstijd kan niet \"ongeveer\" zijn. Alle 12 rekenmethoden worden getoetst aan officiële kalenders; aan de laatste minuut verschil werken we nog. Elke tekst met een uitspraak steunt op een officiële bron en noemt die."
+        "body": "Een gebedstijd kan niet \"ongeveer\" kloppen. De methoden van Diyanet, Umm Al-Qura, Singapore en Moonsighting worden getoetst aan de kalenders die de bijbehorende instanties publiceren; aan de toetsing van de andere werken we nog. Elke tekst met een uitspraak steunt op een officiële bron en noemt die."
       },
       {
         "id": "worldwide",
@@ -938,7 +938,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Ze hoort niet te vragen wie je bent",
-        "body": "Geen account nodig; naam, e-mail en telefoon worden nooit gevraagd. Je gebedsgegevens blijven in je eigen iCloud en worden niet verkocht."
+        "body": "Geen account nodig; naam, e-mail en telefoon worden nooit gevraagd. Je aanbiddingsgegevens synchroniseren in je eigen iCloud-ruimte; je gegevens worden nooit verkocht of voor advertenties gebruikt."
       },
       {
         "id": "calm",
@@ -964,12 +964,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Deve funcionar sem internet",
-        "body": "Nem toda a gente está sempre ligada. Horários, alquibla, Alcorão, hadith e dhikr funcionam por completo sem rede."
+        "body": "Nem toda a gente está sempre ligada. Horários, alquibla e dhikr funcionam por completo sem rede; o Alcorão e o hadith leem-se sem internet depois de descarregados uma vez."
       },
       {
         "id": "noAds",
         "title": "Não deve haver publicidade",
-        "body": "A adoração pede recolhimento. No teu ecrã não aparece nenhum anúncio por si só."
+        "body": "A adoração pede recolhimento. A app não tem qualquer anúncio."
       },
       {
         "id": "noPaywall",
@@ -984,7 +984,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Deve estar certa",
-        "body": "Um horário de oração não pode ser \"por alto\". Os 12 métodos de cálculo são verificados com calendários oficiais; ainda estamos a fechar o último minuto de diferença. Todo o texto que traz um parecer assenta numa fonte oficial e cita-a."
+        "body": "Um horário de oração não pode ser \"por alto\". Os métodos Diyanet, Umm Al-Qura, Singapura e Moonsighting são verificados com os calendários publicados pelas autoridades que os definem; estamos a trabalhar para verificar também os restantes. Todo o texto que traz um parecer assenta numa fonte oficial e cita-a."
       },
       {
         "id": "worldwide",
@@ -994,7 +994,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Não deve perguntar quem és",
-        "body": "Não é preciso conta; nome, e-mail e telefone nunca são pedidos. Os teus registos ficam no teu próprio iCloud e não são vendidos."
+        "body": "Não é preciso conta; nome, e-mail e telefone nunca são pedidos. Os teus registos de adoração sincronizam no teu próprio espaço do iCloud; os teus dados nunca são vendidos nem usados para publicidade."
       },
       {
         "id": "calm",
@@ -1020,12 +1020,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Оно должно работать без интернета",
-        "body": "Не у всех и не всегда есть связь. Время молитв, кибла, Коран, хадисы и зикр работают полностью без сети."
+        "body": "Не у всех и не всегда есть связь. Время молитв, кибла и зикр работают полностью без сети; Коран и хадисы после однократной загрузки тоже читаются без интернета."
       },
       {
         "id": "noAds",
         "title": "В нём не должно быть рекламы",
-        "body": "Поклонение требует сосредоточенности. На твоём экране реклама не появляется сама собой."
+        "body": "Поклонение требует сосредоточенности. В приложении нет никакой рекламы."
       },
       {
         "id": "noPaywall",
@@ -1040,7 +1040,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Оно должно быть точным",
-        "body": "Время молитвы не бывает «примерным». Все 12 методов расчёта сверяются с официальными календарями; над оставшейся минутой расхождения мы ещё работаем. Каждый текст с религиозным заключением опирается на официальный источник и называет его."
+        "body": "Время молитвы не бывает «примерным». Методы Диянета, Умм аль-Кура, Сингапура и Комитета наблюдения за Луной сверяются с календарями, которые публикуют стоящие за ними органы; над проверкой остальных мы тоже работаем. Каждый текст с религиозным заключением опирается на официальный источник и называет его."
       },
       {
         "id": "worldwide",
@@ -1050,7 +1050,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Оно не должно спрашивать, кто ты",
-        "body": "Учётная запись не нужна; имя, почта и телефон никогда не запрашиваются. Записи о поклонении остаются в твоём iCloud и не продаются."
+        "body": "Учётная запись не нужна; имя, почта и телефон никогда не запрашиваются. Записи о поклонении синхронизируются в твоём собственном iCloud; твои данные никогда не продаются и не используются для рекламы."
       },
       {
         "id": "calm",
@@ -1076,12 +1076,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Duhet të punojë pa internet",
-        "body": "Jo të gjithë janë gjithnjë të lidhur. Kohët e namazit, kibla, Kurani, hadithi dhe dhikri punojnë plotësisht pa rrjet."
+        "body": "Jo të gjithë janë gjithnjë të lidhur. Kohët e namazit, kibla dhe dhikri punojnë plotësisht pa rrjet; Kurani dhe hadithi lexohen pa internet pasi shkarkohen një herë."
       },
       {
         "id": "noAds",
         "title": "Nuk duhet të ketë reklama",
-        "body": "Adhurimi kërkon përqendrim. Në ekranin tënd nuk shfaqet vetvetiu asnjë reklamë."
+        "body": "Adhurimi kërkon përqendrim. Aplikacioni është plotësisht pa reklama."
       },
       {
         "id": "noPaywall",
@@ -1096,7 +1096,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Duhet të jetë i saktë",
-        "body": "Koha e namazit nuk mund të jetë \"përafërsisht\". Të 12 metodat e llogaritjes verifikohen me kalendarët zyrtarë; ende po punojmë për të mbyllur minutën e fundit të ndryshimit. Çdo tekst që mbart një vendim mbështetet në burim zyrtar dhe e përmend atë."
+        "body": "Koha e namazit nuk mund të jetë \"përafërsisht\". Metodat e Diyanet-it, Umm Al-Qura-s, Singaporit dhe Moonsighting Committee verifikohen me kalendarët e botuar nga autoritetet që qëndrojnë pas tyre; po punojmë që t'i verifikojmë edhe të tjerat. Çdo tekst që mbart një vendim mbështetet në burim zyrtar dhe e përmend atë."
       },
       {
         "id": "worldwide",
@@ -1106,7 +1106,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Nuk duhet të pyesë kush je",
-        "body": "Nuk kërkohet llogari; emri, e-maili dhe telefoni nuk pyeten kurrë. Të dhënat e adhurimit tënd rrinë vetëm në iCloud-in tënd dhe nuk shiten."
+        "body": "Nuk kërkohet llogari; emri, e-maili dhe telefoni nuk pyeten kurrë. Të dhënat e adhurimit tënd sinkronizohen në iCloud-in tënd; të dhënat e tua nuk shiten kurrë dhe nuk përdoren për reklama."
       },
       {
         "id": "calm",
@@ -1132,12 +1132,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "Inapaswa kufanya kazi bila intaneti",
-        "body": "Si kila mtu ana mtandao kila wakati. Nyakati za swala, kibla, Qur'ani, hadithi na dhikri hufanya kazi kikamilifu bila mtandao."
+        "body": "Si kila mtu ana mtandao kila wakati. Nyakati za swala, kibla na dhikri hufanya kazi kikamilifu bila mtandao; Qur'ani na hadithi husomwa bila intaneti baada ya kupakuliwa mara moja."
       },
       {
         "id": "noAds",
         "title": "Hapaswi kuwa na matangazo",
-        "body": "Ibada hudai unyenyekevu. Hakuna tangazo linalojitokeza lenyewe kwenye skrini yako."
+        "body": "Ibada hudai unyenyekevu. Programu haina matangazo kabisa."
       },
       {
         "id": "noPaywall",
@@ -1152,7 +1152,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "Inapaswa kuwa sahihi",
-        "body": "Wakati wa swala hauwezi kuwa \"takriban\". Njia zote 12 za hesabu huthibitishwa kwa kalenda rasmi; bado tunafanya kazi kuondoa tofauti ya dakika moja iliyobaki. Kila maandishi yenye hukumu hutegemea chanzo rasmi na chanzo hutajwa."
+        "body": "Wakati wa swala hauwezi kuwa \"takriban\". Njia za Diyanet, Umm Al-Qura, Singapore na Moonsighting zimethibitishwa kwa kalenda zilizochapishwa na mamlaka zinazozisimamia; tunafanya kazi kuthibitisha nyingine pia. Kila maandishi yenye hukumu hutegemea chanzo rasmi na chanzo hutajwa."
       },
       {
         "id": "worldwide",
@@ -1162,7 +1162,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "Haipaswi kukuuliza wewe ni nani",
-        "body": "Hakuna akaunti inayohitajika; jina, barua pepe na simu havitaki kamwe. Kumbukumbu zako za ibada hubaki katika iCloud yako mwenyewe na haziuzwi."
+        "body": "Hakuna akaunti inayohitajika; jina, barua pepe na simu haviulizwi kamwe. Kumbukumbu zako za ibada husawazishwa katika nafasi yako mwenyewe ya iCloud; data yako haiuzwi kamwe wala haitumiki kwa matangazo."
       },
       {
         "id": "calm",
@@ -1188,12 +1188,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "ควรทำงานได้โดยไม่ต้องมีอินเทอร์เน็ต",
-        "body": "ไม่ใช่ทุกคนจะออนไลน์ได้ตลอดเวลา เวลาละหมาด กิบลัต อัลกุรอาน หะดีษ และซิกรุ ทำงานได้ครบถ้วนแม้ไม่มีเครือข่าย"
+        "body": "ไม่ใช่ทุกคนจะออนไลน์ได้ตลอดเวลา เวลาละหมาด กิบลัต และซิกรุ ทำงานได้ครบถ้วนแม้ไม่มีเครือข่าย ส่วนอัลกุรอานและหะดีษ เมื่อดาวน์โหลดครั้งเดียวแล้วก็อ่านได้โดยไม่ต้องใช้อินเทอร์เน็ต"
       },
       {
         "id": "noAds",
         "title": "ไม่ควรมีโฆษณา",
-        "body": "การอิบาดะฮ์ต้องการความสงบ ไม่มีโฆษณาใดโผล่ขึ้นมาเองบนหน้าจอของคุณ"
+        "body": "การอิบาดะฮ์ต้องการความสงบ แอปนี้ไม่มีโฆษณาเลย"
       },
       {
         "id": "noPaywall",
@@ -1208,7 +1208,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "ต้องถูกต้อง",
-        "body": "เวลาละหมาดจะ \"ประมาณ\" ไม่ได้ วิธีคำนวณทั้ง 12 แบบถูกตรวจสอบกับปฏิทินทางการ และเรายังทำงานเพื่อปิดส่วนต่างหนึ่งนาทีที่เหลือ ทุกข้อความที่มีข้อวินิจฉัยอ้างอิงแหล่งที่มาอย่างเป็นทางการพร้อมระบุแหล่งที่มา"
+        "body": "เวลาละหมาดจะ \"ประมาณ\" ไม่ได้ วิธีของกรมกิจการศาสนาตุรกี อุมมุลกุรอ สิงคโปร์ และคณะกรรมการดูดวงจันทร์ ได้รับการตรวจสอบกับปฏิทินที่หน่วยงานเจ้าของวิธีเผยแพร่ และเรากำลังทำงานเพื่อตรวจสอบวิธีอื่น ๆ ด้วย ทุกข้อความที่มีข้อวินิจฉัยอ้างอิงแหล่งที่มาอย่างเป็นทางการพร้อมระบุแหล่งที่มา"
       },
       {
         "id": "worldwide",
@@ -1218,7 +1218,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "ไม่ควรถามว่าคุณเป็นใคร",
-        "body": "ไม่ต้องสมัครบัญชี ไม่เคยถามชื่อ อีเมล หรือเบอร์โทรของคุณ บันทึกการอิบาดะฮ์อยู่ใน iCloud ของคุณเองและไม่ถูกขาย"
+        "body": "ไม่ต้องสมัครบัญชี ไม่เคยถามชื่อ อีเมล หรือเบอร์โทรของคุณ บันทึกการอิบาดะฮ์ซิงก์อยู่ใน iCloud ของคุณเอง ข้อมูลของคุณไม่เคยถูกขายหรือนำไปใช้เพื่อโฆษณา"
       },
       {
         "id": "calm",
@@ -1244,12 +1244,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "ئىنتېرنېتسىز ئىشلىشى كېرەك",
-        "body": "ھەممە ئادەمنىڭ ھەر ۋاقىت ئۇلىنىشى بولمايدۇ. ۋاقىتلار، قىبلە، قۇرئان، ھەدىس ۋە زىكىر تورسىزمۇ تولۇق ئىشلەيدۇ."
+        "body": "ھەممە ئادەمنىڭ ھەر ۋاقىت ئۇلىنىشى بولمايدۇ. ۋاقىتلار، قىبلە ۋە زىكىر تورسىزمۇ تولۇق ئىشلەيدۇ؛ قۇرئان ۋە ھەدىس بىر قېتىم چۈشۈرۈلگەندىن كېيىن تورسىز ئوقۇلىدۇ."
       },
       {
         "id": "noAds",
         "title": "رېكلام بولماسلىقى كېرەك",
-        "body": "ئىبادەت خۇشۇ تەلەپ قىلىدۇ. ئېكرانىڭىزغا ئۆزلۈكىدىن ھېچقانداق رېكلام چىقمايدۇ."
+        "body": "ئىبادەت خۇشۇ تەلەپ قىلىدۇ. دېتالدا ھېچقانداق رېكلام يوق."
       },
       {
         "id": "noPaywall",
@@ -1264,7 +1264,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "توغرا بولۇشى كېرەك",
-        "body": "ناماز ۋاقتى «تەخمىنەن» بولالمايدۇ. 12 خىل ھېسابلاش ئۇسۇلى رەسمىي كالېندارلار بىلەن سېلىشتۇرۇپ دەلىللىنىدۇ، قالغان بىر مىنۇتلۇق پەرقنى تۈگىتىش ئۈچۈنمۇ ئىشلەۋاتىمىز؛ ھۆكۈم بار ھەر بىر تېكىست رەسمىي مەنبەگە ئاساسلىنىدۇ ۋە مەنبەسى يېزىلىدۇ."
+        "body": "ناماز ۋاقتى «تەخمىنەن» بولالمايدۇ. Diyanet، ئۇممۇل قۇرا، سىنگاپور ۋە ھىلال كۆزىتىش كومىتېتى ئۇسۇللىرى مەسئۇل ئورگانلىرى ئېلان قىلغان كالېندارلار بىلەن سېلىشتۇرۇپ دەلىللىنىدۇ؛ باشقا ئۇسۇللارنى دەلىللەش ئۈچۈنمۇ ئىشلەۋاتىمىز. ھۆكۈم بار ھەر بىر تېكىست رەسمىي مەنبەگە ئاساسلىنىدۇ ۋە مەنبەسى يېزىلىدۇ."
       },
       {
         "id": "worldwide",
@@ -1274,7 +1274,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "كىملىكىڭىزنى سورىماسلىقى كېرەك",
-        "body": "ھېسابات ئېچىش تەلەپ قىلىنمايدۇ؛ ئىسمىڭىز، ئېلخېتىڭىز ياكى تېلېفونىڭىز سورالمايدۇ. ئىبادەت خاتىرىلىرىڭىز پەقەت ئۆزىڭىزنىڭ iCloud بوشلۇقىدا تۇرىدۇ ۋە سېتىلمايدۇ."
+        "body": "ھېسابات ئېچىش تەلەپ قىلىنمايدۇ؛ ئىسمىڭىز، ئېلخېتىڭىز ياكى تېلېفونىڭىز سورالمايدۇ. ئىبادەت خاتىرىلىرىڭىز ئۆزىڭىزنىڭ iCloud بوشلۇقىدا ماسلىشىدۇ؛ سانلىق مەلۇماتىڭىز ھەرگىز سېتىلمايدۇ ۋە ئېلانغا ئىشلىتىلمەيدۇ."
       },
       {
         "id": "calm",
@@ -1300,12 +1300,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "انٹرنیٹ کے بغیر چلنی چاہیے",
-        "body": "ہر کسی کو ہر وقت کنیکشن میسر نہیں۔ نماز کے اوقات، قبلہ، قرآن، حدیث اور ذکر نیٹ ورک کے بغیر بھی مکمل چلتے ہیں۔"
+        "body": "ہر کسی کو ہر وقت کنیکشن میسر نہیں۔ نماز کے اوقات، قبلہ اور ذکر نیٹ ورک کے بغیر بھی مکمل چلتے ہیں؛ قرآن اور حدیث ایک بار ڈاؤن لوڈ کرنے کے بعد انٹرنیٹ کے بغیر پڑھے جا سکتے ہیں۔"
       },
       {
         "id": "noAds",
         "title": "اشتہار نہیں ہونا چاہیے",
-        "body": "عبادت خشوع مانگتی ہے۔ آپ کی اسکرین پر خود بخود کوئی اشتہار نہیں آتا۔"
+        "body": "عبادت خشوع مانگتی ہے۔ ایپ مکمل طور پر اشتہارات سے پاک ہے۔"
       },
       {
         "id": "noPaywall",
@@ -1320,7 +1320,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "درست ہونی چاہیے",
-        "body": "نماز کا وقت \"تقریباً\" نہیں ہو سکتا۔ بارہ حسابی طریقے سرکاری تقویموں سے جانچے جاتے ہیں؛ باقی ایک منٹ کا فرق مٹانے پر بھی ہم کام کر رہے ہیں۔ حکم رکھنے والا ہر متن سرکاری ماخذ پر قائم ہے اور ماخذ لکھا جاتا ہے۔"
+        "body": "نماز کا وقت \"تقریباً\" نہیں ہو سکتا۔ دیانت، ام القریٰ، سنگاپور اور رویتِ ہلال کمیٹی کے طریقے ان کے ذمہ دار اداروں کی شائع کردہ تقویموں سے جانچے جاتے ہیں؛ باقی طریقوں کی جانچ پر بھی ہم کام کر رہے ہیں۔ حکم رکھنے والا ہر متن سرکاری ماخذ پر قائم ہے اور ماخذ لکھا جاتا ہے۔"
       },
       {
         "id": "worldwide",
@@ -1330,7 +1330,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "آپ کی شناخت نہیں پوچھنی چاہیے",
-        "body": "کھاتہ درکار نہیں؛ نام، ای-میل یا فون کبھی نہیں پوچھے جاتے۔ آپ کے عبادت کے اندراج صرف آپ کے اپنے iCloud میں رہتے ہیں اور بیچے نہیں جاتے۔"
+        "body": "کھاتہ درکار نہیں؛ نام، ای-میل یا فون کبھی نہیں پوچھے جاتے۔ آپ کے عبادت کے اندراج آپ کے اپنے iCloud میں ہم آہنگ ہوتے ہیں؛ آپ کا ڈیٹا کبھی بیچا یا اشتہارات کے لیے استعمال نہیں کیا جاتا۔"
       },
       {
         "id": "calm",
@@ -1356,12 +1356,12 @@ module.exports = {
       {
         "id": "offline",
         "title": "应当离线也能用",
-        "body": "不是每个人随时都有网络。礼拜时间、朝向、《古兰经》、圣训和赞词，断网也完整可用。"
+        "body": "不是每个人随时都有网络。礼拜时间、朝向和赞词断网也完整可用；《古兰经》和圣训下载一次后，也能离线阅读。"
       },
       {
         "id": "noAds",
         "title": "不该有广告",
-        "body": "功修需要静心。屏幕上不会自己冒出任何广告。"
+        "body": "功修需要静心。应用完全没有广告。"
       },
       {
         "id": "noPaywall",
@@ -1376,7 +1376,7 @@ module.exports = {
       {
         "id": "correct",
         "title": "必须准确",
-        "body": "礼拜时间不能\"大概\"。12 种计算方法都会与官方历书核对，剩下的一分钟差距我们仍在补齐；凡涉及教法判断的文字都依据官方来源，并写明出处。"
+        "body": "礼拜时间不能\"大概\"。宗教事务部、乌姆·库拉、新加坡和观月委员会的方法都已与其背后机构公布的历书核对；其他方法我们也在努力核对。凡涉及教法判断的文字都依据官方来源，并写明出处。"
       },
       {
         "id": "worldwide",
@@ -1386,7 +1386,7 @@ module.exports = {
       {
         "id": "privacy",
         "title": "不该问你是谁",
-        "body": "不需要账号，也从不索要姓名、邮箱或手机号。你的功修记录只留在你自己的 iCloud 里，不会被出售。"
+        "body": "不需要账号，也从不索要姓名、邮箱或手机号。你的功修记录在你自己的 iCloud 里同步；你的数据从不被出售，也不用于广告。"
       },
       {
         "id": "calm",

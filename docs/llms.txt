@@ -1,11 +1,11 @@
 # Vakit: Prayer Times, Qibla, Quran
 
-> Free, ad-free, offline, no account. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
+> Free, ad-free, no account; prayer times work offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
-Apple Watch and Mac, built by Hakan Çelik. Current release: 2.0.0; requires
+Apple Watch and Mac, built by Hakan Çelik. Current release: 2.1.0; requires
 iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
-505 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
+512 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
 Android (closed testing): join https://groups.google.com/g/vakit-android-test, then install from https://play.google.com/apps/testing/com.hakancelikdev.vakit
 
 ## What makes it different
@@ -38,17 +38,17 @@ Android (closed testing): join https://groups.google.com/g/vakit-android-test, t
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **25 Languages** — Right-to-left interface in Arabic, Urdu, Persian and Uyghur.
 - **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
-- **Holy Quran** — 114 surahs. Word-by-word, translation, tafsir, classical Mushaf.
+- **Holy Quran** — 114 surahs. Word-by-word, translations in 24 languages, tafsir, classical Mushaf.
 - **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
 - **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
 - **Playlists** — Line up surahs in your own order, name the list and play it end to end — offline too.
-- **Spoken Translation** — Hear the translation in your device's own voice — alone or after each verse, offline.
-- **Hadith** — Over 36,000 ahadith across seven major collections.
+- **Spoken Translation** — The natural Vakit voice for the 13 Turkish translations (offline once downloaded), your device's own voice for other languages — alone or after each verse.
+- **Hadith** — Over 36,000 ahadith across seven major collections, in Arabic with translations in 7 languages.
 - **Daily Content** — Verse, hadith and name of the day on one screen; look back over the past week.
 - **Friday Sermon** — For Diyanet-method users: read, listen to and store the khutbah offline.
 - **Friday Guide** — Preparation, ghusl, the khutbah, Surah al-Kahf and salawat — the whole Friday on one page.
-- **Dhikr Counter** — Ring-based progress, presets, and custom dhikr.
+- **Dhikr Counter** — Ring-based progress, presets and custom dhikr; undo a mistaken count.
 - **Tasbihat** — 33-33-33, or the full post-prayer sequence.
 - **Asma al-Husna** — 99 names of Allah, with transliteration and meaning; add any as dhikr.
 - **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan.
@@ -74,7 +74,8 @@ Android (closed testing): join https://groups.google.com/g/vakit-android-test, t
 - **Unified Search** — One search, every tool — type 'Baqarah 255' to jump to the ayah.
 - **Bookmarks** — Save ayat and hadith.
 - **iCloud Sync** — Your records stay in your own iCloud, on every device.
-- **Tafsir** — Diyanet commentary — tap an ayah to open it, with the range it covers.
+- **Tafsir** — 46 tafsir in 19 languages — Kur'an Yolu, al-Tabari, al-Qurtubi and more; tap an ayah to open it, with the range it covers.
+- **Translation Sources** — 71 Quran translations in 24 languages, 46 tafsir in 19; pick a source by translator or author name, with its credit beside the text. Sources not yet reviewed carry an "Is this correct?" note to report a mistake.
 - **Share Cards** — Beautiful cards for ayat, hadith, dhikr and the names of Allah.
 - **Fasting** — Ramadan, Shawwal, and day-by-day tracking.
 - **Nearby Mosques** — Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.
@@ -113,7 +114,7 @@ Yes — it is in closed testing on Google Play (Android 8.0 and later). First jo
 
 ### Can I choose the adhan sound?
 
-Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer. The recordings ship with the app, so playing them needs no connection.
+Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer; custom notification sounds download once when you first choose them. The recordings ship with the app, so playing them needs no connection.
 
 ### Is there an alarm for Fajr?
 
@@ -125,7 +126,7 @@ The khutbah Diyanet publishes each week lands in the app; you can read it, liste
 
 ### What's in the Quran feature?
 
-All 114 surahs, word-by-word analysis, Diyanet tafsir, traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text and translation, tafsir and the Madinah mushaf work offline once downloaded; recitation plays offline for the surahs or juz you download. The translation is read by your device's own voice — on its own or after each verse — with no extra audio download and no internet needed.
+All 114 surahs, word-by-word analysis, 71 translations in 24 languages and 46 tafsir in 19 (you pick the source by translator or author name, and its credit is shown beside the text), traditional Mushaf view, audio recitation, spoken translation, and a hatim tracker. The text and translation, tafsir and the Madinah mushaf work offline once downloaded; recitation plays offline for the surahs or juz you download. For the 13 Turkish translations the natural Vakit voice reads the translation, offline once downloaded; in other languages your device's own voice reads it, with no audio download and no internet. Either plays on its own or after each verse.
 
 ### How does worship tracking work?
 
@@ -148,13 +149,13 @@ Your records themselves — qada ledger, khatm, bookmark list, reading history, 
 The ten principles the app is built on, in the app's own words
 (https://vakit.hakancelik.dev/en/manifesto.html, in every interface language):
 
-- **It should work without internet.** Not everyone is online all the time. Prayer times, qibla, Qur'an, hadith and dhikr all work fully offline.
-- **There should be no ads.** Worship asks for stillness. No ad ever appears on your screen on its own.
+- **It should work without internet.** Not everyone is online all the time. Prayer times, qibla and dhikr work fully offline; the Quran and hadith can be read without internet once downloaded.
+- **There should be no ads.** Worship asks for stillness. The app is completely ad-free.
 - **No feature should sit behind a payment.** Worship is everyone's right. There is no locked feature, no privileged tier, no trial period.
 - **Everyone should be able to use it.** Someone who cannot read, sees poorly or cannot see at all should use it with ease: screen reader, large type, high contrast, content you can listen to.
-- **It should be correct.** A prayer time cannot be "about right". All 12 calculation methods are verified against official calendars; we are still working to close the last minute of difference. Every text carrying a ruling rests on an official source and names it.
+- **It should be correct.** A prayer time cannot be "about right". The Diyanet, Umm Al-Qura, Singapore and Moonsighting methods are verified against the calendars published by the authorities behind them; we are working to verify the others too. Every text carrying a ruling rests on an official source and names it.
 - **It should work anywhere in the world.** In the north where the sun does not set for days, at the equator, on a journey — it still gives the right time. "We have no users there" is not a reason.
-- **It should not ask who you are.** No account is required; your name, e-mail and phone are never asked. Your worship records stay in your own iCloud space and are never sold.
+- **It should not ask who you are.** No account is required; your name, e-mail and phone are never asked. Your worship records sync in your own iCloud space; your data is never sold or used for ads.
 - **It should not overwhelm you.** No flood of notifications, no streak pressure, no badge race. It steps aside when you don't need it.
 - **It should speak everyone's language.** It speaks 25 languages, right-to-left ones included. Muslims are everywhere; so should the app be.
 - **It should stand on its users' support.** Large or small, everyone's contribution keeps this service going.
@@ -191,6 +192,6 @@ The home page exists in every interface language:
 
 - [Privacy policy](https://vakit.hakancelik.dev/en/privacy.html) ([Turkish](https://vakit.hakancelik.dev/privacy.html))
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
-- [Source](https://github.com/hakancelikdev/vakit)
+- [Website source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-10-14
+Last updated: 2026-10-18

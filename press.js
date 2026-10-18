@@ -49,7 +49,7 @@ module.exports = {
       ["Güncel sürüm", SITE.appVersion],
       ["App Store puanı", `${RATING} (Türkiye mağazası)`],
       ["App Store kimliği", SITE.appStoreId],
-      ["Gizlilik", "Hesap yok, kimlik bilgisi yok; yalnız anonim kullanım istatistiği"],
+      ["Gizlilik", "Hesap yok, kimlik bilgisi yok; kullanım istatistikleri kimlik içermeyen takma bir kullanıcı koduna bağlı, satılmaz"],
     ],
     sections: [
       {
@@ -58,7 +58,7 @@ module.exports = {
       },
       {
         t: "Öne çıkan özellikler",
-        b: "• Namaz vakitleri, kıble pusulası, kerahat ve nafile aralıkları, sahur alarmı (sessiz ve odak modunu deler)\n• İmsakiye: bir ayın bütün vakitleri tek tabloda, basılı takvimlerdeki gibi\n• Kur'an-ı Kerim: iki mushaf hattı, kelime kelime meal, dokuz kâri, kendi çalma listeniz, çevrimdışı indirme\n• 36.000+ hadis (7 koleksiyon), Esmâ-ül Hüsnâ, zikirmatik ve namaz tesbihatı\n• Kaza namazı ve kaza orucu defteri, ibadet hedefleri, hatim takibi, muhasebe ekranı\n• Cuma ve mübarek günler için adım adım rehberler; Diyanet'in haftalık hutbesi\n• 26 widget, Dynamic Island ve Live Activity, 6 Denetim Merkezi kısayolu, 14 Apple Watch komplikasyonu, Mac menü çubuğu",
+        b: "• Namaz vakitleri, kıble pusulası, kerahat ve nafile aralıkları, sahur alarmı (iOS 26'da sessiz ve odak modunu delen gerçek bir alarm, önceki sürümlerde bildirim)\n• İmsakiye: bir ayın bütün vakitleri tek tabloda, basılı takvimlerdeki gibi\n• Kur'an-ı Kerim: iki mushaf hattı, kelime kelime meal, dokuz kâri, kendi çalma listeniz, çevrimdışı indirme\n• 24 dilde 71 meal ve 19 dilde 46 tefsir: kaynak mütercim ya da müellif adıyla seçilir, her metnin künyesi yanında yazar; Türkçe 13 mealde meali doğal \"Vakit sesi\" okur\n• Henüz gözden geçirilmemiş kaynak ve çevirilerin altında \"Doğru mu?\" notu: kullanıcı hatalı yeri tek dokunuşla bildirir\n• 36.000+ hadis (7 koleksiyon, Arapça aslı ve 7 dilde tercüme), Esmâ-ül Hüsnâ, geri alınabilen sayımla zikirmatik ve namaz tesbihatı\n• Kaza namazı ve kaza orucu defteri, ibadet hedefleri, hatim takibi, muhasebe ekranı\n• Cuma ve mübarek günler için adım adım rehberler; Diyanet'in haftalık hutbesi\n• 26 widget, Dynamic Island ve Live Activity, 6 Denetim Merkezi kısayolu, 14 Apple Watch komplikasyonu, Mac menü çubuğu",
       },
       {
         t: "Geliştirici",
@@ -106,7 +106,7 @@ module.exports = {
       ["Current version", SITE.appVersion],
       ["App Store rating", `${RATING} (Turkish storefront)`],
       ["App Store ID", SITE.appStoreId],
-      ["Privacy", "No account, no identity data; anonymous usage statistics only"],
+      ["Privacy", "No account, no identity data; usage statistics are tied to a pseudonymous user code and never sold"],
     ],
     sections: [
       {
@@ -115,7 +115,7 @@ module.exports = {
       },
       {
         t: "Feature highlights",
-        b: "• Prayer times, a Qibla compass, karahat and nafl windows, and a suhoor alarm that sounds through silent mode and Focus\n• Imsakiye: a whole month of prayer times in one table, the way printed calendars show them\n• The Qur'an: two mushaf scripts, word-by-word translation, nine reciters, your own playlists, offline download\n• 36,000+ hadith across seven collections, the 99 Names, a dhikr counter and the post-prayer tasbihat\n• Ledgers for missed prayers and fasts, worship goals, hatim tracking and an accounting screen\n• Step-by-step guides for Fridays and the holy days, plus Diyanet's weekly sermon\n• 26 widgets, Dynamic Island and Live Activity, six Control Center controls, 14 Apple Watch complications, a Mac menu bar item",
+        b: "• Prayer times, a Qibla compass, karahat and nafl windows, and a suhoor alarm (on iOS 26 a real alarm that sounds through silent mode and Focus; a notification on earlier versions)\n• Imsakiye: a whole month of prayer times in one table, the way printed calendars show them\n• The Qur'an: two mushaf scripts, word-by-word translation, nine reciters, your own playlists, offline download\n• 71 translations in 24 languages and 46 tafsir in 19: sources are chosen by translator or author name, each text's credit shown beside it; for the 13 Turkish translations a natural \"Vakit voice\" reads the translation\n• An \"Is this correct?\" note under sources and translations not yet reviewed lets readers report a mistake in one tap\n• 36,000+ hadith across seven collections, in Arabic with translations in 7 languages, the 99 Names, a dhikr counter with undo and the post-prayer tasbihat\n• Ledgers for missed prayers and fasts, worship goals, hatim tracking and an accounting screen\n• Step-by-step guides for Fridays and the holy days, plus Diyanet's weekly sermon\n• 26 widgets, Dynamic Island and Live Activity, six Control Center controls, 14 Apple Watch complications, a Mac menu bar item",
       },
       {
         t: "Developer",
