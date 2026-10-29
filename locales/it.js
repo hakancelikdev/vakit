@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Che nulla interrompa", "fin-h2": "la tua adorazione.",
     "fin-p": "Gratis. Senza pubblicità. Nessun account. Gli orari di preghiera funzionano offline. iPhone, iPad, Apple Watch, Mac e Android: iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Scarica su App Store", explore: "Scopri le funzioni →",
-    playCta: "Disponibile su Google Play",
+    playCta: "Scarica su Google Play",
     "faq-android-q": "Vakit è disponibile su Android?",
     "faq-android-a": "Sì. Vakit è su Google Play per Android 8.0 e versioni successive: gratis e senza pubblicità, con gli stessi 12 metodi di calcolo e 25 lingue. Apple Watch, Mac e la sincronizzazione iCloud sono solo per dispositivi Apple.",
     playTestCta: "Provalo su Android",

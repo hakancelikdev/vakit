@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Jangan biarkan ibadah anda", "fin-h2": "terputus.",
     "fin-p": "Percuma. Tanpa iklan. Tiada akaun. Waktu solat berfungsi luar talian. iPhone, iPad, Apple Watch, Mac dan Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Muat turun di App Store", explore: "Terokai ciri →",
-    playCta: "Dapatkan di Google Play",
+    playCta: "Muat turun di Google Play",
     "faq-android-q": "Adakah Vakit untuk Android?",
     "faq-android-a": "Ya. Vakit ada di Google Play untuk Android 8.0 dan ke atas — percuma dan tanpa iklan, dengan 12 kaedah pengiraan dan 25 bahasa yang sama. Apple Watch, Mac dan penyegerakan iCloud hanya untuk peranti Apple.",
     playTestCta: "Cuba di Android",

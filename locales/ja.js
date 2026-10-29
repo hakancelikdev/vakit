@@ -44,7 +44,7 @@ module.exports = {
     "fin-h1": "礼拝を", "fin-h2": "途切れさせないために。",
     "fin-p": "無料。広告なし。アカウント不要。礼拝時刻はオフラインで動作。iPhone、iPad、Apple Watch、Mac、Android——iOS 16.4 以降、watchOS 9 以降、macOS 13 以降、Android 8.0 以降。",
     downloadCta2: "App Store からダウンロード", explore: "機能を見る →",
-    playCta: "Google Play で手に入れよう",
+    playCta: "Google Play からダウンロード",
     "faq-android-q": "Android 版はありますか？",
     "faq-android-a": "はい。Vakit は Android 8.0 以降向けに Google Play で配信しています。無料・広告なしで、12 の計算方法と 25 言語も同じです。Apple Watch、Mac、iCloud 同期は Apple デバイスのみです。",
     playTestCta: "Android で試す",

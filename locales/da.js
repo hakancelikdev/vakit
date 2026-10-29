@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Så din ibada", "fin-h2": "aldrig bliver afbrudt.",
     "fin-p": "Gratis. Uden reklamer. Ingen konto. Bedetiderne virker offline. iPhone, iPad, Apple Watch, Mac og Android – iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Hent i App Store", explore: "Udforsk funktionerne →",
-    playCta: "Nu på Google Play",
+    playCta: "Hent på Google Play",
     "faq-android-q": "Findes Vakit til Android?",
     "faq-android-a": "Ja. Vakit er på Google Play til Android 8.0 og nyere — gratis og uden reklamer, med de samme 12 beregningsmetoder og 25 sprog. Apple Watch, Mac og iCloud-synkronisering findes kun på Apple-enheder.",
     playTestCta: "Prøv den på Android",

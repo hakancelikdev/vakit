@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Пусть ваш ибадат", "fin-h2": "не прерывается.",
     "fin-p": "Бесплатно. Без рекламы. Без аккаунта. Время намаза доступно без интернета. iPhone, iPad, Apple Watch, Mac и Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Загрузите в App Store", explore: "Все возможности →",
-    playCta: "Доступно в Google Play",
+    playCta: "Загрузите в Google Play",
     "faq-android-q": "Есть ли Vakit для Android?",
     "faq-android-a": "Да. Vakit есть в Google Play для Android 8.0 и новее — бесплатно и без рекламы, с теми же 12 методами расчёта и 25 языками. Apple Watch, Mac и синхронизация через iCloud доступны только на устройствах Apple.",
     playTestCta: "Попробовать на Android",

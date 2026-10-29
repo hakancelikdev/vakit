@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "لا تدع عبادتك", "fin-h2": "تنقطع.",
     "fin-p": "مجاني. بلا إعلانات. بلا حساب. أوقات الصلاة تعمل دون إنترنت. على iPhone وiPad وApple Watch وMac وAndroid — iOS 16.4+ وwatchOS 9+ وmacOS 13+ وAndroid 8.0+.",
     downloadCta2: "حمّله من App Store", explore: "استكشف الميزات ←",
-    playCta: "احصل عليه من Google Play",
+    playCta: "حمّله من Google Play",
     "faq-android-q": "هل Vakit متوفر على Android؟",
     "faq-android-a": "نعم. Vakit متوفر على Google Play لأجهزة Android 8.0 وما بعده — مجاني وبلا إعلانات، بنفس طرق الحساب الـ12 واللغات الـ25. أما Apple Watch وMac والمزامنة عبر iCloud فهي لأجهزة Apple فقط.",
     playTestCta: "جرّبه على Android",

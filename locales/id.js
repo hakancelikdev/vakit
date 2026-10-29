@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Jangan biarkan ibadahmu", "fin-h2": "terputus.",
     "fin-p": "Gratis. Tanpa iklan. Tanpa akun. Jadwal salat bisa offline. iPhone, iPad, Apple Watch, Mac, dan Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Unduh di App Store", explore: "Jelajahi fitur →",
-    playCta: "Temukan di Google Play",
+    playCta: "Unduh di Google Play",
     "faq-android-q": "Apakah Vakit ada di Android?",
     "faq-android-a": "Ya. Vakit ada di Google Play untuk Android 8.0 dan yang lebih baru — gratis dan tanpa iklan, dengan 12 metode perhitungan dan 25 bahasa yang sama. Apple Watch, Mac, dan sinkronisasi iCloud hanya untuk perangkat Apple.",
     playTestCta: "Coba di Android",

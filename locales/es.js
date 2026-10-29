@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "Que nada interrumpa", "fin-h2": "tu adoración.",
     "fin-p": "Gratis. Sin anuncios. Sin cuenta. Los horarios de oración funcionan sin conexión. iPhone, iPad, Apple Watch, Mac y Android, con iOS 16.4+, watchOS 9+ macOS 13+ y Android 8.0+.",
     downloadCta2: "Descárgalo en el App Store", explore: "Explorar funciones →",
-    playCta: "Disponible en Google Play",
+    playCta: "Descárgalo en Google Play",
     "faq-android-q": "¿Está Vakit en Android?",
     "faq-android-a": "Sí. Vakit está en Google Play para Android 8.0 y posteriores: gratis y sin anuncios, con los mismos 12 métodos de cálculo y 25 idiomas. Apple Watch, Mac y la sincronización con iCloud son exclusivos de Apple.",
     playTestCta: "Pruébalo en Android",

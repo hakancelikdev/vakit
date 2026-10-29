@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "آپ کی عبادت", "fin-h2": "ادھوری نہ رہے۔",
     "fin-p": "مفت۔ اشتہارات سے پاک۔ کوئی اکاؤنٹ نہیں۔ نماز کے اوقات آف لائن کام کرتے ہیں۔ iPhone، iPad، Apple Watch، Mac اور Android — iOS 16.4+، watchOS 9+، macOS 13+، Android 8.0+۔",
     downloadCta2: "App Store سے ڈاؤن لوڈ کریں", explore: "خصوصیات دیکھیں ←",
-    playCta: "Google Play پر حاصل کریں",
+    playCta: "Google Play سے ڈاؤن لوڈ کریں",
     "faq-android-q": "کیا Vakit اینڈرائیڈ پر ہے؟",
     "faq-android-a": "جی ہاں۔ Vakit اینڈرائیڈ 8.0 اور اس کے بعد کے آلات کے لیے Google Play پر ہے — مفت اور اشتہارات کے بغیر، انہی 12 حساب کے طریقوں اور 25 زبانوں کے ساتھ۔ Apple Watch، Mac اور iCloud ہم آہنگی صرف Apple آلات پر ہیں۔",
     playTestCta: "اینڈرائیڈ پر آزمائیں",

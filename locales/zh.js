@@ -44,7 +44,7 @@ module.exports = {
     "fin-h1": "别让你的功修", "fin-h2": "半途中断。",
     "fin-p": "免费。无广告。无需账户。礼拜时间可离线使用。支持 iPhone、iPad、Apple Watch、Mac 和 Android——iOS 16.4+、watchOS 9+、macOS 13+、Android 8.0+。",
     downloadCta2: "在 App Store 下载", explore: "探索功能 →",
-    playCta: "在 Google Play 上下载",
+    playCta: "在 Google Play 下载",
     "faq-android-q": "Vakit 有 Android 版吗？",
     "faq-android-a": "有。Vakit 已在 Google Play 上架，支持 Android 8.0 及以上版本——免费、无广告，同样提供 12 种计算方法和 25 种语言。Apple Watch、Mac 和 iCloud 同步仅限 Apple 设备。",
     playTestCta: "在 Android 上试用",

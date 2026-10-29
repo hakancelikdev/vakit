@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "আপনার ইবাদত যেন", "fin-h2": "মাঝপথে থেমে না যায়।",
     "fin-p": "বিনামূল্যে। বিজ্ঞাপনমুক্ত। অ্যাকাউন্ট নেই। নামাজের সময় অফলাইনে চলে। iPhone, iPad, Apple Watch, Mac ও Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+।",
     downloadCta2: "App Store থেকে ডাউনলোড করুন", explore: "ফিচারগুলো দেখুন →",
-    playCta: "Google Play থেকে পান",
+    playCta: "Google Play থেকে ডাউনলোড করুন",
     "faq-android-q": "Vakit কি Android-এ আছে?",
     "faq-android-a": "হ্যাঁ। Android 8.0 ও পরবর্তী সংস্করণের জন্য Vakit Google Play-তে আছে — বিনামূল্যে ও বিজ্ঞাপনমুক্ত, একই ১২টি হিসাব পদ্ধতি ও ২৫টি ভাষাসহ। Apple Watch, Mac ও iCloud সিঙ্ক কেবল Apple ডিভাইসে।",
     playTestCta: "Android-এ চেষ্টা করুন",

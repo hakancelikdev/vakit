@@ -43,7 +43,7 @@ module.exports = {
     "fin-h1": "İbadətiniz yarımçıq", "fin-h2": "qalmasın.",
     "fin-p": "Pulsuz. Reklamsız. Hesab yoxdur. Namaz vaxtları oflayn işləyir. iPhone, iPad, Apple Watch, Mac və Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "App Store-dan yükləyin", explore: "Xüsusiyyətləri kəşf et →",
-    playCta: "Google Play-dən əldə edin",
+    playCta: "Google Play-dən yükləyin",
     "faq-android-q": "Vakit Android-də varmı?",
     "faq-android-a": "Bəli. Vakit Android 8.0 və daha yeni cihazlar üçün Google Play-dədir — pulsuz və reklamsız, eyni 12 hesablama üsulu və 25 dillə. Apple Watch, Mac və iCloud sinxronizasiyası yalnız Apple cihazlarındadır.",
     playTestCta: "Android-də sınayın",

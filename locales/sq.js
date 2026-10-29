@@ -44,7 +44,7 @@ module.exports = {
     "fin-h1": "Që ibadeti juaj", "fin-h2": "të mos ndërpritet.",
     "fin-p": "Falas. Pa reklama. Pa llogari. Kohët e namazit punojnë pa internet. iPhone, iPad, Apple Watch, Mac dhe Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Shkarkojeni nga App Store", explore: "Zbuloni veçoritë →",
-    playCta: "Shkarkoje në Google Play",
+    playCta: "Shkarkojeni nga Google Play",
     "faq-android-q": "A është Vakit në Android?",
     "faq-android-a": "Po. Vakit është në Google Play për Android 8.0 e më të ri — falas dhe pa reklama, me të njëjtat 12 metoda llogaritjeje dhe 25 gjuhë. Apple Watch, Mac dhe sinkronizimi me iCloud janë vetëm për pajisjet Apple.",
     playTestCta: "Provoje në Android",
