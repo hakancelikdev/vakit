@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Hora de oración, Salat",
     description:
-      "Gratis, sin anuncios y sin cuenta; los horarios de oración funcionan sin conexión. Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch y Mac; 25 idiomas, 12 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes.",
+      "Gratis, sin anuncios y sin cuenta; los horarios de oración funcionan sin conexión. Consulta los horarios de oración, encuentra la alquibla y lee el Corán. iPhone, iPad, Apple Watch, Mac y Android; 25 idiomas, 12 métodos de cálculo, Actividades en vivo, widgets en la pantalla bloqueada, sermón del viernes y seguimiento de oraciones pendientes.",
     keywords:
       "horarios de oración, hora de oración, alquibla, qibla, Corán, quran, app musulmana, islam, salat, namaz, adhán, athan, azkar, dhikr, dua, hadiz, tasbih, calendario hégira, Ramadán, mezquita, oraciones pendientes",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Opiniones del App Store de Turquía, traducidas del turco.",
     "q-h1": "Respuestas sinceras", "q-h2": "a preguntas sinceras.",
     "fin-h1": "Que nada interrumpa", "fin-h2": "tu adoración.",
-    "fin-p": "Gratis. Sin anuncios. Sin cuenta. Los horarios de oración funcionan sin conexión. iPhone, iPad, Apple Watch y Mac, con iOS 16.4+, watchOS 9+ y macOS 13+.",
+    "fin-p": "Gratis. Sin anuncios. Sin cuenta. Los horarios de oración funcionan sin conexión. iPhone, iPad, Apple Watch, Mac y Android, con iOS 16.4+, watchOS 9+ macOS 13+ y Android 8.0+.",
     downloadCta2: "Descárgalo en el App Store", explore: "Explorar funciones →",
     playCta: "Disponible en Google Play",
     "faq-android-q": "¿Está Vakit en Android?",

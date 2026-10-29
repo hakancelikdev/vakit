@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: 礼拜时间·古兰经·朝向",
     description:
-      "免费、无广告、无需账户；礼拜时间可离线使用。查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch 和 Mac；25 种语言、12 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。",
+      "免费、无广告、无需账户；礼拜时间可离线使用。查看礼拜时间、寻找朝向、诵读古兰经。支持 iPhone、iPad、Apple Watch、Mac 和 Android；25 种语言、12 种计算方法、实时活动、锁定屏幕小组件、主麻讲道、还补记录。",
     keywords:
       "礼拜时间, 穆斯林, 伊斯兰, 朝向, 古兰经, 圣训, 宣礼, 记主, 念珠, 斋月, 封斋, 开斋, 主麻, 希吉来历, 小净, 天课, 清真寺, 还补礼拜, 礼拜提醒, Apple Watch 礼拜时间",
   },
@@ -42,7 +42,7 @@ module.exports = {
     "r-note": "评价来自土耳其 App Store，由土耳其语翻译而来。",
     "q-h1": "诚实的问题，", "q-h2": "诚实的回答。",
     "fin-h1": "别让你的功修", "fin-h2": "半途中断。",
-    "fin-p": "免费。无广告。无需账户。礼拜时间可离线使用。支持 iPhone、iPad、Apple Watch 和 Mac——iOS 16.4+、watchOS 9+、macOS 13+。",
+    "fin-p": "免费。无广告。无需账户。礼拜时间可离线使用。支持 iPhone、iPad、Apple Watch、Mac 和 Android——iOS 16.4+、watchOS 9+、macOS 13+、Android 8.0+。",
     downloadCta2: "在 App Store 下载", explore: "探索功能 →",
     playCta: "在 Google Play 上下载",
     "faq-android-q": "Vakit 有 Android 版吗？",

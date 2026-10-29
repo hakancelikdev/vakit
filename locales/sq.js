@@ -4,7 +4,7 @@ module.exports = {
   META: {
     title: "Vakit: Kohët e namazit, Kibla, Kurani",
     description:
-      "Falas, pa reklama, pa llogari; kohët e namazit punojnë pa internet. Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch dhe Mac; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza.",
+      "Falas, pa reklama, pa llogari; kohët e namazit punojnë pa internet. Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch, Mac dhe Android; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza.",
     keywords:
       "kohët e namazit, takvimi, vaktet e namazit, kibla, drejtimi i kiblës, kurani, aplikacion islam, mysliman, namaz, ezan, dhikër, tesbih, hadith, kalendari hixhri, ramazan, syfyr, iftar, xhami, namazet kaza, esmaul husna",
   },
@@ -42,7 +42,7 @@ module.exports = {
     "r-note": "Vlerësime nga App Store i Turqisë, të përkthyera nga turqishtja.",
     "q-h1": "Përgjigje të sinqerta", "q-h2": "për pyetje të sinqerta.",
     "fin-h1": "Që ibadeti juaj", "fin-h2": "të mos ndërpritet.",
-    "fin-p": "Falas. Pa reklama. Pa llogari. Kohët e namazit punojnë pa internet. iPhone, iPad, Apple Watch dhe Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Falas. Pa reklama. Pa llogari. Kohët e namazit punojnë pa internet. iPhone, iPad, Apple Watch, Mac dhe Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Shkarkojeni nga App Store", explore: "Zbuloni veçoritë →",
     playCta: "Shkarkoje në Google Play",
     "faq-android-q": "A është Vakit në Android?",

@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: 礼拝時刻・キブラ・クルアーン",
     description:
-      "無料・広告なし・アカウント不要。礼拝時刻はオフラインでも使えます。礼拝時刻を確認し、キブラを見つけ、クルアーンを読む。iPhone、iPad、Apple Watch、Mac に対応。25言語、12の計算方法、ライブアクティビティ、ロック画面ウィジェット、金曜の説教、補いの記録。",
+      "無料・広告なし・アカウント不要。礼拝時刻はオフラインでも使えます。礼拝時刻を確認し、キブラを見つけ、クルアーンを読む。iPhone、iPad、Apple Watch、Mac、Android に対応。25言語、12の計算方法、ライブアクティビティ、ロック画面ウィジェット、金曜の説教、補いの記録。",
     keywords:
       "礼拝時刻, ムスリム, イスラム, キブラ, クルアーン, コーラン, アザーン, ハディース, ズィクル, ラマダーン, 断食, モスク, メッカ, ザカート, ヒジュラ暦, スフール, イフタール, タスビーフ, お祈り, 礼拝アプリ",
   },
@@ -42,7 +42,7 @@ module.exports = {
     "r-note": "レビューはトルコの App Store に寄せられたもので、トルコ語から翻訳しています。",
     "q-h1": "率直な質問に、", "q-h2": "率直な答えを。",
     "fin-h1": "礼拝を", "fin-h2": "途切れさせないために。",
-    "fin-p": "無料。広告なし。アカウント不要。礼拝時刻はオフラインで動作。iPhone、iPad、Apple Watch、Mac——iOS 16.4 以降、watchOS 9 以降、macOS 13 以降。",
+    "fin-p": "無料。広告なし。アカウント不要。礼拝時刻はオフラインで動作。iPhone、iPad、Apple Watch、Mac、Android——iOS 16.4 以降、watchOS 9 以降、macOS 13 以降、Android 8.0 以降。",
     downloadCta2: "App Store からダウンロード", explore: "機能を見る →",
     playCta: "Google Play で手に入れよう",
     "faq-android-q": "Android 版はありますか？",

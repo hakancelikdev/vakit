@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Jadwal Sholat & Adzan",
     description:
-      "Gratis, tanpa iklan, tanpa akun; jadwal salat bisa offline. Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, dan Mac; 25 bahasa, 12 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada.",
+      "Gratis, tanpa iklan, tanpa akun; jadwal salat bisa offline. Pantau jadwal salat, temukan arah kiblat, baca Al-Qur'an. iPhone, iPad, Apple Watch, Mac, dan Android; 25 bahasa, 12 metode perhitungan, Aktivitas Langsung, widget Layar Terkunci, khotbah Jumat, catatan salat kada.",
     keywords:
       "jadwal sholat, jadwal salat, waktu sholat, adzan, azan, arah kiblat, kompas kiblat, al quran, alquran offline, murottal, yasin, tasbih digital, dzikir, doa, hadis, puasa, imsakiyah, kalender hijriah, widget sholat, aplikasi muslim",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Ulasan dari App Store Turki, diterjemahkan dari bahasa Turki.",
     "q-h1": "Jawaban jujur", "q-h2": "untuk pertanyaan jujur.",
     "fin-h1": "Jangan biarkan ibadahmu", "fin-h2": "terputus.",
-    "fin-p": "Gratis. Tanpa iklan. Tanpa akun. Jadwal salat bisa offline. iPhone, iPad, Apple Watch, dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Tanpa iklan. Tanpa akun. Jadwal salat bisa offline. iPhone, iPad, Apple Watch, Mac, dan Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Unduh di App Store", explore: "Jelajahi fitur →",
     playCta: "Temukan di Google Play",
     "faq-android-q": "Apakah Vakit ada di Android?",

@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: नमाज़ का वक़्त और अज़ान",
     description:
-      "मुफ़्त, बिना विज्ञापन, अकाउंट की ज़रूरत नहीं; नमाज़ के वक़्त ऑफ़लाइन चलते हैं। नमाज़ के वक़्त देखें, क़िबला की दिशा पाएँ, क़ुरआन पढ़ें। iPhone, iPad, Apple Watch और Mac; 25 भाषाएँ, हिसाब के 12 तरीक़े, Live Activity, लॉक स्क्रीन विजेट, जुमे का ख़ुत्बा, क़ज़ा का हिसाब।",
+      "मुफ़्त, बिना विज्ञापन, अकाउंट की ज़रूरत नहीं; नमाज़ के वक़्त ऑफ़लाइन चलते हैं। नमाज़ के वक़्त देखें, क़िबला की दिशा पाएँ, क़ुरआन पढ़ें। iPhone, iPad, Apple Watch, Mac और Android; 25 भाषाएँ, हिसाब के 12 तरीक़े, Live Activity, लॉक स्क्रीन विजेट, जुमे का ख़ुत्बा, क़ज़ा का हिसाब।",
     keywords:
       "namaz time, namaz, azan, athan, quran sharif, qibla direction, tasbih counter, dhikr, dua, yaseen, islamic calendar, muslim app, नमाज़ का वक़्त, क़िबला, क़ुरआन, हदीस, सहरी, हिजरी कैलेंडर, ज़िक्र काउंटर",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "ये रिव्यू तुर्की App Store के हैं, जिनका तुर्की भाषा से अनुवाद किया गया है।",
     "q-h1": "सच्चे सवालों के", "q-h2": "सच्चे जवाब।",
     "fin-h1": "आपकी इबादत", "fin-h2": "बीच में न छूटे।",
-    "fin-p": "मुफ़्त। बिना विज्ञापन। कोई अकाउंट नहीं। नमाज़ के वक़्त ऑफ़लाइन चलते हैं। iPhone, iPad, Apple Watch और Mac — iOS 16.4+, watchOS 9+, macOS 13+।",
+    "fin-p": "मुफ़्त। बिना विज्ञापन। कोई अकाउंट नहीं। नमाज़ के वक़्त ऑफ़लाइन चलते हैं। iPhone, iPad, Apple Watch, Mac और Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+।",
     downloadCta2: "App Store से डाउनलोड करें", explore: "फ़ीचर देखें →",
     playCta: "इसे Google Play पर पाएं",
     "faq-android-q": "क्या Vakit Android पर है?",

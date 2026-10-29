@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Ora di preghiera, Salat",
     description:
-      "Gratuita, senza pubblicità, senza account; gli orari di preghiera funzionano offline. Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch e Mac; 25 lingue, 12 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate.",
+      "Gratuita, senza pubblicità, senza account; gli orari di preghiera funzionano offline. Segui gli orari di preghiera, trova la Qibla, leggi il Corano. iPhone, iPad, Apple Watch, Mac e Android; 25 lingue, 12 metodi di calcolo, Attività in tempo reale, widget nella schermata di blocco, sermone del venerdì e registro delle preghiere mancate.",
     keywords:
       "orari di preghiera, preghiera islamica, qibla, corano, quran, app musulmana, islam, salat, namaz, adhan, azan, azkar, dhikr, dua, hadith, tasbih, calendario hegiriano, ramadan, digiuno, moschea",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Recensioni dell'App Store turco, tradotte dal turco.",
     "q-h1": "Risposte sincere", "q-h2": "a domande sincere.",
     "fin-h1": "Che nulla interrompa", "fin-h2": "la tua adorazione.",
-    "fin-p": "Gratis. Senza pubblicità. Nessun account. Gli orari di preghiera funzionano offline. iPhone, iPad, Apple Watch e Mac: iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Senza pubblicità. Nessun account. Gli orari di preghiera funzionano offline. iPhone, iPad, Apple Watch, Mac e Android: iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Scarica su App Store", explore: "Scopri le funzioni →",
     playCta: "Disponibile su Google Play",
     "faq-android-q": "Vakit è disponibile su Android?",

@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Waktu Solat & Azan",
     description:
-      "Percuma, tanpa iklan, tanpa akaun; waktu solat berfungsi luar talian. Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch dan Mac; 25 bahasa, 12 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada.",
+      "Percuma, tanpa iklan, tanpa akaun; waktu solat berfungsi luar talian. Semak waktu solat, cari arah kiblat, baca Al-Quran. iPhone, iPad, Apple Watch, Mac dan Android; 25 bahasa, 12 kaedah pengiraan, Aktiviti Langsung, widget Skrin Kunci, khutbah Jumaat, catatan solat qada.",
     keywords:
       "waktu solat, jadual solat, azan, arah kiblat, kompas kiblat, qiblat finder, al quran, quran offline, yasin, surah, tasbih digital, zikir, doa, azkar, hadis, puasa, imsak, kalendar hijrah, widget solat, aplikasi muslim malaysia",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Ulasan daripada App Store Turki, diterjemahkan daripada bahasa Turki.",
     "q-h1": "Jawapan jujur", "q-h2": "untuk soalan jujur.",
     "fin-h1": "Jangan biarkan ibadah anda", "fin-h2": "terputus.",
-    "fin-p": "Percuma. Tanpa iklan. Tiada akaun. Waktu solat berfungsi luar talian. iPhone, iPad, Apple Watch dan Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Percuma. Tanpa iklan. Tiada akaun. Waktu solat berfungsi luar talian. iPhone, iPad, Apple Watch, Mac dan Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Muat turun di App Store", explore: "Terokai ciri →",
     playCta: "Dapatkan di Google Play",
     "faq-android-q": "Adakah Vakit untuk Android?",

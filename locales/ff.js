@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Waktuuji juulde, Alqibla, Alkur'aana",
     description:
-      "Meere, publisite alaa, konte alaa; waktuuji juulde ina ngolloo hay so enterneet alaa. Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch e Mac; ɗemɗe 25, laabi hesaabo 12, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa.",
+      "Meere, publisite alaa, konte alaa; waktuuji juulde ina ngolloo hay so enterneet alaa. Ƴeew waktuuji juulde, heɓ bannge alqibla, jangu Alkur'aana. iPhone, iPad, Apple Watch, Mac e Android; ɗemɗe 25, laabi hesaabo 12, Live Activity, widget e Ecraŋ Sokaaɗo, khutba Aljumaa, jokkugol kaadaa.",
     keywords:
       "waktuuji juulde, juulde, alqibla, Alkur'aana, hadiisa, jikru, aadaan, koorka, Ramadaan, kalandiriye hijra, jumaa, prayer times, qibla, quran, islamic app, muslim app, Pulaar",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Miijooji ɗii iwii ko e App Store Turkiya, ɗi firaa ko gila e Turkeere.",
     "q-h1": "Jaabawuuji goonga", "q-h2": "e naamne goonga.",
     "fin-h1": "Hoto dewal mon", "fin-h2": "taƴ.",
-    "fin-p": "Meere. Publisite alaa. Konte alaa. Waktuuji juulde ina ngolloo hay so enterneet alaa. iPhone, iPad, Apple Watch e Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Meere. Publisite alaa. Konte alaa. Waktuuji juulde ina ngolloo hay so enterneet alaa. iPhone, iPad, Apple Watch, Mac e Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Jippin e App Store", explore: "Yiy kuutorɗe →",
     playCta: "Jippin e Google Play",
     "faq-android-q": "Hol Vakit woni e Android?",

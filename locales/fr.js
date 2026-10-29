@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Heure de prière, Salat",
     description:
-      "Gratuit, sans publicité, sans compte\u00a0; les horaires de prière fonctionnent hors ligne. Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch et Mac\u00a0; 25 langues, 12 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada.",
+      "Gratuit, sans publicité, sans compte\u00a0; les horaires de prière fonctionnent hors ligne. Suis les horaires de prière, trouve la Qibla, lis le Coran. iPhone, iPad, Apple Watch, Mac et Android\u00a0; 25 langues, 12 méthodes de calcul, activités en direct, widgets d'écran verrouillé, sermon du vendredi, suivi des qada.",
     keywords:
       "horaires de prière, heure de prière, salat, qibla, coran, application musulmane, muslim, adhan, athan, adan, azkar, dhikr, tasbih, dua, hadith, ramadan, mosquée, namaz vakitleri, calendrier hégirien",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Avis publiés sur l'App Store turc, traduits du turc.",
     "q-h1": "Des réponses honnêtes", "q-h2": "à des questions honnêtes.",
     "fin-h1": "Que rien n'interrompe", "fin-h2": "ta pratique.",
-    "fin-p": "Gratuit. Sans publicité. Sans compte. Les horaires de prière fonctionnent hors ligne. iPhone, iPad, Apple Watch et Mac, avec iOS 16.4+, watchOS 9+ et macOS 13+.",
+    "fin-p": "Gratuit. Sans publicité. Sans compte. Les horaires de prière fonctionnent hors ligne. iPhone, iPad, Apple Watch, Mac et Android, avec iOS 16.4+, watchOS 9+ macOS 13+ et Android 8.0+.",
     downloadCta2: "Télécharger dans l'App Store", explore: "Découvrir les fonctionnalités →",
     playCta: "Disponible sur Google Play",
     "faq-android-q": "Vakit existe-t-il sur Android ?",

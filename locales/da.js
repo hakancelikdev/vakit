@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Bedetider & Widget",
     description:
-      "Gratis, uden reklamer, ingen konto; bedetiderne virker offline. Følg bedetiderne, find qibla, læs Koranen. iPhone, iPad, Apple Watch og Mac; 25 sprog, 12 beregningsmetoder, live-aktiviteter, widgets til låst skærm, fredagsprædiken, qada-oversigt.",
+      "Gratis, uden reklamer, ingen konto; bedetiderne virker offline. Følg bedetiderne, find qibla, læs Koranen. iPhone, iPad, Apple Watch, Mac og Android; 25 sprog, 12 beregningsmetoder, live-aktiviteter, widgets til låst skærm, fredagsprædiken, qada-oversigt.",
     keywords:
       "bønnetider, bedetider, namaz, namaz vakitleri, qibla, koran app, islam app, muslim app, salah, ezan, adhan, athan, azan, dhikr tæller, hadith, ramadan, faste, moské, iftar, hijri kalender",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Anmeldelser fra den tyrkiske App Store, oversat fra tyrkisk.",
     "q-h1": "Ærlige svar", "q-h2": "på ærlige spørgsmål.",
     "fin-h1": "Så din ibada", "fin-h2": "aldrig bliver afbrudt.",
-    "fin-p": "Gratis. Uden reklamer. Ingen konto. Bedetiderne virker offline. iPhone, iPad, Apple Watch og Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Uden reklamer. Ingen konto. Bedetiderne virker offline. iPhone, iPad, Apple Watch, Mac og Android – iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Hent i App Store", explore: "Udforsk funktionerne →",
     playCta: "Nu på Google Play",
     "faq-android-q": "Findes Vakit til Android?",

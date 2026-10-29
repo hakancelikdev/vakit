@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Gebedstijden & Widget",
     description:
-      "Gratis, zonder advertenties, zonder account; gebedstijden werken offline. Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch en Mac; 25 talen, 12 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden.",
+      "Gratis, zonder advertenties, zonder account; gebedstijden werken offline. Volg de gebedstijden, vind de qibla, lees de Koran. iPhone, iPad, Apple Watch, Mac en Android; 25 talen, 12 berekeningsmethoden, live activiteiten, widgets voor het toegangsscherm, vrijdagpreek, qada bijhouden.",
     keywords:
       "gebedstijden, namaz vakitleri, qibla, koran app, islamitische app, moslim app, gebeds app, ezan, adhan, athan, azan, gebedstijden widget, dhikr teller, hadith, ramadan, vasten, moskee, hidjri kalender, namaz, dua",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Recensies uit de Turkse App Store, vertaald uit het Turks.",
     "q-h1": "Eerlijke antwoorden", "q-h2": "op eerlijke vragen.",
     "fin-h1": "Zodat je ibada", "fin-h2": "nooit onderbroken wordt.",
-    "fin-p": "Gratis. Zonder advertenties. Geen account. Gebedstijden werken offline. iPhone, iPad, Apple Watch en Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Gratis. Zonder advertenties. Geen account. Gebedstijden werken offline. iPhone, iPad, Apple Watch, Mac en Android – iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Download in de App Store", explore: "Ontdek de functies →",
     playCta: "Ontdek het op Google Play",
     "faq-android-q": "Is Vakit er ook voor Android?",

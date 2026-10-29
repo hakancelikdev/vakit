@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Gebetszeiten & Widget",
     description:
-      "Kostenlos, werbefrei, ohne Konto; Gebetszeiten funktionieren offline. Gebetszeiten verfolgen, die Qibla finden, den Koran lesen. iPhone, iPad, Apple Watch und Mac; 25 Sprachen, 12 Berechnungsmethoden, Live-Aktivitäten, Widgets für den Sperrbildschirm, Freitagspredigt, Qada-Buch.",
+      "Kostenlos, werbefrei, ohne Konto; Gebetszeiten funktionieren offline. Gebetszeiten verfolgen, die Qibla finden, den Koran lesen. iPhone, iPad, Apple Watch, Mac und Android; 25 Sprachen, 12 Berechnungsmethoden, Live-Aktivitäten, Widgets für den Sperrbildschirm, Freitagspredigt, Qada-Buch.",
     keywords:
       "gebetszeiten, namaz vakitleri, qibla, koran app, islam app, muslim app, gebets app, ezan, adhan, azan, gebetszeiten widget, dhikr zähler, hadith, ramadan, fasten, moschee, hidschri kalender, apple watch gebetszeiten, namaz, dua",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Bewertungen aus dem türkischen App Store, aus dem Türkischen übersetzt.",
     "q-h1": "Ehrliche Antworten", "q-h2": "auf ehrliche Fragen.",
     "fin-h1": "Damit deine Ibada", "fin-h2": "nie unterbrochen wird.",
-    "fin-p": "Kostenlos. Werbefrei. Kein Konto. Gebetszeiten funktionieren offline. iPhone, iPad, Apple Watch und Mac – iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Kostenlos. Werbefrei. Kein Konto. Gebetszeiten funktionieren offline. iPhone, iPad, Apple Watch, Mac und Android – iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "Laden im App Store", explore: "Funktionen entdecken →",
     playCta: "Jetzt bei Google Play",
     "faq-android-q": "Gibt es Vakit für Android?",

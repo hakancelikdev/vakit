@@ -1,12 +1,12 @@
 # Vakit: Prayer Times, Qibla, Quran
 
-> Free, ad-free, no account; prayer times work offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch and Mac; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
+> Free, ad-free, no account; prayer times work offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch, Mac and Android; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
-Apple Watch and Mac, built by Hakan Çelik. Current release: 2.1.0; requires
-iOS 16.4+, watchOS 9+, macOS 13+. App Store rating 4.8 from
+Apple Watch and Mac — and Android, built by Hakan Çelik. Current release: 2.1.0; requires
+iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+. App Store rating 4.8 from
 512 ratings. Download: https://apps.apple.com/app/id6748356813?pt=127947182&ct=llms-txt
-Android (closed testing): join https://groups.google.com/g/vakit-android-test, then install from https://play.google.com/apps/testing/com.hakancelikdev.vakit
+Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&referrer=utm_source%3Dvakit-site%26utm_medium%3Dweb%26utm_campaign%3Dllms-txt
 
 ## What makes it different
 
@@ -113,7 +113,7 @@ iPhone, iPad, Apple Watch and Mac. On iPad it is the same app on a bigger screen
 
 ### Is Vakit on Android?
 
-Yes — it is in closed testing on Google Play (Android 8.0 and later). First join groups.google.com/g/vakit-android-test, then install from play.google.com/apps/testing/com.hakancelikdev.vakit. Free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.
+Yes. Vakit is on Google Play for Android 8.0 and later — free and ad-free, with the same 12 calculation methods and 25 languages. Apple Watch, Mac and iCloud sync are Apple-only.
 
 ### Can I choose the adhan sound?
 
@@ -197,4 +197,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Website source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-10-20
+Last updated: 2026-10-29

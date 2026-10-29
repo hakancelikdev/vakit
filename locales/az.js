@@ -3,7 +3,7 @@ module.exports = {
   META: {
     title: "Vakit: Namaz vaxtları, Qiblə, Quran",
     description:
-      "Pulsuz, reklamsız, hesab tələb etmir; namaz vaxtları oflayn işləyir. Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch və Mac; 25 dil, 12 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə.",
+      "Pulsuz, reklamsız, hesab tələb etmir; namaz vaxtları oflayn işləyir. Namaz vaxtlarını izləyin, qibləni tapın, Quran oxuyun. iPhone, iPad, Apple Watch, Mac və Android; 25 dil, 12 hesablama üsulu, Live Activity, kilid ekranı vidjetləri, cümə xütbəsi, qəza izləmə.",
     keywords:
       "namaz vaxtları, namaz vaxti, azan vaxtı, qiblə, qiblə istiqaməti, quran, quran oxu, zikr, təsbeh, zikr sayğacı, qəza namazı, hicri təqvim, ramazan, imsakiyyə, iftar, sahur, oruc, cümə xütbəsi, dəstəmaz, namaz qılmaq qaydası, məscid",
   },
@@ -41,7 +41,7 @@ module.exports = {
     "r-note": "Rəylər Türkiyə App Store-undandır, türk dilindən tərcümə olunub.",
     "q-h1": "Səmimi suallara", "q-h2": "səmimi cavablar.",
     "fin-h1": "İbadətiniz yarımçıq", "fin-h2": "qalmasın.",
-    "fin-p": "Pulsuz. Reklamsız. Hesab yoxdur. Namaz vaxtları oflayn işləyir. iPhone, iPad, Apple Watch və Mac — iOS 16.4+, watchOS 9+, macOS 13+.",
+    "fin-p": "Pulsuz. Reklamsız. Hesab yoxdur. Namaz vaxtları oflayn işləyir. iPhone, iPad, Apple Watch, Mac və Android — iOS 16.4+, watchOS 9+, macOS 13+, Android 8.0+.",
     downloadCta2: "App Store-dan yükləyin", explore: "Xüsusiyyətləri kəşf et →",
     playCta: "Google Play-dən əldə edin",
     "faq-android-q": "Vakit Android-də varmı?",
