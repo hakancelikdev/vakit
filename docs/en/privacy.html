@@ -163,7 +163,7 @@ On the Mac (macOS 13+):
 • Apple MapKit – Nearby mosques, map and directions (location is sent to Apple).
 • Firebase Crashlytics (Google) – Crash reports with no identity data (stack trace, device model, iOS/macOS version).
 • Firebase Remote Config (Google) – Feature flags and gradual rollout (does not read data from the device).
-• Apple StoreKit 2 – Optional donations (one-time and monthly). Payment details are processed by Apple; Vakit never sees card data.
+• Apple In-App Purchase – Optional donations (one-time and monthly). Payment details are processed by Apple; Vakit never sees card data.
 • Firebase Cloud Messaging (Google) + Apple Push Notification (APNs) – Blessed-day and release announcements. Announcements are broadcast by topic; there is no per-person targeting.
 • Diyanet (dinhizmetleri.diyanet.gov.tr) – Friday sermon text and audio.
 • Cloudflare – Downloadable content (the Quran text and translations, tafsir, hadith, mushaf pages, recitation and translation audio, notification sounds) comes from Cloudflare's storage and delivery network (R2/CDN), and data sent to the Vakit server passes through Cloudflare's encrypted connection (Tunnel). These requests pass your IP address through Cloudflare's infrastructure; they carry no identifying information.
@@ -174,7 +174,7 @@ Note: Firebase Analytics is NOT used; the Advertising Identifier (IDFA) is not c
 Google's privacy policy: policies.google.com/privacy</p></div>
   <div class="legal-card"><h2>6. Advertising</h2><p>Vakit shows no ads. The app's only source of income is optional donations from users.</p></div>
   <div class="legal-card"><h2>7. Donations (In-App Purchase)</h2><p>Vakit is free. To support the developer you can make optional one-time or monthly donations in tiers from $0.99 to $399.99 (or the local equivalent) from the &quot;Keep Vakit Alive&quot; screen. These transactions:
-• Are processed by Apple StoreKit 2; payment details (card, IBAN, Apple Pay) are sent only to Apple.
+• Are processed by Apple In-App Purchase; payment details (card, IBAN, Apple Pay) are sent only to Apple.
 • Vakit never sees or stores your card, IBAN or payment method. The donation's amount, currency, type (one-time or monthly) and Apple's transaction number are recorded on the Vakit server, tied to your user code (see section 1).
 • Monthly support is an auto-renewing subscription, managed and cancelled anytime in your App Store account settings (it renews unless cancelled at least 24 hours before the period ends).
 • Refunds can only be requested through Apple (reportaproblem.apple.com).</p></div>
