@@ -37,7 +37,8 @@ Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&r
 - **Mac App** — Menu bar countdown, keyboard shortcuts, iCloud sync.
 - **iPad** — The same app on a bigger screen; your records sync over iCloud.
 - **25 Languages** — Right-to-left interface in Arabic, Urdu, Persian and Uyghur.
-- **Qibla Compass** — Haptic bearing with distance to the Ka'bah.
+- **Qibla Compass** — Haptic bearing, distance to the Ka'bah, the qibla line on a map and a compass fix guide.
+- **Qibla Time** — The daily moment the sun stands in the qibla direction — find the qibla without a compass.
 - **Holy Quran** — 114 surahs. Word-by-word, translations in 24 languages, tafsir, classical Mushaf.
 - **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
