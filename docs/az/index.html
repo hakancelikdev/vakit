@@ -214,7 +214,7 @@
     "İdarəetmə Mərkəzi",
     "İbadət izləmə",
     "Namaz intizamı",
-    "Sübh zəngi",
+    "Vaxt bitməzdən əvvəl zəng",
     "Sahur zəngi",
     "Mübarək gün xatırlatmaları",
     "Bildirişlər",
@@ -335,10 +335,10 @@
     },
     {
       "@type": "Question",
-      "name": "Sübh namazı üçün zəng varmı?",
+      "name": "Namaz vaxtı çıxmazdan əvvəl zəng varmı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bəli. Sübh namazını hələ qılmamısınızsa, günəş doğmazdan əvvəl çalan bir zəng qura bilərsiniz; namazı qılmısınızsa, çalmır. iOS 26-da səssiz rejimi keçən əsl zəngdir, əvvəlki versiyalarda bildiriş kimi gəlir. Oruc üçün isə Ramazanda, hər gün və ya sünnə oruc günlərində qurulan sahur zəngi də var."
+        "text": "Bəli. Beş vaxtın hər birinə ayrıca zəng qura bilərsiniz: o namazı hələ qılmamısınızsa, vaxt çıxmazdan əvvəl çalır; namazı qılmısınızsa, çalmır. iOS 26-da səssiz rejimi keçən əsl zəngdir və nə qədər əvvəl çalacağını hər vaxt üçün 5 dəqiqədən 3 saata qədər ayrıca seçirsiniz — məsələn, əsri kərahətdən əvvəl qılmaq üçün 70 dəqiqə. Əvvəlki versiyalarda bildiriş kimi gəlir. Oruc üçün isə Ramazanda, hər gün və ya sünnə oruc günlərində qurulan sahur zəngi də var."
       }
     },
     {
@@ -597,7 +597,7 @@
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/mushaf.webp" alt="Müshəf xətti" width="390" height="844" loading="lazy" decoding="async"></div></div>
           <h3 class="g-title">Müshəf xətti</h3>
-          <p class="g-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir.</p>
+          <p class="g-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir. İstəyə bağlı Təcvid rəngləri ayə siyahısında ixfa, idğam, qəlqələ, məd kimi qaydaları rənglə göstərir.</p>
         </li>
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/en/more/esma-ul-husna.webp" alt="Əsmayi-Hüsna" width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -718,7 +718,7 @@
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/calendar.webp" alt="Mac tətbiqi · Hicri təqvim" width="1200" height="914" loading="lazy" decoding="async"></div></div>
           <h4 class="g-title">Hicri təqvim</h4>
-          <p class="g-desc">Miladi + hicri, mübarək günlər və Ramazan.</p>
+          <p class="g-desc">Miladi + hicri, mübarək günlər və Ramazan; Tarix çevirici 1900–2048 arası istənilən tarixi hər iki istiqamətə çevirir.</p>
         </li>
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Mac tətbiqi · Zikr sayğacı" width="1200" height="914" loading="lazy" decoding="async"></div></div>
@@ -890,7 +890,7 @@
           <li class="f-cell"><h4 class="f-name">Qiblə kompası</h4><p class="f-desc">Titrəyişlə istiqamət, Kəbəyə məsafə, xəritədə qiblə xətti və kompası düzəltmə bələdçisi.</p></li>
           <li class="f-cell"><h4 class="f-name">Qiblə vaxtı</h4><p class="f-desc">Günəşin qiblə istiqamətində olduğu gündəlik an — kompassız da qibləni tapın.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Canlı səma</h4><p class="f-desc">Gün qövsündə əsl ulduzlar və ay — olduğunuz yerə və saata görə.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Sübh zəngi</h4><p class="f-desc">Qılmamısınızsa günəş doğmazdan əvvəl çalır, qılmısınızsa susur; iOS 26-da səssiz rejimi keçir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Vaxt bitməzdən əvvəl zəng</h4><p class="f-desc">Beş vaxtın hər biri üçün: qılmamısınızsa vaxt çıxmazdan əvvəl çalır, qılmısınızsa susur; iOS 26-da səssiz rejimi keçir.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Azan səsləri</h4><p class="f-desc">Hər namaz öz məqamında: saba, üşşaq, rast, segah, hicaz.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Nafilə vaxtları</h4><p class="f-desc">İşraq, Duha, Əvvabin və gecənin hissələri; istəyə bağlı.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Kərahət vaxtları</h4><p class="f-desc">Gün qövsündə işarəli, dayandığı rəvayətlə birlikdə.</p></li>
@@ -912,7 +912,7 @@
           <li class="f-cell f-extra"><h4 class="f-name">Təfsir</h4><p class="f-desc">20 dildə 51 təfsir — Kur'an Yolu, Təbəri, Qurtubi və digərləri; ayəyə toxunun, aid olduğu ayə aralığı ilə açılsın.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Tərcümə mənbələri</h4><p class="f-desc">24 dildə 72 Quran tərcüməsi, 20 dildə 51 təfsir; mənbəni tərcüməçi və ya müəllif adına görə seçin, müəllif məlumatı mətnin yanında göstərilir. Hələ yoxlanılmamış mənbələrdə xətanı bildirmək üçün «Doğrudurmu?» qeydi var.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Xətm izləmə</h4><p class="f-desc">114 surə, 30 cüz; tamamlanmış xətmlər və bitmə təxmini.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Müshəf xətti</h4><p class="f-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Müshəf xətti</h4><p class="f-desc">Mədinə və ya Türk xətti; səhifə düzülüşü də dəyişir. İstəyə bağlı Təcvid rəngləri ayə siyahısında ixfa, idğam, qəlqələ, məd kimi qaydaları rənglə göstərir.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Pleylistlər</h4><p class="f-desc">Surələri istədiyin sıraya düz, siyahıya ad ver və başdan sona dinlə — internetsiz də.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Səsli tərcümə</h4><p class="f-desc">13 türkcə tərcümə üçün təbii Vakit səsi (endirildikdən sonra oflayn), digər dillər üçün cihazın öz səsi — tək və ya hər ayədən sonra.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Günün məzmunu</h4><p class="f-desc">Günün ayəsi, hədisi və əsması bir ekranda; son bir həftəyə qayıt.</p></li>
@@ -937,7 +937,7 @@
       <div class="f-group">
         <h3 class="f-group-title">Təqvim və bələdçilər<span class="f-group-count">8</span></h3>
         <ul class="f-list">
-          <li class="f-cell"><h4 class="f-name">Hicri təqvim</h4><p class="f-desc">Miladi + hicri, mübarək günlər və Ramazan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hicri təqvim</h4><p class="f-desc">Miladi + hicri, mübarək günlər və Ramazan; Tarix çevirici 1900–2048 arası istənilən tarixi hər iki istiqamətə çevirir.</p></li>
           <li class="f-cell"><h4 class="f-name">Namaz bələdçisi</h4><p class="f-desc">17 namaz növü; ayaq üstə, oturaraq və ya işarə ilə.</p></li>
           <li class="f-cell"><h4 class="f-name">Cümə xütbəsi</h4><p class="f-desc">Diyanət üsulundan istifadə edənlər üçün: xütbəni oxuyun, dinləyin, oflayn saxlayın.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">İmsakiyyə</h4><p class="f-desc">Bir ayın bütün vaxtları tək siyahıda; Ramazanda gün sayı və iftar.</p></li>
@@ -1011,7 +1011,7 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Hansı cihazlarda işləyir?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch və Mac. iPad-də eyni tətbiq böyük ekranda işləyir; qeydləriniz iCloud vasitəsilə bütün cihazlarınızda eyni qalır. Vakit 1.7.0 ilə Mac-ə də gəldi: menyu zolağında növbəti namaz və geri sayım, klaviatura qısayolları, masaüstü vidjetləri və macOS 15-dən etibarən sol kənar paneldə bölmələr. Namaz vaxtları, Quran, hədis, zikr sayğacı və ibadət qeydləri iPhone-unuzla eyni iCloud hesabı üzərindən sinxronlaşır. Mac-də kompas avadanlığı olmadığı üçün Qiblə bölməsi istiqaməti və Kəbəyə məsafəni yazı ilə göstərir.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Vakit Android-də varmı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bəli. Vakit Android 8.0 və daha yeni cihazlar üçün Google Play-dədir — pulsuz və reklamsız, eyni 12 hesablama üsulu və 25 dillə. Apple Watch, Mac və iCloud sinxronizasiyası yalnız Apple cihazlarındadır.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Azan səsini seçə bilərəm?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bəli. Azan seçimində hər namaz öz məqamında oxunur: sübh saba, zöhr üşşaq, əsr rast, məğrib segah, işa hicaz. İstəsəniz, hər namaz üçün ayrıca bildiriş səsi də seçə bilərsiniz; əlavə bildiriş səsləri ilk dəfə seçdiyiniz zaman bir dəfə endirilir. Azanlar tətbiqlə birlikdə gəldiyi üçün səslənməsi internet tələb etmir.</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">Sübh namazı üçün zəng varmı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bəli. Sübh namazını hələ qılmamısınızsa, günəş doğmazdan əvvəl çalan bir zəng qura bilərsiniz; namazı qılmısınızsa, çalmır. iOS 26-da səssiz rejimi keçən əsl zəngdir, əvvəlki versiyalarda bildiriş kimi gəlir. Oruc üçün isə Ramazanda, hər gün və ya sünnə oruc günlərində qurulan sahur zəngi də var.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Namaz vaxtı çıxmazdan əvvəl zəng varmı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bəli. Beş vaxtın hər birinə ayrıca zəng qura bilərsiniz: o namazı hələ qılmamısınızsa, vaxt çıxmazdan əvvəl çalır; namazı qılmısınızsa, çalmır. iOS 26-da səssiz rejimi keçən əsl zəngdir və nə qədər əvvəl çalacağını hər vaxt üçün 5 dəqiqədən 3 saata qədər ayrıca seçirsiniz — məsələn, əsri kərahətdən əvvəl qılmaq üçün 70 dəqiqə. Əvvəlki versiyalarda bildiriş kimi gəlir. Oruc üçün isə Ramazanda, hər gün və ya sünnə oruc günlərində qurulan sahur zəngi də var.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Cümə xütbəsi haradan gəlir?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Diyanət-in həmin həftə yayımladığı xütbə tətbiqə düşür; onu oxuya, səs yazısını dinləyə və oflayn oxumaq üçün endirə bilərsiniz. Xütbə Diyanət-in nəşri olduğu üçün bu bölmə hesablama üsulu Diyanət olan istifadəçilərdə görünür.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Quran bölməsində nələr var?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bütün 114 surə, kəlmə-kəlmə təhlil, 24 dildə 72 tərcümə və 20 dildə 51 təfsir (mənbəni tərcüməçi və ya müəllif adına görə seçirsiniz, müəllif məlumatı mətnin yanında göstərilir), ənənəvi müshəf görünüşü, səsli tilavət, səsli tərcümə və xətm izləmə. Mətn və tərcümə, təfsir və Mədinə müshəfi endirildikdən sonra oflayn işləyir; tilavət də endirdiyiniz surə və ya cüzlərdə internetsiz səslənir. 13 türkcə tərcümədə tərcüməni təbii Vakit səsi oxuyur, endirildikdən sonra oflayn; digər dillərdə isə cihazınızın öz səsi oxuyur, səs endirmədən və internetsiz. Hər ikisi tək və ya hər ayədən sonra səslənə bilər.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">İbadət izləmə necə işləyir?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Fəaliyyət halqaları tərzində bir görünüş namazlarınızı, Quran oxumağınızı və zikrlərinizi qeyd edir. Ömürlük qəzanızı vaxt-vaxt izləyə, qıldıqca borcunuzu azalda bilərsiniz. Seriyalar və statistika incəliklə göstərilir — günahlandırma yoxdur.</div></div></div>

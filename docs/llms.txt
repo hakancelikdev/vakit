@@ -40,7 +40,7 @@ Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&r
 - **Qibla Compass** — Haptic bearing, distance to the Ka'bah, the qibla line on a map and a compass fix guide.
 - **Qibla Time** — The daily moment the sun stands in the qibla direction — find the qibla without a compass.
 - **Holy Quran** — 114 surahs. Word-by-word, translations in 24 languages, tafsir, classical Mushaf.
-- **Mushaf Script** — Madinah or Türkiye script — page layout follows too.
+- **Mushaf Script** — Madinah or Türkiye script — page layout follows too. Optional Tajweed Colors mark ikhfa, idgham, qalqalah, madd and more in the verse list.
 - **Khatm Tracking** — 114 surahs, 30 juz; completed khatms and an estimated finish.
 - **Offline Recitation** — Pick a reciter and style; download surahs or juz and listen offline.
 - **Playlists** — Line up surahs in your own order, name the list and play it end to end — offline too.
@@ -55,7 +55,7 @@ Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&r
 - **Dhikr Counter** — Ring-based progress, presets and custom dhikr; undo a mistaken count.
 - **Tasbihat** — 33-33-33, or the full post-prayer sequence.
 - **Asma al-Husna** — 99 names of Allah, with transliteration and meaning; add any as dhikr.
-- **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan.
+- **Hijri Calendar** — Gregorian + Hijri, with special days and Ramadan; the Date Converter turns any date from 1900–2048 either way.
 - **Imsakiye** — A whole month of prayer times in one list; Ramadan day count and iftar.
 - **Blessed Days** — Holy nights, Eids and their eves from today onward, each with a guide.
 - **Karahat Times** — Marked on the day arc, with the narration behind them.
@@ -69,7 +69,7 @@ Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&r
 - **Control Center** — Six quick actions (iOS 18+) — Qibla, next prayer, more.
 - **Worship Tracking** — Rings for prayer, Quran, dhikr, hadith and qada.
 - **Prayer Discipline** — How long after each prayer enters you pray — the last 30 days and all time.
-- **Fajr Alarm** — Rings before sunrise if you haven't prayed Fajr, stays quiet if you have; breaks silent mode on iOS 26.
+- **Alarm Before Time Ends** — For each of the five prayers: rings before its time ends if you haven't prayed it, stays quiet if you have; breaks silent mode on iOS 26.
 - **Suhoor Alarm** — Set for Ramadan, every day, or the recommended fasting days.
 - **Holy Day Reminders** — 12 holy days: holy nights that evening, the rest the day before.
 - **Notifications** — On-device, local, dependable.
@@ -120,9 +120,9 @@ Yes. Vakit is on Google Play for Android 8.0 and later — free and ad-free, wit
 
 Yes. With the Adhan option each prayer plays in its own makam: Fajr saba, Dhuhr ussak, Asr rast, Maghrib segah, Isha hicaz. You can also set a different notification sound per prayer; custom notification sounds download once when you first choose them. The recordings ship with the app, so playing them needs no connection.
 
-### Is there an alarm for Fajr?
+### Is there an alarm before a prayer time ends?
 
-Yes. You can set an alarm that rings before sunrise if you haven't prayed Fajr yet; mark the prayer as done and it stays silent. On iOS 26 it is a real alarm that breaks through silent mode; on earlier versions it arrives as a notification. There's also a suhoor alarm for Ramadan, every day, or the recommended fasting days.
+Yes. Each of the five daily prayers can have its own alarm that rings before that prayer's time ends if you haven't prayed it yet; mark the prayer as done and it stays silent. On iOS 26 it is a real alarm that breaks through silent mode, and you choose how early it rings for each prayer, from 5 minutes to 3 hours — for example, 70 minutes for Asr so you can pray before the karahat time. On earlier versions it arrives as a notification. There's also a suhoor alarm for Ramadan, every day, or the recommended fasting days.
 
 ### Where does the Friday sermon come from?
 
@@ -198,4 +198,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Website source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-10-29
+Last updated: 2026-11-19

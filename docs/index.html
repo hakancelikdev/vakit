@@ -214,7 +214,7 @@
     "Control Center",
     "İbadet Takibi",
     "Namaz Disiplini",
-    "Sabah Alarmı",
+    "Vakit Çıkmadan Alarm",
     "Sahur Alarmı",
     "Mübarek Gün Hatırlatma",
     "Bildirimler",
@@ -335,10 +335,10 @@
     },
     {
       "@type": "Question",
-      "name": "Sabah namazı için alarm var mı?",
+      "name": "Namaz vakti çıkmadan alarm var mı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet. Sabah namazını henüz kılmadıysan güneş doğmadan önce çalan bir alarm kurabilirsin; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır, önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var."
+        "text": "Evet. Beş vaktin her birine ayrı bir alarm kurabilirsin: o namazı henüz kılmadıysan vakit çıkmadan çalar; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır ve ne kadar önce çalacağını her vakit için 5 dakikadan 3 saate kadar ayrı seçersin — örneğin ikindiyi kerahatten önce kılmak için 70 dakika. Önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var."
       }
     },
     {
@@ -597,7 +597,7 @@
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/mushaf.webp" alt="Mushaf Hattı" width="390" height="844" loading="lazy" decoding="async"></div></div>
           <h3 class="g-title">Mushaf Hattı</h3>
-          <p class="g-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir.</p>
+          <p class="g-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir. İstersen Tecvid Renkleri âyet listesinde ihfâ, idgâm, kalkale, med gibi kuralları renkle gösterir.</p>
         </li>
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/tr/more/esma-ul-husna.webp" alt="Esmaü'l Hüsna" width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -718,7 +718,7 @@
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/tr/mac/calendar.webp" alt="Mac Uygulaması · Hicri Takvim" width="1200" height="914" loading="lazy" decoding="async"></div></div>
           <h4 class="g-title">Hicri Takvim</h4>
-          <p class="g-desc">Miladi + Hicri, özel günler ve Ramazan.</p>
+          <p class="g-desc">Miladi + Hicri, özel günler ve Ramazan; Tarih Dönüştürücü 1900–2048 arası her tarihi iki yönde çevirir.</p>
         </li>
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/tr/mac/zikirmatik.webp" alt="Mac Uygulaması · Zikirmatik" width="1200" height="914" loading="lazy" decoding="async"></div></div>
@@ -890,7 +890,7 @@
           <li class="f-cell"><h4 class="f-name">Kıble Pusulası</h4><p class="f-desc">Haptik yönlendirme, Kâbe'ye mesafe, haritada kıble çizgisi ve pusula düzeltme rehberi.</p></li>
           <li class="f-cell"><h4 class="f-name">Kıble Saati</h4><p class="f-desc">Diyanet'in kıble saati: o saatte güneşe dönen kıbleye döner — pusulasız da yön bulursun.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Canlı Gökyüzü</h4><p class="f-desc">Gün yayında gerçek yıldızlar ve ay — bulunduğun yere ve saate göre.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Sabah Alarmı</h4><p class="f-desc">Kılmadıysan güneş doğmadan çalar, kıldıysan susar; iOS 26'da sessiz modu deler.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Vakit Çıkmadan Alarm</h4><p class="f-desc">Beş vaktin her biri için: kılmadıysan vakit çıkmadan çalar, kıldıysan susar; iOS 26'da sessiz modu deler.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Ezan Sesleri</h4><p class="f-desc">Her vakit kendi makamında: saba, uşşak, rast, segah, hicaz.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Nafile Vakitleri</h4><p class="f-desc">İşrak, Kuşluk, Evvâbin ve gecenin bölümleri; isteğe bağlı.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Kerahat Vakitleri</h4><p class="f-desc">Gün yayında işaretli, dayandığı rivayetle birlikte.</p></li>
@@ -912,7 +912,7 @@
           <li class="f-cell f-extra"><h4 class="f-name">Tefsir</h4><p class="f-desc">20 dilde 51 tefsir — Kur'an Yolu, Taberî, Kurtubî ve dahası; âyete dokun, ilgili âyet aralığıyla açılsın.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Meal ve Tefsir Kaynakları</h4><p class="f-desc">24 dilde 72 meal, 20 dilde 51 tefsir; kaynağı mütercim ya da müellif adıyla seç, künyesi metnin yanında. Henüz gözden geçirilmemiş kaynaklarda &quot;Doğru mu?&quot; notuyla hatayı bildir.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Hatim Takibi</h4><p class="f-desc">114 sure, 30 cüz; tamamlanan hatimler ve bitiş tahmini.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Mushaf Hattı</h4><p class="f-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Mushaf Hattı</h4><p class="f-desc">Medine ya da Türkiye hattı; sayfa düzeni de değişir. İstersen Tecvid Renkleri âyet listesinde ihfâ, idgâm, kalkale, med gibi kuralları renkle gösterir.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Çalma Listeleri</h4><p class="f-desc">Sûreleri istediğin sıraya diz, listene ad ver, baştan sona dinle; indirip internetsiz de çal.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Sesli Meal</h4><p class="f-desc">Türkçe 13 mealde doğal Vakit sesi (bir kez inince internetsiz), diğer dillerde cihazın kendi sesi; tilavetle birlikte ya da tek başına.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Günün İçeriği</h4><p class="f-desc">Günün ayeti, hadisi ve esması tek ekranda; son bir haftaya geri dön.</p></li>
@@ -937,7 +937,7 @@
       <div class="f-group">
         <h3 class="f-group-title">Takvim ve rehberler<span class="f-group-count">8</span></h3>
         <ul class="f-list">
-          <li class="f-cell"><h4 class="f-name">Hicri Takvim</h4><p class="f-desc">Miladi + Hicri, özel günler ve Ramazan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Hicri Takvim</h4><p class="f-desc">Miladi + Hicri, özel günler ve Ramazan; Tarih Dönüştürücü 1900–2048 arası her tarihi iki yönde çevirir.</p></li>
           <li class="f-cell"><h4 class="f-name">Namaz Rehberi</h4><p class="f-desc">17 namaz türü; ayakta, oturarak ya da îmâ ile.</p></li>
           <li class="f-cell"><h4 class="f-name">Cuma Hutbesi</h4><p class="f-desc">Diyanet yöntemini kullananlar için: hutbeyi oku, dinle, çevrimdışı sakla.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Mübarek Günler</h4><p class="f-desc">Kandiller, bayramlar ve arefeler bugünden ileriye sıralı; her güne rehber.</p></li>
@@ -1010,7 +1010,7 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Hangi cihazlarda çalışıyor?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch ve Mac. iPad'de aynı uygulama büyük ekranda çalışır; kayıtların iCloud üzerinden bütün cihazlarında aynı kalır. Vakit 1.7.0 ile Mac'e de geldi: menü çubuğunda sonraki vakit ve geri sayım, klavye kısayolları, masaüstü widget'ları ve macOS 15'ten itibaren kenar çubuğunda sekmeler. Namaz vakitleri, Kur'an, hadis, zikirmatik ve ibadet kayıtları iPhone'unla aynı iCloud hesabı üzerinden senkron. Kıble sekmesi Mac'te pusula donanımı olmadığı için yönü ve Kâbe'ye uzaklığı yazıyla gösterir.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Android'de var mı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Vakit, Android 8.0 ve üzeri cihazlarda Google Play'de; ücretsiz ve reklamsız, aynı 12 hesaplama yöntemi ve 25 dille. Apple Watch, Mac ve iCloud senkronu Apple cihazlarına özel.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Ezan sesini seçebiliyor muyum?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Ezan seçeneğinde her vakit kendi makamında okunur: sabah saba, öğle uşşak, ikindi rast, akşam segah, yatsı hicaz. İstersen her vakte ayrı bir bildirim sesi de seçebilirsin; özel bildirim sesleri ilk seçtiğinde bir kez iner. Ezanlar uygulamayla birlikte geldiği için çalmaları internet gerektirmez.</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">Sabah namazı için alarm var mı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Sabah namazını henüz kılmadıysan güneş doğmadan önce çalan bir alarm kurabilirsin; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır, önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Namaz vakti çıkmadan alarm var mı?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Evet. Beş vaktin her birine ayrı bir alarm kurabilirsin: o namazı henüz kılmadıysan vakit çıkmadan çalar; namazı kıldıysan çalmaz. iOS 26'da sessiz modu delen gerçek bir alarmdır ve ne kadar önce çalacağını her vakit için 5 dakikadan 3 saate kadar ayrı seçersin — örneğin ikindiyi kerahatten önce kılmak için 70 dakika. Önceki sürümlerde bildirim olarak gelir. Oruç için ayrıca Ramazan'da, her gün ya da sünnet oruç günlerinde kurulan bir sahur alarmı var.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Cuma hutbesi nereden geliyor?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Diyanet'in o hafta yayımladığı hutbe uygulamaya düşer; okuyabilir, sesli kaydını dinleyebilir ve çevrimdışı okumak için indirebilirsin. Hutbe Diyanet'in yayını olduğu için bu bölüm, hesaplama yöntemi Diyanet olan kullanıcılarda görünür.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Kur'an özelliğinde neler var?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Tüm 114 sure, kelime kelime analiz, 24 dilde 72 meal ve 20 dilde 51 tefsir (kaynağı mütercim ya da müellif adıyla sen seçersin, künyesi metnin yanında yazar), geleneksel Mushaf görünümü, sesli tilavet, sesli meal ve hatim takibi. Metin ve meal, tefsir ve Medine mushafı bir kez indirildikten sonra internetsiz çalışır; tilavet de indirdiğin sure ya da cüzlerde internetsiz. Türkçe 13 mealde meali doğal Vakit sesi okur, bir kez indikten sonra internetsiz; diğer dillerde cihazının kendi sesi okur, ses indirmeden ve internetsiz. İkisi de tek başına ya da her ayette tilavetin ardından çalar.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">İbadet takibi nasıl çalışır?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Activity Ring tarzı bir görünüm namazlarını, Kur'an okumanı ve zikirlerini kaydeder. Ömür kazanı vakit bazlı takip edebilir, borcunu kıldıkça eritebilirsin. Süreklilik ve istatistikler nazikçe gösterilir — suçlandırma yok.</div></div></div>

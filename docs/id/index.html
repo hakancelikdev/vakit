@@ -214,7 +214,7 @@
     "Pusat Kontrol",
     "Catatan Ibadah",
     "Disiplin Salat",
-    "Alarm Subuh",
+    "Alarm Sebelum Waktunya Habis",
     "Alarm Sahur",
     "Pengingat Hari Mulia",
     "Notifikasi",
@@ -335,10 +335,10 @@
     },
     {
       "@type": "Question",
-      "name": "Apakah ada alarm untuk Subuh?",
+      "name": "Apakah ada alarm sebelum waktu salat habis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ada. Kamu bisa memasang alarm yang berbunyi sebelum matahari terbit jika kamu belum salat Subuh; tandai salatnya sudah dikerjakan, dan alarm tidak akan berbunyi. Di iOS 26 ini alarm sungguhan yang menembus mode senyap; di versi sebelumnya ia datang sebagai notifikasi. Ada juga alarm sahur untuk Ramadan, setiap hari, atau hari-hari puasa sunah."
+        "text": "Ada. Setiap salat lima waktu bisa punya alarm sendiri yang berbunyi sebelum waktunya habis jika kamu belum mengerjakannya; tandai salatnya sudah dikerjakan, dan alarm tidak akan berbunyi. Di iOS 26 ini alarm sungguhan yang menembus mode senyap, dan kamu memilih seberapa awal ia berbunyi untuk setiap salat, dari 5 menit hingga 3 jam — misalnya 70 menit untuk Asar agar sempat salat sebelum waktu makruh. Di versi sebelumnya ia datang sebagai notifikasi. Ada juga alarm sahur untuk Ramadan, setiap hari, atau hari-hari puasa sunah."
       }
     },
     {
@@ -597,7 +597,7 @@
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/mushaf.webp" alt="Rasm Mushaf" width="390" height="844" loading="lazy" decoding="async"></div></div>
           <h3 class="g-title">Rasm Mushaf</h3>
-          <p class="g-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah.</p>
+          <p class="g-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah. Warna Tajwid opsional menandai ikhfa, idgham, qalqalah, mad, dan lainnya di daftar ayat.</p>
         </li>
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/id/more/esma-ul-husna.webp" alt="Asmaul Husna" width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -693,7 +693,7 @@
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/calendar.webp" alt="Aplikasi Mac · Kalender Hijriah" width="1200" height="914" loading="lazy" decoding="async"></div></div>
           <h4 class="g-title">Kalender Hijriah</h4>
-          <p class="g-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan.</p>
+          <p class="g-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan; Konversi Tanggal mengubah tanggal apa pun dari 1900–2048 ke dua arah.</p>
         </li>
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Aplikasi Mac · Penghitung Zikir" width="1200" height="914" loading="lazy" decoding="async"></div></div>
@@ -865,7 +865,7 @@
           <li class="f-cell"><h4 class="f-name">Kompas Kiblat</h4><p class="f-desc">Getaran penunjuk arah, jarak ke Ka'bah, garis kiblat di peta, dan panduan memperbaiki kompas.</p></li>
           <li class="f-cell"><h4 class="f-name">Waktu Kiblat</h4><p class="f-desc">Saat harian ketika matahari berada di arah kiblat — temukan kiblat tanpa kompas.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Langit Hidup</h4><p class="f-desc">Bintang dan bulan sungguhan di busur hari — sesuai tempatmu, saat ini juga.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Alarm Subuh</h4><p class="f-desc">Berbunyi sebelum matahari terbit jika kamu belum salat Subuh, diam jika sudah; menembus mode senyap di iOS 26.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Alarm Sebelum Waktunya Habis</h4><p class="f-desc">Untuk setiap salat lima waktu: berbunyi sebelum waktunya habis jika kamu belum salat, diam jika sudah; menembus mode senyap di iOS 26.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Suara Azan</h4><p class="f-desc">Setiap waktu salat dengan maqamnya sendiri: saba, ussak, rast, segah, hicaz.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Waktu Salat Sunah</h4><p class="f-desc">Isyraq, Duha, Awwabin, dan bagian-bagian malam; opsional.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Waktu Makruh</h4><p class="f-desc">Ditandai di busur hari, lengkap dengan riwayat yang mendasarinya.</p></li>
@@ -887,7 +887,7 @@
           <li class="f-cell f-extra"><h4 class="f-name">Tafsir</h4><p class="f-desc">51 tafsir dalam 20 bahasa — Kur'an Yolu, ath-Thabari, al-Qurthubi, dan lainnya; ketuk ayat untuk membukanya, lengkap dengan rentang ayat yang dicakupnya.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Sumber Terjemahan</h4><p class="f-desc">72 terjemahan Al-Qur'an dalam 24 bahasa, 51 tafsir dalam 20 bahasa; pilih sumber berdasarkan nama penerjemah atau penulis, dengan keterangan sumbernya di samping teks. Sumber yang belum ditinjau diberi catatan “Apakah ini benar?” untuk melaporkan kesalahan.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Catatan Khatam</h4><p class="f-desc">114 surah, 30 juz; khatam yang sudah selesai dan perkiraan kapan khatam.</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">Rasm Mushaf</h4><p class="f-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah.</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">Rasm Mushaf</h4><p class="f-desc">Rasm Madinah atau Turki — tata letak halamannya ikut berubah. Warna Tajwid opsional menandai ikhfa, idgham, qalqalah, mad, dan lainnya di daftar ayat.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Daftar Putar</h4><p class="f-desc">Susun surah sesuai urutanmu, beri nama daftarnya, lalu dengarkan dari awal sampai akhir — juga offline.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Terjemahan Bersuara</h4><p class="f-desc">Suara Vakit yang alami untuk 13 terjemahan bahasa Turki (offline setelah diunduh), suara perangkatmu sendiri untuk bahasa lain — sendiri atau setelah tiap ayat.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Konten Hari Ini</h4><p class="f-desc">Ayat, hadis, dan nama hari ini dalam satu layar; tinjau kembali sepekan terakhir.</p></li>
@@ -912,7 +912,7 @@
       <div class="f-group">
         <h3 class="f-group-title">Kalender &amp; panduan<span class="f-group-count">8</span></h3>
         <ul class="f-list">
-          <li class="f-cell"><h4 class="f-name">Kalender Hijriah</h4><p class="f-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan.</p></li>
+          <li class="f-cell"><h4 class="f-name">Kalender Hijriah</h4><p class="f-desc">Masehi + Hijriah, dengan hari-hari istimewa dan Ramadan; Konversi Tanggal mengubah tanggal apa pun dari 1900–2048 ke dua arah.</p></li>
           <li class="f-cell"><h4 class="f-name">Panduan Salat</h4><p class="f-desc">17 jenis salat; berdiri, duduk, atau dengan isyarat.</p></li>
           <li class="f-cell"><h4 class="f-name">Khotbah Jumat</h4><p class="f-desc">Bagi pengguna metode Diyanet: baca, dengarkan, dan simpan khotbahnya untuk dibaca offline.</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">Imsakiyah</h4><p class="f-desc">Semua waktu salat satu bulan dalam satu daftar; di Ramadan, hitungan hari dan berbuka.</p></li>
@@ -986,7 +986,7 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Bisa dipakai di perangkat apa saja?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone, iPad, Apple Watch, dan Mac. Di iPad, ini aplikasi yang sama di layar yang lebih besar, dan catatanmu tetap sama di semua perangkat lewat iCloud. Sejak versi 1.7.0, Vakit juga hadir di Mac: salat berikutnya dan hitung mundurnya di bilah menu, pintasan keyboard, widget desktop, serta tab di bilah samping sejak macOS 15. Jadwal salat, Al-Qur'an, hadis, zikir, dan catatan ibadah tersinkron dengan iPhone lewat akun iCloud yang sama. Karena Mac tidak punya kompas, tab Kiblat di Mac menampilkan arah dan jarak ke Ka'bah dalam bentuk teks.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah Vakit ada di Android?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ya. Vakit ada di Google Play untuk Android 8.0 dan yang lebih baru — gratis dan tanpa iklan, dengan 12 metode perhitungan dan 25 bahasa yang sama. Apple Watch, Mac, dan sinkronisasi iCloud hanya untuk perangkat Apple.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Bisakah saya memilih suara azan?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bisa. Dengan pilihan Azan, setiap waktu salat dikumandangkan dalam maqamnya sendiri: Subuh saba, Zuhur ussak, Asar rast, Magrib segah, Isya hicaz. Kamu juga bisa memasang suara notifikasi berbeda untuk tiap waktu salat; suara notifikasi khusus diunduh sekali saat pertama kali kamu memilihnya. Rekaman azan sudah ada di dalam aplikasi, jadi memutarnya tidak butuh internet.</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah ada alarm untuk Subuh?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ada. Kamu bisa memasang alarm yang berbunyi sebelum matahari terbit jika kamu belum salat Subuh; tandai salatnya sudah dikerjakan, dan alarm tidak akan berbunyi. Di iOS 26 ini alarm sungguhan yang menembus mode senyap; di versi sebelumnya ia datang sebagai notifikasi. Ada juga alarm sahur untuk Ramadan, setiap hari, atau hari-hari puasa sunah.</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah ada alarm sebelum waktu salat habis?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ada. Setiap salat lima waktu bisa punya alarm sendiri yang berbunyi sebelum waktunya habis jika kamu belum mengerjakannya; tandai salatnya sudah dikerjakan, dan alarm tidak akan berbunyi. Di iOS 26 ini alarm sungguhan yang menembus mode senyap, dan kamu memilih seberapa awal ia berbunyi untuk setiap salat, dari 5 menit hingga 3 jam — misalnya 70 menit untuk Asar agar sempat salat sebelum waktu makruh. Di versi sebelumnya ia datang sebagai notifikasi. Ada juga alarm sahur untuk Ramadan, setiap hari, atau hari-hari puasa sunah.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Dari mana khotbah Jumat berasal?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Khotbah yang diterbitkan Diyanet setiap pekan masuk ke aplikasi; kamu bisa membacanya, mendengarkan rekaman suaranya, dan mengunduhnya untuk dibaca offline. Karena ini terbitan Diyanet, bagian ini muncul bagi pengguna yang memakai metode perhitungan Diyanet.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Apa saja isi fitur Al-Qur'an?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Seluruh 114 surah, analisis kata per kata, 72 terjemahan dalam 24 bahasa dan 51 tafsir dalam 20 bahasa (kamu memilih sumbernya berdasarkan nama penerjemah atau penulis, dan keterangan sumbernya ditampilkan di samping teks), tampilan mushaf tradisional, murottal, terjemahan bersuara, dan catatan khatam. Teks dan terjemahan, tafsir, dan Mushaf Madinah bisa offline setelah diunduh; murottal bisa diputar offline untuk surah atau juz yang kamu unduh. Untuk 13 terjemahan bahasa Turki, Suara Vakit yang alami membacakan terjemahannya, offline setelah diunduh; dalam bahasa lain, suara perangkatmu sendiri yang membacakannya, tanpa unduhan audio dan tanpa internet. Keduanya bisa diputar sendiri atau setelah tiap ayat.</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Bagaimana cara kerja catatan ibadah?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Tampilan ala Cincin Aktivitas mencatat salat, bacaan Al-Qur'an, dan zikirmu. Kamu juga bisa mencatat utang salat seumur hidup (kada) per waktu dan melunasinya sambil mengerjakannya. Runtun dan statistik yang lembut membantumu tetap istiqamah, tanpa rasa bersalah.</div></div></div>

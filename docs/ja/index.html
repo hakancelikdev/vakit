@@ -214,7 +214,7 @@
     "コントロールセンター",
     "信仰の記録",
     "礼拝の規律",
-    "ファジュルのアラーム",
+    "礼拝時間が終わる前のアラーム",
     "スフールのアラーム",
     "祝福の日のリマインダー",
     "通知",
@@ -335,10 +335,10 @@
     },
     {
       "@type": "Question",
-      "name": "ファジュルのアラームはありますか？",
+      "name": "礼拝時間が終わる前のアラームはありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。まだファジュルの礼拝をしていなければ、日の出前に鳴るアラームを設定できます。礼拝を済ませたと記録すれば鳴りません。iOS 26 では消音モードでも鳴る本物のアラームで、それ以前のバージョンでは通知として届きます。ほかに、ラマダーン中、毎日、またはスンナの断食の日に設定できるスフールのアラームもあります。"
+        "text": "はい。5回の礼拝それぞれに専用のアラームを設定でき、まだその礼拝をしていなければ時間が終わる前に鳴ります。礼拝を済ませたと記録すれば鳴りません。iOS 26 では消音モードでも鳴る本物のアラームで、どれだけ前に鳴らすかを礼拝ごとに5分から3時間まで選べます（例：忌避時間の前にアスルを済ませるなら70分）。それ以前のバージョンでは通知として届きます。ほかに、ラマダーン中、毎日、またはスンナの断食の日に設定できるスフールのアラームもあります。"
       }
     },
     {
@@ -597,7 +597,7 @@
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ja/more/mushaf.webp" alt="ムスハフの書体" width="390" height="844" loading="lazy" decoding="async"></div></div>
           <h3 class="g-title">ムスハフの書体</h3>
-          <p class="g-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。</p>
+          <p class="g-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。オプションのタジュウィードの色分けで、節のリストのイフファー、イドガーム、カルカラ、マッドなどを色で示します。</p>
         </li>
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ja/more/esma-ul-husna.webp" alt="アッラーの美名99" width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -693,7 +693,7 @@
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/calendar.webp" alt="Mac アプリ · ヒジュラ暦" width="1200" height="914" loading="lazy" decoding="async"></div></div>
           <h4 class="g-title">ヒジュラ暦</h4>
-          <p class="g-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。</p>
+          <p class="g-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。日付変換で1900〜2048年の日付をどちら向きにも変換できます。</p>
         </li>
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Mac アプリ · ズィクル・カウンター" width="1200" height="914" loading="lazy" decoding="async"></div></div>
@@ -865,7 +865,7 @@
           <li class="f-cell"><h4 class="f-name">キブラ・コンパス</h4><p class="f-desc">振動で方角を知らせ、カアバまでの距離、地図上のキブラの線、コンパス補正ガイドも。</p></li>
           <li class="f-cell"><h4 class="f-name">キブラ時刻</h4><p class="f-desc">太陽がキブラの方向に来る毎日の時刻。コンパスなしでキブラがわかります。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">ライブの星空</h4><p class="f-desc">日の軌道に本物の星と月——いまいる場所の、いまこの瞬間の空。</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">ファジュルのアラーム</h4><p class="f-desc">ファジュルを済ませていなければ日の出前に鳴り、済ませていれば鳴りません。iOS 26 では消音モードでも鳴ります。</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">礼拝時間が終わる前のアラーム</h4><p class="f-desc">5回の礼拝それぞれに設定でき、まだ礼拝していなければ時間が終わる前に鳴り、済ませていれば鳴りません。iOS 26 では消音モードでも鳴ります。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">アザーンの音</h4><p class="f-desc">礼拝ごとにそれぞれのマカームで：サバー、ウッシャーク、ラースト、セガー、ヒジャーズ。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">任意の礼拝の時間</h4><p class="f-desc">イシュラーク、ドゥハー、アウワービーン、夜の区分。表示はお好みで。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">忌避時間</h4><p class="f-desc">日の軌道に示し、その根拠となる伝承も添えて。</p></li>
@@ -887,7 +887,7 @@
           <li class="f-cell f-extra"><h4 class="f-name">タフスィール</h4><p class="f-desc">20言語の51のタフスィール——Kur'an Yolu、タバリー、クルトゥビーなど。節をタップすると、その節を含む範囲とともに開きます。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">訳の出典</h4><p class="f-desc">24言語の72のクルアーン訳、20言語の51のタフスィール。訳者や著者の名前で出典を選べ、本文の横にクレジットが表示されます。まだ確認されていない出典には、誤りを報告できる「正しいですか？」の注記が付きます。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">通読の記録</h4><p class="f-desc">114章、30ジュズ。完了した通読と、読み終える日の見込み。</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">ムスハフの書体</h4><p class="f-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">ムスハフの書体</h4><p class="f-desc">マディーナかトルコの書体——ページの配置も合わせて変わります。オプションのタジュウィードの色分けで、節のリストのイフファー、イドガーム、カルカラ、マッドなどを色で示します。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">プレイリスト</h4><p class="f-desc">好きな順にスーラを並べ、リストに名前を付けて最初から最後まで再生。オフラインでも聴けます。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">読み上げ翻訳</h4><p class="f-desc">トルコ語の13の訳は自然な「Vakit の声」で（一度ダウンロードすればオフライン）、ほかの言語は端末自身の音声で——単独でも、各節の後でも。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">今日のコンテンツ</h4><p class="f-desc">今日の節、ハディース、御名を1画面で。過去1週間もさかのぼれます。</p></li>
@@ -912,7 +912,7 @@
       <div class="f-group">
         <h3 class="f-group-title">暦と手引き<span class="f-group-count">8</span></h3>
         <ul class="f-list">
-          <li class="f-cell"><h4 class="f-name">ヒジュラ暦</h4><p class="f-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。</p></li>
+          <li class="f-cell"><h4 class="f-name">ヒジュラ暦</h4><p class="f-desc">西暦＋ヒジュラ暦。特別な日とラマダーンも。日付変換で1900〜2048年の日付をどちら向きにも変換できます。</p></li>
           <li class="f-cell"><h4 class="f-name">礼拝の手引き</h4><p class="f-desc">17の礼拝。立って、座って、または身振りで。</p></li>
           <li class="f-cell"><h4 class="f-name">金曜の説教</h4><p class="f-desc">Diyanet の計算方法を使う方に：説教を読む、聴く、オフラインで保存する。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">イムサキーヤ</h4><p class="f-desc">1か月分の礼拝時刻を1つのリストで。ラマダーンには日数と断食明けも。</p></li>
@@ -986,7 +986,7 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">どのデバイスで使えますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone、iPad、Apple Watch、Mac です。iPad では同じアプリを大きな画面で使え、記録は iCloud を通じてすべてのデバイスで同じに保たれます。バージョン1.7.0からは Mac にも対応しました。次の礼拝とカウントダウンはメニューバーに表示され、キーボードショートカットとデスクトップのウィジェットも使えます。macOS 15 以降では、タブがサイドバーに並びます。礼拝時刻、クルアーン、ハディース、ズィクル、信仰の記録は、同じ iCloud アカウントで iPhone と同期されます。Mac にはコンパスのハードウェアがないため、キブラのタブでは方角とカアバまでの距離を文字で表示します。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Android 版はありますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">はい。Vakit は Android 8.0 以降向けに Google Play で配信しています。無料・広告なしで、12 の計算方法と 25 言語も同じです。Apple Watch、Mac、iCloud 同期は Apple デバイスのみです。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">アザーンの音は選べますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">はい。「アザーン」を選ぶと、礼拝ごとにそれぞれのマカームで流れます：ファジュルはサバー、ズフルはウッシャーク、アスルはラースト、マグリブはセガー、イシャーはヒジャーズ。礼拝ごとに別の通知音を設定することもできます。カスタムの通知音は、最初に選んだときに一度だけダウンロードされます。録音はアプリに含まれているので、再生にインターネットは要りません。</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">ファジュルのアラームはありますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">はい。まだファジュルの礼拝をしていなければ、日の出前に鳴るアラームを設定できます。礼拝を済ませたと記録すれば鳴りません。iOS 26 では消音モードでも鳴る本物のアラームで、それ以前のバージョンでは通知として届きます。ほかに、ラマダーン中、毎日、またはスンナの断食の日に設定できるスフールのアラームもあります。</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">礼拝時間が終わる前のアラームはありますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">はい。5回の礼拝それぞれに専用のアラームを設定でき、まだその礼拝をしていなければ時間が終わる前に鳴ります。礼拝を済ませたと記録すれば鳴りません。iOS 26 では消音モードでも鳴る本物のアラームで、どれだけ前に鳴らすかを礼拝ごとに5分から3時間まで選べます（例：忌避時間の前にアスルを済ませるなら70分）。それ以前のバージョンでは通知として届きます。ほかに、ラマダーン中、毎日、またはスンナの断食の日に設定できるスフールのアラームもあります。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">金曜の説教はどこから来ていますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">トルコ宗務庁（Diyanet）がその週に公開した説教がアプリに届きます。読むことも、音声を聴くことも、オフラインで読むためにダウンロードすることもできます。Diyanet の公開物なので、このセクションは計算方法を Diyanet にしているユーザーに表示されます。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">クルアーンの機能には何がありますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">全114章、語ごとの解析、24言語の72の訳と20言語の51のタフスィール（出典は訳者や著者の名前で選べ、本文の横にクレジットが表示されます）、伝統的なムスハフ表示、音声の読誦、読み上げ翻訳、通読の記録。本文と訳、タフスィール、マディーナのムスハフは一度ダウンロードすればオフラインで使え、読誦はダウンロードした章やジュズならオフラインで再生できます。トルコ語の13の訳は自然な「Vakit の声」が読み上げ、一度ダウンロードすればオフラインで使えます。ほかの言語では端末自身の音声が読み上げるので、音声のダウンロードもインターネットも要りません。どちらも単独で、または各節の後に再生できます。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">信仰の記録はどう機能しますか？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">アクティビティリングのような画面で、礼拝、クルアーンの読誦、ズィクルを記録します。生涯の欠かした礼拝（補い）を時刻ごとに記録し、礼拝するごとに減らしていくこともできます。連続記録と穏やかな統計が、罪悪感なく続ける助けになります。</div></div></div>

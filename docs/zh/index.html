@@ -214,7 +214,7 @@
     "控制中心",
     "功修记录",
     "礼拜自律",
-    "晨礼闹钟",
+    "礼拜时间结束前的闹钟",
     "封斋饭闹钟",
     "吉庆日提醒",
     "通知",
@@ -335,10 +335,10 @@
     },
     {
       "@type": "Question",
-      "name": "有晨礼闹钟吗？",
+      "name": "有礼拜时间结束前的闹钟吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "有。如果你还没有礼晨礼，可以设置一个在日出前响起的闹钟；把这次礼拜标记为已完成后，它便不会响。在 iOS 26 上，它是能突破静音模式的真正闹钟；在更早的版本上则以通知的形式出现。另外还有封斋饭闹钟，可设在斋月期间、每天，或副功斋的日子。"
+        "text": "有。五番礼拜每一番都可以设置自己的闹钟：如果你还没有礼这番拜，它会在礼拜时间结束前响起；把这次礼拜标记为已完成后，它便不会响。在 iOS 26 上，它是能突破静音模式的真正闹钟，你可以为每番礼拜分别选择提前多久响起，从 5 分钟到 3 小时——例如为晡礼选 70 分钟，以便在厌恶时段之前礼拜。在更早的版本上则以通知的形式出现。另外还有封斋饭闹钟，可设在斋月期间、每天，或副功斋的日子。"
       }
     },
     {
@@ -597,7 +597,7 @@
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/zh/more/mushaf.webp" alt="经本书体" width="390" height="844" loading="lazy" decoding="async"></div></div>
           <h3 class="g-title">经本书体</h3>
-          <p class="g-desc">麦地那或土耳其书体——页面排版也随之改变。</p>
+          <p class="g-desc">麦地那或土耳其书体——页面排版也随之改变。可选的泰吉威德着色会在经文列表中用颜色标出隐音、合音、震音、长音等。</p>
         </li>
         <li class="g-item">
           <div class="phone"><div class="phone-screen"><img src="/assets/screenshots/zh/more/esma-ul-husna.webp" alt="真主的 99 个尊名" width="390" height="844" loading="lazy" decoding="async"></div></div>
@@ -693,7 +693,7 @@
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/calendar.webp" alt="Mac 应用 · 希吉来历" width="1200" height="914" loading="lazy" decoding="async"></div></div>
           <h4 class="g-title">希吉来历</h4>
-          <p class="g-desc">公历 + 希吉来历，标注特别的日子与斋月。</p>
+          <p class="g-desc">公历 + 希吉来历，标注特别的日子与斋月；日期转换可将 1900–2048 年间的任何日期双向换算。</p>
         </li>
         <li class="g-item">
           <div class="dv-frame mac"><div class="dv-screen"><img src="/assets/screenshots/en/mac/zikirmatik.webp" alt="Mac 应用 · 记主计数器" width="1200" height="914" loading="lazy" decoding="async"></div></div>
@@ -865,7 +865,7 @@
           <li class="f-cell"><h4 class="f-name">朝向罗盘</h4><p class="f-desc">以触感引导方向，显示到天房的距离、地图上的朝向线，并提供罗盘校准指南。</p></li>
           <li class="f-cell"><h4 class="f-name">朝向时间</h4><p class="f-desc">每天太阳位于朝向方向的时刻——无需罗盘也能找到朝向。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">实时星空</h4><p class="f-desc">日弧上的真实星辰与月亮——就在你所在之处、此时此刻。</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">晨礼闹钟</h4><p class="f-desc">还没礼晨礼时在日出前响起，礼过便不再响；在 iOS 26 上可突破静音模式。</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">礼拜时间结束前的闹钟</h4><p class="f-desc">五番礼拜各自可设：还没礼时在礼拜时间结束前响起，礼过便不再响；在 iOS 26 上可突破静音模式。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">宣礼声</h4><p class="f-desc">每次礼拜各有自己的调式：saba、ussak、rast、segah、hicaz。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">副功拜时段</h4><p class="f-desc">伊什拉格、都哈、奥瓦宾以及夜间各时段；可选开启。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">厌恶时段</h4><p class="f-desc">标注在日弧上，并附其所依据的传述。</p></li>
@@ -887,7 +887,7 @@
           <li class="f-cell f-extra"><h4 class="f-name">经注</h4><p class="f-desc">20 种语言的 51 部经注——Kur'an Yolu、泰伯里、古尔图比等；轻点一节经文即可打开，并显示它所涵盖的经文范围。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">译文来源</h4><p class="f-desc">24 种语言的 72 种《古兰经》译文，20 种语言的 51 部经注；按译者或作者姓名选择来源，文本旁附有署名。尚未审核的来源带有「内容正确吗？」提示，可用来报告错误。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">通读记录</h4><p class="f-desc">114 章、30 卷；已完成的通读与预计完成时间。</p></li>
-          <li class="f-cell f-extra"><h4 class="f-name">经本书体</h4><p class="f-desc">麦地那或土耳其书体——页面排版也随之改变。</p></li>
+          <li class="f-cell f-extra"><h4 class="f-name">经本书体</h4><p class="f-desc">麦地那或土耳其书体——页面排版也随之改变。可选的泰吉威德着色会在经文列表中用颜色标出隐音、合音、震音、长音等。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">播放列表</h4><p class="f-desc">按你的顺序排列章节，给列表命名，从头听到尾——离线也能听。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">语音翻译</h4><p class="f-desc">13 种土耳其语译文由自然的「Vakit 语音」朗读（下载后可离线使用），其他语言则用设备自带的声音——可单独播放，也可在每节经文之后播放。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">今日内容</h4><p class="f-desc">当日的经文、圣训和尊名同屏显示；可回看过去一周。</p></li>
@@ -912,7 +912,7 @@
       <div class="f-group">
         <h3 class="f-group-title">日历与指南<span class="f-group-count">8</span></h3>
         <ul class="f-list">
-          <li class="f-cell"><h4 class="f-name">希吉来历</h4><p class="f-desc">公历 + 希吉来历，标注特别的日子与斋月。</p></li>
+          <li class="f-cell"><h4 class="f-name">希吉来历</h4><p class="f-desc">公历 + 希吉来历，标注特别的日子与斋月；日期转换可将 1900–2048 年间的任何日期双向换算。</p></li>
           <li class="f-cell"><h4 class="f-name">礼拜指南</h4><p class="f-desc">17 种礼拜；站立、坐着或以示意动作礼拜。</p></li>
           <li class="f-cell"><h4 class="f-name">主麻讲道</h4><p class="f-desc">供使用 Diyanet 计算方法的用户：阅读、收听并离线保存主麻讲道。</p></li>
           <li class="f-cell f-extra"><h4 class="f-name">月度时刻表</h4><p class="f-desc">一个月的全部礼拜时间在一个列表里；斋月中显示天数和开斋。</p></li>
@@ -986,7 +986,7 @@
         <div class="faq-item"><button class="faq-q" aria-expanded="false">可以在哪些设备上使用？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">iPhone、iPad、Apple Watch 和 Mac。在 iPad 上，它就是同一个应用，只是屏幕更大；你的记录通过 iCloud 在所有设备间保持一致。从 1.7.0 版起，Vakit 也登陆了 Mac：菜单栏显示下一次礼拜和倒计时，支持键盘快捷键和桌面小组件，从 macOS 15 起标签页位于侧边栏。礼拜时间、古兰经、圣训、记主和功修记录通过同一个 iCloud 账户与你的 iPhone 同步。由于 Mac 没有罗盘硬件，朝向页面以文字显示方向和到天房的距离。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">Vakit 有 Android 版吗？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">有。Vakit 已在 Google Play 上架，支持 Android 8.0 及以上版本——免费、无广告，同样提供 12 种计算方法和 25 种语言。Apple Watch、Mac 和 iCloud 同步仅限 Apple 设备。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">可以选择宣礼声吗？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">可以。选择宣礼时，每次礼拜都以各自的调式诵念：晨礼 saba、晌礼 ussak、晡礼 rast、昏礼 segah、宵礼 hicaz。你也可以为每次礼拜单独设置通知声音；自定义通知声音会在你第一次选择时下载一次。宣礼录音随应用一起提供，播放时无需联网。</div></div></div>
-        <div class="faq-item"><button class="faq-q" aria-expanded="false">有晨礼闹钟吗？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">有。如果你还没有礼晨礼，可以设置一个在日出前响起的闹钟；把这次礼拜标记为已完成后，它便不会响。在 iOS 26 上，它是能突破静音模式的真正闹钟；在更早的版本上则以通知的形式出现。另外还有封斋饭闹钟，可设在斋月期间、每天，或副功斋的日子。</div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">有礼拜时间结束前的闹钟吗？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">有。五番礼拜每一番都可以设置自己的闹钟：如果你还没有礼这番拜，它会在礼拜时间结束前响起；把这次礼拜标记为已完成后，它便不会响。在 iOS 26 上，它是能突破静音模式的真正闹钟，你可以为每番礼拜分别选择提前多久响起，从 5 分钟到 3 小时——例如为晡礼选 70 分钟，以便在厌恶时段之前礼拜。在更早的版本上则以通知的形式出现。另外还有封斋饭闹钟，可设在斋月期间、每天，或副功斋的日子。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">主麻讲道从哪里来？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Diyanet（土耳其宗教事务部）每周发布的讲道会出现在应用中；你可以阅读、收听录音，也可以下载后离线阅读。由于这是 Diyanet 发布的内容，此板块只对计算方法为 Diyanet 的用户显示。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">古兰经功能包括什么？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">全部 114 章、逐词解析、24 种语言的 72 种译文和 20 种语言的 51 部经注（按译者或作者姓名选择来源，文本旁附有署名）、传统经本视图、有声诵读、语音翻译以及通读记录。经文与译文、经注和麦地那经本下载一次后即可离线使用；诵读则在你下载的章或卷上离线播放。13 种土耳其语译文由自然的「Vakit 语音」朗读，下载后可离线使用；其他语言由设备自带的声音朗读，无需下载音频，也无需联网。两者都可以单独播放，或在每节经文之后播放。</div></div></div>
         <div class="faq-item"><button class="faq-q" aria-expanded="false">功修记录如何运作？<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">类似活动圆环的视图会记录你的礼拜、古兰经阅读和记主。你还可以按礼拜时段记录一生的欠拜（还补），在礼拜的同时逐步还清。连续记录和温和的统计帮助你坚持下去，不带愧疚。</div></div></div>
