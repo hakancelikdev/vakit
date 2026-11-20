@@ -30,10 +30,9 @@ it:it ja:ja ms:ms nl:nl-NL pt:pt-PT ru:ru th:th ur:ur-PK zh:zh-Hans"
 SHOTS="prayer-times widget discover qibla profile qada quran prayer-guide calendar zikirmatik"
 
 # Captures known to be broken in the toolkit: the committed webp stays until the
-# toolkit is re-shot. `*/qada`: the 2026-09-21 set captured the prayer guide
-# under that name in every language but en-GB; the site keeps the 2026-09-10
-# qada screens.
-KEEP="${KEEP-*/qada}"
+# toolkit is re-shot (e.g. KEEP="*/qada"). Empty since the 2026-11-07 re-shoot
+# fixed qada (the 2026-09-21 set had captured the prayer guide under that name).
+KEEP="${KEEP-}"
 
 WIDTH=780   # phone mockup is 320 CSS px; ~2.4x covers retina without shipping 1206 px
 QUALITY=80
@@ -52,9 +51,8 @@ done
 
 # iPad and Mac: the "devices" section. Must match DEVICES in content.js.
 # iPad has a capture for every language above; Mac only for Turkish and
-# English, so every other page shows the English Mac windows. The toolkit's
-# iPad "qada.png" is really the prayer guide, hence the rename.
-IPAD="prayer-times:prayer-times discover:discover quran:quran hadith:hadith accounting:accounting qada:prayer-guide"
+# English, so every other page shows the English Mac windows.
+IPAD="prayer-times:prayer-times discover:discover quran:quran hadith:hadith accounting:accounting qada:qada"
 MAC="prayer-times discover calendar zikirmatik prayer-guide"
 
 for pair in $PAIRS; do
