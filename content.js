@@ -516,7 +516,7 @@ const FEATURES = {
 // assets/screenshots/<shots>/<img>.webp. The preview video plays in the hero.
 const SHOWCASE = {
   tr: [
-    { t: "Gökyüzü gibi.", d: "Vakit girdikçe ekran da gökyüzüyle birlikte değişir; yıldızlar ve ay gerçek yerlerinde. Kerahat ve nafile vakitleri isteğe bağlı." },
+    { t: "Nasıl olmalıysa, öyle.", d: "Vakitler Diyanet yöntemiyle, kerahat ve nafile vakitleri isteğe bağlı. Ekran dilersen gökyüzüyle birlikte değişir, dilersen sade kalır." },
     { t: "Ekranı açmadan.", d: "Sonraki vakit kilit ekranında, widget'ta, Dynamic Island'da ve saatinde. Sessiz bir bakış — hiç dikkat çalmadan." },
     { t: "Tüm araçlar, tek yerde.", d: "Kur'an, hadis, Cuma hutbesi, zikir, esma, rehberler ve takvim — tek bir hub'da. Hiçbir özellik paywall arkasında değil." },
     { t: "Doğru yön.", d: "Kıbleye döndüğünde telefon titrer; Kâbe'ye mesafe de yanında." },
@@ -528,7 +528,7 @@ const SHOWCASE = {
     { t: "Sayaç elinde.", d: "Zikirmatik ve namaz sonrası tesbihat; hazır zikirler, kendi zikirlerin ve günlük hedef." },
   ],
   en: [
-    { t: "Like the sky.", d: "As each prayer time enters, the screen changes with the sky — real stars and the moon in their true places. Makruh and voluntary times are optional." },
+    { t: "Exactly as it should be.", d: "Prayer times by your chosen method; makruh and voluntary times are optional. Let the screen change with the sky, or keep it plain." },
     { t: "Without unlocking.", d: "The next prayer on your Lock Screen, in a widget, in the Dynamic Island and on your watch. A quiet glance — never a stare." },
     { t: "Every tool, in one place.", d: "Quran, hadith, Friday sermon, dhikr, asma, guides and the calendar — all in one hub. Nothing locked behind a paywall." },
     { t: "The right direction.", d: "Turn toward the qibla and your phone vibrates, with the distance to the Ka'bah alongside." },
