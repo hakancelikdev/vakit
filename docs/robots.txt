@@ -56,7 +56,4 @@ User-agent: Googlebot
 Allow: /
 Disallow: /assets/video/play-review/
 
-# Nothing useful to crawl here
-Disallow: /assets/favicon*
-
 Sitemap: https://vakit.hakancelik.dev/sitemap.xml

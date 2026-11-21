@@ -730,6 +730,8 @@ ${ALL.filter((l) => l !== lang).map((l) => `    <meta property="og:locale:altern
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
+    <!-- The live clock's first request; opening the connection early saves its handshake. -->
+    <link rel="preconnect" href="https://api.aladhan.com" crossorigin>
     <link rel="stylesheet" href="${asset("styles.css")}">
 
     <!-- Structured Data -->
@@ -1359,6 +1361,7 @@ function robots() {
     "Googlebot",
   ];
 
+  // Never disallow /assets/favicon*: Google shows a site's favicon in results only if Googlebot may fetch it.
   // Not for search: Google Play review material (foreground-service demo videos linked only from the
   // Play Console declaration). Every group repeats it — a crawler obeys only its own group.
   const hidden = ["/assets/video/play-review/"].map((p) => `Disallow: ${p}`).join("\n");
@@ -1370,9 +1373,6 @@ ${hidden}
 
 # Search and AI assistants are explicitly welcome to read and cite this page.
 ${aiBots.map((b) => `User-agent: ${b}\nAllow: /\n${hidden}`).join("\n\n")}
-
-# Nothing useful to crawl here
-Disallow: /assets/favicon*
 
 Sitemap: ${SITE.origin}/sitemap.xml
 `;
