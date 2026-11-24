@@ -99,7 +99,7 @@
 
 <main class="legal-page">
   <h1>Privacy <em>Policy</em></h1>
-  <p class="legal-desc">Last updated: 18 October 2026 — Version 2.1.0
+  <p class="legal-desc">Last updated: 24 November 2026 — Version 2.5.0
 
 Vakit respects your privacy. No account is required and we do not collect personally identifying information (name, email, phone, photos, contacts). Prayer times, qibla direction and reminders are calculated entirely on your device. Your khatm progress, bookmarks, goals and favourite mosques stay on your device and sync only within your own Apple iCloud account — they are never sent to our servers. Your dhikr list is the exception: it is sent to our servers along with usage statistics so we can improve the app (see section 1). Everything sent to our servers is tied to a persistent user code containing no identifying information.</p>
   <div class="legal-card"><h2>1. Data We Collect</h2><p>Data we DO NOT collect:
@@ -134,6 +134,7 @@ Because this user code syncs through the iCloud keychain, devices on the same Ap
 • Place Name – To show the name of where you are, your coordinates are sent to Apple's place-name service; not to Vakit servers.
 • Worship Reminders – Local notifications are scheduled on-device by iOS and macOS.
 • Announcements – Blessed-day and release announcements are broadcast via Firebase Cloud Messaging; there is no per-person targeting.
+• Live Activity – So the Live Activity on your Lock Screen can be closed when the prayer time begins, that activity's push token, the device's push token and the end time are sent to our server. A single &quot;end&quot; message goes to that device only; the record is deleted within 3 days and carries no user code or identifying information.
 • Friday Sermon – This week's sermon is downloaded from the Diyanet public page; the request carries no identifying information.
 • Nearby Mosques – Your location is sent to Apple MapKit (mosque search, distance, directions); not to Vakit servers.
 • User Data (dhikr, khatm, bookmarks) – Stored locally with Core Data and synced within your private Apple iCloud space. Of these, only the dhikr list is additionally sent to the Vakit server (see section 1).

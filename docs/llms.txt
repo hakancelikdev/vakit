@@ -79,7 +79,7 @@ Android: https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit&r
 - **Bookmarks** — Save ayat and hadith.
 - **iCloud Sync** — Your records stay in your own iCloud, on every device.
 - **Tafsir** — 51 tafsir in 20 languages — Kur'an Yolu, al-Tabari, al-Qurtubi and more; tap an ayah to open it, with the range it covers.
-- **Translation Sources** — 72 Quran translations in 24 languages, 51 tafsir in 20; pick a source by translator or author name, with its credit beside the text. Sources not yet reviewed carry an "Is this correct?" note to report a mistake.
+- **Translation Sources** — 72 Quran translations in 24 languages, 51 tafsir in 20; pick a source by translator or author name, with its credit beside the text.
 - **Share Cards** — Beautiful cards for ayat, hadith, dhikr and the names of Allah.
 - **Fasting** — Ramadan, Shawwal, and day-by-day tracking.
 - **Nearby Mosques** — Find masajid via Apple Maps, without your location reaching our servers; map, distance, directions.

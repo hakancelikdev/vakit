@@ -101,7 +101,7 @@
 <main class="legal-page">
   <h1>Datenschutz<em>erklärung</em></h1>
   <p class="legal-notice">Diese Seite ist eine Übersetzung, die wir der Einfachheit halber bereitstellen; weicht sie von der englischen Fassung ab, gilt die englische Fassung. <a href="/en/privacy.html" hreflang="en" lang="en">English</a></p>
-  <p class="legal-desc">Zuletzt aktualisiert: 18. Oktober 2026 — Version 2.1.0
+  <p class="legal-desc">Zuletzt aktualisiert: 24. November 2026 — Version 2.5.0
 
 Vakit respektiert deine Privatsphäre. Du brauchst kein Konto, und wir erheben keine Angaben, die dich persönlich identifizieren (Name, E-Mail, Telefonnummer, Fotos, Kontakte). Gebetszeiten, Qibla-Richtung und Erinnerungen werden vollständig auf deinem Gerät berechnet. Dein Chatm-Fortschritt, deine Lesezeichen, Ziele und bevorzugten Moscheen bleiben auf deinem Gerät und werden nur innerhalb deines eigenen Apple-iCloud-Kontos synchronisiert — sie werden nie an unsere Server gesendet. Eine Ausnahme ist deine Dhikr-Liste: Sie wird zusammen mit Nutzungsstatistiken an unsere Server gesendet, damit wir die App verbessern können (siehe Abschnitt 1). Alles, was an unsere Server geht, ist mit einem dauerhaften Benutzercode verknüpft, der keine identifizierenden Angaben enthält.</p>
   <div class="legal-card"><h2>1. Daten, die wir erheben</h2><p>Daten, die wir NICHT erheben:
@@ -136,6 +136,7 @@ Da dieser Benutzercode über den iCloud-Schlüsselbund synchronisiert wird, zäh
 • Ortsname – Um den Namen deines Aufenthaltsorts anzuzeigen, werden deine Koordinaten an Apples Dienst für Ortsnamen gesendet, nicht an Vakit-Server.
 • Gottesdienst-Erinnerungen – Lokale Mitteilungen werden von iOS und macOS auf dem Gerät geplant.
 • Ankündigungen – Ankündigungen zu heiligen Tagen und neuen Versionen werden über Firebase Cloud Messaging an alle gesendet; es gibt keine Ausrichtung auf einzelne Personen.
+• Live-Aktivität – Damit die Live-Aktivität auf deinem Sperrbildschirm beendet werden kann, wenn die Gebetszeit beginnt, werden der Push-Token dieser Aktivität, der Push-Token des Geräts und die Endzeit an unseren Server gesendet. Nur an dieses Gerät geht eine einzige „Beenden“-Nachricht; der Eintrag wird innerhalb von 3 Tagen gelöscht und enthält weder einen Benutzercode noch identifizierende Angaben.
 • Freitagspredigt – Die Predigt der Woche wird von der öffentlichen Seite des Diyanet geladen; die Anfrage enthält keine identifizierenden Angaben.
 • Moscheen in der Nähe – Dein Standort wird an Apple MapKit gesendet (Moscheesuche, Entfernung, Route), nicht an Vakit-Server.
 • Nutzerdaten (Dhikr, Chatm, Lesezeichen) – Werden lokal mit Core Data gespeichert und in deinem privaten Apple-iCloud-Bereich synchronisiert. Davon wird nur die Dhikr-Liste zusätzlich an den Vakit-Server gesendet (siehe Abschnitt 1).
