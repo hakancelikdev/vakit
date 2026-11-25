@@ -1324,6 +1324,7 @@ ${assets}
 
 const cityUrl = (id, lang) => localUrl(lang, `${CITY_COPY[lang].seg}/${id}.html`);
 const cityHubUrl = (lang) => localUrl(lang, `${CITY_COPY[lang].seg}/`);
+const fastUrl = (lang, year) => localUrl(lang, `${CITY_COPY[lang].seg}/${CITY_COPY[lang].fastSlug.replace("{year}", year)}.html`);
 
 function cityTimes(id) {
   return JSON.parse(fs.readFileSync(path.join(__dirname, "cities", "times", `${id}.json`), "utf8"));
@@ -1382,7 +1383,11 @@ const CITY_STYLE = `      .city-head { padding: 88px var(--gutter) 28px; max-wid
       :where(html:not(.script-latin):not(.script-cyrillic)) .city-head h1 { line-height: 1.3 }
       .script-urdu .city-head h1 { line-height: 2; font-size: clamp(30px, 3.6vw, 50px) }
       .script-urdu :is(.city-head p, .city-card h2, .city-card > p, .city-crumb) { line-height: 2 }
-      .city-links a, .city-note a { color: var(--accent-ink) }
+      .city-links a, .city-note a, .city-more a, .city-fast td a { color: var(--accent-ink) }
+      .city-more { margin-top: 16px; font-size: 15px; font-weight: 600 }
+      .city-fast td:nth-child(4), .city-fast td:nth-child(5) { font-weight: 600; white-space: nowrap }
+      .city-fast td:nth-child(2), .city-fast td:nth-child(3) { font-weight: 400 }
+      .city-card > .city-note { margin-top: 16px; margin-bottom: 0 }
       @media (max-width: 734px) {
         .city-head { padding: 56px 20px 16px } .city-body { padding: 24px 20px }
         .city-card { padding: 24px 18px } .city-app { grid-template-columns: 1fr } .city-shots .phone { width: 128px }
@@ -1515,6 +1520,20 @@ const cityIn = (id, lang) =>
 const citiesIn = (lang) => Object.keys(CITY_PAGES).filter((id) => CITY_PAGES[id].langs.includes(lang));
 const CITY_LANGS = Object.keys(CITY_COPY).filter((l) => citiesIn(l).length);
 
+/** A date in the page's language, spelled out from CITY_COPY (never Intl — see cities.js). */
+function cityDate(lang, iso, pattern) {
+  const K = CITY_COPY[lang];
+  const d = new Date(`${iso}T12:00:00Z`);
+  return pattern
+    .replace("{d}", d.getUTCDate())
+    .replace("{M}", K.months[d.getUTCMonth()])
+    .replace("{y}", d.getUTCFullYear())
+    .replace("{w}", K.days[d.getUTCDay()]);
+}
+
+const minutes = (t) => +t.slice(0, 2) * 60 + +t.slice(3);
+const duration = (lang, mins) => CITY_COPY[lang].durFmt.replace("{h}", Math.floor(mins / 60)).replace("{m}", mins % 60);
+
 /** Ramadan of the window's first full year (Hijri month 9) and Eid, the day after it ends. */
 function ramadanOf(T) {
   const days = T.days.filter((d) => d[2] === 9 && d[0] >= `${TIMES_FROM}-01`);
@@ -1528,14 +1547,7 @@ function cityPage(id, lang) {
   const T = cityTimes(id);
   const name = cityName(id, lang);
 
-  const date = (iso, pattern) => {
-    const d = new Date(`${iso}T12:00:00Z`);
-    return pattern
-      .replace("{d}", d.getUTCDate())
-      .replace("{M}", K.months[d.getUTCMonth()])
-      .replace("{y}", d.getUTCFullYear())
-      .replace("{w}", K.days[d.getUTCDay()]);
-  };
+  const date = (iso, pattern) => cityDate(lang, iso, pattern);
   const longDate = (iso) => date(iso, K.dateLong);
 
   const R = ramadanOf(T);
@@ -1633,6 +1645,7 @@ ${cityAppCard(lang, `city-${id}`)}
 ${rows}
         </tbody>
       </table>
+      <p class="city-more"><a href="${fastUrl(lang, R.year)}">${esc(fill(K.fastLink))}</a></p>
     </section>
   </div>
 
@@ -1665,6 +1678,81 @@ ${cityFinal(lang, `city-${id}`)}
   return cityShell(lang, { title, description, url: (l) => cityUrl(id, l), langs: P.langs, schema, campaign: `city-${id}`, data }, main);
 }
 
+/**
+ * Ramadan fasting hours: every city (not only this language's), Fajr to Maghrib on the
+ * first and last day, longest first. Cities without a page in this language link to
+ * the English one under their English name.
+ */
+function fastPage(lang) {
+  const K = CITY_COPY[lang];
+  const ids = Object.keys(CITY_PAGES);
+  const rows = ids.map((id) => {
+    const R = ramadanOf(cityTimes(id));
+    const [a, b] = [R.days[0], R.days[R.days.length - 1]];
+    const own = CITY_PAGES[id].langs.includes(lang);
+    return {
+      id, own, R,
+      name: CITY_PAGES[id].names[lang] || CITY_PAGES[id].names.en,
+      href: cityUrl(id, own ? lang : "en"),
+      fajr: a[4], iftar: a[8],
+      first: minutes(a[8]) - minutes(a[4]),
+      last: minutes(b[8]) - minutes(b[4]),
+    };
+  }).sort((x, y) => y.last - x.last || y.first - x.first);
+  const R = rows[0].R;
+  const all = rows.flatMap((r) => [[r, r.first], [r, r.last]]);
+  const longest = all.reduce((m, x) => (x[1] > m[1] ? x : m));
+  const shortest = all.reduce((m, x) => (x[1] < m[1] ? x : m));
+  const fill = (s) =>
+    s
+      .replaceAll("{year}", R.year)
+      .replaceAll("{count}", num(lang, ids.length))
+      .replaceAll("{start}", cityDate(lang, R.days[0][0], K.dateLong))
+      .replaceAll("{end}", cityDate(lang, R.days[R.days.length - 1][0], K.dateLong))
+      .replaceAll("{longest}", longest[0].name)
+      .replaceAll("{longestH}", duration(lang, longest[1]))
+      .replaceAll("{shortest}", shortest[0].name)
+      .replaceAll("{shortestH}", duration(lang, shortest[1]));
+  const title = fill(K.fastTitle);
+  const description = fill(K.fastDescription);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.origin + fastUrl(lang, R.year),
+    inLanguage: LANGS[lang].htmlLang,
+    isPartOf: { "@type": "WebSite", name: SITE.appName, url: SITE.origin + LANGS[lang].path },
+  };
+
+  const main = `  <header class="city-head">
+    <p class="city-crumb"><a href="${cityHubUrl(lang)}">${esc(K.footLink)}</a></p>
+    <h1>${esc(fill(K.fastH1))}</h1>
+    <p>${esc(fill(K.fastLede))}</p>
+  </header>
+
+  <div class="city-body">
+    <section class="city-card">
+      <table class="city-table city-fast">
+        <thead><tr>${K.fastCols.map((h) => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>
+        <tbody>
+${rows.map((r) => `          <tr><td><a href="${r.href}"${r.own ? "" : ' hreflang="en"'}>${esc(r.name)}</a></td><td>${r.fajr}</td><td>${r.iftar}</td><td>${esc(duration(lang, r.first))}</td><td>${esc(duration(lang, r.last))}</td></tr>`).join("\n")}
+        </tbody>
+      </table>
+      <p class="city-note">${esc(fill(K.fastNote))}</p>
+    </section>
+${cityAppCard(lang, "fasting")}
+  </div>
+
+${showcaseSection(lang)}
+
+${trustSection(lang)}
+
+${cityFinal(lang, "fasting")}`;
+
+  return cityShell(lang, { title, description, url: (l) => fastUrl(l, R.year), langs: CITY_LANGS, schema, campaign: "fasting" }, main);
+}
+
 /** One index per language: every city page in it, then why Vakit. */
 function cityHubPage(lang) {
   const K = CITY_COPY[lang];
@@ -1693,6 +1781,7 @@ function cityHubPage(lang) {
       <div class="city-grid">
 ${ids.map((id) => `        <a href="${cityUrl(id, lang)}">${esc(cityName(id, lang))}</a>`).join("\n")}
       </div>
+      <p class="city-more"><a href="${fastUrl(lang, year)}">${esc(fill(K.fastLink))}</a></p>
     </section>
 ${cityAppCard(lang, "cities")}
   </div>
@@ -1744,6 +1833,9 @@ ${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLan
     .join("\n");
   const hubUrl = (l) => SITE.origin + cityHubUrl(l);
   const hubs = CITY_LANGS.map((l) => block(hubUrl(l), CITY_LANGS, hubUrl, "monthly", "0.7")).join("\n");
+  const fastYear = ramadanOf(cityTimes(Object.keys(CITY_PAGES)[0])).year;
+  const fUrl = (l) => SITE.origin + fastUrl(l, fastYear);
+  const fasts = CITY_LANGS.map((l) => block(fUrl(l), CITY_LANGS, fUrl, "monthly", "0.8")).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -1753,6 +1845,7 @@ ${mf}
 ${legal}
 ${press}
 ${hubs}
+${fasts}
 ${cities}
 </urlset>
 `;
@@ -1966,6 +2059,8 @@ function main() {
     for (const lang of langs) write(path.join(LANGS[lang].dir, CITY_COPY[lang].seg, `${id}.html`), cityPage(id, lang));
   }
   for (const lang of CITY_LANGS) write(path.join(LANGS[lang].dir, CITY_COPY[lang].seg, "index.html"), cityHubPage(lang));
+  const fastYear = ramadanOf(cityTimes(Object.keys(CITY_PAGES)[0])).year;
+  for (const lang of CITY_LANGS) write(fastUrl(lang, fastYear).slice(1), fastPage(lang));
 
   write("sitemap.xml", sitemap());
   write("robots.txt", robots());

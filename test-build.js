@@ -351,3 +351,14 @@ for (const lang of Object.keys(CT.CITY_COPY)) {
     assert.ok(SM.includes(`<loc>${C.SITE.origin}${hubHref(lang)}</loc>`), "site haritasında yok");
   });
 }
+for (const lang of Object.keys(CT.CITY_COPY)) {
+  test(`${lang}: Ramazan oruç süreleri sayfası 33 şehirle, listeden bağlı, site haritasında`, () => {
+    const href = `${hubHref(lang)}${CT.CITY_COPY[lang].fastSlug.replace("{year}", "2027")}.html`;
+    const p = fs.readFileSync(path.join("docs", href), "utf8");
+    assert.strictEqual((p.match(/<tr><td><a /g) || []).length, Object.keys(CT.CITY_PAGES).length, "şehir sayısı");
+    assert.ok(!/\{(year|count|start|end|longest|shortest|longestH|shortestH)\}/.test(p), "doldurulmamış yer tutucu");
+    assert.ok(p.includes(`ct=site-fasting-${lang}`), "kampanyalı App Store linki yok");
+    assert.ok(fs.readFileSync(path.join("docs", hubHref(lang), "index.html"), "utf8").includes(`href="${href}"`), "listeden bağlantı yok");
+    assert.ok(SM.includes(`<loc>${C.SITE.origin}${href}</loc>`), "site haritasında yok");
+  });
+}
