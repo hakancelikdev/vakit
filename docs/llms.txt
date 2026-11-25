@@ -1,6 +1,6 @@
-# Vakit: Prayer Times, Qibla, Quran
+# Vakit: Prayer Times, Adhan, Qibla & Quran
 
-> Free, ad-free, no account; prayer times work offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch, Mac and Android; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.
+> Prayer times that work offline, adhan alerts, Qibla compass and the Quran. 12 calculation methods, 25 languages. Free, no ads, no account. iPhone & Android.
 
 Vakit is a free, ad-free Islamic prayer times and worship app for iPhone, iPad,
 Apple Watch and Mac — and Android, built by Hakan Çelik. Current release: 2.4.0; requires
@@ -198,4 +198,4 @@ The home page exists in every interface language:
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Website source](https://github.com/hakancelikdev/vakit)
 
-Last updated: 2026-11-20
+Last updated: 2026-11-25

@@ -40,7 +40,7 @@ const SITE = {
   // sitemap <lastmod> and the llms.txt footer. Bump when page content changes.
   // Kept explicit rather than "today" so rebuilding the same commit is
   // byte-identical and CI can detect stale generated files.
-  updated: "2026-11-20",
+  updated: "2026-11-25",
   // Deployment targets in VakitApp-Swift/vakit.xcodeproj (IPHONEOS/WATCHOS/MACOSX_DEPLOYMENT_TARGET).
   // Each platform has its own minimum — "iOS/macOS 16.4" was wrong, macOS is 13.
   minOS: { ios: "16.4", watchos: "9", macos: "13" },
@@ -241,16 +241,16 @@ const REVIEWERS = ["Meryem Ebrar", "alpaslanx", "h-seyin", "Keskin2298", "Baalba
 
 const META = {
   tr: {
-    title: "Vakit: Namaz Vakitleri, Kıble, Kur'an",
+    title: "Vakit: Namaz Vakitleri, Ezan Vakti, Kıble ve Kur'an",
     description:
-      "Ücretsiz, reklamsız, hesap gerektirmez; vakitler internetsiz. Namaz vakitlerini takip et, kıbleyi bul, Kur'an-ı Kerim oku. iPhone, iPad, Apple Watch, Mac ve Android; 25 dil, 12 hesaplama yöntemi, Live Activities, kilit ekranı widget'ları, Cuma hutbesi, kaza takibi.",
+      "Namaz vakitleri ve ezan vakti internetsiz; Diyanet dahil 12 hesaplama yöntemi, kıble pusulası, Kur'an. Ücretsiz, reklamsız, hesapsız. iPhone ve Android.",
     keywords:
       "namaz vakitleri, vakit, kıble yönü, namaz vakti, kuran, kur'an-ı kerim, hatim, tefsir, zikir, zikirmatik, ibadet takibi, kaza namazı takibi, cuma hutbesi, kerahat vakitleri, sahur alarmı, apple watch, ipad, mac uygulaması, ezan sesi, hatim takibi, islamic app, prayer times, qibla direction, quran, hicri takvim, live activities, widget, dynamic island, namaz uygulaması",
   },
   en: {
-    title: "Vakit: Prayer Times, Qibla, Quran",
+    title: "Vakit: Prayer Times, Adhan, Qibla & Quran",
     description:
-      "Free, ad-free, no account; prayer times work offline. Track prayer times, find the Qibla, read the Quran. iPhone, iPad, Apple Watch, Mac and Android; 25 languages, 12 calculation methods, Live Activities, lock screen widgets, Friday sermon, qada tracking.",
+      "Prayer times that work offline, adhan alerts, Qibla compass and the Quran. 12 calculation methods, 25 languages. Free, no ads, no account. iPhone & Android.",
     keywords:
       "prayer times, qibla direction, quran app, islamic app, muslim prayer app, adhan, salah tracker, qada tracker, dhikr counter, hijri calendar, apple watch prayer times, ipad prayer times, mac prayer times, live activities, prayer widget, free prayer app, ad-free islamic app",
   },
