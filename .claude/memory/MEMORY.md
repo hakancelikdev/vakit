@@ -4,3 +4,4 @@ This directory is the auto-memory directory (`autoMemoryDirectory` in `.claude/s
 
 - [seo-baseline-2026-11](seo-baseline-2026-11.md) — 2026-11-25 SEO değişikliği öncesi Search Console sayıları; 2026-12-09'dan sonra karşılaştır
 - [is-birakma](is-birakma.md) — önerdiğin adımları "istersen" diye bırakma, sonuna kadar yap
+- [kisa-yaz](kisa-yaz.md) — cevaplar birkaç satır; uzun rapor yok
