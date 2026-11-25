@@ -314,3 +314,40 @@ test("Android gizlilik sayfaları site haritasında", () => {
   const sm = fs.readFileSync(path.join("docs", "sitemap.xml"), "utf8");
   for (const lang of LANGS) assert.ok(sm.includes(`<loc>${C.SITE.origin}${C.LANGS[lang].path}android/privacy.html</loc>`), lang);
 });
+
+// Şehir sayfaları (cities.js, 2026-11-25): her şehir yalnız kendi dillerinde; her dilin
+// bir şehir listesi var. Vakitler sayfaya gömülü (cities/times), istek atılmıyor.
+const CT = require("./cities.js");
+const cityHref = (id, lang) => `${C.LANGS[lang].path}${CT.CITY_COPY[lang].seg}/${id}.html`;
+const hubHref = (lang) => `${C.LANGS[lang].path}${CT.CITY_COPY[lang].seg}/`;
+const SM = fs.readFileSync(path.join("docs", "sitemap.xml"), "utf8");
+for (const [id, P] of Object.entries(CT.CITY_PAGES)) {
+  for (const lang of P.langs) {
+    test(`şehir ${id}/${lang}: canonical, hreflang, kampanya, gömülü vakitler, site haritası`, () => {
+      const p = fs.readFileSync(path.join("docs", cityHref(id, lang)), "utf8");
+      const L = C.LANGS[lang];
+      assert.ok(p.includes(`<html lang="${L.htmlLang}"${L.rtl ? ' dir="rtl"' : ""}`), "html lang/dir yanlış");
+      assert.ok(p.includes(`<link rel="canonical" href="${C.SITE.origin}${cityHref(id, lang)}">`), "canonical yanlış");
+      for (const l of P.langs) {
+        assert.ok(p.includes(`hreflang="${C.LANGS[l].htmlLang}" href="${C.SITE.origin}${cityHref(id, l)}"`), `hreflang ${l} yok`);
+      }
+      assert.ok(p.includes(`hreflang="x-default" href="${C.SITE.origin}${cityHref(id, "en")}"`), "x-default İngilizce değil");
+      assert.ok(p.includes(`ct=site-city-${id}-${lang}`), "kampanyalı App Store linki yok");
+      assert.ok(!/href="https:\/\/apps\.apple\.com\/app\/id6748356813"/.test(p), "kampanyasız App Store linki");
+      assert.ok(!/\{(city|cityIn|year|deg|dir|km|method|start|end|eid|count)\}/.test(p), "doldurulmamış yer tutucu");
+      assert.ok(p.includes('"tz":') && !p.includes("api.aladhan.com"), "vakitler gömülü değil");
+      assert.ok(p.includes(`href="${hubHref(lang)}"`), "şehir listesine bağlantı yok");
+      assert.ok(SM.includes(`<loc>${C.SITE.origin}${cityHref(id, lang)}</loc>`), "site haritasında yok");
+    });
+  }
+}
+for (const lang of Object.keys(CT.CITY_COPY)) {
+  test(`${lang}: şehir listesi her şehre bağlanıyor, ana sayfa alt bilgisi listeye`, () => {
+    const p = fs.readFileSync(path.join("docs", hubHref(lang), "index.html"), "utf8");
+    for (const [id, P] of Object.entries(CT.CITY_PAGES)) {
+      if (P.langs.includes(lang)) assert.ok(p.includes(`href="${cityHref(id, lang)}"`), `${id} yok`);
+    }
+    assert.ok(html(lang).includes(`href="${hubHref(lang)}"`), "ana sayfadan bağlantı yok");
+    assert.ok(SM.includes(`<loc>${C.SITE.origin}${hubHref(lang)}</loc>`), "site haritasında yok");
+  });
+}

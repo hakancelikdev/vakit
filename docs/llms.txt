@@ -194,6 +194,7 @@ The home page exists in every interface language:
 - [اردو](https://vakit.hakancelik.dev/ur/)
 - [简体中文](https://vakit.hakancelik.dev/zh/)
 
+- [Prayer times by city](https://vakit.hakancelik.dev/en/prayer-times/) — today's times, the Ramadan timetable and the Qibla for 33 cities
 - [Privacy policy](https://vakit.hakancelik.dev/en/privacy.html) ([Turkish](https://vakit.hakancelik.dev/privacy.html))
 - [Terms of use](https://vakit.hakancelik.dev/en/terms.html) ([Turkish](https://vakit.hakancelik.dev/terms.html))
 - [Website source](https://github.com/hakancelikdev/vakit)

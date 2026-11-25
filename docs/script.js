@@ -80,7 +80,22 @@ function storeTimes(cityId, dateKey, result) {
   try { localStorage.setItem(STORE_PREFIX + cityId, JSON.stringify({ date: dateKey, result })); } catch (e) { /* private mode */ }
 }
 
+/* City pages carry their times in the page (city.days, keyed by YYYY-MM-DD in the
+   city's zone) — no request at all. Today's Ramadan row gets marked as well. */
+function bakedTimes(city) {
+  const d = zonedNow(new Date(), city.tz);
+  const key = d.year + '-' + d.month + '-' + d.day;
+  document.querySelectorAll('tr[data-date]').forEach(r => r.classList.toggle('today', r.dataset.date === key));
+  const row = city.days[key];
+  if (!row) return null;
+  // Far north in summer Isha can fall after midnight (00:10) — it still belongs to this day.
+  const times = PRAYER_KEYS.map((k, i) => ({ n: k, ...parseTime(row[i]) }));
+  times.forEach((p, i) => { if (i && p.minutes <= times[i - 1].minutes) p.minutes += 24 * 60; });
+  return { times, timezone: city.tz };
+}
+
 async function fetchPrayerTimes(city) {
+  if (city.days) return bakedTimes(city);
   const zone = (cachedTimings[city.id] && cachedTimings[city.id].timezone) || guessZone();
   const d = zonedNow(new Date(), zone);
   const dateKey = d.day + '-' + d.month + '-' + d.year;

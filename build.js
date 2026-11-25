@@ -28,6 +28,7 @@ const C = require("./content.js");
 const { validateLocale } = require("./tools/validate.js");
 
 const { SITE, LANGS, LEGAL_LANGS, META, COPY, PRAYERS, FEATURES, SHOWCASE, SHOWCASE_MORE, FEATURE_GROUPS, FEATURE_PREVIEW, DEVICES, COMPARE, REVIEWS, FAQ, LEGAL, storeLink, playLink, clockCities } = C;
+const { CITY_PAGES, CITY_COPY, METHODS, TIMES_FROM } = require("./cities.js");
 
 // The Vakit Manifesto — the app's own text in all 25 languages (tools/import-manifesto.js).
 const MANIFESTO_RAW = require("./manifesto.js");
@@ -517,7 +518,7 @@ function siteFooter(lang) {
   </div>
   <div class="foot-links">
     <a href="${localUrl(lang, "manifesto.html")}">${esc(manifesto(lang).title)}</a>
-    <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
+${CITY_LANGS.includes(lang) ? `    <a href="${cityHubUrl(lang)}">${esc(CITY_COPY[lang].footLink)}</a>\n` : ""}    <a href="${localUrl(legal, "privacy.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPrivacy"))}</a>
     <a href="${localUrl(legal, "terms.html")}"${legal !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footTerms"))}</a>
     <a href="${localUrl(pressLang(lang), "press.html")}"${pressLang(lang) !== lang ? ' hreflang="en"' : ""}>${esc(t(lang, "footPress"))}</a>
     <a href="${SITE.repoUrl}">GitHub</a>
@@ -659,6 +660,74 @@ ${siteFooter(lang)}
 `;
 }
 
+/* Sections shared by the home page and the city pages. */
+
+function showcaseSection(lang) {
+  const gap = joinsWithoutSpace(LANGS[lang].script) ? "" : " ";
+  return `<section class="showcase" id="showcase">
+  <div class="sec-head">
+    <p class="sec-eye">${esc(t(lang, "sc-head"))}</p>
+    <h2 class="sec-title"><span>${esc(t(lang, "sc-h2a"))}</span>${gap}<em>${esc(t(lang, "sc-h2b"))}</em></h2>
+    <p class="sec-lede">${esc(t(lang, "sc-lede"))}</p>
+  </div>
+  <div class="gallery" tabindex="0" role="region" aria-label="${esc(t(lang, "sc-h2a") + gap + t(lang, "sc-h2b"))}">
+    <ul class="g-track">
+${galleryItems(lang)}
+    </ul>
+  </div>
+${galleryControls()}
+</section>`;
+}
+
+function trustSection(lang) {
+  const gap = joinsWithoutSpace(LANGS[lang].script) ? "" : " ";
+  return `<section class="trust" id="trust">
+  <div class="trust-inner">
+    <p class="sec-eye">${esc(t(lang, "trust-eye"))}</p>
+    <h2 class="sec-title">
+      <span>${esc(t(lang, "trust-h1"))}</span>${gap}<span>${esc(t(lang, "trust-h2"))}</span>${gap}<em>${esc(t(lang, "trust-h3"))}</em>
+    </h2>
+    <p class="trust-lede">${esc(t(lang, "trust-lede"))}</p>
+    <div class="trust-grid">
+${[1, 2, 3, 4].map((i) => `      <div class="trust-cell">
+        <div class="trust-icon">${TRUST_ICONS[i - 1]}</div>
+        <h3>${esc(t(lang, `t-${i}a`))}</h3>
+        <p>${esc(t(lang, `t-${i}b`))}</p>
+      </div>`).join("\n")}
+    </div>
+
+    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
+         privacy is its first answer, the rest follow. -->
+    <div class="compare" id="compare">
+      <p class="compare-lede">${esc(t(lang, "c-lede"))}</p>
+      <div class="compare-table" id="compareTable" tabindex="0" role="region" aria-label="${esc(t(lang, "c-lede"))}">
+${compareTable(lang)}
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+function reviewsSection(lang) {
+  const gap = joinsWithoutSpace(LANGS[lang].script) ? "" : " ";
+  const note = t(lang, "r-note");
+  return `<section class="testimonials" id="reviews">
+  <div class="t-inner">
+    <div class="t-head">
+      <h2 class="sec-title"><span>${esc(t(lang, "r-h1"))}</span>${gap}<em>${esc(t(lang, "r-h2"))}</em></h2>
+      <div class="t-meta">
+        <span>${esc(t(lang, "r-m1"))}</span>
+        <b>${num(lang, SITE.rating.value)} <span class="star" aria-hidden="true">★</span></b>
+        <span>${esc(t(lang, "r-m2"))}</span>
+      </div>
+    </div>
+${note ? `    <p class="t-note">${esc(note)}</p>\n` : ""}    <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="${esc(t(lang, "r-h1") + (gap || " ") + t(lang, "r-h2"))}">
+${reviewGrid(lang)}
+    </div>
+  </div>
+</section>`;
+}
+
 /* -------------------------------------------------------------------- page */
 
 function page(lang) {
@@ -666,7 +735,6 @@ function page(lang) {
   const m = META[lang];
   const canonical = SITE.origin + L.path;
   const ogImage = SITE.origin + ogUrl(lang);
-  const note = t(lang, "r-note");
   // Split headings join with a space — except in Chinese and Japanese, which don't space words.
   const gap = joinsWithoutSpace(L.script) ? "" : " ";
 
@@ -842,19 +910,7 @@ ${clockRows(lang)}
 </section>
 
 <!-- ========== SHOWCASE: every screen, side by side ========== -->
-<section class="showcase" id="showcase">
-  <div class="sec-head">
-    <p class="sec-eye">${esc(t(lang, "sc-head"))}</p>
-    <h2 class="sec-title"><span>${esc(t(lang, "sc-h2a"))}</span>${gap}<em>${esc(t(lang, "sc-h2b"))}</em></h2>
-    <p class="sec-lede">${esc(t(lang, "sc-lede"))}</p>
-  </div>
-  <div class="gallery" tabindex="0" role="region" aria-label="${esc(t(lang, "sc-h2a") + gap + t(lang, "sc-h2b"))}">
-    <ul class="g-track">
-${galleryItems(lang)}
-    </ul>
-  </div>
-${galleryControls()}
-</section>
+${showcaseSection(lang)}
 
 <!-- ========== IPAD · MAC · APPLE WATCH (· ANDROID): one gallery per device ========== -->
 <section class="devices" id="devices">
@@ -868,31 +924,7 @@ ${deviceRow(lang, "android")}
 </section>
 
 <!-- ========== TRUST / EMANET ========== -->
-<section class="trust" id="trust">
-  <div class="trust-inner">
-    <p class="sec-eye">${esc(t(lang, "trust-eye"))}</p>
-    <h2 class="sec-title">
-      <span>${esc(t(lang, "trust-h1"))}</span>${gap}<span>${esc(t(lang, "trust-h2"))}</span>${gap}<em>${esc(t(lang, "trust-h3"))}</em>
-    </h2>
-    <p class="trust-lede">${esc(t(lang, "trust-lede"))}</p>
-    <div class="trust-grid">
-${[1, 2, 3, 4].map((i) => `      <div class="trust-cell">
-        <div class="trust-icon">${TRUST_ICONS[i - 1]}</div>
-        <h3>${esc(t(lang, `t-${i}a`))}</h3>
-        <p>${esc(t(lang, `t-${i}b`))}</p>
-      </div>`).join("\n")}
-    </div>
-
-    <!-- What other prayer apps get wrong, line by line. Part of the trust section:
-         privacy is its first answer, the rest follow. -->
-    <div class="compare" id="compare">
-      <p class="compare-lede">${esc(t(lang, "c-lede"))}</p>
-      <div class="compare-table" id="compareTable" tabindex="0" role="region" aria-label="${esc(t(lang, "c-lede"))}">
-${compareTable(lang)}
-      </div>
-    </div>
-  </div>
-</section>
+${trustSection(lang)}
 
 <!-- ========== FEATURES ========== -->
 <section class="feats" id="features">
@@ -909,21 +941,7 @@ ${featureGroups(lang)}
 </section>
 
 <!-- ========== TESTIMONIALS ========== -->
-<section class="testimonials" id="reviews">
-  <div class="t-inner">
-    <div class="t-head">
-      <h2 class="sec-title"><span>${esc(t(lang, "r-h1"))}</span>${gap}<em>${esc(t(lang, "r-h2"))}</em></h2>
-      <div class="t-meta">
-        <span>${esc(t(lang, "r-m1"))}</span>
-        <b>${num(lang, SITE.rating.value)} <span class="star" aria-hidden="true">★</span></b>
-        <span>${esc(t(lang, "r-m2"))}</span>
-      </div>
-    </div>
-${note ? `    <p class="t-note">${esc(note)}</p>\n` : ""}    <div class="t-grid" id="testGrid" tabindex="0" role="region" aria-label="${esc(t(lang, "r-h1") + (gap || " ") + t(lang, "r-h2"))}">
-${reviewGrid(lang)}
-    </div>
-  </div>
-</section>
+${reviewsSection(lang)}
 
 <!-- ========== FAQ ========== -->
 <section class="faq" id="faq">
@@ -1302,6 +1320,394 @@ ${assets}
 `;
 }
 
+/* -------------------------------------------------------------- city pages */
+
+const cityUrl = (id, lang) => localUrl(lang, `${CITY_COPY[lang].seg}/${id}.html`);
+const cityHubUrl = (lang) => localUrl(lang, `${CITY_COPY[lang].seg}/`);
+
+function cityTimes(id) {
+  return JSON.parse(fs.readFileSync(path.join(__dirname, "cities", "times", `${id}.json`), "utf8"));
+}
+
+/** Turkish locative after an apostrophe, by vowel harmony and the last sound: Berlin'de, Paris'te, Londra'da. */
+function trLocative(name) {
+  const lower = name.toLocaleLowerCase("tr");
+  const vowel = [...lower].reverse().find((ch) => "aıoueiöü".includes(ch)) || "e";
+  const v = "aıou".includes(vowel) ? "a" : "e";
+  const c = "fstkçşhp".includes(lower.slice(-1)) ? "t" : "d";
+  return `${name}'${c}${v}`;
+}
+
+/** Great-circle bearing (degrees from north) and distance (km) to the Kaaba. */
+function qibla(lat, lon) {
+  const rad = (d) => (d * Math.PI) / 180;
+  const [k1, k2] = [rad(21.4225), rad(39.8262)];
+  const [p1, l1] = [rad(lat), rad(lon)];
+  const dl = k2 - l1;
+  const deg = (Math.atan2(Math.sin(dl), Math.cos(p1) * Math.tan(k1) - Math.sin(p1) * Math.cos(dl)) * 180) / Math.PI;
+  const a = Math.sin((k1 - p1) / 2) ** 2 + Math.cos(p1) * Math.cos(k1) * Math.sin(dl / 2) ** 2;
+  const km = 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return { deg: Math.round((deg + 360) % 360), km: Math.round(km / 10) * 10 };
+}
+
+const CITY_STYLE = `      .city-head { padding: 88px var(--gutter) 28px; max-width: 980px; margin: 0 auto }
+      .city-head h1 { font-size: clamp(40px, 5.4vw, 68px); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 14px }
+      .city-head p { font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 640px }
+      .city-clock .clock-inner { max-width: calc(980px - 2 * var(--gutter)) }
+      .city-clock .clock-top { grid-column: 1 / -1 }
+      .city-body { max-width: 980px; margin: 0 auto; padding: 40px var(--gutter) 24px; display: grid; gap: 16px }
+      .city-card { background: var(--bg-2); border-radius: var(--radius-tile); padding: 32px 34px }
+      .city-card h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px }
+      .city-card > p { font-size: 15px; line-height: 1.65; color: var(--ink-2); margin-bottom: 18px }
+      .city-card > p:last-child { margin-bottom: 0 }
+      .city-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 15px }
+      .city-table th { text-align: start; font-size: 13px; font-weight: 600; color: var(--ink-3); padding: 8px 10px; border-bottom: 1px solid var(--rule) }
+      .city-table td { padding: 9px 10px; border-bottom: 1px solid var(--rule-2) }
+      .city-table td:nth-child(3), .city-table td:nth-child(4) { font-weight: 600 }
+      .city-table td:nth-child(2) { white-space: nowrap }
+      .city-table tr.today td { background: var(--bg-3) }
+      .city-app { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center }
+      .city-app h2 { font-size: 30px }
+      .city-app .final-actions { justify-content: flex-start; margin-top: 4px }
+      .city-app .hero-pillars { margin-top: 18px }
+      .city-shots { display: flex; gap: 14px }
+      .city-shots .phone { width: 150px }
+      .city-note { font-size: 13px; line-height: 1.6; color: var(--ink-3) }
+      .city-links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 15px }
+      .city-crumb { font-size: 15px; font-weight: 600; margin-bottom: 10px }
+      .city-crumb a { color: var(--accent-ink) }
+      .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px }
+      .city-grid a { display: block; padding: 14px 18px; border-radius: 16px; background: var(--bg-3); font-size: 17px; font-weight: 600; transition: background .15s }
+      .city-grid a:hover { background: color-mix(in srgb, var(--accent) 14%, var(--bg-3)) }
+      :where(html:not(.script-latin):not(.script-cyrillic)) .city-head h1 { line-height: 1.3 }
+      .script-urdu .city-head h1 { line-height: 2; font-size: clamp(30px, 3.6vw, 50px) }
+      .script-urdu :is(.city-head p, .city-card h2, .city-card > p, .city-crumb) { line-height: 2 }
+      .city-links a, .city-note a { color: var(--accent-ink) }
+      @media (max-width: 734px) {
+        .city-head { padding: 56px 20px 16px } .city-body { padding: 24px 20px }
+        .city-card { padding: 24px 18px } .city-app { grid-template-columns: 1fr } .city-shots .phone { width: 128px }
+        .city-table { font-size: 14px } .city-table th, .city-table td { padding: 8px 6px }
+      }`;
+
+/** The app card: why install, both stores, the four promises and two screens. */
+function cityAppCard(lang, campaign) {
+  const K = CITY_COPY[lang];
+  return `    <section class="city-card city-app" id="download">
+      <div>
+        <h2>${esc(K.appH)}</h2>
+        <p>${esc(K.appP)}</p>
+        <div class="final-actions">
+          <a href="${storeLink(`site-${campaign}-${lang}`)}" class="btn-primary">
+            ${APPLE_LOGO}
+            <span>${esc(t(lang, "downloadCta"))}</span>
+          </a>${playButton(lang, campaign)}
+        </div>
+        <ul class="hero-pillars">
+${t(lang, "pillars").split(" · ").map((p) => `          <li>${CHECK}${esc(p)}</li>`).join("\n")}
+        </ul>
+      </div>
+      <div class="city-shots" aria-hidden="true">
+        <div class="phone"><div class="phone-screen"><img src="${shotUrl(lang, "prayer-times")}" alt="" width="390" height="844" loading="lazy" decoding="async"></div></div>
+        <div class="phone"><div class="phone-screen"><img src="${shotUrl(lang, "qibla")}" alt="" width="390" height="844" loading="lazy" decoding="async"></div></div>
+      </div>
+    </section>`;
+}
+
+/** The closing download section, as on the home page. */
+function cityFinal(lang, campaign) {
+  const L = LANGS[lang];
+  const gap = joinsWithoutSpace(L.script) ? "" : " ";
+  return `  <section class="final" id="get">
+    <div class="final-mark"><img src="/assets/apple-touch-icon.png" alt="${esc(SITE.appName)}" width="88" height="88" loading="lazy" decoding="async"></div>
+    <h2 class="sec-title"><span>${esc(t(lang, "fin-h1"))}</span>${gap}<em>${esc(t(lang, "fin-h2"))}</em></h2>
+    <p>${esc(t(lang, "fin-p"))}</p>
+    <div class="final-actions">
+      <a href="${storeLink(`site-${campaign}-final-${lang}`)}" class="btn-primary">
+        ${APPLE_LOGO}
+        <span>${esc(t(lang, "downloadCta2"))}</span>
+      </a>${playButton(lang, `${campaign}-final`)}
+      <a href="${L.path}" class="btn-ghost">${esc(CITY_COPY[lang].homeLink)}</a>
+    </div>
+  </section>`;
+}
+
+/** <head>, nav, footer and scripts shared by the city pages and their index. */
+function cityShell(lang, { title, description, url, langs, schema, campaign, data }, main) {
+  const L = LANGS[lang];
+  const canonical = SITE.origin + url(lang);
+  const ogImage = SITE.origin + ogUrl(lang);
+  const hreflang =
+    langs.map((l) => `<link rel="alternate" hreflang="${LANGS[l].htmlLang}" href="${SITE.origin + url(l)}">`).join("\n    ") +
+    `\n    <link rel="alternate" hreflang="x-default" href="${SITE.origin + url(langs.includes("en") ? "en" : langs[0])}">`;
+
+  return `<!DOCTYPE html>
+<html ${htmlAttrs(lang)}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ${THEME_BOOT}
+    <title>${esc(title)}</title>
+    <meta name="description" content="${esc(description)}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:title" content="${esc(title)}">
+    <meta property="og:description" content="${esc(description)}">
+    <meta property="og:image" content="${ogImage}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="${esc(SITE.appName)}">
+    <meta property="og:locale" content="${L.ogLocale}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${esc(title)}">
+    <meta name="twitter:description" content="${esc(description)}">
+    <meta name="twitter:image" content="${ogImage}">
+    <meta name="theme-color" content="${SITE.themeColor}">
+    <meta name="apple-itunes-app" content="app-id=${SITE.appStoreId}">
+    <link rel="canonical" href="${canonical}">
+    ${hreflang}
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="${asset("styles.css")}">
+    <style>
+${CITY_STYLE}
+    </style>
+    <script type="application/ld+json">
+${jsonLd(schema)}
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="${L.path}">
+    <img src="/assets/app-icon-32.png" alt="" class="nav-mark-img" width="28" height="28">
+    <div class="nav-brand-text">${esc(SITE.appName)}</div>
+  </a>
+  <div class="nav-links">
+    <a href="${L.path}#showcase">${esc(t(lang, "features"))}</a>
+    <a href="${L.path}#trust">${esc(t(lang, "trust"))}</a>
+    <a href="${L.path}#reviews">${esc(t(lang, "reviews"))}</a>
+    <a href="${L.path}#faq">${esc(t(lang, "faq"))}</a>
+  </div>
+  <div class="nav-cta">
+    <button class="nav-theme" id="themeToggle" aria-label="${esc(t(lang, "themeLabel"))}">${SUN}${MOON}</button>
+    <a href="${storeLink(`site-${campaign}-nav-${lang}`)}" class="nav-dl">${esc(t(lang, "download"))}</a>
+  </div>
+  <button class="nav-toggle" aria-label="${esc(t(lang, "menuLabel"))}">&#8801;</button>
+</nav>
+
+<main>
+${main}
+</main>
+
+${siteFooter(lang)}
+${data ? `\n<script id="vakit-data" type="application/json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>` : ""}
+<script src="${asset("script.js")}"></script>
+</body>
+</html>
+`;
+}
+
+const cityName = (id, lang) => CITY_PAGES[id].names[lang];
+const cityIn = (id, lang) =>
+  CITY_PAGES[id].in[lang] || (lang === "tr" ? trLocative(cityName(id, lang)) : CITY_COPY[lang].inPattern.replace("{city}", cityName(id, lang)));
+const citiesIn = (lang) => Object.keys(CITY_PAGES).filter((id) => CITY_PAGES[id].langs.includes(lang));
+const CITY_LANGS = Object.keys(CITY_COPY).filter((l) => citiesIn(l).length);
+
+/** Ramadan of the window's first full year (Hijri month 9) and Eid, the day after it ends. */
+function ramadanOf(T) {
+  const days = T.days.filter((d) => d[2] === 9 && d[0] >= `${TIMES_FROM}-01`);
+  return { days, year: days[0][0].slice(0, 4), eid: T.days[T.days.indexOf(days[days.length - 1]) + 1][0] };
+}
+
+function cityPage(id, lang) {
+  const L = LANGS[lang];
+  const K = CITY_COPY[lang];
+  const P = CITY_PAGES[id];
+  const T = cityTimes(id);
+  const name = cityName(id, lang);
+
+  const date = (iso, pattern) => {
+    const d = new Date(`${iso}T12:00:00Z`);
+    return pattern
+      .replace("{d}", d.getUTCDate())
+      .replace("{M}", K.months[d.getUTCMonth()])
+      .replace("{y}", d.getUTCFullYear())
+      .replace("{w}", K.days[d.getUTCDay()]);
+  };
+  const longDate = (iso) => date(iso, K.dateLong);
+
+  const R = ramadanOf(T);
+  const q = qibla(P.lat, P.lon);
+  const method = METHODS[P.method][lang] || METHODS[P.method].en;
+  const fill = (s) =>
+    s
+      .replaceAll("{cityIn}", cityIn(id, lang))
+      .replaceAll("{city}", name)
+      .replaceAll("{year}", R.year)
+      .replaceAll("{deg}", q.deg)
+      .replaceAll("{dir}", K.dirs[Math.round(q.deg / 45) % 8])
+      .replaceAll("{km}", num(lang, q.km))
+      .replaceAll("{method}", method)
+      .replaceAll("{start}", longDate(R.days[0][0]))
+      .replaceAll("{end}", longDate(R.days[R.days.length - 1][0]))
+      .replaceAll("{eid}", longDate(R.eid));
+
+  const title = fill(K.title);
+  const description = fill(K.description);
+  const faq = K.faq.map((f) => ({ q: fill(f.q), a: fill(f.a) }));
+  const others = citiesIn(lang).filter((o) => o !== id);
+  const rows = R.days
+    .map((d) => `          <tr data-date="${d[0]}"><td>${d[1]}</td><td>${esc(date(d[0], K.dateRow))}</td><td>${d[4]}</td><td>${d[8]}</td></tr>`)
+    .join("\n");
+
+  // The clock reads today's row from here (script.js) — no API call, works offline.
+  const data = {
+    lang,
+    dateLocale: `${L.htmlLang}-u-ca-gregory-nu-latn`,
+    prayers: PRAYERS[lang],
+    cities: [{ id, name, tz: T.tz, days: Object.fromEntries(T.days.map((d) => [d[0], d.slice(4)])) }],
+  };
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: SITE.origin + cityUrl(id, lang),
+      inLanguage: L.htmlLang,
+      about: { "@type": "City", name, geo: { "@type": "GeoCoordinates", latitude: P.lat, longitude: P.lon } },
+      isPartOf: { "@type": "WebSite", name: SITE.appName, url: SITE.origin + L.path },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    },
+  ];
+
+  // From Mecca itself there is no direction to show.
+  const qiblaCard = q.km < 50 ? "" : `
+  <div class="city-body">
+    <section class="city-card" id="qibla">
+      <h2>${esc(K.qiblaH)}</h2>
+      <p>${esc(fill(K.qiblaP))}</p>
+    </section>
+  </div>
+`;
+
+  const main = `  <header class="city-head">
+    <p class="city-crumb"><a href="${cityHubUrl(lang)}">${esc(K.footLink)}</a></p>
+    <h1>${esc(fill(K.h1))}</h1>
+    <p>${esc(fill(K.lede))}</p>
+  </header>
+
+<section class="clock city-clock" id="clock" data-state="loading" aria-label="${esc(t(lang, "nextPrayer"))}">
+  <div class="clock-inner">
+    <div class="clock-top">
+      <span class="clock-loc" id="loc">${esc(name)}</span>
+      <span class="clock-date" id="date">&nbsp;</span>
+    </div>
+    <div class="clock-next">
+      <div class="clock-next-lbl">${esc(t(lang, "nextPrayer"))}</div>
+      <div class="clock-next-name" id="nextName">&nbsp;</div>
+      <div class="clock-countdown" id="countdown">00<span class="sep">:</span>00<span class="sep">:</span>00</div>
+      <div class="clock-bar-wrap"><div class="clock-bar" id="clockBar" style="width:0%"></div></div>
+    </div>
+    <div class="clock-list" id="clockList">
+${clockRows(lang)}
+    </div>
+  </div>
+</section>
+
+  <div class="city-body">
+${cityAppCard(lang, `city-${id}`)}
+
+    <section class="city-card" id="ramadan">
+      <h2>${esc(fill(K.ramadanH))}</h2>
+      <p>${esc(fill(K.ramadanP))}</p>
+      <table class="city-table">
+        <thead><tr>${K.cols.map((h) => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>
+        <tbody>
+${rows}
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+${showcaseSection(lang)}
+${qiblaCard}
+${trustSection(lang)}
+
+${reviewsSection(lang)}
+
+  <div class="city-body">
+    <section class="faq city-faq">
+      <div class="faq-list" id="faqList">
+${faq.map((f, i) => `        <div class="faq-item${i === 0 ? " on" : ""}"><button class="faq-q" aria-expanded="${i === 0}">${esc(f.q)}<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">${esc(f.a)}</div></div></div>`).join("\n")}
+      </div>
+    </section>
+${others.length ? `
+    <section class="city-card">
+      <h2>${esc(K.otherH)}</h2>
+      <div class="city-links">${others.map((o) => `<a href="${cityUrl(o, lang)}">${esc(cityName(o, lang))}</a>`).join("")}</div>
+    </section>
+` : ""}
+  </div>
+
+${cityFinal(lang, `city-${id}`)}
+
+  <div class="city-body">
+    <p class="city-note">${esc(fill(K.methodNote))}</p>
+  </div>`;
+
+  return cityShell(lang, { title, description, url: (l) => cityUrl(id, l), langs: P.langs, schema, campaign: `city-${id}`, data }, main);
+}
+
+/** One index per language: every city page in it, then why Vakit. */
+function cityHubPage(lang) {
+  const K = CITY_COPY[lang];
+  const ids = citiesIn(lang);
+  const year = ramadanOf(cityTimes(ids[0])).year;
+  const fill = (s) => s.replaceAll("{year}", year).replaceAll("{count}", num(lang, ids.length));
+  const title = fill(K.hubTitle);
+  const description = fill(K.hubDescription);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: SITE.origin + cityHubUrl(lang),
+    inLanguage: LANGS[lang].htmlLang,
+    hasPart: ids.map((id) => ({ "@type": "WebPage", name: fill(K.h1.replaceAll("{cityIn}", cityIn(id, lang)).replaceAll("{city}", cityName(id, lang))), url: SITE.origin + cityUrl(id, lang) })),
+  };
+
+  const main = `  <header class="city-head">
+    <h1>${esc(K.hubH1)}</h1>
+    <p>${esc(fill(K.hubLede))}</p>
+  </header>
+
+  <div class="city-body">
+    <section class="city-card">
+      <div class="city-grid">
+${ids.map((id) => `        <a href="${cityUrl(id, lang)}">${esc(cityName(id, lang))}</a>`).join("\n")}
+      </div>
+    </section>
+${cityAppCard(lang, "cities")}
+  </div>
+
+${showcaseSection(lang)}
+
+${trustSection(lang)}
+
+${reviewsSection(lang)}
+
+${cityFinal(lang, "cities")}`;
+
+  return cityShell(lang, { title, description, url: cityHubUrl, langs: CITY_LANGS, schema, campaign: "cities" }, main);
+}
+
 /* ------------------------------------------------------------ sitemap/robots */
 
 function sitemap() {
@@ -1330,6 +1736,15 @@ ${langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].htmlLan
   const pressUrl = (l) => SITE.origin + localUrl(l, "press.html");
   const press = PRESS_LANGS.map((l) => block(pressUrl(l), PRESS_LANGS, pressUrl, "monthly", "0.4")).join("\n");
 
+  const cities = Object.entries(CITY_PAGES)
+    .map(([id, { langs }]) => {
+      const url = (l) => SITE.origin + cityUrl(id, langs.includes(l) ? l : langs[0]);
+      return langs.map((l) => block(url(l), langs, url, "monthly", "0.7")).join("\n");
+    })
+    .join("\n");
+  const hubUrl = (l) => SITE.origin + cityHubUrl(l);
+  const hubs = CITY_LANGS.map((l) => block(hubUrl(l), CITY_LANGS, hubUrl, "monthly", "0.7")).join("\n");
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -1337,6 +1752,8 @@ ${home}
 ${mf}
 ${legal}
 ${press}
+${hubs}
+${cities}
 </urlset>
 `;
 }
@@ -1434,6 +1851,7 @@ The home page exists in every interface language:
 
 ${langs}
 
+- [Prayer times by city](${SITE.origin}${cityHubUrl("en")}) — today's times, the Ramadan timetable and the Qibla for ${Object.keys(CITY_PAGES).length} cities
 - [Privacy policy](${SITE.origin}${localUrl("en", "privacy.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "privacy.html")}))
 - [Terms of use](${SITE.origin}${localUrl("en", "terms.html")}) ([Turkish](${SITE.origin}${localUrl("tr", "terms.html")}))
 - [Website source](${SITE.repoUrl})
@@ -1508,6 +1926,26 @@ function check() {
     if (!doc || !doc.meta || !doc.meta.title) errors.push(`press.js has no "${lang}" metadata`);
     else if (doc.facts.length !== PRESS.tr.facts.length) errors.push(`press.js: ${lang} has ${doc.facts.length} facts, tr has ${PRESS.tr.facts.length}`);
   }
+  for (const [id, P] of Object.entries(CITY_PAGES)) {
+    if (!fs.existsSync(path.join(__dirname, "cities", "times", `${id}.json`))) {
+      errors.push(`cities/times/${id}.json missing — run node tools/import-city-times.js ${id}`);
+      continue;
+    }
+    const T = cityTimes(id);
+    if (T.method !== P.method) errors.push(`cities/times/${id}.json uses method ${T.method}, cities.js says ${P.method} — re-import`);
+    if (!T.days.some((d) => d[2] === 9 && d[0] >= `${TIMES_FROM}-01`)) errors.push(`cities/times/${id}.json has no Ramadan`);
+    if ((Date.parse(T.until) - Date.parse(BUILD_DATE)) / 864e5 < 60) console.warn(`  warning: cities/times/${id}.json ends ${T.until} — run node tools/import-city-times.js`);
+    if (!METHODS[P.method]) errors.push(`cities.js: no METHODS name for method ${P.method} (${id})`);
+    for (const l of P.langs) {
+      if (!CITY_COPY[l]) errors.push(`cities.js: no CITY_COPY for "${l}" (${id})`);
+      if (!P.names[l]) errors.push(`cities.js: ${id} has no name in "${l}"`);
+    }
+    if (!P.langs.includes("en")) errors.push(`cities.js: ${id} has no English page (x-default)`);
+  }
+  for (const [l, K] of Object.entries(CITY_COPY)) {
+    for (const key of Object.keys(CITY_COPY.en)) if (K[key] === undefined) errors.push(`cities.js: CITY_COPY.${l} misses "${key}"`);
+    if (K.dirs.length !== 8 || K.cols.length !== 4 || K.months.length !== 12 || K.days.length !== 7 || K.faq.length !== CITY_COPY.en.faq.length) errors.push(`cities.js: CITY_COPY.${l} list lengths differ from en`);
+  }
   if (errors.length) throw new Error("Build check failed:\n  " + errors.join("\n  "));
 }
 
@@ -1523,6 +1961,11 @@ function main() {
   }
 
   for (const lang of PRESS_LANGS) write(path.join(LANGS[lang].dir, "press.html"), pressPage(lang));
+
+  for (const [id, { langs }] of Object.entries(CITY_PAGES)) {
+    for (const lang of langs) write(path.join(LANGS[lang].dir, CITY_COPY[lang].seg, `${id}.html`), cityPage(id, lang));
+  }
+  for (const lang of CITY_LANGS) write(path.join(LANGS[lang].dir, CITY_COPY[lang].seg, "index.html"), cityHubPage(lang));
 
   write("sitemap.xml", sitemap());
   write("robots.txt", robots());

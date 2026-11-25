@@ -16,6 +16,7 @@ node tools/check-locale.js de    # check one translation against English, even b
 ./tools/import-media.sh          # re-import screenshots + preview video from ../app-store-toolkit
 node tools/import-manifesto.js   # re-import the Vakit Manifesto (all 25 languages) from the app repo → manifesto.js
 node tools/make-og.js            # regenerate link-preview cards (docs/assets/og/<lang>.jpg) — needs Google Chrome
+node tools/import-city-times.js  # re-fetch the city pages' prayer times (Aladhan) → cities/times/*.json
 ```
 
 **Link-preview cards** (`og:image`, 1200×630) are rendered per language from the page's own hero copy and that language's prayer-screen screenshot. They still show the pre-redesign serif type — re-run on a Mac to bring them in line. They are the one place web fonts are still used (Instrument Serif + Noto, `tools/fonts.js`) — the pages themselves use the system font. Re-run `make-og.js` after changing `h1a/h1b/h1c`/`eyebrow` or re-importing screenshots; `build.js` fails if a card is missing.
@@ -53,10 +54,19 @@ Hand-maintained files in `docs/`:
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
 | `404.html` | Standalone page, not generated. Its App Store link is written by hand, so it must carry `pt` and `ct` like `storeLink()` (`npm test` checks) |
 
-The live clock (the band under the hero) fetches times from the public Aladhan API. It keeps the last good answer per city in `localStorage` and hides itself if it has no times at all — never a row of `00:00:00`. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City prayer-time pages are shelved for the same reason.
+The live clock (the band under the hero) fetches times from the public Aladhan API. It keeps the last good answer per city in `localStorage` and hides itself if it has no times at all — never a row of `00:00:00`. **The app's own Diyanet calculator (`VakitCore/DiyanetPrayerTimeCalculator`) is never ported to the site** — client-side JS is public, and that calculator is the app's edge (owner's decision, 2026-09-10). City pages use Aladhan, never that calculator (below).
 
 The site's own code loads **no analytics or tracking scripts** (Google Analytics was removed 2026-09-10; `npm test` fails if it comes back). The one visitor measurement is **Cloudflare Web Analytics**, injected at the edge (`beacon.min.js`, not in `docs/`): cookieless page views, referrers (incl. chatgpt.com / perplexity.ai), country/device and field Core Web Vitals — kept on purpose (owner, 2026-11-21); read it in the Cloudflare dashboard. AI *crawler* hits are a separate panel (AI Crawl Control). App Store campaign tokens (`storeLink`) measure store acquisition.
 | `assets/` | Favicons, app icons, showcase screenshots (`assets/screenshots/<lang>/<name>.webp`), preview video (`assets/video/`). `assets/video/play-review/` = Google Play foreground-service demo videos for the Android app (720p, silent); linked only from the Play Console declaration, `Disallow`ed in `robots.txt` — keep them until the app is approved for production |
+
+### City prayer-time pages (`cities.js`)
+
+**Owner's decision, 2026-11-25:** city pages go ahead; a few minutes' difference from the app is fine. Search Console showed almost every query that reaches the site asks for a time ("azan time near me", "gebetszeiten kairo"), and in Turkey Google answers those itself (Diyanet box + AI overview) — so the pages target **cities abroad**, each only in the languages people there search in (its own, Turkish, English), never all 25 (hundreds of near-identical pages). `/<lang>/<seg>/<city>.html` plus one index per language at `/<lang>/<seg>/`, linked from every footer in that language.
+
+- **Times are baked in, not fetched**: `tools/import-city-times.js` pulls Nov 2026 – Dec 2027 from Aladhan (each city's own method; Diyanet's Hijri calendar for Diyanet-method cities) into `cities/times/<id>.json`, committed. The build stays offline and deterministic (CI compares), and `script.js` reads today's row from the page (`city.days`). `build.js` warns 60 days before the data ends — re-import, rebuild, commit. Checked against Diyanet's own Berlin table: imsak and akşam within a minute, yatsı ~7 min later.
+- **Each page**: today's times + countdown (the home page's clock band), the app card, the Ramadan timetable (the sales point: it must be indexed weeks before Ramadan, Feb 2027), the home page's screen gallery, Qibla (bearing + distance; none for Mecca), the trust/comparison section, reviews, two FAQs (`FAQPage`), other cities, the closing download section. The shared sections are `showcaseSection`/`trustSection`/`reviewsSection` — one source with the home page.
+- **Copy** is `CITY_COPY[lang]` (12 languages); city names and the declined "in <city>" forms are per city (`CITY_PAGES[id].names/in`; Turkish is derived — `trLocative`). Ramadan dates are stated "by the calendar" with the local-moon-sighting caveat — never as certain.
+- Adding a city: a `CITY_PAGES` entry (must include `en`) → `node tools/import-city-times.js <id>` → build. Adding a language: a full `CITY_COPY` entry (`build.js` checks every key).
 
 ### The Vakit Manifesto
 
