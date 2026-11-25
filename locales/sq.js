@@ -2,9 +2,9 @@
 // Formal "ju", as in the app's sq strings. Albania has no App Store listing of its own.
 module.exports = {
   META: {
-    title: "Vakit: Kohët e namazit, Kibla, Kurani",
+    title: "Vakit: Vaktet e namazit, Kibla, Kurani",
     description:
-      "Falas, pa reklama, pa llogari; kohët e namazit punojnë pa internet. Ndiqni kohët e namazit, gjeni kiblën, lexoni Kuranin. iPhone, iPad, Apple Watch, Mac dhe Android; 25 gjuhë, 12 metoda llogaritjeje, Live Activities, widget në ekranin e kyçjes, hutbeja e xhumasë, ndjekja e namazeve kaza.",
+      "Vaktet e namazit dhe ezani pa internet; 12 metoda llogaritjeje, kibla, Kurani. Falas, pa reklama, pa llogari. iPhone dhe Android.",
     keywords:
       "kohët e namazit, takvimi, vaktet e namazit, kibla, drejtimi i kiblës, kurani, aplikacion islam, mysliman, namaz, ezan, dhikër, tesbih, hadith, kalendari hixhri, ramazan, syfyr, iftar, xhami, namazet kaza, esmaul husna",
   },
