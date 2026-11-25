@@ -17,4 +17,4 @@ Baseline (Search Console, property `sc-domain:hakancelik.dev`, page filter conta
 - Indexing: all 127 sitemap URLs indexed; mobile CWV 15/15 good
 
 **Why:** the change only means something against these numbers.
-**How to apply:** from 2026-12-09 on, open the same report (Chrome, Search Console) and compare Türkiye position and `/en/` + `/ur/` CTR; Urdu copy still wants a native-speaker check.
+**How to apply:** from 2026-12-09 on, open the same report (Chrome, Search Console) and compare Türkiye position and `/en/` + `/ur/` CTR. Urdu copy was checked by a native speaker (2026-11-25).
