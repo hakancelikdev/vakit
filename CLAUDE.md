@@ -31,8 +31,8 @@ Page copy lives in **`content.js`** (Turkish + English, page metadata, language 
 |---|---|
 | `docs/index.html` | Turkish landing page — canonical, served at `/` |
 | `docs/<lang>/index.html` | every other language, served at `/<lang>/` (`LANGS[*].path`) |
-| `docs/{privacy,terms,ads-policy}.html` | Turkish legal pages |
-| `docs/<lang>/{privacy,terms,ads-policy}.html` | the same three documents in every other language |
+| `docs/{privacy,terms}.html` | Turkish legal pages |
+| `docs/<lang>/{privacy,terms}.html` | the same two documents in every other language |
 | `docs/manifesto.html`, `docs/<lang>/manifesto.html` | the Vakit Manifesto in every language |
 | `docs/android/privacy.html`, `docs/<lang>/android/privacy.html` | the **Android** app's privacy policy (Google Play's privacy-policy URL) in every language |
 | `docs/sitemap.xml` | every page, cross-linked with hreflang |
@@ -51,6 +51,7 @@ Hand-maintained files in `docs/`:
 | `script.js` | Interactivity only: live prayer clock, hero preview video, the galleries' arrow buttons (iPhone, iPad, Mac, Watch), "show all" features, FAQ accordion, theme, language menu, mobile menu, phone-only download dock |
 | `language-detection.js` | Sends `/` to a language the visitor explicitly chose before (menu/banner) and forwards old `?lang=` links. **Never redirects by browser language** — Googlebot renders JS with an English browser, and doing so made Google treat the Turkish home page as a copy of `/en/` (2026-09-10). First-time visitors get a suggestion banner instead (`script.js` → `suggestLanguage`). `npm test` guards this. |
 | `en.html`, `privacy-en.html`, `terms-en.html` | Static redirects for old URLs Google still had indexed |
+| `ads-policy.html`, `en/ads-policy.html` | Static redirects to the privacy page — Vakit shows no ads and the ad-policy document was removed (`legal/ads-policy.js` no longer exists) |
 | `02e8a41e….txt` | IndexNow ownership key — **don't delete**. `tools/indexnow.js` (run by CI after each deploy) pings Bing/Yandex with the sitemap URLs; Bing feeds ChatGPT Search and Copilot. |
 | `404.html` | Standalone page, not generated. Its App Store link is written by hand, so it must carry `pt` and `ct` like `storeLink()` (`npm test` checks) |
 
@@ -77,13 +78,13 @@ The app's ten principles ("İbadet uygulaması nasıl olmalı?") have their own 
 
 ### Google Play — one switch (`SITE.play.live`)
 
-The Android app is not public yet, so the site says nothing about it (the no-future rule below). Everything Android is built but held behind `SITE.play.live` in `content.js`: while it is `false` the generated pages are byte-identical to before. Preview: `VAKIT_PLAY_PREVIEW=1 npm run dev` (and `VAKIT_PLAY_PREVIEW=1 npm test`) — then a plain `npm run build` before committing.
+The Android app is public on Google Play since 2026-10-29 and `SITE.play.live` in `content.js` is `true`. Everything Android hangs on that one switch: with `false` the generated pages say nothing about Android (the no-future rule below). Preview of a not-yet-live state: `VAKIT_PLAY_PREVIEW=1 npm run dev` (and `VAKIT_PLAY_PREVIEW=1 npm test`) — then a plain `npm run build` before committing.
 
 When `true`: a Google Play button (`playCta`, Google's own badge wording per language) next to the App Store one in the hero, the closing section and the dock; the "Is Vakit on Android?" FAQ (`faq-android-q/a`, after "Which devices") in the page **and** `FAQPage`; `Android` + both store URLs in the app's JSON-LD; Android in `llms.txt`. `script.js` (`orderStores`) puts Play first for Android visitors and leaves one store in the dock (Play on Android, App Store elsewhere). Play links carry the campaign in `referrer=utm_source=vakit-site&utm_campaign=…` (`playLink()`), which Play Console → Acquisition reads; JSON-LD stays campaign-free. `npm test` checks both states.
 
-**Closed testing (live since 2026-10-12, owner's decision):** while `live` is `false` and `SITE.play.test` holds the group + opt-in URLs, the same three buttons read "Android'de dene" (`playTestCta`) and jump to an on-page `#android` section with the two steps (join `groups.google.com/g/vakit-android-test`, then `play.google.com/apps/testing/…`; `and-*` keys), the FAQ uses `faq-android-a-test`, `llms.txt` gets one line, and the JSON-LD stays Apple-only (the app isn't public). Ending the test: `live: true` replaces all of it; deleting `test` hides Android again.
+**Closed testing (2026-10-12 → 2026-10-29, over):** `SITE.play.test` was removed when `live` became `true`; the code path is still in `build.js` and works like this — while `live` is `false` and `SITE.play.test` holds the group + opt-in URLs, the same three buttons read "Android'de dene" (`playTestCta`) and jump to an on-page `#android` section with the two steps (join `groups.google.com/g/vakit-android-test`, then `play.google.com/apps/testing/…`; `and-*` keys), the FAQ uses `faq-android-a-test`, `llms.txt` gets one line, and the JSON-LD stays Apple-only (the app isn't public). Ending the test: `live: true` replaces all of it; deleting `test` hides Android again.
 
-**Launch day:** confirm `curl -s -o /dev/null -w "%{http_code}" "https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit"` is 200 → `live: true` → build → commit. Not covered by the switch, to do by hand the same day: `docs/404.html` (static, add a Play link), the `META` descriptions and `fin-p` that list "iPhone, iPad, Apple Watch and Mac" (25 languages), and `apps.json`.
+**Launch day (done 2026-10-29 — `404.html`, `META`, `fin-p` already name Android; kept as the procedure for a future store):** confirm `curl -s -o /dev/null -w "%{http_code}" "https://play.google.com/store/apps/details?id=com.hakancelikdev.vakit"` is 200 → `live: true` → build → commit. Not covered by the switch, to do by hand the same day: `docs/404.html` (static, add a Play link), the `META` descriptions and `fin-p` that list "iPhone, iPad, Apple Watch and Mac" (25 languages), and `apps.json`.
 
 ### The Android privacy policy
 
@@ -102,7 +103,7 @@ Two other things follow from the generator, and both are the point:
 
 `LANGS` in `content.js` is the single list: URL, direction (`rtl`), writing system (`script` → typography rules in `styles.css`; `tools/fonts.js` `SCRIPTS` for the link-preview cards), screenshot and video source and the clock's home city. Adding a language = a `LANGS` entry + `locales/<lang>.js` + its code in `docs/language-detection.js` (`npm test` checks the last one).
 
-- **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, all three documents + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
+- **Every language has its own legal pages** (owner's decision, 2026-09-11 — the App Store listing links each language to its own privacy policy and terms). Turkish and English are the originals (`legal/*.js`); the other 23 are translations of the English text (`legal/i18n/<lang>.js`, both documents — `privacy`, `terms` — + `<head>` metadata + a `notice`). Each translated page says the English version applies if they differ. **Changing a legal text means changing all 25** — `build.js` fails if a translation misses a document or has a different section count.
 - **iPad, Mac and Apple Watch** (`DEVICES` in `content.js`, the section under the showcase): one gallery per device, the same component as the iPhone showcase (2026-09-25; they used to be tabs over a single frame). iPad captures follow the iPhone rule; the Mac and the Watch were captured in Turkish and English only, so every other page shows the English ones. Screen titles and descriptions reuse `FEATURES`/`SHOWCASE` copy, so the section needs no translations of its own. The Mac's menu bar extra sits over the first Mac window.
 - **Android gallery** (`DEVICES.android`, 2026-10-14, owner's decision): the Play set's raw captures (toolkit `<locale>/_android/`, iPhone language rule) as a fourth row, shown only while `SITE.play` has a stage. **Titles only** — `FEATURES`/`SHOWCASE` descriptions name iPhone things the Android app lacks (Dynamic Island, iCloud, two mushaf scripts). While testing, its line is `and-p` and its button (`playButton`, "Android'de dene") jumps to the `#android` steps; once live, the button is the Play badge. No "coming soon" wording.
 - **The showcase is a gallery** (2026-09-25): every iPhone screen — `SHOWCASE`, then `SHOWCASE_MORE` — in its own phone, side by side, each with its title and description; it scrolls sideways (swipe, trackpad, arrow keys, or the two round buttons). **More iPhone screens** (`SHOWCASE_MORE`) are labelled with `FEATURES` copy. `all: true` screens exist in every captured language; the rest only in tr/en, and other pages leave them out rather than mix English into their phone.
@@ -117,7 +118,7 @@ Two other things follow from the generator, and both are the point:
 ### Editing content
 
 1. Landing page → `content.js` (`COPY`, `FEATURES`, `SHOWCASE`, `COMPARE`, `REVIEWS`, `FAQ`, `META`, `PRAYERS`, `CITIES`) **and the same entry in every `locales/*.js`**.
-   Legal text → `legal/privacy.js`, `legal/terms.js`, `legal/ads-policy.js` (tr + en; `<head>` metadata → `LEGAL` in `content.js`) **and the same change in every `legal/i18n/*.js`**.
+   Legal text → `legal/privacy.js`, `legal/terms.js` (tr + en; `<head>` metadata → `LEGAL` in `content.js`) **and the same change in every `legal/i18n/*.js`**.
 2. `build.js` throws if any language is missing a key or a list has a different length than English — a feature added to Turkish/English cannot silently skip a language.
 3. Bump `SITE.updated` (drives sitemap `lastmod`).
 4. Run `npm run build` and commit the regenerated files.
